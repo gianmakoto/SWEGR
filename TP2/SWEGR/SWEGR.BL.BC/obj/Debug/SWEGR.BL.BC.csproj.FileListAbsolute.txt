@@ -1,9 +1,0 @@
-C:\TP1\Proyecto\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BC.dll
-C:\TP1\Proyecto\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BC.pdb
-C:\TP1\Proyecto\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.dll
-C:\TP1\Proyecto\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.pdb
-C:\TP1\Proyecto\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BE.dll
-C:\TP1\Proyecto\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.DL.DALC.dll
-C:\TP1\Proyecto\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BE.pdb
-C:\TP1\Proyecto\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.DL.DALC.pdb
-C:\TP1\Proyecto\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.csprojResolveAssemblyReference.cache
