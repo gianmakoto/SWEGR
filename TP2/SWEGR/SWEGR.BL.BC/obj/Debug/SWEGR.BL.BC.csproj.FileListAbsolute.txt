@@ -1,0 +1,5 @@
+C:\Users\renzo\Desktop\www\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BC.dll
+C:\Users\renzo\Desktop\www\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BC.pdb
+C:\Users\renzo\Desktop\www\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.dll
+C:\Users\renzo\Desktop\www\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.pdb
+C:\Users\renzo\Desktop\www\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.csprojResolveAssemblyReference.cache
