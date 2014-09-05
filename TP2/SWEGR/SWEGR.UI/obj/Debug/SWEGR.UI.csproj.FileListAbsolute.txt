@@ -41,3 +41,15 @@ C:\Users\renzo\Desktop\www\TP2\SWEGR\SWEGR.UI\bin\Mono.Math.xml
 C:\Users\renzo\Desktop\www\TP2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.csproj.App.config
 C:\Users\renzo\Desktop\www\TP2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.dll
 C:\Users\renzo\Desktop\www\TP2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.pdb
+C:\Users\renzo\Desktop\www\TP2\SWEGR\SWEGR.UI\bin\EntityFramework.SqlServer.dll
+C:\Users\renzo\Desktop\www\TP2\SWEGR\SWEGR.UI\bin\Newtonsoft.Json.dll
+C:\Users\renzo\Desktop\www\TP2\SWEGR\SWEGR.UI\bin\Antlr3.Runtime.pdb
+C:\Users\renzo\Desktop\www\TP2\SWEGR\SWEGR.UI\bin\EntityFramework.SqlServer.xml
+C:\Users\renzo\Desktop\www\TP2\SWEGR\SWEGR.UI\bin\Newtonsoft.Json.xml
+C:\Users\renzo\Desktop\www\TP2\SWEGR\SWEGR.UI\bin\System.Web.Optimization.xml
+C:\Users\renzo\Desktop\www\TP2\SWEGR\SWEGR.UI\bin\System.Web.Providers.xml
+C:\Users\renzo\Desktop\www\TP2\SWEGR\SWEGR.UI\bin\es\EntityFramework.resources.dll
+C:\Users\renzo\Desktop\www\TP2\SWEGR\SWEGR.UI\bin\es\EntityFramework.SqlServer.resources.dll
+C:\Users\renzo\Desktop\www\TP2\SWEGR\SWEGR.UI\bin\es\Microsoft.AspNet.FriendlyUrls.resources.dll
+C:\Users\renzo\Desktop\www\TP2\SWEGR\SWEGR.UI\bin\es\Microsoft.AspNet.Membership.OpenAuth.resources.dll
+C:\Users\renzo\Desktop\www\TP2\SWEGR\SWEGR.UI\bin\es\System.Web.Optimization.resources.dll
