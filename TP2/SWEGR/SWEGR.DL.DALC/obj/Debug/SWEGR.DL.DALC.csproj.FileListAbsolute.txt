@@ -1,0 +1,5 @@
+C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.DL.DALC\bin\Debug\SWEGR.DL.DALC.dll
+C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.DL.DALC\bin\Debug\SWEGR.DL.DALC.pdb
+C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.DL.DALC\obj\Debug\SWEGR.DL.DALC.csprojResolveAssemblyReference.cache
+C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.DL.DALC\obj\Debug\SWEGR.DL.DALC.dll
+C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.DL.DALC\obj\Debug\SWEGR.DL.DALC.pdb
