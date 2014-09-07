@@ -11,7 +11,7 @@
             <p class="message-success"><%: SuccessMessage %></p>
         </asp:PlaceHolder>
 
-        <p>Inició sesión como <strong><%: User.Identity.Name %></strong>.</p>
+        <p>Ha iniciado sesión como <strong><%: User.Identity.Name %></strong>.</p>
 
         <asp:PlaceHolder runat="server" ID="setPassword" Visible="false">
             <p>
@@ -19,7 +19,7 @@
                 local para iniciar sesión sin que sea necesario ningún inicio de sesión externo.
             </p>
             <fieldset>
-                <legend>Formulario para establecer contraseña</legend>
+                <legend>Establecer formulario de contraseña</legend>
                 <ol>
                     <li>
                         <asp:Label runat="server" AssociatedControlID="password">Contraseña</asp:Label>
@@ -49,7 +49,7 @@
 
         <asp:PlaceHolder runat="server" ID="changePassword" Visible="false">
             <h3>Cambiar contraseña</h3>
-            <asp:ChangePassword runat="server" CancelDestinationPageUrl="~/" ViewStateMode="Disabled" RenderOuterTable="false" SuccessPageUrl="Manage?m=ChangePwdSuccess">
+            <asp:ChangePassword runat="server" CancelDestinationPageUrl="~/" ViewStateMode="Disabled" RenderOuterTable="false" SuccessPageUrl="Manage.aspx?m=ChangePwdSuccess">
                 <ChangePasswordTemplate>
                     <p class="validation-summary-errors">
                         <asp:Literal runat="server" ID="FailureText" />
@@ -75,7 +75,7 @@
                                 <asp:Label runat="server" ID="ConfirmNewPasswordLabel" AssociatedControlID="ConfirmNewPassword">Confirmar la nueva contraseña</asp:Label>
                                 <asp:TextBox runat="server" ID="ConfirmNewPassword" CssClass="passwordEntry" TextMode="Password" />
                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="ConfirmNewPassword"
-                                    CssClass="field-validation-error" Display="Dynamic" ErrorMessage="La confirmación de la nueva contraseña es obligatoria."
+                                    CssClass="field-validation-error" Display="Dynamic" ErrorMessage="La confirmación de contraseña nueva es obligatoria."
                                     ValidationGroup="ChangePassword" />
                                 <asp:CompareValidator runat="server" ControlToCompare="NewPassword" ControlToValidate="ConfirmNewPassword"
                                     CssClass="field-validation-error" Display="Dynamic" ErrorMessage="La nueva contraseña y la contraseña de confirmación no coinciden."
@@ -121,6 +121,6 @@
         </asp:ListView>
 
         <h3>Agregar un inicio de sesión externo</h3>
-        <uc:OpenAuthProviders runat="server" ReturnUrl="~/Account/Manage" />
+        <uc:OpenAuthProviders runat="server" ReturnUrl="~/Account/Manage.aspx" />
     </section>
 </asp:Content>

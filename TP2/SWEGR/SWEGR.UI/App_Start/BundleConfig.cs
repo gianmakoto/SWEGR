@@ -8,7 +8,7 @@ namespace SWEGR.UI
 {
     public class BundleConfig
     {
-        // Para obtener más información sobre la unión, visite http://go.microsoft.com/fwlink/?LinkId=254726
+        // Para obtener más información sobre la agrupación de archivos, visite http://go.microsoft.com/fwlink/?LinkId=254726
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/WebFormsJs").Include(

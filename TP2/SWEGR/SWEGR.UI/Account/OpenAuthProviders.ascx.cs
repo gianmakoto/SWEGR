@@ -18,7 +18,7 @@ namespace SWEGR.UI.Account
                     return;
                 }
 
-                var redirectUrl = "~/Account/RegisterExternalLogin";
+                var redirectUrl = "~/Account/RegisterExternalLogin.aspx";
                 if (!String.IsNullOrEmpty(ReturnUrl))
                 {
                     var resolvedReturnUrl = ResolveUrl(ReturnUrl);

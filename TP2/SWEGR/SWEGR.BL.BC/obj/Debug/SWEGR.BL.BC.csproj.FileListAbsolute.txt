@@ -1,5 +1,36 @@
-C:\Users\renzo\Desktop\prueba\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BC.dll
-C:\Users\renzo\Desktop\prueba\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BC.pdb
-C:\Users\renzo\Desktop\prueba\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.csprojResolveAssemblyReference.cache
-C:\Users\renzo\Desktop\prueba\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.dll
-C:\Users\renzo\Desktop\prueba\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.pdb
+C:\TP1\Proyecto\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BC.dll
+C:\TP1\Proyecto\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BC.pdb
+C:\TP1\Proyecto\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.dll
+C:\TP1\Proyecto\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.pdb
+C:\TP1\Proyecto\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BE.dll
+C:\TP1\Proyecto\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.DL.DALC.dll
+C:\TP1\Proyecto\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BE.pdb
+C:\TP1\Proyecto\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.DL.DALC.pdb
+C:\TP1\Proyecto\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.csprojResolveAssemblyReference.cache
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BC.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BC.pdb
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BE.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.DL.DALC.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BE.pdb
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.DL.DALC.pdb
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.csprojResolveAssemblyReference.cache
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.pdb
+D:\UPC\2014-2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BC.dll
+D:\UPC\2014-2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BC.pdb
+D:\UPC\2014-2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BE.dll
+D:\UPC\2014-2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.DL.DALC.dll
+D:\UPC\2014-2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BE.pdb
+D:\UPC\2014-2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.DL.DALC.pdb
+D:\UPC\2014-2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.csprojResolveAssemblyReference.cache
+D:\UPC\2014-2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.dll
+D:\UPC\2014-2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.pdb
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BC.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BC.pdb
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BE.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.DL.DALC.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BE.pdb
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.DL.DALC.pdb
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.csprojResolveAssemblyReference.cache
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.pdb

@@ -1,50 +1,246 @@
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\SWEGR.UI.dll.config
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\SWEGR.UI.dll
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\SWEGR.UI.pdb
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\Antlr3.Runtime.dll
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\AspNet.ScriptManager.jQuery.dll
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.AspNet.dll
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.Core.dll
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OAuth.Consumer.dll
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OAuth.dll
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OpenId.dll
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\EntityFramework.dll
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\EntityFramework.SqlServer.dll
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\Microsoft.AspNet.FriendlyUrls.dll
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\Microsoft.AspNet.Membership.OpenAuth.dll
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\Microsoft.ScriptManager.MSAjax.dll
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\Microsoft.ScriptManager.WebForms.dll
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\Newtonsoft.Json.dll
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\System.Net.Http.Extensions.dll
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\System.Net.Http.Primitives.dll
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\System.Web.Optimization.dll
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\System.Web.Providers.dll
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\WebGrease.dll
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\Org.Mentalis.Security.Cryptography.dll
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\Mono.Math.dll
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\Antlr3.Runtime.pdb
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.AspNet.xml
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.Core.xml
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OAuth.xml
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OAuth.Consumer.xml
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OpenId.xml
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\EntityFramework.xml
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\EntityFramework.SqlServer.xml
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\Microsoft.AspNet.FriendlyUrls.xml
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\Microsoft.AspNet.Membership.OpenAuth.xml
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\Newtonsoft.Json.xml
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\System.Net.Http.Extensions.xml
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\System.Net.Http.Primitives.xml
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\System.Web.Optimization.xml
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\System.Web.Providers.xml
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\Org.Mentalis.Security.Cryptography.xml
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\bin\Mono.Math.xml
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.csproj.App.config
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.csprojResolveAssemblyReference.cache
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.dll
-C:\Users\renzo\Desktop\wwww\TP2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.pdb
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\SWEGR.UI.dll
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\SWEGR.UI.pdb
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\Antlr3.Runtime.dll
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\AspNet.ScriptManager.jQuery.dll
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.AspNet.dll
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.Core.dll
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OAuth.dll
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OpenId.dll
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\EntityFramework.dll
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\Microsoft.ScriptManager.WebForms.dll
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\Microsoft.Web.Infrastructure.dll
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\System.Web.Optimization.dll
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\System.Web.Providers.dll
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\WebGrease.dll
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\EntityFramework.xml
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.Core.xml
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OAuth.xml
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OpenId.xml
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.AspNet.xml
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\es\EntityFramework.resources.dll
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\es\System.Web.Optimization.resources.dll
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\es\System.Web.Providers.resources.dll
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\es\Microsoft.AspNet.Membership.OpenAuth.resources.dll
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.csprojResolveAssemblyReference.cache
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.dll
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.pdb
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\SWEGR.BL.BE.dll
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\SWEGR.BL.BE.pdb
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\SWEGR.BL.BC.dll
+C:\TP1\Proyecto\SWEGR\SWEGR.UI\bin\SWEGR.BL.BC.pdb
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\SWEGR.UI.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\SWEGR.UI.pdb
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\AjaxControlToolkit.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\Antlr3.Runtime.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.Core.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\EntityFramework.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\SWEGR.BL.BC.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\SWEGR.BL.BE.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\System.Web.Optimization.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\System.Web.Providers.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\WebGrease.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\SWEGR.DL.DALC.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\Microsoft.WindowsAzure.Storage.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\HtmlAgilityPack.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\AjaxMin.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\Microsoft.Data.OData.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\Microsoft.Data.Edm.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\System.Spatial.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\SWEGR.BL.BC.pdb
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\SWEGR.BL.BE.pdb
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\AjaxControlToolkit.pdb
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\EntityFramework.xml
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.Core.xml
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\SWEGR.DL.DALC.pdb
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\Microsoft.WindowsAzure.Storage.xml
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\Microsoft.Data.OData.xml
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\Microsoft.Data.Edm.xml
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\System.Spatial.xml
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\ar\AjaxControlToolkit.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\cs\AjaxControlToolkit.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\de\AjaxControlToolkit.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\es\AjaxControlToolkit.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\fr\AjaxControlToolkit.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\he\AjaxControlToolkit.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\hi\AjaxControlToolkit.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\it\AjaxControlToolkit.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\ja\AjaxControlToolkit.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\ko\AjaxControlToolkit.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\nl\AjaxControlToolkit.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\pl\AjaxControlToolkit.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\pt\AjaxControlToolkit.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\ru\AjaxControlToolkit.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\tr-TR\AjaxControlToolkit.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\zh-CHS\AjaxControlToolkit.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\zh-CHT\AjaxControlToolkit.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\de\System.Spatial.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\es\System.Spatial.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\fr\System.Spatial.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\it\System.Spatial.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\ja\System.Spatial.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\ko\System.Spatial.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\ru\System.Spatial.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.csprojResolveAssemblyReference.cache
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.dll
+C:\Users\Xtian\Desktop\DEMO TDP1\TP2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.pdb
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\SWEGR.UI.dll
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\SWEGR.UI.pdb
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\Antlr3.Runtime.dll
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\AspNet.ScriptManager.jQuery.dll
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.AspNet.dll
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.Core.dll
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OAuth.dll
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OpenId.dll
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\EntityFramework.dll
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\Microsoft.ScriptManager.MSAjax.dll
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\Microsoft.ScriptManager.WebForms.dll
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\Microsoft.Web.Infrastructure.dll
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\SWEGR.BL.BC.dll
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\SWEGR.BL.BE.dll
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\System.Web.Optimization.dll
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\System.Web.Providers.dll
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\WebGrease.dll
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\SWEGR.DL.DALC.dll
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\SWEGR.BL.BC.pdb
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\SWEGR.BL.BE.pdb
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\EntityFramework.xml
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.Core.xml
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OAuth.xml
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OpenId.xml
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.AspNet.xml
+D:\UPC\2014-2\SWEGR\SWEGR.UI\bin\SWEGR.DL.DALC.pdb
+D:\UPC\2014-2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.csprojResolveAssemblyReference.cache
+D:\UPC\2014-2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.dll
+D:\UPC\2014-2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.pdb
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\SWEGR.UI.dll
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\SWEGR.UI.pdb
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\Antlr3.Runtime.dll
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.Core.dll
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\EntityFramework.dll
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\SWEGR.BL.BC.dll
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\SWEGR.BL.BE.dll
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\System.Web.Optimization.dll
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\System.Web.Providers.dll
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\WebGrease.dll
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\SWEGR.DL.DALC.dll
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\SWEGR.BL.BC.pdb
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\SWEGR.BL.BE.pdb
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\EntityFramework.xml
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.Core.xml
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\bin\SWEGR.DL.DALC.pdb
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.csprojResolveAssemblyReference.cache
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.dll
+C:\Users\renzo\Downloads\UPC\2014-02\Taller de proyecto II\SWEGR v1.4\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.pdb
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\SWEGR.UI.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\SWEGR.UI.pdb
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\Antlr3.Runtime.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.Core.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\EntityFramework.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\SWEGR.BL.BC.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\SWEGR.BL.BE.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\System.Web.Optimization.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\System.Web.Providers.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\WebGrease.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\SWEGR.DL.DALC.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\Org.Mentalis.Security.Cryptography.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\Mono.Math.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\SWEGR.BL.BC.pdb
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\SWEGR.BL.BE.pdb
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\EntityFramework.xml
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.Core.xml
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\SWEGR.DL.DALC.pdb
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\Org.Mentalis.Security.Cryptography.xml
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\Mono.Math.xml
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\es\EntityFramework.resources.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\es\System.Web.Optimization.resources.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\es\System.Web.Providers.resources.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\es\Microsoft.AspNet.Membership.OpenAuth.resources.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.csprojResolveAssemblyReference.cache
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.pdb

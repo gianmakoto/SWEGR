@@ -7,14 +7,14 @@
         SelectMethod="GetProviderNames" ViewStateMode="Disabled">
         <ItemTemplate>
             <button type="submit" name="provider" value="<%#: Item.ProviderName %>"
-                title="Inicie sesión con su <%#: Item.ProviderDisplayName %> cuenta.">
+                title="Iniciar sesión con su <%#: Item.ProviderDisplayName %> cuenta.">
                 <%#: Item.ProviderDisplayName %>
             </button>
         </ItemTemplate>
     
         <EmptyDataTemplate>
             <div class="message-info">
-                <p>No existen servicios de autenticación externos configurados. Consulte <a href="http://go.microsoft.com/fwlink/?LinkId=252803">este artículo</a> para obtener información sobre la configuración de esta aplicación de ASP.NET para admitir el inicio de sesión a través de servicios externos.</p>
+                <p>No hay ningún servicio de autenticación externa configurado. Consulte <a href="http://go.microsoft.com/fwlink/?LinkId=252803">este artículo</a> para obtener más detalles sobre la configuración de esta aplicación ASP.NET para que admita el inicio de sesión a través de servicios externos.</p>
             </div>
         </EmptyDataTemplate>
     </asp:ListView>

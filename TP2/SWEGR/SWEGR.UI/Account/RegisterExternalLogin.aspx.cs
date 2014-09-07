@@ -61,7 +61,7 @@ namespace SWEGR.UI.Account
             }
 
             // Crear la dirección URL de redirección para la comprobación de OpenAuth
-            var redirectUrl = "~/Account/RegisterExternalLogin";
+            var redirectUrl = "~/Account/RegisterExternalLogin.aspx";
             var returnUrl = Request.QueryString["ReturnUrl"];
             if (!String.IsNullOrEmpty(returnUrl))
             {

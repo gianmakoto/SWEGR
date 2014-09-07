@@ -18,9 +18,7 @@
     <form runat="server">
     <asp:ScriptManager runat="server">
         <Scripts>
-            <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=272931&clcid=0x409 --%>
             <%--Framework Scripts--%>
-            
             <asp:ScriptReference Name="MsAjaxBundle" />
             <asp:ScriptReference Name="jquery" />
             <asp:ScriptReference Name="jquery.ui.combined" />
@@ -49,14 +47,14 @@
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul>
-                                <li><a id="registerLink" runat="server" href="~/Account/Register">Registrarse</a></li>
-                                <li><a id="loginLink" runat="server" href="~/Account/Login">Iniciar sesión</a></li>
+                                <li><a id="registerLink" runat="server" href="~/Account/Register.aspx">Registrarse</a></li>
+                                <li><a id="loginLink" runat="server" href="~/Account/Login.aspx">Iniciar sesión</a></li>
                             </ul>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
                             <p>
-                                Hello, <a runat="server" class="username" href="~/Account/Manage" title="Manage your account">
-                                    <asp:LoginName runat="server" CssClass="username" /></a>!
+                                Hello, <a runat="server" class="username" href="~/Account/Manage.aspx" title="Manage your account">
+                                    <asp:LoginName runat="server" CssClass="username" /></a>.
                                 <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Cerrar sesión" LogoutPageUrl="~/" />
                             </p>
                         </LoggedInTemplate>
@@ -65,8 +63,8 @@
                 <nav>
                     <ul id="menu">
                         <li><a runat="server" href="~/">Inicio</a></li>
-                        <li><a runat="server" href="~/About">Acerca de</a></li>
-                        <li><a runat="server" href="~/Contact">Contacto</a></li>
+                        <li><a runat="server" href="~/About.aspx">Acerca de</a></li>
+                        <li><a runat="server" href="~/Contact.aspx">Contacto</a></li>
                     </ul>
                 </nav>
             </div>
@@ -81,7 +79,7 @@
     <footer>
         <div class="content-wrapper">
             <div class="float-left">
-                <p>&copy; <%: DateTime.Now.Year %> - Mi aplicación ASP.NET</p>
+                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
             </div>
         </div>
     </footer>

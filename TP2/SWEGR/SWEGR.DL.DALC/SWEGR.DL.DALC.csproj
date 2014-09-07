@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3498234C-E749-4CB5-8A70-015D170D8125}</ProjectGuid>
+    <ProjectGuid>{3AE24F5B-3861-44A2-A4A0-D1298B83E5A6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SWEGR.DL.DALC</RootNamespace>
@@ -41,10 +41,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="EgresadoDALC.cs" />
+    <Compile Include="HistorialDatosEgresadoDALC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
+    <ProjectReference Include="..\SWEGR.BL.BE\SWEGR.BL.BE.csproj">
+      <Project>{4fd6b6ec-fe8f-469f-800f-484f53a10da0}</Project>
+      <Name>SWEGR.BL.BE</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
