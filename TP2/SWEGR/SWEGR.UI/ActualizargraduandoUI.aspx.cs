@@ -29,7 +29,6 @@ namespace SWEGR.UI
         {
                 try
                 {
-
                     IDEgresado = Convert.ToInt32(Request.QueryString["IDEgresado"]);
 
                     if (IDEgresado == 0)

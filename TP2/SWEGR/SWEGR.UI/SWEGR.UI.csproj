@@ -419,6 +419,7 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="VisualizaregresadoUI.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -511,6 +512,13 @@
     </Compile>
     <Compile Include="ValidarCorreo.cs" />
     <Compile Include="ValidarURL.cs" />
+    <Compile Include="VisualizaregresadoUI.aspx.cs">
+      <DependentUpon>VisualizaregresadoUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VisualizaregresadoUI.aspx.designer.cs">
+      <DependentUpon>VisualizaregresadoUI.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

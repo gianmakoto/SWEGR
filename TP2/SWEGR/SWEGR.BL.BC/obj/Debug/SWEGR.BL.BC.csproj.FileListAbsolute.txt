@@ -34,3 +34,12 @@ C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.DL.DALC.pdb
 C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.csprojResolveAssemblyReference.cache
 C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.dll
 C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.pdb
+E:\UPC\2014-2\TDP1\SSIA-Trabajo\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BC.dll
+E:\UPC\2014-2\TDP1\SSIA-Trabajo\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BC.pdb
+E:\UPC\2014-2\TDP1\SSIA-Trabajo\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BE.dll
+E:\UPC\2014-2\TDP1\SSIA-Trabajo\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.DL.DALC.dll
+E:\UPC\2014-2\TDP1\SSIA-Trabajo\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BE.pdb
+E:\UPC\2014-2\TDP1\SSIA-Trabajo\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.DL.DALC.pdb
+E:\UPC\2014-2\TDP1\SSIA-Trabajo\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.csprojResolveAssemblyReference.cache
+E:\UPC\2014-2\TDP1\SSIA-Trabajo\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.dll
+E:\UPC\2014-2\TDP1\SSIA-Trabajo\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.pdb
