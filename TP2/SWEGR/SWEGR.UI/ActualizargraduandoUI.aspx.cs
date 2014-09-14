@@ -282,99 +282,109 @@ namespace SWEGR.UI
 
         public bool validarFormulario()
         {
-            if (txtdni.Text == "" && txttelefonoprincipal.Text == "" && txtcorreo.Text == "" && txtperfillinkedin.Text == "")
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "formularioincompleto();", true);
-                return false;
-            }
+            bool errorcito = false;
 
-            if (txtdni.Text == "" && txttelefonoprincipal.Text == "" && txtcorreo.Text == "")
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "dnitelcorreovacio();", true);
-                return false;
-            }
 
-            if (txtdni.Text == "" && txttelefonoprincipal.Text == "" && txtperfillinkedin.Text == "")
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "dnitellinkedinvacio();", true);
-                return false;
-            }
+            //if (txtdni.Text == "" && txttelefonoprincipal.Text == "" && txtcorreo.Text == "" && txtperfillinkedin.Text == "")
+            //{
+            //    ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "formularioincompleto();", true);
+            //    errorcito = true;
+            //}
 
-            if (txtdni.Text == "" && txtcorreo.Text == "" && txtperfillinkedin.Text == "")
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "dnicorreolinkedinvacio();", true);
-                return false;
-            }
+            //if (txtdni.Text == "" && txttelefonoprincipal.Text == "" && txtcorreo.Text == "")
+            //{
+            //    ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "dnitelcorreovacio();", true);
+            //    errorcito = true;
+            //}
 
-            if (txttelefonoprincipal.Text == "" && txtcorreo.Text == "" && txtperfillinkedin.Text == "")
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "telcorreolinkedinvacio();", true);
-                return false;
-            }
+            //if (txtdni.Text == "" && txttelefonoprincipal.Text == "" && txtperfillinkedin.Text == "")
+            //{
+            //    ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "dnitellinkedinvacio();", true);
+            //    errorcito = true;
+            //}
 
-            if (txtdni.Text == "" && txttelefonoprincipal.Text == "")
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "dniytelefonovacio();", true);
-                return false;
-            }
+            //if (txtdni.Text == "" && txtcorreo.Text == "" && txtperfillinkedin.Text == "")
+            //{
+            //    ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "dnicorreolinkedinvacio();", true);
+            //    errorcito = true;
+            //}
 
-            if (txtdni.Text == "" && txtcorreo.Text == "")
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "dniycorreovacio();", true);
-                return false;
-            }
+            //if (txttelefonoprincipal.Text == "" && txtcorreo.Text == "" && txtperfillinkedin.Text == "")
+            //{
+            //    ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "telcorreolinkedinvacio();", true);
+            //    errorcito = true;
+            //}
 
-            if (txtdni.Text == "" && txtperfillinkedin.Text == "")
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "dniylinkedinvacio();", true);
-                return false;
-            }
+            //if (txtdni.Text == "" && txttelefonoprincipal.Text == "")
+            //{
+            //    ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "dniytelefonovacio();", true);
+            //    errorcito = true;
+            //}
 
-            if (txttelefonoprincipal.Text == "" && txtcorreo.Text == "")
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "telefonoycorreovacio();", true);
-                return false;
-            }
+            //if (txtdni.Text == "" && txtcorreo.Text == "")
+            //{
+            //    ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "dniycorreovacio();", true);
+            //    errorcito = true;
+            //}
 
-            if (txttelefonoprincipal.Text == "" && txtperfillinkedin.Text == "")
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "telefonoylinkedinvacio();", true);
-                return false;
-            }
+            //if (txtdni.Text == "" && txtperfillinkedin.Text == "")
+            //{
+            //    ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "dniylinkedinvacio();", true);
+            //    errorcito = true;
+            //}
 
-            if (txtcorreo.Text == "" && txtperfillinkedin.Text == "")
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "correoylinkedinvacio();", true);
-                return false;
-            }
+            //if (txttelefonoprincipal.Text == "" && txtcorreo.Text == "")
+            //{
+            //    ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "telefonoycorreovacio();", true);
+            //    errorcito = true;
+            //}
+
+            //if (txttelefonoprincipal.Text == "" && txtperfillinkedin.Text == "")
+            //{
+            //    ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "telefonoylinkedinvacio();", true);
+            //    errorcito = true;
+            //}
+
+            //if (txtcorreo.Text == "" && txtperfillinkedin.Text == "")
+            //{
+            //    ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "correoylinkedinvacio();", true);
+            //    errorcito = true;
+            //}
 
             if (txtdni.Text == "")
             {
                 ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "dnivacio();", true);
-                
-                return false;
-            }
+                txtdni.BorderColor = System.Drawing.Color.OrangeRed;
+                errorcito = true;
+            } else
+                txtdni.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
             if (txttelefonoprincipal.Text == "")
             {
                 ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "telefonovacio();", true);
-                
-                return false;
-            }
+                txttelefonoprincipal.BorderColor = System.Drawing.Color.OrangeRed;
+                errorcito = true;
+            } else
+                txttelefonoprincipal.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
             if (txtcorreo.Text == "")
             {
                 ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "correovacio();", true);
-               
-                return false;
-            }
+                txtcorreo.BorderColor = System.Drawing.Color.OrangeRed;
+                errorcito = true;
+            } else
+                txtcorreo.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
             if (txtperfillinkedin.Text == "")
             {
                 ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "perfillinkedinvacio();", true);
-                
+                txtperfillinkedin.BorderColor = System.Drawing.Color.OrangeRed;
+                errorcito = true;
+            } else
+                txtperfillinkedin.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
+
+            if (errorcito)
                 return false;
-            }
 
             return true;
         }
@@ -397,8 +407,8 @@ namespace SWEGR.UI
             ValidarURL objetovalidarurl = new ValidarURL();
             validaurllinkedin = objetovalidarurl.ValidateUrl(txtperfillinkedin.Text);
 
-            ValidarCorreo objetovalidarfb = new ValidarCorreo();
-            validaurlfacebook = objetovalidarfb.IsValidEmail(txtperfilfacebook.Text.Trim());
+            ValidarURL objetovalidarfb = new ValidarURL();
+            validaurlfacebook = objetovalidarfb.ValidateUrl(txtperfilfacebook.Text.Trim());
 
             if (txtdni.Text.Length != 8)
             {
@@ -432,7 +442,7 @@ namespace SWEGR.UI
 
             if (!validacorreo)
             {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "correoinvalido();", true);
+                
                 txtcorreo.BorderColor = System.Drawing.Color.OrangeRed;
                 
                 error = true;
@@ -443,7 +453,7 @@ namespace SWEGR.UI
          
                 if (!validaurllinkedin)
                 {
-                    ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "urlinvalido();", true);
+                   
                     txtperfillinkedin.BorderColor = System.Drawing.Color.OrangeRed;
                    
                     error = true;
@@ -460,7 +470,7 @@ namespace SWEGR.UI
                 validacorreoalterno = objetovalidarcorreo.IsValidEmail(txtcorreoalternativo.Text);
                 if (!validacorreoalterno)
                 {
-                    ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "correoalternoinvalido();", true);
+                   
                     txtcorreoalternativo.BorderColor = System.Drawing.Color.OrangeRed;
                     
                     error = true;
@@ -476,7 +486,7 @@ namespace SWEGR.UI
 
             if (!validaurlfacebook)
             {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "correoinvalido();", true);
+                
                 txtperfilfacebook.BorderColor = System.Drawing.Color.OrangeRed;
                
                 error = true;
@@ -488,8 +498,10 @@ namespace SWEGR.UI
                 txtperfilfacebook.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
             if (error)
+            {
+                ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "incompleto();", true);
                 return false;
-            
+            }
             return true;
         }
 
@@ -498,7 +510,7 @@ namespace SWEGR.UI
             try
             {
                 if (validarFormulario())
-                {
+               {
                     if (validarCampos())
                     {
                         if (actualizarEgresado())

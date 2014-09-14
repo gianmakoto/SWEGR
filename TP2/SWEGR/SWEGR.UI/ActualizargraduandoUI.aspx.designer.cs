@@ -85,15 +85,6 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.TextBox txttelefonoalternativo;
         
         /// <summary>
-        /// txtdireccion control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtdireccion;
-        
-        /// <summary>
         /// ddlDepartamento control.
         /// </summary>
         /// <remarks>
@@ -110,6 +101,15 @@ namespace SWEGR.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtdistrito;
+        
+        /// <summary>
+        /// txtdireccion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtdireccion;
         
         /// <summary>
         /// txtcorreo control.
@@ -164,6 +164,15 @@ namespace SWEGR.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl dialogvalidacion;
+        
+        /// <summary>
+        /// dialogincompleto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dialogincompleto;
         
         /// <summary>
         /// dialogexito control.
