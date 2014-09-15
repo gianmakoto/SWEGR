@@ -393,11 +393,8 @@ namespace SWEGR.UI
         {
             bool validacorreo = false;
             bool validacorreoalterno = false;
-            bool validatelefono = false;
-            bool validatelefonoalterno = false;
             bool validaurllinkedin = false;
             bool validaurlfacebook = false;
-            bool validadni = false;
             bool error = false;
             
 

@@ -25,6 +25,10 @@ namespace SWEGR.BL.BE
         DateTime fechanacimientoegresado;
         Char tipoegresado;
         String fotoegresado;
+        String paisegresado;
+        String contrasenaegresado;
+
+        
 
         public int Idegresado
         {
@@ -126,6 +130,18 @@ namespace SWEGR.BL.BE
         {
             get { return fotoegresado; }
             set { fotoegresado = value; }
+        }
+
+        public String Paisegresado
+        {
+            get { return paisegresado; }
+            set { paisegresado = value; }
+        }
+
+        public String Contrasenaegresado
+        {
+            get { return contrasenaegresado; }
+            set { contrasenaegresado = value; }
         }
     }
 }

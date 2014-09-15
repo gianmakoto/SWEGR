@@ -11,23 +11,21 @@
     <title>Visualizar Egresado</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function () {
-            $("#btndatosPersonales").click(function () {
-                $("#datosPersonales").slideToggle();
-            });
+        function datosPersonalesToggle() {
+            $("#datosPersonales").slideToggle();
+        }
 
-            $("#btntrayectoriaAcad").click(function () {
-                $("#trayectoriaAcad").slideToggle();
-            });
+        function trayectoriaAcadToggle() {
+            $("#trayectoriaAcad").slideToggle();
+        }
 
-            $("#btntrayectoriaProf").click(function () {
-                $("#trayectoriaProf").slideToggle();
-            });
+        function trayectoriaProfToggle() {
+            $("#trayectoriaProf").slideToggle();
+        }
 
-            $("#btnaptitudesIntereses").click(function () {
-                $("#aptitudesIntereses").slideToggle();
-            });
-        });
+        function aptitudesInteresesToggle() {
+            $("#aptitudesIntereses").slideToggle();
+        }
 </script>
 
     <script type="text/javascript" src="MaxLength.min.js"></script>
@@ -75,8 +73,8 @@
                     <ul class="nav navbar-nav" style="align: center">
                         <li><a href="Index.aspx">Inicio</a></li>
                         
-                        <li><a href="#">Egresado</a></li>
-                        <li class="active"><a href="ActualizargraduandoUI.aspx">Graduando</a></li>
+                        <li class="active"><a href="VisualizaregresadoUI.aspx">Egresado</a></li>
+                        <li><a href="ActualizargraduandoUI.aspx">Graduando</a></li>
                         <!-- user login dropdown start-->
                         <li class="dropdown">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
@@ -105,12 +103,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-sm-4">
-                    <h1>Graduandos</h1>
+                    <h1>Egresados</h1>
                 </div>
                 <div class="col-lg-8 col-sm-8">
                     <ol class="breadcrumb pull-right">
                         <li><a href="#">Home</a></li>
-                        <li class="active">Graduandos </li>
+                        <li class="active">Egresados </li>
                     </ol>
                 </div>
             </div>
@@ -122,26 +120,30 @@
     <div class="container">
         <section class="panel">
             <header class="panel-heading">
-                <h3>Ingrese sus datos</h3>
+                <h3>Visualización de datos del Egresado</h3>
             </header>
             <div class="panel-body">
                 <div class="row">
                     <div class="col-md-12">
                         <form id="swegrform" class="cmxform form-horizontal tasi-form" runat="server">
 
-                            <div runat="server" style="margin:auto">
-                                <table border="0" style="width: 750px; margin:auto">
-                                <tr>
-                                    <td style="text-align:left">
-                                        <h3 style="margin-bottom: 4px; text-align:right">Datos Personales
-                                            <asp:Button ID="btndatosPersonales" runat="server" Text="+" />
-                                            <%--<button id="btndatosPersonales"> + </button>--%>
-                                        </h3>
-                                    </td>
-                                </tr>
-                                </table>
+                             <%-- Datos Personales --%>
+                            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager> 
+                            <asp:UpdatePanel ID="updatosPersonales" runat="server" UpdateMode="Conditional">
+                            <ContentTemplate>
+                            <div id="Div1" runat="server" style="margin:auto">
+                                <div style="float:left; position:relative; top:-10px">
+                                    <h3 style="margin-bottom: 4px; text-align:left; float:left">Datos Personales</h3>
+                                </div>
+                                <div style="float:right;position:relative; top:10px">
+                                    <asp:Button ID="btndatosPersonales" runat="server" Text="+" OnClick="btndatosPersonales_Click"/>
+                                </div>
+                                <div style="clear:both"></div>
                             </div>
-                            <div id="datosPersonales" style="border: 1px solid black; padding-left:4%; padding-top:4%">
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+
+                            <div id="datosPersonales" style="border: 1px solid black; padding-left:4%; padding-top:4%" hidden="hidden">
                                 <div class="form-group">
                                     <label class="col-sm-2 col-sm-2 control-label">
                                         Nombre completo
@@ -153,11 +155,11 @@
 
                                 <div class="form-group">
                                     <label class="col-sm-2 col-sm-2 control-label">
-                                        DNI
+                                       * DNI
                                     </label>
                                     <div class="col-sm-8">
                                         <asp:TextBox ID="txtdni" runat="server"
-                                            CssClass="form-control" onkeypress="return isNumber(event)" onpaste="return false" ></asp:TextBox>
+                                            CssClass="form-control" onkeypress="return isNumber(event)" onpaste="return false" Enabled="false"></asp:TextBox>
                                     
                                     </div>
                                 </div>
@@ -167,7 +169,7 @@
                                         Género
                                     </label>
                                     <div class="col-sm-8">
-                                        <asp:DropDownList ID="ddlGenero" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        <asp:DropDownList ID="ddlGenero" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-con-trol"></asp:DropDownList>
                                     </div>
                                 </div>
 
@@ -183,26 +185,25 @@
 
                                 <div class="form-group">
                                     <label class="col-sm-2 col-sm-2 control-label">
-                                        Teléfonos
+                                       * Teléfonos
                                     </label>
                                     <div class="col-sm-4">
                                         <asp:TextBox ID="txttelefonoprincipal" runat="server"
-                                            CssClass="form-control" placeholder="Teléfono Principal" data-mask="99-999-9999" onkeypress="return isNumber(event)" onpaste="return false" ></asp:TextBox>
+                                            CssClass="form-control" placeholder="00-999-999-9999 (principal)" data-mask="99-999-9999" onkeypress="return isNumber(event)" onpaste="return false" Enabled="false"></asp:TextBox>
                                   
                                     </div>
                                     <div class="col-sm-4">
                                         <asp:TextBox ID="txttelefonoalternativo" runat="server"
-                                            CssClass="form-control" placeholder="Teléfono Alternativo" data-mask="999-999-999"  onkeypress="return isNumber(event)"  onpaste="return false"></asp:TextBox>
+                                            CssClass="form-control" placeholder="00-999-999-9999 (alternativo)" data-mask="999-999-999"  onkeypress="return isNumber(event)"  onpaste="return false" Enabled="false"></asp:TextBox>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="col-sm-2 col-sm-2 control-label">
-                                        Dirección
+                                        País
                                     </label>
                                     <div class="col-sm-8">
-                                        <asp:TextBox ID="txtdireccion" runat="server"
-                                            CssClass="form-control"></asp:TextBox>
+                                        <asp:DropDownList ID="ddlPaís" runat="server" AutoPostBack="false" CssClass="form-control" Enabled="false"></asp:DropDownList>
                                     </div>
                                 </div>
 
@@ -211,7 +212,7 @@
                                         Departamento
                                     </label>
                                     <div class="col-sm-8">
-                                        <asp:DropDownList ID="ddlDepartamento" runat="server" AutoPostBack="True" CssClass="form-control"></asp:DropDownList>
+                                        <asp:DropDownList ID="ddlDepartamento" runat="server" AutoPostBack="false" CssClass="form-control" Enabled="false"></asp:DropDownList>
                                     </div>
                                 </div>
 
@@ -221,17 +222,27 @@
                                     </label>
                                     <div class="col-sm-8">
                                         <asp:TextBox ID="txtdistrito" runat="server"
-                                            CssClass="form-control"></asp:TextBox>
+                                            CssClass="form-control" placeholder="Ejemplo: San Isidro" Enabled="false"></asp:TextBox>
+                                    </div>
+                                </div>
+
+                                 <div class="form-group">
+                                    <label class="col-sm-2 col-sm-2 control-label">
+                                        Dirección
+                                    </label>
+                                    <div class="col-sm-8">
+                                        <asp:TextBox ID="txtdireccion" runat="server"
+                                            CssClass="form-control" placeholder="Ejemplo: Av. Callejones rojos 450" Enabled="false"></asp:TextBox>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="col-sm-2 col-sm-2 control-label">
-                                        Correo
+                                       * Correo
                                     </label>
                                     <div class="col-sm-8">
                                         <asp:TextBox ID="txtcorreo" runat="server"
-                                            CssClass="form-control" placeholder="ejemplo: darkpepito@gmail.com"></asp:TextBox>
+                                            CssClass="form-control" placeholder="Ejemplo: usuario@gmail.com" Enabled="false"></asp:TextBox>
                                     </div>
                                 </div>
 
@@ -241,13 +252,13 @@
                                     </label>
                                     <div class="col-sm-8">
                                         <asp:TextBox ID="txtcorreoalternativo" runat="server"
-                                            CssClass="form-control" placeholder="ejemplo: pepitomk2@hotmail.com"></asp:TextBox>
+                                            CssClass="form-control" placeholder="Ejemplo: usuario_alternativo@hotmail.com" Enabled="false"></asp:TextBox>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="col-sm-2 col-sm-2 control-label">
-                                        Perfil LinkedIn
+                                       * Perfil LinkedIn
                                     </label>
                                     <div class="col-sm-8">
 
@@ -255,7 +266,7 @@
                                             <span class="input-group-addon"><i class="fa fa-linkedin"></i>
                                             </span>
                                             <asp:TextBox ID="txtperfillinkedin" runat="server"
-                                                CssClass="form-control" placeholder="ejemplo: https://pe.linkedin.com/iduduario"></asp:TextBox>
+                                                CssClass="form-control" placeholder="Ejemplo: https://pe.linkedin.com/iduduario" Enabled="false"></asp:TextBox>
                                         </div>
                                     </div>
                                 </div>
@@ -271,26 +282,159 @@
                                             <span class="input-group-addon"><i class="fa fa-facebook"></i>
                                             </span>
                                             <asp:TextBox ID="txtperfilfacebook" runat="server"
-                                                CssClass="form-control" placeholder="ejemplo: usuario@facebook.com"></asp:TextBox>
+                                                CssClass="form-control" placeholder="Ejemplo: https://www.facebook.com/usuario" Enabled="false"></asp:TextBox>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <div class="col-sm-10">
-                                        <asp:Button ID="btnguardar" runat="server" Text="Guardar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnguardar_Click" />
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <div id="dialogvalidacion" style="text-align: center; display: none" runat="server">
-                                        <b style="text-align: center">Campos incompletos</b>
-                                    </div>
-
-                                    <div id="dialogexito" style="text-align: justify; display: none" runat="server">
-                                        <b style="text-align: center">Sus datos han sido actualizados satisfactoriamente</b>
-                                    </div>
-                                </div>
                             </div>
+
+                            <%-- Trayectoria Académica --%>
+                            <asp:UpdatePanel ID="uptrayecAcad" runat="server" UpdateMode="Conditional">
+                            <ContentTemplate>
+                            <div id="Div2" runat="server" style="margin:auto">
+                                <div style="float:left; position:relative; top:-10px">
+                                    <h3 style="margin-bottom: 4px; text-align:left; float:left">Trayectoria Académica</h3>
+                                </div>
+                                <div style="float:right;position:relative; top:10px">
+                                    <asp:Button ID="btntrayectoriaAcad" runat="server" Text="+" OnClick="btntrayectoriaAcad_Click"/>
+                                </div>
+                                <div style="clear:both"></div>
+                            </div>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+
+                            <div id="trayectoriaAcad" style="border: 1px solid black; padding-left:4%; padding-top:4%" hidden="hidden">
+                                <div class="form-group">
+                                    <label class="col-sm-2 col-sm-2 control-label">
+                                        Centro de estudios:
+                                    </label>
+                                    <div class="col-sm-8">
+                                        <asp:TextBox ID="txtcentroEstudios" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Universidad Privada de Ciencias Aplicadas"></asp:TextBox>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 col-sm-2 control-label">
+                                        Duración:
+                                    </label>
+                                    <div class="col-sm-8">
+                                        <asp:TextBox ID="txtduracionEstudio" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: 3 años"></asp:TextBox>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 col-sm-2 control-label">
+                                        Tipo de estudio:
+                                    </label>
+                                    <div class="col-sm-8">
+                                        <asp:TextBox ID="txttipoEstudio" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría"></asp:TextBox>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 col-sm-2 control-label">
+                                        Nombre de estudio:
+                                    </label>
+                                    <div class="col-sm-8">
+                                        <asp:TextBox ID="txtnombreEstudio" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: La Maestría en Administración y Dirección de Proyectos"></asp:TextBox>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 col-sm-2 control-label">
+                                        Descripción:
+                                    </label>
+                                    <div class="col-sm-8">
+                                        <asp:TextBox ID="txtdescripcionEstudio" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente"></asp:TextBox>
+                                    </div>
+                                </div>
+                             </div>
+
+                            <%-- Trayectoria Profesional --%>
+                            <asp:UpdatePanel ID="uptrayecProf" runat="server" UpdateMode="Conditional">
+                            <ContentTemplate>
+                            <div id="Div3" runat="server" style="margin:auto">
+                                <div style="float:left; position:relative; top:-10px">
+                                    <h3 style="margin-bottom: 4px; text-align:left; float:left">Trayectoria Profesional</h3>
+                                </div>
+                                <div style="float:right;position:relative; top:10px">
+                                    <asp:Button ID="btntrayectoriaProf" runat="server" Text="+" OnClick="btntrayectoriaProf_Click"/>
+                                </div>
+                                <div style="clear:both"></div>
+                            </div>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+
+                            <div id="trayectoriaProf" style="border: 1px solid black; padding-left:4%; padding-top:4%" hidden="hidden">
+                                <div class="form-group">
+                                    <label class="col-sm-2 col-sm-2 control-label">
+                                        Nombre de la empresa:
+                                    </label>
+                                    <div class="col-sm-8">
+                                        <asp:TextBox ID="txtnombreEmpresa" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: IBM"></asp:TextBox>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 col-sm-2 control-label">
+                                        Cargo:
+                                    </label>
+                                    <div class="col-sm-8">
+                                        <asp:TextBox ID="txtcargoTrabajo" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto de souciones de software"></asp:TextBox>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 col-sm-2 control-label">
+                                        Duración:
+                                    </label>
+                                    <div class="col-sm-8">
+                                        <asp:TextBox ID="txtduracionTrabajo" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: 8 años"></asp:TextBox>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 col-sm-2 control-label">
+                                        Descripción:
+                                    </label>
+                                    <div class="col-sm-8">
+                                        <asp:TextBox ID="txtdescripcionTrabajo" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
+                                    </div>
+                                </div>
+                             </div>
+
+                            <%-- Aptitudes e Intereses--%> 
+                            <asp:UpdatePanel ID="upaptitudesIntereses" runat="server" UpdateMode="Conditional">
+                            <ContentTemplate>
+                            <div id="Div4" runat="server" style="margin:auto">
+                                <div style="float:left; position:relative; top:-10px">
+                                    <h3 style="margin-bottom: 4px; text-align:left; float:left">Aptitudes e Intereses</h3>
+                                </div>
+                                <div style="float:right;position:relative; top:10px">
+                                    <asp:Button ID="btnaptitudesIntereses" runat="server" Text="+" OnClick="btnaptitudesIntereses_Click"/>
+                                </div>
+                                <div style="clear:both"></div>
+                            </div>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+
+                            <div id="aptitudesIntereses" style="border: 1px solid black; padding-left:4%; padding-top:4%" hidden="hidden">
+                                <div class="form-group">
+                                    <table cellspacion="0" cellpadding="3" border="0" style="margin:auto" class="auto-style13">
+                                      <tr>
+                                          <td style="text-align:left; vertical-align:top">Aptitudes:</td>
+                                          <td>
+                                              <asp:ListBox ID="lstaptitudes" runat="server" Width="220px" Height="150px" AutoPostBack="false"></asp:ListBox>
+                                          </td>
+                                          <td></td>
+                                          <td style="text-align:right; vertical-align:top">Intereses:</td>
+                                          <td>
+                                              <asp:ListBox ID="lstintereses" runat="server" Width="220px" Height="150px" AutoPostBack="false"></asp:ListBox>
+                                          </td>
+                                      </tr>
+                                  </table>
+                                </div>
+                             </div>
                         </form>
                     </div>
                 </div>

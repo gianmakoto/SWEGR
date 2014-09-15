@@ -53,13 +53,13 @@
             });
             $('#txttelefonoprincipal').keypress(function (e) {
                 var txt = $(this).val();
-                if (txt.length > 8) {
+                if (txt.length > 13) {
                     e.preventDefault();
                 }
             });
             $('#txttelefonoalternativo').keypress(function (e) {
                 var txt = $(this).val();
-                if (txt.length > 8) {
+                if (txt.length > 13) {
                     e.preventDefault();
                 }
             });
@@ -424,7 +424,7 @@
                     <ul class="nav navbar-nav" style="align: center">
                         <li><a href="Index.aspx">Inicio</a></li>
                         
-                        <li><a href="#">Egresado</a></li>
+                        <li><a href="VisualizaregresadoUI.aspx">Egresado</a></li>
                         <li class="active"><a href="ActualizargraduandoUI.aspx">Graduando</a></li>
                         <!-- user login dropdown start-->
                         <li class="dropdown">
@@ -489,7 +489,7 @@
 
                             <div class="form-group">
                                 <label class="col-sm-2 col-sm-2 control-label">
-                                    DNI
+                                   * DNI
                                 </label>
                                 <div class="col-sm-8">
                                     <asp:TextBox ID="txtdni" runat="server"
@@ -519,16 +519,16 @@
 
                             <div class="form-group">
                                 <label class="col-sm-2 col-sm-2 control-label">
-                                    Teléfonos
+                                   * Teléfonos
                                 </label>
                                 <div class="col-sm-4">
                                     <asp:TextBox ID="txttelefonoprincipal" runat="server"
-                                        CssClass="form-control" placeholder="99-999-9999 (principal)" data-mask="99-999-9999" onkeypress="return isNumber(event)" onpaste="return false" ></asp:TextBox>
+                                        CssClass="form-control" placeholder="00-999-999-9999 (principal)" data-mask="99-999-9999" onkeypress="return isNumber(event)" onpaste="return false" ></asp:TextBox>
                                   
                                 </div>
                                 <div class="col-sm-4">
                                     <asp:TextBox ID="txttelefonoalternativo" runat="server"
-                                        CssClass="form-control" placeholder="99-999-9999 (alternativo)" data-mask="999-999-999"  onkeypress="return isNumber(event)"  onpaste="return false"></asp:TextBox>
+                                        CssClass="form-control" placeholder="00-999-999-9999 (alternativo)" data-mask="999-999-999"  onkeypress="return isNumber(event)"  onpaste="return false"></asp:TextBox>
                                 </div>
                             </div>
 
@@ -565,7 +565,7 @@
 
                             <div class="form-group">
                                 <label class="col-sm-2 col-sm-2 control-label">
-                                    Correo
+                                   * Correo
                                 </label>
                                 <div class="col-sm-8">
                                     <asp:TextBox ID="txtcorreo" runat="server"
@@ -585,7 +585,7 @@
 
                             <div class="form-group">
                                 <label class="col-sm-2 col-sm-2 control-label">
-                                    Perfil LinkedIn
+                                   * Perfil LinkedIn
                                 </label>
                                 <div class="col-sm-8">
 

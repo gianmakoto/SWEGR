@@ -56,11 +56,13 @@ namespace SWEGR.DL.DALC
                     objetoEgresadoBE.Direccionegresado = dregresado.GetString(9);
                     objetoEgresadoBE.Distritoegresado = dregresado.GetString(10);
                     objetoEgresadoBE.Departamentoegresado = dregresado.GetString(11);
-                    objetoEgresadoBE.Perfillinkedinegresado = dregresado.GetString(12);
-                    objetoEgresadoBE.Perfilfacebookegresado = dregresado.GetString(13);
-                    objetoEgresadoBE.Fechanacimientoegresado = dregresado.GetDateTime(14);
-                    objetoEgresadoBE.Tipoegresado = Convert.ToChar(dregresado.GetString(15));
-                    objetoEgresadoBE.Fotoegresado = dregresado.GetString(16);
+                    objetoEgresadoBE.Paisegresado = dregresado.GetString(12);
+                    objetoEgresadoBE.Perfillinkedinegresado = dregresado.GetString(13);
+                    objetoEgresadoBE.Perfilfacebookegresado = dregresado.GetString(14);
+                    objetoEgresadoBE.Fechanacimientoegresado = dregresado.GetDateTime(15);
+                    objetoEgresadoBE.Tipoegresado = Convert.ToChar(dregresado.GetString(16));
+                    objetoEgresadoBE.Fotoegresado = dregresado.GetString(17);
+                    objetoEgresadoBE.Contrasenaegresado = dregresado.GetString(18);
                 }
                 cmdobteneregresado.Connection.Close();
 
@@ -90,11 +92,13 @@ namespace SWEGR.DL.DALC
             SqlParameter prmdireccionegresado;
             SqlParameter prmdistritoegresado;
             SqlParameter prmdepartamentoegresado;
+            SqlParameter prmpaisesgresado;
             SqlParameter prmperfilinkedinegresado;
             SqlParameter prmperfilfacebookegresado;
             SqlParameter prmfechanacimientoegresado;
             SqlParameter prmtipoegresado;
             SqlParameter prmfotoegresado;
+            SqlParameter prmcontrasenaegresado;
 
             try
             {
@@ -173,6 +177,12 @@ namespace SWEGR.DL.DALC
                 prmdepartamentoegresado.Size = 50;
                 prmdepartamentoegresado.Value = objetoEgresadoBE.Departamentoegresado;
 
+                prmpaisesgresado = new SqlParameter();
+                prmpaisesgresado.ParameterName = "@paisegresado";
+                prmpaisesgresado.SqlDbType = SqlDbType.VarChar;
+                prmpaisesgresado.Size = 50;
+                prmpaisesgresado.Value = objetoEgresadoBE.Paisegresado;
+
                 prmperfilinkedinegresado = new SqlParameter();
                 prmperfilinkedinegresado.ParameterName = "@perfillinkedinegresado";
                 prmperfilinkedinegresado.SqlDbType = SqlDbType.VarChar;
@@ -202,6 +212,12 @@ namespace SWEGR.DL.DALC
                 prmfotoegresado.Size = 1000;
                 prmfotoegresado.Value = objetoEgresadoBE.Fotoegresado;
 
+                prmcontrasenaegresado = new SqlParameter();
+                prmcontrasenaegresado.ParameterName = "@contrasenaegresado";
+                prmcontrasenaegresado.SqlDbType = SqlDbType.VarChar;
+                prmcontrasenaegresado.Size = 50;
+                prmcontrasenaegresado.Value = objetoEgresadoBE.Contrasenaegresado;
+
                 cmdactualizaregresado.Parameters.Add(prmidegresado);
                 cmdactualizaregresado.Parameters.Add(prmnombrecompletoegresado);
                 cmdactualizaregresado.Parameters.Add(prmedadegresado);
@@ -214,11 +230,13 @@ namespace SWEGR.DL.DALC
                 cmdactualizaregresado.Parameters.Add(prmdireccionegresado);
                 cmdactualizaregresado.Parameters.Add(prmdistritoegresado);
                 cmdactualizaregresado.Parameters.Add(prmdepartamentoegresado);
+                cmdactualizaregresado.Parameters.Add(prmpaisesgresado);
                 cmdactualizaregresado.Parameters.Add(prmperfilinkedinegresado);
                 cmdactualizaregresado.Parameters.Add(prmperfilfacebookegresado);
                 cmdactualizaregresado.Parameters.Add(prmfechanacimientoegresado);
                 cmdactualizaregresado.Parameters.Add(prmtipoegresado);
                 cmdactualizaregresado.Parameters.Add(prmfotoegresado);
+                cmdactualizaregresado.Parameters.Add(prmcontrasenaegresado);
 
                 cmdactualizaregresado.Connection.Open();
                 cmdactualizaregresado.ExecuteNonQuery();
