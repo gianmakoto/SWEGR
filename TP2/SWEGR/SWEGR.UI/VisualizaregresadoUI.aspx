@@ -107,7 +107,7 @@
                 </div>
                 <div class="col-lg-8 col-sm-8">
                     <ol class="breadcrumb pull-right">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="Index.aspx">Home</a></li>
                         <li class="active">Egresados </li>
                     </ol>
                 </div>
@@ -489,7 +489,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-sm-12">
-                    <h1>contact info</h1>
+                    <h1>Informacion de contacto</h1>
                     <address>
                         <p>
                             Dirección:  Prolongación Primavera 2390, Monterrico

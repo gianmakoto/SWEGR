@@ -278,7 +278,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-sm-12">
-                    <h1>contact info</h1>
+                    <h1>Informacion de contacto</h1>
                     <address>
                         <p>
                             Dirección:  Prolongación Primavera 2390, Monterrico

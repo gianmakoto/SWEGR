@@ -407,6 +407,14 @@ namespace SWEGR.UI
             ValidarURL objetovalidarfb = new ValidarURL();
             validaurlfacebook = objetovalidarfb.ValidateUrl(txtperfilfacebook.Text.Trim());
 
+           if (ddlDepartamento.SelectedIndex == 0)
+            {
+                ddlDepartamento.BorderColor = System.Drawing.Color.OrangeRed;
+                error = true;  
+            }
+            else
+                ddlDepartamento.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
+
             if (txtdni.Text.Length != 8)
             {
 
@@ -508,16 +516,22 @@ namespace SWEGR.UI
             {
                 if (validarFormulario())
                {
-                    if (validarCampos())
-                    {
-                        if (actualizarEgresado())
-                        {
-                            ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "exito();", true);
-                            guardarHistorial();
-                        }
-                        else
-                            ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Ocurrió un error\")</script>", false);
-                    }
+                   if (validarCampos())
+                   {
+                       if (actualizarEgresado())
+                       {
+                           ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "exito();", true);
+                           guardarHistorial();
+
+                       }
+                       else
+                           ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Ocurrió un error\")</script>", false);
+                   }
+                   else 
+                   {
+                       btnguardar.Focus();
+                   }
+
                 }
             }
             catch (Exception ex)

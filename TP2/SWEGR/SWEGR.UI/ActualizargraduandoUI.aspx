@@ -53,13 +53,13 @@
             });
             $('#txttelefonoprincipal').keypress(function (e) {
                 var txt = $(this).val();
-                if (txt.length > 13) {
+                if (txt.length > 8) {
                     e.preventDefault();
                 }
             });
             $('#txttelefonoalternativo').keypress(function (e) {
                 var txt = $(this).val();
-                if (txt.length > 13) {
+                if (txt.length > 8) {
                     e.preventDefault();
                 }
             });
@@ -448,7 +448,7 @@
         </div>
     </header>
     <!--header end-->
-
+    <%--  --%>
     <!--breadcrumbs start-->
     <div class="breadcrumbs">
         <div class="container">
@@ -458,7 +458,7 @@
                 </div>
                 <div class="col-lg-8 col-sm-8">
                     <ol class="breadcrumb pull-right">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="Index.aspx">Home</a></li>
                         <li class="active">Graduandos </li>
                     </ol>
                 </div>
@@ -621,15 +621,15 @@
 
                             <div class="form-group">
                                 <div id="dialogvalidacion" style="text-align: center; display: none" runat="server">
-                                    <b style="text-align: center">Debe ingresar todos los campos necesarios para actualizar sus datos</b>
+                                    <b style="text-align: center">Debe ingresar todos los campos necesarios para actualizar sus datos.</b>
                                 </div>
 
                                 <div id="dialogincompleto" style="text-align: center; display: none" runat="server">
-                                    <b style="text-align: center">El formato de algunos campos es incorrecto</b>
+                                    <b style="text-align: center">El formato de algunos campos es incorrecto.</b>
                                 </div>
 
                                 <div id="dialogexito" style="text-align: justify; display: none" runat="server">
-                                    <b style="text-align: center">Sus datos han sido actualizados satisfactoriamente</b>
+                                    <b style="text-align: center">Sus datos han sido actualizados satisfactoriamente.</b>
                                 </div>
                             </div>
 
@@ -646,7 +646,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-sm-12">
-                    <h1>contact info</h1>
+                    <h1>Informacion de contacto</h1>
                     <address>
                         <p>
                             Dirección:  Prolongación Primavera 2390, Monterrico
