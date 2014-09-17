@@ -621,11 +621,11 @@
 
                             <div class="form-group">
                                 <div id="dialogvalidacion" style="text-align: center; display: none" runat="server">
-                                    <b style="text-align: center">Debe ingresar todos los campos requeridos</b>
+                                    <b style="text-align: center">Debe ingresar todos los campos necesarios para actualizar sus datos</b>
                                 </div>
 
                                 <div id="dialogincompleto" style="text-align: center; display: none" runat="server">
-                                    <b style="text-align: center">El formato de algun campo es incorrecto</b>
+                                    <b style="text-align: center">El formato de algunos campos es incorrecto</b>
                                 </div>
 
                                 <div id="dialogexito" style="text-align: justify; display: none" runat="server">
