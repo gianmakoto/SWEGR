@@ -265,6 +265,42 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionEstudio;
         
         /// <summary>
+        /// txtnombrejefeTrabajo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtnombrejefeTrabajo;
+        
+        /// <summary>
+        /// txtcargojefeTrabajo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtcargojefeTrabajo;
+        
+        /// <summary>
+        /// txttelefonojefeTrabajo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txttelefonojefeTrabajo;
+        
+        /// <summary>
+        /// txtcorreojefeTrabajo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtcorreojefeTrabajo;
+        
+        /// <summary>
         /// uptrayecProf control.
         /// </summary>
         /// <remarks>

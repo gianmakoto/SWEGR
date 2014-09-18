@@ -25,10 +25,12 @@ namespace SWEGR.BL.BE
         DateTime fechanacimientoegresado;
         Char tipoegresado;
         String fotoegresado;
-        String paisegresado;
+        int idpaisegresado;
         String contrasenaegresado;
-
-        
+        String contrasenadinamicaegresado;
+        bool cambiocontrasenaegresado;
+        String cicloegresado;
+        String codigouniversitarioegresado;
 
         public int Idegresado
         {
@@ -40,37 +42,37 @@ namespace SWEGR.BL.BE
         {
             get { return nombrecompletoegresado; }
             set { nombrecompletoegresado = value; }
-        }        
+        }
 
         public Decimal Edadegresado
         {
             get { return edadegresado; }
             set { edadegresado = value; }
-        }        
+        }
 
         public Char Sexoegresado
         {
             get { return sexoegresado; }
             set { sexoegresado = value; }
-        }       
+        }
 
         public String Telefonoprinegresado
         {
             get { return telefonoprinegresado; }
             set { telefonoprinegresado = value; }
-        }        
+        }
 
         public String Telefonoaltegresado
         {
             get { return telefonoaltegresado; }
             set { telefonoaltegresado = value; }
-        }        
+        }
 
         public String Dniegresado
         {
             get { return dniegresado; }
             set { dniegresado = value; }
-        }        
+        }
 
         public String Correoegresado
         {
@@ -88,7 +90,7 @@ namespace SWEGR.BL.BE
         {
             get { return direccionegresado; }
             set { direccionegresado = value; }
-        }        
+        }
 
         public String Distritoegresado
         {
@@ -132,16 +134,40 @@ namespace SWEGR.BL.BE
             set { fotoegresado = value; }
         }
 
-        public String Paisegresado
+        public int Idpaisegresado
         {
-            get { return paisegresado; }
-            set { paisegresado = value; }
+            get { return idpaisegresado; }
+            set { idpaisegresado = value; }
         }
 
         public String Contrasenaegresado
         {
             get { return contrasenaegresado; }
             set { contrasenaegresado = value; }
+        }
+
+        public String Contrasenadinamicaegresado
+        {
+            get { return contrasenadinamicaegresado; }
+            set { contrasenadinamicaegresado = value; }
+        }
+
+        public bool Cambiocontrasenaegresado
+        {
+            get { return cambiocontrasenaegresado; }
+            set { cambiocontrasenaegresado = value; }
+        }
+
+        public String Cicloegresado
+        {
+            get { return cicloegresado; }
+            set { cicloegresado = value; }
+        }
+
+        public String Codigouniversitarioegresado
+        {
+            get { return codigouniversitarioegresado; }
+            set { codigouniversitarioegresado = value; }
         }
     }
 }

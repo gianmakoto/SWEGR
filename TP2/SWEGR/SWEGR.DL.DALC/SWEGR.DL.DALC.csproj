@@ -40,9 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AptitudDALC.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="EgresadoDALC.cs" />
     <Compile Include="HistorialDatosEgresadoDALC.cs" />
+    <Compile Include="InteresDALC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

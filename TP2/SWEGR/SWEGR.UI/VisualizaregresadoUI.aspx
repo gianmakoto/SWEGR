@@ -345,7 +345,43 @@
                                         Descripción:
                                     </label>
                                     <div class="col-sm-8">
-                                        <asp:TextBox ID="txtdescripcionEstudio" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente"></asp:TextBox>
+                                        <asp:TextBox ID="txtdescripcionEstudio" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 col-sm-2 control-label">
+                                        Nombre del jefe directo:
+                                    </label>
+                                    <div class="col-sm-8">
+                                        <asp:TextBox ID="txtnombrejefeTrabajo" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Bill Jobs"></asp:TextBox>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 col-sm-2 control-label">
+                                        Cargo del jefe:
+                                    </label>
+                                    <div class="col-sm-8">
+                                        <asp:TextBox ID="txtcargojefeTrabajo" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Jefe de Arquitectos de Software"></asp:TextBox>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 col-sm-2 control-label">
+                                        Teléfono del jefe:
+                                    </label>
+                                    <div class="col-sm-8">
+                                        <asp:TextBox ID="txttelefonojefeTrabajo" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: 00-999-999-9999" data-mask="99-999-9999" onkeypress="return isNumber(event)" onpaste="return false"></asp:TextBox>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 col-sm-2 control-label">
+                                        Correo del jefe:
+                                    </label>
+                                    <div class="col-sm-8">
+                                        <asp:TextBox ID="txtcorreojefeTrabajo" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: jefemaestro@gmail.com"></asp:TextBox>
                                     </div>
                                 </div>
                              </div>
