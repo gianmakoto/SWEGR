@@ -16,7 +16,6 @@ namespace SWEGR.DL.DALC
         public AptitudBE obtenerAptitud(int idaptitud)
         {
             String sqlobteneraptitud;
-
             SqlConnection conn;
             SqlCommand cmdobteneraptitud;
             SqlParameter prmidaptitud;

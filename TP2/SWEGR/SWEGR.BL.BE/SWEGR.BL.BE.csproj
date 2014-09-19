@@ -43,6 +43,7 @@
     <Compile Include="EgresadoBE.cs" />
     <Compile Include="HistorialDatosEgresadoBE.cs" />
     <Compile Include="InteresBE.cs" />
+    <Compile Include="PaisBE.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistroAcademicoBE.cs" />
     <Compile Include="RegistroLaboralBE.cs" />

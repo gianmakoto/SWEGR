@@ -16,7 +16,8 @@ namespace SWEGR.UI
         protected void Page_Load(object sender, EventArgs e)
         {
             int IDEgresado;
-
+            
+            
             try
             {
                 IDEgresado = Convert.ToInt32(Request.QueryString["IDEgresado"]);
@@ -37,9 +38,13 @@ namespace SWEGR.UI
                     ddlDepartamento.DataBind();
                     ddlDepartamento.Items.Insert(0, new ListItem("Seleccione el departamento", ""));
 
-                    //ddlPaís.DataSource = listapais();
-                    //ddlPaís.DataBind();
+                    PaisBC objetoPaisBC = new PaisBC();
+                    List<String> lsPaisBE = new List<string>();
+                    lsPaisBE = objetoPaisBC.listarPais();
+                    ddlPaís.DataSource = lsPaisBE;
+                    ddlPaís.DataBind();
                     ddlPaís.Items.Insert(0, new ListItem("Seleccione el país", ""));
+                    
 
                     EgresadoBC objEgresadoBC = new EgresadoBC();
                     EgresadoBE graduando = objEgresadoBC.obtenerEgresado(IDEgresado);
@@ -65,12 +70,62 @@ namespace SWEGR.UI
                         ddlDepartamento.SelectedIndex = -1;
                     else
                         ddlDepartamento.Text = graduando.Departamentoegresado;
+
+                    lstaptitudes.DataSource = listaaptitudes(IDEgresado);
+                    lstaptitudes.DataBind();
+
+                    lstintereses.DataSource = listaintereses(IDEgresado);
+                    lstintereses.DataBind();
                 }
             }
             catch (Exception)
             {
                 ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Ocurrió un error\")</script>", false);
             }
+        }
+
+        public List<String> listaaptitudes(int idegresado)
+        {
+            List<String> lsaptitudes = new List<string>();
+            List<int> idaptitudes = new List<int>();
+            AptitudBE objetoAptitudBE = new AptitudBE();
+            AptitudBC objetoAptitudBC = new AptitudBC();
+            
+
+            EgresadoBC objetoEgresadoBC = new EgresadoBC();
+            idaptitudes = objetoEgresadoBC.listaraptitudxegresado(idegresado);
+
+            for (int i = 0; i < idaptitudes.Count(); i++)
+            {
+                int aptitudid = idaptitudes[i];
+
+                objetoAptitudBE = objetoAptitudBC.obtenerAptitud(aptitudid);
+
+                lsaptitudes.Add(objetoAptitudBE.Nombreaptitud);
+            }
+            return lsaptitudes;
+        }
+
+        public List<String> listaintereses(int idegresado)
+        {
+            List<String> lsintereses = new List<string>();
+            List<int> idintereses = new List<int>();
+            InteresBE objetoInteresBE = new InteresBE();
+            InteresBC objetoInteresBC = new InteresBC();
+
+
+            EgresadoBC objetoEgresadoBC = new EgresadoBC();
+            idintereses = objetoEgresadoBC.listaraptitudxegresado(idegresado);
+
+            for (int i = 0; i < idintereses.Count(); i++)
+            {
+                int interesid = idintereses[i];
+
+                objetoInteresBE = objetoInteresBC.obtenerInteres(interesid);
+
+                lsintereses.Add(objetoInteresBE.Nombreinteres);
+            }
+            return lsintereses;
         }
 
         public List<String> listagenero()

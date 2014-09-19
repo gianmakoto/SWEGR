@@ -284,5 +284,109 @@ namespace SWEGR.DL.DALC
                 throw;
             }
         }
+
+        public List<int> listaraptitudxegresado(int idegresado)
+        {
+            String sqllistaraptitud;
+            SqlConnection conn;
+            SqlCommand cmdlistaraptitud;
+            SqlDataReader draptitud;
+            SqlParameter prmidegresado;
+            //SqlDataReader dregresado;
+            DataTable dtegresado = new DataTable();
+            int idaptitud;
+
+            try 
+	        {
+                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CSSeguimientoEgresados"].ToString());
+                sqllistaraptitud = "SWEGR_obtenerAptitudxEgresado";
+                cmdlistaraptitud = new SqlCommand(sqllistaraptitud, conn);
+                cmdlistaraptitud.CommandType = CommandType.StoredProcedure;
+
+                prmidegresado = new SqlParameter();
+                prmidegresado.ParameterName = "@idegresado";
+                prmidegresado.SqlDbType = SqlDbType.Int;
+                prmidegresado.Value = idegresado;
+
+                cmdlistaraptitud.Parameters.Add(prmidegresado);
+
+                cmdlistaraptitud.Connection.Open();
+
+                List<int> listaIdAptitudes = new List<int>();
+
+                //if(draptitud.Read()
+                //{
+                //    while
+                //}
+
+                dtegresado.Load(cmdlistaraptitud.ExecuteReader());
+
+                foreach (DataRow drwegresado in dtegresado.Rows)
+                {
+                    idaptitud = Convert.ToInt32(drwegresado["AptitudID"]);
+
+                    listaIdAptitudes.Add(idaptitud);
+                }
+
+                cmdlistaraptitud.Connection.Close();
+                return listaIdAptitudes;
+		    }
+	        catch (Exception ex)
+	        {
+                throw;
+	        }
+        }
+
+        public List<int> listarinteresxegresado(int idegresado)
+        {
+            String sqllistarinteres;
+            SqlConnection conn;
+            SqlCommand cmdlistarinteres;
+            SqlDataReader drinteres;
+            SqlParameter prmidegresado;
+            //SqlDataReader dregresado;
+            DataTable dtegresado = new DataTable();
+            int idinteres;
+
+            try 
+	        {
+                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CSSeguimientoEgresados"].ToString());
+                sqllistarinteres = "SWEGR_obtenerInteresxEgresado";
+                cmdlistarinteres = new SqlCommand(sqllistarinteres, conn);
+                cmdlistarinteres.CommandType = CommandType.StoredProcedure;
+
+                prmidegresado = new SqlParameter();
+                prmidegresado.ParameterName = "@idegresado";
+                prmidegresado.SqlDbType = SqlDbType.Int;
+                prmidegresado.Value = idegresado;
+
+                cmdlistarinteres.Parameters.Add(prmidegresado);
+
+                cmdlistarinteres.Connection.Open();
+
+                List<int> listaIdAptitudes = new List<int>();
+
+                //if(draptitud.Read()
+                //{
+                //    while
+                //}
+
+                dtegresado.Load(cmdlistarinteres.ExecuteReader());
+
+                foreach (DataRow drwegresado in dtegresado.Rows)
+                {
+                    idinteres = Convert.ToInt32(drwegresado["InteresesID"]);
+
+                    listaIdAptitudes.Add(idinteres);
+                }
+
+                cmdlistarinteres.Connection.Close();
+                return listaIdAptitudes;
+		    }
+	        catch (Exception ex)
+	        {
+                throw;
+	        }
+        }
     }
 }

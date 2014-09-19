@@ -203,7 +203,7 @@
                                         País
                                     </label>
                                     <div class="col-sm-8">
-                                        <asp:DropDownList ID="ddlPaís" runat="server" AutoPostBack="false" CssClass="form-control" Enabled="false"></asp:DropDownList>
+                                        <asp:DropDownList ID="ddlPaís" runat="server" AutoPostBack="false" CssClass="form-control"></asp:DropDownList>
                                     </div>
                                 </div>
 

@@ -49,5 +49,31 @@ namespace SWEGR.BL.BC
                 throw;
             }
         }
+
+        public List<int> listaraptitudxegresado(int idegresado)
+        {
+            try
+            {
+                EgresadoDALC objetoegresadoDALC = new EgresadoDALC();
+                return objetoegresadoDALC.listaraptitudxegresado(idegresado);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public List<int> listarinteresxegresado(int idegresado)
+        {
+            try
+            {
+                EgresadoDALC objetoegresadoDALC = new EgresadoDALC();
+                return objetoegresadoDALC.listarinteresxegresado(idegresado);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
     }
 }

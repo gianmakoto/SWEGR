@@ -45,6 +45,7 @@
     <Compile Include="EgresadoDALC.cs" />
     <Compile Include="HistorialDatosEgresadoDALC.cs" />
     <Compile Include="InteresDALC.cs" />
+    <Compile Include="PaisDALC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
