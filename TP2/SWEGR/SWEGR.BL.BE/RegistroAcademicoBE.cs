@@ -15,6 +15,7 @@ namespace SWEGR.BL.BE
         String duracionestudio;
         String descripcionestudio;
         String tipoestudio;
+        int idpais;
 
         public int Idregistroacademico
         {
@@ -56,6 +57,12 @@ namespace SWEGR.BL.BE
         {
             get { return tipoestudio; }
             set { tipoestudio = value; }
+        }
+
+        public int Idpais
+        {
+            get { return idpais; }
+            set { idpais = value; }
         }
     }
 }

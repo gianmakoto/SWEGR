@@ -47,6 +47,8 @@
     <Compile Include="InteresDALC.cs" />
     <Compile Include="PaisDALC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistroAcademicoDALC.cs" />
+    <Compile Include="RegistroLaboralDALC.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SWEGR.BL.BE\SWEGR.BL.BE.csproj">

@@ -71,6 +71,8 @@ namespace SWEGR.UI
                     else
                         ddlDepartamento.Text = graduando.Departamentoegresado;
 
+
+
                     lstaptitudes.DataSource = listaaptitudes(IDEgresado);
                     lstaptitudes.DataBind();
 

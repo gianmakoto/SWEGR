@@ -290,9 +290,7 @@ namespace SWEGR.DL.DALC
             String sqllistaraptitud;
             SqlConnection conn;
             SqlCommand cmdlistaraptitud;
-            SqlDataReader draptitud;
             SqlParameter prmidegresado;
-            //SqlDataReader dregresado;
             DataTable dtegresado = new DataTable();
             int idaptitud;
 
@@ -313,11 +311,6 @@ namespace SWEGR.DL.DALC
                 cmdlistaraptitud.Connection.Open();
 
                 List<int> listaIdAptitudes = new List<int>();
-
-                //if(draptitud.Read()
-                //{
-                //    while
-                //}
 
                 dtegresado.Load(cmdlistaraptitud.ExecuteReader());
 
@@ -342,9 +335,7 @@ namespace SWEGR.DL.DALC
             String sqllistarinteres;
             SqlConnection conn;
             SqlCommand cmdlistarinteres;
-            SqlDataReader drinteres;
             SqlParameter prmidegresado;
-            //SqlDataReader dregresado;
             DataTable dtegresado = new DataTable();
             int idinteres;
 
@@ -365,11 +356,6 @@ namespace SWEGR.DL.DALC
                 cmdlistarinteres.Connection.Open();
 
                 List<int> listaIdAptitudes = new List<int>();
-
-                //if(draptitud.Read()
-                //{
-                //    while
-                //}
 
                 dtegresado.Load(cmdlistarinteres.ExecuteReader());
 

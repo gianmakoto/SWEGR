@@ -14,9 +14,12 @@ namespace SWEGR.BL.BE
         String cargotrabajo;
         String duraciontrabajo;
         String nombrejefetrabajo;
+        String descripciontrabajo;
         String cargojefetrabajo;
         String telefonojefetrabajo;
         String correojefetrabajo;
+        int idpais;
+        bool trabajoactual;
 
         public int Idregistrolaboral
         {
@@ -54,6 +57,12 @@ namespace SWEGR.BL.BE
             set { nombrejefetrabajo = value; }
         }
 
+        public String Descripciontrabajo
+        {
+            get { return descripciontrabajo; }
+            set { descripciontrabajo = value; }
+        }
+
         public String Cargojefetrabajo
         {
             get { return cargojefetrabajo; }
@@ -69,6 +78,18 @@ namespace SWEGR.BL.BE
         {
             get { return correojefetrabajo; }
             set { correojefetrabajo = value; }
+        }
+
+        public int Idpais
+        {
+            get { return idpais; }
+            set { idpais = value; }
+        }
+
+        public bool Trabajoactual
+        {
+            get { return trabajoactual; }
+            set { trabajoactual = value; }
         }
     }
 }
