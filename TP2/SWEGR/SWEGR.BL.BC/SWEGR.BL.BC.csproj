@@ -44,6 +44,8 @@
     <Compile Include="InteresBC.cs" />
     <Compile Include="PaisBC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistroAcademicoBC.cs" />
+    <Compile Include="RegistroLaboralBC.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SWEGR.BL.BE\SWEGR.BL.BE.csproj">

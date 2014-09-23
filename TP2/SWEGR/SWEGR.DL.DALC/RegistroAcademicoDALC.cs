@@ -19,11 +19,12 @@ namespace SWEGR.DL.DALC
             SqlConnection conn;
             SqlCommand cmdlistarregistroacad;
             SqlParameter prmidegresado;
-            DataTable dtregistroAcad = new DataTable();
-            
+            SqlDataReader drregistroacademico;
 
             try
             {
+                RegistroAcademicoBE objetoRegistroAcademicoBE;
+
                 conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CSSeguimientoEgresados"].ToString());
                 sqllistarregistroacad = "SWEGR_listarRegistroAcademico";
                 cmdlistarregistroacad = new SqlCommand(sqllistarregistroacad, conn);
@@ -34,25 +35,22 @@ namespace SWEGR.DL.DALC
                 prmidegresado.SqlDbType = SqlDbType.Int;
                 prmidegresado.Value = idegresado;
 
-                cmdlistarregistroacad.Parameters.Add(idegresado);
-
+                cmdlistarregistroacad.Parameters.Add(prmidegresado);
                 cmdlistarregistroacad.Connection.Open();
-
-                RegistroAcademicoBE objetoRegistroAcademicoBE = new RegistroAcademicoBE();
+                drregistroacademico = cmdlistarregistroacad.ExecuteReader();
                 List<RegistroAcademicoBE> listaRegistroAcademicoBE = new List<RegistroAcademicoBE>();
 
-                dtregistroAcad.Load(cmdlistarregistroacad.ExecuteReader());
-
-                foreach (DataRow drwregistroacad in dtregistroAcad.Rows)
+                while (drregistroacademico.Read())
                 {
-                    objetoRegistroAcademicoBE.Idregistroacademico = Convert.ToInt32(drwregistroacad["RegistroAcademicoID"]);
-                    objetoRegistroAcademicoBE.Idegresado = Convert.ToInt32(drwregistroacad["EgresadoID"]);
-                    objetoRegistroAcademicoBE.Nombreinstitucion = Convert.ToString(drwregistroacad["NombreInstitucion"]);
-                    objetoRegistroAcademicoBE.Nombreestudio = Convert.ToString(drwregistroacad["Nombre"]);
-                    objetoRegistroAcademicoBE.Duracionestudio = Convert.ToString(drwregistroacad["Duracion"]);
-                    objetoRegistroAcademicoBE.Descripcionestudio = Convert.ToString(drwregistroacad["Descripcion"]);
-                    objetoRegistroAcademicoBE.Tipoestudio = Convert.ToString(drwregistroacad["TipoEstudio"]);
-                    objetoRegistroAcademicoBE.Idpais = Convert.ToInt32(drwregistroacad["PaisID"]);
+                    objetoRegistroAcademicoBE = new RegistroAcademicoBE();
+
+                    objetoRegistroAcademicoBE.Idregistroacademico = drregistroacademico.GetInt32(0);
+                    objetoRegistroAcademicoBE.Nombreinstitucion = drregistroacademico.GetString(1);
+                    objetoRegistroAcademicoBE.Nombreestudio = drregistroacademico.GetString(2);
+                    objetoRegistroAcademicoBE.Duracionestudio = drregistroacademico.GetString(3);
+                    objetoRegistroAcademicoBE.Descripcionestudio = drregistroacademico.GetString(4);
+                    objetoRegistroAcademicoBE.Tipoestudio = drregistroacademico.GetString(5);
+                    objetoRegistroAcademicoBE.Idpais = drregistroacademico.GetInt32(6);
 
                     listaRegistroAcademicoBE.Add(objetoRegistroAcademicoBE);
                 }

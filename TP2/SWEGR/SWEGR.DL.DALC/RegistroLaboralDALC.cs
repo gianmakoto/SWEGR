@@ -19,11 +19,12 @@ namespace SWEGR.DL.DALC
             SqlConnection conn;
             SqlCommand cmdlistarregistrolabor;
             SqlParameter prmidegresado;
-            DataTable dtregistroLabor = new DataTable();
-
+            SqlDataReader drregistrolaboral;
 
             try
             {
+                RegistroLaboralBE objetoRegistroLaboralBE;
+
                 conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CSSeguimientoEgresados"].ToString());
                 sqllistarregistrolabor = "SWEGR_listarRegistroLaboral";
                 cmdlistarregistrolabor = new SqlCommand(sqllistarregistrolabor, conn);
@@ -34,29 +35,26 @@ namespace SWEGR.DL.DALC
                 prmidegresado.SqlDbType = SqlDbType.Int;
                 prmidegresado.Value = idegresado;
 
-                cmdlistarregistrolabor.Parameters.Add(idegresado);
-
+                cmdlistarregistrolabor.Parameters.Add(prmidegresado);
                 cmdlistarregistrolabor.Connection.Open();
-
-                RegistroLaboralBE objetoRegistroLaboralBE = new RegistroLaboralBE();
+                drregistrolaboral = cmdlistarregistrolabor.ExecuteReader();
                 List<RegistroLaboralBE> listaRegistroLaboralBE = new List<RegistroLaboralBE>();
 
-                dtregistroLabor.Load(cmdlistarregistrolabor.ExecuteReader());
-
-                foreach (DataRow drwregistrolabor in dtregistroLabor.Rows)
+                while (drregistrolaboral.Read())
                 {
-                    objetoRegistroLaboralBE.Idregistrolaboral = Convert.ToInt32(drwregistrolabor["RegistroLaboralID"]);
-                    objetoRegistroLaboralBE.Idegresado = Convert.ToInt32(drwregistrolabor["EgresadoID"]);
-                    objetoRegistroLaboralBE.Nombretrabajo = Convert.ToString(drwregistrolabor["NombreTrabajo"]);
-                    objetoRegistroLaboralBE.Cargotrabajo = Convert.ToString(drwregistrolabor["Cargo"]);
-                    objetoRegistroLaboralBE.Duraciontrabajo = Convert.ToString(drwregistrolabor["Duracion"]);
-                    objetoRegistroLaboralBE.Descripciontrabajo = Convert.ToString(drwregistrolabor["Descripcion"]);
-                    objetoRegistroLaboralBE.Nombrejefetrabajo = Convert.ToString(drwregistrolabor["NombreJefe"]);
-                    objetoRegistroLaboralBE.Cargojefetrabajo = Convert.ToString(drwregistrolabor["JefeCargo"]);
-                    objetoRegistroLaboralBE.Telefonojefetrabajo = Convert.ToString(drwregistrolabor["TelefonoContacto"]);
-                    objetoRegistroLaboralBE.Correojefetrabajo = Convert.ToString(drwregistrolabor["CorreoJefe"]);
-                    objetoRegistroLaboralBE.Idpais = Convert.ToInt32(drwregistrolabor["PaisID"]);
-                    objetoRegistroLaboralBE.Trabajoactual = Convert.ToBoolean(drwregistrolabor["TrabajoActual"]);
+                    objetoRegistroLaboralBE = new RegistroLaboralBE();
+
+                    objetoRegistroLaboralBE.Idregistrolaboral = drregistrolaboral.GetInt32(0);
+                    objetoRegistroLaboralBE.Nombretrabajo = drregistrolaboral.GetString(1);
+                    objetoRegistroLaboralBE.Cargotrabajo = drregistrolaboral.GetString(2);
+                    objetoRegistroLaboralBE.Duraciontrabajo = drregistrolaboral.GetString(3);
+                    objetoRegistroLaboralBE.Descripciontrabajo = drregistrolaboral.GetString(4);
+                    objetoRegistroLaboralBE.Nombrejefetrabajo = drregistrolaboral.GetString(5);
+                    objetoRegistroLaboralBE.Cargojefetrabajo = drregistrolaboral.GetString(6);
+                    objetoRegistroLaboralBE.Telefonojefetrabajo = drregistrolaboral.GetString(7);
+                    objetoRegistroLaboralBE.Correojefetrabajo = drregistrolaboral.GetString(8);
+                    objetoRegistroLaboralBE.Idpais = drregistrolaboral.GetInt32(9);
+                    objetoRegistroLaboralBE.Trabajoactual = drregistrolaboral.GetBoolean(10);
 
                     listaRegistroLaboralBE.Add(objetoRegistroLaboralBE);
                 }

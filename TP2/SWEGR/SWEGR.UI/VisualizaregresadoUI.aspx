@@ -10,7 +10,7 @@
 
     <title>Visualizar Egresado</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script>
+    <script type="text/javascript">
         function datosPersonalesToggle() {
             $("#datosPersonales").slideToggle();
         }
@@ -26,6 +26,159 @@
         function aptitudesInteresesToggle() {
             $("#aptitudesIntereses").slideToggle();
         }
+
+        function mostrarCurso2() {
+            $("#Curso2").show();
+        }
+
+        function mostrarCurso3() {
+            $("#Curso3").show();
+        }
+
+        function mostrarCurso4() {
+            $("#Curso4").show();
+        }
+
+        function mostrarCurso5() {
+            $("#Curso5").show();
+        }
+
+        function mostrarCurso6() {
+            $("#Curso6").show();
+        }
+
+        function mostrarCurso7() {
+            $("#Curso7").show();
+        }
+
+        function mostrarCurso8() {
+            $("#Curso8").show();
+        }
+
+        function mostrarCurso9() {
+            $("#Curso9").show();
+        }
+
+        function mostrarCurso10() {
+            $("#Curso10").show();
+        }
+
+        function mostrarCurso11() {
+            $("#Curso11").show();
+        }
+
+        function mostrarCurso12() {
+            $("#Curso12").show();
+        }
+
+        function mostrarCurso13() {
+            $("#Curso13").show();
+        }
+
+        function mostrarCurso14() {
+            $("#Curso14").show();
+        }
+
+        function mostrarCurso15() {
+            $("#Curso15").show();
+        }
+
+        function mostrarCurso16() {
+            $("#Curso16").show();
+        }
+
+        function mostrarCurso17() {
+            $("#Curso17").show();
+        }
+
+        function mostrarCurso18() {
+            $("#Curso18").show();
+        }
+
+        function mostrarCurso19() {
+            $("#Curso19").show();
+        }
+
+        function mostrarCurso20() {
+            $("#Curso20").show();
+        }
+
+        function mostrarTrabajo2() {
+            $("#Trabajo2").show();
+        }
+
+        function mostrarTrabajo3() {
+            $("#Trabajo3").show();
+        }
+
+        function mostrarTrabajo4() {
+            $("#Trabajo4").show();
+        }
+
+        function mostrarTrabajo5() {
+            $("#Trabajo5").show();
+        }
+
+        function mostrarTrabajo6() {
+            $("#Trabajo6").show();
+        }
+
+        function mostrarTrabajo7() {
+            $("#Trabajo7").show();
+        }
+
+        function mostrarTrabajo8() {
+            $("#Trabajo8").show();
+        }
+
+        function mostrarTrabajo9() {
+            $("#Trabajo9").show();
+        }
+
+        function mostrarTrabajo10() {
+            $("#Trabajo10").show();
+        }
+
+        function mostrarTrabajo11() {
+            $("#Trabajo11").show();
+        }
+
+        function mostrarTrabajo12() {
+            $("#Trabajo12").show();
+        }
+
+        function mostrarTrabajo13() {
+            $("#Trabajo13").show();
+        }
+
+        function mostrarTrabajo14() {
+            $("#Trabajo14").show();
+        }
+
+        function mostrarTrabajo15() {
+            $("#Trabajo15").show();
+        }
+
+        function mostrarTrabajo16() {
+            $("#Trabajo16").show();
+        }
+
+        function mostrarTrabajo17() {
+            $("#Trabajo17").show();
+        }
+
+        function mostrarTrabajo18() {
+            $("#Trabajo18").show();
+        }
+
+        function mostrarTrabajo19() {
+            $("#Trabajo19").show();
+        }
+
+        function mostrarTrabajo20() {
+            $("#Trabajo20").show();
+        }
+
 </script>
 
     <script type="text/javascript" src="MaxLength.min.js"></script>
