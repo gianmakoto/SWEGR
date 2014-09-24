@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="VisualizaregresadoUI.aspx.cs" Inherits="SWEGR.UI.VisualizaregresadoUI" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Actualizaregresado.aspx.cs" Inherits="SWEGR.UI.Actualizaregresado" %>
 
 <!DOCTYPE html>
 
@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.png">
 
-    <title>Visualizar Egresado</title>
+    <title>Actualizar Egresado</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript">
         function datosPersonalesToggle() {
@@ -206,7 +206,6 @@
     <!-- Custom styles for this template -->
     <link href="Content/css/style.css" rel="stylesheet">
     <link href="Content/css/style-responsive.css" rel="stylesheet" />
-
 </head>
 <body>
     <!--header start-->
@@ -356,7 +355,7 @@
                                         País
                                     </label>
                                     <div class="col-sm-8">
-                                        <asp:DropDownList ID="ddlPais" runat="server" AutoPostBack="false" CssClass="form-control" Enabled="false"></asp:DropDownList>
+                                        <asp:DropDownList ID="ddlPais" runat="server" AutoPostBack="false" CssClass="form-control" Enabled="true"></asp:DropDownList>
                                     </div>
                                 </div>
 
@@ -3142,5 +3141,7 @@
 
 
     </script>
+</body>
+
 </body>
 </html>

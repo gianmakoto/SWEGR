@@ -129,6 +129,7 @@
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="Actualizaregresado.aspx" />
     <Content Include="ActualizargraduandoUI.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\assets\bxslider\images\bx_loader.gif" />
@@ -427,6 +428,13 @@
     <Content Include="SeguimientoEgresados.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actualizaregresado.aspx.cs">
+      <DependentUpon>Actualizaregresado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Actualizaregresado.aspx.designer.cs">
+      <DependentUpon>Actualizaregresado.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ActualizargraduandoUI.aspx.cs">
       <DependentUpon>ActualizargraduandoUI.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

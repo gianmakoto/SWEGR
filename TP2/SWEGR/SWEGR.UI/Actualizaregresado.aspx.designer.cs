@@ -10,7 +10,7 @@
 namespace SWEGR.UI {
     
     
-    public partial class VisualizaregresadoUI {
+    public partial class Actualizaregresado {
         
         /// <summary>
         /// Head1 control.

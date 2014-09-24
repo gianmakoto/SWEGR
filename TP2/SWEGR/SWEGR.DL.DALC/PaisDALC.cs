@@ -51,5 +51,52 @@ namespace SWEGR.DL.DALC
                 throw;
             }
         }
+
+        public String obtenerPais(int idpais)
+        {
+            String sqlobtenerpais;
+
+            SqlConnection conn;
+            SqlCommand cmdobtenerpais;
+            SqlParameter prmidpais;
+            SqlDataReader drpais;
+
+            String pais = "";
+
+            try
+            {
+                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CSSeguimientoEgresados"].ToString());
+                sqlobtenerpais = "SWEGR_obtenerPais";
+                cmdobtenerpais = new SqlCommand(sqlobtenerpais, conn);
+                cmdobtenerpais.CommandType = CommandType.StoredProcedure;
+
+                prmidpais = new SqlParameter();
+                prmidpais.ParameterName = "@idpais";
+                prmidpais.SqlDbType = SqlDbType.Int;
+                prmidpais.Value = idpais;
+
+                cmdobtenerpais.Parameters.Add(prmidpais);
+                cmdobtenerpais.Connection.Open();
+
+                PaisBE objetoPaisBE;
+                objetoPaisBE = new PaisBE();
+
+                drpais = cmdobtenerpais.ExecuteReader();
+
+                if (drpais.Read())
+                {
+                    objetoPaisBE.Nombrepais = drpais.GetString(0);
+
+                    pais = objetoPaisBE.Nombrepais;
+                }
+                cmdobtenerpais.Connection.Close();
+
+                return pais;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
     }
 }

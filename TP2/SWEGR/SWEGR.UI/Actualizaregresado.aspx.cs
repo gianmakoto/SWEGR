@@ -11,12 +11,12 @@ using SWEGR.BL.BE;
 
 namespace SWEGR.UI
 {
-    public partial class VisualizaregresadoUI : System.Web.UI.Page
+    public partial class Actualizaregresado : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             int IDEgresado;
-            
+
             try
             {
                 IDEgresado = Convert.ToInt32(Request.QueryString["IDEgresado"]);
@@ -43,7 +43,7 @@ namespace SWEGR.UI
                     ddlPais.DataSource = lsPaisBE;
                     ddlPais.DataBind();
                     ddlPais.Items.Insert(0, new ListItem("Seleccione el país", ""));
-                    
+
 
                     EgresadoBC objEgresadoBC = new EgresadoBC();
                     EgresadoBE graduando = objEgresadoBC.obtenerEgresado(IDEgresado);
@@ -392,7 +392,7 @@ namespace SWEGR.UI
             }
             else
                 return;
-            
+
         }
 
         public void llenarregistrolaboral(int idegresado)
@@ -823,7 +823,7 @@ namespace SWEGR.UI
             List<int> idaptitudes = new List<int>();
             AptitudBE objetoAptitudBE = new AptitudBE();
             AptitudBC objetoAptitudBC = new AptitudBC();
-            
+
 
             EgresadoBC objetoEgresadoBC = new EgresadoBC();
             idaptitudes = objetoEgresadoBC.listaraptitudxegresado(idegresado);
