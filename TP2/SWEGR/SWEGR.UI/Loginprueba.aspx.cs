@@ -26,19 +26,25 @@ namespace SWEGR.UI
             {
                 EgresadoBC objEgresadoBC = new EgresadoBC();
                 EgresadoBE objEgresadoBE = objEgresadoBC.obtenerEgresado(Convert.ToInt32(txtidegresado.Text));
+
+
                 if (objEgresadoBE.Nombrecompletoegresado != null)
                 {
                     if (objEgresadoBE.Tipoegresado == 'G')
                     {
                         IDEgresado = objEgresadoBE.Idegresado;
-                        Response.Redirect("ActualizargraduandoUI.aspx?IDEgresado=" + IDEgresado.ToString());
+                        Session["IDActGra"] = IDEgresado;
+                        Response.Redirect("ActualizargraduandoUI.aspx");
+                        
                     }
                     else
                     {
                         if (objEgresadoBE.Tipoegresado == 'E')
                         {
                             IDEgresado = objEgresadoBE.Idegresado;
-                            Response.Redirect("VisualizaregresadoUI.aspx?IDEgresado=" + IDEgresado.ToString());
+                            Session["IDVisEgre"] = IDEgresado;
+                            Response.Redirect("VisualizaregresadoUI.aspx" );
+                            
                         }
                         else
                             ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"El usuario presenta error\")</script>", false);

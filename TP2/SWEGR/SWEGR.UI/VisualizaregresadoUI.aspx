@@ -506,6 +506,7 @@
 
                                 <div id="Curso2" hidden="hidden">
                                     <div class="form-group">
+                                        <hr />
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
                                         </label>
@@ -1305,6 +1306,7 @@
 
                                 <div id="Curso19" hidden="hidden">
                                     <div class="form-group">
+                                        
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
                                         </label>
@@ -1497,6 +1499,7 @@
                                 </div>
 
                                 <div id="Trabajo2" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:

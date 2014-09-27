@@ -15,7 +15,8 @@ namespace SWEGR.UI
         {
             // Código que se ejecuta al iniciarse la aplicación
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            AuthConfig.RegisterOpenAuth();
+           AuthConfig.RegisterOpenAuth();
+           // RegisterRoutes(RouteTable.Routes);
         }
 
         void Application_End(object sender, EventArgs e)
@@ -23,6 +24,11 @@ namespace SWEGR.UI
             //  Código que se ejecuta al cerrarse la aplicación
 
         }
+        static void RegisterRoutes(RouteCollection routes)
+        {
+           // routes.MapPageRoute("ActualizargraduandoUI", "ActualizargraduandoUI", "~/ActualizargraduandoUI.aspx");
+        }
+
 
         void Application_Error(object sender, EventArgs e)
         {

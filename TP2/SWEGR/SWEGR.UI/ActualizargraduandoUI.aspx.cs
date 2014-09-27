@@ -29,7 +29,8 @@ namespace SWEGR.UI
         {
                 try
                 {
-                    IDEgresado = Convert.ToInt32(Request.QueryString["IDEgresado"]);
+                    //IDEgresado = Convert.ToInt32(Request.QueryString["IDEgresado"]);
+                    IDEgresado = Convert.ToInt32(Session["IDActGra"]);
 
                     if (IDEgresado == 0)
                     {
