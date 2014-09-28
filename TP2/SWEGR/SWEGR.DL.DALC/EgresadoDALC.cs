@@ -374,5 +374,173 @@ namespace SWEGR.DL.DALC
                 throw;
 	        }
         }
+
+        public bool insertarAptitudxEgresado(int idegresado, int idaptitud)
+        {
+            String sqlinsertaraptitudxegresado;
+
+            SqlConnection conn;
+            SqlCommand cmdinsertaraptitudxegresado;
+            SqlParameter prmidegresado;
+            SqlParameter prmidaptitud;
+
+            try
+            {
+                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CSSeguimientoEgresados"].ToString());
+                sqlinsertaraptitudxegresado = "SWEGR_insertarAptitudxEgresado";
+                cmdinsertaraptitudxegresado = new SqlCommand(sqlinsertaraptitudxegresado, conn);
+                cmdinsertaraptitudxegresado.CommandType = CommandType.StoredProcedure;
+
+                prmidegresado = new SqlParameter();
+                prmidegresado.ParameterName = "@idegresado";
+                prmidegresado.SqlDbType = SqlDbType.Int;
+                prmidegresado.Value = idegresado;
+
+                prmidaptitud = new SqlParameter();
+                prmidaptitud.ParameterName = "@idaptitud";
+                prmidaptitud.SqlDbType = SqlDbType.Int;
+                prmidaptitud.Value = idaptitud;
+
+                cmdinsertaraptitudxegresado.Parameters.Add(prmidegresado);
+                cmdinsertaraptitudxegresado.Parameters.Add(prmidaptitud);
+
+                cmdinsertaraptitudxegresado.Connection.Open();
+                cmdinsertaraptitudxegresado.ExecuteNonQuery();
+
+                cmdinsertaraptitudxegresado.Connection.Close();
+
+                return true;
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public bool insertarInteresxEgresado(int idegresado, int idinteres)
+        {
+            String sqlinsertaraptitudxegresado;
+
+            SqlConnection conn;
+            SqlCommand cmdinsertarinteresxegresado;
+            SqlParameter prmidegresado;
+            SqlParameter prmidinteres;
+
+            try
+            {
+                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CSSeguimientoEgresados"].ToString());
+                sqlinsertaraptitudxegresado = "SWEGR_insertarInteresxEgresado";
+                cmdinsertarinteresxegresado = new SqlCommand(sqlinsertaraptitudxegresado, conn);
+                cmdinsertarinteresxegresado.CommandType = CommandType.StoredProcedure;
+
+                prmidegresado = new SqlParameter();
+                prmidegresado.ParameterName = "@idegresado";
+                prmidegresado.SqlDbType = SqlDbType.Int;
+                prmidegresado.Value = idegresado;
+
+                prmidinteres = new SqlParameter();
+                prmidinteres.ParameterName = "@idinteres";
+                prmidinteres.SqlDbType = SqlDbType.Int;
+                prmidinteres.Value = idinteres;
+
+                cmdinsertarinteresxegresado.Parameters.Add(prmidegresado);
+                cmdinsertarinteresxegresado.Parameters.Add(prmidinteres);
+
+                cmdinsertarinteresxegresado.Connection.Open();
+                cmdinsertarinteresxegresado.ExecuteNonQuery();
+
+                cmdinsertarinteresxegresado.Connection.Close();
+
+                return true;
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public void eliminarAptitudxEgresado(int idegresado, int idaptitud)
+        {
+            String sqleliminaraptitudxegresado;
+
+            SqlConnection conn;
+            SqlCommand cmdeliminaraptitudxegresado;
+            SqlParameter prmidegresado;
+            SqlParameter prmidaptitud;
+
+            try
+            {
+                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CSSeguimientoEgresados"].ToString());
+                sqleliminaraptitudxegresado = "SWEGR_eliminarAptitudxEgresado";
+                cmdeliminaraptitudxegresado = new SqlCommand(sqleliminaraptitudxegresado, conn);
+                cmdeliminaraptitudxegresado.CommandType = CommandType.StoredProcedure;
+
+                prmidegresado = new SqlParameter();
+                prmidegresado.ParameterName = "@idegresado";
+                prmidegresado.SqlDbType = SqlDbType.Int;
+                prmidegresado.Value = idegresado;
+
+                prmidaptitud = new SqlParameter();
+                prmidaptitud.ParameterName = "@idaptitud";
+                prmidaptitud.SqlDbType = SqlDbType.Int;
+                prmidaptitud.Value = idaptitud;
+
+                cmdeliminaraptitudxegresado.Parameters.Add(prmidegresado);
+                cmdeliminaraptitudxegresado.Parameters.Add(prmidaptitud);
+
+                cmdeliminaraptitudxegresado.Connection.Open();
+                cmdeliminaraptitudxegresado.ExecuteNonQuery();
+
+                cmdeliminaraptitudxegresado.Connection.Close();
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public void eliminarInteresxEgresado(int idegresado, int idinteres)
+        {
+            String sqleliminaraptitudxegresado;
+
+            SqlConnection conn;
+            SqlCommand cmdeliminarinteresxegresado;
+            SqlParameter prmidegresado;
+            SqlParameter prmidinteres;
+
+            try
+            {
+                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CSSeguimientoEgresados"].ToString());
+                sqleliminaraptitudxegresado = "SWEGR_eliminarInteresxEgresado";
+                cmdeliminarinteresxegresado = new SqlCommand(sqleliminaraptitudxegresado, conn);
+                cmdeliminarinteresxegresado.CommandType = CommandType.StoredProcedure;
+
+                prmidegresado = new SqlParameter();
+                prmidegresado.ParameterName = "@idegresado";
+                prmidegresado.SqlDbType = SqlDbType.Int;
+                prmidegresado.Value = idegresado;
+
+                prmidinteres = new SqlParameter();
+                prmidinteres.ParameterName = "@idinteres";
+                prmidinteres.SqlDbType = SqlDbType.Int;
+                prmidinteres.Value = idinteres;
+
+                cmdeliminarinteresxegresado.Parameters.Add(prmidegresado);
+                cmdeliminarinteresxegresado.Parameters.Add(prmidinteres);
+
+                cmdeliminarinteresxegresado.Connection.Open();
+                cmdeliminarinteresxegresado.ExecuteNonQuery();
+
+                cmdeliminarinteresxegresado.Connection.Close();
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

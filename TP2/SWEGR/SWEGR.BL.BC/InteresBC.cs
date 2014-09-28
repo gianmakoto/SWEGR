@@ -16,5 +16,23 @@ namespace SWEGR.BL.BC
             InteresDALC objetoInteresDALC = new InteresDALC();
             return objetoInteresDALC.obtenerInteres(idinteres);
         }
+
+        public int insertarInteres(InteresBE objetointeres)
+        {
+            InteresDALC objetoInteresDALC = new InteresDALC();
+            return objetoInteresDALC.insertarInteres(objetointeres);
+        }
+
+        public bool actualizarInteres(InteresBE objetointeres)
+        {
+            InteresDALC objetoInteresDALC = new InteresDALC();
+            return objetoInteresDALC.actualizarInteres(objetointeres);
+        }
+
+        public void eliminarInteres(int idinteres)
+        {
+            InteresDALC objetoInteresDALC = new InteresDALC();
+            objetoInteresDALC.eliminarInteres(idinteres);
+        }
     }
 }

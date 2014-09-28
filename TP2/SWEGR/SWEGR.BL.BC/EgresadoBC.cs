@@ -75,5 +75,58 @@ namespace SWEGR.BL.BC
                 throw;
             }
         }
+
+        public bool insertarAptitudxEgresado(int idegresado, int idaptitud)
+        {
+            try
+            {
+                EgresadoDALC objetoegresadoDALC = new EgresadoDALC();
+                return objetoegresadoDALC.insertarAptitudxEgresado(idegresado, idaptitud);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public bool insertarInteresxEgresado(int idegresado, int idinteres)
+        {
+            try
+            {
+                EgresadoDALC objetoegresadoDALC = new EgresadoDALC();
+                return objetoegresadoDALC.insertarInteresxEgresado(idegresado, idinteres);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public void eliminarAptitudxEgresado(int idegresado, int idaptitud)
+        {
+            try
+            {
+                EgresadoDALC objetoegresadoDALC = new EgresadoDALC();
+                objetoegresadoDALC.eliminarAptitudxEgresado(idegresado, idaptitud);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public void eliminarInteresxEgresado(int idegresado, int idinteres)
+        {
+            try
+            {
+                EgresadoDALC objetoegresadoDALC = new EgresadoDALC();
+                objetoegresadoDALC.eliminarInteresxEgresado(idegresado, idinteres);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
     }
 }

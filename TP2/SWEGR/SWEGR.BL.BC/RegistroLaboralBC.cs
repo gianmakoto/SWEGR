@@ -23,5 +23,31 @@ namespace SWEGR.BL.BC
                 throw;
             }
         }
+
+        public int insertarregistrolaboral(RegistroLaboralBE objetoregistrolaboral)
+        {
+            try
+            {
+                RegistroLaboralDALC objetoRegistroLaboralDALC = new RegistroLaboralDALC();
+                return objetoRegistroLaboralDALC.insertarregistrolaboral(objetoregistrolaboral);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public bool actualizarregistrolaboral(RegistroLaboralBE objetoregistrolaboral)
+        {
+            try
+            {
+                RegistroLaboralDALC objetoRegistroLaboralDALC = new RegistroLaboralDALC();
+                return objetoRegistroLaboralDALC.actualizarregistrolaboral(objetoregistrolaboral);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
     }
 }
