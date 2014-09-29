@@ -179,7 +179,7 @@
             $("#Trabajo20").show();
         }
 
-</script>
+    </script>
 
     <script type="text/javascript" src="MaxLength.min.js"></script>
 
@@ -225,13 +225,13 @@
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav" style="align: center">
                         <li><a href="Index.aspx">Inicio</a></li>
-                        
+
                         <li class="active"><a href="VisualizaregresadoUI.aspx">Egresado</a></li>
                         <li><a href="ActualizargraduandoUI.aspx">Graduando</a></li>
                         <!-- user login dropdown start-->
                         <li class="dropdown">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                <img alt="" src="img/avatar1_small.jpg">
+                                <img alt="" style="height: 19px; width:17px" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
                                 <span class="username">Nombre</span>
                                 <b class="caret"></b>
                             </a>
@@ -240,7 +240,7 @@
                                 <li><a href="#"><i class=" icon-suitcase"></i>Profile</a></li>
                                 <li><a href="#"><i class="icon-cog"></i>Settings</a></li>
                                 <li><a href="#"><i class="icon-bell-alt"></i>Notification</a></li>
-                                <li><a href="#"><i class="icon-key"></i>Log Out</a></li>
+                                <li><a href="Loginprueba.aspx"><i class="icon-key"></i>Log Out</a></li>
                             </ul>
                         </li>
                         <!-- user login dropdown end -->
@@ -280,183 +280,195 @@
                     <div class="col-md-12">
                         <form id="swegrform" class="cmxform form-horizontal tasi-form" runat="server">
 
-                             <%-- Datos Personales --%>
-                            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager> 
+                            <%-- Datos Personales --%>
+                            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
                             <asp:UpdatePanel ID="updatosPersonales" runat="server" UpdateMode="Conditional">
-                            <ContentTemplate>
-                            <div id="Div1" runat="server" style="margin:auto">
-                                <div style="float:left; position:relative; top:-10px">
-                                    <h3 style="margin-bottom: 4px; text-align:left; float:left">Datos Personales</h3>
-                                </div>
-                                <div style="float:right;position:relative; top:10px">
-                                    <asp:Button ID="btndatosPersonales" runat="server" Text="+" OnClick="btndatosPersonales_Click"/>
-                                </div>
-                                <div style="clear:both"></div>
-                            </div>
+                                <ContentTemplate>
+                                    <div id="Div1" runat="server" style="margin: auto">
+                                        <div style="float: left; position: relative; top: -10px">
+                                            <h3 style="margin-bottom: 4px; text-align: left; float: left">Datos Personales</h3>
+                                        </div>
+                                        <div style="float: right; position: relative; top: 10px">
+                                            <asp:Button ID="btndatosPersonales" runat="server" Text="▼" CssClass="btn" OnClick="btndatosPersonales_Click" />
+                                        </div>
+                                        <div style="clear: both"></div>
+                                    </div>
                                 </ContentTemplate>
                             </asp:UpdatePanel>
-
-                            <div id="datosPersonales" style="border: 1px solid black; padding-left:4%; padding-top:4%" hidden="hidden">
-                                <div class="form-group">
-                                    <label class="col-sm-2 col-sm-2 control-label">
-                                        Nombre completo
-                                    </label>
+                            <div id="datosPersonales" style="border: 1px solid black; padding-left: 4%; padding-top: 4%" hidden="hidden">
+                                <div class="row">
                                     <div class="col-sm-8">
-                                        <asp:TextBox ID="txtnombrecompleto" runat="server" CssClass="form-control" Enabled="false" type="text" ></asp:TextBox>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                Nombre completo
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:TextBox ID="txtnombrecompleto" runat="server" CssClass="form-control" Enabled="false" type="text"></asp:TextBox>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                * DNI
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:TextBox ID="txtdni" runat="server"
+                                                    CssClass="form-control" onkeypress="return isNumber(event)" onpaste="return false" Enabled="false"></asp:TextBox>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                Género
+                                            </label>
+
+
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlGenero" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="col-sm-2 col-sm-2 control-label">
-                                       * DNI
-                                    </label>
-                                    <div class="col-sm-8">
-                                        <asp:TextBox ID="txtdni" runat="server"
-                                            CssClass="form-control" onkeypress="return isNumber(event)" onpaste="return false" Enabled="false"></asp:TextBox>
                                     
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="col-sm-2 col-sm-2 control-label">
-                                        Género
-                                    </label>
-                                    <div class="col-sm-8">
-                                        <asp:DropDownList ID="ddlGenero" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-con-trol"></asp:DropDownList>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="col-sm-2 col-sm-2 control-label">
-                                        Fecha de Nacimiento
-                                    </label>
-                                    <div class="col-sm-8">
-                                        <asp:TextBox ID="txtfechanacimiento" runat="server"
-                                            CssClass="form-control" Enabled="false"></asp:TextBox>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="col-sm-2 col-sm-2 control-label">
-                                       * Teléfonos
-                                    </label>
-                                    <div class="col-sm-4">
-                                        <asp:TextBox ID="txttelefonoprincipal" runat="server"
-                                            CssClass="form-control" placeholder="00-999-999-9999 (principal)" data-mask="99-999-9999" onkeypress="return isNumber(event)" onpaste="return false" Enabled="false"></asp:TextBox>
-                                  
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <asp:TextBox ID="txttelefonoalternativo" runat="server"
-                                            CssClass="form-control" placeholder="00-999-999-9999 (alternativo)" data-mask="999-999-999"  onkeypress="return isNumber(event)"  onpaste="return false" Enabled="false"></asp:TextBox>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="col-sm-2 col-sm-2 control-label">
-                                        País
-                                    </label>
-                                    <div class="col-sm-8">
-                                        <asp:DropDownList ID="ddlPais" runat="server" AutoPostBack="false" CssClass="form-control" Enabled="false"></asp:DropDownList>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="col-sm-2 col-sm-2 control-label">
-                                        Departamento
-                                    </label>
-                                    <div class="col-sm-8">
-                                        <asp:DropDownList ID="ddlDepartamento" runat="server" AutoPostBack="false" CssClass="form-control" Enabled="false"></asp:DropDownList>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="col-sm-2 col-sm-2 control-label">
-                                        Distrito
-                                    </label>
-                                    <div class="col-sm-8">
-                                        <asp:TextBox ID="txtdistrito" runat="server"
-                                            CssClass="form-control" placeholder="Ejemplo: San Isidro" Enabled="false"></asp:TextBox>
-                                    </div>
-                                </div>
-
-                                 <div class="form-group">
-                                    <label class="col-sm-2 col-sm-2 control-label">
-                                        Dirección
-                                    </label>
-                                    <div class="col-sm-8">
-                                        <asp:TextBox ID="txtdireccion" runat="server"
-                                            CssClass="form-control" placeholder="Ejemplo: Av. Callejones rojos 450" Enabled="false"></asp:TextBox>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="col-sm-2 col-sm-2 control-label">
-                                       * Correo
-                                    </label>
-                                    <div class="col-sm-8">
-                                        <asp:TextBox ID="txtcorreo" runat="server"
-                                            CssClass="form-control" placeholder="Ejemplo: usuario@gmail.com" Enabled="false"></asp:TextBox>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="col-sm-2 col-sm-2 control-label">
-                                        Correo Alternativo
-                                    </label>
-                                    <div class="col-sm-8">
-                                        <asp:TextBox ID="txtcorreoalternativo" runat="server"
-                                            CssClass="form-control" placeholder="Ejemplo: usuario_alternativo@hotmail.com" Enabled="false"></asp:TextBox>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="col-sm-2 col-sm-2 control-label">
-                                       * Perfil LinkedIn
-                                    </label>
-                                    <div class="col-sm-8">
-
-                                        <div class="input-group m-bot15">
-                                            <span class="input-group-addon"><i class="fa fa-linkedin"></i>
-                                            </span>
-                                            <asp:TextBox ID="txtperfillinkedin" runat="server"
-                                                CssClass="form-control" placeholder="Ejemplo: https://pe.linkedin.com/iduduario" Enabled="false"></asp:TextBox>
+                                    <div class="cold-sm-2">
+                                        <div class="row"  >
+                                         <img style="height: 135px; width: 135px; margin-left: 30px; " class="img-thumbnail" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png" />
                                         </div>
                                     </div>
+                                    
                                 </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">
+                                    Fecha de Nacimiento
+                                </label>
+                                <div class="col-sm-8">
+                                    <asp:TextBox ID="txtfechanacimiento" runat="server"
+                                        CssClass="form-control" Enabled="false"></asp:TextBox>
+                                </div>
+                            </div>
 
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">
+                                    * Teléfonos
+                                </label>
+                                <div class="col-sm-4">
+                                    <asp:TextBox ID="txttelefonoprincipal" runat="server"
+                                        CssClass="form-control" placeholder="00-999-999-9999 (principal)" data-mask="99-999-9999" onkeypress="return isNumber(event)" onpaste="return false" Enabled="false"></asp:TextBox>
 
-                                <div class="form-group">
-                                    <label class="col-sm-2 col-sm-2 control-label">
-                                        Perfil Facebook
-                                    </label>
-                                    <div class="col-sm-8">
+                                </div>
+                                <div class="col-sm-4">
+                                    <asp:TextBox ID="txttelefonoalternativo" runat="server"
+                                        CssClass="form-control" placeholder="00-999-999-9999 (alternativo)" data-mask="999-999-999" onkeypress="return isNumber(event)" onpaste="return false" Enabled="false"></asp:TextBox>
+                                </div>
+                            </div>
 
-                                        <div class="input-group m-bot15">
-                                            <span class="input-group-addon"><i class="fa fa-facebook"></i>
-                                            </span>
-                                            <asp:TextBox ID="txtperfilfacebook" runat="server"
-                                                CssClass="form-control" placeholder="Ejemplo: https://www.facebook.com/usuario" Enabled="false"></asp:TextBox>
-                                        </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">
+                                    País
+                                </label>
+                                <div class="col-sm-8">
+                                    <asp:DropDownList ID="ddlPais" runat="server" AutoPostBack="false" CssClass="form-control" Enabled="false"></asp:DropDownList>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">
+                                    Departamento
+                                </label>
+                                <div class="col-sm-8">
+                                    <asp:DropDownList ID="ddlDepartamento" runat="server" AutoPostBack="false" CssClass="form-control" Enabled="false"></asp:DropDownList>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">
+                                    Distrito
+                                </label>
+                                <div class="col-sm-8">
+                                    <asp:TextBox ID="txtdistrito" runat="server"
+                                        CssClass="form-control" placeholder="Ejemplo: San Isidro" Enabled="false"></asp:TextBox>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">
+                                    Dirección
+                                </label>
+                                <div class="col-sm-8">
+                                    <asp:TextBox ID="txtdireccion" runat="server"
+                                        CssClass="form-control" placeholder="Ejemplo: Av. Callejones rojos 450" Enabled="false"></asp:TextBox>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">
+                                    * Correo
+                                </label>
+                                <div class="col-sm-8">
+                                    <asp:TextBox ID="txtcorreo" runat="server"
+                                        CssClass="form-control" placeholder="Ejemplo: usuario@gmail.com" Enabled="false"></asp:TextBox>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">
+                                    Correo Alternativo
+                                </label>
+                                <div class="col-sm-8">
+                                    <asp:TextBox ID="txtcorreoalternativo" runat="server"
+                                        CssClass="form-control" placeholder="Ejemplo: usuario_alternativo@hotmail.com" Enabled="false"></asp:TextBox>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">
+                                    * Perfil LinkedIn
+                                </label>
+                                <div class="col-sm-8">
+
+                                    <div class="input-group m-bot15">
+                                        <span class="input-group-addon"><i class="fa fa-linkedin"></i>
+                                        </span>
+                                        <asp:TextBox ID="txtperfillinkedin" runat="server"
+                                            CssClass="form-control" placeholder="Ejemplo: https://pe.linkedin.com/iduduario" Enabled="false"></asp:TextBox>
                                     </div>
                                 </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">
+                                    Perfil Facebook
+                                </label>
+                                <div class="col-sm-8">
+
+                                    <div class="input-group m-bot15">
+                                        <span class="input-group-addon"><i class="fa fa-facebook"></i>
+                                        </span>
+                                        <asp:TextBox ID="txtperfilfacebook" runat="server"
+                                            CssClass="form-control" placeholder="Ejemplo: https://www.facebook.com/usuario" Enabled="false"></asp:TextBox>
+                                    </div>
+                                </div>
+                            </div>
                             </div>
 
                             <%-- Trayectoria Académica --%>
                             <asp:UpdatePanel ID="uptrayecAcad" runat="server" UpdateMode="Conditional">
-                            <ContentTemplate>
-                            <div id="Div2" runat="server" style="margin:auto">
-                                <div style="float:left; position:relative; top:-10px">
-                                    <h3 style="margin-bottom: 4px; text-align:left; float:left">Trayectoria Académica</h3>
-                                </div>
-                                <div style="float:right;position:relative; top:10px">
-                                    <asp:Button ID="btntrayectoriaAcad" runat="server" Text="+" OnClick="btntrayectoriaAcad_Click"/>
-                                </div>
-                                <div style="clear:both"></div>
-                            </div>
+                                <ContentTemplate>
+                                    <div id="Div2" runat="server" style="margin: auto">
+                                        <div style="float: left; position: relative; top: -10px">
+                                            <h3 style="margin-bottom: 4px; text-align: left; float: left">Trayectoria Académica</h3>
+                                        </div>
+                                        <div style="float: right; position: relative; top: 10px">
+                                            <asp:Button ID="btntrayectoriaAcad" runat="server" Text="▼" OnClick="btntrayectoriaAcad_Click" CssClass="btn" />
+                                        </div>
+                                        <div style="clear: both"></div>
+                                    </div>
                                 </ContentTemplate>
                             </asp:UpdatePanel>
 
-                            <div id="trayectoriaAcad" style="border: 1px solid black; padding-left:4%; padding-top:4%" hidden="hidden">
+                            <div class="col-md-12" id="trayectoriaAcad" style="border: 1px solid black; padding-left: 4%; padding-top: 4%" hidden="hidden">
                                 <div id="Curso1">
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -504,9 +516,10 @@
                                     </div>
                                 </div>
 
+                                <hr />
                                 <div id="Curso2" hidden="hidden">
                                     <div class="form-group">
-                                        <hr />
+
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
                                         </label>
@@ -1306,7 +1319,7 @@
 
                                 <div id="Curso19" hidden="hidden">
                                     <div class="form-group">
-                                        
+
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
                                         </label>
@@ -1399,24 +1412,24 @@
                                     </div>
                                 </div>
 
-                             </div>
+                            </div>
 
                             <%-- Trayectoria Profesional --%>
                             <asp:UpdatePanel ID="uptrayecProf" runat="server" UpdateMode="Conditional">
-                            <ContentTemplate>
-                            <div id="Div3" runat="server" style="margin:auto">
-                                <div style="float:left; position:relative; top:-10px">
-                                    <h3 style="margin-bottom: 4px; text-align:left; float:left">Trayectoria Profesional</h3>
-                                </div>
-                                <div style="float:right;position:relative; top:10px">
-                                    <asp:Button ID="btntrayectoriaProf" runat="server" Text="+" OnClick="btntrayectoriaProf_Click"/>
-                                </div>
-                                <div style="clear:both"></div>
-                            </div>
+                                <ContentTemplate>
+                                    <div id="Div3" runat="server" style="margin: auto">
+                                        <div style="float: left; position: relative; top: -10px">
+                                            <h3 style="margin-bottom: 4px; text-align: left; float: left">Trayectoria Profesional</h3>
+                                        </div>
+                                        <div style="float: right; position: relative; top: 10px">
+                                            <asp:Button ID="btntrayectoriaProf" runat="server" Text="▼" CssClass="btn" OnClick="btntrayectoriaProf_Click" />
+                                        </div>
+                                        <div style="clear: both"></div>
+                                    </div>
                                 </ContentTemplate>
                             </asp:UpdatePanel>
 
-                            <div id="trayectoriaProf" style="border: 1px solid black; padding-left:4%; padding-top:4%" hidden="hidden">
+                            <div id="trayectoriaProf" style="border: 1px solid black; padding-left: 4%; padding-top: 4%" hidden="hidden">
                                 <div id="Trabajo1">
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -3037,40 +3050,40 @@
                                         </label>
                                     </div>
                                 </div>
-                             </div>
-
-                            <%-- Aptitudes e Intereses--%> 
-                            <asp:UpdatePanel ID="upaptitudesIntereses" runat="server" UpdateMode="Conditional">
-                            <ContentTemplate>
-                            <div id="Div4" runat="server" style="margin:auto">
-                                <div style="float:left; position:relative; top:-10px">
-                                    <h3 style="margin-bottom: 4px; text-align:left; float:left">Aptitudes e Intereses</h3>
-                                </div>
-                                <div style="float:right;position:relative; top:10px">
-                                    <asp:Button ID="btnaptitudesIntereses" runat="server" Text="+" OnClick="btnaptitudesIntereses_Click"/>
-                                </div>
-                                <div style="clear:both"></div>
                             </div>
+
+                            <%-- Aptitudes e Intereses--%>
+                            <asp:UpdatePanel ID="upaptitudesIntereses" runat="server" UpdateMode="Conditional">
+                                <ContentTemplate>
+                                    <div id="Div4" runat="server" style="margin: auto">
+                                        <div style="float: left; position: relative; top: -10px">
+                                            <h3 style="margin-bottom: 4px; text-align: left; float: left">Aptitudes e Intereses</h3>
+                                        </div>
+                                        <div style="float: right; position: relative; top: 10px">
+                                            <asp:Button ID="btnaptitudesIntereses" runat="server" Text="▼" CssClass="btn" OnClick="btnaptitudesIntereses_Click" />
+                                        </div>
+                                        <div style="clear: both"></div>
+                                    </div>
                                 </ContentTemplate>
                             </asp:UpdatePanel>
 
-                            <div id="aptitudesIntereses" style="border: 1px solid black; padding-left:4%; padding-top:4%" hidden="hidden">
+                            <div id="aptitudesIntereses" style="border: 1px solid black; padding-left: 4%; padding-top: 4%" hidden="hidden">
                                 <div class="form-group">
-                                    <table cellspacion="0" cellpadding="3" border="0" style="margin:auto" class="auto-style13">
-                                      <tr>
-                                          <td style="text-align:left; vertical-align:top">Aptitudes:</td>
-                                          <td>
-                                              <asp:ListBox ID="lstaptitudes" runat="server" Width="220px" Height="150px" AutoPostBack="false"></asp:ListBox>
-                                          </td>
-                                          <td></td>
-                                          <td style="text-align:right; vertical-align:top">Intereses:</td>
-                                          <td>
-                                              <asp:ListBox ID="lstintereses" runat="server" Width="220px" Height="150px" AutoPostBack="false"></asp:ListBox>
-                                          </td>
-                                      </tr>
-                                  </table>
+                                    <table cellspacion="0" cellpadding="3" border="0" style="margin: auto" class="auto-style13">
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: top">Aptitudes:</td>
+                                            <td>
+                                                <asp:ListBox ID="lstaptitudes" runat="server" Width="220px" Height="150px" AutoPostBack="false"></asp:ListBox>
+                                            </td>
+                                            <td></td>
+                                            <td style="text-align: right; vertical-align: top">Intereses:</td>
+                                            <td>
+                                                <asp:ListBox ID="lstintereses" runat="server" Width="220px" Height="150px" AutoPostBack="false"></asp:ListBox>
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </div>
-                             </div>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -3088,7 +3101,7 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-sm-12">
+                <div class="col-lg-10 col-sm-12">
                     <h1>Informacion de contacto</h1>
                     <address>
                         <p>
@@ -3100,12 +3113,22 @@
                         <p>Contacto : <a href="http://contactoweb.upc.edu.pe/">Consultas</a></p>
                     </address>
                 </div>
+                <div class="col-lg-2 col-sm-12 ">
+                    <h1>Contactenos</h1>
+                    <ul class="social-link-footer list-unstyled">
+                        <li><a href="https://www.facebook.com/profile.php?id=100007924308551"><i class="icon-facebook"></i></a></li>
+                        <li><a href="https://www.linkedin.com/pub/escuela-de-ingenier%C3%ADa-de-sistemas-y-computaci%C3%B3n/a3/864/45b"><i class="icon-linkedin"></i></a></li>
+
+                    </ul>
+                </div>
             </div>
+
         </div>
+
     </footer>
     <!--footer end-->
     <!-- js placed at the end of the document so the pages load faster -->
-  
+
     <script src="Content/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="Content/js/hover-dropdown.js"></script>
     <script type="text/javascript" src="Content/assets/bxslider/jquery.bxslider.js"></script>

@@ -429,7 +429,7 @@
                         <!-- user login dropdown start-->
                         <li class="dropdown">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                <img alt="" src="img/avatar1_small.jpg">
+                                <img alt="" style="height: 19px; width:17px" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
                                 <span class="username">Nombre</span>
                                 <b class="caret"></b>
                             </a>
@@ -438,7 +438,7 @@
                                 <li><a href="#"><i class=" icon-suitcase"></i>Profile</a></li>
                                 <li><a href="#"><i class="icon-cog"></i>Settings</a></li>
                                 <li><a href="#"><i class="icon-bell-alt"></i>Notification</a></li>
-                                <li><a href="#"><i class="icon-key"></i>Log Out</a></li>
+                                <li><a href="Loginprueba.aspx"><i class="icon-key"></i>Log Out</a></li>
                             </ul>
                         </li>
                         <!-- user login dropdown end -->
@@ -502,6 +502,8 @@
                                 <label class="col-sm-2 col-sm-2 control-label">
                                     Género
                                 </label>
+                                
+
                                 <div class="col-sm-8">
                                     <asp:DropDownList ID="ddlGenero" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                 </div>
@@ -645,7 +647,7 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-sm-12">
+                <div class="col-lg-10 col-sm-12">
                     <h1>Informacion de contacto</h1>
                     <address>
                         <p>
@@ -657,8 +659,18 @@
                         <p>Contacto : <a href="http://contactoweb.upc.edu.pe/">Consultas</a></p>
                     </address>
                 </div>
+                <div class="col-lg-2 col-sm-12 ">
+                    <h1>Contactenos</h1>
+                    <ul class="social-link-footer list-unstyled">
+                        <li><a href="https://www.facebook.com/profile.php?id=100007924308551"><i class="icon-facebook"></i></a></li>
+                        <li><a href="https://www.linkedin.com/pub/escuela-de-ingenier%C3%ADa-de-sistemas-y-computaci%C3%B3n/a3/864/45b"><i class="icon-linkedin"></i></a></li>
+
+                    </ul>
+                </div>
             </div>
-        </div>
+
+            </div>
+       
     </footer>
     <!--footer end-->
     <!-- js placed at the end of the document so the pages load faster -->

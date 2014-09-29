@@ -14,9 +14,12 @@ namespace SWEGR.UI
     public partial class Loginprueba : System.Web.UI.Page
     {
         int IDEgresado;
+        char tipoEgresado;
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            Session.Clear();
+
             
         }
 
@@ -30,10 +33,14 @@ namespace SWEGR.UI
 
                 if (objEgresadoBE.Nombrecompletoegresado != null)
                 {
+                    IDEgresado = objEgresadoBE.Idegresado;
+                    tipoEgresado = objEgresadoBE.Tipoegresado;
+                    Session["TipoUsuario"] = tipoEgresado;
+                    Session["IDusuario"] = IDEgresado;
                     if (objEgresadoBE.Tipoegresado == 'G')
                     {
-                        IDEgresado = objEgresadoBE.Idegresado;
-                        Session["IDActGra"] = IDEgresado;
+                        
+                      
                         Response.Redirect("ActualizargraduandoUI.aspx");
                         
                     }
@@ -41,8 +48,8 @@ namespace SWEGR.UI
                     {
                         if (objEgresadoBE.Tipoegresado == 'E')
                         {
-                            IDEgresado = objEgresadoBE.Idegresado;
-                            Session["IDVisEgre"] = IDEgresado;
+                            
+                            
                             Response.Redirect("VisualizaregresadoUI.aspx" );
                             
                         }

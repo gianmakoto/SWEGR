@@ -261,6 +261,7 @@
     <Content Include="Content\css\superfish.css" />
     <Content Include="Content\css\theme.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\img\exigete.jpg" />
     <Content Include="Content\js\bootstrap.js" />
     <Content Include="Content\js\bootstrap.min.js" />
     <Content Include="Content\js\common-scripts.js" />
@@ -332,6 +333,8 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Images\egresados.jpg" />
+    <Content Include="Images\exigete.jpg" />
     <Content Include="Images\foto1.png" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
@@ -349,7 +352,21 @@
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
     <Content Include="Index.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="Loginprueba.aspx" />
+    <Content Include="Login\css\bootstrap-reset.css" />
+    <Content Include="Login\css\bootstrap-theme.css" />
+    <Content Include="Login\css\bootstrap-theme.min.css" />
+    <Content Include="Login\css\bootstrap.css" />
+    <Content Include="Login\css\bootstrap.min.css" />
+    <Content Include="Login\css\gallery.css" />
+    <Content Include="Login\css\image-crop.css" />
+    <Content Include="Login\css\navbar-fixed-top.css" />
+    <Content Include="Login\css\owl.carousel.css" />
+    <Content Include="Login\css\style-responsive.css" />
+    <Content Include="Login\css\style.css" />
+    <Content Include="Login\css\table-responsive.css" />
+    <Content Include="Login\css\tasks.css" />
     <Content Include="packages.config" />
     <Content Include="Content\assets\.DS_Store" />
     <Content Include="Content\assets\fancybox\.gitattributes" />
@@ -388,6 +405,7 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\js\.DS_Store" />
+    <Content Include="Login\css\.DS_Store" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
@@ -496,6 +514,13 @@
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Loginprueba.aspx.cs">
       <DependentUpon>Loginprueba.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -530,7 +555,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\img\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />

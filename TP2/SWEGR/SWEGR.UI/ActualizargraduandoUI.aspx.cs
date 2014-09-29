@@ -14,6 +14,7 @@ namespace SWEGR.UI
     public partial class ActualizargraduandoUI : System.Web.UI.Page
     {
         int IDEgresado;
+        char TUsuario;
         string dni;
         string telefono;
         string telefonoalternativo;
@@ -30,7 +31,13 @@ namespace SWEGR.UI
                 try
                 {
                     //IDEgresado = Convert.ToInt32(Request.QueryString["IDEgresado"]);
-                    IDEgresado = Convert.ToInt32(Session["IDActGra"]);
+                    IDEgresado = Convert.ToInt32(Session["IDusuario"]);
+                    TUsuario = Convert.ToChar(Session["TipoUsuario"]);
+                    if (TUsuario == 'E')
+                    {
+                        Response.Redirect("Loginprueba.aspx");
+                        return;
+                    }
 
                     if (IDEgresado == 0)
                     {

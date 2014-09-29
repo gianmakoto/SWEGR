@@ -16,13 +16,21 @@ namespace SWEGR.UI
         protected void Page_Load(object sender, EventArgs e)
         {
             int IDEgresado;
-            
+            char TUsuario;
+
             try
             {
                 //IDEgresado = Convert.ToInt32(Request.QueryString["IDEgresado"]);
-                IDEgresado = Convert.ToInt32(Session["IDVisEgre"].ToString());
+                IDEgresado = Convert.ToInt32(Session["IDusuario"].ToString());
+                TUsuario = Convert.ToChar(Session["TipoUsuario"]);
+                if (TUsuario == 'G')
+                {
+                    Response.Redirect("Loginprueba.aspx");
+                    return;
+                }
+               
 
-                if (IDEgresado == 0)
+                if (IDEgresado == 0 )
                 {
                     Response.Redirect("Loginprueba.aspx");
                     return;
@@ -90,6 +98,7 @@ namespace SWEGR.UI
             }
             catch (Exception)
             {
+               // throw;
                 ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Ocurrió un error\")</script>", false);
             }
         }
@@ -102,6 +111,9 @@ namespace SWEGR.UI
 
             listaRegistroAcademicoBE = objRegistroAcademicoBC.listarregistroacademico(idegresado);
             int cantidad = listaRegistroAcademicoBE.Count;
+
+            if (cantidad == 0)
+                return;
             objRegistroAcademicoBE = listaRegistroAcademicoBE[0];
 
             txtcentroEstudios.Text = objRegistroAcademicoBE.Nombreinstitucion;
@@ -404,8 +416,11 @@ namespace SWEGR.UI
 
             listaRegistroLaboralBE = objRegistroLaboralBC.listarregistrolaobral(idegresado);
             int cantidad = listaRegistroLaboralBE.Count;
+            if (cantidad == 0)
+                return;
             objRegistroLaboralBE = listaRegistroLaboralBE[0];
 
+         
             txtnombreEmpresa.Text = objRegistroLaboralBE.Nombretrabajo;
             txtcargoTrabajo.Text = objRegistroLaboralBE.Cargotrabajo;
             txtduracionTrabajo.Text = objRegistroLaboralBE.Duraciontrabajo;
