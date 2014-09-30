@@ -180,6 +180,7 @@ namespace SWEGR.DL.DALC
                 prmidregistroacademico = new SqlParameter();
                 prmidregistroacademico.ParameterName = "@idregistroacademico";
                 prmidregistroacademico.SqlDbType = SqlDbType.Int;
+                prmidregistroacademico.Value = objetoregistroacademico.Idregistroacademico;
 
                 prmidegresado = new SqlParameter();
                 prmidegresado.ParameterName = "@idegresado";

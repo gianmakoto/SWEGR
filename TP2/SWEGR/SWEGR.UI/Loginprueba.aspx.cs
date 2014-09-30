@@ -50,7 +50,7 @@ namespace SWEGR.UI
                         {
                             
                             
-                            Response.Redirect("VisualizaregresadoUI.aspx" );
+                            Response.Redirect("ActualizaregresadoUI.aspx" );
                             
                         }
                         else

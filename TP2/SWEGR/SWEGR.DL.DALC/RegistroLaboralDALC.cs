@@ -219,6 +219,7 @@ namespace SWEGR.DL.DALC
                 prmidregistrolaboral = new SqlParameter();
                 prmidregistrolaboral.ParameterName = "@idregistrolaboral";
                 prmidregistrolaboral.SqlDbType = SqlDbType.Int;
+                prmidregistrolaboral.Value = objetoregistrolaboral.Idregistrolaboral;
 
                 prmidegresado = new SqlParameter();
                 prmidegresado.ParameterName = "@idegresado";

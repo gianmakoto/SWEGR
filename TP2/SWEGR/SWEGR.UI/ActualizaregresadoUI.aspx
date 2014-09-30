@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Actualizaregresado.aspx.cs" Inherits="SWEGR.UI.Actualizaregresado" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ActualizaregresadoUI.aspx.cs" Inherits="SWEGR.UI.ActualizaregresadoUI" %>
 
 <!DOCTYPE html>
 
@@ -11,20 +11,580 @@
     <title>Actualizar Egresado</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript">
-        function datosPersonalesToggle() {
-            $("#datosPersonales").slideToggle();
+
+        $(function () {
+            $('#txtdni').keypress(function (e) {
+                var txt = $(this).val();
+                if (txt.length > 7) {
+                    e.preventDefault();
+                }
+            });
+            $('#txttelefonoprincipal').keypress(function (e) {
+                var txt = $(this).val();
+                if (txt.length > 15) {
+                    e.preventDefault();
+                }
+            });
+            $('#txttelefonoalternativo').keypress(function (e) {
+                var txt = $(this).val();
+                if (txt.length > 15) {
+                    e.preventDefault();
+                }
+            });
+            $('#txtnombrecompleto').keypress(function (e) {
+                var txt = $(this).val();
+                if (txt.length > 99) {
+                    e.preventDefault();
+                }
+            });
+            $('#txtdireccion').keypress(function (e) {
+                var txt = $(this).val();
+                if (txt.length > 99) {
+                    e.preventDefault();
+                }
+            });
+            $('#txtdistrito').keypress(function (e) {
+                var txt = $(this).val();
+                if (txt.length > 49) {
+                    e.preventDefault();
+                }
+            });
+            $('#txtcorreo').keypress(function (e) {
+                var txt = $(this).val();
+                if (txt.length > 49) {
+                    e.preventDefault();
+                }
+            });
+            $('#txtcorreoalternativo').keypress(function (e) {
+                var txt = $(this).val();
+                if (txt.length > 49) {
+                    e.preventDefault();
+                }
+            });
+            $('#txtperfillinkedin').keypress(function (e) {
+                var txt = $(this).val();
+                if (txt.length > 99) {
+                    e.preventDefault();
+                }
+            });
+            $('#txtperfilfacebook').keypress(function (e) {
+                var txt = $(this).val();
+                if (txt.length > 99) {
+                    e.preventDefault();
+                }
+            });
+
+            //-- Trayectoria Academica --//
+
+            //-- Trayectoria Laboral --//
+        });
+
+        //-- Datos Personales --//
+
+        function habilitarDatosPersonales() {
+            $("#txttelefonoprincipal").attr("disabled", false);
+            $("#txttelefonoalternativo").attr("disabled", false);
+            $("#ddlPais").attr("disabled", false);
+            $("#ddlDepartamento").attr("disabled", false);
+            $("#txtdistrito").attr("disabled", false);
+            $("#txtdireccion").attr("disabled", false);
+            $("#txtcorreo").attr("disabled", false);
+            $("#txtcorreoalternativo").attr("disabled", false);
+            $("#txtperfillinkedin").attr("disabled", false);
+            $("#txtperfilfacebook").attr("disabled", false);
         }
 
-        function trayectoriaAcadToggle() {
-            $("#trayectoriaAcad").slideToggle();
+        function deshabilitarDatosPersonales() {
+            $("#txttelefonoprincipal").attr("disabled", true);
+            $("#txttelefonoalternativo").attr("disabled", true);
+            $("#ddlPais").attr("disabled", true);
+            $("#ddlDepartamento").attr("disabled", true);
+            $("#txtdistrito").attr("disabled", true);
+            $("#txtdireccion").attr("disabled", true);
+            $("#txtcorreo").attr("disabled", true);
+            $("#txtcorreoalternativo").attr("disabled", true);
+            $("#txtperfillinkedin").attr("disabled", true);
+            $("#txtperfilfacebook").attr("disabled", true);
         }
 
-        function trayectoriaProfToggle() {
-            $("#trayectoriaProf").slideToggle();
+        function mostrarBotonesDP() {
+            $("#btncancelarDP").show();
+            $("#btneditarDP").hide();
         }
 
-        function aptitudesInteresesToggle() {
-            $("#aptitudesIntereses").slideToggle();
+        function ocultarBotonesDP() {
+            $("#btncancelarDP").hide();
+            $("#btneditarDP").show();
+        }
+
+        function isNumber(evt) {
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                return false;
+            }
+            return true;
+        }
+
+        function dnivacio() {
+            $("#dialogvalidacion").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    "Aceptar": function () {
+                        $(this).dialog("close")
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
+
+        function telefonovacio() {
+            $("#dialogvalidacion").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    "Aceptar": function () {
+                        $(this).dialog("close")
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
+
+        function correovacio() {
+            $("#dialogvalidacion").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    "Aceptar": function () {
+                        $(this).dialog("close")
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
+
+        }
+
+        function perfillinkedinvacio() {
+            $("#dialogvalidacion").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    "Aceptar": function () {
+                        $(this).dialog("close")
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
+
+        function exito() {
+            $("#dialogexito").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    Aceptar: function () {
+                        $(this).dialog("close");
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
+
+        function incompleto() {
+            $("#dialogincompleto").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    Aceptar: function () {
+                        $(this).dialog("close");
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
+
+        //-- Trayectoria Academica --//
+
+        function habilitarTrayectoriaAcademica1() {
+            $("#txtcentroEstudios").attr("disabled", false);
+            $("#txtduracionEstudio").attr("disabled", false);
+            $("#txttipoEstudio").attr("disabled", false);
+            $("#txtnombreEstudio").attr("disabled", false);
+            $("#txtdescripcionEstudio").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaAcademica2() {
+            $("#txtcentroEstudios2").attr("disabled", false);
+            $("#txtduracionEstudio2").attr("disabled", false);
+            $("#txttipoEstudio2").attr("disabled", false);
+            $("#txtnombreEstudio2").attr("disabled", false);
+            $("#txtdescripcionEstudio2").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaAcademica3() {
+            $("#txtcentroEstudios3").attr("disabled", false);
+            $("#txtduracionEstudio3").attr("disabled", false);
+            $("#txttipoEstudio3").attr("disabled", false);
+            $("#txtnombreEstudio3").attr("disabled", false);
+            $("#txtdescripcionEstudio3").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaAcademica4() {
+            $("#txtcentroEstudios4").attr("disabled", false);
+            $("#txtduracionEstudio4").attr("disabled", false);
+            $("#txttipoEstudio4").attr("disabled", false);
+            $("#txtnombreEstudio4").attr("disabled", false);
+            $("#txtdescripcionEstudio4").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaAcademica5() {
+            $("#txtcentroEstudios5").attr("disabled", false);
+            $("#txtduracionEstudio5").attr("disabled", false);
+            $("#txttipoEstudio5").attr("disabled", false);
+            $("#txtnombreEstudio5").attr("disabled", false);
+            $("#txtdescripcionEstudio5").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaAcademica6() {
+            $("#txtcentroEstudios6").attr("disabled", false);
+            $("#txtduracionEstudio6").attr("disabled", false);
+            $("#txttipoEstudio6").attr("disabled", false);
+            $("#txtnombreEstudio6").attr("disabled", false);
+            $("#txtdescripcionEstudio6").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaAcademica7() {
+            $("#txtcentroEstudios7").attr("disabled", false);
+            $("#txtduracionEstudio7").attr("disabled", false);
+            $("#txttipoEstudio7").attr("disabled", false);
+            $("#txtnombreEstudio7").attr("disabled", false);
+            $("#txtdescripcionEstudio7").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaAcademica8() {
+            $("#txtcentroEstudios8").attr("disabled", false);
+            $("#txtduracionEstudio8").attr("disabled", false);
+            $("#txttipoEstudio8").attr("disabled", false);
+            $("#txtnombreEstudio8").attr("disabled", false);
+            $("#txtdescripcionEstudio8").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaAcademica9() {
+            $("#txtcentroEstudios9").attr("disabled", false);
+            $("#txtduracionEstudio9").attr("disabled", false);
+            $("#txttipoEstudio9").attr("disabled", false);
+            $("#txtnombreEstudio9").attr("disabled", false);
+            $("#txtdescripcionEstudio9").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaAcademica10() {
+            $("#txtcentroEstudios10").attr("disabled", false);
+            $("#txtduracionEstudio10").attr("disabled", false);
+            $("#txttipoEstudio10").attr("disabled", false);
+            $("#txtnombreEstudio10").attr("disabled", false);
+            $("#txtdescripcionEstudio10").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaAcademica11() {
+            $("#txtcentroEstudios11").attr("disabled", false);
+            $("#txtduracionEstudio11").attr("disabled", false);
+            $("#txttipoEstudio11").attr("disabled", false);
+            $("#txtnombreEstudio11").attr("disabled", false);
+            $("#txtdescripcionEstudio11").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaAcademica12() {
+            $("#txtcentroEstudios12").attr("disabled", false);
+            $("#txtduracionEstudio12").attr("disabled", false);
+            $("#txttipoEstudio12").attr("disabled", false);
+            $("#txtnombreEstudio12").attr("disabled", false);
+            $("#txtdescripcionEstudio12").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaAcademica13() {
+            $("#txtcentroEstudios13").attr("disabled", false);
+            $("#txtduracionEstudio13").attr("disabled", false);
+            $("#txttipoEstudio13").attr("disabled", false);
+            $("#txtnombreEstudio13").attr("disabled", false);
+            $("#txtdescripcionEstudio13").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaAcademica14() {
+            $("#txtcentroEstudios14").attr("disabled", false);
+            $("#txtduracionEstudio14").attr("disabled", false);
+            $("#txttipoEstudio14").attr("disabled", false);
+            $("#txtnombreEstudio14").attr("disabled", false);
+            $("#txtdescripcionEstudio14").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaAcademica15() {
+            $("#txtcentroEstudios15").attr("disabled", false);
+            $("#txtduracionEstudio15").attr("disabled", false);
+            $("#txttipoEstudio15").attr("disabled", false);
+            $("#txtnombreEstudio15").attr("disabled", false);
+            $("#txtdescripcionEstudio15").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaAcademica16() {
+            $("#txtcentroEstudios16").attr("disabled", false);
+            $("#txtduracionEstudio16").attr("disabled", false);
+            $("#txttipoEstudio16").attr("disabled", false);
+            $("#txtnombreEstudio16").attr("disabled", false);
+            $("#txtdescripcionEstudio16").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaAcademica17() {
+            $("#txtcentroEstudios17").attr("disabled", false);
+            $("#txtduracionEstudio17").attr("disabled", false);
+            $("#txttipoEstudio17").attr("disabled", false);
+            $("#txtnombreEstudio17").attr("disabled", false);
+            $("#txtdescripcionEstudio17").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaAcademica18() {
+            $("#txtcentroEstudios18").attr("disabled", false);
+            $("#txtduracionEstudio18").attr("disabled", false);
+            $("#txttipoEstudio18").attr("disabled", false);
+            $("#txtnombreEstudio18").attr("disabled", false);
+            $("#txtdescripcionEstudio18").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaAcademica19() {
+            $("#txtcentroEstudios19").attr("disabled", false);
+            $("#txtduracionEstudio19").attr("disabled", false);
+            $("#txttipoEstudio19").attr("disabled", false);
+            $("#txtnombreEstudio19").attr("disabled", false);
+            $("#txtdescripcionEstudio19").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaAcademica20() {
+            $("#txtcentroEstudios20").attr("disabled", false);
+            $("#txtduracionEstudio20").attr("disabled", false);
+            $("#txttipoEstudio20").attr("disabled", false);
+            $("#txtnombreEstudio20").attr("disabled", false);
+            $("#txtdescripcionEstudio20").attr("disabled", false);
+        }
+
+        function deshabilitarTrayectoriaAcademica1() {
+            $("#txtcentroEstudios").attr("disabled", true);
+            $("#txtduracionEstudio").attr("disabled", true);
+            $("#txttipoEstudio").attr("disabled", true);
+            $("#txtnombreEstudio").attr("disabled", true);
+            $("#txtdescripcionEstudio").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaAcademica2() {
+            $("#txtcentroEstudios2").attr("disabled", true);
+            $("#txtduracionEstudio2").attr("disabled", true);
+            $("#txttipoEstudio2").attr("disabled", true);
+            $("#txtnombreEstudio2").attr("disabled", true);
+            $("#txtdescripcionEstudio2").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaAcademica3() {
+            $("#txtcentroEstudios3").attr("disabled", true);
+            $("#txtduracionEstudio3").attr("disabled", true);
+            $("#txttipoEstudio3").attr("disabled", true);
+            $("#txtnombreEstudio3").attr("disabled", true);
+            $("#txtdescripcionEstudio3").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaAcademica4() {
+            $("#txtcentroEstudios4").attr("disabled", true);
+            $("#txtduracionEstudio4").attr("disabled", true);
+            $("#txttipoEstudio4").attr("disabled", true);
+            $("#txtnombreEstudio4").attr("disabled", true);
+            $("#txtdescripcionEstudio4").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaAcademica5() {
+            $("#txtcentroEstudios5").attr("disabled", true);
+            $("#txtduracionEstudio5").attr("disabled", true);
+            $("#txttipoEstudio5").attr("disabled", true);
+            $("#txtnombreEstudio5").attr("disabled", true);
+            $("#txtdescripcionEstudio5").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaAcademica6() {
+            $("#txtcentroEstudios6").attr("disabled", true);
+            $("#txtduracionEstudio6").attr("disabled", true);
+            $("#txttipoEstudio6").attr("disabled", true);
+            $("#txtnombreEstudio6").attr("disabled", true);
+            $("#txtdescripcionEstudio6").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaAcademica7() {
+            $("#txtcentroEstudios7").attr("disabled", true);
+            $("#txtduracionEstudio7").attr("disabled", true);
+            $("#txttipoEstudio7").attr("disabled", true);
+            $("#txtnombreEstudio7").attr("disabled", true);
+            $("#txtdescripcionEstudio7").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaAcademica8() {
+            $("#txtcentroEstudios8").attr("disabled", true);
+            $("#txtduracionEstudio8").attr("disabled", true);
+            $("#txttipoEstudio8").attr("disabled", true);
+            $("#txtnombreEstudio8").attr("disabled", true);
+            $("#txtdescripcionEstudio8").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaAcademica9() {
+            $("#txtcentroEstudios9").attr("disabled", true);
+            $("#txtduracionEstudio9").attr("disabled", true);
+            $("#txttipoEstudio9").attr("disabled", true);
+            $("#txtnombreEstudio9").attr("disabled", true);
+            $("#txtdescripcionEstudio9").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaAcademica10() {
+            $("#txtcentroEstudios10").attr("disabled", true);
+            $("#txtduracionEstudio10").attr("disabled", true);
+            $("#txttipoEstudio10").attr("disabled", true);
+            $("#txtnombreEstudio10").attr("disabled", true);
+            $("#txtdescripcionEstudio10").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaAcademica11() {
+            $("#txtcentroEstudios11").attr("disabled", true);
+            $("#txtduracionEstudio11").attr("disabled", true);
+            $("#txttipoEstudio11").attr("disabled", true);
+            $("#txtnombreEstudio11").attr("disabled", true);
+            $("#txtdescripcionEstudio11").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaAcademica12() {
+            $("#txtcentroEstudios12").attr("disabled", true);
+            $("#txtduracionEstudio12").attr("disabled", true);
+            $("#txttipoEstudio12").attr("disabled", true);
+            $("#txtnombreEstudio12").attr("disabled", true);
+            $("#txtdescripcionEstudio12").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaAcademica13() {
+            $("#txtcentroEstudios13").attr("disabled", true);
+            $("#txtduracionEstudio13").attr("disabled", true);
+            $("#txttipoEstudio13").attr("disabled", true);
+            $("#txtnombreEstudio13").attr("disabled", true);
+            $("#txtdescripcionEstudio13").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaAcademica14() {
+            $("#txtcentroEstudios14").attr("disabled", true);
+            $("#txtduracionEstudio14").attr("disabled", true);
+            $("#txttipoEstudio14").attr("disabled", true);
+            $("#txtnombreEstudio14").attr("disabled", true);
+            $("#txtdescripcionEstudio14").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaAcademica15() {
+            $("#txtcentroEstudios15").attr("disabled", true);
+            $("#txtduracionEstudio15").attr("disabled", true);
+            $("#txttipoEstudio15").attr("disabled", true);
+            $("#txtnombreEstudio15").attr("disabled", true);
+            $("#txtdescripcionEstudio15").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaAcademica16() {
+            $("#txtcentroEstudios16").attr("disabled", true);
+            $("#txtduracionEstudio16").attr("disabled", true);
+            $("#txttipoEstudio16").attr("disabled", true);
+            $("#txtnombreEstudio16").attr("disabled", true);
+            $("#txtdescripcionEstudio16").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaAcademica17() {
+            $("#txtcentroEstudios17").attr("disabled", true);
+            $("#txtduracionEstudio17").attr("disabled", true);
+            $("#txttipoEstudio17").attr("disabled", true);
+            $("#txtnombreEstudio17").attr("disabled", true);
+            $("#txtdescripcionEstudio17").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaAcademica18() {
+            $("#txtcentroEstudios18").attr("disabled", true);
+            $("#txtduracionEstudio18").attr("disabled", true);
+            $("#txttipoEstudio18").attr("disabled", true);
+            $("#txtnombreEstudio18").attr("disabled", true);
+            $("#txtdescripcionEstudio18").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaAcademica19() {
+            $("#txtcentroEstudios19").attr("disabled", true);
+            $("#txtduracionEstudio19").attr("disabled", true);
+            $("#txttipoEstudio19").attr("disabled", true);
+            $("#txtnombreEstudio19").attr("disabled", true);
+            $("#txtdescripcionEstudio19").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaAcademica20() {
+            $("#txtcentroEstudios20").attr("disabled", true);
+            $("#txtduracionEstudio20").attr("disabled", true);
+            $("#txttipoEstudio20").attr("disabled", true);
+            $("#txtnombreEstudio20").attr("disabled", true);
+            $("#txtdescripcionEstudio20").attr("disabled", true);
+        }
+
+        function mostrarBotonesTA() {
+            $("#btncancelarTA").show();
+            $("#btnagregarTA").show();
+            $("#btneditarTA").hide();
+        }
+
+        function ocultarBotonesTA() {
+            $("#btncancelarTA").hide();
+            $("#btnagregarTA").hide();
+            $("#btneditarTA").show();
+        }
+
+        function camposVaciosRA() {
+            $("#dialogincompletoTA").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    "Aceptar": function () {
+                        $(this).dialog("close")
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
+
+        function exitoRA() {
+            $("#dialogexitoTA").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    Aceptar: function () {
+                        $(this).dialog("close");
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
+
+        function incompletoRA() {
+            $("#dialogvalidacionTA").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    Aceptar: function () {
+                        $(this).dialog("close");
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
         }
 
         function mostrarCurso2() {
@@ -103,6 +663,578 @@
             $("#Curso20").show();
         }
 
+        function ocultarCurso2() {
+            $("#Curso2").hide();
+        }
+
+        function ocultarCurso3() {
+            $("#Curso3").hide();
+        }
+
+        function ocultarCurso4() {
+            $("#Curso4").hide();
+        }
+
+        function ocultarCurso5() {
+            $("#Curso5").hide();
+        }
+
+        function ocultarCurso6() {
+            $("#Curso6").hide();
+        }
+
+        function ocultarCurso7() {
+            $("#Curso7").hide();
+        }
+
+        function ocultarCurso8() {
+            $("#Curso8").hide();
+        }
+
+        function ocultarCurso9() {
+            $("#Curso9").hide();
+        }
+
+        function ocultarCurso10() {
+            $("#Curso10").hide();
+        }
+
+        function ocultarCurso11() {
+            $("#Curso11").hide();
+        }
+
+        function ocultarCurso12() {
+            $("#Curso12").hide();
+        }
+
+        function ocultarCurso13() {
+            $("#Curso13").hide();
+        }
+
+        function ocultarCurso14() {
+            $("#Curso14").hide();
+        }
+
+        function ocultarCurso15() {
+            $("#Curso15").hide();
+        }
+
+        function ocultarCurso16() {
+            $("#Curso16").hide();
+        }
+
+        function ocultarCurso17() {
+            $("#Curso17").hide();
+        }
+
+        function ocultarCurso18() {
+            $("#Curso18").hide();
+        }
+
+        function ocultarCurso19() {
+            $("#Curso19").hide();
+        }
+
+        function ocultarCurso20() {
+            $("#Curso20").hide();
+        }
+
+        //-- Trayectoria Laboral --//
+
+        function habilitarTrayectoriaLaboral1() {
+            $("#txtnombreEmpresa").attr("disabled", false);
+            $("#txtcargoTrabajo").attr("disabled", false);
+            $("#txtduracionTrabajo").attr("disabled", false);
+            $("#txtdescripcionTrabajo").attr("disabled", false);
+            $("#txtnombrejefeTrabajo").attr("disabled", false);
+            $("#txtcargojefeTrabajo").attr("disabled", false);
+            $("#txttelefonojefeTrabajo").attr("disabled", false);
+            $("#txtcorreojefeTrabajo").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaLaboral2() {
+            $("#txtnombreEmpresa2").attr("disabled", false);
+            $("#txtcargoTrabajo2").attr("disabled", false);
+            $("#txtduracionTrabajo2").attr("disabled", false);
+            $("#txtdescripcionTrabajo2").attr("disabled", false);
+            $("#txtnombrejefeTrabajo2").attr("disabled", false);
+            $("#txtcargojefeTrabajo2").attr("disabled", false);
+            $("#txttelefonojefeTrabajo2").attr("disabled", false);
+            $("#txtcorreojefeTrabajo2").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaLaboral3() {
+            $("#txtnombreEmpresa3").attr("disabled", false);
+            $("#txtcargoTrabajo3").attr("disabled", false);
+            $("#txtduracionTrabajo3").attr("disabled", false);
+            $("#txtdescripcionTrabajo3").attr("disabled", false);
+            $("#txtnombrejefeTrabajo3").attr("disabled", false);
+            $("#txtcargojefeTrabajo3").attr("disabled", false);
+            $("#txttelefonojefeTrabajo3").attr("disabled", false);
+            $("#txtcorreojefeTrabajo3").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaLaboral4() {
+            $("#txtnombreEmpresa4").attr("disabled", false);
+            $("#txtcargoTrabajo4").attr("disabled", false);
+            $("#txtduracionTrabajo4").attr("disabled", false);
+            $("#txtdescripcionTrabajo4").attr("disabled", false);
+            $("#txtnombrejefeTrabajo4").attr("disabled", false);
+            $("#txtcargojefeTrabajo4").attr("disabled", false);
+            $("#txttelefonojefeTrabajo4").attr("disabled", false);
+            $("#txtcorreojefeTrabajo4").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaLaboral5() {
+            $("#txtnombreEmpresa5").attr("disabled", false);
+            $("#txtcargoTrabajo5").attr("disabled", false);
+            $("#txtduracionTrabajo5").attr("disabled", false);
+            $("#txtdescripcionTrabajo5").attr("disabled", false);
+            $("#txtnombrejefeTrabajo5").attr("disabled", false);
+            $("#txtcargojefeTrabajo5").attr("disabled", false);
+            $("#txttelefonojefeTrabajo5").attr("disabled", false);
+            $("#txtcorreojefeTrabajo5").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaLaboral6() {
+            $("#txtnombreEmpresa6").attr("disabled", false);
+            $("#txtcargoTrabajo6").attr("disabled", false);
+            $("#txtduracionTrabajo6").attr("disabled", false);
+            $("#txtdescripcionTrabajo6").attr("disabled", false);
+            $("#txtnombrejefeTrabajo6").attr("disabled", false);
+            $("#txtcargojefeTrabajo6").attr("disabled", false);
+            $("#txttelefonojefeTrabajo6").attr("disabled", false);
+            $("#txtcorreojefeTrabajo6").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaLaboral7() {
+            $("#txtnombreEmpresa7").attr("disabled", false);
+            $("#txtcargoTrabajo7").attr("disabled", false);
+            $("#txtduracionTrabajo7").attr("disabled", false);
+            $("#txtdescripcionTrabajo7").attr("disabled", false);
+            $("#txtnombrejefeTrabajo7").attr("disabled", false);
+            $("#txtcargojefeTrabajo7").attr("disabled", false);
+            $("#txttelefonojefeTrabajo7").attr("disabled", false);
+            $("#txtcorreojefeTrabajo7").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaLaboral8() {
+            $("#txtnombreEmpresa8").attr("disabled", false);
+            $("#txtcargoTrabajo8").attr("disabled", false);
+            $("#txtduracionTrabajo8").attr("disabled", false);
+            $("#txtdescripcionTrabajo8").attr("disabled", false);
+            $("#txtnombrejefeTrabajo8").attr("disabled", false);
+            $("#txtcargojefeTrabajo8").attr("disabled", false);
+            $("#txttelefonojefeTrabajo8").attr("disabled", false);
+            $("#txtcorreojefeTrabajo8").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaLaboral9() {
+            $("#txtnombreEmpresa9").attr("disabled", false);
+            $("#txtcargoTrabajo9").attr("disabled", false);
+            $("#txtduracionTrabajo9").attr("disabled", false);
+            $("#txtdescripcionTrabajo9").attr("disabled", false);
+            $("#txtnombrejefeTrabajo9").attr("disabled", false);
+            $("#txtcargojefeTrabajo9").attr("disabled", false);
+            $("#txttelefonojefeTrabajo9").attr("disabled", false);
+            $("#txtcorreojefeTrabajo9").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaLaboral10() {
+            $("#txtnombreEmpresa10").attr("disabled", false);
+            $("#txtcargoTrabajo10").attr("disabled", false);
+            $("#txtduracionTrabajo10").attr("disabled", false);
+            $("#txtdescripcionTrabajo10").attr("disabled", false);
+            $("#txtnombrejefeTrabajo10").attr("disabled", false);
+            $("#txtcargojefeTrabajo10").attr("disabled", false);
+            $("#txttelefonojefeTrabajo10").attr("disabled", false);
+            $("#txtcorreojefeTrabajo10").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaLaboral11() {
+            $("#txtnombreEmpresa11").attr("disabled", false);
+            $("#txtcargoTrabajo11").attr("disabled", false);
+            $("#txtduracionTrabajo11").attr("disabled", false);
+            $("#txtdescripcionTrabajo11").attr("disabled", false);
+            $("#txtnombrejefeTrabajo11").attr("disabled", false);
+            $("#txtcargojefeTrabajo11").attr("disabled", false);
+            $("#txttelefonojefeTrabajo11").attr("disabled", false);
+            $("#txtcorreojefeTrabajo11").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaLaboral12() {
+            $("#txtnombreEmpresa12").attr("disabled", false);
+            $("#txtcargoTrabajo12").attr("disabled", false);
+            $("#txtduracionTrabajo12").attr("disabled", false);
+            $("#txtdescripcionTrabajo12").attr("disabled", false);
+            $("#txtnombrejefeTrabajo12").attr("disabled", false);
+            $("#txtcargojefeTrabajo12").attr("disabled", false);
+            $("#txttelefonojefeTrabajo12").attr("disabled", false);
+            $("#txtcorreojefeTrabajo12").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaLaboral13() {
+            $("#txtnombreEmpresa13").attr("disabled", false);
+            $("#txtcargoTrabajo13").attr("disabled", false);
+            $("#txtduracionTrabajo13").attr("disabled", false);
+            $("#txtdescripcionTrabajo13").attr("disabled", false);
+            $("#txtnombrejefeTrabajo13").attr("disabled", false);
+            $("#txtcargojefeTrabajo13").attr("disabled", false);
+            $("#txttelefonojefeTrabajo13").attr("disabled", false);
+            $("#txtcorreojefeTrabajo13").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaLaboral14() {
+            $("#txtnombreEmpresa14").attr("disabled", false);
+            $("#txtcargoTrabajo14").attr("disabled", false);
+            $("#txtduracionTrabajo14").attr("disabled", false);
+            $("#txtdescripcionTrabajo14").attr("disabled", false);
+            $("#txtnombrejefeTrabajo14").attr("disabled", false);
+            $("#txtcargojefeTrabajo14").attr("disabled", false);
+            $("#txttelefonojefeTrabajo14").attr("disabled", false);
+            $("#txtcorreojefeTrabajo14").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaLaboral15() {
+            $("#txtnombreEmpresa15").attr("disabled", false);
+            $("#txtcargoTrabajo15").attr("disabled", false);
+            $("#txtduracionTrabajo15").attr("disabled", false);
+            $("#txtdescripcionTrabajo15").attr("disabled", false);
+            $("#txtnombrejefeTrabajo15").attr("disabled", false);
+            $("#txtcargojefeTrabajo15").attr("disabled", false);
+            $("#txttelefonojefeTrabajo15").attr("disabled", false);
+            $("#txtcorreojefeTrabajo15").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaLaboral16() {
+            $("#txtnombreEmpresa16").attr("disabled", false);
+            $("#txtcargoTrabajo16").attr("disabled", false);
+            $("#txtduracionTrabajo16").attr("disabled", false);
+            $("#txtdescripcionTrabajo16").attr("disabled", false);
+            $("#txtnombrejefeTrabajo16").attr("disabled", false);
+            $("#txtcargojefeTrabajo16").attr("disabled", false);
+            $("#txttelefonojefeTrabajo16").attr("disabled", false);
+            $("#txtcorreojefeTrabajo16").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaLaboral17() {
+            $("#txtnombreEmpresa17").attr("disabled", false);
+            $("#txtcargoTrabajo17").attr("disabled", false);
+            $("#txtduracionTrabajo17").attr("disabled", false);
+            $("#txtdescripcionTrabajo17").attr("disabled", false);
+            $("#txtnombrejefeTrabajo17").attr("disabled", false);
+            $("#txtcargojefeTrabajo17").attr("disabled", false);
+            $("#txttelefonojefeTrabajo17").attr("disabled", false);
+            $("#txtcorreojefeTrabajo17").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaLaboral18() {
+            $("#txtnombreEmpresa18").attr("disabled", false);
+            $("#txtcargoTrabajo18").attr("disabled", false);
+            $("#txtduracionTrabajo18").attr("disabled", false);
+            $("#txtdescripcionTrabajo18").attr("disabled", false);
+            $("#txtnombrejefeTrabajo18").attr("disabled", false);
+            $("#txtcargojefeTrabajo18").attr("disabled", false);
+            $("#txttelefonojefeTrabajo18").attr("disabled", false);
+            $("#txtcorreojefeTrabajo18").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaLaboral19() {
+            $("#txtnombreEmpresa19").attr("disabled", false);
+            $("#txtcargoTrabajo19").attr("disabled", false);
+            $("#txtduracionTrabajo19").attr("disabled", false);
+            $("#txtdescripcionTrabajo19").attr("disabled", false);
+            $("#txtnombrejefeTrabajo19").attr("disabled", false);
+            $("#txtcargojefeTrabajo19").attr("disabled", false);
+            $("#txttelefonojefeTrabajo19").attr("disabled", false);
+            $("#txtcorreojefeTrabajo19").attr("disabled", false);
+        }
+
+        function habilitarTrayectoriaLaboral20() {
+            $("#txtnombreEmpresa20").attr("disabled", false);
+            $("#txtcargoTrabajo20").attr("disabled", false);
+            $("#txtduracionTrabajo20").attr("disabled", false);
+            $("#txtdescripcionTrabajo20").attr("disabled", false);
+            $("#txtnombrejefeTrabajo20").attr("disabled", false);
+            $("#txtcargojefeTrabajo20").attr("disabled", false);
+            $("#txttelefonojefeTrabajo20").attr("disabled", false);
+            $("#txtcorreojefeTrabajo20").attr("disabled", false);
+        }
+
+        function deshabilitarTrayectoriaLaboral1() {
+            $("#txtnombreEmpresa").attr("disabled", true);
+            $("#txtcargoTrabajo").attr("disabled", true);
+            $("#txtduracionTrabajo").attr("disabled", true);
+            $("#txtdescripcionTrabajo").attr("disabled", true);
+            $("#txtnombrejefeTrabajo").attr("disabled", true);
+            $("#txtcargojefeTrabajo").attr("disabled", true);
+            $("#txttelefonojefeTrabajo").attr("disabled", true);
+            $("#txtcorreojefeTrabajo").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaLaboral2() {
+            $("#txtnombreEmpresa2").attr("disabled", true);
+            $("#txtcargoTrabajo2").attr("disabled", true);
+            $("#txtduracionTrabajo2").attr("disabled", true);
+            $("#txtdescripcionTrabajo2").attr("disabled", true);
+            $("#txtnombrejefeTrabajo2").attr("disabled", true);
+            $("#txtcargojefeTrabajo2").attr("disabled", true);
+            $("#txttelefonojefeTrabajo2").attr("disabled", true);
+            $("#txtcorreojefeTrabajo2").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaLaboral3() {
+            $("#txtnombreEmpresa3").attr("disabled", true);
+            $("#txtcargoTrabajo3").attr("disabled", true);
+            $("#txtduracionTrabajo3").attr("disabled", true);
+            $("#txtdescripcionTrabajo3").attr("disabled", true);
+            $("#txtnombrejefeTrabajo3").attr("disabled", true);
+            $("#txtcargojefeTrabajo3").attr("disabled", true);
+            $("#txttelefonojefeTrabajo3").attr("disabled", true);
+            $("#txtcorreojefeTrabajo3").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaLaboral4() {
+            $("#txtnombreEmpresa4").attr("disabled", true);
+            $("#txtcargoTrabajo4").attr("disabled", true);
+            $("#txtduracionTrabajo4").attr("disabled", true);
+            $("#txtdescripcionTrabajo4").attr("disabled", true);
+            $("#txtnombrejefeTrabajo4").attr("disabled", true);
+            $("#txtcargojefeTrabajo4").attr("disabled", true);
+            $("#txttelefonojefeTrabajo4").attr("disabled", true);
+            $("#txtcorreojefeTrabajo4").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaLaboral5() {
+            $("#txtnombreEmpresa5").attr("disabled", true);
+            $("#txtcargoTrabajo5").attr("disabled", true);
+            $("#txtduracionTrabajo5").attr("disabled", true);
+            $("#txtdescripcionTrabajo5").attr("disabled", true);
+            $("#txtnombrejefeTrabajo5").attr("disabled", true);
+            $("#txtcargojefeTrabajo5").attr("disabled", true);
+            $("#txttelefonojefeTrabajo5").attr("disabled", true);
+            $("#txtcorreojefeTrabajo5").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaLaboral6() {
+            $("#txtnombreEmpresa6").attr("disabled", true);
+            $("#txtcargoTrabajo6").attr("disabled", true);
+            $("#txtduracionTrabajo6").attr("disabled", true);
+            $("#txtdescripcionTrabajo6").attr("disabled", true);
+            $("#txtnombrejefeTrabajo6").attr("disabled", true);
+            $("#txtcargojefeTrabajo6").attr("disabled", true);
+            $("#txttelefonojefeTrabajo6").attr("disabled", true);
+            $("#txtcorreojefeTrabajo6").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaLaboral7() {
+            $("#txtnombreEmpresa7").attr("disabled", true);
+            $("#txtcargoTrabajo7").attr("disabled", true);
+            $("#txtduracionTrabajo7").attr("disabled", true);
+            $("#txtdescripcionTrabajo7").attr("disabled", true);
+            $("#txtnombrejefeTrabajo7").attr("disabled", true);
+            $("#txtcargojefeTrabajo7").attr("disabled", true);
+            $("#txttelefonojefeTrabajo7").attr("disabled", true);
+            $("#txtcorreojefeTrabajo7").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaLaboral8() {
+            $("#txtnombreEmpresa8").attr("disabled", true);
+            $("#txtcargoTrabajo8").attr("disabled", true);
+            $("#txtduracionTrabajo8").attr("disabled", true);
+            $("#txtdescripcionTrabajo8").attr("disabled", true);
+            $("#txtnombrejefeTrabajo8").attr("disabled", true);
+            $("#txtcargojefeTrabajo8").attr("disabled", true);
+            $("#txttelefonojefeTrabajo8").attr("disabled", true);
+            $("#txtcorreojefeTrabajo8").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaLaboral9() {
+            $("#txtnombreEmpresa9").attr("disabled", true);
+            $("#txtcargoTrabajo9").attr("disabled", true);
+            $("#txtduracionTrabajo9").attr("disabled", true);
+            $("#txtdescripcionTrabajo9").attr("disabled", true);
+            $("#txtnombrejefeTrabajo9").attr("disabled", true);
+            $("#txtcargojefeTrabajo9").attr("disabled", true);
+            $("#txttelefonojefeTrabajo9").attr("disabled", true);
+            $("#txtcorreojefeTrabajo9").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaLaboral10() {
+            $("#txtnombreEmpresa10").attr("disabled", true);
+            $("#txtcargoTrabajo10").attr("disabled", true);
+            $("#txtduracionTrabajo10").attr("disabled", true);
+            $("#txtdescripcionTrabajo10").attr("disabled", true);
+            $("#txtnombrejefeTrabajo10").attr("disabled", true);
+            $("#txtcargojefeTrabajo10").attr("disabled", true);
+            $("#txttelefonojefeTrabajo10").attr("disabled", true);
+            $("#txtcorreojefeTrabajo10").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaLaboral11() {
+            $("#txtnombreEmpresa11").attr("disabled", true);
+            $("#txtcargoTrabajo11").attr("disabled", true);
+            $("#txtduracionTrabajo11").attr("disabled", true);
+            $("#txtdescripcionTrabajo11").attr("disabled", true);
+            $("#txtnombrejefeTrabajo11").attr("disabled", true);
+            $("#txtcargojefeTrabajo11").attr("disabled", true);
+            $("#txttelefonojefeTrabajo11").attr("disabled", true);
+            $("#txtcorreojefeTrabajo11").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaLaboral12() {
+            $("#txtnombreEmpresa12").attr("disabled", true);
+            $("#txtcargoTrabajo12").attr("disabled", true);
+            $("#txtduracionTrabajo12").attr("disabled", true);
+            $("#txtdescripcionTrabajo12").attr("disabled", true);
+            $("#txtnombrejefeTrabajo12").attr("disabled", true);
+            $("#txtcargojefeTrabajo12").attr("disabled", true);
+            $("#txttelefonojefeTrabajo12").attr("disabled", true);
+            $("#txtcorreojefeTrabajo12").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaLaboral13() {
+            $("#txtnombreEmpresa13").attr("disabled", true);
+            $("#txtcargoTrabajo13").attr("disabled", true);
+            $("#txtduracionTrabajo13").attr("disabled", true);
+            $("#txtdescripcionTrabajo13").attr("disabled", true);
+            $("#txtnombrejefeTrabajo13").attr("disabled", true);
+            $("#txtcargojefeTrabajo13").attr("disabled", true);
+            $("#txttelefonojefeTrabajo13").attr("disabled", true);
+            $("#txtcorreojefeTrabajo13").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaLaboral14() {
+            $("#txtnombreEmpresa14").attr("disabled", true);
+            $("#txtcargoTrabajo14").attr("disabled", true);
+            $("#txtduracionTrabajo14").attr("disabled", true);
+            $("#txtdescripcionTrabajo14").attr("disabled", true);
+            $("#txtnombrejefeTrabajo14").attr("disabled", true);
+            $("#txtcargojefeTrabajo14").attr("disabled", true);
+            $("#txttelefonojefeTrabajo14").attr("disabled", true);
+            $("#txtcorreojefeTrabajo14").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaLaboral15() {
+            $("#txtnombreEmpresa15").attr("disabled", true);
+            $("#txtcargoTrabajo15").attr("disabled", true);
+            $("#txtduracionTrabajo15").attr("disabled", true);
+            $("#txtdescripcionTrabajo15").attr("disabled", true);
+            $("#txtnombrejefeTrabajo15").attr("disabled", true);
+            $("#txtcargojefeTrabajo15").attr("disabled", true);
+            $("#txttelefonojefeTrabajo15").attr("disabled", true);
+            $("#txtcorreojefeTrabajo15").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaLaboral16() {
+            $("#txtnombreEmpresa16").attr("disabled", true);
+            $("#txtcargoTrabajo16").attr("disabled", true);
+            $("#txtduracionTrabajo16").attr("disabled", true);
+            $("#txtdescripcionTrabajo16").attr("disabled", true);
+            $("#txtnombrejefeTrabajo16").attr("disabled", true);
+            $("#txtcargojefeTrabajo16").attr("disabled", true);
+            $("#txttelefonojefeTrabajo16").attr("disabled", true);
+            $("#txtcorreojefeTrabajo16").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaLaboral17() {
+            $("#txtnombreEmpresa17").attr("disabled", true);
+            $("#txtcargoTrabajo17").attr("disabled", true);
+            $("#txtduracionTrabajo17").attr("disabled", true);
+            $("#txtdescripcionTrabajo17").attr("disabled", true);
+            $("#txtnombrejefeTrabajo17").attr("disabled", true);
+            $("#txtcargojefeTrabajo17").attr("disabled", true);
+            $("#txttelefonojefeTrabajo17").attr("disabled", true);
+            $("#txtcorreojefeTrabajo17").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaLaboral18() {
+            $("#txtnombreEmpresa18").attr("disabled", true);
+            $("#txtcargoTrabajo18").attr("disabled", true);
+            $("#txtduracionTrabajo18").attr("disabled", true);
+            $("#txtdescripcionTrabajo18").attr("disabled", true);
+            $("#txtnombrejefeTrabajo18").attr("disabled", true);
+            $("#txtcargojefeTrabajo18").attr("disabled", true);
+            $("#txttelefonojefeTrabajo18").attr("disabled", true);
+            $("#txtcorreojefeTrabajo18").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaLaboral19() {
+            $("#txtnombreEmpresa19").attr("disabled", true);
+            $("#txtcargoTrabajo19").attr("disabled", true);
+            $("#txtduracionTrabajo19").attr("disabled", true);
+            $("#txtdescripcionTrabajo19").attr("disabled", true);
+            $("#txtnombrejefeTrabajo19").attr("disabled", true);
+            $("#txtcargojefeTrabajo19").attr("disabled", true);
+            $("#txttelefonojefeTrabajo19").attr("disabled", true);
+            $("#txtcorreojefeTrabajo19").attr("disabled", true);
+        }
+
+        function deshabilitarTrayectoriaLaboral20() {
+            $("#txtnombreEmpresa20").attr("disabled", true);
+            $("#txtcargoTrabajo20").attr("disabled", true);
+            $("#txtduracionTrabajo20").attr("disabled", true);
+            $("#txtdescripcionTrabajo20").attr("disabled", true);
+            $("#txtnombrejefeTrabajo20").attr("disabled", true);
+            $("#txtcargojefeTrabajo20").attr("disabled", true);
+            $("#txttelefonojefeTrabajo20").attr("disabled", true);
+            $("#txtcorreojefeTrabajo20").attr("disabled", true);
+        }
+
+        function mostrarBotonesTL() {
+            $("#btncancelarTL").show();
+            $("#btnagregarTL").show();
+            $("#btneditarTL").hide();
+        }
+
+        function ocultarBotonesTL() {
+            $("#btncancelarTL").hide();
+            $("#btnagregarTL").hide();
+            $("#btneditarTL").show();
+        }
+
+        function camposVaciosRL() {
+            $("#dialogincompletoTL").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    "Aceptar": function () {
+                        $(this).dialog("close")
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
+
+        function exitoRL() {
+            $("#dialogexitoTL").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    Aceptar: function () {
+                        $(this).dialog("close");
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
+
+        function incompletoRL() {
+            $("#dialogvalidacionTL").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    Aceptar: function () {
+                        $(this).dialog("close");
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
+
         function mostrarTrabajo2() {
             $("#Trabajo2").show();
         }
@@ -179,7 +1311,100 @@
             $("#Trabajo20").show();
         }
 
-</script>
+        function ocultarTrabajo2() {
+            $("#Trabajo2").hide();
+        }
+
+        function ocultarTrabajo3() {
+            $("#Trabajo3").hide();
+        }
+
+        function ocultarTrabajo4() {
+            $("#Trabajo4").hide();
+        }
+
+        function ocultarTrabajo5() {
+            $("#Trabajo5").hide();
+        }
+
+        function ocultarTrabajo6() {
+            $("#Trabajo6").hide();
+        }
+
+        function ocultarTrabajo7() {
+            $("#Trabajo7").hide();
+        }
+
+        function ocultarTrabajo8() {
+            $("#Trabajo8").hide();
+        }
+
+        function ocultarTrabajo9() {
+            $("#Trabajo9").hide();
+        }
+
+        function ocultarTrabajo10() {
+            $("#Trabajo10").hide();
+        }
+
+        function ocultarTrabajo11() {
+            $("#Trabajo11").hide();
+        }
+
+        function ocultarTrabajo12() {
+            $("#Trabajo12").hide();
+        }
+
+        function ocultarTrabajo13() {
+            $("#Trabajo13").hide();
+        }
+
+        function ocultarTrabajo14() {
+            $("#Trabajo14").hide();
+        }
+
+        function ocultarTrabajo15() {
+            $("#Trabajo15").hide();
+        }
+
+        function ocultarTrabajo16() {
+            $("#Trabajo16").hide();
+        }
+
+        function ocultarTrabajo17() {
+            $("#Trabajo17").hide();
+        }
+
+        function ocultarTrabajo18() {
+            $("#Trabajo18").hide();
+        }
+
+        function ocultarTrabajo19() {
+            $("#Trabajo19").hide();
+        }
+
+        function ocultarTrabajo20() {
+            $("#Trabajo20").hide();
+        }
+        //-- FuncionesToogle --//
+
+        function datosPersonalesToggle() {
+            $("#datosPersonales").slideToggle();
+        }
+
+        function trayectoriaAcadToggle() {
+            $("#trayectoriaAcad").slideToggle();
+        }
+
+        function trayectoriaProfToggle() {
+            $("#trayectoriaProf").slideToggle();
+        }
+
+        function aptitudesInteresesToggle() {
+            $("#aptitudesIntereses").slideToggle();
+        }
+
+    </script>
 
     <script type="text/javascript" src="MaxLength.min.js"></script>
 
@@ -206,6 +1431,7 @@
     <!-- Custom styles for this template -->
     <link href="Content/css/style.css" rel="stylesheet">
     <link href="Content/css/style-responsive.css" rel="stylesheet" />
+
 </head>
 <body>
     <!--header start-->
@@ -224,13 +1450,13 @@
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav" style="align: center">
                         <li><a href="Index.aspx">Inicio</a></li>
-                        
+
                         <li class="active"><a href="VisualizaregresadoUI.aspx">Egresado</a></li>
                         <li><a href="ActualizargraduandoUI.aspx">Graduando</a></li>
                         <!-- user login dropdown start-->
                         <li class="dropdown">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                <img alt="" src="img/avatar1_small.jpg">
+                                <img alt="" style="height: 19px; width: 17px" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
                                 <span class="username">Nombre</span>
                                 <b class="caret"></b>
                             </a>
@@ -239,7 +1465,7 @@
                                 <li><a href="#"><i class=" icon-suitcase"></i>Profile</a></li>
                                 <li><a href="#"><i class="icon-cog"></i>Settings</a></li>
                                 <li><a href="#"><i class="icon-bell-alt"></i>Notification</a></li>
-                                <li><a href="#"><i class="icon-key"></i>Log Out</a></li>
+                                <li><a href="Loginprueba.aspx"><i class="icon-key"></i>Log Out</a></li>
                             </ul>
                         </li>
                         <!-- user login dropdown end -->
@@ -279,52 +1505,65 @@
                     <div class="col-md-12">
                         <form id="swegrform" class="cmxform form-horizontal tasi-form" runat="server">
 
-                             <%-- Datos Personales --%>
-                            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager> 
+                            <%-- Datos Personales --%>
+                            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
                             <asp:UpdatePanel ID="updatosPersonales" runat="server" UpdateMode="Conditional">
-                            <ContentTemplate>
-                            <div id="Div1" runat="server" style="margin:auto">
-                                <div style="float:left; position:relative; top:-10px">
-                                    <h3 style="margin-bottom: 4px; text-align:left; float:left">Datos Personales</h3>
-                                </div>
-                                <div style="float:right;position:relative; top:10px">
-                                    <asp:Button ID="btndatosPersonales" runat="server" Text="+" OnClick="btndatosPersonales_Click"/>
-                                </div>
-                                <div style="clear:both"></div>
-                            </div>
+                                <ContentTemplate>
+                                    <div id="Div1" runat="server" style="margin: auto">
+                                        <div style="float: left; position: relative; top: -10px">
+                                            <h3 style="margin-bottom: 4px; text-align: left; float: left">Datos Personales</h3>
+                                        </div>
+                                        <div style="float: right; position: relative; top: 10px">
+                                            <asp:Button ID="btndatosPersonales" runat="server" Text="▼" CssClass="btn" OnClick="btndatosPersonales_Click" />
+                                        </div>
+                                        <div style="clear: both"></div>
+                                    </div>
                                 </ContentTemplate>
                             </asp:UpdatePanel>
 
-                            <div id="datosPersonales" style="border: 1px solid black; padding-left:4%; padding-top:4%" hidden="hidden">
-                                <div class="form-group">
-                                    <label class="col-sm-2 col-sm-2 control-label">
-                                        Nombre completo
-                                    </label>
+                            <div id="datosPersonales" style="border: 1px solid black; padding-left: 4%; padding-top: 4%" hidden="hidden">
+                                <div class="row">
                                     <div class="col-sm-8">
-                                        <asp:TextBox ID="txtnombrecompleto" runat="server" CssClass="form-control" Enabled="false" type="text" ></asp:TextBox>
-                                    </div>
-                                </div>
 
-                                <div class="form-group">
-                                    <label class="col-sm-2 col-sm-2 control-label">
-                                       * DNI
-                                    </label>
-                                    <div class="col-sm-8">
-                                        <asp:TextBox ID="txtdni" runat="server"
-                                            CssClass="form-control" onkeypress="return isNumber(event)" onpaste="return false" Enabled="false"></asp:TextBox>
-                                    
-                                    </div>
-                                </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                Nombre completo
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:TextBox ID="txtnombrecompleto" runat="server" CssClass="form-control" Enabled="false" type="text"></asp:TextBox>
+                                            </div>
+                                        </div>
 
-                                <div class="form-group">
-                                    <label class="col-sm-2 col-sm-2 control-label">
-                                        Género
-                                    </label>
-                                    <div class="col-sm-8">
-                                        <asp:DropDownList ID="ddlGenero" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-con-trol"></asp:DropDownList>
-                                    </div>
-                                </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                * DNI
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:TextBox ID="txtdni" runat="server"
+                                                    CssClass="form-control" onkeypress="return isNumber(event)" onpaste="return false" Enabled="false"></asp:TextBox>
 
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                Género
+                                            </label>
+
+
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlGenero" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="cold-sm-2">
+                                        <div class="row">
+                                            <img style="height: 135px; width: 135px; margin-left: 30px;" class="img-thumbnail" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+                                        </div>
+                                    </div>
+
+                                </div>
                                 <div class="form-group">
                                     <label class="col-sm-2 col-sm-2 control-label">
                                         Fecha de Nacimiento
@@ -337,16 +1576,16 @@
 
                                 <div class="form-group">
                                     <label class="col-sm-2 col-sm-2 control-label">
-                                       * Teléfonos
+                                        * Teléfonos
                                     </label>
                                     <div class="col-sm-4">
                                         <asp:TextBox ID="txttelefonoprincipal" runat="server"
                                             CssClass="form-control" placeholder="00-999-999-9999 (principal)" data-mask="99-999-9999" onkeypress="return isNumber(event)" onpaste="return false" Enabled="false"></asp:TextBox>
-                                  
+
                                     </div>
                                     <div class="col-sm-4">
                                         <asp:TextBox ID="txttelefonoalternativo" runat="server"
-                                            CssClass="form-control" placeholder="00-999-999-9999 (alternativo)" data-mask="999-999-999"  onkeypress="return isNumber(event)"  onpaste="return false" Enabled="false"></asp:TextBox>
+                                            CssClass="form-control" placeholder="00-999-999-9999 (alternativo)" data-mask="999-999-999" onkeypress="return isNumber(event)" onpaste="return false" Enabled="false"></asp:TextBox>
                                     </div>
                                 </div>
 
@@ -355,7 +1594,7 @@
                                         País
                                     </label>
                                     <div class="col-sm-8">
-                                        <asp:DropDownList ID="ddlPais" runat="server" AutoPostBack="false" CssClass="form-control" Enabled="true"></asp:DropDownList>
+                                        <asp:DropDownList ID="ddlPais" runat="server" AutoPostBack="false" CssClass="form-control" Enabled="false"></asp:DropDownList>
                                     </div>
                                 </div>
 
@@ -378,7 +1617,7 @@
                                     </div>
                                 </div>
 
-                                 <div class="form-group">
+                                <div class="form-group">
                                     <label class="col-sm-2 col-sm-2 control-label">
                                         Dirección
                                     </label>
@@ -390,7 +1629,7 @@
 
                                 <div class="form-group">
                                     <label class="col-sm-2 col-sm-2 control-label">
-                                       * Correo
+                                        * Correo
                                     </label>
                                     <div class="col-sm-8">
                                         <asp:TextBox ID="txtcorreo" runat="server"
@@ -410,7 +1649,7 @@
 
                                 <div class="form-group">
                                     <label class="col-sm-2 col-sm-2 control-label">
-                                       * Perfil LinkedIn
+                                        * Perfil LinkedIn
                                     </label>
                                     <div class="col-sm-8">
 
@@ -438,24 +1677,70 @@
                                         </div>
                                     </div>
                                 </div>
+
+
+                                <div class="form-group" id="btneditarDP">
+                                    <asp:UpdatePanel ID="upbtneditar" runat="server" UpdateMode="Conditional">
+                                        <ContentTemplate>
+                                            <div class="col-sm-10">
+                                                <asp:Button ID="btneditar" runat="server" Text="Editar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btneditar_Click" />
+                                            </div>
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
+                                </div>
+
+                                <div class="form-group" hidden="hidden" id="btncancelarDP">
+                                    <asp:UpdatePanel ID="upbtncancelar" runat="server" UpdateMode="Conditional">
+                                        <ContentTemplate>
+                                            <div class="col-sm-10">
+                                                <asp:Button ID="btncancelar" runat="server" Text="Cancelar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btncancelar_Click" />
+                                                <asp:Button ID="btnguardar" runat="server" Text="Guardar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnguardar_Click" />
+                                            </div>
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
+                                </div>
+
+                                <%--<div class="form-group" hidden="hidden" id="btnguardarDP">
+                                    <asp:UpdatePanel ID="upbtnguardar" runat="server" UpdateMode="Conditional">
+                            <ContentTemplate>
+                                    <div class="col-sm-10">
+                                        <asp:Button ID="btnguardar" runat="server" Text="Guardar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnguardar_Click" />
+                                    </div>
+                                    </ContentTemplate>
+                            </asp:UpdatePanel>
+                                </div>--%>
+                            </div>
+
+                            <div class="form-group">
+                                <div id="dialogvalidacion" style="text-align: center; display: none" runat="server">
+                                    <b style="text-align: center">Debe ingresar todos los campos necesarios para actualizar sus datos.</b>
+                                </div>
+
+                                <div id="dialogincompleto" style="text-align: center; display: none" runat="server">
+                                    <b style="text-align: center">El formato de algunos campos es incorrecto.</b>
+                                </div>
+
+                                <div id="dialogexito" style="text-align: justify; display: none" runat="server">
+                                    <b style="text-align: center">Sus datos han sido actualizados satisfactoriamente.</b>
+                                </div>
                             </div>
 
                             <%-- Trayectoria Académica --%>
                             <asp:UpdatePanel ID="uptrayecAcad" runat="server" UpdateMode="Conditional">
-                            <ContentTemplate>
-                            <div id="Div2" runat="server" style="margin:auto">
-                                <div style="float:left; position:relative; top:-10px">
-                                    <h3 style="margin-bottom: 4px; text-align:left; float:left">Trayectoria Académica</h3>
-                                </div>
-                                <div style="float:right;position:relative; top:10px">
-                                    <asp:Button ID="btntrayectoriaAcad" runat="server" Text="+" OnClick="btntrayectoriaAcad_Click"/>
-                                </div>
-                                <div style="clear:both"></div>
-                            </div>
+                                <ContentTemplate>
+                                    <div id="Div2" runat="server" style="margin: auto">
+                                        <div style="float: left; position: relative; top: -10px">
+                                            <h3 style="margin-bottom: 4px; text-align: left; float: left">Trayectoria Académica</h3>
+                                        </div>
+                                        <div style="float: right; position: relative; top: 10px">
+                                            <asp:Button ID="btntrayectoriaAcad" runat="server" Text="▼" OnClick="btntrayectoriaAcad_Click" CssClass="btn" />
+                                        </div>
+                                        <div style="clear: both"></div>
+                                    </div>
                                 </ContentTemplate>
                             </asp:UpdatePanel>
 
-                            <div id="trayectoriaAcad" style="border: 1px solid black; padding-left:4%; padding-top:4%" hidden="hidden">
+                            <div class="col-md-12" id="trayectoriaAcad" style="border: 1px solid black; padding-left: 4%; padding-top: 4%" hidden="hidden">
                                 <div id="Curso1">
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -503,8 +1788,10 @@
                                     </div>
                                 </div>
 
+                                <hr />
                                 <div id="Curso2" hidden="hidden">
                                     <div class="form-group">
+
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
                                         </label>
@@ -1304,6 +2591,7 @@
 
                                 <div id="Curso19" hidden="hidden">
                                     <div class="form-group">
+
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
                                         </label>
@@ -1396,24 +2684,69 @@
                                     </div>
                                 </div>
 
-                             </div>
+                                <%--botones--%>
+                                <div class="form-group" id="btneditarTA">
+                                    <asp:UpdatePanel ID="upeditarTA" runat="server" UpdateMode="Conditional">
+                                        <ContentTemplate>
+                                            <div class="col-sm-10">
+                                                <asp:Button ID="btneditarRA" runat="server" Text="Editar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btneditarRA_Click" />
+                                            </div>
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
+                                </div>
 
-                            <%-- Trayectoria Profesional --%>
-                            <asp:UpdatePanel ID="uptrayecProf" runat="server" UpdateMode="Conditional">
-                            <ContentTemplate>
-                            <div id="Div3" runat="server" style="margin:auto">
-                                <div style="float:left; position:relative; top:-10px">
-                                    <h3 style="margin-bottom: 4px; text-align:left; float:left">Trayectoria Profesional</h3>
+                                <div class="form-group" hidden="hidden" id="btncancelarTA">
+                                    <asp:UpdatePanel ID="upcancelarTA" runat="server" UpdateMode="Conditional">
+                                        <ContentTemplate>
+                                            <div class="col-sm-10">
+                                                <asp:Button ID="btncancelarRA" runat="server" Text="Cancelar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btncancelarRA_Click" />
+                                                <asp:Button ID="btnguardarRA" runat="server" Text="Guardar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnguardarRA_Click" />
+                                            </div>
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
                                 </div>
-                                <div style="float:right;position:relative; top:10px">
-                                    <asp:Button ID="btntrayectoriaProf" runat="server" Text="+" OnClick="btntrayectoriaProf_Click"/>
+
+                                <div class="form-group" hidden="hidden" id="btnagregarTA">
+                                    <asp:UpdatePanel ID="upagregarTA" runat="server" UpdateMode="Conditional">
+                                        <ContentTemplate>
+                                            <div class="col-sm-10">
+                                                <asp:Button ID="btnagregarRA" runat="server" Text="Agregar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnagregarRA_Click" />
+                                            </div>
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
                                 </div>
-                                <div style="clear:both"></div>
                             </div>
+
+                            <div class="form-group">
+                                <div id="dialogincompletoTA" style="text-align: center; display: none" runat="server">
+                                    <b style="text-align: center">Debe ingresar todos los campos necesarios para actualizar sus datos.</b>
+                                </div>
+
+                                <div id="dialogvalidacionTA" style="text-align: center; display: none" runat="server">
+                                    <b style="text-align: center">El formato de algunos campos es incorrecto.</b>
+                                </div>
+
+                                <div id="dialogexitoTA" style="text-align: justify; display: none" runat="server">
+                                    <b style="text-align: center">Sus datos han sido guardados satisfactoriamente.</b>
+                                </div>
+                            </div>
+
+                            <%-- Trayectoria Laboral --%>
+                            <asp:UpdatePanel ID="uptrayecProf" runat="server" UpdateMode="Conditional">
+                                <ContentTemplate>
+                                    <div id="Div3" runat="server" style="margin: auto">
+                                        <div style="float: left; position: relative; top: -10px">
+                                            <h3 style="margin-bottom: 4px; text-align: left; float: left">Trayectoria Profesional</h3>
+                                        </div>
+                                        <div style="float: right; position: relative; top: 10px">
+                                            <asp:Button ID="btntrayectoriaProf" runat="server" Text="▼" CssClass="btn" OnClick="btntrayectoriaProf_Click" />
+                                        </div>
+                                        <div style="clear: both"></div>
+                                    </div>
                                 </ContentTemplate>
                             </asp:UpdatePanel>
 
-                            <div id="trayectoriaProf" style="border: 1px solid black; padding-left:4%; padding-top:4%" hidden="hidden">
+                            <div id="trayectoriaProf" style="border: 1px solid black; padding-left: 4%; padding-top: 4%" hidden="hidden">
                                 <div id="Trabajo1">
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -1496,6 +2829,7 @@
                                 </div>
 
                                 <div id="Trabajo2" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -3033,40 +4367,86 @@
                                         </label>
                                     </div>
                                 </div>
-                             </div>
 
-                            <%-- Aptitudes e Intereses--%> 
-                            <asp:UpdatePanel ID="upaptitudesIntereses" runat="server" UpdateMode="Conditional">
-                            <ContentTemplate>
-                            <div id="Div4" runat="server" style="margin:auto">
-                                <div style="float:left; position:relative; top:-10px">
-                                    <h3 style="margin-bottom: 4px; text-align:left; float:left">Aptitudes e Intereses</h3>
+                                <%--botones--%>
+                                <div class="form-group" id="btneditarTL">
+                                    <asp:UpdatePanel ID="upeditarTL" runat="server" UpdateMode="Conditional">
+                                        <ContentTemplate>
+                                            <div class="col-sm-10">
+                                                <asp:Button ID="btneditarRL" runat="server" Text="Editar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btneditarRL_Click" />
+                                            </div>
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
                                 </div>
-                                <div style="float:right;position:relative; top:10px">
-                                    <asp:Button ID="btnaptitudesIntereses" runat="server" Text="+" OnClick="btnaptitudesIntereses_Click"/>
+
+                                <div class="form-group" hidden="hidden" id="btncancelarTL">
+                                    <asp:UpdatePanel ID="upcancelarTL" runat="server" UpdateMode="Conditional">
+                                        <ContentTemplate>
+                                            <div class="col-sm-10">
+                                                <asp:Button ID="btncancelarRL" runat="server" Text="Cancelar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btncancelarRL_Click" />
+                                                <asp:Button ID="btnguardarRL" runat="server" Text="Guardar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnguardarRL_Click" />
+                                            </div>
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
                                 </div>
-                                <div style="clear:both"></div>
+
+                                <div class="form-group" hidden="hidden" id="btnagregarTL">
+                                    <asp:UpdatePanel ID="upagregarTL" runat="server" UpdateMode="Conditional">
+                                        <ContentTemplate>
+                                            <div class="col-sm-10">
+                                                <asp:Button ID="btnagregarRL" runat="server" Text="Agregar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnagregarRL_Click" />
+                                            </div>
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
+                                </div>
                             </div>
+
+                            <div class="form-group">
+                                <div id="dialogincompletoTL" style="text-align: center; display: none" runat="server">
+                                    <b style="text-align: center">Debe ingresar todos los campos necesarios para actualizar sus datos.</b>
+                                </div>
+
+                                <div id="dialogvalidacionTL" style="text-align: center; display: none" runat="server">
+                                    <b style="text-align: center">El formato de algunos campos es incorrecto.</b>
+                                </div>
+
+                                <div id="dialogexitoTL" style="text-align: justify; display: none" runat="server">
+                                    <b style="text-align: center">Sus datos han sido guardados satisfactoriamente.</b>
+                                </div>
+                            </div>
+
+                            <%-- Aptitudes e Intereses--%>
+                            <asp:UpdatePanel ID="upaptitudesIntereses" runat="server" UpdateMode="Conditional">
+                                <ContentTemplate>
+                                    <div id="Div4" runat="server" style="margin: auto">
+                                        <div style="float: left; position: relative; top: -10px">
+                                            <h3 style="margin-bottom: 4px; text-align: left; float: left">Aptitudes e Intereses</h3>
+                                        </div>
+                                        <div style="float: right; position: relative; top: 10px">
+                                            <asp:Button ID="btnaptitudesIntereses" runat="server" Text="▼" CssClass="btn" OnClick="btnaptitudesIntereses_Click" />
+                                        </div>
+                                        <div style="clear: both"></div>
+                                    </div>
                                 </ContentTemplate>
                             </asp:UpdatePanel>
 
-                            <div id="aptitudesIntereses" style="border: 1px solid black; padding-left:4%; padding-top:4%" hidden="hidden">
+                            <div id="aptitudesIntereses" style="border: 1px solid black; padding-left: 4%; padding-top: 4%" hidden="hidden">
                                 <div class="form-group">
-                                    <table cellspacion="0" cellpadding="3" border="0" style="margin:auto" class="auto-style13">
-                                      <tr>
-                                          <td style="text-align:left; vertical-align:top">Aptitudes:</td>
-                                          <td>
-                                              <asp:ListBox ID="lstaptitudes" runat="server" Width="220px" Height="150px" AutoPostBack="false"></asp:ListBox>
-                                          </td>
-                                          <td></td>
-                                          <td style="text-align:right; vertical-align:top">Intereses:</td>
-                                          <td>
-                                              <asp:ListBox ID="lstintereses" runat="server" Width="220px" Height="150px" AutoPostBack="false"></asp:ListBox>
-                                          </td>
-                                      </tr>
-                                  </table>
+                                    <table cellspacion="0" cellpadding="3" border="0" style="margin: auto" class="auto-style13">
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: top">Aptitudes:</td>
+                                            <td>
+                                                <asp:ListBox ID="lstaptitudes" runat="server" Width="220px" Height="150px" AutoPostBack="false"></asp:ListBox>
+                                            </td>
+                                            <td></td>
+                                            <td style="text-align: right; vertical-align: top">Intereses:</td>
+                                            <td>
+                                                <asp:ListBox ID="lstintereses" runat="server" Width="220px" Height="150px" AutoPostBack="false"></asp:ListBox>
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </div>
-                             </div>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -3084,7 +4464,7 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-sm-12">
+                <div class="col-lg-10 col-sm-12">
                     <h1>Informacion de contacto</h1>
                     <address>
                         <p>
@@ -3096,12 +4476,22 @@
                         <p>Contacto : <a href="http://contactoweb.upc.edu.pe/">Consultas</a></p>
                     </address>
                 </div>
+                <div class="col-lg-2 col-sm-12 ">
+                    <h1>Contactenos</h1>
+                    <ul class="social-link-footer list-unstyled">
+                        <li><a href="https://www.facebook.com/profile.php?id=100007924308551"><i class="icon-facebook"></i></a></li>
+                        <li><a href="https://www.linkedin.com/pub/escuela-de-ingenier%C3%ADa-de-sistemas-y-computaci%C3%B3n/a3/864/45b"><i class="icon-linkedin"></i></a></li>
+
+                    </ul>
+                </div>
             </div>
+
         </div>
+
     </footer>
     <!--footer end-->
     <!-- js placed at the end of the document so the pages load faster -->
-  
+
     <script src="Content/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="Content/js/hover-dropdown.js"></script>
     <script type="text/javascript" src="Content/assets/bxslider/jquery.bxslider.js"></script>
@@ -3141,7 +4531,5 @@
 
 
     </script>
-</body>
-
 </body>
 </html>
