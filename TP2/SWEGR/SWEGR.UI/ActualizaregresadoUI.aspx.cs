@@ -63,6 +63,8 @@ namespace SWEGR.UI
                     ddlPais.DataBind();
                     ddlPais.Items.Insert(0, new ListItem("Seleccione el país", ""));
 
+                    llenarPaisesTA();
+                    llenarPaisesTL();
 
                     EgresadoBC objEgresadoBC = new EgresadoBC();
                     EgresadoBE egresado = objEgresadoBC.obtenerEgresado(IDEgresado);
@@ -114,6 +116,7 @@ namespace SWEGR.UI
 
         public void llenarregistroacademico(int idegresado)
         {
+            PaisBC objetoPaisBC = new PaisBC();
             RegistroAcademicoBE objRegistroAcademicoBE = new RegistroAcademicoBE();
             List<RegistroAcademicoBE> listaRegistroAcademicoBE = new List<RegistroAcademicoBE>();
             RegistroAcademicoBC objRegistroAcademicoBC = new RegistroAcademicoBC();
@@ -131,6 +134,12 @@ namespace SWEGR.UI
             txttipoEstudio.Text = objRegistroAcademicoBE.Tipoestudio;
             txtnombreEstudio.Text = objRegistroAcademicoBE.Nombreestudio;
             txtdescripcionEstudio.Text = objRegistroAcademicoBE.Descripcionestudio;
+            String pais = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+            if (objRegistroAcademicoBE.Idpais == 0)
+                ddlPaisTA.SelectedIndex = -1;
+            else
+                ddlPaisTA.Text = pais;
 
             if (cantidad > 1)
             {
@@ -141,6 +150,12 @@ namespace SWEGR.UI
                 txttipoEstudio2.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio2.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio2.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA2 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA2.SelectedIndex = -1;
+                else
+                    ddlPaisTA2.Text = paisTA2;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso2", "mostrarCurso2();", true);
             }
@@ -156,6 +171,12 @@ namespace SWEGR.UI
                 txttipoEstudio3.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio3.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio3.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA3 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA3.SelectedIndex = -1;
+                else
+                    ddlPaisTA3.Text = paisTA3;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso3", "mostrarCurso3();", true);
             }
@@ -171,6 +192,12 @@ namespace SWEGR.UI
                 txttipoEstudio4.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio4.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio4.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA4 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA4.SelectedIndex = -1;
+                else
+                    ddlPaisTA4.Text = paisTA4;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso4", "mostrarCurso4();", true);
             }
@@ -186,6 +213,12 @@ namespace SWEGR.UI
                 txttipoEstudio5.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio5.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio5.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA5 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA5.SelectedIndex = -1;
+                else
+                    ddlPaisTA5.Text = paisTA5;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso5", "mostrarCurso5();", true);
             }
@@ -201,6 +234,12 @@ namespace SWEGR.UI
                 txttipoEstudio6.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio6.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio6.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA6 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA6.SelectedIndex = -1;
+                else
+                    ddlPaisTA6.Text = paisTA6;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso6", "mostrarCurso6();", true);
             }
@@ -216,6 +255,12 @@ namespace SWEGR.UI
                 txttipoEstudio7.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio7.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio7.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA7 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA7.SelectedIndex = -1;
+                else
+                    ddlPaisTA7.Text = paisTA7;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso7", "mostrarCurso7();", true);
             }
@@ -231,6 +276,12 @@ namespace SWEGR.UI
                 txttipoEstudio8.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio8.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio8.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA8 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA8.SelectedIndex = -1;
+                else
+                    ddlPaisTA8.Text = paisTA8;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso8", "mostrarCurso8();", true);
             }
@@ -246,6 +297,12 @@ namespace SWEGR.UI
                 txttipoEstudio9.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio9.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio9.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA9 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA9.SelectedIndex = -1;
+                else
+                    ddlPaisTA9.Text = paisTA9;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso9", "mostrarCurso9();", true);
             }
@@ -261,6 +318,12 @@ namespace SWEGR.UI
                 txttipoEstudio10.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio10.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio10.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA10 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA10.SelectedIndex = -1;
+                else
+                    ddlPaisTA10.Text = paisTA10;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso10", "mostrarCurso10();", true);
             }
@@ -276,6 +339,12 @@ namespace SWEGR.UI
                 txttipoEstudio11.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio11.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio11.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA11 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA11.SelectedIndex = -1;
+                else
+                    ddlPaisTA11.Text = paisTA11;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso11", "mostrarCurso11();", true);
             }
@@ -291,6 +360,12 @@ namespace SWEGR.UI
                 txttipoEstudio12.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio12.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio12.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA12 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA12.SelectedIndex = -1;
+                else
+                    ddlPaisTA12.Text = paisTA12;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso12", "mostrarCurso12();", true);
             }
@@ -306,6 +381,12 @@ namespace SWEGR.UI
                 txttipoEstudio13.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio13.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio13.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA13 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA13.SelectedIndex = -1;
+                else
+                    ddlPaisTA13.Text = paisTA13;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso13", "mostrarCurso13();", true);
             }
@@ -321,6 +402,12 @@ namespace SWEGR.UI
                 txttipoEstudio14.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio14.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio14.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA14 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA14.SelectedIndex = -1;
+                else
+                    ddlPaisTA14.Text = paisTA14;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso14", "mostrarCurso14();", true);
             }
@@ -336,6 +423,12 @@ namespace SWEGR.UI
                 txttipoEstudio15.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio15.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio15.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA15 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA15.SelectedIndex = -1;
+                else
+                    ddlPaisTA15.Text = paisTA15;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso15", "mostrarCurso15();", true);
             }
@@ -351,6 +444,12 @@ namespace SWEGR.UI
                 txttipoEstudio16.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio16.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio16.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA16 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA16.SelectedIndex = -1;
+                else
+                    ddlPaisTA16.Text = paisTA16;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso16", "mostrarCurso16();", true);
             }
@@ -366,25 +465,38 @@ namespace SWEGR.UI
                 txttipoEstudio17.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio17.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio17.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA17 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA17.SelectedIndex = -1;
+                else
+                    ddlPaisTA17.Text = paisTA17;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso17", "mostrarCurso17();", true);
             }
             else
+                return;
 
-                if (cantidad > 17)
-                {
-                    objRegistroAcademicoBE = listaRegistroAcademicoBE[17];
+            if (cantidad > 17)
+            {
+                objRegistroAcademicoBE = listaRegistroAcademicoBE[17];
 
-                    txtcentroEstudios18.Text = objRegistroAcademicoBE.Nombreinstitucion;
-                    txtduracionEstudio18.Text = objRegistroAcademicoBE.Duracionestudio;
-                    txttipoEstudio18.Text = objRegistroAcademicoBE.Tipoestudio;
-                    txtnombreEstudio18.Text = objRegistroAcademicoBE.Nombreestudio;
-                    txtdescripcionEstudio18.Text = objRegistroAcademicoBE.Descripcionestudio;
+                txtcentroEstudios18.Text = objRegistroAcademicoBE.Nombreinstitucion;
+                txtduracionEstudio18.Text = objRegistroAcademicoBE.Duracionestudio;
+                txttipoEstudio18.Text = objRegistroAcademicoBE.Tipoestudio;
+                txtnombreEstudio18.Text = objRegistroAcademicoBE.Nombreestudio;
+                txtdescripcionEstudio18.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA18 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
 
-                    ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso18", "mostrarCurso18();", true);
-                }
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA18.SelectedIndex = -1;
                 else
-                    return;
+                    ddlPaisTA18.Text = paisTA18;
+
+                ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso18", "mostrarCurso18();", true);
+            }
+            else
+                return;
 
             if (cantidad > 18)
             {
@@ -395,6 +507,12 @@ namespace SWEGR.UI
                 txttipoEstudio19.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio19.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio19.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA19 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA19.SelectedIndex = -1;
+                else
+                    ddlPaisTA19.Text = paisTA19;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso19", "mostrarCurso19();", true);
             }
@@ -410,6 +528,12 @@ namespace SWEGR.UI
                 txttipoEstudio20.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio20.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio20.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA20 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA20.SelectedIndex = -1;
+                else
+                    ddlPaisTA20.Text = paisTA20;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso20", "mostrarCurso20();", true);
             }
@@ -420,6 +544,7 @@ namespace SWEGR.UI
 
         public void llenarregistrolaboral(int idegresado)
         {
+            PaisBC objetoPaisBC = new PaisBC();
             RegistroLaboralBE objRegistroLaboralBE = new RegistroLaboralBE();
             List<RegistroLaboralBE> listaRegistroLaboralBE = new List<RegistroLaboralBE>();
             RegistroLaboralBC objRegistroLaboralBC = new RegistroLaboralBC();
@@ -440,6 +565,13 @@ namespace SWEGR.UI
             txtcargojefeTrabajo.Text = objRegistroLaboralBE.Cargojefetrabajo;
             txttelefonojefeTrabajo.Text = objRegistroLaboralBE.Telefonojefetrabajo;
             txtcorreojefeTrabajo.Text = objRegistroLaboralBE.Correojefetrabajo;
+            String pais = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+            if (objRegistroLaboralBE.Idpais == 0)
+                ddlPaisTL.SelectedIndex = -1;
+            else
+                ddlPaisTL.Text = pais;
+
 
             if (objRegistroLaboralBE.Trabajoactual == true)
                 cbotrabajoActual.Checked = true;
@@ -456,6 +588,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo2.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo2.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo2.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL2 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL2.SelectedIndex = -1;
+                else
+                    ddlPaisTL2.Text = paisTL2;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual2.Checked = true;
@@ -477,6 +615,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo3.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo3.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo3.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL3 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL3.SelectedIndex = -1;
+                else
+                    ddlPaisTL3.Text = paisTL3;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual3.Checked = true;
@@ -498,6 +642,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo4.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo4.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo4.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL4 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL4.SelectedIndex = -1;
+                else
+                    ddlPaisTL4.Text = paisTL4;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual4.Checked = true;
@@ -519,6 +669,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo5.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo5.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo5.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL5 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL5.SelectedIndex = -1;
+                else
+                    ddlPaisTL5.Text = paisTL5;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual5.Checked = true;
@@ -540,6 +696,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo6.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo6.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo6.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL6 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL6.SelectedIndex = -1;
+                else
+                    ddlPaisTL6.Text = paisTL6;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual6.Checked = true;
@@ -561,6 +723,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo7.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo7.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo7.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL7 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL7.SelectedIndex = -1;
+                else
+                    ddlPaisTL7.Text = paisTL7;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual7.Checked = true;
@@ -582,6 +750,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo8.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo8.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo8.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL8 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL8.SelectedIndex = -1;
+                else
+                    ddlPaisTL8.Text = paisTL8;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual8.Checked = true;
@@ -603,6 +777,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo9.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo9.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo9.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL9 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL9.SelectedIndex = -1;
+                else
+                    ddlPaisTL9.Text = paisTL9;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual9.Checked = true;
@@ -624,6 +804,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo10.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo10.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo10.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL10 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL10.SelectedIndex = -1;
+                else
+                    ddlPaisTL10.Text = paisTL10;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual10.Checked = true;
@@ -645,6 +831,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo11.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo11.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo11.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL11 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL11.SelectedIndex = -1;
+                else
+                    ddlPaisTL11.Text = paisTL11;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual11.Checked = true;
@@ -666,6 +858,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo12.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo12.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo12.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL12 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL12.SelectedIndex = -1;
+                else
+                    ddlPaisTL12.Text = paisTL12;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual12.Checked = true;
@@ -687,6 +885,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo13.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo13.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo13.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL13 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL13.SelectedIndex = -1;
+                else
+                    ddlPaisTL13.Text = paisTL13;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual13.Checked = true;
@@ -708,6 +912,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo14.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo14.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo14.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL14 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL14.SelectedIndex = -1;
+                else
+                    ddlPaisTL14.Text = paisTL14;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual14.Checked = true;
@@ -729,6 +939,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo15.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo15.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo15.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL15 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL15.SelectedIndex = -1;
+                else
+                    ddlPaisTL15.Text = paisTL15;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual15.Checked = true;
@@ -750,6 +966,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo16.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo16.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo16.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL16 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL16.SelectedIndex = -1;
+                else
+                    ddlPaisTL16.Text = paisTL16;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual16.Checked = true;
@@ -771,6 +993,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo17.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo17.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo17.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL17 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL17.SelectedIndex = -1;
+                else
+                    ddlPaisTL17.Text = paisTL17;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual17.Checked = true;
@@ -792,6 +1020,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo18.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo18.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo18.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL18 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL18.SelectedIndex = -1;
+                else
+                    ddlPaisTL18.Text = paisTL18;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual18.Checked = true;
@@ -813,6 +1047,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo19.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo19.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo19.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL19 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL19.SelectedIndex = -1;
+                else
+                    ddlPaisTL19.Text = paisTL19;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual19.Checked = true;
@@ -834,6 +1074,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo20.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo20.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo20.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL20 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL20.SelectedIndex = -1;
+                else
+                    ddlPaisTL20.Text = paisTL20;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual20.Checked = true;
@@ -931,12 +1177,187 @@ namespace SWEGR.UI
             return lsdepartamento;
         }
 
+        public void llenarPaisesTA()
+        {
+            PaisBC objetoPaisBC = new PaisBC();
+            List<String> lsPaisBE = new List<string>();
+            lsPaisBE = objetoPaisBC.listarPais();
+
+            ddlPaisTA.DataSource = lsPaisBE;
+            ddlPaisTA.DataBind();
+            ddlPaisTA.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTA2.DataSource = lsPaisBE;
+            ddlPaisTA2.DataBind();
+            ddlPaisTA2.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTA3.DataSource = lsPaisBE;
+            ddlPaisTA3.DataBind();
+            ddlPaisTA3.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTA4.DataSource = lsPaisBE;
+            ddlPaisTA4.DataBind();
+            ddlPaisTA4.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTA5.DataSource = lsPaisBE;
+            ddlPaisTA5.DataBind();
+            ddlPaisTA5.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTA6.DataSource = lsPaisBE;
+            ddlPaisTA6.DataBind();
+            ddlPaisTA6.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTA7.DataSource = lsPaisBE;
+            ddlPaisTA7.DataBind();
+            ddlPaisTA7.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTA8.DataSource = lsPaisBE;
+            ddlPaisTA8.DataBind();
+            ddlPaisTA8.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTA9.DataSource = lsPaisBE;
+            ddlPaisTA9.DataBind();
+            ddlPaisTA9.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTA10.DataSource = lsPaisBE;
+            ddlPaisTA10.DataBind();
+            ddlPaisTA10.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTA11.DataSource = lsPaisBE;
+            ddlPaisTA11.DataBind();
+            ddlPaisTA11.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTA12.DataSource = lsPaisBE;
+            ddlPaisTA12.DataBind();
+            ddlPaisTA12.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTA13.DataSource = lsPaisBE;
+            ddlPaisTA13.DataBind();
+            ddlPaisTA13.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTA14.DataSource = lsPaisBE;
+            ddlPaisTA14.DataBind();
+            ddlPaisTA14.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTA15.DataSource = lsPaisBE;
+            ddlPaisTA15.DataBind();
+            ddlPaisTA15.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTA16.DataSource = lsPaisBE;
+            ddlPaisTA16.DataBind();
+            ddlPaisTA16.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTA17.DataSource = lsPaisBE;
+            ddlPaisTA17.DataBind();
+            ddlPaisTA17.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTA18.DataSource = lsPaisBE;
+            ddlPaisTA18.DataBind();
+            ddlPaisTA18.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTA19.DataSource = lsPaisBE;
+            ddlPaisTA19.DataBind();
+            ddlPaisTA19.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTA20.DataSource = lsPaisBE;
+            ddlPaisTA20.DataBind();
+            ddlPaisTA20.Items.Insert(0, new ListItem("Seleccione el país", ""));
+        }
+
+        public void llenarPaisesTL()
+        {
+            PaisBC objetoPaisBC = new PaisBC();
+            List<String> lsPaisBE = new List<string>();
+            lsPaisBE = objetoPaisBC.listarPais();
+
+            ddlPaisTL.DataSource = lsPaisBE;
+            ddlPaisTL.DataBind();
+            ddlPaisTL.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTL2.DataSource = lsPaisBE;
+            ddlPaisTL2.DataBind();
+            ddlPaisTL2.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTL3.DataSource = lsPaisBE;
+            ddlPaisTL3.DataBind();
+            ddlPaisTL3.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTL4.DataSource = lsPaisBE;
+            ddlPaisTL4.DataBind();
+            ddlPaisTL4.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTL5.DataSource = lsPaisBE;
+            ddlPaisTL5.DataBind();
+            ddlPaisTL5.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTL6.DataSource = lsPaisBE;
+            ddlPaisTL6.DataBind();
+            ddlPaisTL6.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTL7.DataSource = lsPaisBE;
+            ddlPaisTL7.DataBind();
+            ddlPaisTL7.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTL8.DataSource = lsPaisBE;
+            ddlPaisTL8.DataBind();
+            ddlPaisTL8.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTL9.DataSource = lsPaisBE;
+            ddlPaisTL9.DataBind();
+            ddlPaisTL9.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTL10.DataSource = lsPaisBE;
+            ddlPaisTL10.DataBind();
+            ddlPaisTL10.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTL11.DataSource = lsPaisBE;
+            ddlPaisTL11.DataBind();
+            ddlPaisTL11.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTL12.DataSource = lsPaisBE;
+            ddlPaisTL12.DataBind();
+            ddlPaisTL12.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTL13.DataSource = lsPaisBE;
+            ddlPaisTL13.DataBind();
+            ddlPaisTL13.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTL14.DataSource = lsPaisBE;
+            ddlPaisTL14.DataBind();
+            ddlPaisTL14.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTL15.DataSource = lsPaisBE;
+            ddlPaisTL15.DataBind();
+            ddlPaisTL15.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTL16.DataSource = lsPaisBE;
+            ddlPaisTL16.DataBind();
+            ddlPaisTL16.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTL17.DataSource = lsPaisBE;
+            ddlPaisTL17.DataBind();
+            ddlPaisTL17.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTL18.DataSource = lsPaisBE;
+            ddlPaisTL18.DataBind();
+            ddlPaisTL18.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTL19.DataSource = lsPaisBE;
+            ddlPaisTL19.DataBind();
+            ddlPaisTL19.Items.Insert(0, new ListItem("Seleccione el país", ""));
+
+            ddlPaisTL20.DataSource = lsPaisBE;
+            ddlPaisTL20.DataBind();
+            ddlPaisTL20.Items.Insert(0, new ListItem("Seleccione el país", ""));
+        }
+
         //*** Datos Personales ***//
 
         public bool actualizarEgresado()
         {
             EgresadoBC objEgresadoBC = new EgresadoBC();
             EgresadoBE egresado = objEgresadoBC.obtenerEgresado(IDEgresado);
+            PaisBC objetoPaisBC = new PaisBC();
 
             dni = egresado.Dniegresado;
             telefono = egresado.Telefonoprinegresado;
@@ -959,6 +1380,8 @@ namespace SWEGR.UI
             egresado.Correoaltegresado = txtcorreoalternativo.Text;
             egresado.Perfillinkedinegresado = txtperfillinkedin.Text;
             egresado.Perfilfacebookegresado = txtperfilfacebook.Text;
+            egresado.Idpaisegresado = objetoPaisBC.obtenerPaisID(ddlPais.Text);
+            
 
             if (objEgresadoBC.actualizarEgresado(egresado))
                 return true;
@@ -1259,7 +1682,6 @@ namespace SWEGR.UI
                         {
                             ScriptManager.RegisterStartupScript(Page, GetType(), "exito", "exito();", true);
                             guardarHistorial();
-
                         }
                         else
                             ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Ocurrió un error\")</script>", false);
@@ -1297,6 +1719,7 @@ namespace SWEGR.UI
         {
             int exito = 9;
             int idegresado = IDEgresado;
+            PaisBC objetoPaisBC = new PaisBC();
             RegistroAcademicoBE objRegistroAcademicoBE = new RegistroAcademicoBE();
             List<RegistroAcademicoBE> listaRegistroAcademicoBE = new List<RegistroAcademicoBE>();
             RegistroAcademicoBC objRegistroAcademicoBC = new RegistroAcademicoBC();
@@ -1314,7 +1737,7 @@ namespace SWEGR.UI
                     objRegistroAcademicoBE.Tipoestudio = txttipoEstudio.Text;
                     objRegistroAcademicoBE.Nombreestudio = txtnombreEstudio.Text;
                     objRegistroAcademicoBE.Descripcionestudio = txtdescripcionEstudio.Text;
-                    objRegistroAcademicoBE.Idpais = 173;
+                    objRegistroAcademicoBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA.Text);
 
                     if (objRegistroAcademicoBC.insertarregistroacademico(objRegistroAcademicoBE) != 0)
                         exito = 1;
@@ -1334,7 +1757,7 @@ namespace SWEGR.UI
                     objRegistroAcademicoBE2.Tipoestudio = txttipoEstudio2.Text;
                     objRegistroAcademicoBE2.Nombreestudio = txtnombreEstudio2.Text;
                     objRegistroAcademicoBE2.Descripcionestudio = txtdescripcionEstudio2.Text;
-                    objRegistroAcademicoBE2.Idpais = 173;
+                    objRegistroAcademicoBE2.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA2.Text);
 
                     if (objRegistroAcademicoBC.insertarregistroacademico(objRegistroAcademicoBE2) != 0)
                         exito = 1;
@@ -1354,6 +1777,7 @@ namespace SWEGR.UI
                     objRegistroAcademicoBE3.Tipoestudio = txttipoEstudio3.Text;
                     objRegistroAcademicoBE3.Nombreestudio = txtnombreEstudio3.Text;
                     objRegistroAcademicoBE3.Descripcionestudio = txtdescripcionEstudio3.Text;
+                    objRegistroAcademicoBE3.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA3.Text);
 
                     if (objRegistroAcademicoBC.insertarregistroacademico(objRegistroAcademicoBE3) != 0)
                         exito = 1;
@@ -1373,6 +1797,7 @@ namespace SWEGR.UI
                     objRegistroAcademicoBE4.Tipoestudio = txttipoEstudio4.Text;
                     objRegistroAcademicoBE4.Nombreestudio = txtnombreEstudio4.Text;
                     objRegistroAcademicoBE4.Descripcionestudio = txtdescripcionEstudio4.Text;
+                    objRegistroAcademicoBE4.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA4.Text);
 
                     if (objRegistroAcademicoBC.insertarregistroacademico(objRegistroAcademicoBE4) != 0)
                         exito = 1;
@@ -1392,6 +1817,7 @@ namespace SWEGR.UI
                     objRegistroAcademicoBE5.Tipoestudio = txttipoEstudio5.Text;
                     objRegistroAcademicoBE5.Nombreestudio = txtnombreEstudio5.Text;
                     objRegistroAcademicoBE5.Descripcionestudio = txtdescripcionEstudio5.Text;
+                    objRegistroAcademicoBE5.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA5.Text);
 
                     if (objRegistroAcademicoBC.insertarregistroacademico(objRegistroAcademicoBE5) != 0)
                         exito = 1;
@@ -1411,6 +1837,7 @@ namespace SWEGR.UI
                     objRegistroAcademicoBE6.Tipoestudio = txttipoEstudio6.Text;
                     objRegistroAcademicoBE6.Nombreestudio = txtnombreEstudio6.Text;
                     objRegistroAcademicoBE6.Descripcionestudio = txtdescripcionEstudio6.Text;
+                    objRegistroAcademicoBE6.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA6.Text);
 
                     if (objRegistroAcademicoBC.insertarregistroacademico(objRegistroAcademicoBE6) != 0)
                         exito = 1;
@@ -1430,6 +1857,7 @@ namespace SWEGR.UI
                     objRegistroAcademicoBE7.Tipoestudio = txttipoEstudio7.Text;
                     objRegistroAcademicoBE7.Nombreestudio = txtnombreEstudio7.Text;
                     objRegistroAcademicoBE7.Descripcionestudio = txtdescripcionEstudio7.Text;
+                    objRegistroAcademicoBE7.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA7.Text);
 
                     if (objRegistroAcademicoBC.insertarregistroacademico(objRegistroAcademicoBE7) != 0)
                         exito = 1;
@@ -1449,6 +1877,7 @@ namespace SWEGR.UI
                     objRegistroAcademicoBE8.Tipoestudio = txttipoEstudio8.Text;
                     objRegistroAcademicoBE8.Nombreestudio = txtnombreEstudio8.Text;
                     objRegistroAcademicoBE8.Descripcionestudio = txtdescripcionEstudio8.Text;
+                    objRegistroAcademicoBE8.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA8.Text);
 
                     if (objRegistroAcademicoBC.insertarregistroacademico(objRegistroAcademicoBE8) != 0)
                         exito = 1;
@@ -1468,6 +1897,7 @@ namespace SWEGR.UI
                     objRegistroAcademicoBE9.Tipoestudio = txttipoEstudio9.Text;
                     objRegistroAcademicoBE9.Nombreestudio = txtnombreEstudio9.Text;
                     objRegistroAcademicoBE9.Descripcionestudio = txtdescripcionEstudio9.Text;
+                    objRegistroAcademicoBE9.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA9.Text);
 
                     if (objRegistroAcademicoBC.insertarregistroacademico(objRegistroAcademicoBE9) != 0)
                         exito = 1;
@@ -1487,6 +1917,7 @@ namespace SWEGR.UI
                     objRegistroAcademicoBE10.Tipoestudio = txttipoEstudio10.Text;
                     objRegistroAcademicoBE10.Nombreestudio = txtnombreEstudio10.Text;
                     objRegistroAcademicoBE10.Descripcionestudio = txtdescripcionEstudio10.Text;
+                    objRegistroAcademicoBE10.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA10.Text);
 
 
                     if (objRegistroAcademicoBC.insertarregistroacademico(objRegistroAcademicoBE10) != 0)
@@ -1507,6 +1938,7 @@ namespace SWEGR.UI
                     objRegistroAcademicoBE11.Tipoestudio = txttipoEstudio11.Text;
                     objRegistroAcademicoBE11.Nombreestudio = txtnombreEstudio11.Text;
                     objRegistroAcademicoBE11.Descripcionestudio = txtdescripcionEstudio11.Text;
+                    objRegistroAcademicoBE11.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA11.Text);
 
                     if (objRegistroAcademicoBC.insertarregistroacademico(objRegistroAcademicoBE11) != 0)
                         exito = 1;
@@ -1526,6 +1958,7 @@ namespace SWEGR.UI
                     objRegistroAcademicoBE12.Tipoestudio = txttipoEstudio12.Text;
                     objRegistroAcademicoBE12.Nombreestudio = txtnombreEstudio12.Text;
                     objRegistroAcademicoBE12.Descripcionestudio = txtdescripcionEstudio12.Text;
+                    objRegistroAcademicoBE12.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA12.Text);
 
                     if (objRegistroAcademicoBC.insertarregistroacademico(objRegistroAcademicoBE12) != 0)
                         exito = 1;
@@ -1545,6 +1978,7 @@ namespace SWEGR.UI
                     objRegistroAcademicoBE13.Tipoestudio = txttipoEstudio13.Text;
                     objRegistroAcademicoBE13.Nombreestudio = txtnombreEstudio13.Text;
                     objRegistroAcademicoBE13.Descripcionestudio = txtdescripcionEstudio13.Text;
+                    objRegistroAcademicoBE13.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA13.Text);
 
                     if (objRegistroAcademicoBC.insertarregistroacademico(objRegistroAcademicoBE13) != 0)
                         exito = 1;
@@ -1564,6 +1998,7 @@ namespace SWEGR.UI
                     objRegistroAcademicoBE14.Tipoestudio = txttipoEstudio14.Text;
                     objRegistroAcademicoBE14.Nombreestudio = txtnombreEstudio14.Text;
                     objRegistroAcademicoBE14.Descripcionestudio = txtdescripcionEstudio14.Text;
+                    objRegistroAcademicoBE14.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA14.Text);
 
                     if (objRegistroAcademicoBC.insertarregistroacademico(objRegistroAcademicoBE14) != 0)
                         exito = 1;
@@ -1583,6 +2018,7 @@ namespace SWEGR.UI
                     objRegistroAcademicoBE15.Tipoestudio = txttipoEstudio15.Text;
                     objRegistroAcademicoBE15.Nombreestudio = txtnombreEstudio15.Text;
                     objRegistroAcademicoBE15.Descripcionestudio = txtdescripcionEstudio15.Text;
+                    objRegistroAcademicoBE15.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA15.Text);
 
                     if (objRegistroAcademicoBC.insertarregistroacademico(objRegistroAcademicoBE15) != 0)
                         exito = 1;
@@ -1602,6 +2038,7 @@ namespace SWEGR.UI
                     objRegistroAcademicoBE16.Tipoestudio = txttipoEstudio16.Text;
                     objRegistroAcademicoBE16.Nombreestudio = txtnombreEstudio16.Text;
                     objRegistroAcademicoBE16.Descripcionestudio = txtdescripcionEstudio16.Text;
+                    objRegistroAcademicoBE16.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA16.Text);
 
                     if (objRegistroAcademicoBC.insertarregistroacademico(objRegistroAcademicoBE16) != 0)
                         exito = 1;
@@ -1621,6 +2058,7 @@ namespace SWEGR.UI
                     objRegistroAcademicoBE17.Tipoestudio = txttipoEstudio17.Text;
                     objRegistroAcademicoBE17.Nombreestudio = txtnombreEstudio17.Text;
                     objRegistroAcademicoBE17.Descripcionestudio = txtdescripcionEstudio17.Text;
+                    objRegistroAcademicoBE17.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA17.Text);
 
                     if (objRegistroAcademicoBC.insertarregistroacademico(objRegistroAcademicoBE17) != 0)
                         exito = 1;
@@ -1640,6 +2078,7 @@ namespace SWEGR.UI
                     objRegistroAcademicoBE18.Tipoestudio = txttipoEstudio18.Text;
                     objRegistroAcademicoBE18.Nombreestudio = txtnombreEstudio18.Text;
                     objRegistroAcademicoBE18.Descripcionestudio = txtdescripcionEstudio18.Text;
+                    objRegistroAcademicoBE18.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA18.Text);
 
                     if (objRegistroAcademicoBC.insertarregistroacademico(objRegistroAcademicoBE18) != 0)
                         exito = 1;
@@ -1659,6 +2098,7 @@ namespace SWEGR.UI
                     objRegistroAcademicoBE19.Tipoestudio = txttipoEstudio19.Text;
                     objRegistroAcademicoBE19.Nombreestudio = txtnombreEstudio19.Text;
                     objRegistroAcademicoBE19.Descripcionestudio = txtdescripcionEstudio19.Text;
+                    objRegistroAcademicoBE19.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA19.Text);
 
                     if (objRegistroAcademicoBC.insertarregistroacademico(objRegistroAcademicoBE19) != 0)
                         exito = 1;
@@ -1678,6 +2118,7 @@ namespace SWEGR.UI
                     objRegistroAcademicoBE20.Tipoestudio = txttipoEstudio20.Text;
                     objRegistroAcademicoBE20.Nombreestudio = txtnombreEstudio20.Text;
                     objRegistroAcademicoBE20.Descripcionestudio = txtdescripcionEstudio20.Text;
+                    objRegistroAcademicoBE20.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA20.Text);
 
                     if (objRegistroAcademicoBC.insertarregistroacademico(objRegistroAcademicoBE20) != 0)
                         exito = 1;
@@ -1693,6 +2134,7 @@ namespace SWEGR.UI
         {
             bool exito = false;
             int idegresado = IDEgresado;
+            PaisBC objetoPaisBC = new PaisBC();
             RegistroAcademicoBE objRegistroAcademicoBE = new RegistroAcademicoBE();
             List<RegistroAcademicoBE> listaRegistroAcademicoBE = new List<RegistroAcademicoBE>();
             RegistroAcademicoBC objRegistroAcademicoBC = new RegistroAcademicoBC();
@@ -1709,7 +2151,7 @@ namespace SWEGR.UI
             objRegistroAcademicoBE.Tipoestudio = txttipoEstudio.Text;
             objRegistroAcademicoBE.Nombreestudio = txtnombreEstudio.Text;
             objRegistroAcademicoBE.Descripcionestudio = txtdescripcionEstudio.Text;
-            objRegistroAcademicoBE.Idpais = 173;
+            objRegistroAcademicoBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA.Text);
 
             if (objRegistroAcademicoBC.actualizarregistroacademico(objRegistroAcademicoBE))
                 exito = true;
@@ -1725,7 +2167,7 @@ namespace SWEGR.UI
                 objRegistroAcademicoBE2.Tipoestudio = txttipoEstudio2.Text;
                 objRegistroAcademicoBE2.Nombreestudio = txtnombreEstudio2.Text;
                 objRegistroAcademicoBE2.Descripcionestudio = txtdescripcionEstudio2.Text;
-                objRegistroAcademicoBE2.Idpais = 173;
+                objRegistroAcademicoBE2.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA2.Text);
 
                 if (objRegistroAcademicoBC.actualizarregistroacademico(objRegistroAcademicoBE2))
                     exito = true;
@@ -1742,6 +2184,7 @@ namespace SWEGR.UI
                 objRegistroAcademicoBE3.Tipoestudio = txttipoEstudio3.Text;
                 objRegistroAcademicoBE3.Nombreestudio = txtnombreEstudio3.Text;
                 objRegistroAcademicoBE3.Descripcionestudio = txtdescripcionEstudio3.Text;
+                objRegistroAcademicoBE3.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA3.Text);
 
                 if (objRegistroAcademicoBC.actualizarregistroacademico(objRegistroAcademicoBE3))
                     exito = true;
@@ -1758,6 +2201,7 @@ namespace SWEGR.UI
                 objRegistroAcademicoBE4.Tipoestudio = txttipoEstudio4.Text;
                 objRegistroAcademicoBE4.Nombreestudio = txtnombreEstudio4.Text;
                 objRegistroAcademicoBE4.Descripcionestudio = txtdescripcionEstudio4.Text;
+                objRegistroAcademicoBE4.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA4.Text);
 
                 if (objRegistroAcademicoBC.actualizarregistroacademico(objRegistroAcademicoBE4))
                     exito = true;
@@ -1774,6 +2218,7 @@ namespace SWEGR.UI
                 objRegistroAcademicoBE5.Tipoestudio = txttipoEstudio5.Text;
                 objRegistroAcademicoBE5.Nombreestudio = txtnombreEstudio5.Text;
                 objRegistroAcademicoBE5.Descripcionestudio = txtdescripcionEstudio5.Text;
+                objRegistroAcademicoBE5.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA5.Text);
 
                 if (objRegistroAcademicoBC.actualizarregistroacademico(objRegistroAcademicoBE5))
                     exito = true;
@@ -1790,6 +2235,7 @@ namespace SWEGR.UI
                 objRegistroAcademicoBE6.Tipoestudio = txttipoEstudio6.Text;
                 objRegistroAcademicoBE6.Nombreestudio = txtnombreEstudio6.Text;
                 objRegistroAcademicoBE6.Descripcionestudio = txtdescripcionEstudio6.Text;
+                objRegistroAcademicoBE6.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA6.Text);
 
                 if (objRegistroAcademicoBC.actualizarregistroacademico(objRegistroAcademicoBE6))
                     exito = true;
@@ -1806,6 +2252,7 @@ namespace SWEGR.UI
                 objRegistroAcademicoBE7.Tipoestudio = txttipoEstudio7.Text;
                 objRegistroAcademicoBE7.Nombreestudio = txtnombreEstudio7.Text;
                 objRegistroAcademicoBE7.Descripcionestudio = txtdescripcionEstudio7.Text;
+                objRegistroAcademicoBE7.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA7.Text);
 
                 if (objRegistroAcademicoBC.actualizarregistroacademico(objRegistroAcademicoBE7))
                     exito = true;
@@ -1822,6 +2269,7 @@ namespace SWEGR.UI
                 objRegistroAcademicoBE8.Tipoestudio = txttipoEstudio8.Text;
                 objRegistroAcademicoBE8.Nombreestudio = txtnombreEstudio8.Text;
                 objRegistroAcademicoBE8.Descripcionestudio = txtdescripcionEstudio8.Text;
+                objRegistroAcademicoBE8.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA8.Text);
 
                 if (objRegistroAcademicoBC.actualizarregistroacademico(objRegistroAcademicoBE8))
                     exito = true;
@@ -1838,6 +2286,7 @@ namespace SWEGR.UI
                 objRegistroAcademicoBE9.Tipoestudio = txttipoEstudio9.Text;
                 objRegistroAcademicoBE9.Nombreestudio = txtnombreEstudio9.Text;
                 objRegistroAcademicoBE9.Descripcionestudio = txtdescripcionEstudio9.Text;
+                objRegistroAcademicoBE9.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA9.Text);
 
                 if (objRegistroAcademicoBC.actualizarregistroacademico(objRegistroAcademicoBE9))
                     exito = true;
@@ -1854,6 +2303,7 @@ namespace SWEGR.UI
                 objRegistroAcademicoBE10.Tipoestudio = txttipoEstudio10.Text;
                 objRegistroAcademicoBE10.Nombreestudio = txtnombreEstudio10.Text;
                 objRegistroAcademicoBE10.Descripcionestudio = txtdescripcionEstudio10.Text;
+                objRegistroAcademicoBE10.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA10.Text);
 
                 if (objRegistroAcademicoBC.actualizarregistroacademico(objRegistroAcademicoBE10))
                     exito = true;
@@ -1870,6 +2320,7 @@ namespace SWEGR.UI
                 objRegistroAcademicoBE11.Tipoestudio = txttipoEstudio11.Text;
                 objRegistroAcademicoBE11.Nombreestudio = txtnombreEstudio11.Text;
                 objRegistroAcademicoBE11.Descripcionestudio = txtdescripcionEstudio11.Text;
+                objRegistroAcademicoBE11.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA11.Text);
 
                 if (objRegistroAcademicoBC.actualizarregistroacademico(objRegistroAcademicoBE11))
                     exito = true;
@@ -1886,6 +2337,7 @@ namespace SWEGR.UI
                 objRegistroAcademicoBE12.Tipoestudio = txttipoEstudio12.Text;
                 objRegistroAcademicoBE12.Nombreestudio = txtnombreEstudio12.Text;
                 objRegistroAcademicoBE12.Descripcionestudio = txtdescripcionEstudio12.Text;
+                objRegistroAcademicoBE12.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA12.Text);
 
                 if (objRegistroAcademicoBC.actualizarregistroacademico(objRegistroAcademicoBE12))
                     exito = true;
@@ -1902,6 +2354,7 @@ namespace SWEGR.UI
                 objRegistroAcademicoBE13.Tipoestudio = txttipoEstudio13.Text;
                 objRegistroAcademicoBE13.Nombreestudio = txtnombreEstudio13.Text;
                 objRegistroAcademicoBE13.Descripcionestudio = txtdescripcionEstudio13.Text;
+                objRegistroAcademicoBE13.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA13.Text);
 
                 if (objRegistroAcademicoBC.actualizarregistroacademico(objRegistroAcademicoBE13))
                     exito = true;
@@ -1918,6 +2371,7 @@ namespace SWEGR.UI
                 objRegistroAcademicoBE14.Tipoestudio = txttipoEstudio14.Text;
                 objRegistroAcademicoBE14.Nombreestudio = txtnombreEstudio14.Text;
                 objRegistroAcademicoBE14.Descripcionestudio = txtdescripcionEstudio14.Text;
+                objRegistroAcademicoBE14.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA14.Text);
 
                 if (objRegistroAcademicoBC.actualizarregistroacademico(objRegistroAcademicoBE14))
                     exito = true;
@@ -1934,6 +2388,7 @@ namespace SWEGR.UI
                 objRegistroAcademicoBE15.Tipoestudio = txttipoEstudio15.Text;
                 objRegistroAcademicoBE15.Nombreestudio = txtnombreEstudio15.Text;
                 objRegistroAcademicoBE15.Descripcionestudio = txtdescripcionEstudio15.Text;
+                objRegistroAcademicoBE15.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA15.Text);
 
                 if (objRegistroAcademicoBC.actualizarregistroacademico(objRegistroAcademicoBE15))
                     exito = true;
@@ -1950,6 +2405,7 @@ namespace SWEGR.UI
                 objRegistroAcademicoBE16.Tipoestudio = txttipoEstudio16.Text;
                 objRegistroAcademicoBE16.Nombreestudio = txtnombreEstudio16.Text;
                 objRegistroAcademicoBE16.Descripcionestudio = txtdescripcionEstudio16.Text;
+                objRegistroAcademicoBE16.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA16.Text);
 
                 if (objRegistroAcademicoBC.actualizarregistroacademico(objRegistroAcademicoBE16))
                     exito = true;
@@ -1966,6 +2422,7 @@ namespace SWEGR.UI
                 objRegistroAcademicoBE17.Tipoestudio = txttipoEstudio17.Text;
                 objRegistroAcademicoBE17.Nombreestudio = txtnombreEstudio17.Text;
                 objRegistroAcademicoBE17.Descripcionestudio = txtdescripcionEstudio17.Text;
+                objRegistroAcademicoBE17.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA17.Text);
 
                 if (objRegistroAcademicoBC.actualizarregistroacademico(objRegistroAcademicoBE17))
                     exito = true;
@@ -1982,6 +2439,7 @@ namespace SWEGR.UI
                 objRegistroAcademicoBE18.Tipoestudio = txttipoEstudio18.Text;
                 objRegistroAcademicoBE18.Nombreestudio = txtnombreEstudio18.Text;
                 objRegistroAcademicoBE18.Descripcionestudio = txtdescripcionEstudio18.Text;
+                objRegistroAcademicoBE18.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA18.Text);
 
                 if (objRegistroAcademicoBC.actualizarregistroacademico(objRegistroAcademicoBE18))
                     exito = true;
@@ -1998,6 +2456,7 @@ namespace SWEGR.UI
                 objRegistroAcademicoBE19.Tipoestudio = txttipoEstudio19.Text;
                 objRegistroAcademicoBE19.Nombreestudio = txtnombreEstudio19.Text;
                 objRegistroAcademicoBE19.Descripcionestudio = txtdescripcionEstudio19.Text;
+                objRegistroAcademicoBE19.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA19.Text);
 
                 if (objRegistroAcademicoBC.actualizarregistroacademico(objRegistroAcademicoBE19))
                     exito = true;
@@ -2014,6 +2473,7 @@ namespace SWEGR.UI
                 objRegistroAcademicoBE20.Tipoestudio = txttipoEstudio20.Text;
                 objRegistroAcademicoBE20.Nombreestudio = txtnombreEstudio20.Text;
                 objRegistroAcademicoBE20.Descripcionestudio = txtdescripcionEstudio20.Text;
+                objRegistroAcademicoBE20.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTA20.Text);
 
                 if (objRegistroAcademicoBC.actualizarregistroacademico(objRegistroAcademicoBE20))
                     exito = true;
@@ -2036,7 +2496,7 @@ namespace SWEGR.UI
             listaRegistroAcademicoBE = objRegistroAcademicoBC.listarregistroacademico(idegresado);
             int cantidad = listaRegistroAcademicoBE.Count;
 
-            if (txtcentroEstudios.Text == "")
+            if (txtcentroEstudios.Text == "" || txtcentroEstudios.Text == null)
             {
                 ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                 txtcentroEstudios.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2045,7 +2505,7 @@ namespace SWEGR.UI
             else
                 txtcentroEstudios.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-            if (txtduracionEstudio.Text == "")
+            if (txtduracionEstudio.Text == "" || txtduracionEstudio.Text == null)
             {
                 ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                 txtduracionEstudio.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2054,7 +2514,7 @@ namespace SWEGR.UI
             else
                 txtduracionEstudio.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-            if (txttipoEstudio.Text == "")
+            if (txttipoEstudio.Text == "" || txttipoEstudio.Text == null)
             {
                 ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                 txttipoEstudio.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2063,7 +2523,7 @@ namespace SWEGR.UI
             else
                 txttipoEstudio.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-            if (txtnombreEstudio.Text == "")
+            if (txtnombreEstudio.Text == "" || txtnombreEstudio.Text == null)
             {
                 ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                 txtnombreEstudio.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2072,7 +2532,7 @@ namespace SWEGR.UI
             else
                 txtnombreEstudio.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-            if (txtdescripcionEstudio.Text == "")
+            if (txtdescripcionEstudio.Text == "" || txtdescripcionEstudio.Text == null)
             {
                 ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                 txtdescripcionEstudio.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2083,7 +2543,7 @@ namespace SWEGR.UI
             //**//
             if (cantidad > 1)
             {
-                if (txtcentroEstudios2.Text == "")
+                if (txtcentroEstudios2.Text == "" || txtcentroEstudios2.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtcentroEstudios2.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2092,7 +2552,7 @@ namespace SWEGR.UI
                 else
                     txtcentroEstudios2.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtduracionEstudio2.Text == "")
+                if (txtduracionEstudio2.Text == "" || txtduracionEstudio2.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtduracionEstudio2.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2101,7 +2561,7 @@ namespace SWEGR.UI
                 else
                     txtduracionEstudio2.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txttipoEstudio2.Text == "")
+                if (txttipoEstudio2.Text == "" || txttipoEstudio2.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txttipoEstudio2.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2110,7 +2570,7 @@ namespace SWEGR.UI
                 else
                     txttipoEstudio2.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtnombreEstudio2.Text == "")
+                if (txtnombreEstudio2.Text == "" || txtnombreEstudio2.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtnombreEstudio2.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2119,7 +2579,7 @@ namespace SWEGR.UI
                 else
                     txtnombreEstudio2.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtdescripcionEstudio2.Text == "")
+                if (txtdescripcionEstudio2.Text == "" || txtdescripcionEstudio2.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtdescripcionEstudio2.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2131,7 +2591,7 @@ namespace SWEGR.UI
             //**//
             if (cantidad > 2)
             {
-                if (txtcentroEstudios3.Text == "")
+                if (txtcentroEstudios3.Text == "" || txtcentroEstudios3.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtcentroEstudios3.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2140,7 +2600,7 @@ namespace SWEGR.UI
                 else
                     txtcentroEstudios3.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtduracionEstudio3.Text == "")
+                if (txtduracionEstudio3.Text == "" || txtduracionEstudio3.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtduracionEstudio3.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2149,7 +2609,7 @@ namespace SWEGR.UI
                 else
                     txtduracionEstudio3.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txttipoEstudio3.Text == "")
+                if (txttipoEstudio3.Text == "" || txttipoEstudio3.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txttipoEstudio3.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2158,7 +2618,7 @@ namespace SWEGR.UI
                 else
                     txttipoEstudio3.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtnombreEstudio3.Text == "")
+                if (txtnombreEstudio3.Text == "" || txtnombreEstudio3.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtnombreEstudio3.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2167,7 +2627,7 @@ namespace SWEGR.UI
                 else
                     txtnombreEstudio3.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtdescripcionEstudio3.Text == "")
+                if (txtdescripcionEstudio3.Text == "" || txtdescripcionEstudio3.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtdescripcionEstudio3.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2179,7 +2639,7 @@ namespace SWEGR.UI
             //**//
             if (cantidad > 3)
             {
-                if (txtcentroEstudios4.Text == "")
+                if (txtcentroEstudios4.Text == "" || txtcentroEstudios4.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtcentroEstudios4.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2188,7 +2648,7 @@ namespace SWEGR.UI
                 else
                     txtcentroEstudios4.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtduracionEstudio4.Text == "")
+                if (txtduracionEstudio4.Text == "" || txtduracionEstudio4.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtduracionEstudio4.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2197,7 +2657,7 @@ namespace SWEGR.UI
                 else
                     txtduracionEstudio4.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txttipoEstudio4.Text == "")
+                if (txttipoEstudio4.Text == "" || txttipoEstudio4.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txttipoEstudio4.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2206,7 +2666,7 @@ namespace SWEGR.UI
                 else
                     txttipoEstudio4.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtnombreEstudio4.Text == "")
+                if (txtnombreEstudio4.Text == "" || txtnombreEstudio4.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtnombreEstudio4.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2215,7 +2675,7 @@ namespace SWEGR.UI
                 else
                     txtnombreEstudio4.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtdescripcionEstudio4.Text == "")
+                if (txtdescripcionEstudio4.Text == "" || txtdescripcionEstudio4.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtdescripcionEstudio4.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2227,7 +2687,7 @@ namespace SWEGR.UI
             //**//
             if (cantidad > 4)
             {
-                if (txtcentroEstudios5.Text == "")
+                if (txtcentroEstudios5.Text == "" || txtcentroEstudios5.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtcentroEstudios5.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2236,7 +2696,7 @@ namespace SWEGR.UI
                 else
                     txtcentroEstudios5.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtduracionEstudio5.Text == "")
+                if (txtduracionEstudio5.Text == "" || txtduracionEstudio5.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtduracionEstudio5.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2245,7 +2705,7 @@ namespace SWEGR.UI
                 else
                     txtduracionEstudio5.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txttipoEstudio5.Text == "")
+                if (txttipoEstudio5.Text == "" || txttipoEstudio5.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txttipoEstudio5.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2254,7 +2714,7 @@ namespace SWEGR.UI
                 else
                     txttipoEstudio5.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtnombreEstudio5.Text == "")
+                if (txtnombreEstudio5.Text == "" || txtnombreEstudio5.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtnombreEstudio5.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2263,7 +2723,7 @@ namespace SWEGR.UI
                 else
                     txtnombreEstudio5.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtdescripcionEstudio5.Text == "")
+                if (txtdescripcionEstudio5.Text == "" || txtdescripcionEstudio5.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtdescripcionEstudio5.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2275,7 +2735,7 @@ namespace SWEGR.UI
             //**//
             if (cantidad > 5)
             {
-                if (txtcentroEstudios6.Text == "")
+                if (txtcentroEstudios6.Text == "" || txtcentroEstudios6.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtcentroEstudios6.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2284,7 +2744,7 @@ namespace SWEGR.UI
                 else
                     txtcentroEstudios6.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtduracionEstudio6.Text == "")
+                if (txtduracionEstudio6.Text == "" || txtduracionEstudio6.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtduracionEstudio6.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2293,7 +2753,7 @@ namespace SWEGR.UI
                 else
                     txtduracionEstudio6.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txttipoEstudio6.Text == "")
+                if (txttipoEstudio6.Text == "" || txttipoEstudio6.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txttipoEstudio6.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2302,7 +2762,7 @@ namespace SWEGR.UI
                 else
                     txttipoEstudio6.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtnombreEstudio6.Text == "")
+                if (txtnombreEstudio6.Text == "" || txtnombreEstudio6.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtnombreEstudio6.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2311,7 +2771,7 @@ namespace SWEGR.UI
                 else
                     txtnombreEstudio6.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtdescripcionEstudio6.Text == "")
+                if (txtdescripcionEstudio6.Text == "" || txtdescripcionEstudio6.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtdescripcionEstudio6.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2323,7 +2783,7 @@ namespace SWEGR.UI
             //**//
             if (cantidad > 6)
             {
-                if (txtcentroEstudios7.Text == "")
+                if (txtcentroEstudios7.Text == "" || txtcentroEstudios7.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtcentroEstudios7.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2332,7 +2792,7 @@ namespace SWEGR.UI
                 else
                     txtcentroEstudios7.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtduracionEstudio7.Text == "")
+                if (txtduracionEstudio7.Text == "" || txtduracionEstudio7.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtduracionEstudio7.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2341,7 +2801,7 @@ namespace SWEGR.UI
                 else
                     txtduracionEstudio7.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txttipoEstudio7.Text == "")
+                if (txttipoEstudio7.Text == "" || txttipoEstudio7.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txttipoEstudio7.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2350,7 +2810,7 @@ namespace SWEGR.UI
                 else
                     txttipoEstudio7.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtnombreEstudio7.Text == "")
+                if (txtnombreEstudio7.Text == "" || txtnombreEstudio7.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtnombreEstudio7.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2359,7 +2819,7 @@ namespace SWEGR.UI
                 else
                     txtnombreEstudio7.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtdescripcionEstudio7.Text == "")
+                if (txtdescripcionEstudio7.Text == "" || txtdescripcionEstudio7.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtdescripcionEstudio7.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2371,7 +2831,7 @@ namespace SWEGR.UI
             //**//
             if (cantidad > 7)
             {
-                if (txtcentroEstudios8.Text == "")
+                if (txtcentroEstudios8.Text == "" || txtcentroEstudios8.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtcentroEstudios8.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2380,7 +2840,7 @@ namespace SWEGR.UI
                 else
                     txtcentroEstudios8.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtduracionEstudio8.Text == "")
+                if (txtduracionEstudio8.Text == "" || txtduracionEstudio8.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtduracionEstudio8.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2389,7 +2849,7 @@ namespace SWEGR.UI
                 else
                     txtduracionEstudio8.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txttipoEstudio8.Text == "")
+                if (txttipoEstudio8.Text == "" || txttipoEstudio8.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txttipoEstudio8.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2398,7 +2858,7 @@ namespace SWEGR.UI
                 else
                     txttipoEstudio8.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtnombreEstudio8.Text == "")
+                if (txtnombreEstudio8.Text == "" || txtnombreEstudio8.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtnombreEstudio8.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2407,7 +2867,7 @@ namespace SWEGR.UI
                 else
                     txtnombreEstudio8.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtdescripcionEstudio8.Text == "")
+                if (txtdescripcionEstudio8.Text == "" || txtdescripcionEstudio8.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtdescripcionEstudio8.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2419,7 +2879,7 @@ namespace SWEGR.UI
             //**//
             if (cantidad > 8)
             {
-                if (txtcentroEstudios9.Text == "")
+                if (txtcentroEstudios9.Text == "" || txtcentroEstudios9.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtcentroEstudios9.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2428,7 +2888,7 @@ namespace SWEGR.UI
                 else
                     txtcentroEstudios9.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtduracionEstudio9.Text == "")
+                if (txtduracionEstudio9.Text == "" txtduracionEstudio9.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtduracionEstudio9.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2437,7 +2897,7 @@ namespace SWEGR.UI
                 else
                     txtduracionEstudio9.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txttipoEstudio9.Text == "")
+                if (txttipoEstudio9.Text == "" || txttipoEstudio9.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txttipoEstudio9.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2446,7 +2906,7 @@ namespace SWEGR.UI
                 else
                     txttipoEstudio9.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtnombreEstudio9.Text == "")
+                if (txtnombreEstudio9.Text == "" || txtnombreEstudio9.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtnombreEstudio9.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2455,7 +2915,7 @@ namespace SWEGR.UI
                 else
                     txtnombreEstudio9.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtdescripcionEstudio9.Text == "")
+                if (txtdescripcionEstudio9.Text == "" || txtdescripcionEstudio9.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtdescripcionEstudio9.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2467,7 +2927,7 @@ namespace SWEGR.UI
             //**//
             if (cantidad > 9)
             {
-                if (txtcentroEstudios10.Text == "")
+                if (txtcentroEstudios10.Text == "" || txtcentroEstudios10.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtcentroEstudios10.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2476,7 +2936,7 @@ namespace SWEGR.UI
                 else
                     txtcentroEstudios10.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtduracionEstudio10.Text == "")
+                if (txtduracionEstudio10.Text == "" || txtduracionEstudio10.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtduracionEstudio10.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2485,7 +2945,7 @@ namespace SWEGR.UI
                 else
                     txtduracionEstudio10.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txttipoEstudio10.Text == "")
+                if (txttipoEstudio10.Text == "" || txttipoEstudio10.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txttipoEstudio10.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2494,7 +2954,7 @@ namespace SWEGR.UI
                 else
                     txttipoEstudio10.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtnombreEstudio10.Text == "")
+                if (txtnombreEstudio10.Text == "" || txtnombreEstudio10.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtnombreEstudio10.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2503,7 +2963,7 @@ namespace SWEGR.UI
                 else
                     txtnombreEstudio10.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtdescripcionEstudio10.Text == "")
+                if (txtdescripcionEstudio10.Text == "" || txtdescripcionEstudio10.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtdescripcionEstudio10.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2515,7 +2975,7 @@ namespace SWEGR.UI
             //**//
             if (cantidad > 10)
             {
-                if (txtcentroEstudios11.Text == "")
+                if (txtcentroEstudios11.Text == "" || txtcentroEstudios11.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtcentroEstudios11.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2524,7 +2984,7 @@ namespace SWEGR.UI
                 else
                     txtcentroEstudios11.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtduracionEstudio11.Text == "")
+                if (txtduracionEstudio11.Text == "" || txtduracionEstudio.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtduracionEstudio11.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2533,7 +2993,7 @@ namespace SWEGR.UI
                 else
                     txtduracionEstudio11.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txttipoEstudio11.Text == "")
+                if (txttipoEstudio11.Text == "" || txttipoEstudio11.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txttipoEstudio11.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2542,7 +3002,7 @@ namespace SWEGR.UI
                 else
                     txttipoEstudio11.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtnombreEstudio11.Text == "")
+                if (txtnombreEstudio11.Text == "" || txtnombreEstudio11.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtnombreEstudio11.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2551,7 +3011,7 @@ namespace SWEGR.UI
                 else
                     txtnombreEstudio11.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtdescripcionEstudio11.Text == "")
+                if (txtdescripcionEstudio11.Text == "" || txtdescripcionEstudio11.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtdescripcionEstudio11.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2563,7 +3023,7 @@ namespace SWEGR.UI
             //**//
             if (cantidad > 11)
             {
-                if (txtcentroEstudios12.Text == "")
+                if (txtcentroEstudios12.Text == "" || txtcentroEstudios12.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtcentroEstudios12.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2572,7 +3032,7 @@ namespace SWEGR.UI
                 else
                     txtcentroEstudios12.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtduracionEstudio12.Text == "")
+                if (txtduracionEstudio12.Text == "" || txtduracionEstudio12.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtduracionEstudio12.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2581,7 +3041,7 @@ namespace SWEGR.UI
                 else
                     txtduracionEstudio12.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txttipoEstudio12.Text == "")
+                if (txttipoEstudio12.Text == "" || txttipoEstudio12.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txttipoEstudio12.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2590,7 +3050,7 @@ namespace SWEGR.UI
                 else
                     txttipoEstudio12.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtnombreEstudio12.Text == "")
+                if (txtnombreEstudio12.Text == "" || txtnombreEstudio12.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtnombreEstudio12.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2599,7 +3059,7 @@ namespace SWEGR.UI
                 else
                     txtnombreEstudio12.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtdescripcionEstudio12.Text == "")
+                if (txtdescripcionEstudio12.Text == "" || txtdescripcionEstudio12.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtdescripcionEstudio12.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2611,7 +3071,7 @@ namespace SWEGR.UI
             //**//
             if (cantidad > 12)
             {
-                if (txtcentroEstudios13.Text == "")
+                if (txtcentroEstudios13.Text == "" || txtcentroEstudios13.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtcentroEstudios13.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2620,7 +3080,7 @@ namespace SWEGR.UI
                 else
                     txtcentroEstudios13.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtduracionEstudio13.Text == "")
+                if (txtduracionEstudio13.Text == "" || txtduracionEstudio13.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtduracionEstudio13.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2629,7 +3089,7 @@ namespace SWEGR.UI
                 else
                     txtduracionEstudio13.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txttipoEstudio13.Text == "")
+                if (txttipoEstudio13.Text == "" || txttipoEstudio13.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txttipoEstudio13.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2638,7 +3098,7 @@ namespace SWEGR.UI
                 else
                     txttipoEstudio13.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtnombreEstudio13.Text == "")
+                if (txtnombreEstudio13.Text == "" || txtnombreEstudio13.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtnombreEstudio13.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2647,7 +3107,7 @@ namespace SWEGR.UI
                 else
                     txtnombreEstudio13.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtdescripcionEstudio13.Text == "")
+                if (txtdescripcionEstudio13.Text == "" || txtdescripcionEstudio13.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtdescripcionEstudio13.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2659,7 +3119,7 @@ namespace SWEGR.UI
             //**//
             if (cantidad > 13)
             {
-                if (txtcentroEstudios14.Text == "")
+                if (txtcentroEstudios14.Text == "" || txtcentroEstudios14.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtcentroEstudios14.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2668,7 +3128,7 @@ namespace SWEGR.UI
                 else
                     txtcentroEstudios14.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtduracionEstudio14.Text == "")
+                if (txtduracionEstudio14.Text == "" || txtduracionEstudio14.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtduracionEstudio14.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2677,7 +3137,7 @@ namespace SWEGR.UI
                 else
                     txtduracionEstudio14.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txttipoEstudio14.Text == "")
+                if (txttipoEstudio14.Text == "" || txttipoEstudio14.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txttipoEstudio14.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2686,7 +3146,7 @@ namespace SWEGR.UI
                 else
                     txttipoEstudio14.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtnombreEstudio14.Text == "")
+                if (txtnombreEstudio14.Text == "" || txtnombreEstudio14.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtnombreEstudio14.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2695,7 +3155,7 @@ namespace SWEGR.UI
                 else
                     txtnombreEstudio14.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtdescripcionEstudio14.Text == "")
+                if (txtdescripcionEstudio14.Text == "" || txtdescripcionEstudio14.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtdescripcionEstudio14.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2707,7 +3167,7 @@ namespace SWEGR.UI
             //**//
             if (cantidad > 14)
             {
-                if (txtcentroEstudios15.Text == "")
+                if (txtcentroEstudios15.Text == "" || txtcentroEstudios15.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtcentroEstudios15.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2716,7 +3176,7 @@ namespace SWEGR.UI
                 else
                     txtcentroEstudios15.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtduracionEstudio15.Text == "")
+                if (txtduracionEstudio15.Text == "" || txtduracionEstudio.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtduracionEstudio15.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2725,7 +3185,7 @@ namespace SWEGR.UI
                 else
                     txtduracionEstudio15.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txttipoEstudio15.Text == "")
+                if (txttipoEstudio15.Text == "" || txttipoEstudio15.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txttipoEstudio15.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2734,7 +3194,7 @@ namespace SWEGR.UI
                 else
                     txttipoEstudio15.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtnombreEstudio15.Text == "")
+                if (txtnombreEstudio15.Text == "" || txtnombreEstudio15.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtnombreEstudio15.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2743,7 +3203,7 @@ namespace SWEGR.UI
                 else
                     txtnombreEstudio15.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtdescripcionEstudio15.Text == "")
+                if (txtdescripcionEstudio15.Text == "" || txtdescripcionEstudio15.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtdescripcionEstudio15.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2755,7 +3215,7 @@ namespace SWEGR.UI
             //**//
             if (cantidad > 15)
             {
-                if (txtcentroEstudios16.Text == "")
+                if (txtcentroEstudios16.Text == "" || txtcentroEstudios16.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtcentroEstudios16.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2764,7 +3224,7 @@ namespace SWEGR.UI
                 else
                     txtcentroEstudios16.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtduracionEstudio16.Text == "")
+                if (txtduracionEstudio16.Text == "" || txtduracionEstudio16.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtduracionEstudio16.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2773,7 +3233,7 @@ namespace SWEGR.UI
                 else
                     txtduracionEstudio16.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txttipoEstudio16.Text == "")
+                if (txttipoEstudio16.Text == "" || txttipoEstudio16.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txttipoEstudio16.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2782,7 +3242,7 @@ namespace SWEGR.UI
                 else
                     txttipoEstudio16.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtnombreEstudio16.Text == "")
+                if (txtnombreEstudio16.Text == "" || txtnombreEstudio16.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtnombreEstudio16.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2791,7 +3251,7 @@ namespace SWEGR.UI
                 else
                     txtnombreEstudio16.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtdescripcionEstudio16.Text == "")
+                if (txtdescripcionEstudio16.Text == "" || txtdescripcionEstudio.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtdescripcionEstudio16.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2803,7 +3263,7 @@ namespace SWEGR.UI
             //**//
             if (cantidad > 16)
             {
-                if (txtcentroEstudios17.Text == "")
+                if (txtcentroEstudios17.Text == "" || txtcentroEstudios17.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtcentroEstudios17.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2812,7 +3272,7 @@ namespace SWEGR.UI
                 else
                     txtcentroEstudios17.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtduracionEstudio17.Text == "")
+                if (txtduracionEstudio17.Text == "" || txtduracionEstudio17.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtduracionEstudio17.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2821,7 +3281,7 @@ namespace SWEGR.UI
                 else
                     txtduracionEstudio17.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txttipoEstudio17.Text == "")
+                if (txttipoEstudio17.Text == "" || txttipoEstudio.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txttipoEstudio17.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2830,7 +3290,7 @@ namespace SWEGR.UI
                 else
                     txttipoEstudio17.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtnombreEstudio17.Text == "")
+                if (txtnombreEstudio17.Text == "" || txtnombreEstudio17.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtnombreEstudio17.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2839,7 +3299,7 @@ namespace SWEGR.UI
                 else
                     txtnombreEstudio17.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtdescripcionEstudio17.Text == "")
+                if (txtdescripcionEstudio17.Text == "" || txtdescripcionEstudio17.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtdescripcionEstudio17.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2851,7 +3311,7 @@ namespace SWEGR.UI
             //**//
             if (cantidad > 17)
             {
-                if (txtcentroEstudios18.Text == "")
+                if (txtcentroEstudios18.Text == "" || txtcentroEstudios18.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtcentroEstudios18.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2860,7 +3320,7 @@ namespace SWEGR.UI
                 else
                     txtcentroEstudios18.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtduracionEstudio18.Text == "")
+                if (txtduracionEstudio18.Text == "" || txtduracionEstudio18.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtduracionEstudio18.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2869,7 +3329,7 @@ namespace SWEGR.UI
                 else
                     txtduracionEstudio18.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txttipoEstudio18.Text == "")
+                if (txttipoEstudio18.Text == "" || txttipoEstudio18.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txttipoEstudio18.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2878,7 +3338,7 @@ namespace SWEGR.UI
                 else
                     txttipoEstudio18.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtnombreEstudio18.Text == "")
+                if (txtnombreEstudio18.Text == "" || txtnombreEstudio18.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtnombreEstudio18.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2887,7 +3347,7 @@ namespace SWEGR.UI
                 else
                     txtnombreEstudio18.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtdescripcionEstudio18.Text == "")
+                if (txtdescripcionEstudio18.Text == "" || txtdescripcionEstudio18.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtdescripcionEstudio18.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2899,7 +3359,7 @@ namespace SWEGR.UI
             //**//
             if (cantidad > 18)
             {
-                if (txtcentroEstudios19.Text == "")
+                if (txtcentroEstudios19.Text == "" || txtcentroEstudios19.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtcentroEstudios19.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2908,7 +3368,7 @@ namespace SWEGR.UI
                 else
                     txtcentroEstudios19.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtduracionEstudio19.Text == "")
+                if (txtduracionEstudio19.Text == "" || txtduracionEstudio19.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtduracionEstudio19.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2917,7 +3377,7 @@ namespace SWEGR.UI
                 else
                     txtduracionEstudio19.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txttipoEstudio19.Text == "")
+                if (txttipoEstudio19.Text == "" || txttipoEstudio19.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txttipoEstudio19.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2926,7 +3386,7 @@ namespace SWEGR.UI
                 else
                     txttipoEstudio19.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtnombreEstudio19.Text == "")
+                if (txtnombreEstudio19.Text == "" || txtnombreEstudio19.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtnombreEstudio19.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2935,7 +3395,7 @@ namespace SWEGR.UI
                 else
                     txtnombreEstudio19.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtdescripcionEstudio19.Text == "")
+                if (txtdescripcionEstudio19.Text == "" || txtdescripcionEstudio19.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtdescripcionEstudio19.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2947,7 +3407,7 @@ namespace SWEGR.UI
             //**//
             if (cantidad > 19)
             {
-                if (txtcentroEstudios20.Text == "")
+                if (txtcentroEstudios20.Text == "" || txtcentroEstudios20.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtcentroEstudios20.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2956,7 +3416,7 @@ namespace SWEGR.UI
                 else
                     txtcentroEstudios20.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtduracionEstudio20.Text == "")
+                if (txtduracionEstudio20.Text == "" || txtduracionEstudio20.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtduracionEstudio20.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2965,7 +3425,7 @@ namespace SWEGR.UI
                 else
                     txtduracionEstudio20.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txttipoEstudio20.Text == "")
+                if (txttipoEstudio20.Text == "" || txttipoEstudio.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txttipoEstudio20.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2974,7 +3434,7 @@ namespace SWEGR.UI
                 else
                     txttipoEstudio20.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtnombreEstudio20.Text == "")
+                if (txtnombreEstudio20.Text == "" || txtnombreEstudio20.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtnombreEstudio20.BorderColor = System.Drawing.Color.OrangeRed;
@@ -2983,7 +3443,7 @@ namespace SWEGR.UI
                 else
                     txtnombreEstudio20.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-                if (txtdescripcionEstudio20.Text == "")
+                if (txtdescripcionEstudio20.Text == "" || txtdescripcionEstudio20.Text == null)
                 {
                     ScriptManager.RegisterStartupScript(Page, GetType(), "camposVaciosRA", "camposVaciosRA();", true);
                     txtdescripcionEstudio20.BorderColor = System.Drawing.Color.OrangeRed;
@@ -3293,7 +3753,7 @@ namespace SWEGR.UI
                 ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarCurso3", "ocultarCurso3();", true);
 
             if (cantidad == 3)
-                ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarCurso4", "ocultarCurso4();", true); ;
+                ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarCurso4", "ocultarCurso4();", true); 
 
             if (cantidad == 4)
                 ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarCurso5", "ocultarCurso5();", true);
@@ -3376,6 +3836,554 @@ namespace SWEGR.UI
         public int guardarRegistroLaboral()
         {
             int exito = 9;
+            int idegresado = IDEgresado;
+            PaisBC objetoPaisBC = new PaisBC();
+            RegistroLaboralBE objRegistroLaboralBE = new RegistroLaboralBE();
+            List<RegistroLaboralBE> listaRegistroLaboralBE = new List<RegistroLaboralBE>();
+            RegistroLaboralBC objRegistroLaboralBC = new RegistroLaboralBC();
+
+            listaRegistroLaboralBE = objRegistroLaboralBC.listarregistrolaobral(idegresado);
+            int cantidad = listaRegistroLaboralBE.Count;
+
+            if (cantidad == 0)
+            {
+                if (txtnombreEmpresa.Text != null && txtnombreEmpresa.Text != "")
+                {
+                    objRegistroLaboralBE.Idegresado = idegresado;
+                    objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa.Text;
+                    objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo.Text;
+                    objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo.Text;
+                    objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo.Text;
+                    objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo.Text;
+                    objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo.Text;
+                    objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo.Text;
+                    objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo.Text;
+                    objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL.Text);
+
+                    if (cbotrabajoActual.Checked)
+                        objRegistroLaboralBE.Trabajoactual = true;
+                    else
+                        objRegistroLaboralBE.Trabajoactual = false;
+
+                    if (objRegistroLaboralBC.insertarregistrolaboral(objRegistroLaboralBE) != 0)
+                        exito = 1;
+                    else
+                        exito = 0;
+                }
+            }
+
+            if (cantidad == 1)
+            {
+                if (txtnombreEmpresa2.Text != null && txtnombreEmpresa2.Text != "")
+                {
+                    objRegistroLaboralBE.Idegresado = idegresado;
+                    objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa2.Text;
+                    objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo2.Text;
+                    objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo2.Text;
+                    objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo2.Text;
+                    objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo2.Text;
+                    objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo2.Text;
+                    objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo2.Text;
+                    objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo2.Text;
+                    objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL2.Text);
+
+                    if (cbotrabajoActual2.Checked)
+                        objRegistroLaboralBE.Trabajoactual = true;
+                    else
+                        objRegistroLaboralBE.Trabajoactual = false;
+
+                    if (objRegistroLaboralBC.insertarregistrolaboral(objRegistroLaboralBE) != 0)
+                        exito = 1;
+                    else
+                        exito = 0;
+                }
+            }
+
+            if (cantidad == 2)
+            {
+                if (txtnombreEmpresa3.Text != null && txtnombreEmpresa3.Text != "")
+                {
+                    objRegistroLaboralBE.Idegresado = idegresado;
+                    objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa3.Text;
+                    objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo3.Text;
+                    objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo3.Text;
+                    objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo3.Text;
+                    objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo3.Text;
+                    objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo3.Text;
+                    objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo3.Text;
+                    objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo3.Text;
+                    objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL3.Text);
+
+                    if (cbotrabajoActual3.Checked)
+                        objRegistroLaboralBE.Trabajoactual = true;
+                    else
+                        objRegistroLaboralBE.Trabajoactual = false;
+
+                    if (objRegistroLaboralBC.insertarregistrolaboral(objRegistroLaboralBE) != 0)
+                        exito = 1;
+                    else
+                        exito = 0;
+                }
+            }
+
+            if (cantidad == 3)
+            {
+                if (txtnombreEmpresa4.Text != null && txtnombreEmpresa4.Text != "")
+                {
+                    objRegistroLaboralBE.Idegresado = idegresado;
+                    objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa4.Text;
+                    objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo4.Text;
+                    objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo4.Text;
+                    objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo4.Text;
+                    objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo4.Text;
+                    objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo4.Text;
+                    objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo4.Text;
+                    objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo4.Text;
+                    objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL4.Text);
+
+                    if (cbotrabajoActual4.Checked)
+                        objRegistroLaboralBE.Trabajoactual = true;
+                    else
+                        objRegistroLaboralBE.Trabajoactual = false;
+
+                    if (objRegistroLaboralBC.insertarregistrolaboral(objRegistroLaboralBE) != 0)
+                        exito = 1;
+                    else
+                        exito = 0;
+                }
+            }
+
+            if (cantidad == 4)
+            {
+                if (txtnombreEmpresa5.Text != null && txtnombreEmpresa5.Text != "")
+                {
+                    objRegistroLaboralBE.Idegresado = idegresado;
+                    objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa5.Text;
+                    objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo5.Text;
+                    objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo5.Text;
+                    objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo5.Text;
+                    objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo5.Text;
+                    objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo5.Text;
+                    objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo5.Text;
+                    objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo5.Text;
+                    objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL5.Text);
+
+                    if (cbotrabajoActual5.Checked)
+                        objRegistroLaboralBE.Trabajoactual = true;
+                    else
+                        objRegistroLaboralBE.Trabajoactual = false;
+
+                    if (objRegistroLaboralBC.insertarregistrolaboral(objRegistroLaboralBE) != 0)
+                        exito = 1;
+                    else
+                        exito = 0;
+                }
+            }
+
+            if (cantidad == 5)
+            {
+                if (txtnombreEmpresa6.Text != null && txtnombreEmpresa6.Text != "")
+                {
+                    objRegistroLaboralBE.Idegresado = idegresado;
+                    objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa6.Text;
+                    objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo6.Text;
+                    objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo6.Text;
+                    objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo6.Text;
+                    objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo6.Text;
+                    objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo6.Text;
+                    objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo6.Text;
+                    objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo6.Text;
+                    objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL6.Text);
+
+                    if (cbotrabajoActual6.Checked)
+                        objRegistroLaboralBE.Trabajoactual = true;
+                    else
+                        objRegistroLaboralBE.Trabajoactual = false;
+
+                    if (objRegistroLaboralBC.insertarregistrolaboral(objRegistroLaboralBE) != 0)
+                        exito = 1;
+                    else
+                        exito = 0;
+                }
+            }
+
+            if (cantidad == 6)
+            {
+                if (txtnombreEmpresa7.Text != null && txtnombreEmpresa7.Text != "")
+                {
+                    objRegistroLaboralBE.Idegresado = idegresado;
+                    objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa7.Text;
+                    objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo7.Text;
+                    objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo7.Text;
+                    objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo7.Text;
+                    objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo7.Text;
+                    objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo7.Text;
+                    objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo7.Text;
+                    objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo7.Text;
+                    objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL7.Text);
+
+                    if (cbotrabajoActual7.Checked)
+                        objRegistroLaboralBE.Trabajoactual = true;
+                    else
+                        objRegistroLaboralBE.Trabajoactual = false;
+
+                    if (objRegistroLaboralBC.insertarregistrolaboral(objRegistroLaboralBE) != 0)
+                        exito = 1;
+                    else
+                        exito = 0;
+                }
+            }
+
+            if (cantidad == 7)
+            {
+                if (txtnombreEmpresa8.Text != null && txtnombreEmpresa8.Text != "")
+                {
+                    objRegistroLaboralBE.Idegresado = idegresado;
+                    objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa8.Text;
+                    objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo8.Text;
+                    objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo8.Text;
+                    objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo8.Text;
+                    objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo8.Text;
+                    objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo8.Text;
+                    objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo8.Text;
+                    objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo8.Text;
+                    objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL8.Text);
+
+                    if (cbotrabajoActual8.Checked)
+                        objRegistroLaboralBE.Trabajoactual = true;
+                    else
+                        objRegistroLaboralBE.Trabajoactual = false;
+
+                    if (objRegistroLaboralBC.insertarregistrolaboral(objRegistroLaboralBE) != 0)
+                        exito = 1;
+                    else
+                        exito = 0;
+                }
+            }
+
+            if (cantidad == 8)
+            {
+                if (txtnombreEmpresa9.Text != null && txtnombreEmpresa9.Text != "")
+                {
+                    objRegistroLaboralBE.Idegresado = idegresado;
+                    objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa9.Text;
+                    objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo9.Text;
+                    objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo9.Text;
+                    objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo9.Text;
+                    objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo9.Text;
+                    objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo9.Text;
+                    objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo9.Text;
+                    objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo9.Text;
+                    objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL9.Text);
+
+                    if (cbotrabajoActual9.Checked)
+                        objRegistroLaboralBE.Trabajoactual = true;
+                    else
+                        objRegistroLaboralBE.Trabajoactual = false;
+
+                    if (objRegistroLaboralBC.insertarregistrolaboral(objRegistroLaboralBE) != 0)
+                        exito = 1;
+                    else
+                        exito = 0;
+                }
+            }
+
+            if (cantidad == 9)
+            {
+                if (txtnombreEmpresa10.Text != null && txtnombreEmpresa10.Text != "")
+                {
+                    objRegistroLaboralBE.Idegresado = idegresado;
+                    objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa10.Text;
+                    objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo10.Text;
+                    objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo10.Text;
+                    objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo10.Text;
+                    objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo10.Text;
+                    objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo10.Text;
+                    objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo10.Text;
+                    objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo10.Text;
+                    objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL10.Text);
+
+                    if (cbotrabajoActual10.Checked)
+                        objRegistroLaboralBE.Trabajoactual = true;
+                    else
+                        objRegistroLaboralBE.Trabajoactual = false;
+
+                    if (objRegistroLaboralBC.insertarregistrolaboral(objRegistroLaboralBE) != 0)
+                        exito = 1;
+                    else
+                        exito = 0;
+                }
+            }
+
+            if (cantidad == 10)
+            {
+                if (txtnombreEmpresa11.Text != null && txtnombreEmpresa11.Text != "")
+                {
+                    objRegistroLaboralBE.Idegresado = idegresado;
+                    objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa11.Text;
+                    objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo11.Text;
+                    objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo11.Text;
+                    objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo11.Text;
+                    objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo11.Text;
+                    objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo11.Text;
+                    objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo11.Text;
+                    objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo11.Text;
+                    objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL11.Text);
+
+                    if (cbotrabajoActual11.Checked)
+                        objRegistroLaboralBE.Trabajoactual = true;
+                    else
+                        objRegistroLaboralBE.Trabajoactual = false;
+
+                    if (objRegistroLaboralBC.insertarregistrolaboral(objRegistroLaboralBE) != 0)
+                        exito = 1;
+                    else
+                        exito = 0;
+                }
+            }
+
+            if (cantidad == 11)
+            {
+                if (txtnombreEmpresa12.Text != null && txtnombreEmpresa12.Text != "")
+                {
+                    objRegistroLaboralBE.Idegresado = idegresado;
+                    objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa12.Text;
+                    objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo12.Text;
+                    objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo12.Text;
+                    objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo12.Text;
+                    objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo12.Text;
+                    objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo12.Text;
+                    objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo12.Text;
+                    objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo12.Text;
+                    objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL12.Text);
+
+                    if (cbotrabajoActual2.Checked)
+                        objRegistroLaboralBE.Trabajoactual = true;
+                    else
+                        objRegistroLaboralBE.Trabajoactual = false;
+
+                    if (objRegistroLaboralBC.insertarregistrolaboral(objRegistroLaboralBE) != 0)
+                        exito = 1;
+                    else
+                        exito = 0;
+                }
+            }
+
+            if (cantidad == 12)
+            {
+                if (txtnombreEmpresa13.Text != null && txtnombreEmpresa13.Text != "")
+                {
+                    objRegistroLaboralBE.Idegresado = idegresado;
+                    objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa13.Text;
+                    objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo13.Text;
+                    objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo13.Text;
+                    objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo13.Text;
+                    objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo13.Text;
+                    objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo13.Text;
+                    objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo13.Text;
+                    objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo13.Text;
+                    objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL13.Text);
+
+                    if (cbotrabajoActual13.Checked)
+                        objRegistroLaboralBE.Trabajoactual = true;
+                    else
+                        objRegistroLaboralBE.Trabajoactual = false;
+
+                    if (objRegistroLaboralBC.insertarregistrolaboral(objRegistroLaboralBE) != 0)
+                        exito = 1;
+                    else
+                        exito = 0;
+                }
+            }
+
+            if (cantidad == 13)
+            {
+                if (txtnombreEmpresa14.Text != null && txtnombreEmpresa14.Text != "")
+                {
+                    objRegistroLaboralBE.Idegresado = idegresado;
+                    objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa14.Text;
+                    objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo14.Text;
+                    objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo14.Text;
+                    objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo14.Text;
+                    objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo14.Text;
+                    objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo14.Text;
+                    objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo14.Text;
+                    objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo14.Text;
+                    objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL14.Text);
+
+                    if (cbotrabajoActual14.Checked)
+                        objRegistroLaboralBE.Trabajoactual = true;
+                    else
+                        objRegistroLaboralBE.Trabajoactual = false;
+
+                    if (objRegistroLaboralBC.insertarregistrolaboral(objRegistroLaboralBE) != 0)
+                        exito = 1;
+                    else
+                        exito = 0;
+                }
+            }
+
+            if (cantidad == 14)
+            {
+                if (txtnombreEmpresa15.Text != null && txtnombreEmpresa15.Text != "")
+                {
+                    objRegistroLaboralBE.Idegresado = idegresado;
+                    objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa15.Text;
+                    objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo15.Text;
+                    objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo15.Text;
+                    objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo15.Text;
+                    objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo15.Text;
+                    objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo15.Text;
+                    objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo15.Text;
+                    objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo15.Text;
+                    objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL15.Text);
+
+                    if (cbotrabajoActual15.Checked)
+                        objRegistroLaboralBE.Trabajoactual = true;
+                    else
+                        objRegistroLaboralBE.Trabajoactual = false;
+
+                    if (objRegistroLaboralBC.insertarregistrolaboral(objRegistroLaboralBE) != 0)
+                        exito = 1;
+                    else
+                        exito = 0;
+                }
+            }
+
+            if (cantidad == 15)
+            {
+                if (txtnombreEmpresa16.Text != null && txtnombreEmpresa16.Text != "")
+                {
+                    objRegistroLaboralBE.Idegresado = idegresado;
+                    objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa16.Text;
+                    objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo16.Text;
+                    objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo16.Text;
+                    objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo16.Text;
+                    objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo16.Text;
+                    objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo16.Text;
+                    objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo16.Text;
+                    objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo16.Text;
+                    objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL16.Text);
+
+                    if (cbotrabajoActual16.Checked)
+                        objRegistroLaboralBE.Trabajoactual = true;
+                    else
+                        objRegistroLaboralBE.Trabajoactual = false;
+
+                    if (objRegistroLaboralBC.insertarregistrolaboral(objRegistroLaboralBE) != 0)
+                        exito = 1;
+                    else
+                        exito = 0;
+                }
+            }
+
+            if (cantidad == 16)
+            {
+                if (txtnombreEmpresa17.Text != null && txtnombreEmpresa17.Text != "")
+                {
+                    objRegistroLaboralBE.Idegresado = idegresado;
+                    objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa17.Text;
+                    objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo17.Text;
+                    objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo17.Text;
+                    objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo17.Text;
+                    objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo17.Text;
+                    objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo17.Text;
+                    objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo17.Text;
+                    objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo17.Text;
+                    objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL17.Text);
+
+                    if (cbotrabajoActual17.Checked)
+                        objRegistroLaboralBE.Trabajoactual = true;
+                    else
+                        objRegistroLaboralBE.Trabajoactual = false;
+
+                    if (objRegistroLaboralBC.insertarregistrolaboral(objRegistroLaboralBE) != 0)
+                        exito = 1;
+                    else
+                        exito = 0;
+                }
+            }
+
+            if (cantidad == 17)
+            {
+                if (txtnombreEmpresa18.Text != null && txtnombreEmpresa18.Text != "")
+                {
+                    objRegistroLaboralBE.Idegresado = idegresado;
+                    objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa18.Text;
+                    objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo18.Text;
+                    objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo18.Text;
+                    objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo18.Text;
+                    objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo18.Text;
+                    objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo18.Text;
+                    objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo18.Text;
+                    objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo18.Text;
+                    objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL18.Text);
+
+                    if (cbotrabajoActual18.Checked)
+                        objRegistroLaboralBE.Trabajoactual = true;
+                    else
+                        objRegistroLaboralBE.Trabajoactual = false;
+
+                    if (objRegistroLaboralBC.insertarregistrolaboral(objRegistroLaboralBE) != 0)
+                        exito = 1;
+                    else
+                        exito = 0;
+                }
+            }
+
+            if (cantidad == 18)
+            {
+                if (txtnombreEmpresa19.Text != null && txtnombreEmpresa19.Text != "")
+                {
+                    objRegistroLaboralBE.Idegresado = idegresado;
+                    objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa19.Text;
+                    objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo19.Text;
+                    objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo19.Text;
+                    objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo19.Text;
+                    objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo19.Text;
+                    objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo19.Text;
+                    objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo19.Text;
+                    objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo19.Text;
+                    objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL19.Text);
+
+                    if (cbotrabajoActual19.Checked)
+                        objRegistroLaboralBE.Trabajoactual = true;
+                    else
+                        objRegistroLaboralBE.Trabajoactual = false;
+
+                    if (objRegistroLaboralBC.insertarregistrolaboral(objRegistroLaboralBE) != 0)
+                        exito = 1;
+                    else
+                        exito = 0;
+                }
+            }
+
+            if (cantidad == 19)
+            {
+                if (txtnombreEmpresa20.Text != null && txtnombreEmpresa20.Text != "")
+                {
+                    objRegistroLaboralBE.Idegresado = idegresado;
+                    objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa20.Text;
+                    objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo20.Text;
+                    objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo20.Text;
+                    objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo20.Text;
+                    objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo20.Text;
+                    objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo20.Text;
+                    objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo20.Text;
+                    objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo20.Text;
+                    objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL20.Text);
+
+                    if (cbotrabajoActual20.Checked)
+                        objRegistroLaboralBE.Trabajoactual = true;
+                    else
+                        objRegistroLaboralBE.Trabajoactual = false;
+
+                    if (objRegistroLaboralBC.insertarregistrolaboral(objRegistroLaboralBE) != 0)
+                        exito = 1;
+                    else
+                        exito = 0;
+                }
+            }
 
             return exito;
         }
@@ -3383,6 +4391,494 @@ namespace SWEGR.UI
         public bool actualizarRegistroLaboral()
         {
             bool exito = false;
+            int idegresado = IDEgresado;
+            PaisBC objetoPaisBC = new PaisBC();
+            RegistroLaboralBE objRegistroLaboralBE = new RegistroLaboralBE();
+            List<RegistroLaboralBE> listaRegistroLaboralBE = new List<RegistroLaboralBE>();
+            RegistroLaboralBC objRegistroLaboralBC = new RegistroLaboralBC();
+
+            listaRegistroLaboralBE = objRegistroLaboralBC.listarregistrolaobral(idegresado);
+            int cantidad = listaRegistroLaboralBE.Count;
+
+            if (cantidad == 0)
+                return false;
+
+            objRegistroLaboralBE.Idegresado = idegresado;
+            objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa.Text;
+            objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo.Text;
+            objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo.Text;
+            objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo.Text;
+            objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo.Text;
+            objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo.Text;
+            objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo.Text;
+            objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo.Text;
+            objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL.Text);
+
+            if (cbotrabajoActual.Checked)
+                objRegistroLaboralBE.Trabajoactual = true;
+            else
+                objRegistroLaboralBE.Trabajoactual = false;
+
+            if (objRegistroLaboralBC.actualizarregistrolaboral(objRegistroLaboralBE))
+                exito = true;
+            else
+                return false;
+
+            if (cantidad > 1)
+            {
+                    objRegistroLaboralBE.Idegresado = idegresado;
+                    objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa2.Text;
+                    objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo2.Text;
+                    objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo2.Text;
+                    objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo2.Text;
+                    objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo2.Text;
+                    objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo2.Text;
+                    objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo2.Text;
+                    objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo2.Text;
+                    objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL2.Text);
+
+                    if (cbotrabajoActual2.Checked)
+                        objRegistroLaboralBE.Trabajoactual = true;
+                    else
+                        objRegistroLaboralBE.Trabajoactual = false;
+
+                    if (objRegistroLaboralBC.actualizarregistrolaboral(objRegistroLaboralBE))
+                        exito = true;
+                    else
+                        return false;
+            }
+
+            if (cantidad > 2)
+            {
+                objRegistroLaboralBE.Idegresado = idegresado;
+                objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa3.Text;
+                objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo3.Text;
+                objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo3.Text;
+                objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo3.Text;
+                objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo3.Text;
+                objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo3.Text;
+                objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo3.Text;
+                objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo3.Text;
+                objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL3.Text);
+
+                if (cbotrabajoActual3.Checked)
+                    objRegistroLaboralBE.Trabajoactual = true;
+                else
+                    objRegistroLaboralBE.Trabajoactual = false;
+
+                if (objRegistroLaboralBC.actualizarregistrolaboral(objRegistroLaboralBE))
+                    exito = true;
+                else
+                    return false;
+            }
+
+            if (cantidad > 3)
+            {
+                objRegistroLaboralBE.Idegresado = idegresado;
+                objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa4.Text;
+                objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo4.Text;
+                objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo4.Text;
+                objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo4.Text;
+                objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo4.Text;
+                objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo4.Text;
+                objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo4.Text;
+                objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo4.Text;
+                objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL4.Text);
+
+                if (cbotrabajoActual4.Checked)
+                    objRegistroLaboralBE.Trabajoactual = true;
+                else
+                    objRegistroLaboralBE.Trabajoactual = false;
+
+                if (objRegistroLaboralBC.actualizarregistrolaboral(objRegistroLaboralBE))
+                    exito = true;
+                else
+                    return false;
+            }
+
+            if (cantidad > 4)
+            {
+                objRegistroLaboralBE.Idegresado = idegresado;
+                objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa5.Text;
+                objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo5.Text;
+                objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo5.Text;
+                objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo5.Text;
+                objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo5.Text;
+                objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo5.Text;
+                objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo5.Text;
+                objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo5.Text;
+                objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL5.Text);
+
+                if (cbotrabajoActual5.Checked)
+                    objRegistroLaboralBE.Trabajoactual = true;
+                else
+                    objRegistroLaboralBE.Trabajoactual = false;
+
+                if (objRegistroLaboralBC.actualizarregistrolaboral(objRegistroLaboralBE))
+                    exito = true;
+                else
+                    return false;
+            }
+
+            if (cantidad > 5)
+            {
+                objRegistroLaboralBE.Idegresado = idegresado;
+                objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa6.Text;
+                objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo6.Text;
+                objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo6.Text;
+                objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo6.Text;
+                objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo6.Text;
+                objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo6.Text;
+                objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo6.Text;
+                objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo6.Text;
+                objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL6.Text);
+
+                if (cbotrabajoActual6.Checked)
+                    objRegistroLaboralBE.Trabajoactual = true;
+                else
+                    objRegistroLaboralBE.Trabajoactual = false;
+
+                if (objRegistroLaboralBC.actualizarregistrolaboral(objRegistroLaboralBE))
+                    exito = true;
+                else
+                    return false;
+            }
+
+            if (cantidad > 6)
+            {
+                objRegistroLaboralBE.Idegresado = idegresado;
+                objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa7.Text;
+                objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo7.Text;
+                objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo7.Text;
+                objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo7.Text;
+                objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo7.Text;
+                objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo7.Text;
+                objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo7.Text;
+                objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo7.Text;
+                objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL7.Text);
+
+                if (cbotrabajoActual7.Checked)
+                    objRegistroLaboralBE.Trabajoactual = true;
+                else
+                    objRegistroLaboralBE.Trabajoactual = false;
+
+                if (objRegistroLaboralBC.actualizarregistrolaboral(objRegistroLaboralBE))
+                    exito = true;
+                else
+                    return false;
+            }
+
+            if (cantidad > 7)
+            {
+                objRegistroLaboralBE.Idegresado = idegresado;
+                objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa8.Text;
+                objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo8.Text;
+                objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo8.Text;
+                objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo8.Text;
+                objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo8.Text;
+                objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo8.Text;
+                objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo8.Text;
+                objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo8.Text;
+                objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL8.Text);
+
+                if (cbotrabajoActual8.Checked)
+                    objRegistroLaboralBE.Trabajoactual = true;
+                else
+                    objRegistroLaboralBE.Trabajoactual = false;
+
+                if (objRegistroLaboralBC.actualizarregistrolaboral(objRegistroLaboralBE))
+                    exito = true;
+                else
+                    return false;
+            }
+
+            if (cantidad > 8)
+            {
+                objRegistroLaboralBE.Idegresado = idegresado;
+                objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa9.Text;
+                objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo9.Text;
+                objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo9.Text;
+                objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo9.Text;
+                objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo9.Text;
+                objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo9.Text;
+                objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo9.Text;
+                objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo9.Text;
+                objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL9.Text);
+
+                if (cbotrabajoActual9.Checked)
+                    objRegistroLaboralBE.Trabajoactual = true;
+                else
+                    objRegistroLaboralBE.Trabajoactual = false;
+
+                if (objRegistroLaboralBC.actualizarregistrolaboral(objRegistroLaboralBE))
+                    exito = true;
+                else
+                    return false;
+            }
+
+            if (cantidad > 9)
+            {
+                objRegistroLaboralBE.Idegresado = idegresado;
+                objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa10.Text;
+                objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo10.Text;
+                objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo10.Text;
+                objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo10.Text;
+                objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo10.Text;
+                objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo10.Text;
+                objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo10.Text;
+                objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo10.Text;
+                objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL10.Text);
+
+                if (cbotrabajoActual10.Checked)
+                    objRegistroLaboralBE.Trabajoactual = true;
+                else
+                    objRegistroLaboralBE.Trabajoactual = false;
+
+                if (objRegistroLaboralBC.actualizarregistrolaboral(objRegistroLaboralBE))
+                    exito = true;
+                else
+                    return false;
+            }
+
+            if (cantidad > 10)
+            {
+                objRegistroLaboralBE.Idegresado = idegresado;
+                objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa11.Text;
+                objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo11.Text;
+                objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo11.Text;
+                objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo11.Text;
+                objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo11.Text;
+                objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo11.Text;
+                objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo11.Text;
+                objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo11.Text;
+                objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL11.Text);
+
+                if (cbotrabajoActual11.Checked)
+                    objRegistroLaboralBE.Trabajoactual = true;
+                else
+                    objRegistroLaboralBE.Trabajoactual = false;
+
+                if (objRegistroLaboralBC.actualizarregistrolaboral(objRegistroLaboralBE))
+                    exito = true;
+                else
+                    return false;
+            }
+
+            if (cantidad > 11)
+            {
+                objRegistroLaboralBE.Idegresado = idegresado;
+                objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa12.Text;
+                objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo12.Text;
+                objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo12.Text;
+                objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo12.Text;
+                objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo12.Text;
+                objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo12.Text;
+                objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo12.Text;
+                objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo12.Text;
+                objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL12.Text);
+
+                if (cbotrabajoActual12.Checked)
+                    objRegistroLaboralBE.Trabajoactual = true;
+                else
+                    objRegistroLaboralBE.Trabajoactual = false;
+
+                if (objRegistroLaboralBC.actualizarregistrolaboral(objRegistroLaboralBE))
+                    exito = true;
+                else
+                    return false;
+            }
+
+            if (cantidad > 12)
+            {
+                objRegistroLaboralBE.Idegresado = idegresado;
+                objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa13.Text;
+                objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo13.Text;
+                objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo13.Text;
+                objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo13.Text;
+                objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo13.Text;
+                objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo13.Text;
+                objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo13.Text;
+                objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo13.Text;
+                objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL13.Text);
+
+                if (cbotrabajoActual13.Checked)
+                    objRegistroLaboralBE.Trabajoactual = true;
+                else
+                    objRegistroLaboralBE.Trabajoactual = false;
+
+                if (objRegistroLaboralBC.actualizarregistrolaboral(objRegistroLaboralBE))
+                    exito = true;
+                else
+                    return false;
+            }
+
+            if (cantidad > 13)
+            {
+                objRegistroLaboralBE.Idegresado = idegresado;
+                objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa14.Text;
+                objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo14.Text;
+                objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo14.Text;
+                objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo14.Text;
+                objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo14.Text;
+                objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo14.Text;
+                objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo14.Text;
+                objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo14.Text;
+                objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL14.Text);
+
+                if (cbotrabajoActual14.Checked)
+                    objRegistroLaboralBE.Trabajoactual = true;
+                else
+                    objRegistroLaboralBE.Trabajoactual = false;
+
+                if (objRegistroLaboralBC.actualizarregistrolaboral(objRegistroLaboralBE))
+                    exito = true;
+                else
+                    return false;
+            }
+
+            if (cantidad > 14)
+            {
+                objRegistroLaboralBE.Idegresado = idegresado;
+                objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa15.Text;
+                objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo15.Text;
+                objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo15.Text;
+                objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo15.Text;
+                objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo15.Text;
+                objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo15.Text;
+                objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo15.Text;
+                objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo15.Text;
+                objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL15.Text);
+
+                if (cbotrabajoActual15.Checked)
+                    objRegistroLaboralBE.Trabajoactual = true;
+                else
+                    objRegistroLaboralBE.Trabajoactual = false;
+
+                if (objRegistroLaboralBC.actualizarregistrolaboral(objRegistroLaboralBE))
+                    exito = true;
+                else
+                    return false;
+            }
+
+            if (cantidad > 15)
+            {
+                objRegistroLaboralBE.Idegresado = idegresado;
+                objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa16.Text;
+                objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo16.Text;
+                objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo16.Text;
+                objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo16.Text;
+                objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo16.Text;
+                objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo16.Text;
+                objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo16.Text;
+                objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo16.Text;
+                objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL16.Text);
+
+                if (cbotrabajoActual16.Checked)
+                    objRegistroLaboralBE.Trabajoactual = true;
+                else
+                    objRegistroLaboralBE.Trabajoactual = false;
+
+                if (objRegistroLaboralBC.actualizarregistrolaboral(objRegistroLaboralBE))
+                    exito = true;
+                else
+                    return false;
+            }
+
+            if (cantidad > 16)
+            {
+                objRegistroLaboralBE.Idegresado = idegresado;
+                objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa17.Text;
+                objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo17.Text;
+                objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo17.Text;
+                objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo17.Text;
+                objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo17.Text;
+                objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo17.Text;
+                objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo17.Text;
+                objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo17.Text;
+                objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL17.Text);
+
+                if (cbotrabajoActual17.Checked)
+                    objRegistroLaboralBE.Trabajoactual = true;
+                else
+                    objRegistroLaboralBE.Trabajoactual = false;
+
+                if (objRegistroLaboralBC.actualizarregistrolaboral(objRegistroLaboralBE))
+                    exito = true;
+                else
+                    return false;
+            }
+
+            if (cantidad > 17)
+            {
+                objRegistroLaboralBE.Idegresado = idegresado;
+                objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa18.Text;
+                objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo18.Text;
+                objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo18.Text;
+                objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo18.Text;
+                objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo18.Text;
+                objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo18.Text;
+                objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo18.Text;
+                objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo18.Text;
+                objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL18.Text);
+
+                if (cbotrabajoActual18.Checked)
+                    objRegistroLaboralBE.Trabajoactual = true;
+                else
+                    objRegistroLaboralBE.Trabajoactual = false;
+
+                if (objRegistroLaboralBC.actualizarregistrolaboral(objRegistroLaboralBE))
+                    exito = true;
+                else
+                    return false;
+            }
+
+            if (cantidad > 18)
+            {
+                objRegistroLaboralBE.Idegresado = idegresado;
+                objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa19.Text;
+                objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo19.Text;
+                objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo19.Text;
+                objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo19.Text;
+                objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo19.Text;
+                objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo19.Text;
+                objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo19.Text;
+                objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo19.Text;
+                objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL19.Text);
+
+                if (cbotrabajoActual19.Checked)
+                    objRegistroLaboralBE.Trabajoactual = true;
+                else
+                    objRegistroLaboralBE.Trabajoactual = false;
+
+                if (objRegistroLaboralBC.actualizarregistrolaboral(objRegistroLaboralBE))
+                    exito = true;
+                else
+                    return false;
+            }
+
+            if (cantidad > 19)
+            {
+                objRegistroLaboralBE.Idegresado = idegresado;
+                objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa20.Text;
+                objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo20.Text;
+                objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo20.Text;
+                objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo20.Text;
+                objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo20.Text;
+                objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo20.Text;
+                objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo20.Text;
+                objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo20.Text;
+                objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL20.Text);
+
+                if (cbotrabajoActual20.Checked)
+                    objRegistroLaboralBE.Trabajoactual = true;
+                else
+                    objRegistroLaboralBE.Trabajoactual = false;
+
+                if (objRegistroLaboralBC.actualizarregistrolaboral(objRegistroLaboralBE))
+                    exito = true;
+                else
+                    return false;
+            }
 
             return exito;
         }
@@ -3390,6 +4886,206 @@ namespace SWEGR.UI
         public bool validarcamposRL()
         {
             bool error = false;
+            bool correojefe1;
+            bool correojefe2;
+            bool correojefe3;
+            bool correojefe4;
+            bool correojefe5;
+            bool correojefe6;
+            bool correojefe7;
+            bool correojefe8;
+            bool correojefe9;
+            bool correojefe10;
+            bool correojefe11;
+            bool correojefe12;
+            bool correojefe13;
+            bool correojefe14;
+            bool correojefe15;
+            bool correojefe16;
+            bool correojefe17;
+            bool correojefe18;
+            bool correojefe19;
+            bool correojefe20;
+
+            ValidarCorreo objetovalidarcorreo = new ValidarCorreo();
+            correojefe1 = objetovalidarcorreo.IsValidEmail(txtcorreojefeTrabajo.Text.Trim());
+
+            ValidarCorreo objetovalidarcorreo2 = new ValidarCorreo();
+            correojefe2 = objetovalidarcorreo2.IsValidEmail(txtcorreojefeTrabajo2.Text.Trim());
+
+            ValidarCorreo objetovalidarcorreo3 = new ValidarCorreo();
+            correojefe3 = objetovalidarcorreo3.IsValidEmail(txtcorreojefeTrabajo3.Text.Trim());
+
+            ValidarCorreo objetovalidarcorreo4 = new ValidarCorreo();
+            correojefe4 = objetovalidarcorreo4.IsValidEmail(txtcorreojefeTrabajo4.Text.Trim());
+
+            ValidarCorreo objetovalidarcorreo5 = new ValidarCorreo();
+            correojefe5 = objetovalidarcorreo5.IsValidEmail(txtcorreojefeTrabajo5.Text.Trim());
+
+            ValidarCorreo objetovalidarcorreo6 = new ValidarCorreo();
+            correojefe6 = objetovalidarcorreo6.IsValidEmail(txtcorreojefeTrabajo6.Text.Trim());
+
+            ValidarCorreo objetovalidarcorreo7 = new ValidarCorreo();
+            correojefe7 = objetovalidarcorreo7.IsValidEmail(txtcorreojefeTrabajo7.Text.Trim());
+
+            ValidarCorreo objetovalidarcorreo8 = new ValidarCorreo();
+            correojefe8 = objetovalidarcorreo8.IsValidEmail(txtcorreojefeTrabajo8.Text.Trim());
+
+            ValidarCorreo objetovalidarcorreo9 = new ValidarCorreo();
+            correojefe9 = objetovalidarcorreo9.IsValidEmail(txtcorreojefeTrabajo9.Text.Trim());
+
+            ValidarCorreo objetovalidarcorreo10 = new ValidarCorreo();
+            correojefe10 = objetovalidarcorreo10.IsValidEmail(txtcorreojefeTrabajo10.Text.Trim());
+
+            ValidarCorreo objetovalidarcorreo11 = new ValidarCorreo();
+            correojefe11 = objetovalidarcorreo11.IsValidEmail(txtcorreojefeTrabajo11.Text.Trim());
+
+            ValidarCorreo objetovalidarcorreo12 = new ValidarCorreo();
+            correojefe12 = objetovalidarcorreo12.IsValidEmail(txtcorreojefeTrabajo12.Text.Trim());
+
+            ValidarCorreo objetovalidarcorreo13 = new ValidarCorreo();
+            correojefe13 = objetovalidarcorreo13.IsValidEmail(txtcorreojefeTrabajo13.Text.Trim());
+
+            ValidarCorreo objetovalidarcorreo14 = new ValidarCorreo();
+            correojefe14 = objetovalidarcorreo14.IsValidEmail(txtcorreojefeTrabajo14.Text.Trim());
+
+            ValidarCorreo objetovalidarcorreo15 = new ValidarCorreo();
+            correojefe15 = objetovalidarcorreo15.IsValidEmail(txtcorreojefeTrabajo15.Text.Trim());
+
+            ValidarCorreo objetovalidarcorreo16 = new ValidarCorreo();
+            correojefe16 = objetovalidarcorreo16.IsValidEmail(txtcorreojefeTrabajo16.Text.Trim());
+
+            ValidarCorreo objetovalidarcorreo17 = new ValidarCorreo();
+            correojefe17 = objetovalidarcorreo17.IsValidEmail(txtcorreojefeTrabajo17.Text.Trim());
+
+            ValidarCorreo objetovalidarcorreo18 = new ValidarCorreo();
+            correojefe18 = objetovalidarcorreo18.IsValidEmail(txtcorreojefeTrabajo18.Text.Trim());
+
+            ValidarCorreo objetovalidarcorreo19 = new ValidarCorreo();
+            correojefe19 = objetovalidarcorreo19.IsValidEmail(txtcorreojefeTrabajo19.Text.Trim());
+
+            ValidarCorreo objetovalidarcorreo20 = new ValidarCorreo();
+            correojefe20 = objetovalidarcorreo20.IsValidEmail(txtcorreojefeTrabajo20.Text.Trim());
+
+            if (!correojefe1)
+            {
+                txtcorreojefeTrabajo.BorderColor = System.Drawing.Color.OrangeRed;
+                error = true;
+            }
+
+            if (!correojefe2)
+            {
+                txtcorreojefeTrabajo2.BorderColor = System.Drawing.Color.OrangeRed;
+                error = true;
+            }
+
+            if (!correojefe3)
+            {
+                txtcorreojefeTrabajo3.BorderColor = System.Drawing.Color.OrangeRed;
+                error = true;
+            }
+
+            if (!correojefe4)
+            {
+                txtcorreojefeTrabajo4.BorderColor = System.Drawing.Color.OrangeRed;
+                error = true;
+            }
+
+            if (!correojefe5)
+            {
+                txtcorreojefeTrabajo5.BorderColor = System.Drawing.Color.OrangeRed;
+                error = true;
+            }
+
+            if (!correojefe6)
+            {
+                txtcorreojefeTrabajo6.BorderColor = System.Drawing.Color.OrangeRed;
+                error = true;
+            }
+
+            if (!correojefe7)
+            {
+                txtcorreojefeTrabajo7.BorderColor = System.Drawing.Color.OrangeRed;
+                error = true;
+            }
+
+            if (!correojefe8)
+            {
+                txtcorreojefeTrabajo8.BorderColor = System.Drawing.Color.OrangeRed;
+                error = true;
+            }
+
+            if (!correojefe9)
+            {
+                txtcorreojefeTrabajo9.BorderColor = System.Drawing.Color.OrangeRed;
+                error = true;
+            }
+
+            if (!correojefe10)
+            {
+                txtcorreojefeTrabajo10.BorderColor = System.Drawing.Color.OrangeRed;
+                error = true;
+            }
+
+            if (!correojefe11)
+            {
+                txtcorreojefeTrabajo11.BorderColor = System.Drawing.Color.OrangeRed;
+                error = true;
+            }
+
+            if (!correojefe12)
+            {
+                txtcorreojefeTrabajo12.BorderColor = System.Drawing.Color.OrangeRed;
+                error = true;
+            }
+
+            if (!correojefe13)
+            {
+                txtcorreojefeTrabajo13.BorderColor = System.Drawing.Color.OrangeRed;
+                error = true;
+            }
+
+            if (!correojefe14)
+            {
+                txtcorreojefeTrabajo14.BorderColor = System.Drawing.Color.OrangeRed;
+                error = true;
+            }
+
+            if (!correojefe15)
+            {
+                txtcorreojefeTrabajo15.BorderColor = System.Drawing.Color.OrangeRed;
+                error = true;
+            }
+
+            if (!correojefe16)
+            {
+                txtcorreojefeTrabajo16.BorderColor = System.Drawing.Color.OrangeRed;
+                error = true;
+            }
+
+            if (!correojefe17)
+            {
+                txtcorreojefeTrabajo17.BorderColor = System.Drawing.Color.OrangeRed;
+                error = true;
+            }
+
+            if (!correojefe18)
+            {
+                txtcorreojefeTrabajo18.BorderColor = System.Drawing.Color.OrangeRed;
+                error = true;
+            }
+
+            if (!correojefe19)
+            {
+                txtcorreojefeTrabajo19.BorderColor = System.Drawing.Color.OrangeRed;
+                error = true;
+            }
+
+            if (!correojefe20)
+            {
+                txtcorreojefeTrabajo20.BorderColor = System.Drawing.Color.OrangeRed;
+                error = true;
+            }
 
             if (error)
                 return false;
@@ -3409,22 +5105,353 @@ namespace SWEGR.UI
 
         protected void btneditarRL_Click(object sender, EventArgs e)
         {
+            int idegresado = IDEgresado;
+            RegistroLaboralBE objRegistroLaboralBE = new RegistroLaboralBE();
+            List<RegistroLaboralBE> listaRegistroLaboralBE = new List<RegistroLaboralBE>();
+            RegistroLaboralBC objRegistroLaboralBC = new RegistroLaboralBC();
 
+            listaRegistroLaboralBE = objRegistroLaboralBC.listarregistrolaobral(idegresado);
+            int cantidad = listaRegistroLaboralBE.Count;
+
+            ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarBotonesTL", "mostrarBotonesTL();", true);
+            ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral1", "habilitarTrayectoriaLaboral1();", true);
+
+            if (cantidad > 1)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral2", "habilitarTrayectoriaLaboral2();", true);
+
+            if (cantidad > 2)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral3", "habilitarTrayectoriaLaboral3();", true);
+
+            if (cantidad > 3)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral4", "habilitarTrayectoriaLaboral4();", true);
+
+            if (cantidad > 4)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral5", "habilitarTrayectoriaLaboral5();", true);
+
+            if (cantidad > 5)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral6", "habilitarTrayectoriaLaboral6();", true);
+
+            if (cantidad > 6)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral7", "habilitarTrayectoriaLaboral7();", true);
+
+            if (cantidad > 7)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral8", "habilitarTrayectoriaLaboral8();", true);
+
+            if (cantidad > 8)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral9", "habilitarTrayectoriaLaboral9();", true);
+
+            if (cantidad > 9)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral10", "habilitarTrayectoriaLaboral10();", true);
+
+            if (cantidad > 10)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral11", "habilitarTrayectoriaLaboral11();", true);
+
+            if (cantidad > 11)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral12", "habilitarTrayectoriaLaboral12();", true);
+
+            if (cantidad > 12)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral13", "habilitarTrayectoriaLaboral13();", true);
+
+            if (cantidad > 13)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral14", "habilitarTrayectoriaLaboral14();", true);
+
+            if (cantidad > 14)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral15", "habilitarTrayectoriaLaboral15();", true);
+
+            if (cantidad > 15)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral16", "habilitarTrayectoriaLaboral16();", true);
+
+            if (cantidad > 16)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral17", "habilitarTrayectoriaLaboral17();", true);
+
+            if (cantidad > 17)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral18", "habilitarTrayectoriaLaboral18();", true);
+
+            if (cantidad > 18)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral19", "habilitarTrayectoriaLaboral19();", true);
+
+            if (cantidad > 19)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral20", "habilitarTrayectoriaLaboral20();", true);
         }
 
         protected void btncancelarRL_Click(object sender, EventArgs e)
         {
+            int idegresado = IDEgresado;
+            RegistroLaboralBE objRegistroLaboralBE = new RegistroLaboralBE();
+            List<RegistroLaboralBE> listaRegistroLaboralBE = new List<RegistroLaboralBE>();
+            RegistroLaboralBC objRegistroLaboralBC = new RegistroLaboralBC();
 
+            listaRegistroLaboralBE = objRegistroLaboralBC.listarregistrolaobral(idegresado);
+            int cantidad = listaRegistroLaboralBE.Count;
+
+            ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarBotonesTL", "ocultarBotonesTL();", true);
+            ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral1", "deshabilitarTrayectoriaLaboral1();", true);
+
+            if (cantidad > 1)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral2", "deshabilitarTrayectoriaLaboral2();", true);
+
+            if (cantidad > 2)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral3", "deshabilitarTrayectoriaLaboral3();", true);
+
+            if (cantidad > 3)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral4", "deshabilitarTrayectoriaLaboral4();", true);
+
+            if (cantidad > 4)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral5", "deshabilitarTrayectoriaLaboral5();", true);
+
+            if (cantidad > 5)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral6", "deshabilitarTrayectoriaLaboral6();", true);
+
+            if (cantidad > 6)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral7", "deshabilitarTrayectoriaLaboral7();", true);
+
+            if (cantidad > 7)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral8", "deshabilitarTrayectoriaLaboral8();", true);
+
+            if (cantidad > 8)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral9", "deshabilitarTrayectoriaLaboral9();", true);
+
+            if (cantidad > 9)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral10", "deshabilitarTrayectoriaLaboral10();", true);
+
+            if (cantidad > 10)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral11", "deshabilitarTrayectoriaLaboral11();", true);
+
+            if (cantidad > 11)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral12", "deshabilitarTrayectoriaLaboral12();", true);
+
+            if (cantidad > 12)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral13", "deshabilitarTrayectoriaLaboral13();", true);
+
+            if (cantidad > 13)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral14", "deshabilitarTrayectoriaLaboral14();", true);
+
+            if (cantidad > 14)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral15", "deshabilitarTrayectoriaLaboral15();", true);
+
+            if (cantidad > 15)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral16", "deshabilitarTrayectoriaLaboral16();", true);
+
+            if (cantidad > 16)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral17", "deshabilitarTrayectoriaLaboral17();", true);
+
+            if (cantidad > 17)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral18", "deshabilitarTrayectoriaLaboral18();", true);
+
+            if (cantidad > 18)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral19", "deshabilitarTrayectoriaLaboral19();", true);
+
+            if (cantidad > 19)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral20", "deshabilitarTrayectoriaLaboral20();", true);
+
+            if (cantidad == 1)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarTrabajo2", "ocultarTrabajo2();", true);
+
+            if (cantidad == 2)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarTrabajo3", "ocultarTrabajo3();", true);
+
+            if (cantidad == 3)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarTrabajo4", "ocultarTrabajo4();", true);
+
+            if (cantidad == 4)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarTrabajo5", "ocultarTrabajo5();", true);
+
+            if (cantidad == 5)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarTrabajo6", "ocultarTrabajo6();", true);
+
+            if (cantidad == 6)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarTrabajo7", "ocultarTrabajo7();", true);
+
+            if (cantidad == 7)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarTrabajo8", "ocultarTrabajo8();", true);
+
+            if (cantidad == 8)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarTrabajo9", "ocultarTrabajo9();", true);
+
+            if (cantidad == 9)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarTrabajo10", "ocultarTrabajo10();", true);
+
+            if (cantidad == 10)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarTrabajo11", "ocultarTrabajo11();", true);
+
+            if (cantidad == 11)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarTrabajo12", "ocultarTrabajo12();", true);
+
+            if (cantidad == 12)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarTrabajo13", "ocultarTrabajo13();", true);
+
+            if (cantidad == 13)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarTrabajo14", "ocultarTrabajo14();", true);
+
+            if (cantidad == 14)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarTrabajo15", "ocultarTrabajo15();", true);
+
+            if (cantidad == 15)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarTrabajo16", "ocultarTrabajo16();", true);
+
+            if (cantidad == 16)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarTrabajo17", "ocultarTrabajo17();", true);
+
+            if (cantidad == 17)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarTrabajo18", "ocultarTrabajo18();", true);
+
+            if (cantidad == 18)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarTrabajo19", "ocultarTrabajo19();", true);
+
+            if (cantidad == 19)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarTrabajo20", "ocultarTrabajo20();", true);
         }
 
         protected void btnguardarRL_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (validarcamposRL())
+                {
+                    if (guardarRegistroLaboral() != 0)
+                    {
+                        if (actualizarRegistroLaboral())
+                        {
+                            ScriptManager.RegisterStartupScript(Page, GetType(), "exitoRL", "exitoRL();", true);
+                        }
+                        else
+                            ClientScript.RegisterClientScriptBlock(GetType(), "erroractualizarRL", "<script language=\"JavaScript\"> alert(\"Ocurrió un error\")</script>", false);
+                    }
+                    else
+                    {
+                        ClientScript.RegisterClientScriptBlock(GetType(), "errorregistrarRL", "<script language=\"JavaScript\"> alert(\"Ocurrió un error\")</script>", false);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ClientScript.RegisterClientScriptBlock(GetType(), "errorguardarRL", "<script language=\"JavaScript\"> alert(\"Ocurrió un error\")</script>", false);
+            }
         }
 
         protected void btnagregarRL_Click(object sender, EventArgs e)
         {
+            int idegresado = IDEgresado;
+            RegistroLaboralBE objRegistroLaboralBE = new RegistroLaboralBE();
+            List<RegistroLaboralBE> listaRegistroLaboralBE = new List<RegistroLaboralBE>();
+            RegistroLaboralBC objRegistroLaboralBC = new RegistroLaboralBC();
 
+            listaRegistroLaboralBE = objRegistroLaboralBC.listarregistrolaobral(idegresado);
+            int cantidad = listaRegistroLaboralBE.Count;
+
+            if (cantidad == 1)
+            {
+                ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarTrabajo2", "mostrarTrabajo2();", true);
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral2", "habilitarTrayectoriaLaboral2();", true);
+            }
+
+            if (cantidad == 2)
+            {
+                ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarTrabajo3", "mostrarTrabajo3();", true);
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral3", "habilitarTrayectoriaLaboral3();", true);
+            }
+
+            if (cantidad == 3)
+            {
+                ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarTrabajo4", "mostrarTrabajo4();", true);
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral4", "habilitarTrayectoriaLaboral4();", true);
+            }
+
+            if (cantidad == 4)
+            {
+                ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarTrabajo5", "mostrarTrabajo5();", true);
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral5", "habilitarTrayectoriaLaboral5();", true);
+            }
+
+            if (cantidad == 5)
+            {
+                ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarTrabajo6", "mostrarTrabajo6();", true);
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral6", "habilitarTrayectoriaLaboral6();", true);
+            }
+
+            if (cantidad == 6)
+            {
+                ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarTrabajo7", "mostrarTrabajo7();", true);
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral7", "habilitarTrayectoriaLaboral7();", true);
+            }
+
+            if (cantidad == 7)
+            {
+                ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarTrabajo8", "mostrarTrabajo8();", true);
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral8", "habilitarTrayectoriaLaboral8();", true);
+            }
+
+            if (cantidad == 8)
+            {
+                ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarTrabajo9", "mostrarTrabajo9();", true);
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral9", "habilitarTrayectoriaLaboral9();", true);
+            }
+
+            if (cantidad == 9)
+            {
+                ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarTrabajo10", "mostrarTrabajo10();", true);
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral10", "habilitarTrayectoriaLaboral10();", true);
+            }
+
+            if (cantidad == 10)
+            {
+                ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarTrabajo11", "mostrarTrabajo11();", true);
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral11", "habilitarTrayectoriaLaboral11();", true);
+            }
+
+            if (cantidad == 11)
+            {
+                ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarTrabajo12", "mostrarTrabajo12();", true);
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral12", "habilitarTrayectoriaLaboral12();", true);
+            }
+
+            if (cantidad == 12)
+            {
+                ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarTrabajo13", "mostrarTrabajo13();", true);
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral13", "habilitarTrayectoriaLaboral13();", true);
+            }
+
+            if (cantidad == 13)
+            {
+                ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarTrabajo14", "mostrarTrabajo14();", true);
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral14", "habilitarTrayectoriaLaboral14();", true);
+            }
+
+            if (cantidad == 14)
+            {
+                ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarTrabajo15", "mostrarTrabajo15();", true);
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral15", "habilitarTrayectoriaLaboral15();", true);
+            }
+
+            if (cantidad == 15)
+            {
+                ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarTrabajo16", "mostrarTrabajo16();", true);
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral16", "habilitarTrayectoriaLaboral16();", true);
+            }
+
+            if (cantidad == 16)
+            {
+                ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarTrabajo17", "mostrarTrabajo17();", true);
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral17", "habilitarTrayectoriaLaboral17();", true);
+            }
+
+            if (cantidad == 17)
+            {
+                ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarTrabajo18", "mostrarTrabajo18();", true);
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral18", "habilitarTrayectoriaLaboral18();", true);
+            }
+
+            if (cantidad == 18)
+            {
+                ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarTrabajo19", "mostrarTrabajo19();", true);
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral19", "habilitarTrayectoriaLaboral19();", true);
+            }
+
+            if (cantidad == 19)
+            {
+                ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarTrabajo20", "mostrarTrabajo20();", true);
+                ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarTrayectoriaLaboral20", "habilitarTrayectoriaLaboral20();", true);
+            }
         }
 
         //*** Aptitudes e intereses ***//

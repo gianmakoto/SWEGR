@@ -22,5 +22,11 @@ namespace SWEGR.BL.BC
             PaisDALC objetoPaisDALC = new PaisDALC();
             return objetoPaisDALC.obtenerPais(idpais);
         }
+
+        public int obtenerPaisID(string nombre)
+        {
+            PaisDALC objetoPaisDALC = new PaisDALC();
+            return objetoPaisDALC.obtenerPaisID(nombre);
+        }
     }
 }

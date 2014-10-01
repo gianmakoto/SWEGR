@@ -219,6 +219,7 @@
             $("#txttipoEstudio").attr("disabled", false);
             $("#txtnombreEstudio").attr("disabled", false);
             $("#txtdescripcionEstudio").attr("disabled", false);
+            $("#ddlPaisTA").attr("disabled", false);
         }
 
         function habilitarTrayectoriaAcademica2() {
@@ -227,6 +228,7 @@
             $("#txttipoEstudio2").attr("disabled", false);
             $("#txtnombreEstudio2").attr("disabled", false);
             $("#txtdescripcionEstudio2").attr("disabled", false);
+            $("#ddlPaisTA2").attr("disabled", false);
         }
 
         function habilitarTrayectoriaAcademica3() {
@@ -235,6 +237,7 @@
             $("#txttipoEstudio3").attr("disabled", false);
             $("#txtnombreEstudio3").attr("disabled", false);
             $("#txtdescripcionEstudio3").attr("disabled", false);
+            $("#ddlPaisTA3").attr("disabled", false);
         }
 
         function habilitarTrayectoriaAcademica4() {
@@ -243,6 +246,7 @@
             $("#txttipoEstudio4").attr("disabled", false);
             $("#txtnombreEstudio4").attr("disabled", false);
             $("#txtdescripcionEstudio4").attr("disabled", false);
+            $("#ddlPaisTA4").attr("disabled", false);
         }
 
         function habilitarTrayectoriaAcademica5() {
@@ -251,6 +255,7 @@
             $("#txttipoEstudio5").attr("disabled", false);
             $("#txtnombreEstudio5").attr("disabled", false);
             $("#txtdescripcionEstudio5").attr("disabled", false);
+            $("#ddlPaisTA5").attr("disabled", false);
         }
 
         function habilitarTrayectoriaAcademica6() {
@@ -259,6 +264,7 @@
             $("#txttipoEstudio6").attr("disabled", false);
             $("#txtnombreEstudio6").attr("disabled", false);
             $("#txtdescripcionEstudio6").attr("disabled", false);
+            $("#ddlPaisTA6").attr("disabled", false);
         }
 
         function habilitarTrayectoriaAcademica7() {
@@ -267,6 +273,7 @@
             $("#txttipoEstudio7").attr("disabled", false);
             $("#txtnombreEstudio7").attr("disabled", false);
             $("#txtdescripcionEstudio7").attr("disabled", false);
+            $("#ddlPaisTA7").attr("disabled", false);
         }
 
         function habilitarTrayectoriaAcademica8() {
@@ -275,6 +282,7 @@
             $("#txttipoEstudio8").attr("disabled", false);
             $("#txtnombreEstudio8").attr("disabled", false);
             $("#txtdescripcionEstudio8").attr("disabled", false);
+            $("#ddlPaisTA8").attr("disabled", false);
         }
 
         function habilitarTrayectoriaAcademica9() {
@@ -283,6 +291,7 @@
             $("#txttipoEstudio9").attr("disabled", false);
             $("#txtnombreEstudio9").attr("disabled", false);
             $("#txtdescripcionEstudio9").attr("disabled", false);
+            $("#ddlPaisTA9").attr("disabled", false);
         }
 
         function habilitarTrayectoriaAcademica10() {
@@ -291,6 +300,7 @@
             $("#txttipoEstudio10").attr("disabled", false);
             $("#txtnombreEstudio10").attr("disabled", false);
             $("#txtdescripcionEstudio10").attr("disabled", false);
+            $("#ddlPaisTA10").attr("disabled", false);
         }
 
         function habilitarTrayectoriaAcademica11() {
@@ -299,6 +309,7 @@
             $("#txttipoEstudio11").attr("disabled", false);
             $("#txtnombreEstudio11").attr("disabled", false);
             $("#txtdescripcionEstudio11").attr("disabled", false);
+            $("#ddlPaisTA11").attr("disabled", false);
         }
 
         function habilitarTrayectoriaAcademica12() {
@@ -307,6 +318,7 @@
             $("#txttipoEstudio12").attr("disabled", false);
             $("#txtnombreEstudio12").attr("disabled", false);
             $("#txtdescripcionEstudio12").attr("disabled", false);
+            $("#ddlPaisTA12").attr("disabled", false);
         }
 
         function habilitarTrayectoriaAcademica13() {
@@ -315,6 +327,7 @@
             $("#txttipoEstudio13").attr("disabled", false);
             $("#txtnombreEstudio13").attr("disabled", false);
             $("#txtdescripcionEstudio13").attr("disabled", false);
+            $("#ddlPaisTA13").attr("disabled", false);
         }
 
         function habilitarTrayectoriaAcademica14() {
@@ -323,6 +336,7 @@
             $("#txttipoEstudio14").attr("disabled", false);
             $("#txtnombreEstudio14").attr("disabled", false);
             $("#txtdescripcionEstudio14").attr("disabled", false);
+            $("#ddlPaisTA14").attr("disabled", false);
         }
 
         function habilitarTrayectoriaAcademica15() {
@@ -331,6 +345,7 @@
             $("#txttipoEstudio15").attr("disabled", false);
             $("#txtnombreEstudio15").attr("disabled", false);
             $("#txtdescripcionEstudio15").attr("disabled", false);
+            $("#ddlPaisTA15").attr("disabled", false);
         }
 
         function habilitarTrayectoriaAcademica16() {
@@ -339,6 +354,7 @@
             $("#txttipoEstudio16").attr("disabled", false);
             $("#txtnombreEstudio16").attr("disabled", false);
             $("#txtdescripcionEstudio16").attr("disabled", false);
+            $("#ddlPaisTA16").attr("disabled", false);
         }
 
         function habilitarTrayectoriaAcademica17() {
@@ -347,6 +363,7 @@
             $("#txttipoEstudio17").attr("disabled", false);
             $("#txtnombreEstudio17").attr("disabled", false);
             $("#txtdescripcionEstudio17").attr("disabled", false);
+            $("#ddlPaisTA17").attr("disabled", false);
         }
 
         function habilitarTrayectoriaAcademica18() {
@@ -355,6 +372,7 @@
             $("#txttipoEstudio18").attr("disabled", false);
             $("#txtnombreEstudio18").attr("disabled", false);
             $("#txtdescripcionEstudio18").attr("disabled", false);
+            $("#ddlPaisTA18").attr("disabled", false);
         }
 
         function habilitarTrayectoriaAcademica19() {
@@ -363,6 +381,7 @@
             $("#txttipoEstudio19").attr("disabled", false);
             $("#txtnombreEstudio19").attr("disabled", false);
             $("#txtdescripcionEstudio19").attr("disabled", false);
+            $("#ddlPaisTA19").attr("disabled", false);
         }
 
         function habilitarTrayectoriaAcademica20() {
@@ -371,6 +390,7 @@
             $("#txttipoEstudio20").attr("disabled", false);
             $("#txtnombreEstudio20").attr("disabled", false);
             $("#txtdescripcionEstudio20").attr("disabled", false);
+            $("#ddlPaisTA20").attr("disabled", false);
         }
 
         function deshabilitarTrayectoriaAcademica1() {
@@ -379,6 +399,7 @@
             $("#txttipoEstudio").attr("disabled", true);
             $("#txtnombreEstudio").attr("disabled", true);
             $("#txtdescripcionEstudio").attr("disabled", true);
+            $("#ddlPaisTA").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaAcademica2() {
@@ -387,6 +408,7 @@
             $("#txttipoEstudio2").attr("disabled", true);
             $("#txtnombreEstudio2").attr("disabled", true);
             $("#txtdescripcionEstudio2").attr("disabled", true);
+            $("#ddlPaisTA2").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaAcademica3() {
@@ -395,6 +417,7 @@
             $("#txttipoEstudio3").attr("disabled", true);
             $("#txtnombreEstudio3").attr("disabled", true);
             $("#txtdescripcionEstudio3").attr("disabled", true);
+            $("#ddlPaisTA3").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaAcademica4() {
@@ -403,6 +426,7 @@
             $("#txttipoEstudio4").attr("disabled", true);
             $("#txtnombreEstudio4").attr("disabled", true);
             $("#txtdescripcionEstudio4").attr("disabled", true);
+            $("#ddlPaisTA4").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaAcademica5() {
@@ -411,6 +435,7 @@
             $("#txttipoEstudio5").attr("disabled", true);
             $("#txtnombreEstudio5").attr("disabled", true);
             $("#txtdescripcionEstudio5").attr("disabled", true);
+            $("#ddlPaisTA5").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaAcademica6() {
@@ -419,6 +444,7 @@
             $("#txttipoEstudio6").attr("disabled", true);
             $("#txtnombreEstudio6").attr("disabled", true);
             $("#txtdescripcionEstudio6").attr("disabled", true);
+            $("#ddlPaisTA6").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaAcademica7() {
@@ -427,6 +453,7 @@
             $("#txttipoEstudio7").attr("disabled", true);
             $("#txtnombreEstudio7").attr("disabled", true);
             $("#txtdescripcionEstudio7").attr("disabled", true);
+            $("#ddlPaisTA7").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaAcademica8() {
@@ -435,6 +462,7 @@
             $("#txttipoEstudio8").attr("disabled", true);
             $("#txtnombreEstudio8").attr("disabled", true);
             $("#txtdescripcionEstudio8").attr("disabled", true);
+            $("#ddlPaisTA8").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaAcademica9() {
@@ -443,6 +471,7 @@
             $("#txttipoEstudio9").attr("disabled", true);
             $("#txtnombreEstudio9").attr("disabled", true);
             $("#txtdescripcionEstudio9").attr("disabled", true);
+            $("#ddlPaisTA9").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaAcademica10() {
@@ -451,6 +480,7 @@
             $("#txttipoEstudio10").attr("disabled", true);
             $("#txtnombreEstudio10").attr("disabled", true);
             $("#txtdescripcionEstudio10").attr("disabled", true);
+            $("#ddlPaisTA10").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaAcademica11() {
@@ -459,6 +489,7 @@
             $("#txttipoEstudio11").attr("disabled", true);
             $("#txtnombreEstudio11").attr("disabled", true);
             $("#txtdescripcionEstudio11").attr("disabled", true);
+            $("#ddlPaisTA11").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaAcademica12() {
@@ -467,6 +498,7 @@
             $("#txttipoEstudio12").attr("disabled", true);
             $("#txtnombreEstudio12").attr("disabled", true);
             $("#txtdescripcionEstudio12").attr("disabled", true);
+            $("#ddlPaisTA12").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaAcademica13() {
@@ -475,6 +507,7 @@
             $("#txttipoEstudio13").attr("disabled", true);
             $("#txtnombreEstudio13").attr("disabled", true);
             $("#txtdescripcionEstudio13").attr("disabled", true);
+            $("#ddlPaisTA13").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaAcademica14() {
@@ -483,6 +516,7 @@
             $("#txttipoEstudio14").attr("disabled", true);
             $("#txtnombreEstudio14").attr("disabled", true);
             $("#txtdescripcionEstudio14").attr("disabled", true);
+            $("#ddlPaisTA14").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaAcademica15() {
@@ -491,6 +525,7 @@
             $("#txttipoEstudio15").attr("disabled", true);
             $("#txtnombreEstudio15").attr("disabled", true);
             $("#txtdescripcionEstudio15").attr("disabled", true);
+            $("#ddlPaisTA15").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaAcademica16() {
@@ -499,6 +534,7 @@
             $("#txttipoEstudio16").attr("disabled", true);
             $("#txtnombreEstudio16").attr("disabled", true);
             $("#txtdescripcionEstudio16").attr("disabled", true);
+            $("#ddlPaisTA16").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaAcademica17() {
@@ -507,6 +543,7 @@
             $("#txttipoEstudio17").attr("disabled", true);
             $("#txtnombreEstudio17").attr("disabled", true);
             $("#txtdescripcionEstudio17").attr("disabled", true);
+            $("#ddlPaisTA17").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaAcademica18() {
@@ -515,6 +552,7 @@
             $("#txttipoEstudio18").attr("disabled", true);
             $("#txtnombreEstudio18").attr("disabled", true);
             $("#txtdescripcionEstudio18").attr("disabled", true);
+            $("#ddlPaisTA18").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaAcademica19() {
@@ -523,6 +561,7 @@
             $("#txttipoEstudio19").attr("disabled", true);
             $("#txtnombreEstudio19").attr("disabled", true);
             $("#txtdescripcionEstudio19").attr("disabled", true);
+            $("#ddlPaisTA19").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaAcademica20() {
@@ -531,6 +570,7 @@
             $("#txttipoEstudio20").attr("disabled", true);
             $("#txtnombreEstudio20").attr("disabled", true);
             $("#txtdescripcionEstudio20").attr("disabled", true);
+            $("#ddlPaisTA20").attr("disabled", true);
         }
 
         function mostrarBotonesTA() {
@@ -750,6 +790,7 @@
             $("#txtcargojefeTrabajo").attr("disabled", false);
             $("#txttelefonojefeTrabajo").attr("disabled", false);
             $("#txtcorreojefeTrabajo").attr("disabled", false);
+            $("#ddlPaisTL").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral2() {
@@ -761,6 +802,7 @@
             $("#txtcargojefeTrabajo2").attr("disabled", false);
             $("#txttelefonojefeTrabajo2").attr("disabled", false);
             $("#txtcorreojefeTrabajo2").attr("disabled", false);
+            $("#ddlPaisTL2").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral3() {
@@ -772,6 +814,7 @@
             $("#txtcargojefeTrabajo3").attr("disabled", false);
             $("#txttelefonojefeTrabajo3").attr("disabled", false);
             $("#txtcorreojefeTrabajo3").attr("disabled", false);
+            $("#ddlPaisTL3").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral4() {
@@ -783,6 +826,7 @@
             $("#txtcargojefeTrabajo4").attr("disabled", false);
             $("#txttelefonojefeTrabajo4").attr("disabled", false);
             $("#txtcorreojefeTrabajo4").attr("disabled", false);
+            $("#ddlPaisTL4").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral5() {
@@ -794,6 +838,7 @@
             $("#txtcargojefeTrabajo5").attr("disabled", false);
             $("#txttelefonojefeTrabajo5").attr("disabled", false);
             $("#txtcorreojefeTrabajo5").attr("disabled", false);
+            $("#ddlPaisTL5").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral6() {
@@ -805,6 +850,7 @@
             $("#txtcargojefeTrabajo6").attr("disabled", false);
             $("#txttelefonojefeTrabajo6").attr("disabled", false);
             $("#txtcorreojefeTrabajo6").attr("disabled", false);
+            $("#ddlPaisTL6").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral7() {
@@ -816,6 +862,7 @@
             $("#txtcargojefeTrabajo7").attr("disabled", false);
             $("#txttelefonojefeTrabajo7").attr("disabled", false);
             $("#txtcorreojefeTrabajo7").attr("disabled", false);
+            $("#ddlPaisTL7").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral8() {
@@ -827,6 +874,7 @@
             $("#txtcargojefeTrabajo8").attr("disabled", false);
             $("#txttelefonojefeTrabajo8").attr("disabled", false);
             $("#txtcorreojefeTrabajo8").attr("disabled", false);
+            $("#ddlPaisTL8").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral9() {
@@ -838,6 +886,7 @@
             $("#txtcargojefeTrabajo9").attr("disabled", false);
             $("#txttelefonojefeTrabajo9").attr("disabled", false);
             $("#txtcorreojefeTrabajo9").attr("disabled", false);
+            $("#ddlPaisTL9").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral10() {
@@ -849,6 +898,7 @@
             $("#txtcargojefeTrabajo10").attr("disabled", false);
             $("#txttelefonojefeTrabajo10").attr("disabled", false);
             $("#txtcorreojefeTrabajo10").attr("disabled", false);
+            $("#ddlPaisTL10").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral11() {
@@ -860,6 +910,7 @@
             $("#txtcargojefeTrabajo11").attr("disabled", false);
             $("#txttelefonojefeTrabajo11").attr("disabled", false);
             $("#txtcorreojefeTrabajo11").attr("disabled", false);
+            $("#ddlPaisTL11").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral12() {
@@ -871,6 +922,7 @@
             $("#txtcargojefeTrabajo12").attr("disabled", false);
             $("#txttelefonojefeTrabajo12").attr("disabled", false);
             $("#txtcorreojefeTrabajo12").attr("disabled", false);
+            $("#ddlPaisTL12").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral13() {
@@ -882,6 +934,7 @@
             $("#txtcargojefeTrabajo13").attr("disabled", false);
             $("#txttelefonojefeTrabajo13").attr("disabled", false);
             $("#txtcorreojefeTrabajo13").attr("disabled", false);
+            $("#ddlPaisTL13").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral14() {
@@ -893,6 +946,7 @@
             $("#txtcargojefeTrabajo14").attr("disabled", false);
             $("#txttelefonojefeTrabajo14").attr("disabled", false);
             $("#txtcorreojefeTrabajo14").attr("disabled", false);
+            $("#ddlPaisTL14").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral15() {
@@ -904,6 +958,7 @@
             $("#txtcargojefeTrabajo15").attr("disabled", false);
             $("#txttelefonojefeTrabajo15").attr("disabled", false);
             $("#txtcorreojefeTrabajo15").attr("disabled", false);
+            $("#ddlPaisTL15").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral16() {
@@ -915,6 +970,7 @@
             $("#txtcargojefeTrabajo16").attr("disabled", false);
             $("#txttelefonojefeTrabajo16").attr("disabled", false);
             $("#txtcorreojefeTrabajo16").attr("disabled", false);
+            $("#ddlPaisTL16").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral17() {
@@ -926,6 +982,7 @@
             $("#txtcargojefeTrabajo17").attr("disabled", false);
             $("#txttelefonojefeTrabajo17").attr("disabled", false);
             $("#txtcorreojefeTrabajo17").attr("disabled", false);
+            $("#ddlPaisTL17").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral18() {
@@ -937,6 +994,7 @@
             $("#txtcargojefeTrabajo18").attr("disabled", false);
             $("#txttelefonojefeTrabajo18").attr("disabled", false);
             $("#txtcorreojefeTrabajo18").attr("disabled", false);
+            $("#ddlPaisTL18").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral19() {
@@ -948,6 +1006,7 @@
             $("#txtcargojefeTrabajo19").attr("disabled", false);
             $("#txttelefonojefeTrabajo19").attr("disabled", false);
             $("#txtcorreojefeTrabajo19").attr("disabled", false);
+            $("#ddlPaisTL19").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral20() {
@@ -959,6 +1018,7 @@
             $("#txtcargojefeTrabajo20").attr("disabled", false);
             $("#txttelefonojefeTrabajo20").attr("disabled", false);
             $("#txtcorreojefeTrabajo20").attr("disabled", false);
+            $("#ddlPaisTL120").attr("disabled", false);
         }
 
         function deshabilitarTrayectoriaLaboral1() {
@@ -970,6 +1030,7 @@
             $("#txtcargojefeTrabajo").attr("disabled", true);
             $("#txttelefonojefeTrabajo").attr("disabled", true);
             $("#txtcorreojefeTrabajo").attr("disabled", true);
+            $("#ddlPaisTL").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaLaboral2() {
@@ -981,6 +1042,7 @@
             $("#txtcargojefeTrabajo2").attr("disabled", true);
             $("#txttelefonojefeTrabajo2").attr("disabled", true);
             $("#txtcorreojefeTrabajo2").attr("disabled", true);
+            $("#ddlPaisTL2").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaLaboral3() {
@@ -992,6 +1054,7 @@
             $("#txtcargojefeTrabajo3").attr("disabled", true);
             $("#txttelefonojefeTrabajo3").attr("disabled", true);
             $("#txtcorreojefeTrabajo3").attr("disabled", true);
+            $("#ddlPaisTL3").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaLaboral4() {
@@ -1003,6 +1066,7 @@
             $("#txtcargojefeTrabajo4").attr("disabled", true);
             $("#txttelefonojefeTrabajo4").attr("disabled", true);
             $("#txtcorreojefeTrabajo4").attr("disabled", true);
+            $("#ddlPaisTL4").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaLaboral5() {
@@ -1014,6 +1078,7 @@
             $("#txtcargojefeTrabajo5").attr("disabled", true);
             $("#txttelefonojefeTrabajo5").attr("disabled", true);
             $("#txtcorreojefeTrabajo5").attr("disabled", true);
+            $("#ddlPaisTL5").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaLaboral6() {
@@ -1025,6 +1090,7 @@
             $("#txtcargojefeTrabajo6").attr("disabled", true);
             $("#txttelefonojefeTrabajo6").attr("disabled", true);
             $("#txtcorreojefeTrabajo6").attr("disabled", true);
+            $("#ddlPaisTL6").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaLaboral7() {
@@ -1036,6 +1102,7 @@
             $("#txtcargojefeTrabajo7").attr("disabled", true);
             $("#txttelefonojefeTrabajo7").attr("disabled", true);
             $("#txtcorreojefeTrabajo7").attr("disabled", true);
+            $("#ddlPaisTL7").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaLaboral8() {
@@ -1047,6 +1114,7 @@
             $("#txtcargojefeTrabajo8").attr("disabled", true);
             $("#txttelefonojefeTrabajo8").attr("disabled", true);
             $("#txtcorreojefeTrabajo8").attr("disabled", true);
+            $("#ddlPaisTL8").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaLaboral9() {
@@ -1058,6 +1126,7 @@
             $("#txtcargojefeTrabajo9").attr("disabled", true);
             $("#txttelefonojefeTrabajo9").attr("disabled", true);
             $("#txtcorreojefeTrabajo9").attr("disabled", true);
+            $("#ddlPaisTL9").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaLaboral10() {
@@ -1069,6 +1138,7 @@
             $("#txtcargojefeTrabajo10").attr("disabled", true);
             $("#txttelefonojefeTrabajo10").attr("disabled", true);
             $("#txtcorreojefeTrabajo10").attr("disabled", true);
+            $("#ddlPaisTL10").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaLaboral11() {
@@ -1080,6 +1150,7 @@
             $("#txtcargojefeTrabajo11").attr("disabled", true);
             $("#txttelefonojefeTrabajo11").attr("disabled", true);
             $("#txtcorreojefeTrabajo11").attr("disabled", true);
+            $("#ddlPaisTL11").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaLaboral12() {
@@ -1091,6 +1162,7 @@
             $("#txtcargojefeTrabajo12").attr("disabled", true);
             $("#txttelefonojefeTrabajo12").attr("disabled", true);
             $("#txtcorreojefeTrabajo12").attr("disabled", true);
+            $("#ddlPaisTL12").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaLaboral13() {
@@ -1102,6 +1174,7 @@
             $("#txtcargojefeTrabajo13").attr("disabled", true);
             $("#txttelefonojefeTrabajo13").attr("disabled", true);
             $("#txtcorreojefeTrabajo13").attr("disabled", true);
+            $("#ddlPaisTL13").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaLaboral14() {
@@ -1113,6 +1186,7 @@
             $("#txtcargojefeTrabajo14").attr("disabled", true);
             $("#txttelefonojefeTrabajo14").attr("disabled", true);
             $("#txtcorreojefeTrabajo14").attr("disabled", true);
+            $("#ddlPaisTL14").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaLaboral15() {
@@ -1124,6 +1198,7 @@
             $("#txtcargojefeTrabajo15").attr("disabled", true);
             $("#txttelefonojefeTrabajo15").attr("disabled", true);
             $("#txtcorreojefeTrabajo15").attr("disabled", true);
+            $("#ddlPaisTL15").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaLaboral16() {
@@ -1135,6 +1210,7 @@
             $("#txtcargojefeTrabajo16").attr("disabled", true);
             $("#txttelefonojefeTrabajo16").attr("disabled", true);
             $("#txtcorreojefeTrabajo16").attr("disabled", true);
+            $("#ddlPaisTL16").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaLaboral17() {
@@ -1146,6 +1222,7 @@
             $("#txtcargojefeTrabajo17").attr("disabled", true);
             $("#txttelefonojefeTrabajo17").attr("disabled", true);
             $("#txtcorreojefeTrabajo17").attr("disabled", true);
+            $("#ddlPaisTL17").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaLaboral18() {
@@ -1157,6 +1234,7 @@
             $("#txtcargojefeTrabajo18").attr("disabled", true);
             $("#txttelefonojefeTrabajo18").attr("disabled", true);
             $("#txtcorreojefeTrabajo18").attr("disabled", true);
+            $("#ddlPaisTL18").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaLaboral19() {
@@ -1168,6 +1246,7 @@
             $("#txtcargojefeTrabajo19").attr("disabled", true);
             $("#txttelefonojefeTrabajo19").attr("disabled", true);
             $("#txtcorreojefeTrabajo19").attr("disabled", true);
+            $("#ddlPaisTL19").attr("disabled", true);
         }
 
         function deshabilitarTrayectoriaLaboral20() {
@@ -1179,6 +1258,7 @@
             $("#txtcargojefeTrabajo20").attr("disabled", true);
             $("#txttelefonojefeTrabajo20").attr("disabled", true);
             $("#txtcorreojefeTrabajo20").attr("disabled", true);
+            $("#ddlPaisTL20").attr("disabled", true);
         }
 
         function mostrarBotonesTL() {
@@ -1549,8 +1629,6 @@
                                             <label class="col-sm-3 col-sm-2 control-label">
                                                 Género
                                             </label>
-
-
                                             <div class="col-sm-9">
                                                 <asp:DropDownList ID="ddlGenero" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
@@ -1786,6 +1864,15 @@
                                             <asp:TextBox ID="txtdescripcionEstudio" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTA" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
                                 </div>
 
                                 <hr />
@@ -1835,6 +1922,15 @@
                                             <asp:TextBox ID="txtdescripcionEstudio2" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTA2" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
                                 </div>
 
                                 <div id="Curso3" hidden="hidden">
@@ -1882,6 +1978,15 @@
                                             <asp:TextBox ID="txtdescripcionEstudio3" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTA3" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
                                 </div>
 
                                 <div id="Curso4" hidden="hidden">
@@ -1929,6 +2034,15 @@
                                             <asp:TextBox ID="txtdescripcionEstudio4" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTA4" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
                                 </div>
 
                                 <div id="Curso5" hidden="hidden">
@@ -1976,6 +2090,15 @@
                                             <asp:TextBox ID="txtdescripcionEstudio5" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTA5" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
                                 </div>
 
                                 <div id="Curso6" hidden="hidden">
@@ -2023,6 +2146,15 @@
                                             <asp:TextBox ID="txtdescripcionEstudio6" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTA6" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
                                 </div>
 
                                 <div id="Curso7" hidden="hidden">
@@ -2070,6 +2202,15 @@
                                             <asp:TextBox ID="txtdescripcionEstudio7" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTA7" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
                                 </div>
 
                                 <div id="Curso8" hidden="hidden">
@@ -2117,6 +2258,15 @@
                                             <asp:TextBox ID="txtdescripcionEstudio8" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTA8" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
                                 </div>
 
                                 <div id="Curso9" hidden="hidden">
@@ -2164,6 +2314,15 @@
                                             <asp:TextBox ID="txtdescripcionEstudio9" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTA9" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
                                 </div>
 
                                 <div id="Curso10" hidden="hidden">
@@ -2211,6 +2370,15 @@
                                             <asp:TextBox ID="txtdescripcionEstudio10" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTA10" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
                                 </div>
 
                                 <div id="Curso11" hidden="hidden">
@@ -2258,6 +2426,15 @@
                                             <asp:TextBox ID="txtdescripcionEstudio11" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTA11" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
                                 </div>
 
                                 <div id="Curso12" hidden="hidden">
@@ -2305,6 +2482,15 @@
                                             <asp:TextBox ID="txtdescripcionEstudio12" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTA12" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
                                 </div>
 
                                 <div id="Curso13" hidden="hidden">
@@ -2352,6 +2538,15 @@
                                             <asp:TextBox ID="txtdescripcionEstudio13" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTA13" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
                                 </div>
 
                                 <div id="Curso14" hidden="hidden">
@@ -2399,6 +2594,15 @@
                                             <asp:TextBox ID="txtdescripcionEstudio14" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTA14" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
                                 </div>
 
                                 <div id="Curso15" hidden="hidden">
@@ -2446,6 +2650,15 @@
                                             <asp:TextBox ID="txtdescripcionEstudio15" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTA15" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
                                 </div>
 
                                 <div id="Curso16" hidden="hidden">
@@ -2493,6 +2706,15 @@
                                             <asp:TextBox ID="txtdescripcionEstudio16" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTA16" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
                                 </div>
 
                                 <div id="Curso17" hidden="hidden">
@@ -2540,6 +2762,15 @@
                                             <asp:TextBox ID="txtdescripcionEstudio17" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTA17" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
                                 </div>
 
                                 <div id="Curso18" hidden="hidden">
@@ -2587,6 +2818,15 @@
                                             <asp:TextBox ID="txtdescripcionEstudio18" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTA18" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
                                 </div>
 
                                 <div id="Curso19" hidden="hidden">
@@ -2635,6 +2875,15 @@
                                             <asp:TextBox ID="txtdescripcionEstudio19" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTA19" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
                                 </div>
 
                                 <div id="Curso20" hidden="hidden">
@@ -2682,6 +2931,15 @@
                                             <asp:TextBox ID="txtdescripcionEstudio20" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTA20" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
                                 </div>
 
                                 <%--botones--%>
@@ -2785,6 +3043,15 @@
                                     </div>
 
                                     <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTL" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
+
+                                    <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre del jefe directo:
                                         </label>
@@ -2865,6 +3132,15 @@
                                             <asp:TextBox ID="txtdescripcionTrabajo2" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTL2" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -2948,6 +3224,15 @@
                                     </div>
 
                                     <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTL3" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
+
+                                    <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre del jefe directo:
                                         </label>
@@ -3027,6 +3312,15 @@
                                             <asp:TextBox ID="txtdescripcionTrabajo4" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTL4" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -3110,6 +3404,15 @@
                                     </div>
 
                                     <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTL5" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
+
+                                    <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre del jefe directo:
                                         </label>
@@ -3189,6 +3492,15 @@
                                             <asp:TextBox ID="txtdescripcionTrabajo6" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTL6" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -3272,6 +3584,15 @@
                                     </div>
 
                                     <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTL7" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
+
+                                    <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre del jefe directo:
                                         </label>
@@ -3351,6 +3672,15 @@
                                             <asp:TextBox ID="txtdescripcionTrabajo8" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTL8" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -3434,6 +3764,15 @@
                                     </div>
 
                                     <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTL9" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
+
+                                    <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre del jefe directo:
                                         </label>
@@ -3513,6 +3852,15 @@
                                             <asp:TextBox ID="txtdescripcionTrabajo10" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTL10" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -3596,6 +3944,15 @@
                                     </div>
 
                                     <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTL11" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
+
+                                    <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre del jefe directo:
                                         </label>
@@ -3675,6 +4032,15 @@
                                             <asp:TextBox ID="txtdescripcionTrabajo12" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTL12" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -3758,6 +4124,15 @@
                                     </div>
 
                                     <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTL13" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
+
+                                    <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre del jefe directo:
                                         </label>
@@ -3837,6 +4212,15 @@
                                             <asp:TextBox ID="txtdescripcionTrabajo14" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTL14" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -3920,6 +4304,15 @@
                                     </div>
 
                                     <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTL15" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
+
+                                    <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre del jefe directo:
                                         </label>
@@ -3999,6 +4392,15 @@
                                             <asp:TextBox ID="txtdescripcionTrabajo16" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTL16" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -4082,6 +4484,15 @@
                                     </div>
 
                                     <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTL17" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
+
+                                    <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre del jefe directo:
                                         </label>
@@ -4161,6 +4572,15 @@
                                             <asp:TextBox ID="txtdescripcionTrabajo18" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTL18" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -4244,6 +4664,15 @@
                                     </div>
 
                                     <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTL19" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
+
+                                    <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre del jefe directo:
                                         </label>
@@ -4323,6 +4752,15 @@
                                             <asp:TextBox ID="txtdescripcionTrabajo20" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                            <label class="col-sm-3 col-sm-2 control-label">
+                                                País
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:DropDownList ID="ddlPaisTL20" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            </div>
+                                     </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
