@@ -77,6 +77,145 @@
             //-- Trayectoria Academica --//
 
             //-- Trayectoria Laboral --//
+            $('#txttelefonojefeTrabajo').keypress(function (e) {
+                var txt = $(this).val();
+                if (txt.length > 15) {
+                    e.preventDefault();
+                }
+            });
+
+            $('#txttelefonojefeTrabajo2').keypress(function (e) {
+                var txt = $(this).val();
+                if (txt.length > 15) {
+                    e.preventDefault();
+                }
+            });
+
+            $('#txttelefonojefeTrabajo3').keypress(function (e) {
+                var txt = $(this).val();
+                if (txt.length > 15) {
+                    e.preventDefault();
+                }
+            });
+
+            $('#txttelefonojefeTrabajo4').keypress(function (e) {
+                var txt = $(this).val();
+                if (txt.length > 15) {
+                    e.preventDefault();
+                }
+            });
+
+            $('#txttelefonojefeTrabajo5').keypress(function (e) {
+                var txt = $(this).val();
+                if (txt.length > 15) {
+                    e.preventDefault();
+                }
+            });
+
+            $('#txttelefonojefeTrabajo6').keypress(function (e) {
+                var txt = $(this).val();
+                if (txt.length > 15) {
+                    e.preventDefault();
+                }
+            });
+
+            $('#txttelefonojefeTrabajo7').keypress(function (e) {
+                var txt = $(this).val();
+                if (txt.length > 15) {
+                    e.preventDefault();
+                }
+            });
+
+            $('#txttelefonojefeTrabajo8').keypress(function (e) {
+                var txt = $(this).val();
+                if (txt.length > 15) {
+                    e.preventDefault();
+                }
+            });
+
+            $('#txttelefonojefeTrabajo9').keypress(function (e) {
+                var txt = $(this).val();
+                if (txt.length > 15) {
+                    e.preventDefault();
+                }
+            });
+
+            $('#txttelefonojefeTrabajo10').keypress(function (e) {
+                var txt = $(this).val();
+                if (txt.length > 15) {
+                    e.preventDefault();
+                }
+            });
+
+            $('#txttelefonojefeTrabajo11').keypress(function (e) {
+                var txt = $(this).val();
+                if (txt.length > 15) {
+                    e.preventDefault();
+                }
+            });
+
+            $('#txttelefonojefeTrabajo12').keypress(function (e) {
+                var txt = $(this).val();
+                if (txt.length > 15) {
+                    e.preventDefault();
+                }
+            });
+
+            $('#txttelefonojefeTrabajo13').keypress(function (e) {
+                var txt = $(this).val();
+                if (txt.length > 15) {
+                    e.preventDefault();
+                }
+            });
+
+            $('#txttelefonojefeTrabajo14').keypress(function (e) {
+                var txt = $(this).val();
+                if (txt.length > 15) {
+                    e.preventDefault();
+                }
+            });
+
+            $('#txttelefonojefeTrabajo15').keypress(function (e) {
+                var txt = $(this).val();
+                if (txt.length > 15) {
+                    e.preventDefault();
+                }
+            });
+
+            $('#txttelefonojefeTrabajo16').keypress(function (e) {
+                var txt = $(this).val();
+                if (txt.length > 15) {
+                    e.preventDefault();
+                }
+            });
+
+            $('#txttelefonojefeTrabajo17').keypress(function (e) {
+                var txt = $(this).val();
+                if (txt.length > 15) {
+                    e.preventDefault();
+                }
+            });
+
+            $('#txttelefonojefeTrabajo18').keypress(function (e) {
+                var txt = $(this).val();
+                if (txt.length > 15) {
+                    e.preventDefault();
+                }
+            });
+
+            $('#txttelefonojefeTrabajo19').keypress(function (e) {
+                var txt = $(this).val();
+                if (txt.length > 15) {
+                    e.preventDefault();
+                }
+            });
+
+            $('#txttelefonojefeTrabajo20').keypress(function (e) {
+                var txt = $(this).val();
+                if (txt.length > 15) {
+                    e.preventDefault();
+                }
+            });
         });
 
         //-- Datos Personales --//
