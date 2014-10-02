@@ -31,6 +31,7 @@ namespace SWEGR.BL.BE
         bool cambiocontrasenaegresado;
         String cicloegresado;
         String codigouniversitarioegresado;
+        String carreraegresado;
 
         public int Idegresado
         {
@@ -168,6 +169,12 @@ namespace SWEGR.BL.BE
         {
             get { return codigouniversitarioegresado; }
             set { codigouniversitarioegresado = value; }
+        }
+
+        public String Carreraegresado
+        {
+            get { return carreraegresado; }
+            set { carreraegresado = value; }
         }
     }
 }

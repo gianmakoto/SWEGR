@@ -62,6 +62,7 @@ namespace SWEGR.UI
                         txtnombrecompleto.Text = graduando.Nombrecompletoegresado;
                         txtdni.Text = graduando.Dniegresado;
                         txtfechanacimiento.Text = graduando.Fechanacimientoegresado.Day.ToString() + "/" + graduando.Fechanacimientoegresado.Month.ToString() + "/" + graduando.Fechanacimientoegresado.Year.ToString();
+                        //txtCarrera.Text = graduando.Carreraegresado;
                         txttelefonoprincipal.Text = graduando.Telefonoprinegresado;
                         txttelefonoalternativo.Text = graduando.Telefonoaltegresado;
                         txtdireccion.Text = graduando.Direccionegresado;
@@ -291,73 +292,6 @@ namespace SWEGR.UI
         public bool validarFormulario()
         {
             bool errorcito = false;
-
-
-            //if (txtdni.Text == "" && txttelefonoprincipal.Text == "" && txtcorreo.Text == "" && txtperfillinkedin.Text == "")
-            //{
-            //    ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "formularioincompleto();", true);
-            //    errorcito = true;
-            //}
-
-            //if (txtdni.Text == "" && txttelefonoprincipal.Text == "" && txtcorreo.Text == "")
-            //{
-            //    ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "dnitelcorreovacio();", true);
-            //    errorcito = true;
-            //}
-
-            //if (txtdni.Text == "" && txttelefonoprincipal.Text == "" && txtperfillinkedin.Text == "")
-            //{
-            //    ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "dnitellinkedinvacio();", true);
-            //    errorcito = true;
-            //}
-
-            //if (txtdni.Text == "" && txtcorreo.Text == "" && txtperfillinkedin.Text == "")
-            //{
-            //    ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "dnicorreolinkedinvacio();", true);
-            //    errorcito = true;
-            //}
-
-            //if (txttelefonoprincipal.Text == "" && txtcorreo.Text == "" && txtperfillinkedin.Text == "")
-            //{
-            //    ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "telcorreolinkedinvacio();", true);
-            //    errorcito = true;
-            //}
-
-            //if (txtdni.Text == "" && txttelefonoprincipal.Text == "")
-            //{
-            //    ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "dniytelefonovacio();", true);
-            //    errorcito = true;
-            //}
-
-            //if (txtdni.Text == "" && txtcorreo.Text == "")
-            //{
-            //    ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "dniycorreovacio();", true);
-            //    errorcito = true;
-            //}
-
-            //if (txtdni.Text == "" && txtperfillinkedin.Text == "")
-            //{
-            //    ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "dniylinkedinvacio();", true);
-            //    errorcito = true;
-            //}
-
-            //if (txttelefonoprincipal.Text == "" && txtcorreo.Text == "")
-            //{
-            //    ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "telefonoycorreovacio();", true);
-            //    errorcito = true;
-            //}
-
-            //if (txttelefonoprincipal.Text == "" && txtperfillinkedin.Text == "")
-            //{
-            //    ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "telefonoylinkedinvacio();", true);
-            //    errorcito = true;
-            //}
-
-            //if (txtcorreo.Text == "" && txtperfillinkedin.Text == "")
-            //{
-            //    ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "correoylinkedinvacio();", true);
-            //    errorcito = true;
-            //}
 
             if (txtdni.Text == "")
             {

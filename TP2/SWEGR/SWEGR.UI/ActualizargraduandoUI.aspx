@@ -12,10 +12,6 @@
 
     <script type="text/javascript" src="MaxLength.min.js"></script>
 
-
-    <%-- 
-    <link rel="stylesheet" href="/resources/demos/style.css"> --%>
-
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
@@ -40,10 +36,6 @@
 
     <script type="text/javascript">
         $(function () {
-
-           
-            
-
 
             $('#txtdni').keypress(function (e) {
                 var txt = $(this).val();
@@ -116,188 +108,6 @@
             return true;
         }
 
-        //function formularioincompleto() {
-        //    $("#dialogvalidacion").dialog({
-        //        height: 200,
-        //        widht: 1800,
-        //        title: "Seguimiento de egresados",
-        //        buttons: {
-        //            "Aceptar": function () {
-        //                $(this).dialog("close")
-        //            }
-        //        },
-        //        modal: true
-        //    }).css("font-size", "12px");
-        //    $('#textovalidadni').text("Debe llenar este campo");
-        //    $('#textovalidatelefono').text("Debe llenar este campo");
-        //    $('#textovalidacorreo').text("Debe llenar este campo");
-        //    $('#textovalidaperfillinkedin').text("Debe llenar este campo");
-        //}
-
-        //function dnitelcorreovacio() {
-        //    $("#dialogvalidacion").dialog({
-        //        height: 200,
-        //        widht: 1800,
-        //        title: "Seguimiento de egresados",
-        //        buttons: {
-        //            "Aceptar": function () {
-        //                $(this).dialog("close")
-        //            }
-        //        },
-        //        modal: true
-        //    }).css("font-size", "12px");
-        //    $('#textovalidadni').text("Debe llenar este campo");
-        //    $('#textovalidatelefono').text("Debe llenar este campo");
-        //    $('#textovalidacorreo').text("Debe llenar este campo");
-        //}
-
-        //function dnitellinkedinvacio() {
-        //    $("#dialogvalidacion").dialog({
-        //        height: 200,
-        //        widht: 1800,
-        //        title: "Seguimiento de egresados",
-        //        buttons: {
-        //            "Aceptar": function () {
-        //                $(this).dialog("close")
-        //            }
-        //        },
-        //        modal: true
-        //    }).css("font-size", "12px");
-        //    $('#textovalidadni').text("Debe llenar este campo");
-        //    $('#textovalidatelefono').text("Debe llenar este campo");
-        //    $('#textovalidaperfillinkedin').text("Debe llenar este campo");
-        //}
-
-        //function dnicorreolinkedinvacio() {
-        //    $("#dialogvalidacion").dialog({
-        //        height: 200,
-        //        widht: 1800,
-        //        title: "Seguimiento de egresados",
-        //        buttons: {
-        //            "Aceptar": function () {
-        //                $(this).dialog("close")
-        //            }
-        //        },
-        //        modal: true
-        //    }).css("font-size", "12px");
-        //    $('#textovalidadni').text("Debe llenar este campo");
-        //    $('#textovalidacorreo').text("Debe llenar este campo");
-        //    $('#textovalidaperfillinkedin').text("Debe llenar este campo");
-        //}
-
-        //function telcorreolinkedinvacio() {
-        //    $("#dialogvalidacion").dialog({
-        //        height: 200,
-        //        widht: 1800,
-        //        title: "Seguimiento de egresados",
-        //        buttons: {
-        //            "Aceptar": function () {
-        //                $(this).dialog("close")
-        //            }
-        //        },
-        //        modal: true
-        //    }).css("font-size", "12px");
-        //    $('#textovalidatelefono').text("Debe llenar este campo");
-        //    $('#textovalidacorreo').text("Debe llenar este campo");
-        //    $('#textovalidaperfillinkedin').text("Debe llenar este campo");
-        //}
-
-        //function dniytelefonovacio() {
-        //    $("#dialogvalidacion").dialog({
-        //        height: 200,
-        //        widht: 1800,
-        //        title: "Seguimiento de egresados",
-        //        buttons: {
-        //            "Aceptar": function () {
-        //                $(this).dialog("close")
-        //            }
-        //        },
-        //        modal: true
-        //    }).css("font-size", "12px");
-        //    $('#textovalidadni').text("Debe llenar este campo");
-        //    $('#textovalidatelefono').text("Debe llenar este campo");
-        //}
-
-        //function dniycorreovacio() {
-        //    $("#dialogvalidacion").dialog({
-        //        height: 200,
-        //        widht: 1800,
-        //        title: "Seguimiento de egresados",
-        //        buttons: {
-        //            "Aceptar": function () {
-        //                $(this).dialog("close")
-        //            }
-        //        },
-        //        modal: true
-        //    }).css("font-size", "12px");
-        //    $('#textovalidadni').text("Debe llenar este campo");
-        //    $('#textovalidacorreo').text("Debe llenar este campo");
-        //}
-
-        //function dniylinkedinvacio() {
-        //    $("#dialogvalidacion").dialog({
-        //        height: 200,
-        //        widht: 1800,
-        //        title: "Seguimiento de egresados",
-        //        buttons: {
-        //            "Aceptar": function () {
-        //                $(this).dialog("close")
-        //            }
-        //        },
-        //        modal: true
-        //    }).css("font-size", "12px");
-        //    $('#textovalidadni').text("Debe llenar este campo");
-        //    $('#textovalidaperfillinkedin').text("Debe llenar este campo");
-        //}
-
-        //function telefonoycorreovacio() {
-        //    $("#dialogvalidacion").dialog({
-        //        height: 200,
-        //        widht: 1800,
-        //        title: "Seguimiento de egresados",
-        //        buttons: {
-        //            "Aceptar": function () {
-        //                $(this).dialog("close")
-        //            }
-        //        },
-        //        modal: true
-        //    }).css("font-size", "12px");
-        //    $('#textovalidatelefono').text("Debe llenar este campo");
-        //    $('#textovalidacorreo').text("Debe llenar este campo");
-        //}
-
-        //function telefonoylinkedinvacio() {
-        //    $("#dialogvalidacion").dialog({
-        //        height: 200,
-        //        widht: 1800,
-        //        title: "Seguimiento de egresados",
-        //        buttons: {
-        //            "Aceptar": function () {
-        //                $(this).dialog("close")
-        //            }
-        //        },
-        //        modal: true
-        //    }).css("font-size", "12px");
-        //    $('#textovalidatelefono').text("Debe llenar este campo");
-        //    $('#textovalidaperfillinkedin').text("Debe llenar este campo");
-        //}
-
-        //function correoylinkedinvacio() {
-        //    $("#dialogvalidacion").dialog({
-        //        height: 200,
-        //        widht: 1800,
-        //        title: "Seguimiento de egresados",
-        //        buttons: {
-        //            "Aceptar": function () {
-        //                $(this).dialog("close")
-        //            }
-        //        },
-        //        modal: true
-        //    }).css("font-size", "12px");
-        //    $('#textovalidacorreo').text("Debe llenar este campo");
-        //    $('#textovalidaperfillinkedin').text("Debe llenar este campo");
-        //}
-
         function dnivacio() {
             $("#dialogvalidacion").dialog({
                 height: 200,
@@ -355,19 +165,6 @@
             }).css("font-size", "12px");
         }
 
-        //function correoinvalido() {
-        //    $('#textovalidacorreo').text("Ingrese un correo valido");
-        //    $('#textovalidacorreo').css('color', 'red');
-        //}
-
-        //function urlinvalido() {
-        //    $('#textovalidaperfillinkedin').text("Ingrese un url valido");
-        //}
-
-        //function correoalternoinvalido() {
-        //    $('#textovalidacorreoalt').text("Ingrese un correo valido");
-        //}
-
         function exito() {
             $("#dialogexito").dialog({
                 height: 200,
@@ -420,6 +217,7 @@
                     <a class="navbar-brand" href="Index.aspx">
                         <img style="margin-top: -15px" src="http://cdn4.upc.edu.pe/sites/all/themes/upc_2013/img/logo.png"></img></a>
                 </div>
+
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav" style="align: center">
                         <li><a href="Index.aspx">Inicio</a></li>
@@ -518,6 +316,16 @@
                                         CssClass="form-control" Enabled="false"></asp:TextBox>
                                 </div>
                             </div>
+
+                            <div class="form-group">
+                                    <label class="col-sm-2 col-sm-2 control-label">
+                                        Carrera
+                                    </label>
+                                    <div class="col-sm-8">
+                                        <asp:TextBox ID="txtCarrera" runat="server"
+                                            CssClass="form-control" placeholder="Ejemplo: Carrera" Enabled="false"></asp:TextBox>
+                                    </div>
+                                </div>
 
                             <div class="form-group">
                                 <label class="col-sm-2 col-sm-2 control-label">

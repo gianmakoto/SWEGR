@@ -52,7 +52,6 @@ namespace SWEGR.UI
                     ddlPais.DataSource = lsPaisBE;
                     ddlPais.DataBind();
                     ddlPais.Items.Insert(0, new ListItem("Seleccione el país", ""));
-                    
 
                     EgresadoBC objEgresadoBC = new EgresadoBC();
                     EgresadoBE graduando = objEgresadoBC.obtenerEgresado(IDEgresado);
@@ -60,6 +59,7 @@ namespace SWEGR.UI
                     txtnombrecompleto.Text = graduando.Nombrecompletoegresado;
                     txtdni.Text = graduando.Dniegresado;
                     txtfechanacimiento.Text = graduando.Fechanacimientoegresado.Day.ToString() + "/" + graduando.Fechanacimientoegresado.Month.ToString() + "/" + graduando.Fechanacimientoegresado.Year.ToString();
+                    //txtCarrera.Text = graduando.Carreraegresado;
                     txttelefonoprincipal.Text = graduando.Telefonoprinegresado;
                     txttelefonoalternativo.Text = graduando.Telefonoaltegresado;
                     txtdireccion.Text = graduando.Direccionegresado;

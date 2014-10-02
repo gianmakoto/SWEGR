@@ -323,8 +323,6 @@
                                             <label class="col-sm-3 col-sm-2 control-label">
                                                 Género
                                             </label>
-
-
                                             <div class="col-sm-9">
                                                 <asp:DropDownList ID="ddlGenero" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
@@ -347,6 +345,16 @@
                                         CssClass="form-control" Enabled="false"></asp:TextBox>
                                 </div>
                             </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 col-sm-2 control-label">
+                                        Carrera
+                                    </label>
+                                    <div class="col-sm-8">
+                                        <asp:TextBox ID="txtCarrera" runat="server"
+                                            CssClass="form-control" placeholder="Ejemplo: Carrera" Enabled="false"></asp:TextBox>
+                                    </div>
+                                </div>
 
                             <div class="form-group">
                                 <label class="col-sm-2 col-sm-2 control-label">

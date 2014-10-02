@@ -724,6 +724,10 @@
             $("#btneditarTA").show();
         }
 
+        function ocultaragregarTA() {
+            $("#btnagregarTA").hide();
+        }
+
         function camposVaciosRA() {
             $("#dialogincompletoTA").dialog({
                 height: 200,
@@ -1412,6 +1416,10 @@
             $("#btneditarTL").show();
         }
 
+        function ocultaragregarTL() {
+            $("#btnagregarTL").hide();
+        }
+
         function camposVaciosRL() {
             $("#dialogincompletoTL").dialog({
                 height: 200,
@@ -1769,7 +1777,7 @@
                                                 Género
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlGenero" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlGenero" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                         </div>
                                     </div>
@@ -1793,6 +1801,16 @@
 
                                 <div class="form-group">
                                     <label class="col-sm-2 col-sm-2 control-label">
+                                        Carrera
+                                    </label>
+                                    <div class="col-sm-8">
+                                        <asp:TextBox ID="txtCarrera" runat="server"
+                                            CssClass="form-control" placeholder="Ejemplo: Carrera" Enabled="false"></asp:TextBox>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 col-sm-2 control-label">
                                         * Teléfonos
                                     </label>
                                     <div class="col-sm-4">
@@ -1805,6 +1823,8 @@
                                             CssClass="form-control" placeholder="00-999-999-9999 (alternativo)" data-mask="999-999-999" onkeypress="return isNumber(event)" onpaste="return false" Enabled="false"></asp:TextBox>
                                     </div>
                                 </div>
+
+                                
 
                                 <div class="form-group">
                                     <label class="col-sm-2 col-sm-2 control-label">
@@ -2009,13 +2029,13 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTA" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
                                 </div>
 
-                                <hr />
                                 <div id="Curso2" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
 
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -2067,12 +2087,13 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA2" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTA2" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
                                 </div>
 
                                 <div id="Curso3" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -2123,12 +2144,13 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA3" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTA3" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
                                 </div>
 
                                 <div id="Curso4" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -2179,12 +2201,13 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA4" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTA4" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
                                 </div>
 
                                 <div id="Curso5" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -2235,12 +2258,13 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA5" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTA5" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
                                 </div>
 
                                 <div id="Curso6" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -2291,12 +2315,13 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA6" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTA6" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
                                 </div>
 
                                 <div id="Curso7" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -2347,12 +2372,13 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA7" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTA7" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
                                 </div>
 
                                 <div id="Curso8" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -2403,12 +2429,13 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA8" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTA8" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
                                 </div>
 
                                 <div id="Curso9" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -2459,12 +2486,13 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA9" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTA9" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
                                 </div>
 
                                 <div id="Curso10" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -2515,12 +2543,13 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA10" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTA10" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
                                 </div>
 
                                 <div id="Curso11" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -2571,12 +2600,13 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA11" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTA11" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
                                 </div>
 
                                 <div id="Curso12" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -2627,12 +2657,13 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA12" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTA12" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
                                 </div>
 
                                 <div id="Curso13" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -2683,12 +2714,13 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA13" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTA13" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
                                 </div>
 
                                 <div id="Curso14" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -2739,12 +2771,13 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA14" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTA14" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
                                 </div>
 
                                 <div id="Curso15" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -2795,12 +2828,13 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA15" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTA15" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
                                 </div>
 
                                 <div id="Curso16" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -2851,12 +2885,13 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA16" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTA16" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
                                 </div>
 
                                 <div id="Curso17" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -2907,12 +2942,13 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA17" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTA17" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
                                 </div>
 
                                 <div id="Curso18" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -2963,12 +2999,13 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA18" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTA18" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
                                 </div>
 
                                 <div id="Curso19" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
 
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -3020,12 +3057,13 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA19" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTA19" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
                                 </div>
 
                                 <div id="Curso20" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -3076,7 +3114,7 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA20" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTA20" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
                                 </div>
@@ -3186,7 +3224,7 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTL" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
 
@@ -3277,7 +3315,7 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL2" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTL2" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
 
@@ -3326,6 +3364,7 @@
                                 </div>
 
                                 <div id="Trabajo3" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -3367,7 +3406,7 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL3" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTL3" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
 
@@ -3416,6 +3455,7 @@
                                 </div>
 
                                 <div id="Trabajo4" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -3457,7 +3497,7 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL4" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTL4" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
 
@@ -3506,6 +3546,7 @@
                                 </div>
 
                                 <div id="Trabajo5" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -3547,7 +3588,7 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL5" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTL5" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
 
@@ -3596,6 +3637,7 @@
                                 </div>
 
                                 <div id="Trabajo6" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -3637,7 +3679,7 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL6" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTL6" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
 
@@ -3686,6 +3728,7 @@
                                 </div>
 
                                 <div id="Trabajo7" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -3727,7 +3770,7 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL7" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTL7" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
 
@@ -3776,6 +3819,7 @@
                                 </div>
 
                                 <div id="Trabajo8" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -3817,7 +3861,7 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL8" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTL8" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
 
@@ -3866,6 +3910,7 @@
                                 </div>
 
                                 <div id="Trabajo9" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -3907,7 +3952,7 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL9" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTL9" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
 
@@ -3956,6 +4001,7 @@
                                 </div>
 
                                 <div id="Trabajo10" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -3997,7 +4043,7 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL10" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTL10" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
 
@@ -4046,6 +4092,7 @@
                                 </div>
 
                                 <div id="Trabajo11" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -4087,7 +4134,7 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL11" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTL11" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
 
@@ -4136,6 +4183,7 @@
                                 </div>
 
                                 <div id="Trabajo12" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -4177,7 +4225,7 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL12" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTL12" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
 
@@ -4226,6 +4274,7 @@
                                 </div>
 
                                 <div id="Trabajo13" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -4267,7 +4316,7 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL13" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTL13" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
 
@@ -4316,6 +4365,7 @@
                                 </div>
 
                                 <div id="Trabajo14" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -4357,7 +4407,7 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL14" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTL14" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
 
@@ -4406,6 +4456,7 @@
                                 </div>
 
                                 <div id="Trabajo15" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -4447,7 +4498,7 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL15" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTL15" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
 
@@ -4496,6 +4547,7 @@
                                 </div>
 
                                 <div id="Trabajo16" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -4537,7 +4589,7 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL16" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTL16" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
 
@@ -4586,6 +4638,7 @@
                                 </div>
 
                                 <div id="Trabajo17" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -4627,7 +4680,7 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL17" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTL17" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
 
@@ -4676,6 +4729,7 @@
                                 </div>
 
                                 <div id="Trabajo18" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -4717,7 +4771,7 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL18" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTL18" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
 
@@ -4766,6 +4820,7 @@
                                 </div>
 
                                 <div id="Trabajo19" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -4807,7 +4862,7 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL19" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTL19" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
 
@@ -4856,6 +4911,7 @@
                                 </div>
 
                                 <div id="Trabajo20" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -4897,7 +4953,7 @@
                                                 País
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL20" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlPaisTL20" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                      </div>
 

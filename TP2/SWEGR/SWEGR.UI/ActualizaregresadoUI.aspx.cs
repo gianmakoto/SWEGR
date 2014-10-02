@@ -31,7 +31,6 @@ namespace SWEGR.UI
             try
             {
                 char TUsuario;
-                //IDEgresado = Convert.ToInt32(Session["IDVisEgre"].ToString());
                 IDEgresado = Convert.ToInt32(Session["IDusuario"].ToString());
                 TUsuario = Convert.ToChar(Session["TipoUsuario"]);
                 if (TUsuario == 'G')
@@ -73,6 +72,7 @@ namespace SWEGR.UI
                     txtnombrecompleto.Text = egresado.Nombrecompletoegresado;
                     txtdni.Text = egresado.Dniegresado;
                     txtfechanacimiento.Text = egresado.Fechanacimientoegresado.Day.ToString() + "/" + egresado.Fechanacimientoegresado.Month.ToString() + "/" + egresado.Fechanacimientoegresado.Year.ToString();
+                    //txtCarrera.Text = egresado.Carreraegresado;
                     txttelefonoprincipal.Text = egresado.Telefonoprinegresado;
                     txttelefonoalternativo.Text = egresado.Telefonoaltegresado;
                     txtdireccion.Text = egresado.Direccionegresado;
@@ -3462,6 +3462,8 @@ namespace SWEGR.UI
 
         protected void btnagregarRA_Click(object sender, EventArgs e)
         {
+            ScriptManager.RegisterStartupScript(Page, GetType(), "ocultaragregarTA", "ocultaragregarTA();", true);
+            
             int idegresado = IDEgresado;
             RegistroAcademicoBE objRegistroAcademicoBE = new RegistroAcademicoBE();
             List<RegistroAcademicoBE> listaRegistroAcademicoBE = new List<RegistroAcademicoBE>();
@@ -6914,6 +6916,8 @@ namespace SWEGR.UI
 
         protected void btnagregarRL_Click(object sender, EventArgs e)
         {
+            ScriptManager.RegisterStartupScript(Page, GetType(), "ocultaragregarTL", "ocultaragregarTL();", true);
+
             int idegresado = IDEgresado;
             agregarActivado = 1;
             RegistroLaboralBE objRegistroLaboralBE = new RegistroLaboralBE();
