@@ -334,6 +334,8 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Images\delete.png" />
+    <Content Include="Images\edit.png" />
     <Content Include="Images\egresados.jpg" />
     <Content Include="Images\exigete.jpg" />
     <Content Include="Images\foto1.png" />
@@ -353,7 +355,9 @@
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
     <Content Include="Index.aspx" />
+    <Content Include="InsertaregresadoUI.aspx" />
     <Content Include="ListarEgresados.aspx" />
+    <Content Include="ListaregresadosUI.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Loginprueba.aspx" />
     <Content Include="Login\css\bootstrap-reset.css" />
@@ -516,12 +520,26 @@
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="InsertaregresadoUI.aspx.cs">
+      <DependentUpon>InsertaregresadoUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsertaregresadoUI.aspx.designer.cs">
+      <DependentUpon>InsertaregresadoUI.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ListarEgresados.aspx.cs">
       <DependentUpon>ListarEgresados.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ListarEgresados.aspx.designer.cs">
       <DependentUpon>ListarEgresados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListaregresadosUI.aspx.cs">
+      <DependentUpon>ListaregresadosUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListaregresadosUI.aspx.designer.cs">
+      <DependentUpon>ListaregresadosUI.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

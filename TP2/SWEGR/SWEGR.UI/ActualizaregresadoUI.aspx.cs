@@ -72,7 +72,7 @@ namespace SWEGR.UI
                     txtnombrecompleto.Text = egresado.Nombrecompletoegresado;
                     txtdni.Text = egresado.Dniegresado;
                     txtfechanacimiento.Text = egresado.Fechanacimientoegresado.Day.ToString() + "/" + egresado.Fechanacimientoegresado.Month.ToString() + "/" + egresado.Fechanacimientoegresado.Year.ToString();
-                    //txtCarrera.Text = egresado.Carreraegresado;
+                    txtCarrera.Text = egresado.Carreraegresado;
                     txttelefonoprincipal.Text = egresado.Telefonoprinegresado;
                     txttelefonoalternativo.Text = egresado.Telefonoaltegresado;
                     txtdireccion.Text = egresado.Direccionegresado;
@@ -102,17 +102,26 @@ namespace SWEGR.UI
                     llenarregistroacademico(IDEgresado);
                     llenarregistrolaboral(IDEgresado);
 
-                    lstaptitudes.DataSource = listaaptitudes(IDEgresado);
-                    lstaptitudes.DataBind();
-
-                    lstintereses.DataSource = listaintereses(IDEgresado);
-                    lstintereses.DataBind();
+                    grdAptitudesDataBind();
+                    grdInteresesDataBind();
                 }
             }
             catch (Exception)
             {
                 ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Ocurrió un error\")</script>", false);
             }
+        }
+
+        public void grdAptitudesDataBind()
+        {
+            grdAptitudes.DataSource = listaaptitudbe(IDEgresado);
+            grdAptitudes.DataBind();
+        }
+
+        public void grdInteresesDataBind()
+        {
+            grdIntereses.DataSource = listainteresbe(IDEgresado);
+            grdIntereses.DataBind();
         }
 
         public void llenarregistroacademico(int idegresado)
@@ -1091,13 +1100,12 @@ namespace SWEGR.UI
                 return;
         }
 
-        public List<String> listaaptitudes(int idegresado)
+        public List<AptitudBE> listaaptitudbe(int idegresado)
         {
-            List<String> lsaptitudes = new List<string>();
+            List<AptitudBE> lstaptitudes = new List<AptitudBE>();
             List<int> idaptitudes = new List<int>();
-            AptitudBE objetoAptitudBE = new AptitudBE();
-            AptitudBC objetoAptitudBC = new AptitudBC();
-
+            AptitudBE objAptitudBE = new AptitudBE();
+            AptitudBC objAptitudBC = new AptitudBC();
 
             EgresadoBC objetoEgresadoBC = new EgresadoBC();
             idaptitudes = objetoEgresadoBC.listaraptitudxegresado(idegresado);
@@ -1106,19 +1114,20 @@ namespace SWEGR.UI
             {
                 int aptitudid = idaptitudes[i];
 
-                objetoAptitudBE = objetoAptitudBC.obtenerAptitud(aptitudid);
+                objAptitudBE = objAptitudBC.obtenerAptitud(aptitudid);
 
-                lsaptitudes.Add(objetoAptitudBE.Nombreaptitud);
+                lstaptitudes.Add(objAptitudBE);
             }
-            return lsaptitudes;
+            return lstaptitudes;
+
         }
 
-        public List<String> listaintereses(int idegresado)
+        public List<InteresBE> listainteresbe(int idegresado)
         {
-            List<String> lsintereses = new List<string>();
+            List<InteresBE> lstintereses = new List<InteresBE>();
             List<int> idintereses = new List<int>();
-            InteresBE objetoInteresBE = new InteresBE();
-            InteresBC objetoInteresBC = new InteresBC();
+            InteresBE objInteresBE = new InteresBE();
+            InteresBC objInteresBC = new InteresBC();
 
 
             EgresadoBC objetoEgresadoBC = new EgresadoBC();
@@ -1128,12 +1137,45 @@ namespace SWEGR.UI
             {
                 int interesid = idintereses[i];
 
-                objetoInteresBE = objetoInteresBC.obtenerInteres(interesid);
+                objInteresBE = objInteresBC.obtenerInteres(interesid);
 
+                lstintereses.Add(objInteresBE);
+            }
+            return lstintereses;
+        }
+
+        /*public List<String> listaaptitudes(int idegresado)
+        {
+            List<String> lsaptitudes = new List<string>();
+            List<int> idaptitudes = new List<int>();
+            AptitudBE objetoAptitudBE = new AptitudBE();
+            AptitudBC objetoAptitudBC = new AptitudBC();
+            EgresadoBC objetoEgresadoBC = new EgresadoBC();
+            idaptitudes = objetoEgresadoBC.listaraptitudxegresado(idegresado);
+            for (int i = 0; i < idaptitudes.Count(); i++)
+            {
+                int aptitudid = idaptitudes[i];
+                objetoAptitudBE = objetoAptitudBC.obtenerAptitud(aptitudid);
+                lsaptitudes.Add(objetoAptitudBE.Nombreaptitud);
+            }
+            return lsaptitudes;
+        }*/
+        /*public List<String> listaintereses(int idegresado)
+        {
+            List<String> lsintereses = new List<string>();
+            List<int> idintereses = new List<int>();
+            InteresBE objetoInteresBE = new InteresBE();
+            InteresBC objetoInteresBC = new InteresBC();
+            EgresadoBC objetoEgresadoBC = new EgresadoBC();
+            idintereses = objetoEgresadoBC.listaraptitudxegresado(idegresado);
+            for (int i = 0; i < idintereses.Count(); i++)
+            {
+                int interesid = idintereses[i];
+                objetoInteresBE = objetoInteresBC.obtenerInteres(interesid);
                 lsintereses.Add(objetoInteresBE.Nombreinteres);
             }
             return lsintereses;
-        }
+        }*/
 
         public List<String> listagenero()
         {
@@ -1350,6 +1392,30 @@ namespace SWEGR.UI
             ddlPaisTL20.DataSource = lsPaisBE;
             ddlPaisTL20.DataBind();
             ddlPaisTL20.Items.Insert(0, new ListItem("Seleccione el país", ""));
+        }
+
+        //*** Funcion Botones ***///
+
+        protected void btndatosPersonales_Click(object sender, EventArgs e)
+        {
+            ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "datosPersonalesToggle();", true);
+        }
+
+        protected void btntrayectoriaAcad_Click(object sender, EventArgs e)
+        {
+            ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "trayectoriaAcadToggle();", true);
+        }
+
+        protected void btntrayectoriaProf_Click(object sender, EventArgs e)
+        {
+            ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "trayectoriaProfToggle();", true);
+
+        }
+
+        protected void btnaptitudesIntereses_Click(object sender, EventArgs e)
+        {
+            ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "aptitudesInteresesToggle();", true);
+
         }
 
         //*** Datos Personales ***//
@@ -7044,30 +7110,131 @@ namespace SWEGR.UI
 
         //*** Aptitudes e intereses ***//
 
-
-
-        //*** Funcion Botones ***///
-
-        protected void btndatosPersonales_Click(object sender, EventArgs e)
+        protected void grdAptitudes_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "datosPersonalesToggle();", true);
+            if (e.CommandName.ToUpper().Equals("CMDEDITAR"))
+            {
+                
+                grdAptitudesDataBind();
+
+            }
+            else if (e.CommandName.ToUpper().Equals("CMDELIMINAR"))
+            {
+                //Refresacar la grilla
+                ScriptManager.RegisterStartupScript(Page, GetType(), "preguntaeliminarapt", "preguntaeliminarapt();", true);
+                grdAptitudesDataBind();
+            }
         }
 
-        protected void btntrayectoriaAcad_Click(object sender, EventArgs e)
+        public String NombreFormatear(String sNombre)
         {
-            ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "trayectoriaAcadToggle();", true);
+            if (sNombre.Length < 21)
+            {
+                return sNombre;
+            }
+            else
+            {
+                return sNombre.Substring(0, 21) + "...";
+            }
         }
 
-        protected void btntrayectoriaProf_Click(object sender, EventArgs e)
+        protected void grdIntereses_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "trayectoriaProfToggle();", true);
+            if (e.CommandName.ToUpper().Equals("CMDEDITAR"))
+            {
+                grdInteresesDataBind();
 
+            }
+            else if (e.CommandName.ToUpper().Equals("CMDELIMINAR"))
+            {
+                //Refresacar la grilla
+                grdAptitudesDataBind();
+            }
         }
 
-        protected void btnaptitudesIntereses_Click(object sender, EventArgs e)
-        {
-            ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "aptitudesInteresesToggle();", true);
 
+
+        //////////*Botones Apitudes*////////
+
+        protected void btnAgregaraptitud_Click(object sender, EventArgs e)
+        {
+            ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarapt", "mostrarapt();", true);
+        }
+
+        protected void btnCancelaraptitud_Click(object sender, EventArgs e)
+        {
+            ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarapt", "ocultarapt();", true);
+            ScriptManager.RegisterStartupScript(Page, GetType(), "cancelareditarapt", "cancelareditarapt();", true);
+        }
+
+        protected void btnGuardaraptitud_Click(object sender, EventArgs e)
+        {
+            if (txtAptitud.Text != "" && txtAptitud.Text != null)
+                grdAptitudesDataBind();
+                // Actualizar aptitud()    
+            else
+                ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarapt", "ocultarapt();", true);
+        }
+
+        protected void btnInsertaraptitud_Click(object sender, EventArgs e)
+        {
+             if (txtAptitud.Text != ""&& txtAptitud.Text != null)
+                grdAptitudesDataBind();
+                // Insertar aptitud()    
+            else
+                ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarapt", "ocultarapt();", true);
+        }
+
+        protected void btnEliminarAptitud_Click(object sender, ImageClickEventArgs e)
+        {
+            ScriptManager.RegisterStartupScript(Page, GetType(), "preguntaeliminarapt", "preguntaeliminarapt();", true);
+        }
+
+        protected void btnEditarAptitud_Click(object sender, ImageClickEventArgs e)
+        {
+            ScriptManager.RegisterStartupScript(Page, GetType(), "editarapt", "editarapt();", true);
+        }
+
+
+
+        //////////*Botones Intereses*//////////
+
+        protected void btnAgregarinteres_Click(object sender, EventArgs e)
+        {
+            ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarint", "mostrarint();", true);
+        }
+
+        protected void btnCancelarinteres_Click(object sender, EventArgs e)
+        {
+            ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarint", "ocultarint();", true);
+        }
+
+        protected void btnGuardarinteres_Click(object sender, EventArgs e)
+        {
+            if (txtInteres.Text != "" && txtInteres.Text != null)
+                grdInteresesDataBind();
+                //Actualizar interes()
+            else
+                ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarint", "ocultarint();", true);
+        }
+
+        protected void btnInsertarinteres_Click(object sender, EventArgs e)
+        {
+            if (txtInteres.Text != "" && txtInteres.Text != null)
+                grdInteresesDataBind();
+                //Insertar interes()
+            else
+                ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarint", "ocultarint();", true);
+        }
+
+        protected void btnEliminarInteres_Click(object sender, ImageClickEventArgs e)
+        {
+            ScriptManager.RegisterStartupScript(Page, GetType(), "preguntaeliminarint", "preguntaeliminarint();", true);
+        }
+        
+        protected void btnEditarInteres_Click(object sender, ImageClickEventArgs e)
+        {
+            ScriptManager.RegisterStartupScript(Page, GetType(), "editarint", "editarint();", true);
         }
     }
 }

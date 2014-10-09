@@ -586,8 +586,8 @@ namespace SWEGR.BL.BC
                         HtmlNode img = container_img.SelectSingleNode(".//img");
                         if (img != null)
                         {
-                            usuarioObtenido.Fotoegresado = img.Attributes["src"].Value;
-
+                            //usuarioObtenido.Fotoegresado = img.Attributes["src"].Value;
+                            return usuarioObtenido;
                         }
                     }
 

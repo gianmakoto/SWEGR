@@ -1613,6 +1613,129 @@
         function ocultarTrabajo20() {
             $("#Trabajo20").hide();
         }
+
+        //-- Aptitudes e Intereses --//
+
+        function editarapt() {
+            $("#btnguardarapt").show();
+            $("#btncancelarapt").show();
+            $("#txtapt").show();
+            $("#btnagregarapt").hide();
+        }
+
+        function mostrarapt() {
+            $("#btninsertarapt").show();
+            $("#btncancelarapt").show();
+            $("#txtapt").show();
+            $("#btnagregarapt").hide();
+        }
+
+        function ocultarapt() {
+            $("#btninsertarapt").hide();
+            $("#btnguardarapt").hide();
+            $("#btncancelarapt").hide();
+            $("#txtapt").hide();
+            $("#btnagregarapt").show();
+        }
+
+        function preguntaeliminarapt() {
+            $("#dialogpreguntaaptitud").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    "Aceptar": function () {
+                        $(this).dialog("close")
+                        eliminarapt();
+                        return true;
+                    },
+                    "Cancelar": function () {
+                        $(this).dialog("close")
+                        return false;
+                    },
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
+
+        function eliminarapt() {
+            $("#dialogconfirmacionaptitud").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    "Aceptar": function () {
+                        $(this).dialog("close")
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
+
+        /*function editarapt() {
+            $('[id*=btnEditarAptitud]').attr("disabled", false);
+            $('[id*=btnEliminarAptitud]').attr("disabled", false);
+        }*/
+
+        /*function cancelareditarapt() {
+            $('[id*=btnEditarAptitud]').attr("disabled", true);
+            $('[id*=btnEliminarAptitud]').attr("disabled", true);
+        }*/
+
+        function editarint() {
+            $("#btnguardarint").show();
+            $("#btncancelarint").show();
+            $("#txtint").show();
+            $("#btnagregarint").hide();
+        }
+
+        function mostrarint() {
+            $("#btninsertarint").show();
+            $("#btncancelarint").show();
+            $("#txtint").show();
+            $("#btnagregarint").hide();
+        }
+
+        function ocultarint() {
+            $("#btninsertarint").hide();
+            $("#btnguardarint").hide();
+            $("#btncancelarint").hide();
+            $("#txtint").hide();
+            $("#btnagregarint").show();
+        }
+
+        function preguntaeliminarint() {
+            $("#dialogpreguntainteres").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    "Aceptar": function () {
+                        $(this).dialog("close")
+                        eliminarint();
+                    },
+                    "Cancelar": function () {
+                        $(this).dialog("close")
+                    },
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
+
+        function eliminarint() {
+            $("#dialogconfirmacioninteres").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    "Aceptar": function () {
+                        $(this).dialog("close")
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
+
         //-- FuncionesToogle --//
 
         function datosPersonalesToggle() {
@@ -1824,7 +1947,7 @@
                                     </div>
                                 </div>
 
-                                
+
 
                                 <div class="form-group">
                                     <label class="col-sm-2 col-sm-2 control-label">
@@ -2025,13 +2148,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTA" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div id="Curso2" hidden="hidden">
@@ -2083,13 +2206,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA2" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTA2" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div id="Curso3" hidden="hidden">
@@ -2140,13 +2263,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA3" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTA3" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div id="Curso4" hidden="hidden">
@@ -2197,13 +2320,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA4" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTA4" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div id="Curso5" hidden="hidden">
@@ -2254,13 +2377,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA5" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTA5" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div id="Curso6" hidden="hidden">
@@ -2311,13 +2434,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA6" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTA6" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div id="Curso7" hidden="hidden">
@@ -2368,13 +2491,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA7" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTA7" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div id="Curso8" hidden="hidden">
@@ -2425,13 +2548,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA8" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTA8" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div id="Curso9" hidden="hidden">
@@ -2482,13 +2605,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA9" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTA9" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div id="Curso10" hidden="hidden">
@@ -2539,13 +2662,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA10" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTA10" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div id="Curso11" hidden="hidden">
@@ -2596,13 +2719,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA11" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTA11" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div id="Curso12" hidden="hidden">
@@ -2653,13 +2776,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA12" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTA12" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div id="Curso13" hidden="hidden">
@@ -2710,13 +2833,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA13" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTA13" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div id="Curso14" hidden="hidden">
@@ -2767,13 +2890,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA14" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTA14" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div id="Curso15" hidden="hidden">
@@ -2824,13 +2947,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA15" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTA15" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div id="Curso16" hidden="hidden">
@@ -2881,13 +3004,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA16" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTA16" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div id="Curso17" hidden="hidden">
@@ -2938,13 +3061,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA17" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTA17" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div id="Curso18" hidden="hidden">
@@ -2995,13 +3118,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA18" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTA18" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div id="Curso19" hidden="hidden">
@@ -3053,13 +3176,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA19" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTA19" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div id="Curso20" hidden="hidden">
@@ -3110,13 +3233,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTA20" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTA20" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <%--botones--%>
@@ -3220,13 +3343,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTL" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -3311,13 +3434,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL2" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTL2" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -3402,13 +3525,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL3" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTL3" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -3493,13 +3616,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL4" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTL4" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -3584,13 +3707,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL5" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTL5" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -3675,13 +3798,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL6" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTL6" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -3766,13 +3889,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL7" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTL7" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -3857,13 +3980,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL8" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTL8" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -3948,13 +4071,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL9" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTL9" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -4039,13 +4162,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL10" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTL10" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -4130,13 +4253,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL11" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTL11" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -4221,13 +4344,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL12" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTL12" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -4312,13 +4435,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL13" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTL13" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -4403,13 +4526,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL14" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTL14" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -4494,13 +4617,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL15" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTL15" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -4585,13 +4708,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL16" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTL16" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -4676,13 +4799,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL17" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTL17" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -4767,13 +4890,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL18" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTL18" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -4858,13 +4981,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL19" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTL19" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -4949,13 +5072,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                País
-                                            </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlPaisTL20" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
-                                            </div>
-                                     </div>
+                                        <label class="col-sm-3 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <asp:DropDownList ID="ddlPaisTL20" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -5065,31 +5188,192 @@
 
                             <div id="aptitudesIntereses" style="border: 1px solid black; padding-left: 4%; padding-top: 4%" hidden="hidden">
                                 <div class="form-group">
-                                    <table cellspacion="0" cellpadding="3" border="0" style="margin: auto" class="auto-style13">
+                                    <table border="0" style="margin: auto" class="auto-style13">
                                         <tr>
-                                            <td style="text-align: left; vertical-align: top">Aptitudes:</td>
-                                            <td>
-                                                <asp:ListBox ID="lstaptitudes" runat="server" Width="220px" Height="150px" AutoPostBack="false"></asp:ListBox>
+                                            <td style="width: 200px">
+
+                                                <div class="form-group">
+                                                    <div class="col-sm-9">
+                                                        <asp:GridView ID="grdAptitudes" runat="server" AutoGenerateColumns="false" OnRowCommand="grdAptitudes_RowCommand">
+                                                            <Columns>
+                                                                <asp:BoundField HeaderText="Aptitud" DataField="Nombreaptitud" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                                                <asp:TemplateField HeaderText="Editar" ItemStyle-HorizontalAlign="Center">
+                                                                    <ItemTemplate>
+                                                                        <asp:UpdatePanel ID="upbtnEditarAptitud" runat="server" UpdateMode="Conditional">
+                                                                            <ContentTemplate>
+                                                                                <div id="diveditarapt">
+                                                                                    <asp:ImageButton ID="btnEditarAptitud" runat="server" CommandName="cmdEditar" ImageUrl="Images/edit.png" Width="16" Height="16" OnClick="btnEditarAptitud_Click" />
+                                                                                </div>
+                                                                            </ContentTemplate>
+                                                                        </asp:UpdatePanel>
+                                                                    </ItemTemplate>
+                                                                </asp:TemplateField>
+                                                                <asp:TemplateField HeaderText="Eliminar" ItemStyle-HorizontalAlign="Center">
+                                                                    <ItemTemplate>
+                                                                        <asp:UpdatePanel ID="upbtnEliminarAptitud" runat="server" UpdateMode="Conditional">
+                                                                            <ContentTemplate>
+                                                                                <asp:ImageButton ID="btnEliminarAptitud" runat="server" CommandName="cmdEliminar" ImageUrl="Images/delete.png" Width="16" Height="16" OnClick="btnEliminarAptitud_Click" />
+                                                                            </ContentTemplate>
+                                                                        </asp:UpdatePanel>
+                                                                    </ItemTemplate>
+                                                                </asp:TemplateField>
+                                                            </Columns>
+                                                        </asp:GridView>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group" id="btnagregarapt">
+                                                    <asp:UpdatePanel ID="upAgregaraptitud" runat="server" UpdateMode="Conditional">
+                                                        <ContentTemplate>
+                                                            <div class="col-sm-10">
+                                                                <asp:Button ID="btnAgregaraptitud" runat="server" Text="+ Agregar Aptitud" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnAgregaraptitud_Click" />
+                                                            </div>
+                                                        </ContentTemplate>
+                                                    </asp:UpdatePanel>
+                                                </div>
+                                                <div class="form-group" id="txtapt" hidden="hidden">
+                                                    <label class="col-sm-2 col-sm-2 control-label">
+                                                        Aptitud:
+                                                    </label>
+                                                    <div class="col-sm-9">
+                                                        <asp:TextBox ID="txtAptitud" runat="server" CssClass="form-control" type="text" placeholder="Escriba la aptitud"></asp:TextBox>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" id="btninsertarapt" hidden="hidden">
+                                                    <asp:UpdatePanel ID="upinsertaraptitud" runat="server" UpdateMode="Conditional">
+                                                        <ContentTemplate>
+                                                            <div class="col-sm-10">
+                                                                <asp:Button ID="btnInsertaraptitud" runat="server" Text="Agregar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnInsertaraptitud_Click" />
+                                                            </div>
+                                                        </ContentTemplate>
+                                                    </asp:UpdatePanel>
+                                                </div>
+                                                <div class="form-group" id="btnguardarapt" hidden="hidden">
+                                                    <asp:UpdatePanel ID="upguardaraptitud" runat="server" UpdateMode="Conditional">
+                                                        <ContentTemplate>
+                                                            <div class="col-sm-10">
+                                                                <asp:Button ID="btnGuardaraptitud" runat="server" Text="Guardar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnGuardaraptitud_Click" />
+                                                            </div>
+                                                        </ContentTemplate>
+                                                    </asp:UpdatePanel>
+                                                </div>
+                                                <div class="form-group" id="btncancelarapt" hidden="hidden">
+                                                    <asp:UpdatePanel ID="upcancelaraptitud" runat="server" UpdateMode="Conditional">
+                                                        <ContentTemplate>
+                                                            <div class="col-sm-10">
+                                                                <asp:Button ID="btnCancelaraptitud" runat="server" Text="Cancelar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnCancelaraptitud_Click" />
+                                                            </div>
+                                                        </ContentTemplate>
+                                                    </asp:UpdatePanel>
+                                                </div>
                                             </td>
-                                            <td></td>
-                                            <td style="text-align: right; vertical-align: top">Intereses:</td>
-                                            <td>
-                                                <asp:ListBox ID="lstintereses" runat="server" Width="220px" Height="150px" AutoPostBack="false"></asp:ListBox>
+
+                                            <td style="width: 200px"></td>
+
+                                            <td style="width: 200px">
+
+                                                <div class="form-group">
+                                                    <div class="col-sm-9">
+                                                        <asp:GridView ID="grdIntereses" runat="server" AutoGenerateColumns="false" OnRowCommand="grdIntereses_RowCommand">
+                                                            <Columns>
+                                                                <asp:BoundField HeaderText="Interes" DataField="Nombreinteres" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                                                <asp:TemplateField HeaderText="Editar" ItemStyle-HorizontalAlign="Center">
+                                                                    <ItemTemplate>
+                                                                        <asp:UpdatePanel ID="upbtnEditarInteres" runat="server" UpdateMode="Conditional">
+                                                                            <ContentTemplate>
+                                                                                <asp:ImageButton ID="btnEditarInteres" runat="server" CommandName="cmdEditar" ImageUrl="Images/edit.png" Width="16" Height="16" OnClick="btnEditarInteres_Click" />
+                                                                            </ContentTemplate>
+                                                                        </asp:UpdatePanel>
+                                                                    </ItemTemplate>
+                                                                </asp:TemplateField>
+                                                                <asp:TemplateField HeaderText="Eliminar" ItemStyle-HorizontalAlign="Center">
+                                                                    <ItemTemplate>
+                                                                        <asp:UpdatePanel ID="upbtnEliminarInteres" runat="server" UpdateMode="Conditional">
+                                                                            <ContentTemplate>
+                                                                                <asp:ImageButton ID="btnEliminarInteres" runat="server" CommandName="cmdEliminar" ImageUrl="Images/delete.png" Width="16" Height="16" OnClick="btnEliminarInteres_Click" />
+                                                                            </ContentTemplate>
+                                                                        </asp:UpdatePanel>
+                                                                    </ItemTemplate>
+                                                                </asp:TemplateField>
+                                                            </Columns>
+                                                        </asp:GridView>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group" id="btnagregarint">
+                                                    <asp:UpdatePanel ID="upAgregarinteres" runat="server" UpdateMode="Conditional">
+                                                        <ContentTemplate>
+                                                            <div class="col-sm-10">
+                                                                <asp:Button ID="btnAgregarinteres" runat="server" Text="+ Agregar Interés" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnAgregarinteres_Click" />
+                                                            </div>
+                                                        </ContentTemplate>
+                                                    </asp:UpdatePanel>
+                                                </div>
+                                                <div class="form-group" id="txtint" hidden="hidden">
+                                                    <label class="col-sm-2 col-sm-2 control-label">
+                                                        Interes:
+                                                    </label>
+                                                    <div class="col-sm-9">
+                                                        <asp:TextBox ID="txtInteres" runat="server" CssClass="form-control" type="text" placeholder="Escriba el interes"></asp:TextBox>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" id="btninsertarint" hidden="hidden">
+                                                    <asp:UpdatePanel ID="upinsertarinteres" runat="server" UpdateMode="Conditional">
+                                                        <ContentTemplate>
+                                                            <div class="col-sm-10">
+                                                                <asp:Button ID="btnInsertarinteres" runat="server" Text="Guardar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnInsertarinteres_Click" />
+                                                            </div>
+                                                        </ContentTemplate>
+                                                    </asp:UpdatePanel>
+                                                </div>
+                                                <div class="form-group" id="btnguardarint" hidden="hidden">
+                                                    <asp:UpdatePanel ID="upguardarinteres" runat="server" UpdateMode="Conditional">
+                                                        <ContentTemplate>
+                                                            <div class="col-sm-10">
+                                                                <asp:Button ID="btnGuardarinteres" runat="server" Text="Guardar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnGuardarinteres_Click" />
+                                                            </div>
+                                                        </ContentTemplate>
+                                                    </asp:UpdatePanel>
+                                                </div>
+                                                <div class="form-group" id="btncancelarint" hidden="hidden">
+                                                    <asp:UpdatePanel ID="upcancelarinteres" runat="server" UpdateMode="Conditional">
+                                                        <ContentTemplate>
+                                                            <div class="col-sm-10">
+                                                                <asp:Button ID="btnCancelarinteres" runat="server" Text="Cancelar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnCancelarinteres_Click" />
+                                                            </div>
+                                                        </ContentTemplate>
+                                                    </asp:UpdatePanel>
+                                                </div>
                                             </td>
                                         </tr>
                                     </table>
                                 </div>
                             </div>
+
+                            <div class="form-group">
+                                <div id="dialogpreguntaaptitud" style="text-align: center; display: none" runat="server">
+                                    <b style="text-align: center">¿Estás seguro de eliminar la aptitud?</b>
+                                </div>
+
+                                <div id="dialogconfirmacionaptitud" style="text-align: center; display: none" runat="server">
+                                    <b style="text-align: center">La aptitud ha sido eliminada satisfactoriamente</b>
+                                </div>
+
+                                <div id="dialogpreguntainteres" style="text-align: center; display: none" runat="server">
+                                    <b style="text-align: center">¿Estás seguro de eliminar el interes?</b>
+                                </div>
+
+                                <div id="dialogconfirmacioninteres" style="text-align: center; display: none" runat="server">
+                                    <b style="text-align: center">El interes ha sido eliminado satisfactoriamente</b>
+                                </div>
+                            </div>
+
                         </form>
                     </div>
                 </div>
             </div>
         </section>
     </div>
-
-
-
-
 
     <%--Acá termina el código--%>
 

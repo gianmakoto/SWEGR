@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace SWEGR.BL.BE
 {
     public class EgresadoBE
@@ -24,7 +25,7 @@ namespace SWEGR.BL.BE
         String perfilfacebookegresado;
         DateTime fechanacimientoegresado;
         Char tipoegresado;
-        String fotoegresado;
+        Byte[] fotoegresado;
         int idpaisegresado;
         String contrasenaegresado;
         String contrasenadinamicaegresado;
@@ -32,6 +33,7 @@ namespace SWEGR.BL.BE
         String cicloegresado;
         String codigouniversitarioegresado;
         String carreraegresado;
+
 
         public int Idegresado
         {
@@ -129,7 +131,7 @@ namespace SWEGR.BL.BE
             set { tipoegresado = value; }
         }
 
-        public String Fotoegresado
+        public Byte[] Fotoegresado
         {
             get { return fotoegresado; }
             set { fotoegresado = value; }

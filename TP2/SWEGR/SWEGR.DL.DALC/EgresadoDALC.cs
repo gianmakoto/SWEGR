@@ -40,7 +40,7 @@ namespace SWEGR.DL.DALC
                 EgresadoBE objetoEgresadoBE;
                 objetoEgresadoBE = new EgresadoBE();
 
-                dregresado = cmdobteneregresado.ExecuteReader();
+                dregresado = cmdobteneregresado.ExecuteReader();              
 
                 if (dregresado.Read())
                 {
@@ -61,12 +61,13 @@ namespace SWEGR.DL.DALC
                     objetoEgresadoBE.Perfilfacebookegresado = dregresado.GetString(14);
                     objetoEgresadoBE.Fechanacimientoegresado = dregresado.GetDateTime(15);
                     objetoEgresadoBE.Tipoegresado = Convert.ToChar(dregresado.GetString(16));
-                    objetoEgresadoBE.Fotoegresado = dregresado.GetString(17);
+                    objetoEgresadoBE.Fotoegresado = null;
                     objetoEgresadoBE.Contrasenaegresado = dregresado.GetString(18);
                     objetoEgresadoBE.Contrasenadinamicaegresado = dregresado.GetString(19);
                     objetoEgresadoBE.Cambiocontrasenaegresado = dregresado.GetBoolean(20);
                     objetoEgresadoBE.Cicloegresado = dregresado.GetString(21);
                     objetoEgresadoBE.Codigouniversitarioegresado = dregresado.GetString(22);
+                    objetoEgresadoBE.Carreraegresado = dregresado.GetString(23);
                 }
                 cmdobteneregresado.Connection.Close();
 
@@ -107,6 +108,7 @@ namespace SWEGR.DL.DALC
             SqlParameter prmcambiocontrasenaegresado;
             SqlParameter prmcicloegresado;
             SqlParameter prmcodigouniversitarioegresado;
+            SqlParameter prmcarreraegresado;
 
             try
             {
@@ -215,8 +217,7 @@ namespace SWEGR.DL.DALC
 
                 prmfotoegresado = new SqlParameter();
                 prmfotoegresado.ParameterName = "@fotoegresado";
-                prmfotoegresado.SqlDbType = SqlDbType.VarChar;
-                prmfotoegresado.Size = 1000;
+                prmfotoegresado.SqlDbType = SqlDbType.Image;
                 prmfotoegresado.Value = objetoEgresadoBE.Fotoegresado;
 
                 prmcontrasenaegresado = new SqlParameter();
@@ -248,6 +249,12 @@ namespace SWEGR.DL.DALC
                 prmcodigouniversitarioegresado.Size = 10;
                 prmcodigouniversitarioegresado.Value = objetoEgresadoBE.Codigouniversitarioegresado;
 
+                prmcarreraegresado = new SqlParameter();
+                prmcarreraegresado.ParameterName = "@carrera";
+                prmcarreraegresado.SqlDbType = SqlDbType.VarChar;
+                prmcarreraegresado.Size = 50;
+                prmcarreraegresado.Value = objetoEgresadoBE.Carreraegresado;
+
                 cmdactualizaregresado.Parameters.Add(prmidegresado);
                 cmdactualizaregresado.Parameters.Add(prmnombrecompletoegresado);
                 cmdactualizaregresado.Parameters.Add(prmedadegresado);
@@ -271,6 +278,7 @@ namespace SWEGR.DL.DALC
                 cmdactualizaregresado.Parameters.Add(prmcambiocontrasenaegresado);
                 cmdactualizaregresado.Parameters.Add(prmcicloegresado);
                 cmdactualizaregresado.Parameters.Add(prmcodigouniversitarioegresado);
+                cmdactualizaregresado.Parameters.Add(prmcarreraegresado);
 
 
                 cmdactualizaregresado.Connection.Open();

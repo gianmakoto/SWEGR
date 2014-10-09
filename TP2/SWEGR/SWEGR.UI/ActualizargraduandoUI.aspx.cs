@@ -30,7 +30,6 @@ namespace SWEGR.UI
         {
                 try
                 {
-                    //IDEgresado = Convert.ToInt32(Request.QueryString["IDEgresado"]);
                     IDEgresado = Convert.ToInt32(Session["IDusuario"]);
                     TUsuario = Convert.ToChar(Session["TipoUsuario"]);
                     if (TUsuario == 'E')
@@ -62,7 +61,7 @@ namespace SWEGR.UI
                         txtnombrecompleto.Text = graduando.Nombrecompletoegresado;
                         txtdni.Text = graduando.Dniegresado;
                         txtfechanacimiento.Text = graduando.Fechanacimientoegresado.Day.ToString() + "/" + graduando.Fechanacimientoegresado.Month.ToString() + "/" + graduando.Fechanacimientoegresado.Year.ToString();
-                        //txtCarrera.Text = graduando.Carreraegresado;
+                        txtCarrera.Text = graduando.Carreraegresado;
                         txttelefonoprincipal.Text = graduando.Telefonoprinegresado;
                         txttelefonoalternativo.Text = graduando.Telefonoaltegresado;
                         txtdireccion.Text = graduando.Direccionegresado;

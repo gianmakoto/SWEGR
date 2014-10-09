@@ -129,7 +129,7 @@ namespace SWEGR.UI
                     telefonoTextBox.Text = datosObtenidos.DatosUsuario.Telefonoprinegresado;
                     telefonoAlterTextBox.Text = datosObtenidos.DatosUsuario.Telefonoaltegresado;
                     direccionTextBox.Text = datosObtenidos.DatosUsuario.Direccionegresado;
-                    Image1.ImageUrl = datosObtenidos.DatosUsuario.Fotoegresado;
+                    //Image1.ImageUrl = datosObtenidos.DatosUsuario.Fotoegresado;
 
                     registrosLaborales.DataSource = datosObtenidos.ListaRegistroLaboral;
                     registrosAcademicos.DataSource = datosObtenidos.ListaRegistroAcademico;
