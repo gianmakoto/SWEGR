@@ -49,7 +49,3 @@ C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BE\bin\Debug\SWEGR.BL.BE.pdb
 C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BE\obj\Debug\SWEGR.BL.BE.csprojResolveAssemblyReference.cache
 C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BE\obj\Debug\SWEGR.BL.BE.dll
 C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BE\obj\Debug\SWEGR.BL.BE.pdb
-E:\UPC\2014-2\TDP1\Trabajo\TP2\SWEGR\SWEGR.BL.BE\bin\Debug\SWEGR.BL.BE.dll
-E:\UPC\2014-2\TDP1\Trabajo\TP2\SWEGR\SWEGR.BL.BE\bin\Debug\SWEGR.BL.BE.pdb
-E:\UPC\2014-2\TDP1\Trabajo\TP2\SWEGR\SWEGR.BL.BE\obj\Debug\SWEGR.BL.BE.dll
-E:\UPC\2014-2\TDP1\Trabajo\TP2\SWEGR\SWEGR.BL.BE\obj\Debug\SWEGR.BL.BE.pdb
