@@ -59,6 +59,19 @@
             <button class="btn btn-lg btn-login btn-block" type="submit">Entrar</button>
            
           
+             <div class="">
+
+                <a class="" href="#">
+                    ¿Olvidaste tu clave?
+                </a>
+            </div>
+
+              <div class="">
+              
+                <a class="" href="#">
+                    Registrarse
+                </a>
+            </div>
 
         </div>
 

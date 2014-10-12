@@ -89,3 +89,10 @@ C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.DL.DALC\bin\Debug\SWEGR.BL.BE.pdb
 C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.DL.DALC\obj\Debug\SWEGR.DL.DALC.csprojResolveAssemblyReference.cache
 C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.DL.DALC\obj\Debug\SWEGR.DL.DALC.dll
 C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.DL.DALC\obj\Debug\SWEGR.DL.DALC.pdb
+D:\UPC\2014-2\TDP2\semanaocho\TP2\SWEGR\SWEGR.DL.DALC\bin\Debug\SWEGR.DL.DALC.dll
+D:\UPC\2014-2\TDP2\semanaocho\TP2\SWEGR\SWEGR.DL.DALC\bin\Debug\SWEGR.DL.DALC.pdb
+D:\UPC\2014-2\TDP2\semanaocho\TP2\SWEGR\SWEGR.DL.DALC\bin\Debug\SWEGR.BL.BE.dll
+D:\UPC\2014-2\TDP2\semanaocho\TP2\SWEGR\SWEGR.DL.DALC\bin\Debug\SWEGR.BL.BE.pdb
+D:\UPC\2014-2\TDP2\semanaocho\TP2\SWEGR\SWEGR.DL.DALC\obj\Debug\SWEGR.DL.DALC.csprojResolveAssemblyReference.cache
+D:\UPC\2014-2\TDP2\semanaocho\TP2\SWEGR\SWEGR.DL.DALC\obj\Debug\SWEGR.DL.DALC.dll
+D:\UPC\2014-2\TDP2\semanaocho\TP2\SWEGR\SWEGR.DL.DALC\obj\Debug\SWEGR.DL.DALC.pdb
