@@ -23,16 +23,16 @@ namespace SWEGR.BL.BC
             return objetoAptitudDALC.insertarAptitud(objetoaptitud);
         }
 
-        public bool actualizarInteres(AptitudBE objetoaptitud)
+        public bool actualizarAptitud(AptitudBE objetoaptitud)
         {
             AptitudDALC objetoAptitudDALC = new AptitudDALC();
-            return objetoAptitudDALC.actualizarInteres(objetoaptitud);
+            return objetoAptitudDALC.actualizarAptitud(objetoaptitud);
         }
 
-        public void eliminarInteres(int idaptitud)
+        public void eliminarAptitud(int idaptitud)
         {
             AptitudDALC objetoAptitudDALC = new AptitudDALC();
-            objetoAptitudDALC.eliminarInteres(idaptitud);
+            objetoAptitudDALC.eliminarAptitud(idaptitud);
         }
     }
 }

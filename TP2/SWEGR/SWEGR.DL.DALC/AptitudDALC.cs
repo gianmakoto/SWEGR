@@ -100,7 +100,7 @@ namespace SWEGR.DL.DALC
             }
         }
 
-        public bool actualizarInteres(AptitudBE objetoaptitud)
+        public bool actualizarAptitud(AptitudBE objetoaptitud)
         {
             String sqlactualizaraptitud;
             SqlConnection conn;
@@ -141,7 +141,7 @@ namespace SWEGR.DL.DALC
             }
         }
 
-        public void eliminarInteres(int idaptitud)
+        public void eliminarAptitud(int idaptitud)
         {
             String sqleliminaraptitud;
             SqlConnection conn;

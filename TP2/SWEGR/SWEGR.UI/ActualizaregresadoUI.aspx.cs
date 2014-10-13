@@ -7152,7 +7152,61 @@ namespace SWEGR.UI
             }
         }
 
+        public void InsertarAptitud()
+        {
+            AptitudBE objAptitudBE = new AptitudBE();
+            AptitudBC objAptitudBC = new AptitudBC();
+            EgresadoBC objEgresadoBC = new EgresadoBC();
+            int idegresado = IDEgresado;
+            int idaptitud;
 
+            objAptitudBE.Nombreaptitud = txtAptitud.Text;
+            idaptitud = objAptitudBC.insertarAptitud(objAptitudBE);
+
+            objEgresadoBC.insertarAptitudxEgresado(idegresado, idaptitud);
+        }
+
+        public bool ActualizarAptitud(int idaptitud)
+        {
+            AptitudBE objAptitudBE = new AptitudBE();
+            AptitudBC objAptitudBC = new AptitudBC();
+
+            objAptitudBE.Idaptitud = idaptitud;
+            objAptitudBE.Nombreaptitud = txtAptitud.Text;
+
+            if(objAptitudBC.actualizarAptitud(objAptitudBE))
+                return true;
+            
+            return false;
+        }
+
+        public void InsertarInteres()
+        {
+            InteresBE objInteresBE = new InteresBE();
+            InteresBC objInteresBC = new InteresBC();
+            EgresadoBC objEgresadoBC = new EgresadoBC();
+            int idegresado = IDEgresado;
+            int idinteres;
+
+            objInteresBE.Nombreinteres = txtInteres.Text;
+            idinteres = objInteresBC.insertarInteres(objInteresBE);
+
+            objEgresadoBC.insertarAptitudxEgresado(idegresado, idinteres);
+        }
+
+        public bool ActualizarInteres(int idinteres)
+        {
+            InteresBE objInteresBE = new InteresBE();
+            InteresBC objInteresBC = new InteresBC();
+
+            objInteresBE.Idinteres = idinteres;
+            objInteresBE.Nombreinteres = txtInteres.Text;
+
+            if (objInteresBC.actualizarInteres(objInteresBE))
+                return true;
+
+            return false;
+        }
 
         //////////*Botones Apitudes*////////
 
@@ -7170,17 +7224,22 @@ namespace SWEGR.UI
         protected void btnGuardaraptitud_Click(object sender, EventArgs e)
         {
             if (txtAptitud.Text != "" && txtAptitud.Text != null)
+            {
                 grdAptitudesDataBind();
-                // Actualizar aptitud()    
+                // Actualizar aptitud()
+            }
             else
                 ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarapt", "ocultarapt();", true);
         }
 
         protected void btnInsertaraptitud_Click(object sender, EventArgs e)
         {
-             if (txtAptitud.Text != ""&& txtAptitud.Text != null)
+            if (txtAptitud.Text != "" && txtAptitud.Text != null)
+            {
+                InsertarAptitud();
                 grdAptitudesDataBind();
-                // Insertar aptitud()    
+            }
+            // Insertar aptitud()    
             else
                 ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarapt", "ocultarapt();", true);
         }
@@ -7221,8 +7280,10 @@ namespace SWEGR.UI
         protected void btnInsertarinteres_Click(object sender, EventArgs e)
         {
             if (txtInteres.Text != "" && txtInteres.Text != null)
+            {
+                InsertarInteres();
                 grdInteresesDataBind();
-                //Insertar interes()
+            }
             else
                 ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarint", "ocultarint();", true);
         }

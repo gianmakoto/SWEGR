@@ -35,7 +35,47 @@
 
 
     <script type="text/javascript">
-       
+        function error() {
+            $("#dialogerror").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    Aceptar: function () {
+                        $(this).dialog("close");
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
+
+        function ocurrencia() {
+            $("#dialogocurrencia").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    Aceptar: function () {
+                        $(this).dialog("close");
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
+
+        function exito() {
+            $("#dialogexito").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    Aceptar: function () {
+                        $(this).dialog("close");
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
 
     </script>
 
@@ -64,13 +104,13 @@
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav" style="align: center">
                         <li><a href="Index.aspx">Inicio</a></li>
-                        
+
                         <li><a href="VisualizaregresadoUI.aspx">Egresado</a></li>
                         <li class="active"><a href="ActualizargraduandoUI.aspx">Graduando</a></li>
                         <!-- user login dropdown start-->
                         <li class="dropdown">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                <img alt="" style="height: 19px; width:17px" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+                                <img alt="" style="height: 19px; width: 17px" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
                                 <span class="username">Nombre</span>
                                 <b class="caret"></b>
                             </a>
@@ -118,7 +158,76 @@
                 <div class="row">
                     <div class="col-md-12">
                         <form id="swegrform" class="cmxform form-horizontal tasi-form" runat="server">
+                            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                            <asp:UpdatePanel ID="uppanel" runat="server">
+                                <ContentTemplate>
+                                    <asp:Panel runat="server" DefaultButton="btnbuscar">
+                                        <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            Código
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:TextBox ID="txtCodigo" runat="server" CssClass="form-control"></asp:TextBox>
+                                        </div>
+                                        <asp:Button ID="btnbuscar" runat="server" OnClick="btnbuscar_Click" Style="display:none;" />
+                                    </div>
+                                    </asp:Panel>
+                                    
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            Nombre
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:TextBox ID="txtnombre" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            Correo
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:TextBox ID="txtcorreo" runat="server" CssClass="form-control"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            Contraseña
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:TextBox ID="txtcontrasena" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            Confirmar Contraseña
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:TextBox ID="txtconfirmarcontrasena" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
+                                        </div>
+                                    </div>
 
+                                    <div class="form-group">
+                                        <div class="col-sm-10">
+                                            <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnLimpiar_Click" />
+                                            <asp:Button ID="btnRegistrar" runat="server" Text="Regístrate" Enabled="false" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnRegistrar_Click" />
+                                        </div>
+                                    </div>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+
+                            <div class="form-group">
+                                <div id="dialogerror" style="text-align: justify; display: none" runat="server">
+                                    <b style="text-align: center">Todos los campos son necesarios para registrarse.</b>
+                                </div>
+
+                                <div id="dialogexito" style="text-align: justify; display: none" runat="server">
+                                    <b style="text-align: center">Sus datos han sido guardados sastifactoriamente.</b>
+                                </div>
+
+                                <div id="dialogocurrencia" style="text-align: justify; display: none" runat="server">
+                                    <b style="text-align: center">Las constraseñas no coinciden.</b>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -153,12 +262,12 @@
                 </div>
             </div>
 
-            </div>
-       
+        </div>
+
     </footer>
     <!--footer end-->
     <!-- js placed at the end of the document so the pages load faster -->
-  
+
     <script src="Content/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="Content/js/hover-dropdown.js"></script>
     <script type="text/javascript" src="Content/assets/bxslider/jquery.bxslider.js"></script>

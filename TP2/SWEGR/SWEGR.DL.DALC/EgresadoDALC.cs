@@ -1134,5 +1134,73 @@ namespace SWEGR.DL.DALC
                 throw;
             }
         }
+
+        public int insertarEgresadodesdeEgresadoDesvinculado(EgresadoBE objEgresadoBE)
+        {
+            String sqlinsertaregresadodesdeedes;
+
+            SqlConnection conn;
+            SqlCommand cmdinsertaregresadodesdeedes;
+            SqlParameter prmidegresado;
+            SqlParameter prmnombrecompletoegresado;
+            SqlParameter prmcorreoegresado;
+            SqlParameter prmcontrasenaegresado;
+            SqlParameter prmcodigouniversitario;
+
+            int idegresado;
+
+            try
+            {
+                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CSSeguimientoEgresados"].ToString());
+                sqlinsertaregresadodesdeedes = "SWEGR_insertarEgresadodesdeEgresadoDesv";
+                cmdinsertaregresadodesdeedes = new SqlCommand(sqlinsertaregresadodesdeedes, conn);
+                cmdinsertaregresadodesdeedes.CommandType = CommandType.StoredProcedure;
+
+                prmidegresado = new SqlParameter();
+                prmidegresado.Direction = ParameterDirection.ReturnValue;
+                prmidegresado.SqlDbType = SqlDbType.Int;
+
+                prmnombrecompletoegresado = new SqlParameter();
+                prmnombrecompletoegresado.ParameterName = "@nombrecompleto";
+                prmnombrecompletoegresado.SqlDbType = SqlDbType.VarChar;
+                prmnombrecompletoegresado.Size = 100;
+                prmnombrecompletoegresado.Value = objEgresadoBE.Nombrecompletoegresado;
+
+                prmcorreoegresado = new SqlParameter();
+                prmcorreoegresado.ParameterName = "@correo";
+                prmcorreoegresado.SqlDbType = SqlDbType.VarChar;
+                prmcorreoegresado.Size = 50;
+                prmcorreoegresado.Value = objEgresadoBE.Correoegresado;
+
+                prmcodigouniversitario = new SqlParameter();
+                prmcodigouniversitario.ParameterName = "@codigo";
+                prmcodigouniversitario.SqlDbType = SqlDbType.VarChar;
+                prmcodigouniversitario.Size = 10;
+                prmcodigouniversitario.Value = objEgresadoBE.Codigouniversitarioegresado;
+
+                prmcontrasenaegresado = new SqlParameter();
+                prmcontrasenaegresado.ParameterName = "@contrasena";
+                prmcontrasenaegresado.SqlDbType = SqlDbType.VarChar;
+                prmcontrasenaegresado.Size = 50;
+                prmcontrasenaegresado.Value = objEgresadoBE.Contrasenaegresado;
+
+                cmdinsertaregresadodesdeedes.Parameters.Add(prmnombrecompletoegresado);
+                cmdinsertaregresadodesdeedes.Parameters.Add(prmcorreoegresado);
+                cmdinsertaregresadodesdeedes.Parameters.Add(prmcodigouniversitario);
+                cmdinsertaregresadodesdeedes.Parameters.Add(prmcontrasenaegresado);
+
+                cmdinsertaregresadodesdeedes.Connection.Open();
+                cmdinsertaregresadodesdeedes.ExecuteNonQuery();
+                idegresado = Convert.ToInt32(prmidegresado.Value);
+                cmdinsertaregresadodesdeedes.Connection.Close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return idegresado;
+
+        }
     }
 }

@@ -128,6 +128,19 @@ namespace SWEGR.BL.BC
             }
         }
 
+        public EgresadoDesvinculadoBE obtenerEgresadoDesvinculado(string codigo)
+        {
+            try
+            {
+                EgresadoDesvinculadoDALC objetoEgresadoDesvinculadoDALC = new EgresadoDesvinculadoDALC();
+                return objetoEgresadoDesvinculadoDALC.obtenerEgresadoDesvinculado(codigo);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public bool actualizarEgresado(EgresadoBE objetoEgresadoBE)
         {
             try
@@ -232,5 +245,18 @@ namespace SWEGR.BL.BC
             }
         }
 
+        public int insertarEgresadodesdeEgresadoDesvinculado(EgresadoBE objEgresadoBE)
+        {
+            try
+            {
+                EgresadoDALC objetoegresadoDALC = new EgresadoDALC();
+                return objetoegresadoDALC.insertarEgresadodesdeEgresadoDesvinculado(objEgresadoBE);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+        }
     }
 }

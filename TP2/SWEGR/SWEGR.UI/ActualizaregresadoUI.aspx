@@ -1891,7 +1891,6 @@
                                             <div class="col-sm-9">
                                                 <asp:TextBox ID="txtdni" runat="server"
                                                     CssClass="form-control" onkeypress="return isNumber(event)" onpaste="return false" Enabled="false"></asp:TextBox>
-
                                             </div>
                                         </div>
 

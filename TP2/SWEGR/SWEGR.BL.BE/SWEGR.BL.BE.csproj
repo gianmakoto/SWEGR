@@ -42,6 +42,7 @@
     <Compile Include="AptitudBE.cs" />
     <Compile Include="DatosObtenidosBE.cs" />
     <Compile Include="EgresadoBE.cs" />
+    <Compile Include="EgresadoDesvinculadoBE.cs" />
     <Compile Include="Egresados.cs" />
     <Compile Include="HistorialDatosEgresadoBE.cs" />
     <Compile Include="InteresBE.cs" />
