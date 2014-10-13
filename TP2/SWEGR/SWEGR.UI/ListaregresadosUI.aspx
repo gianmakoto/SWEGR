@@ -35,7 +35,19 @@
 
 
     <script type="text/javascript">
-       
+        function error() {
+            $("#dialogerror").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    Aceptar: function () {
+                        $(this).dialog("close");
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
 
     </script>
 
@@ -118,6 +130,91 @@
                 <div class="row">
                     <div class="col-md-12">
                         <form id="swegrform" class="cmxform form-horizontal tasi-form" runat="server">
+                            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                            <asp:UpdatePanel ID="uppanel" runat="server">
+                                <ContentTemplate>
+
+                                
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">
+                                    Nombre y/o código:
+                                </label>
+                                <div class="col-sm-8">
+                                    <asp:TextBox ID="txtNombreCodigo" runat="server" CssClass="form-control"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">
+                                    Año inicio
+                                </label>
+                                <div class="col-sm-8">
+                                    <asp:DropDownList ID="ddlInicio" runat="server" AutoPostBack="false" CssClass="form-control"></asp:DropDownList>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">
+                                    Año Fin
+                                </label>
+                                <div class="col-sm-8">
+                                    <asp:DropDownList ID="ddlFin" runat="server" AutoPostBack="false" CssClass="form-control"></asp:DropDownList>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">
+                                    Carrera
+                                </label>
+                                <div class="col-sm-8">
+                                    <asp:DropDownList ID="ddlCarrera" runat="server" AutoPostBack="false" CssClass="form-control"></asp:DropDownList>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                        <div class="col-sm-10">
+                                            <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnBuscar_Click" />
+                                        </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-9">
+                                    <asp:GridView ID="grdEgresados" runat="server" AutoGenerateColumns="false" OnRowCommand="grdEgresados_RowCommand">
+                                        <Columns>
+                                            <asp:BoundField HeaderText="Código" DataField="Codigo" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                            <asp:BoundField HeaderText="Nombre" DataField="Nombre" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                            <asp:BoundField HeaderText="Carrera" DataField="Carrera" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                            <asp:BoundField HeaderText="Ciclo egreso" DataField="Cicloegreso" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                            <asp:BoundField HeaderText="Trabajo Actual" DataField="Trabajoactual" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                            <asp:BoundField HeaderText="Nombre jefe" DataField="Nombrejefe" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                            <asp:BoundField HeaderText="Cargo jefe" DataField="Cargojefe" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                            <asp:BoundField HeaderText="Teléfono jefe" DataField="Telefonojefe" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                            <asp:BoundField HeaderText="Correo jefe" DataField="Correojefe" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+
+                                            <asp:TemplateField HeaderText="Ver" ItemStyle-HorizontalAlign="Center">
+                                                <ItemTemplate>
+                                                            <asp:ImageButton ID="btnVer" runat="server" CommandName="cmdVer" ImageUrl="Images/edit.png" Width="16" Height="16" OnClick="btnVer_Click" />
+                                                </ItemTemplate>
+                                            </asp:TemplateField>
+
+                                            <asp:TemplateField HeaderText="Extraer datos" ItemStyle-HorizontalAlign="Center">
+                                                <ItemTemplate>
+                                                            <asp:ImageButton ID="btnExtraerDatos" runat="server" CommandName="cmdExtraer" ImageUrl="Images/delete.png" Width="16" Height="16" OnClick="btnExtraerDatos_Click" />
+                                                </ItemTemplate>
+                                            </asp:TemplateField>
+
+                                        </Columns>
+                                    </asp:GridView>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                        <div class="col-sm-10">
+                                            <asp:Button ID="btnImprimir" runat="server" Text="Imprimir" CssClass="btn btn-danger pull-right" type="submit" OnClick="Imprimir_Click" />
+                                        </div>
+                            </div>
+                                    </ContentTemplate>
+                            </asp:UpdatePanel>
+                            
+                            <div class="form-group">
+                                <div id="dialogerror" style="text-align: justify; display: none" runat="server">
+                                    <b style="text-align: center">No existen egresados por mostrar.</b>
+                                </div>
+                            </div>
 
                         </form>
                     </div>

@@ -13,6 +13,590 @@ namespace SWEGR.DL.DALC
 {
     public class EgresadoDALC
     {
+        public List<EgresadoBE> listarEgresado()
+        {
+            String sqllistaregresado;
+
+            SqlConnection conn;
+            SqlCommand cmdlistaregresado;
+            SqlDataReader dregresado;
+
+            try
+            {
+                List<EgresadoBE> lstEgresadoBE;
+                EgresadoBE objetoEgresadoBE;
+
+                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CSSeguimientoEgresados"].ToString());
+                sqllistaregresado = "SWEGR_listarEgresado";
+                cmdlistaregresado = new SqlCommand(sqllistaregresado, conn);
+                cmdlistaregresado.CommandType = CommandType.StoredProcedure;
+
+                cmdlistaregresado.Connection.Open();
+                dregresado = cmdlistaregresado.ExecuteReader();
+                lstEgresadoBE = new List<EgresadoBE>();
+
+                while (dregresado.Read())
+                {
+                    objetoEgresadoBE = new EgresadoBE();
+                    objetoEgresadoBE.Idegresado = dregresado.GetInt32(0);
+                    objetoEgresadoBE.Nombrecompletoegresado = dregresado.GetString(1);
+                    objetoEgresadoBE.Edadegresado = dregresado.GetByte(2);
+                    objetoEgresadoBE.Sexoegresado = Convert.ToChar(dregresado.GetString(3));
+                    objetoEgresadoBE.Telefonoprinegresado = dregresado.GetString(4);
+                    objetoEgresadoBE.Telefonoaltegresado = dregresado.GetString(5);
+                    objetoEgresadoBE.Dniegresado = dregresado.GetString(6);
+                    objetoEgresadoBE.Correoegresado = dregresado.GetString(7);
+                    objetoEgresadoBE.Correoaltegresado = dregresado.GetString(8);
+                    objetoEgresadoBE.Direccionegresado = dregresado.GetString(9);
+                    objetoEgresadoBE.Distritoegresado = dregresado.GetString(10);
+                    objetoEgresadoBE.Departamentoegresado = dregresado.GetString(11);
+                    objetoEgresadoBE.Idpaisegresado = dregresado.GetInt32(12);
+                    objetoEgresadoBE.Perfillinkedinegresado = dregresado.GetString(13);
+                    objetoEgresadoBE.Perfilfacebookegresado = dregresado.GetString(14);
+                    objetoEgresadoBE.Fechanacimientoegresado = dregresado.GetDateTime(15);
+                    objetoEgresadoBE.Tipoegresado = Convert.ToChar(dregresado.GetString(16));
+                    objetoEgresadoBE.Fotoegresado = null;
+                    objetoEgresadoBE.Contrasenaegresado = dregresado.GetString(18);
+                    objetoEgresadoBE.Contrasenadinamicaegresado = dregresado.GetString(19);
+                    objetoEgresadoBE.Cambiocontrasenaegresado = dregresado.GetBoolean(20);
+                    objetoEgresadoBE.Cicloegresado = dregresado.GetString(21);
+                    objetoEgresadoBE.Codigouniversitarioegresado = dregresado.GetString(22);
+                    objetoEgresadoBE.Carreraegresado = dregresado.GetString(23);
+
+                    lstEgresadoBE.Add(objetoEgresadoBE);
+                }
+                cmdlistaregresado.Connection.Close();
+                return lstEgresadoBE;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public List<EgresadoBE> listarEgresadoxNombreoCodigo(string busqueda)
+        {
+            String sqllistaregresado;
+
+            SqlConnection conn;
+            SqlCommand cmdlistaregresado;
+            SqlDataReader dregresado;
+            SqlParameter prmbusqueda;
+
+            try
+            {
+                List<EgresadoBE> lstEgresadoBE;
+                EgresadoBE objetoEgresadoBE;
+
+                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CSSeguimientoEgresados"].ToString());
+                sqllistaregresado = "SWEGR_listarEgresadoxNombreoCodigo";
+                cmdlistaregresado = new SqlCommand(sqllistaregresado, conn);
+                cmdlistaregresado.CommandType = CommandType.StoredProcedure;
+
+                prmbusqueda = new SqlParameter();
+                prmbusqueda.ParameterName = "@nombre";
+                prmbusqueda.SqlDbType = SqlDbType.VarChar;
+                prmbusqueda.Size = 100;
+                prmbusqueda.Value = busqueda;
+
+                cmdlistaregresado.Parameters.Add(prmbusqueda);
+                cmdlistaregresado.Connection.Open();
+                dregresado = cmdlistaregresado.ExecuteReader();
+                lstEgresadoBE = new List<EgresadoBE>();
+
+                while (dregresado.Read())
+                {
+                    objetoEgresadoBE = new EgresadoBE();
+                    objetoEgresadoBE.Idegresado = dregresado.GetInt32(0);
+                    objetoEgresadoBE.Nombrecompletoegresado = dregresado.GetString(1);
+                    objetoEgresadoBE.Edadegresado = dregresado.GetByte(2);
+                    objetoEgresadoBE.Sexoegresado = Convert.ToChar(dregresado.GetString(3));
+                    objetoEgresadoBE.Telefonoprinegresado = dregresado.GetString(4);
+                    objetoEgresadoBE.Telefonoaltegresado = dregresado.GetString(5);
+                    objetoEgresadoBE.Dniegresado = dregresado.GetString(6);
+                    objetoEgresadoBE.Correoegresado = dregresado.GetString(7);
+                    objetoEgresadoBE.Correoaltegresado = dregresado.GetString(8);
+                    objetoEgresadoBE.Direccionegresado = dregresado.GetString(9);
+                    objetoEgresadoBE.Distritoegresado = dregresado.GetString(10);
+                    objetoEgresadoBE.Departamentoegresado = dregresado.GetString(11);
+                    objetoEgresadoBE.Idpaisegresado = dregresado.GetInt32(12);
+                    objetoEgresadoBE.Perfillinkedinegresado = dregresado.GetString(13);
+                    objetoEgresadoBE.Perfilfacebookegresado = dregresado.GetString(14);
+                    objetoEgresadoBE.Fechanacimientoegresado = dregresado.GetDateTime(15);
+                    objetoEgresadoBE.Tipoegresado = Convert.ToChar(dregresado.GetString(16));
+                    objetoEgresadoBE.Fotoegresado = null;
+                    objetoEgresadoBE.Contrasenaegresado = dregresado.GetString(18);
+                    objetoEgresadoBE.Contrasenadinamicaegresado = dregresado.GetString(19);
+                    objetoEgresadoBE.Cambiocontrasenaegresado = dregresado.GetBoolean(20);
+                    objetoEgresadoBE.Cicloegresado = dregresado.GetString(21);
+                    objetoEgresadoBE.Codigouniversitarioegresado = dregresado.GetString(22);
+                    objetoEgresadoBE.Carreraegresado = dregresado.GetString(23);
+
+                    lstEgresadoBE.Add(objetoEgresadoBE);
+                }
+                cmdlistaregresado.Connection.Close();
+                return lstEgresadoBE;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public List<EgresadoBE> listarEgresadoxCiclo(string busqueda)
+        {
+            String sqllistaregresado;
+
+            SqlConnection conn;
+            SqlCommand cmdlistaregresado;
+            SqlDataReader dregresado;
+            SqlParameter prmbusqueda;
+
+            try
+            {
+                List<EgresadoBE> lstEgresadoBE;
+                EgresadoBE objetoEgresadoBE;
+
+                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CSSeguimientoEgresados"].ToString());
+                sqllistaregresado = "SWEGR_listarEgresadoxCiclo";
+                cmdlistaregresado = new SqlCommand(sqllistaregresado, conn);
+                cmdlistaregresado.CommandType = CommandType.StoredProcedure;
+
+                prmbusqueda = new SqlParameter();
+                prmbusqueda.ParameterName = "@busqueda";
+                prmbusqueda.SqlDbType = SqlDbType.VarChar;
+                prmbusqueda.Size = 10;
+                prmbusqueda.Value = busqueda;
+
+                cmdlistaregresado.Parameters.Add(prmbusqueda);
+                cmdlistaregresado.Connection.Open();
+                dregresado = cmdlistaregresado.ExecuteReader();
+                lstEgresadoBE = new List<EgresadoBE>();
+
+                while (dregresado.Read())
+                {
+                    objetoEgresadoBE = new EgresadoBE();
+                    objetoEgresadoBE.Idegresado = dregresado.GetInt32(0);
+                    objetoEgresadoBE.Nombrecompletoegresado = dregresado.GetString(1);
+                    objetoEgresadoBE.Edadegresado = dregresado.GetByte(2);
+                    objetoEgresadoBE.Sexoegresado = Convert.ToChar(dregresado.GetString(3));
+                    objetoEgresadoBE.Telefonoprinegresado = dregresado.GetString(4);
+                    objetoEgresadoBE.Telefonoaltegresado = dregresado.GetString(5);
+                    objetoEgresadoBE.Dniegresado = dregresado.GetString(6);
+                    objetoEgresadoBE.Correoegresado = dregresado.GetString(7);
+                    objetoEgresadoBE.Correoaltegresado = dregresado.GetString(8);
+                    objetoEgresadoBE.Direccionegresado = dregresado.GetString(9);
+                    objetoEgresadoBE.Distritoegresado = dregresado.GetString(10);
+                    objetoEgresadoBE.Departamentoegresado = dregresado.GetString(11);
+                    objetoEgresadoBE.Idpaisegresado = dregresado.GetInt32(12);
+                    objetoEgresadoBE.Perfillinkedinegresado = dregresado.GetString(13);
+                    objetoEgresadoBE.Perfilfacebookegresado = dregresado.GetString(14);
+                    objetoEgresadoBE.Fechanacimientoegresado = dregresado.GetDateTime(15);
+                    objetoEgresadoBE.Tipoegresado = Convert.ToChar(dregresado.GetString(16));
+                    objetoEgresadoBE.Fotoegresado = null;
+                    objetoEgresadoBE.Contrasenaegresado = dregresado.GetString(18);
+                    objetoEgresadoBE.Contrasenadinamicaegresado = dregresado.GetString(19);
+                    objetoEgresadoBE.Cambiocontrasenaegresado = dregresado.GetBoolean(20);
+                    objetoEgresadoBE.Cicloegresado = dregresado.GetString(21);
+                    objetoEgresadoBE.Codigouniversitarioegresado = dregresado.GetString(22);
+                    objetoEgresadoBE.Carreraegresado = dregresado.GetString(23);
+
+                    lstEgresadoBE.Add(objetoEgresadoBE);
+                }
+                cmdlistaregresado.Connection.Close();
+                return lstEgresadoBE;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public List<EgresadoBE> listarEgresadoxCarrera(string busqueda)
+        {
+            String sqllistaregresado;
+
+            SqlConnection conn;
+            SqlCommand cmdlistaregresado;
+            SqlDataReader dregresado;
+            SqlParameter prmbusqueda;
+
+            try
+            {
+                List<EgresadoBE> lstEgresadoBE;
+                EgresadoBE objetoEgresadoBE;
+
+                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CSSeguimientoEgresados"].ToString());
+                sqllistaregresado = "SWEGR_listarEgresadoxCarrera";
+                cmdlistaregresado = new SqlCommand(sqllistaregresado, conn);
+                cmdlistaregresado.CommandType = CommandType.StoredProcedure;
+
+                prmbusqueda = new SqlParameter();
+                prmbusqueda.ParameterName = "@busqueda";
+                prmbusqueda.SqlDbType = SqlDbType.VarChar;
+                prmbusqueda.Size = 50;
+                prmbusqueda.Value = busqueda;
+
+                cmdlistaregresado.Parameters.Add(prmbusqueda);
+                cmdlistaregresado.Connection.Open();
+                dregresado = cmdlistaregresado.ExecuteReader();
+                lstEgresadoBE = new List<EgresadoBE>();
+
+                while (dregresado.Read())
+                {
+                    objetoEgresadoBE = new EgresadoBE();
+                    objetoEgresadoBE.Idegresado = dregresado.GetInt32(0);
+                    objetoEgresadoBE.Nombrecompletoegresado = dregresado.GetString(1);
+                    objetoEgresadoBE.Edadegresado = dregresado.GetByte(2);
+                    objetoEgresadoBE.Sexoegresado = Convert.ToChar(dregresado.GetString(3));
+                    objetoEgresadoBE.Telefonoprinegresado = dregresado.GetString(4);
+                    objetoEgresadoBE.Telefonoaltegresado = dregresado.GetString(5);
+                    objetoEgresadoBE.Dniegresado = dregresado.GetString(6);
+                    objetoEgresadoBE.Correoegresado = dregresado.GetString(7);
+                    objetoEgresadoBE.Correoaltegresado = dregresado.GetString(8);
+                    objetoEgresadoBE.Direccionegresado = dregresado.GetString(9);
+                    objetoEgresadoBE.Distritoegresado = dregresado.GetString(10);
+                    objetoEgresadoBE.Departamentoegresado = dregresado.GetString(11);
+                    objetoEgresadoBE.Idpaisegresado = dregresado.GetInt32(12);
+                    objetoEgresadoBE.Perfillinkedinegresado = dregresado.GetString(13);
+                    objetoEgresadoBE.Perfilfacebookegresado = dregresado.GetString(14);
+                    objetoEgresadoBE.Fechanacimientoegresado = dregresado.GetDateTime(15);
+                    objetoEgresadoBE.Tipoegresado = Convert.ToChar(dregresado.GetString(16));
+                    objetoEgresadoBE.Fotoegresado = null;
+                    objetoEgresadoBE.Contrasenaegresado = dregresado.GetString(18);
+                    objetoEgresadoBE.Contrasenadinamicaegresado = dregresado.GetString(19);
+                    objetoEgresadoBE.Cambiocontrasenaegresado = dregresado.GetBoolean(20);
+                    objetoEgresadoBE.Cicloegresado = dregresado.GetString(21);
+                    objetoEgresadoBE.Codigouniversitarioegresado = dregresado.GetString(22);
+                    objetoEgresadoBE.Carreraegresado = dregresado.GetString(23);
+
+                    lstEgresadoBE.Add(objetoEgresadoBE);
+                }
+                cmdlistaregresado.Connection.Close();
+                return lstEgresadoBE;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public List<EgresadoBE> listarEgresadoxNombreoCodigoyCiclo(string busqueda, string ciclo)
+        {
+            String sqllistaregresado;
+
+            SqlConnection conn;
+            SqlCommand cmdlistaregresado;
+            SqlDataReader dregresado;
+            SqlParameter prmbusqueda;
+            SqlParameter prmciclo;
+
+            try
+            {
+                List<EgresadoBE> lstEgresadoBE;
+                EgresadoBE objetoEgresadoBE;
+
+                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CSSeguimientoEgresados"].ToString());
+                sqllistaregresado = "SWEGR_listarEgresadoxNombreoCodigoyCiclo";
+                cmdlistaregresado = new SqlCommand(sqllistaregresado, conn);
+                cmdlistaregresado.CommandType = CommandType.StoredProcedure;
+
+                prmbusqueda = new SqlParameter();
+                prmbusqueda.ParameterName = "@busqueda";
+                prmbusqueda.SqlDbType = SqlDbType.VarChar;
+                prmbusqueda.Size = 100;
+                prmbusqueda.Value = busqueda;
+
+                prmciclo = new SqlParameter();
+                prmciclo.ParameterName = "@ciclo";
+                prmciclo.SqlDbType = SqlDbType.VarChar;
+                prmciclo.Size = 10;
+                prmciclo.Value = ciclo;
+
+                cmdlistaregresado.Parameters.Add(prmbusqueda);
+                cmdlistaregresado.Parameters.Add(prmciclo);
+                cmdlistaregresado.Connection.Open();
+                dregresado = cmdlistaregresado.ExecuteReader();
+                lstEgresadoBE = new List<EgresadoBE>();
+
+                while (dregresado.Read())
+                {
+                    objetoEgresadoBE = new EgresadoBE();
+                    objetoEgresadoBE.Idegresado = dregresado.GetInt32(0);
+                    objetoEgresadoBE.Nombrecompletoegresado = dregresado.GetString(1);
+                    objetoEgresadoBE.Edadegresado = dregresado.GetByte(2);
+                    objetoEgresadoBE.Sexoegresado = Convert.ToChar(dregresado.GetString(3));
+                    objetoEgresadoBE.Telefonoprinegresado = dregresado.GetString(4);
+                    objetoEgresadoBE.Telefonoaltegresado = dregresado.GetString(5);
+                    objetoEgresadoBE.Dniegresado = dregresado.GetString(6);
+                    objetoEgresadoBE.Correoegresado = dregresado.GetString(7);
+                    objetoEgresadoBE.Correoaltegresado = dregresado.GetString(8);
+                    objetoEgresadoBE.Direccionegresado = dregresado.GetString(9);
+                    objetoEgresadoBE.Distritoegresado = dregresado.GetString(10);
+                    objetoEgresadoBE.Departamentoegresado = dregresado.GetString(11);
+                    objetoEgresadoBE.Idpaisegresado = dregresado.GetInt32(12);
+                    objetoEgresadoBE.Perfillinkedinegresado = dregresado.GetString(13);
+                    objetoEgresadoBE.Perfilfacebookegresado = dregresado.GetString(14);
+                    objetoEgresadoBE.Fechanacimientoegresado = dregresado.GetDateTime(15);
+                    objetoEgresadoBE.Tipoegresado = Convert.ToChar(dregresado.GetString(16));
+                    objetoEgresadoBE.Fotoegresado = null;
+                    objetoEgresadoBE.Contrasenaegresado = dregresado.GetString(18);
+                    objetoEgresadoBE.Contrasenadinamicaegresado = dregresado.GetString(19);
+                    objetoEgresadoBE.Cambiocontrasenaegresado = dregresado.GetBoolean(20);
+                    objetoEgresadoBE.Cicloegresado = dregresado.GetString(21);
+                    objetoEgresadoBE.Codigouniversitarioegresado = dregresado.GetString(22);
+                    objetoEgresadoBE.Carreraegresado = dregresado.GetString(23);
+
+                    lstEgresadoBE.Add(objetoEgresadoBE);
+                }
+                cmdlistaregresado.Connection.Close();
+                return lstEgresadoBE;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public List<EgresadoBE> listarEgresadoxNombreoCodigoyCarrera(string busqueda, string carrera)
+        {
+            String sqllistaregresado;
+
+            SqlConnection conn;
+            SqlCommand cmdlistaregresado;
+            SqlDataReader dregresado;
+            SqlParameter prmbusqueda;
+            SqlParameter prmcarrera;
+
+            try
+            {
+                List<EgresadoBE> lstEgresadoBE;
+                EgresadoBE objetoEgresadoBE;
+
+                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CSSeguimientoEgresados"].ToString());
+                sqllistaregresado = "SWEGR_listarEgresadoxNombreoCodigoyCarrera";
+                cmdlistaregresado = new SqlCommand(sqllistaregresado, conn);
+                cmdlistaregresado.CommandType = CommandType.StoredProcedure;
+
+                prmbusqueda = new SqlParameter();
+                prmbusqueda.ParameterName = "@busqueda";
+                prmbusqueda.SqlDbType = SqlDbType.VarChar;
+                prmbusqueda.Size = 100;
+                prmbusqueda.Value = busqueda;
+
+                prmcarrera = new SqlParameter();
+                prmcarrera.ParameterName = "@carrera";
+                prmcarrera.SqlDbType = SqlDbType.VarChar;
+                prmcarrera.Size = 50;
+                prmcarrera.Value = carrera;
+
+                cmdlistaregresado.Parameters.Add(prmbusqueda);
+                cmdlistaregresado.Parameters.Add(prmcarrera);
+                cmdlistaregresado.Connection.Open();
+                dregresado = cmdlistaregresado.ExecuteReader();
+                lstEgresadoBE = new List<EgresadoBE>();
+
+                while (dregresado.Read())
+                {
+                    objetoEgresadoBE = new EgresadoBE();
+                    objetoEgresadoBE.Idegresado = dregresado.GetInt32(0);
+                    objetoEgresadoBE.Nombrecompletoegresado = dregresado.GetString(1);
+                    objetoEgresadoBE.Edadegresado = dregresado.GetByte(2);
+                    objetoEgresadoBE.Sexoegresado = Convert.ToChar(dregresado.GetString(3));
+                    objetoEgresadoBE.Telefonoprinegresado = dregresado.GetString(4);
+                    objetoEgresadoBE.Telefonoaltegresado = dregresado.GetString(5);
+                    objetoEgresadoBE.Dniegresado = dregresado.GetString(6);
+                    objetoEgresadoBE.Correoegresado = dregresado.GetString(7);
+                    objetoEgresadoBE.Correoaltegresado = dregresado.GetString(8);
+                    objetoEgresadoBE.Direccionegresado = dregresado.GetString(9);
+                    objetoEgresadoBE.Distritoegresado = dregresado.GetString(10);
+                    objetoEgresadoBE.Departamentoegresado = dregresado.GetString(11);
+                    objetoEgresadoBE.Idpaisegresado = dregresado.GetInt32(12);
+                    objetoEgresadoBE.Perfillinkedinegresado = dregresado.GetString(13);
+                    objetoEgresadoBE.Perfilfacebookegresado = dregresado.GetString(14);
+                    objetoEgresadoBE.Fechanacimientoegresado = dregresado.GetDateTime(15);
+                    objetoEgresadoBE.Tipoegresado = Convert.ToChar(dregresado.GetString(16));
+                    objetoEgresadoBE.Fotoegresado = null;
+                    objetoEgresadoBE.Contrasenaegresado = dregresado.GetString(18);
+                    objetoEgresadoBE.Contrasenadinamicaegresado = dregresado.GetString(19);
+                    objetoEgresadoBE.Cambiocontrasenaegresado = dregresado.GetBoolean(20);
+                    objetoEgresadoBE.Cicloegresado = dregresado.GetString(21);
+                    objetoEgresadoBE.Codigouniversitarioegresado = dregresado.GetString(22);
+                    objetoEgresadoBE.Carreraegresado = dregresado.GetString(23);
+
+                    lstEgresadoBE.Add(objetoEgresadoBE);
+                }
+                cmdlistaregresado.Connection.Close();
+                return lstEgresadoBE;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public List<EgresadoBE> listarEgresadoxNombreoCodigoyCicloyCarera(string busqueda, string ciclo, string carrera)
+        {
+            String sqllistaregresado;
+
+            SqlConnection conn;
+            SqlCommand cmdlistaregresado;
+            SqlDataReader dregresado;
+            SqlParameter prmbusqueda;
+            SqlParameter prmciclo;
+            SqlParameter prmcarrera;
+
+            try
+            {
+                List<EgresadoBE> lstEgresadoBE;
+                EgresadoBE objetoEgresadoBE;
+
+                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CSSeguimientoEgresados"].ToString());
+                sqllistaregresado = "SWEGR_listarEgresadoxNombreoCodigoyCicloyCarrera";
+                cmdlistaregresado = new SqlCommand(sqllistaregresado, conn);
+                cmdlistaregresado.CommandType = CommandType.StoredProcedure;
+
+                prmbusqueda = new SqlParameter();
+                prmbusqueda.ParameterName = "@busqueda";
+                prmbusqueda.SqlDbType = SqlDbType.VarChar;
+                prmbusqueda.Size = 100;
+                prmbusqueda.Value = busqueda;
+
+                prmciclo = new SqlParameter();
+                prmciclo.ParameterName = "@ciclo";
+                prmciclo.SqlDbType = SqlDbType.VarChar;
+                prmciclo.Size = 10;
+                prmciclo.Value = ciclo;
+
+                prmcarrera = new SqlParameter();
+                prmcarrera.ParameterName = "@carrera";
+                prmcarrera.SqlDbType = SqlDbType.VarChar;
+                prmcarrera.Size = 50;
+                prmcarrera.Value = carrera;
+
+                cmdlistaregresado.Parameters.Add(prmbusqueda);
+                cmdlistaregresado.Parameters.Add(prmciclo);
+                cmdlistaregresado.Parameters.Add(prmcarrera);
+                cmdlistaregresado.Connection.Open();
+                dregresado = cmdlistaregresado.ExecuteReader();
+                lstEgresadoBE = new List<EgresadoBE>();
+
+                while (dregresado.Read())
+                {
+                    objetoEgresadoBE = new EgresadoBE();
+                    objetoEgresadoBE.Idegresado = dregresado.GetInt32(0);
+                    objetoEgresadoBE.Nombrecompletoegresado = dregresado.GetString(1);
+                    objetoEgresadoBE.Edadegresado = dregresado.GetByte(2);
+                    objetoEgresadoBE.Sexoegresado = Convert.ToChar(dregresado.GetString(3));
+                    objetoEgresadoBE.Telefonoprinegresado = dregresado.GetString(4);
+                    objetoEgresadoBE.Telefonoaltegresado = dregresado.GetString(5);
+                    objetoEgresadoBE.Dniegresado = dregresado.GetString(6);
+                    objetoEgresadoBE.Correoegresado = dregresado.GetString(7);
+                    objetoEgresadoBE.Correoaltegresado = dregresado.GetString(8);
+                    objetoEgresadoBE.Direccionegresado = dregresado.GetString(9);
+                    objetoEgresadoBE.Distritoegresado = dregresado.GetString(10);
+                    objetoEgresadoBE.Departamentoegresado = dregresado.GetString(11);
+                    objetoEgresadoBE.Idpaisegresado = dregresado.GetInt32(12);
+                    objetoEgresadoBE.Perfillinkedinegresado = dregresado.GetString(13);
+                    objetoEgresadoBE.Perfilfacebookegresado = dregresado.GetString(14);
+                    objetoEgresadoBE.Fechanacimientoegresado = dregresado.GetDateTime(15);
+                    objetoEgresadoBE.Tipoegresado = Convert.ToChar(dregresado.GetString(16));
+                    objetoEgresadoBE.Fotoegresado = null;
+                    objetoEgresadoBE.Contrasenaegresado = dregresado.GetString(18);
+                    objetoEgresadoBE.Contrasenadinamicaegresado = dregresado.GetString(19);
+                    objetoEgresadoBE.Cambiocontrasenaegresado = dregresado.GetBoolean(20);
+                    objetoEgresadoBE.Cicloegresado = dregresado.GetString(21);
+                    objetoEgresadoBE.Codigouniversitarioegresado = dregresado.GetString(22);
+                    objetoEgresadoBE.Carreraegresado = dregresado.GetString(23);
+
+                    lstEgresadoBE.Add(objetoEgresadoBE);
+                }
+                cmdlistaregresado.Connection.Close();
+                return lstEgresadoBE;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public List<EgresadoBE> listarEgresadoxCicloyCarera(string ciclo, string carrera)
+        {
+            String sqllistaregresado;
+
+            SqlConnection conn;
+            SqlCommand cmdlistaregresado;
+            SqlDataReader dregresado;
+            SqlParameter prmciclo;
+            SqlParameter prmcarrera;
+
+            try
+            {
+                List<EgresadoBE> lstEgresadoBE;
+                EgresadoBE objetoEgresadoBE;
+
+                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CSSeguimientoEgresados"].ToString());
+                sqllistaregresado = "SWEGR_listarEgresadoxCicloyCarrera";
+                cmdlistaregresado = new SqlCommand(sqllistaregresado, conn);
+                cmdlistaregresado.CommandType = CommandType.StoredProcedure;
+
+                prmciclo = new SqlParameter();
+                prmciclo.ParameterName = "@ciclo";
+                prmciclo.SqlDbType = SqlDbType.VarChar;
+                prmciclo.Size = 10;
+                prmciclo.Value = ciclo;
+
+                prmcarrera = new SqlParameter();
+                prmcarrera.ParameterName = "@carrera";
+                prmcarrera.SqlDbType = SqlDbType.VarChar;
+                prmcarrera.Size = 50;
+                prmcarrera.Value = carrera;
+
+                cmdlistaregresado.Parameters.Add(prmciclo);
+                cmdlistaregresado.Parameters.Add(prmcarrera);
+                cmdlistaregresado.Connection.Open();
+                dregresado = cmdlistaregresado.ExecuteReader();
+                lstEgresadoBE = new List<EgresadoBE>();
+
+                while (dregresado.Read())
+                {
+                    objetoEgresadoBE = new EgresadoBE();
+                    objetoEgresadoBE.Idegresado = dregresado.GetInt32(0);
+                    objetoEgresadoBE.Nombrecompletoegresado = dregresado.GetString(1);
+                    objetoEgresadoBE.Edadegresado = dregresado.GetByte(2);
+                    objetoEgresadoBE.Sexoegresado = Convert.ToChar(dregresado.GetString(3));
+                    objetoEgresadoBE.Telefonoprinegresado = dregresado.GetString(4);
+                    objetoEgresadoBE.Telefonoaltegresado = dregresado.GetString(5);
+                    objetoEgresadoBE.Dniegresado = dregresado.GetString(6);
+                    objetoEgresadoBE.Correoegresado = dregresado.GetString(7);
+                    objetoEgresadoBE.Correoaltegresado = dregresado.GetString(8);
+                    objetoEgresadoBE.Direccionegresado = dregresado.GetString(9);
+                    objetoEgresadoBE.Distritoegresado = dregresado.GetString(10);
+                    objetoEgresadoBE.Departamentoegresado = dregresado.GetString(11);
+                    objetoEgresadoBE.Idpaisegresado = dregresado.GetInt32(12);
+                    objetoEgresadoBE.Perfillinkedinegresado = dregresado.GetString(13);
+                    objetoEgresadoBE.Perfilfacebookegresado = dregresado.GetString(14);
+                    objetoEgresadoBE.Fechanacimientoegresado = dregresado.GetDateTime(15);
+                    objetoEgresadoBE.Tipoegresado = Convert.ToChar(dregresado.GetString(16));
+                    objetoEgresadoBE.Fotoegresado = null;
+                    objetoEgresadoBE.Contrasenaegresado = dregresado.GetString(18);
+                    objetoEgresadoBE.Contrasenadinamicaegresado = dregresado.GetString(19);
+                    objetoEgresadoBE.Cambiocontrasenaegresado = dregresado.GetBoolean(20);
+                    objetoEgresadoBE.Cicloegresado = dregresado.GetString(21);
+                    objetoEgresadoBE.Codigouniversitarioegresado = dregresado.GetString(22);
+                    objetoEgresadoBE.Carreraegresado = dregresado.GetString(23);
+
+                    lstEgresadoBE.Add(objetoEgresadoBE);
+                }
+                cmdlistaregresado.Connection.Close();
+                return lstEgresadoBE;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
         public EgresadoBE obtenerEgresado(int idegresado)
         {
             String sqlobteneregresado;
