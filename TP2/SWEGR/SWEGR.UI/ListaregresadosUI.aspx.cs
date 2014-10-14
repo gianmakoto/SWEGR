@@ -809,9 +809,25 @@ namespace SWEGR.UI
             }
         }
 
+      
+
+
         protected void grdEgresados_RowCommand(object sender, GridViewCommandEventArgs e)
         {
+            if (e.CommandName.Equals("cmdVer"))
+            {
+                int index = Convert.ToInt32(e.CommandArgument);
+                String codigo = grdEgresados.Rows[index].Cells[0].Text;
 
+                EgresadoBC egresadoBC = new EgresadoBC();
+
+
+                ScriptManager.RegisterStartupScript(this, GetType(), "visualizarInfoCompleta", "visualizarInfoCompleta();", true);
+            }
+            else if (e.CommandName.Equals("cmdExtraer"))
+            {
+
+            }
         }
 
         protected void btnExtraerDatos_Click(object sender, ImageClickEventArgs e)

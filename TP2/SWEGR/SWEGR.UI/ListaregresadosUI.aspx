@@ -33,8 +33,44 @@
     <link href="Content/css/style-responsive.css" rel="stylesheet" />
 
 
+<style>
+        .separadorTabla
+        {  
+            -webkit-column-count: 2;
+            -moz-column-count: 2; 
+            column-count: 2;
 
+        }
+    </style>
     <script type="text/javascript">
+
+        function visualizarInfoCompleta() {
+
+            var wWidth = $(window).width();
+            var dWidth = wWidth * 0.6;
+            var tableWidth = dWidth * 0.93;
+
+
+            $("#tbegresadoTrabajos").width(tableWidth);
+            $("#tbegresadoEstudios").width(tableWidth);
+            $("#tbegresadoIntereses").width(dWidth * 0.45);
+            $("#tbegresadoAptitudes").width(dWidth * 0.45);
+            $("#divformulario").width(dWidth * 0.7)
+            $("#divfoto").width(dWidth * 0.2)
+
+
+            $("#dialogInfo").dialog({
+                width: dWidth,
+                title: "Datos de Egresado",
+                buttons: {
+                    Guardar: function () {
+                        $(this).dialog("close");
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
+
         function error() {
             $("#dialogerror").dialog({
                 height: 200,
@@ -215,6 +251,95 @@
                                     <b style="text-align: center">No existen egresados por mostrar.</b>
                                 </div>
                             </div>
+
+                            <div class="dialog-form" title="Datos Obtenidos">                            
+                                <div id="dialogInfo" style="text-align: justify; display: none" runat="server">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                        <div id="divformulario" style="width:auto">                             
+                                            <label id="dlgname">Nombre Completo:</label><br />                                           
+                                            <label id="dlgemail">Telefonos:</label><br />                                           
+                                            <label id="dlgpassword">Dirección:</label><br />
+                                            <label id="dlgcorreo">Correo:</label><br />
+                                            <label id="dlgcorreoalt">Correo Alternativo:</label><br />
+                                        </div>
+                                                </td>
+                                            <td>
+                                        <div id="divfoto" style="width:auto">
+                                            <img src="http://cdn.slidesharecdn.com/profile-photo-otto9023-96x96.jpg?cb=1413141593" />
+                                        </div>
+                                                </td>
+                                        </tr>
+                                    </table>  
+                                    <br />
+                                    <label style="">Trabajos</label>
+                                    <table id="tbegresadoTrabajos" class="ui-widget ui-widget-content">
+                                        <thead>
+                                            <tr class="ui-widget-header" style="width:auto">
+                                                <th id="th1" style="width:25%">Cargo</th>
+                                                <th id="th2" style="width:50%">Trabajo</th>
+                                                <th id="th3" style="width:25%">Duración</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>John Doe</td>
+                                                <td>john.doe@example.com</td>
+                                                <td>johndoe1</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <br />
+                                    <label style="">Estudios</label>
+                                    <table id="tbegresadoEstudios" class="ui-widget ui-widget-content">
+                                        <thead>
+                                            <tr class="ui-widget-header" style="width:auto">
+                                                <th id="th4" style="width:25%">Tipo</th>
+                                                <th id="th5" style="width:25%">Nombre</th>
+                                                <th id="th6" style="width:50%">Institución</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>John Doe</td>
+                                                <td>john.doe@example.com</td>
+                                                <td>johndoe1</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <br />
+                                    <div class="separadorTabla">
+                                        <table id="tbegresadoIntereses" class="ui-widget ui-widget-content">
+                                            <thead>
+                                                <tr class="ui-widget-header" style="width:auto">
+                                                    <th>Intereses</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>John Doe</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <table id="tbegresadoAptitudes" class="ui-widget ui-widget-content">
+                                            <thead>
+                                                <tr class="ui-widget-header" style="width:auto">
+                                                    <th>Aptitudes</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>John Doe</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                            <input type="submit" tabindex="-1" style="position: absolute; top: -1000px"/>
+                                </div>                            
+                            </div>
+
 
                         </form>
                     </div>
