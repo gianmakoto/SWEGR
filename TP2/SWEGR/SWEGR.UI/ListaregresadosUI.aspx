@@ -160,7 +160,6 @@
     <div class="container">
         <section class="panel">
             <header class="panel-heading">
-                <h3>Ingrese sus datos</h3>
             </header>
             <div class="panel-body">
                 <div class="row">

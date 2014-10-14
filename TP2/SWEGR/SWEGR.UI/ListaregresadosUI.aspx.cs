@@ -42,23 +42,40 @@ namespace SWEGR.UI
         {
             List<String> lsciclos = new List<String>();
 
-            lsciclos.Add("1998");
-            lsciclos.Add("1999");
-            lsciclos.Add("2000");
-            lsciclos.Add("2001");
-            lsciclos.Add("2002");
-            lsciclos.Add("2003");
-            lsciclos.Add("2004");
-            lsciclos.Add("2005");
-            lsciclos.Add("2006");
-            lsciclos.Add("2007");
-            lsciclos.Add("2008");
-            lsciclos.Add("2009");
-            lsciclos.Add("2010");
-            lsciclos.Add("2011");
-            lsciclos.Add("2012");
-            lsciclos.Add("2013");
-            lsciclos.Add("2014");
+            lsciclos.Add("199810");
+            lsciclos.Add("199820");
+            lsciclos.Add("199910");
+            lsciclos.Add("199920");
+            lsciclos.Add("200010");
+            lsciclos.Add("200020");
+            lsciclos.Add("200110");
+            lsciclos.Add("200120");
+            lsciclos.Add("200210");
+            lsciclos.Add("200220");
+            lsciclos.Add("200310");
+            lsciclos.Add("200320");
+            lsciclos.Add("200410");
+            lsciclos.Add("200420");
+            lsciclos.Add("200510");
+            lsciclos.Add("200520");
+            lsciclos.Add("200610");
+            lsciclos.Add("200620");
+            lsciclos.Add("200710");
+            lsciclos.Add("200720");
+            lsciclos.Add("200810");
+            lsciclos.Add("200820");
+            lsciclos.Add("200910");
+            lsciclos.Add("200920");
+            lsciclos.Add("201010");
+            lsciclos.Add("201020");
+            lsciclos.Add("201110");
+            lsciclos.Add("201120");
+            lsciclos.Add("201210");
+            lsciclos.Add("201220");
+            lsciclos.Add("201310");
+            lsciclos.Add("201320");
+            lsciclos.Add("201410");
+            lsciclos.Add("201420");
 
             return lsciclos;
         }
