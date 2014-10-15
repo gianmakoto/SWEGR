@@ -8,6 +8,13 @@ namespace SWEGR.BL.BE
 {
     public class Egresados
     {
+        int _EgresadoID;
+
+        public int EgresadoID
+        {
+            get { return _EgresadoID; }
+            set { _EgresadoID = value; }
+        }
         string codigo;
 
         public string Codigo

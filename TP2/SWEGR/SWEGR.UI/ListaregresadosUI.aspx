@@ -12,11 +12,11 @@
 
     <script type="text/javascript" src="MaxLength.min.js"></script>
 
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="http://localhost:49184/code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://localhost:49184/maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Bootstrap core CSS -->
     <link href="Content/css/bootstrap.min.css" rel="stylesheet">
@@ -167,6 +167,7 @@
                     <ol class="breadcrumb pull-right">
                         <li><a href="Index.aspx">Home</a></li>
                         <li class="active">Lista de egresados </li>
+                Lista de egresados </li>
                     </ol>
                 </div>
             </div>
@@ -233,8 +234,9 @@
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-9">
-                                    <asp:GridView ID="grdEgresados" runat="server" AutoGenerateColumns="false" OnRowCommand="grdEgresados_RowCommand">
+                                    <asp:GridView ID="grdEgresados" runat="server" AutoGenerateColumns="false" DataKeyNames="EgresadoID" OnRowCommand="grdEgresados_RowCommand">
                                         <Columns>
+                                            <asp:BoundField DataField="EgresadoID" HeaderText="EgresadoID" Visible="False" />
                                             <asp:BoundField HeaderText="Código" DataField="Codigo" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
                                             <asp:BoundField HeaderText="Nombre" DataField="Nombre" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
                                             <asp:BoundField HeaderText="Carrera" DataField="Carrera" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
@@ -248,7 +250,7 @@
                                             <asp:TemplateField HeaderText="Ver" ItemStyle-HorizontalAlign="Center">
                                                 <ItemTemplate>
                                                             
-                                                    <asp:LinkButton ID="lkbVer" runat="server"   CommandName="cmdVer" CommandArgument="<%# Container.DataItemIndex %>" >
+                                                    <asp:LinkButton ID="lkbVer" runat="server"   CommandName="cmdVer" CommandArgument='<%# Eval("EgresadoID") %>' >
                                                                 <asp:Image ID="btnVer" runat="server" ImageUrl="Images/visua.png" Width="16" Height="16"/>
                                                             </asp:LinkButton>
                                                 </ItemTemplate>
@@ -257,7 +259,7 @@
                                             <asp:TemplateField HeaderText="Extraer datos" ItemStyle-HorizontalAlign="Center">
                                                 <ItemTemplate>
 
-                                                            <asp:LinkButton ID="lkbExtraerDatos"  runat="server"   CommandName="cmdExtraer" CommandArgument="<%# Container.DataItemIndex %>" >
+                                                            <asp:LinkButton ID="lkbExtraerDatos"  runat="server"   CommandName="cmdExtraer" CommandArgument='<%# Eval("EgresadoID") %>' >
                                                                 <asp:Image ID="Image1" runat="server" ImageUrl="Images/extra.png" Width="16" Height="16"/>
                                                                 </asp:LinkButton>
                                                             
@@ -278,8 +280,7 @@
                             
                             <div class="form-group">
                                 <div id="dialogerror" style="text-align: justify; display: none" runat="server">
-                                    <b style="text-align: center">No existen egresados por mostrar.</b>
-                                </div>
+                                    <b style="text-align: center">No existen egresados por mostrar.v>
                             </div>
 
                             <!-- Parte Dialog Form -->
@@ -305,8 +306,7 @@
                                         </tr>
                                     </table>  
                                     <br />
-                                    <label style="">Trabajos</label>
-                                    <table id="tbegresadoTrabajos" class="ui-widget ui-widget-content">
+                                    <label style="">Trabajos    <table id="tbegresadoTrabajos" class="ui-widget ui-widget-content">
                                         <thead>
                                             <tr class="ui-widget-header" style="width:auto">
                                                 <th id="th1" style="width:25%">Cargo</th>

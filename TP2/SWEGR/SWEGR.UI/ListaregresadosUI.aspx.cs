@@ -129,6 +129,7 @@ namespace SWEGR.UI
                 objEgresado.Nombre = objEgresadoBE.Nombrecompletoegresado;
                 objEgresado.Carrera = objEgresadoBE.Carreraegresado;
                 objEgresado.Cicloegreso = objEgresadoBE.Cicloegresado;
+                objEgresado.EgresadoID = objEgresadoBE.Idegresado ;
 
                 lstRegistroLaboralBE = metodosRegistroLaboral.listarregistrolaobral(objEgresadoBE.Idegresado);
                 if (lstRegistroLaboralBE.Count() != 0)
@@ -150,6 +151,79 @@ namespace SWEGR.UI
                             objEgresado.Cargojefe = objRegistroLaboralBE.Cargojefetrabajo;
                             objEgresado.Telefonojefe = objRegistroLaboralBE.Telefonojefetrabajo;
                             objEgresado.Correojefe = objRegistroLaboralBE.Correojefetrabajo;
+                           
+                        }
+                        else
+                            continue;
+                    }
+                }
+                else
+                {
+                    objEgresado.Trabajoactual = "";
+                    objEgresado.Nombrejefe = "";
+                    objEgresado.Cargojefe = "";
+                    objEgresado.Telefonojefe = "";
+                    objEgresado.Correojefe = "";
+                }
+
+                lstEgresados.Add(objEgresado);
+            }
+
+            grdEgresados.DataSource = lstEgresados;
+            grdEgresados.DataBind();
+        }
+
+
+        public void grdEgresadosDataBind_Lista(String nombre, String carrera, int anioInicio, int anioFin, String codigoUniversitario)
+        {
+            List<Egresados> lstEgresados = new List<Egresados>();
+            Egresados objEgresado;
+
+            RegistroLaboralBE objRegistroLaboralBE;
+            List<RegistroLaboralBE> lstRegistroLaboralBE;
+            EgresadoBE objEgresadoBE;
+            List<EgresadoBE> lstEgresadoBE = new List<EgresadoBE>();
+
+            EgresadoBC metodosEgresado = new EgresadoBC();
+            RegistroLaboralBC metodosRegistroLaboral = new RegistroLaboralBC();
+
+            lstEgresadoBE = metodosEgresado.listarEgresado_Lista(nombre,carrera,anioInicio,anioFin,codigoUniversitario);
+
+            for (int i = 0; i < lstEgresadoBE.Count(); i++)
+            {
+                objEgresado = new Egresados();
+                lstRegistroLaboralBE = new List<RegistroLaboralBE>();
+                objEgresadoBE = new EgresadoBE();
+
+                objEgresadoBE = lstEgresadoBE[i];
+
+                objEgresado.Codigo = objEgresadoBE.Codigouniversitarioegresado;
+                objEgresado.Nombre = objEgresadoBE.Nombrecompletoegresado;
+                objEgresado.Carrera = objEgresadoBE.Carreraegresado;
+                objEgresado.Cicloegreso = objEgresadoBE.Cicloegresado;
+                objEgresado.EgresadoID = objEgresadoBE.Idegresado;
+
+                lstRegistroLaboralBE = metodosRegistroLaboral.listarregistrolaobral(objEgresadoBE.Idegresado);
+                if (lstRegistroLaboralBE.Count() != 0)
+                {
+                    for (int k = 0; k < lstRegistroLaboralBE.Count(); k++)
+                    {
+                        objRegistroLaboralBE = new RegistroLaboralBE();
+
+                        if (lstRegistroLaboralBE[k].Trabajoactual == true)
+                        {
+                            objRegistroLaboralBE.Nombretrabajo = lstRegistroLaboralBE[k].Nombretrabajo;
+                            objRegistroLaboralBE.Nombrejefetrabajo = lstRegistroLaboralBE[k].Nombrejefetrabajo;
+                            objRegistroLaboralBE.Cargojefetrabajo = lstRegistroLaboralBE[k].Cargojefetrabajo;
+                            objRegistroLaboralBE.Telefonojefetrabajo = lstRegistroLaboralBE[k].Telefonojefetrabajo;
+                            objRegistroLaboralBE.Correojefetrabajo = lstRegistroLaboralBE[k].Correojefetrabajo;
+
+                            objEgresado.Trabajoactual = objRegistroLaboralBE.Nombretrabajo;
+                            objEgresado.Nombrejefe = objRegistroLaboralBE.Nombrejefetrabajo;
+                            objEgresado.Cargojefe = objRegistroLaboralBE.Cargojefetrabajo;
+                            objEgresado.Telefonojefe = objRegistroLaboralBE.Telefonojefetrabajo;
+                            objEgresado.Correojefe = objRegistroLaboralBE.Correojefetrabajo;
+
                         }
                         else
                             continue;
@@ -699,107 +773,124 @@ namespace SWEGR.UI
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
-            string busqueda;
-            string año;
-            string carrera;
+           // string busqueda;
+            string nombreBuscar="";
+            string codigoUniversitarioBuscar="";
+            int anioInicioBuscar=0;
+            int anioFinBuscar=0;
+            string carreraBuscar="";
+          
+            nombreBuscar=txtNombreCodigo.Text;
+            codigoUniversitarioBuscar=txtNombreCodigo.Text;
+          
+            if(!ddlInicio.Text.Equals("Seleccione el año"))
+                anioInicioBuscar=Convert.ToInt32( ddlInicio.Text);
 
-            if (txtNombreCodigo.Text == "" && ddlCarrera.Text == "" && ddlFin.Text == "")
-            {
-                grdEgresadosDataBind();
-            }
-            else
-            {
-                if (txtNombreCodigo.Text != "" && ddlCarrera.Text == "" && ddlFin.Text == "")
-                {
-                    busqueda = txtNombreCodigo.Text;
 
-                    if (!gredEgresadosxNombreoCodigo(busqueda))
-                    {
-                        grdEgresadosVacio();
-                        ScriptManager.RegisterStartupScript(Page, GetType(), "error", "error();", true);
-                    }
-                }
-                else
-                {
-                    if (txtNombreCodigo.Text == "" && ddlCarrera.Text == "" && ddlFin.Text != "")
-                    {
-                        busqueda = ddlFin.Text;
+            if (!ddlFin.Text.Equals("Seleccione el año"))
+                anioFinBuscar = Convert.ToInt32(ddlFin.Text);
 
-                        if (!gredEgresadosxCiclo(busqueda))
-                        {
-                            grdEgresadosVacio();
-                            ScriptManager.RegisterStartupScript(Page, GetType(), "error", "error();", true);
-                        }
-                    }
-                    else
-                    {
-                        if (txtNombreCodigo.Text == "" && ddlCarrera.Text != "" && ddlFin.Text == "")
-                        {
-                            busqueda = ddlCarrera.Text;
+            grdEgresadosDataBind_Lista(nombreBuscar, carreraBuscar, anioInicioBuscar, anioFinBuscar, codigoUniversitarioBuscar);
 
-                            if (!gredEgresadosxCarrera(busqueda))
-                            {
-                                grdEgresadosVacio();
-                                ScriptManager.RegisterStartupScript(Page, GetType(), "error", "error();", true);
-                            }
-                        }
-                        else
-                        {
-                            if (txtNombreCodigo.Text != "" && ddlCarrera.Text == "" && ddlFin.Text != "")
-                            {
-                                busqueda = txtNombreCodigo.Text;
-                                año = ddlFin.Text;
 
-                                if (!gredEgresadosxNombreoCodigoyCiclo(busqueda, año))
-                                {
-                                    grdEgresadosVacio();
-                                    ScriptManager.RegisterStartupScript(Page, GetType(), "error", "error();", true);
-                                }
-                            }
-                            else
-                            {
-                                if (txtNombreCodigo.Text != "" && ddlCarrera.Text != "" && ddlFin.Text == "")
-                                {
-                                    busqueda = txtNombreCodigo.Text;
-                                    carrera = ddlCarrera.Text;
+           /*  if (txtNombreCodigo.Text == "" && ddlCarrera.Text == "" && ddlFin.Text == "")
+             {
+                 grdEgresadosDataBind();
+             }
+             else
+             {
+                 if (txtNombreCodigo.Text != "" && ddlCarrera.Text == "" && ddlFin.Text == "")
+                 {
+                     busqueda = txtNombreCodigo.Text;
 
-                                    if (!gredEgresadosxNombreoCodigoyCarrera(busqueda, carrera))
-                                    {
-                                        grdEgresadosVacio();
-                                        ScriptManager.RegisterStartupScript(Page, GetType(), "error", "error();", true);
-                                    }
-                                }
-                                else
-                                {
-                                    if (txtNombreCodigo.Text == "" && ddlCarrera.Text != "" && ddlFin.Text != "")
-                                    {
-                                        año = ddlFin.Text;
-                                        carrera = ddlCarrera.Text;
+                     if (!gredEgresadosxNombreoCodigo(busqueda))
+                     {
+                         grdEgresadosVacio();
+                         ScriptManager.RegisterStartupScript(Page, GetType(), "error", "error();", true);
+                     }
+                 }
+                 else
+                 {
+                     if (txtNombreCodigo.Text == "" && ddlCarrera.Text == "" && ddlFin.Text != "")
+                     {
+                         busqueda = ddlFin.Text;
 
-                                        if (!gredEgresadosxCicloyCarrera(año, carrera))
-                                        {
-                                            grdEgresadosVacio();
-                                            ScriptManager.RegisterStartupScript(Page, GetType(), "error", "error();", true);
-                                        }
-                                    }
-                                    else
-                                    {
-                                        busqueda = txtNombreCodigo.Text;
-                                        año = ddlFin.Text;
-                                        carrera = ddlCarrera.Text;
+                         if (!gredEgresadosxCiclo(busqueda))
+                         {
+                             grdEgresadosVacio();
+                             ScriptManager.RegisterStartupScript(Page, GetType(), "error", "error();", true);
+                         }
+                     }
+                     else
+                     {
+                         if (txtNombreCodigo.Text == "" && ddlCarrera.Text != "" && ddlFin.Text == "")
+                         {
+                             busqueda = ddlCarrera.Text;
 
-                                        if (!gredEgresadosxNombreoCodigoyCicloyCarrera(busqueda, año, carrera))
-                                        {
-                                            grdEgresadosVacio();
-                                            ScriptManager.RegisterStartupScript(Page, GetType(), "error", "error();", true);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+                             if (!gredEgresadosxCarrera(busqueda))
+                             {
+                                 grdEgresadosVacio();
+                                 ScriptManager.RegisterStartupScript(Page, GetType(), "error", "error();", true);
+                             }
+                         }
+                         else
+                         {
+                             if (txtNombreCodigo.Text != "" && ddlCarrera.Text == "" && ddlFin.Text != "")
+                             {
+                                 busqueda = txtNombreCodigo.Text;
+                                 año = ddlFin.Text;
+
+                                 if (!gredEgresadosxNombreoCodigoyCiclo(busqueda, año))
+                                 {
+                                     grdEgresadosVacio();
+                                     ScriptManager.RegisterStartupScript(Page, GetType(), "error", "error();", true);
+                                 }
+                             }
+                             else
+                             {
+                                 if (txtNombreCodigo.Text != "" && ddlCarrera.Text != "" && ddlFin.Text == "")
+                                 {
+                                     busqueda = txtNombreCodigo.Text;
+                                     carrera = ddlCarrera.Text;
+
+                                     if (!gredEgresadosxNombreoCodigoyCarrera(busqueda, carrera))
+                                     {
+                                         grdEgresadosVacio();
+                                         ScriptManager.RegisterStartupScript(Page, GetType(), "error", "error();", true);
+                                     }
+                                 }
+                                 else
+                                 {
+                                     if (txtNombreCodigo.Text == "" && ddlCarrera.Text != "" && ddlFin.Text != "")
+                                     {
+                                         año = ddlFin.Text;
+                                         carrera = ddlCarrera.Text;
+
+                                         if (!gredEgresadosxCicloyCarrera(año, carrera))
+                                         {
+                                             grdEgresadosVacio();
+                                             ScriptManager.RegisterStartupScript(Page, GetType(), "error", "error();", true);
+                                         }
+                                     }
+                                     else
+                                     {
+                                         busqueda = txtNombreCodigo.Text;
+                                         año = ddlFin.Text;
+                                         carrera = ddlCarrera.Text;
+
+                                         if (!gredEgresadosxNombreoCodigoyCicloyCarrera(busqueda, año, carrera))
+                                         {
+                                             grdEgresadosVacio();
+                                             ScriptManager.RegisterStartupScript(Page, GetType(), "error", "error();", true);
+                                         }
+                                     }
+                                 }
+                             }
+                         }
+                     }
+                 }
+             }
+             * */
         }
 
       
@@ -807,7 +898,13 @@ namespace SWEGR.UI
 
         protected void grdEgresados_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            if (e.CommandName.Equals("cmdExtraer"))
+            if (e.CommandName.Equals("cmdVer"))
+            {
+                int IDEgresadoSeleccionado = Convert.ToInt32(e.CommandArgument);
+                Session.Add("IDEgresadoSeleccionado", IDEgresadoSeleccionado);
+                Response.Redirect("VisualizarEgresadoUI.aspx");
+            }
+            else if (e.CommandName.Equals("cmdExtraer"))
             {
                 int index = Convert.ToInt32(e.CommandArgument);
                 String codigo = grdEgresados.Rows[index].Cells[0].Text;
@@ -817,7 +914,7 @@ namespace SWEGR.UI
 
                 egresadoBE = egresadoBC.obtenerEgresadoxCodigo(codigo);
                 // ASPusername.Value = "salio";
-                
+
 
                 PNombre.Value = egresadoBE.Nombrecompletoegresado;
                 PTelf1.Value = egresadoBE.Telefonoprinegresado;
@@ -829,12 +926,6 @@ namespace SWEGR.UI
 
 
                 ScriptManager.RegisterStartupScript(this, GetType(), "visualizarInfoCompleta", "visualizarInfoCompleta();", true);
-
-
-            }
-            else if (e.CommandName.Equals("cmdExtraer"))
-            {
-
             }
         }
 

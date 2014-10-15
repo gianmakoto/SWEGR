@@ -17,7 +17,10 @@ namespace SWEGR.UI
         protected void boton_Click(object sender, EventArgs e)
         {
             if (txtid.Text == "rosario.villalta" && txtpass.Text == "12345")
+            {
+                Session["TipoUsuarioLogueado"] = "comite";
                 Response.Redirect("InicioComite.aspx");
+            }
 
             if (txtid.Text == "u912916" && txtpass.Text == "12345")
             {

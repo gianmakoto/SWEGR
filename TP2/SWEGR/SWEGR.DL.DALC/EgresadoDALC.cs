@@ -141,6 +141,84 @@ namespace SWEGR.DL.DALC
             }
         }
 
+
+        public List<EgresadoBE> listarEgresado_Lista(String nombre, String carrera, int anioInicio, int anioFin, String codigoUniversitario)
+        {
+            String sqllistaregresado;
+
+            SqlConnection conn;
+            SqlCommand cmdlistaregresado;
+            SqlDataReader dregresado;
+
+            try
+            {
+                List<EgresadoBE> lstEgresadoBE;
+                EgresadoBE objetoEgresadoBE;
+
+                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CSSeguimientoEgresados"].ToString());
+                sqllistaregresado = "SWEGR_listarEgresado_Lista";
+                cmdlistaregresado = new SqlCommand(sqllistaregresado, conn);
+                cmdlistaregresado.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter prmNombre = new SqlParameter();
+                prmNombre.ParameterName = "@nombre";
+                prmNombre.SqlDbType = SqlDbType.VarChar;
+                prmNombre.Size = 50;
+                prmNombre.Value = nombre;
+                cmdlistaregresado.Parameters.Add(prmNombre);
+
+                SqlParameter prmAnioInicio = new SqlParameter();
+                prmAnioInicio.ParameterName = "@anioinicio";
+                prmAnioInicio.SqlDbType = SqlDbType.Int;
+                prmAnioInicio.Value = anioInicio;
+                cmdlistaregresado.Parameters.Add(prmAnioInicio);
+
+                SqlParameter prmAnioFin= new SqlParameter();
+                prmAnioFin.ParameterName = "@aniofin";
+                prmAnioFin.SqlDbType = SqlDbType.Int;
+                prmAnioFin.Value = anioFin;
+                cmdlistaregresado.Parameters.Add(prmAnioFin);
+
+                SqlParameter prmCarrera = new SqlParameter();
+                prmCarrera.ParameterName = "@Carrera";
+                prmCarrera.SqlDbType = SqlDbType.VarChar;
+                prmCarrera.Size = 50;
+                prmCarrera.Value = anioFin;
+                cmdlistaregresado.Parameters.Add(prmCarrera);
+
+
+                SqlParameter prmCodigo = new SqlParameter();
+                prmCodigo.ParameterName = "@codigoUniversitario";
+                prmCodigo.SqlDbType = SqlDbType.VarChar;
+                prmCodigo.Size = 10;
+                prmCodigo.Value = codigoUniversitario;
+                cmdlistaregresado.Parameters.Add(prmCodigo);
+
+
+                cmdlistaregresado.Connection.Open();
+                dregresado = cmdlistaregresado.ExecuteReader();
+                lstEgresadoBE = new List<EgresadoBE>();
+
+                while (dregresado.Read())
+                {
+                    objetoEgresadoBE = new EgresadoBE();
+                    objetoEgresadoBE.Idegresado = dregresado.GetInt32(0);
+                    objetoEgresadoBE.Codigouniversitarioegresado = dregresado.GetString(1);
+                    objetoEgresadoBE.Nombrecompletoegresado = dregresado.GetString(2);
+                    objetoEgresadoBE.Carreraegresado = dregresado.GetString(3);
+                    objetoEgresadoBE.Cicloegresado = dregresado.GetString(4);               
+
+                    lstEgresadoBE.Add(objetoEgresadoBE);
+                }
+                cmdlistaregresado.Connection.Close();
+                return lstEgresadoBE;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
         public List<EgresadoBE> listarEgresadoxNombreoCodigo(string busqueda)
         {
             String sqllistaregresado;
@@ -1313,5 +1391,40 @@ namespace SWEGR.DL.DALC
             }
         }
 
+        public List<String> listarAniosEgresados()
+        {
+            String sqllistarpais;
+            SqlConnection conn;
+            SqlCommand cmdlistarpais;
+            SqlDataReader drpais;
+
+            try
+            {
+                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CSSeguimientoEgresados"].ToString());
+                sqllistarpais = "SWEGR_listarEgresadoAnios";
+                cmdlistarpais = new SqlCommand(sqllistarpais, conn);
+                cmdlistarpais.CommandType = CommandType.StoredProcedure;
+
+                cmdlistarpais.Connection.Open();
+
+                PaisBE objetoPaisBE = new PaisBE();
+                List<String> listapais = new List<String>();
+
+                drpais = cmdlistarpais.ExecuteReader();
+
+                while (drpais.Read())
+                {                    
+                    listapais.Add(Convert.ToString(drpais.GetInt32(0)));
+                }
+
+                cmdlistarpais.Connection.Close();
+
+                return listapais;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
     }
 }

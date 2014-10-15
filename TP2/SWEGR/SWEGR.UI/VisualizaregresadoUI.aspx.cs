@@ -15,22 +15,23 @@ namespace SWEGR.UI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            int IDEgresado;
+            String TipoUsuarioLogueado;
+            int IDEgresadoSeleccionado;
             char TUsuario;
 
             try
             {
                 //IDEgresado = Convert.ToInt32(Request.QueryString["IDEgresado"]);
-                IDEgresado = Convert.ToInt32(Session["IDusuario"].ToString());
+                TipoUsuarioLogueado = Session["TipoUsuarioLogueado"].ToString();
                 TUsuario = Convert.ToChar(Session["TipoUsuario"]);
                 if (TUsuario == 'G')
                 {
                     Response.Redirect("Loginprueba.aspx");
                     return;
                 }
-               
 
-                if (IDEgresado == 0 )
+
+                if (!TipoUsuarioLogueado.Equals("comite"))
                 {
                     Response.Redirect("Loginprueba.aspx");
                     return;
@@ -38,6 +39,9 @@ namespace SWEGR.UI
 
                 if (!IsPostBack)
                 {
+                    IDEgresadoSeleccionado = Convert.ToInt32(Session["IDEgresadoSeleccionado"].ToString());
+                    
+
                     ddlGenero.DataSource = listagenero();
                     ddlGenero.DataBind();
                     ddlGenero.Items.Insert(0, new ListItem("Seleccione el genero", ""));
@@ -54,7 +58,7 @@ namespace SWEGR.UI
                     ddlPais.Items.Insert(0, new ListItem("Seleccione el país", ""));
 
                     EgresadoBC objEgresadoBC = new EgresadoBC();
-                    EgresadoBE graduando = objEgresadoBC.obtenerEgresado(IDEgresado);
+                    EgresadoBE graduando = objEgresadoBC.obtenerEgresado(IDEgresadoSeleccionado);
 
                     txtnombrecompleto.Text = graduando.Nombrecompletoegresado;
                     txtdni.Text = graduando.Dniegresado;
@@ -86,17 +90,17 @@ namespace SWEGR.UI
                     else
                         ddlDepartamento.Text = graduando.Departamentoegresado;
 
-                    llenarregistroacademico(IDEgresado);
-                    llenarregistrolaboral(IDEgresado);
+                    llenarregistroacademico(IDEgresadoSeleccionado);
+                    llenarregistrolaboral(IDEgresadoSeleccionado);
 
-                    lstaptitudes.DataSource = listaaptitudes(IDEgresado);
+                    lstaptitudes.DataSource = listaaptitudes(IDEgresadoSeleccionado);
                     lstaptitudes.DataBind();
 
-                    lstintereses.DataSource = listaintereses(IDEgresado);
+                    lstintereses.DataSource = listaintereses(IDEgresadoSeleccionado);
                     lstintereses.DataBind();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                // throw;
                 ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Ocurrió un error\")</script>", false);

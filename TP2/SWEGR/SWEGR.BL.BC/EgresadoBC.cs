@@ -38,6 +38,18 @@ namespace SWEGR.BL.BC
             }
         }
 
+        public List<EgresadoBE> listarEgresado_Lista(String nombre, String carrera, int anioInicio, int anioFin, String codigoUniversitario)
+        {
+            try
+            {
+                EgresadoDALC objetoEgresadoDALC = new EgresadoDALC();
+                return objetoEgresadoDALC.listarEgresado_Lista(nombre, carrera, anioInicio, anioFin, codigoUniversitario);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
         public List<EgresadoBE> listarEgresadoxNombreoCodigo(string busqueda)
         {
             try
