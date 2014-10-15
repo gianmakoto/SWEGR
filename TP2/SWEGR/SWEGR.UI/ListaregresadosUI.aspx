@@ -126,7 +126,7 @@
                 </div>
 
                 <div class="navbar-collapse collapse ">
-                    <ul class="nav navbar-nav" style="align: center">
+                    <ul class="nav navbar-nav" style=" align: center">
                         <li><a href="InicioComite.aspx">Inicio</a></li>
                         
                           <li class="active"><a href="ListaregresadosUI.aspx">Egresado</a></li>
@@ -145,7 +145,7 @@
                                 <%--<li><a href="#"><i class=" icon-suitcase"></i>Profile</a></li>--%>
                                 <%--<li><a href="#"><i class="icon-cog"></i>Settings</a></li>--%>
                                 <%--<li><a href="#"><i class="icon-bell-alt"></i>Notification</a></li>--%>
-                                <li><a href="Loginprueba.aspx"><i class="icon-key"></i>Log Out</a></li>
+                                <li><a href="Login.aspx"><i class="icon-key"></i>Cerrar sesión</a></li>
                             </ul>
                         </li>
                         <!-- user login dropdown end -->
@@ -167,7 +167,7 @@
                     <ol class="breadcrumb pull-right">
                         <li><a href="Index.aspx">Home</a></li>
                         <li class="active">Lista de egresados </li>
-                Lista de egresados </li>
+                       </li>
                     </ol>
                 </div>
             </div>
@@ -234,20 +234,20 @@
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-9">
-                                    <asp:GridView ID="grdEgresados" runat="server" AutoGenerateColumns="false" DataKeyNames="EgresadoID" OnRowCommand="grdEgresados_RowCommand">
+                                    <asp:GridView ID="grdEgresados" Width="930px"  align = "center" runat="server"  CellPadding="8" CellSpacing="3" AutoGenerateColumns="false" DataKeyNames="EgresadoID" OnRowCommand="grdEgresados_RowCommand">
                                         <Columns>
-                                            <asp:BoundField DataField="EgresadoID" HeaderText="EgresadoID" Visible="False" />
-                                            <asp:BoundField HeaderText="Código" DataField="Codigo" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                            <asp:BoundField HeaderText="Nombre" DataField="Nombre" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                            <asp:BoundField HeaderText="Carrera" DataField="Carrera" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                            <asp:BoundField HeaderText="Ciclo egreso" DataField="Cicloegreso" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                            <asp:BoundField HeaderText="Trabajo Actual" DataField="Trabajoactual" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                            <asp:BoundField HeaderText="Nombre jefe" DataField="Nombrejefe" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                            <asp:BoundField HeaderText="Cargo jefe" DataField="Cargojefe" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                            <asp:BoundField HeaderText="Teléfono jefe" DataField="Telefonojefe" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                            <asp:BoundField HeaderText="Correo jefe" DataField="Correojefe" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                            <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" DataField="EgresadoID" HeaderText="EgresadoID" Visible="False" />
+                                            <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Código" DataField="Codigo" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                            <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Nombre" DataField="Nombre" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                            <asp:BoundField ItemStyle-Width="300" ItemStyle-Font-Size="Smaller" HeaderText="Carrera" DataField="Carrera" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                            <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Ciclo egreso" DataField="Cicloegreso" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                            <asp:BoundField ItemStyle-Width="300" ItemStyle-Font-Size="Smaller" HeaderText="Trabajo Actual" DataField="Trabajoactual" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                            <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Nombre jefe" DataField="Nombrejefe" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                            <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Cargo jefe" DataField="Cargojefe" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                            <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Teléfono jefe" DataField="Telefonojefe" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                            <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Correo jefe" DataField="Correojefe" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
 
-                                            <asp:TemplateField HeaderText="Ver" ItemStyle-HorizontalAlign="Center">
+                                            <asp:TemplateField HeaderText="Ver" ItemStyle-HorizontalAlign="Center"  HeaderStyle-Width="80px">
                                                 <ItemTemplate>
                                                             
                                                     <asp:LinkButton ID="lkbVer" runat="server"   CommandName="cmdVer" CommandArgument='<%# Eval("EgresadoID") %>' >
@@ -256,7 +256,7 @@
                                                 </ItemTemplate>
                                             </asp:TemplateField>
 
-                                            <asp:TemplateField HeaderText="Extraer datos" ItemStyle-HorizontalAlign="Center">
+                                            <asp:TemplateField HeaderText="Extraer datos" ItemStyle-HorizontalAlign="Center"  HeaderStyle-Width="80px">
                                                 <ItemTemplate>
 
                                                             <asp:LinkButton ID="lkbExtraerDatos"  runat="server"   CommandName="cmdExtraer" CommandArgument='<%# Eval("EgresadoID") %>' >

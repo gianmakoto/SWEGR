@@ -22,9 +22,13 @@ namespace SWEGR.UI
             {
                 if (!IsPostBack)
                 {
-                    ddlFin.DataSource = listaciclo();
+                    ddlFin.DataSource = listaanios();
                     ddlFin.DataBind();
-                    ddlFin.Items.Insert(0, new ListItem("Seleccione el Año", ""));
+                    ddlFin.Items.Insert(0, new ListItem("Seleccione el año fin", ""));
+
+                    ddlInicio.DataSource = listaanios();
+                    ddlInicio.DataBind();
+                    ddlInicio.Items.Insert(0, new ListItem("Seleccione el año de inicio", ""));
 
                     ddlCarrera.DataSource = listacarrera();
                     ddlCarrera.DataBind();
@@ -36,6 +40,14 @@ namespace SWEGR.UI
                 ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Ocurrió un error\")</script>", false);
             }
 
+        }
+
+        public List<String> listaanios()
+        {
+            List<String> lsanios = new List<String>();
+            EgresadoBC egresadoBC = new EgresadoBC();
+            lsanios = egresadoBC.listaranios();
+            return lsanios;
         }
 
         public List<String> listaciclo()
@@ -226,7 +238,14 @@ namespace SWEGR.UI
 
                         }
                         else
-                            continue;
+                        {
+                            //continue;
+                            objEgresado.Trabajoactual = "";
+                            objEgresado.Nombrejefe = "";
+                            objEgresado.Cargojefe = "";
+                            objEgresado.Telefonojefe = "";
+                            objEgresado.Correojefe = "";
+                        }
                     }
                 }
                 else
@@ -782,14 +801,18 @@ namespace SWEGR.UI
           
             nombreBuscar=txtNombreCodigo.Text;
             codigoUniversitarioBuscar=txtNombreCodigo.Text;
-          
-            if(!ddlInicio.Text.Equals("Seleccione el año"))
+
+            if (ddlInicio.SelectedIndex != 0 )
                 anioInicioBuscar=Convert.ToInt32( ddlInicio.Text);
 
 
-            if (!ddlFin.Text.Equals("Seleccione el año"))
+            if (ddlFin.SelectedIndex != 0)
                 anioFinBuscar = Convert.ToInt32(ddlFin.Text);
 
+            if (ddlCarrera.SelectedIndex != 0)
+                carreraBuscar=ddlCarrera.Text;
+
+            
             grdEgresadosDataBind_Lista(nombreBuscar, carreraBuscar, anioInicioBuscar, anioFinBuscar, codigoUniversitarioBuscar);
 
 

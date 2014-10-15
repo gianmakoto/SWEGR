@@ -240,7 +240,7 @@
                                 <%--<li><a href="#"><i class=" icon-suitcase"></i>Profile</a></li>--%>
                                 <%--<li><a href="#"><i class="icon-cog"></i>Settings</a></li>--%>
                                 <%--<li><a href="#"><i class="icon-bell-alt"></i>Notification</a></li>--%>
-                                <li><a href="login.aspx"><i class="icon-key"></i>Log Out</a></li>
+                                <li><a href="login.aspx"><i class="icon-key"></i>Cerrar sesión</a></li>
                             </ul>
                         </li>
                         <!-- user login dropdown end -->
