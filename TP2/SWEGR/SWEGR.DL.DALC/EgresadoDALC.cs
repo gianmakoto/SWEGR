@@ -1269,5 +1269,49 @@ namespace SWEGR.DL.DALC
             return idegresado;
 
         }
+
+        public String[] obtenerLinksEgresado(int idegresado)
+        {
+            String sqlobteneregresado;
+
+            SqlConnection conn;
+            SqlCommand cmdobteneregresado;
+            SqlParameter prmidegresado;
+            SqlDataReader dregresado;
+
+            try
+            {
+                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CSSeguimientoEgresados"].ToString());
+                sqlobteneregresado = "SWEGR_obtenerLinksEgresado";
+                cmdobteneregresado = new SqlCommand(sqlobteneregresado, conn);
+                cmdobteneregresado.CommandType = CommandType.StoredProcedure;
+
+                prmidegresado = new SqlParameter();
+                prmidegresado.ParameterName = "@idegresado";
+                prmidegresado.SqlDbType = SqlDbType.Int;
+                prmidegresado.Value = idegresado;
+
+                cmdobteneregresado.Parameters.Add(prmidegresado);
+                cmdobteneregresado.Connection.Open();
+
+                String[] linksEgresado = new String[2];
+
+                dregresado = cmdobteneregresado.ExecuteReader();
+
+                if (dregresado.Read())
+                {
+                    linksEgresado[0] = dregresado.GetString(0);
+                    linksEgresado[1] = dregresado.GetString(1);
+                }
+                cmdobteneregresado.Connection.Close();
+
+                return linksEgresado;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
     }
 }

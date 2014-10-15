@@ -272,5 +272,21 @@ namespace SWEGR.BL.BC
             }
 
         }
+
+        public String[] obtenerLinksEgresado(int idegresado)
+        {
+            try
+            {
+                EgresadoDALC objetoEgresadoDALC = new EgresadoDALC();
+                return objetoEgresadoDALC.obtenerLinksEgresado(idegresado);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
+
     }
 }

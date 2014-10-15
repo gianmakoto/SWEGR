@@ -177,3 +177,14 @@ D:\UPC\2014-2\TDP2\salpe\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\Interop.SHDocVw.dll
 D:\UPC\2014-2\TDP2\salpe\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.csproj.ResolveComReference.cache
 D:\UPC\2014-2\TDP2\salpe\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.dll
 D:\UPC\2014-2\TDP2\salpe\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.pdb
+D:\SW\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BC.dll
+D:\SW\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BC.pdb
+D:\SW\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BE.dll
+D:\SW\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.DL.DALC.dll
+D:\SW\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BE.pdb
+D:\SW\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.DL.DALC.pdb
+D:\SW\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.csprojResolveAssemblyReference.cache
+D:\SW\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\Interop.SHDocVw.dll
+D:\SW\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.csproj.ResolveComReference.cache
+D:\SW\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.dll
+D:\SW\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.pdb

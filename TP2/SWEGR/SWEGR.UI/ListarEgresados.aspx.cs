@@ -54,97 +54,122 @@ namespace SWEGR.UI
             {
                 String profile_LinkedIn = "";
                 String profile_Facebook = "";
+                String mensaje = "";
 
-                //Obtener Links de LinkedIn y Facebook del egresado CON EL CODIGO DEL EGRESADO de la BD
-                //lo guarda aqui profile_LinkedIn y profile_Facebook
-
-
-
-                //Obtener credenciales de redes sociales
-                usuario_LinkedIn = System.Configuration.ConfigurationManager.AppSettings["usuario_LinkedIn"];
-                usuario_Fb = System.Configuration.ConfigurationManager.AppSettings["usuario_Fb"];
-                password_LinkedIn = System.Configuration.ConfigurationManager.AppSettings["password_LinkedIn"];
-                password_Fb = System.Configuration.ConfigurationManager.AppSettings["password_Fb"];
-
-                //Abrir explorador
-                IE = new SHDocVw.InternetExplorer();
-                //Para que no se vea IE.Visible = false;
-                IE.Visible = true;
-                IE.Silent = true;
-
-                //listaProfiles.Add("https://www.linkedin.com/profile/view?id=286780780");
-                //listaProfiles.Add("https://www.linkedin.com/profile/view?id=343561460");
-
-
-                Boolean accedio_LinkedIn = obtenerDataBR.autenticarse_LinkedIn(usuario_LinkedIn, password_LinkedIn, IE);
-                DatosObtenidosBE datosObtenidos = null;
-                Boolean esContactoLinkedIn = false;
-
-                Thread.Sleep(1000);
-                if (accedio_LinkedIn)
+               
+                EgresadoBC objetoEgresadoBC = new EgresadoBC();
+                String[] linksEgresado = objetoEgresadoBC.obtenerLinksEgresado(codigoEgresado);
+                if (linksEgresado[0] != null && linksEgresado[1] != null)
                 {
-                    datosObtenidos = obtenerDataBR.extraerDatos_Personal_LinkedIn(IE, profile_LinkedIn);
-                }
-                obtenerDataBR.logOut_LinkedIn(IE);
-                Thread.Sleep(2000);
-                if (datosObtenidos != null)
-                    esContactoLinkedIn = true;
-                Boolean accedio_fb = obtenerDataBR.autenticarse_Facebook(usuario_Fb, password_Fb, IE);
-                Thread.Sleep(1000);
-                String[] datosFb = new String[5];
-                if (accedio_fb)
-                {
-                    datosFb = obtenerDataBR.extraerDatos_Personal_Facebook(IE, profile_Facebook + "/about");
+
+                    profile_LinkedIn = linksEgresado[0];
+                    profile_Facebook = linksEgresado[1];
+
+                    //Obtener credenciales de redes sociales
+                    usuario_LinkedIn = System.Configuration.ConfigurationManager.AppSettings["usuario_LinkedIn"];
+                    usuario_Fb = System.Configuration.ConfigurationManager.AppSettings["usuario_Fb"];
+                    password_LinkedIn = System.Configuration.ConfigurationManager.AppSettings["password_LinkedIn"];
+                    password_Fb = System.Configuration.ConfigurationManager.AppSettings["password_Fb"];
+
+                    //Abrir explorador
+                    IE = new SHDocVw.InternetExplorer();
+                    //Para que no se vea IE.Visible = false;
+                    IE.Visible = true;
+                    IE.Silent = true;
+
+                    //listaProfiles.Add("https://www.linkedin.com/profile/view?id=286780780");
+                    //listaProfiles.Add("https://www.linkedin.com/profile/view?id=343561460");
+
+                    DatosObtenidosBE datosObtenidos = null;
+                    Boolean esContactoLinkedIn = false;
+                    if (!profile_LinkedIn.Equals(""))
+                    {
+
+                        Boolean accedio_LinkedIn = obtenerDataBR.autenticarse_LinkedIn(usuario_LinkedIn, password_LinkedIn, IE);
+
+                        Thread.Sleep(1000);
+                        if (accedio_LinkedIn)
+                        {
+                            datosObtenidos = obtenerDataBR.extraerDatos_Personal_LinkedIn(IE, profile_LinkedIn);
+                        }
+                        obtenerDataBR.logOut_LinkedIn(IE);
+                        Thread.Sleep(2000);
+                        if (datosObtenidos != null)
+                            esContactoLinkedIn = true;
+
+                    }
+
+                    if (!profile_Facebook.Equals(""))
+                    {
+                        Boolean accedio_fb = obtenerDataBR.autenticarse_Facebook(usuario_Fb, password_Fb, IE);
+                        Thread.Sleep(1000);
+                        String[] datosFb = new String[5];
+                        if (accedio_fb)
+                        {
+                            datosFb = obtenerDataBR.extraerDatos_Personal_Facebook(IE, profile_Facebook + "/about");
+                            if (datosObtenidos != null)
+                            {
+                                if (datosFb[0] != null)
+                                    datosObtenidos.DatosUsuario.Telefonoaltegresado = datosFb[0].Replace(" ", "");
+                                if (datosFb[1] != null)
+                                    datosObtenidos.DatosUsuario.Correoaltegresado = datosFb[1];
+                                if (datosObtenidos.DatosUsuario.Direccionegresado == null || datosObtenidos.DatosUsuario.Direccionegresado.Trim().Equals(""))
+                                    if (datosFb[3] != null)
+                                        datosObtenidos.DatosUsuario.Direccionegresado = datosFb[3];
+                            }
+                            else
+                            {
+                                datosObtenidos = new DatosObtenidosBE();
+                                datosObtenidos.DatosUsuario = new EgresadoBE();
+                                if (datosFb[0] != null)
+                                    datosObtenidos.DatosUsuario.Telefonoaltegresado = datosFb[0].Replace(" ", "");
+                                if (datosFb[1] != null)
+                                    datosObtenidos.DatosUsuario.Correoaltegresado = datosFb[1];
+                                if (datosFb[3] != null)
+                                    datosObtenidos.DatosUsuario.Direccionegresado = datosFb[3];
+                            }
+                        }
+                        obtenerDataBR.logOut_Facebook(IE);
+
+                    }
+                    IE.Quit();
+
+                    //Los datos extraidos de LinkedIn y Fb se guardan en "datosObtenidos"
                     if (datosObtenidos != null)
                     {
-                        if (datosFb[0] != null)
-                            datosObtenidos.DatosUsuario.Telefonoaltegresado = datosFb[0].Replace(" ", "");
-                        if (datosFb[1] != null)
-                            datosObtenidos.DatosUsuario.Correoaltegresado = datosFb[1];
-                        if (datosObtenidos.DatosUsuario.Direccionegresado == null || datosObtenidos.DatosUsuario.Direccionegresado.Trim().Equals(""))
-                            if (datosFb[3] != null)
-                                datosObtenidos.DatosUsuario.Direccionegresado = datosFb[3];
+                        //Mostrar datos obtenidos
+                        correoTextBox.Text = datosObtenidos.DatosUsuario.Correoegresado;
+                        correoAlterTextBox.Text = datosObtenidos.DatosUsuario.Correoaltegresado;
+                        telefonoTextBox.Text = datosObtenidos.DatosUsuario.Telefonoprinegresado;
+                        telefonoAlterTextBox.Text = datosObtenidos.DatosUsuario.Telefonoaltegresado;
+                        direccionTextBox.Text = datosObtenidos.DatosUsuario.Direccionegresado;
+                        //Image1.ImageUrl = datosObtenidos.DatosUsuario.Fotoegresado;
+
+                        registrosLaborales.DataSource = datosObtenidos.ListaRegistroLaboral;
+                        registrosAcademicos.DataSource = datosObtenidos.ListaRegistroAcademico;
+                        intereses.DataSource = datosObtenidos.ListaIntereses;
+                        aptitudes.DataSource = datosObtenidos.ListaAptitudes;
+
+                        registrosLaborales.DataBind();
+                        registrosAcademicos.DataBind();
+                        intereses.DataBind();
+                        aptitudes.DataBind();
                     }
-                    else
+
+                    if (!esContactoLinkedIn)
                     {
-                        datosObtenidos = new DatosObtenidosBE();
-                        datosObtenidos.DatosUsuario = new EgresadoBE();
-                        if (datosFb[0] != null)
-                            datosObtenidos.DatosUsuario.Telefonoaltegresado = datosFb[0].Replace(" ", "");
-                        if (datosFb[1] != null)
-                            datosObtenidos.DatosUsuario.Correoaltegresado = datosFb[1];
-                        if (datosFb[3] != null)
-                            datosObtenidos.DatosUsuario.Direccionegresado = datosFb[3];
+                        if (profile_Facebook.Equals("") && profile_LinkedIn.Equals(""))
+                            mensaje = "El usuario no ha registrado sus cuentas de Facebook ni de LinkedIn";
+                        else
+                            mensaje = "El usuario no es contacto en LinkedIn";
+                        ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "err_msg", "alert('" + mensaje + "');", true);
                     }
                 }
-                obtenerDataBR.logOut_Facebook(IE);
-                IE.Quit();
-
-                //Los datos extraidos de LinkedIn y Fb se guardan en "datosObtenidos"
-                if (datosObtenidos != null)
+                else
                 {
-                    //Mostrar datos obtenidos
-                    correoTextBox.Text = datosObtenidos.DatosUsuario.Correoegresado;
-                    correoAlterTextBox.Text = datosObtenidos.DatosUsuario.Correoaltegresado;
-                    telefonoTextBox.Text = datosObtenidos.DatosUsuario.Telefonoprinegresado;
-                    telefonoAlterTextBox.Text = datosObtenidos.DatosUsuario.Telefonoaltegresado;
-                    direccionTextBox.Text = datosObtenidos.DatosUsuario.Direccionegresado;
-                    //Image1.ImageUrl = datosObtenidos.DatosUsuario.Fotoegresado;
+                    mensaje = "El egresado no existe";
+                    ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "err_msg", "alert('" + mensaje + "');", true);
 
-                    registrosLaborales.DataSource = datosObtenidos.ListaRegistroLaboral;
-                    registrosAcademicos.DataSource = datosObtenidos.ListaRegistroAcademico;
-                    intereses.DataSource = datosObtenidos.ListaIntereses;
-                    aptitudes.DataSource = datosObtenidos.ListaAptitudes;
-
-                    registrosLaborales.DataBind();
-                    registrosAcademicos.DataBind();
-                    intereses.DataBind();
-                    aptitudes.DataBind();
-                }
-
-                if (!esContactoLinkedIn)
-                {
-                    ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "err_msg", "alert('El usuario no es cotnacto en LinkedIn');", true);
                 }
 
             }

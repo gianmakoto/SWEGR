@@ -319,11 +319,15 @@ namespace SWEGR.BL.BC
                 HTMLDocument doc2 = null;
                 string html;
                 while (IE.Busy)
-                { }
+                {
+                    Thread.Sleep(2000);
+                }
                 IE.Navigate(profile);
                 while (IE.Busy)
-                { }
-                Thread.Sleep(2000);
+                {
+                    Thread.Sleep(2000);
+                }
+                Thread.Sleep(10000);
                 doc2 = null;
                 Thread.Sleep(2000);
                 while (doc2 == null)
