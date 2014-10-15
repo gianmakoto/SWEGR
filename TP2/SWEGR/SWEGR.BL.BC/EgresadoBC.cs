@@ -11,6 +11,20 @@ namespace SWEGR.BL.BC
 {
     public class EgresadoBC
     {
+        public EgresadoBE obtenerEgresadoxCodigo(string codigo)
+        {
+            try
+            {
+                EgresadoDALC objetoEgresadoDALC = new EgresadoDALC();
+                return objetoEgresadoDALC.obtenerEgresadoxCodigo(codigo);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+
         public List<EgresadoBE> listarEgresado()
         {
             try

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="SWEGR.UI.Index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="InicioComite.aspx.cs" Inherits="SWEGR.UI.InicioComite" %>
 
 <!DOCTYPE html>
 
@@ -54,12 +54,13 @@
                 </div>
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav" style="align: center">
-                        <li class="active"><a href="Index.aspx">Inicio</a></li>
+                        <li class="active"><a href="InicioComite.aspx">Inicio</a></li>
                     
                         
-                        <li><a href="VisualizaregresadoUI.aspx">Egresado</a></li>
+                        <li><a href="ListaregresadosUI.aspx">Egresado</a></li>
                         
-                        <%--<li><a href="ActualizargraduandoUI.aspx">Graduando</a></li>--%>
+                        <li><a href="#">Graduando</a></li>
+                        <li><a href="#">Carga De Datos</a></li>
                         <!-- user login dropdown start-->
                         <li class="dropdown">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">

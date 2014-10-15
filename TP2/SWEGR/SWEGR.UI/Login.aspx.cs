@@ -13,5 +13,27 @@ namespace SWEGR.UI
         {
 
         }
+
+        protected void boton_Click(object sender, EventArgs e)
+        {
+            if (txtid.Text == "rosario.villalta" && txtpass.Text == "12345")
+                Response.Redirect("listarEgresadosUI.aspx");
+
+            if (txtid.Text == "u912916" && txtpass.Text == "12345")
+            {
+                Session["IDusuario"] = 1;
+                Response.Redirect("ActualizargraduandoUI.aspx");
+            }
+
+            if (txtid.Text == "u920283" && txtpass.Text == "12345")
+            {
+                Session["IDusuario"] = 2;
+                Response.Redirect("ActualizaregresadoUI.aspx");
+            }
+
+        }
+
+
+
     }
 }

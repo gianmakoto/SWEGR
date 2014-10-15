@@ -3,6 +3,10 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +15,7 @@
     <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
     <link rel="shortcut icon" href="img/favicon.png">
 
-    <title>FlatLab - Flat & Responsive Bootstrap Admin Template</title>
+    <title>Login</title>
 
     <!-- Bootstrap core CSS -->
     <link href="Login/css/bootstrap.min.css" rel="stylesheet">
@@ -27,6 +31,9 @@
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
+
+
+
 </head>
 
   <body class="login-body">
@@ -36,7 +43,7 @@
 
   
 
-      <form class="form-signin" action="index.html">
+      <form runat="server" class="form-signin" >
           
                 <div class="Login-wrap">
                     
@@ -49,15 +56,12 @@
                 </div>
         <h2 class="form-signin-heading">Seguimiento Egresados</h2>
         <div class="login-wrap">
-            <input type="text" class="form-control" placeholder="Usuario" autofocus /> 
-            <input type="password" class="form-control" placeholder="Contraseña" />
-            <label class="checkbox">
-                
+            <asp:TextBox id="txtid" type="text" class="form-control" placeholder="Usuario"  runat="server" /> 
+            <asp:TextBox id="txtpass" type="password" class="form-control" placeholder="Contraseña" runat="server" />
 
-                
-            </label>
-            <button class="btn btn-lg btn-login btn-block" type="submit">Entrar</button>
-           
+
+            <asp:Button  runat="server" CssClass="btn btn-lg btn-login btn-block" Text="Entrar"  OnClick="boton_Click" />
+        
           
              <div class="">
 
@@ -89,4 +93,8 @@
 
 
   </body>
+
+
+       
 </html>
+

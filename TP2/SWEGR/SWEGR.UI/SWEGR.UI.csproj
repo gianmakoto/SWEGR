@@ -337,7 +337,11 @@
     <Content Include="Images\delete.png" />
     <Content Include="Images\edit.png" />
     <Content Include="Images\egresados.jpg" />
+    <Content Include="Images\egresados1.jpg" />
     <Content Include="Images\exigete.jpg" />
+    <Content Include="Images\extra.png" />
+    <Content Include="Images\extraer.png" />
+    <Content Include="Images\flecha2.gif" />
     <Content Include="Images\foto1.png" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
@@ -354,7 +358,9 @@
     <Content Include="Images\orderedList7.png" />
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
+    <Content Include="Images\visua.png" />
     <Content Include="Index.aspx" />
+    <Content Include="InicioComite.aspx" />
     <Content Include="InsertaregresadoUI.aspx" />
     <Content Include="ListarEgresados.aspx" />
     <Content Include="ListaregresadosUI.aspx" />
@@ -519,6 +525,13 @@
     </Compile>
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InicioComite.aspx.cs">
+      <DependentUpon>InicioComite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InicioComite.aspx.designer.cs">
+      <DependentUpon>InicioComite.aspx</DependentUpon>
     </Compile>
     <Compile Include="InsertaregresadoUI.aspx.cs">
       <DependentUpon>InsertaregresadoUI.aspx</DependentUpon>

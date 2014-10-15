@@ -807,15 +807,30 @@ namespace SWEGR.UI
 
         protected void grdEgresados_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            if (e.CommandName.Equals("cmdVer"))
+            if (e.CommandName.Equals("cmdExtraer"))
             {
                 int index = Convert.ToInt32(e.CommandArgument);
                 String codigo = grdEgresados.Rows[index].Cells[0].Text;
 
                 EgresadoBC egresadoBC = new EgresadoBC();
+                EgresadoBE egresadoBE = new EgresadoBE();
+
+                egresadoBE = egresadoBC.obtenerEgresadoxCodigo(codigo);
+                // ASPusername.Value = "salio";
+                
+
+                PNombre.Value = egresadoBE.Nombrecompletoegresado;
+                PTelf1.Value = egresadoBE.Telefonoprinegresado;
+                Ptelf2.Value = egresadoBE.Telefonoaltegresado;
+                PCorreo1.Value = egresadoBE.Correoegresado;
+                Pcorreo2.Value = egresadoBE.Correoaltegresado;
+                PDireccion.Value = egresadoBE.Direccionegresado;
+
 
 
                 ScriptManager.RegisterStartupScript(this, GetType(), "visualizarInfoCompleta", "visualizarInfoCompleta();", true);
+
+
             }
             else if (e.CommandName.Equals("cmdExtraer"))
             {
@@ -830,8 +845,7 @@ namespace SWEGR.UI
 
         protected void btnVer_Click(object sender, ImageClickEventArgs e)
         {
-            string algo;
-            algo = "hola";
+            
         }
 
         protected void Imprimir_Click(object sender, EventArgs e)

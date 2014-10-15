@@ -49,6 +49,60 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.UpdatePanel uppanel;
         
         /// <summary>
+        /// PNombre control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField PNombre;
+        
+        /// <summary>
+        /// PDireccion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField PDireccion;
+        
+        /// <summary>
+        /// PTelf1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField PTelf1;
+        
+        /// <summary>
+        /// Ptelf2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField Ptelf2;
+        
+        /// <summary>
+        /// PCorreo1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField PCorreo1;
+        
+        /// <summary>
+        /// Pcorreo2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField Pcorreo2;
+        
+        /// <summary>
         /// txtNombreCodigo control.
         /// </summary>
         /// <remarks>

@@ -59,6 +59,22 @@
             $("#divfoto").width(dWidth * 0.2)
 
 
+            var a = document.getElementById('<%=PNombre.ClientID%>').value;
+            var b = document.getElementById('<%=PDireccion.ClientID%>').value;
+            var c = document.getElementById('<%=PTelf1.ClientID%>').value;
+            var d = document.getElementById('<%=Ptelf2.ClientID%>').value;
+            var e = document.getElementById('<%=PCorreo1.ClientID%>').value;
+            var f = document.getElementById('<%=Pcorreo2.ClientID%>').value;
+
+
+            $("#salpe").text(a)
+            $("#saliope").text(b)
+            $("#salioooo").text(c)
+            $("#saliow").text(d)
+            $("#yasalio").text(e)
+            $("#porfinsalio").text(f)
+
+
             $("#dialogInfo").dialog({
                 width: dWidth,
                 title: "Datos de Egresado",
@@ -111,10 +127,12 @@
 
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav" style="align: center">
-                        <li><a href="Index.aspx">Inicio</a></li>
+                        <li><a href="InicioComite.aspx">Inicio</a></li>
                         
-                        <li><a href="VisualizaregresadoUI.aspx">Egresado</a></li>
-                        <li class="active"><a href="ActualizargraduandoUI.aspx">Graduando</a></li>
+                          <li class="active"><a href="ListaregresadosUI.aspx">Egresado</a></li>
+                        
+                        <li><a href="#">Graduando</a></li>
+                        <li><a href="#">Carga De Datos</a></li>
                         <!-- user login dropdown start-->
                         <li class="dropdown">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
@@ -124,9 +142,9 @@
                             </a>
                             <ul class="dropdown-menu extended logout">
                                 <div class="log-arrow-up"></div>
-                                <li><a href="#"><i class=" icon-suitcase"></i>Profile</a></li>
-                                <li><a href="#"><i class="icon-cog"></i>Settings</a></li>
-                                <li><a href="#"><i class="icon-bell-alt"></i>Notification</a></li>
+                                <%--<li><a href="#"><i class=" icon-suitcase"></i>Profile</a></li>--%>
+                                <%--<li><a href="#"><i class="icon-cog"></i>Settings</a></li>--%>
+                                <%--<li><a href="#"><i class="icon-bell-alt"></i>Notification</a></li>--%>
                                 <li><a href="Loginprueba.aspx"><i class="icon-key"></i>Log Out</a></li>
                             </ul>
                         </li>
@@ -173,6 +191,12 @@
                             <div class="form-group">
                                 <label class="col-sm-2 col-sm-2 control-label">
                                     Nombre y/o código:
+                                    <asp:HiddenField ID="PNombre" runat="server" ></asp:HiddenField>
+                                            <asp:HiddenField ID="PDireccion" runat="server" ></asp:HiddenField>
+                                            <asp:HiddenField ID="PTelf1" runat="server" ></asp:HiddenField>
+                                            <asp:HiddenField ID="Ptelf2" runat="server" ></asp:HiddenField>
+                                            <asp:HiddenField ID="PCorreo1" runat="server" ></asp:HiddenField>
+                                            <asp:HiddenField ID="Pcorreo2" runat="server" ></asp:HiddenField>
                                 </label>
                                 <div class="col-sm-8">
                                     <asp:TextBox ID="txtNombreCodigo" runat="server" CssClass="form-control"></asp:TextBox>
@@ -223,13 +247,20 @@
 
                                             <asp:TemplateField HeaderText="Ver" ItemStyle-HorizontalAlign="Center">
                                                 <ItemTemplate>
-                                                            <asp:ImageButton ID="btnVer" runat="server" CommandName="cmdVer" ImageUrl="Images/edit.png" Width="16" Height="16" OnClick="btnVer_Click" />
+                                                            
+                                                    <asp:LinkButton ID="lkbVer" runat="server"   CommandName="cmdVer" CommandArgument="<%# Container.DataItemIndex %>" >
+                                                                <asp:Image ID="btnVer" runat="server" ImageUrl="Images/visua.png" Width="16" Height="16"/>
+                                                            </asp:LinkButton>
                                                 </ItemTemplate>
                                             </asp:TemplateField>
 
                                             <asp:TemplateField HeaderText="Extraer datos" ItemStyle-HorizontalAlign="Center">
                                                 <ItemTemplate>
-                                                            <asp:ImageButton ID="btnExtraerDatos" runat="server" CommandName="cmdExtraer" ImageUrl="Images/delete.png" Width="16" Height="16" OnClick="btnExtraerDatos_Click" />
+
+                                                            <asp:LinkButton ID="lkbExtraerDatos"  runat="server"   CommandName="cmdExtraer" CommandArgument="<%# Container.DataItemIndex %>" >
+                                                                <asp:Image ID="Image1" runat="server" ImageUrl="Images/extra.png" Width="16" Height="16"/>
+                                                                </asp:LinkButton>
+                                                            
                                                 </ItemTemplate>
                                             </asp:TemplateField>
 
@@ -251,22 +282,24 @@
                                 </div>
                             </div>
 
+                            <!-- Parte Dialog Form -->
                             <div class="dialog-form" title="Datos Obtenidos">                            
                                 <div id="dialogInfo" style="text-align: justify; display: none" runat="server">
                                     <table>
                                         <tr>
+
                                             <td>
                                         <div id="divformulario" style="width:auto">                             
-                                            <label id="dlgname">Nombre Completo:</label><br />                                           
-                                            <label id="dlgemail">Telefonos:</label><br />                                           
-                                            <label id="dlgpassword">Dirección:</label><br />
-                                            <label id="dlgcorreo">Correo:</label><br />
-                                            <label id="dlgcorreoalt">Correo Alternativo:</label><br />
+                                            <label id="dlgname">Nombre Completo: </label> <label id="salpe" ></label><br />                                           
+                                            <label id="dlgtelefono">Telefonos:</label> <label id="salioooo" > </label>  <label  >  /  </label> <label id="saliow" > </label><br />                                           
+                                            <label id="dlgdireccion">Dirección:</label> <label id="saliope" > </label><br />
+                                            <label id="dlgcorreo">Correo:</label> <label id="yasalio" ></label><br />
+                                            <label id="dlgcorreoalt">Correo Alternativo: <label id="porfinsalio" ></label></label><br />
                                         </div>
                                                 </td>
                                             <td>
                                         <div id="divfoto" style="width:auto">
-                                            <img src="http://cdn.slidesharecdn.com/profile-photo-otto9023-96x96.jpg?cb=1413141593" />
+                                            <img style="height: 135px; width: 135px; " src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png" />
                                         </div>
                                                 </td>
                                         </tr>
@@ -338,6 +371,8 @@
                                             <input type="submit" tabindex="-1" style="position: absolute; top: -1000px"/>
                                 </div>                            
                             </div>
+
+                            <!-- Parte Dialog Form -->
 
 
                         </form>
