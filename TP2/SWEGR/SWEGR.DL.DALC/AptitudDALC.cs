@@ -118,6 +118,7 @@ namespace SWEGR.DL.DALC
                 prmidaptitud = new SqlParameter();
                 prmidaptitud.ParameterName = "@idaptitud";
                 prmidaptitud.SqlDbType = SqlDbType.Int;
+                prmidaptitud.Value = objetoaptitud.Idaptitud;
 
                 prmnombre = new SqlParameter();
                 prmnombre.ParameterName = "@nombre";
@@ -162,6 +163,7 @@ namespace SWEGR.DL.DALC
 
                 cmdeliminaraptitud.Parameters.Add(prmidinteres);
                 cmdeliminaraptitud.Connection.Open();
+                cmdeliminaraptitud.ExecuteNonQuery();
                 cmdeliminaraptitud.Connection.Close();
 
             }

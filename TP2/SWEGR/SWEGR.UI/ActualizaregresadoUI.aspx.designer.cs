@@ -3415,6 +3415,15 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.Button btnaptitudesIntereses;
         
         /// <summary>
+        /// upgrdAptitudes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upgrdAptitudes;
+        
+        /// <summary>
         /// grdAptitudes control.
         /// </summary>
         /// <remarks>
@@ -3422,6 +3431,24 @@ namespace SWEGR.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView grdAptitudes;
+        
+        /// <summary>
+        /// UpdatePanel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        
+        /// <summary>
+        /// botoneliminarAptitudes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button botoneliminarAptitudes;
         
         /// <summary>
         /// upAgregaraptitud control.
@@ -3505,6 +3532,15 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.Button btnCancelaraptitud;
         
         /// <summary>
+        /// upgrdIntereses control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upgrdIntereses;
+        
+        /// <summary>
         /// grdIntereses control.
         /// </summary>
         /// <remarks>
@@ -3512,6 +3548,24 @@ namespace SWEGR.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView grdIntereses;
+        
+        /// <summary>
+        /// UpdatePanel2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel2;
+        
+        /// <summary>
+        /// botoneliminarIntereses control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button botoneliminarIntereses;
         
         /// <summary>
         /// upAgregarinteres control.
@@ -3595,6 +3649,24 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.Button btnCancelarinteres;
         
         /// <summary>
+        /// dialoginsertaraptitud control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dialoginsertaraptitud;
+        
+        /// <summary>
+        /// dialogactualizaraptitud control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dialogactualizaraptitud;
+        
+        /// <summary>
         /// dialogpreguntaaptitud control.
         /// </summary>
         /// <remarks>
@@ -3611,6 +3683,24 @@ namespace SWEGR.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl dialogconfirmacionaptitud;
+        
+        /// <summary>
+        /// dialoginsertarinteres control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dialoginsertarinteres;
+        
+        /// <summary>
+        /// dialogactualizarinteres control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dialogactualizarinteres;
         
         /// <summary>
         /// dialogpreguntainteres control.

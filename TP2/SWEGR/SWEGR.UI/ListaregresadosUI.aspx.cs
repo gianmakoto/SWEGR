@@ -42,40 +42,51 @@ namespace SWEGR.UI
         {
             List<String> lsciclos = new List<String>();
 
-            lsciclos.Add("199810");
-            lsciclos.Add("199820");
-            lsciclos.Add("199910");
-            lsciclos.Add("199920");
-            lsciclos.Add("200010");
-            lsciclos.Add("200020");
-            lsciclos.Add("200110");
-            lsciclos.Add("200120");
-            lsciclos.Add("200210");
-            lsciclos.Add("200220");
-            lsciclos.Add("200310");
-            lsciclos.Add("200320");
-            lsciclos.Add("200410");
-            lsciclos.Add("200420");
-            lsciclos.Add("200510");
-            lsciclos.Add("200520");
-            lsciclos.Add("200610");
-            lsciclos.Add("200620");
-            lsciclos.Add("200710");
-            lsciclos.Add("200720");
-            lsciclos.Add("200810");
-            lsciclos.Add("200820");
-            lsciclos.Add("200910");
-            lsciclos.Add("200920");
-            lsciclos.Add("201010");
-            lsciclos.Add("201020");
-            lsciclos.Add("201110");
-            lsciclos.Add("201120");
-            lsciclos.Add("201210");
-            lsciclos.Add("201220");
-            lsciclos.Add("201310");
-            lsciclos.Add("201320");
-            lsciclos.Add("201410");
-            lsciclos.Add("201420");
+            lsciclos.Add("199401");
+            lsciclos.Add("199402");
+            lsciclos.Add("199501");
+            lsciclos.Add("199502");
+            lsciclos.Add("199601");
+            lsciclos.Add("199602");
+            lsciclos.Add("199701");
+            lsciclos.Add("199702");
+            
+
+
+            lsciclos.Add("199801");
+            lsciclos.Add("199802");
+            lsciclos.Add("199901");
+            lsciclos.Add("199902");
+            lsciclos.Add("200001");
+            lsciclos.Add("200002");
+            lsciclos.Add("200101");
+            lsciclos.Add("200102");
+            lsciclos.Add("200201");
+            lsciclos.Add("200202");
+            lsciclos.Add("200301");
+            lsciclos.Add("200302");
+            lsciclos.Add("200401");
+            lsciclos.Add("200402");
+            lsciclos.Add("200501");
+            lsciclos.Add("200502");
+            lsciclos.Add("200601");
+            lsciclos.Add("200602");
+            lsciclos.Add("200701");
+            lsciclos.Add("200702");
+            lsciclos.Add("200801");
+            lsciclos.Add("200802");
+            lsciclos.Add("200901");
+            lsciclos.Add("200902");
+            lsciclos.Add("201001");
+            lsciclos.Add("201002");
+            lsciclos.Add("201101");
+            lsciclos.Add("201102");
+            lsciclos.Add("201201");
+            lsciclos.Add("201202");
+            lsciclos.Add("201301");
+            lsciclos.Add("201302");
+            lsciclos.Add("201401");
+            lsciclos.Add("201402");
 
             return lsciclos;
         }
@@ -84,44 +95,9 @@ namespace SWEGR.UI
         {
             List<String> lscarreras = new List<string>();
 
-            lscarreras.Add("Arquitectura");
-            lscarreras.Add("Escuela Música");
-            lscarreras.Add("Medicina");
-            lscarreras.Add("Nutrición y Dietética");
-            lscarreras.Add("Odontología");
-            lscarreras.Add("Terapia Física");
-            lscarreras.Add("Psicología");
-            lscarreras.Add("Traducción e Interpretación Profesional");
-            lscarreras.Add("Comunicación e Imagen Empresarial");
-            lscarreras.Add("Comunicación y Marketing");
-            lscarreras.Add("Comunicación y Periodismo");
-            lscarreras.Add("Comunicación y Publicidad");
-            lscarreras.Add("Derecho");
-            lscarreras.Add("Diseño Profesional de Interiores");
-            lscarreras.Add("Diseño Profesional Gráfico");
-            lscarreras.Add("Diseño y Gestión en Moda");
-            lscarreras.Add("Economía y Finanzas");
-            lscarreras.Add("Economía y Negocios Internacionales");
-            lscarreras.Add("Economía Gerencial");
-            lscarreras.Add("Educación y Gestión del Aprendizaje");
-            lscarreras.Add("Ingeniería Civil");
-            lscarreras.Add("Ingeniería Electrónica");
-            lscarreras.Add("Ingeniería Industrial");
             lscarreras.Add("Ingeniería de Sistemas de Información");
             lscarreras.Add("Ingeniería de Software");
-            lscarreras.Add("Ingeniería de Telecomunicaciones y Redes");
-            lscarreras.Add("Ingeniería de Gestión Empresarial");
             lscarreras.Add("Ciencias de la Computación");
-            lscarreras.Add("Ingeniería Mecatrónica");
-            lscarreras.Add("Ingeniería de Gestión Minera");
-            lscarreras.Add("Supply Chain Management");
-            lscarreras.Add("Administración y Agronegocios");
-            lscarreras.Add("Administración y Finanzas");
-            lscarreras.Add("Administración y Marketing");
-            lscarreras.Add("Administración y Negocios Internacionales");
-            lscarreras.Add("Administración y Recursos Humanos");
-            lscarreras.Add("Contabilidad y Administración");
-            lscarreras.Add("Administración y Negocios del Deporte");
 
             return lscarreras;
         }
@@ -854,7 +830,8 @@ namespace SWEGR.UI
 
         protected void btnVer_Click(object sender, ImageClickEventArgs e)
         {
-
+            string algo;
+            algo = "hola";
         }
 
         protected void Imprimir_Click(object sender, EventArgs e)

@@ -1646,7 +1646,8 @@
                 buttons: {
                     "Aceptar": function () {
                         $(this).dialog("close")
-                        eliminarapt();
+                        //eliminarapt();
+                        $("#botoneliminarAptitudes").click();
                         return true;
                     },
                     "Cancelar": function () {
@@ -1672,15 +1673,33 @@
             }).css("font-size", "12px");
         }
 
-        /*function editarapt() {
-            $('[id*=btnEditarAptitud]').attr("disabled", false);
-            $('[id*=btnEliminarAptitud]').attr("disabled", false);
-        }*/
+        function mensajeagregarapt() {
+            $("#dialoginsertaraptitud").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    "Aceptar": function () {
+                        $(this).dialog("close")
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
 
-        /*function cancelareditarapt() {
-            $('[id*=btnEditarAptitud]').attr("disabled", true);
-            $('[id*=btnEliminarAptitud]').attr("disabled", true);
-        }*/
+        function mensajeeditarapt() {
+            $("#dialogactualizaraptitud").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    "Aceptar": function () {
+                        $(this).dialog("close")
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
 
         function editarint() {
             $("#btnguardarint").show();
@@ -1712,7 +1731,8 @@
                 buttons: {
                     "Aceptar": function () {
                         $(this).dialog("close")
-                        eliminarint();
+                        //eliminarint();
+                        $("#botoneliminarIntereses").click();
                     },
                     "Cancelar": function () {
                         $(this).dialog("close")
@@ -1724,6 +1744,34 @@
 
         function eliminarint() {
             $("#dialogconfirmacioninteres").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    "Aceptar": function () {
+                        $(this).dialog("close")
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
+
+        function mensajeagregarinteres() {
+            $("#dialoginsertarinteres").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    "Aceptar": function () {
+                        $(this).dialog("close")
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
+
+        function mensajeeditarinteres() {
+            $("#dialogactualizarinteres").dialog({
                 height: 200,
                 widht: 1800,
                 title: "Seguimiento de egresados",
@@ -5193,6 +5241,9 @@
 
                                                 <div class="form-group">
                                                     <div class="col-sm-9">
+                                                        <div class="form-group" id="Div5">
+                                                    <asp:UpdatePanel ID="upgrdAptitudes" runat="server" UpdateMode="Conditional">
+                                                        <ContentTemplate>
                                                         <asp:GridView ID="grdAptitudes" runat="server" AutoGenerateColumns="false" OnRowCommand="grdAptitudes_RowCommand">
                                                             <Columns>
                                                                 <asp:BoundField HeaderText="Aptitud" DataField="Nombreaptitud" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
@@ -5201,7 +5252,7 @@
                                                                         <asp:UpdatePanel ID="upbtnEditarAptitud" runat="server" UpdateMode="Conditional">
                                                                             <ContentTemplate>
                                                                                 <div id="diveditarapt">
-                                                                                    <asp:ImageButton ID="btnEditarAptitud" runat="server" CommandName="cmdEditar" ImageUrl="Images/edit.png" Width="16" Height="16" OnClick="btnEditarAptitud_Click" />
+                                                                                    <asp:ImageButton ID="btnEditarAptitud" runat="server" CommandName="cmdEditar" ImageUrl="Images/edit.png" Width="16" Height="16" CommandArgument='<%# Eval("Idaptitud") %>'/>
                                                                                 </div>
                                                                             </ContentTemplate>
                                                                         </asp:UpdatePanel>
@@ -5211,13 +5262,22 @@
                                                                     <ItemTemplate>
                                                                         <asp:UpdatePanel ID="upbtnEliminarAptitud" runat="server" UpdateMode="Conditional">
                                                                             <ContentTemplate>
-                                                                                <asp:ImageButton ID="btnEliminarAptitud" runat="server" CommandName="cmdEliminar" ImageUrl="Images/delete.png" Width="16" Height="16" OnClick="btnEliminarAptitud_Click" />
+                                                                                <asp:ImageButton ID="btnEliminarAptitud" runat="server" CommandName="cmdEliminar" ImageUrl="Images/delete.png" Width="16" Height="16" CommandArgument='<%# Eval("Idaptitud") %>'/>
                                                                             </ContentTemplate>
                                                                         </asp:UpdatePanel>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateField>
                                                             </Columns>
                                                         </asp:GridView>
+                                                            </ContentTemplate>
+                                                    </asp:UpdatePanel>
+                                                    </div>
+                                                    <div hidden="hidden">
+                                                        <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+                                                            <ContentTemplate>
+                                                                <asp:Button ID="botoneliminarAptitudes" runat="server" OnClick="botoneliminarAptitudes_Click"/>
+                                                            </ContentTemplate>
+                                                        </asp:UpdatePanel>
                                                     </div>
                                                 </div>
 
@@ -5273,6 +5333,8 @@
 
                                                 <div class="form-group">
                                                     <div class="col-sm-9">
+                                                        <asp:UpdatePanel ID="upgrdIntereses" runat="server" UpdateMode="Conditional">
+                                                        <ContentTemplate>
                                                         <asp:GridView ID="grdIntereses" runat="server" AutoGenerateColumns="false" OnRowCommand="grdIntereses_RowCommand">
                                                             <Columns>
                                                                 <asp:BoundField HeaderText="Interes" DataField="Nombreinteres" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
@@ -5280,7 +5342,7 @@
                                                                     <ItemTemplate>
                                                                         <asp:UpdatePanel ID="upbtnEditarInteres" runat="server" UpdateMode="Conditional">
                                                                             <ContentTemplate>
-                                                                                <asp:ImageButton ID="btnEditarInteres" runat="server" CommandName="cmdEditar" ImageUrl="Images/edit.png" Width="16" Height="16" OnClick="btnEditarInteres_Click" />
+                                                                                <asp:ImageButton ID="btnEditarInteres" runat="server" CommandName="cmdEditar" ImageUrl="Images/edit.png" Width="16" Height="16" CommandArgument='<%# Eval("Idinteres") %>'/>
                                                                             </ContentTemplate>
                                                                         </asp:UpdatePanel>
                                                                     </ItemTemplate>
@@ -5289,13 +5351,23 @@
                                                                     <ItemTemplate>
                                                                         <asp:UpdatePanel ID="upbtnEliminarInteres" runat="server" UpdateMode="Conditional">
                                                                             <ContentTemplate>
-                                                                                <asp:ImageButton ID="btnEliminarInteres" runat="server" CommandName="cmdEliminar" ImageUrl="Images/delete.png" Width="16" Height="16" OnClick="btnEliminarInteres_Click" />
+                                                                                <asp:ImageButton ID="btnEliminarInteres" runat="server" CommandName="cmdEliminar" ImageUrl="Images/delete.png" Width="16" Height="16" CommandArgument='<%# Eval("Idinteres") %>'/>
                                                                             </ContentTemplate>
                                                                         </asp:UpdatePanel>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateField>
                                                             </Columns>
                                                         </asp:GridView>
+                                                            </ContentTemplate>
+                                                    </asp:UpdatePanel>
+                                                    </div>
+
+                                                    <div hidden="hidden">
+                                                        <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
+                                                            <ContentTemplate>
+                                                                <asp:Button ID="botoneliminarIntereses" runat="server" OnClick="botoneliminarIntereses_Click"/>
+                                                            </ContentTemplate>
+                                                        </asp:UpdatePanel>
                                                     </div>
                                                 </div>
 
@@ -5350,12 +5422,29 @@
                             </div>
 
                             <div class="form-group">
+
+                                <div id="dialoginsertaraptitud" style="text-align: center; display: none" runat="server">
+                                    <b style="text-align: center">Aptitud agregada exitosamente</b>
+                                </div>
+
+                                <div id="dialogactualizaraptitud" style="text-align: center; display: none" runat="server">
+                                    <b style="text-align: center">Aptitud actualizada exitosamente</b>
+                                </div>
+
                                 <div id="dialogpreguntaaptitud" style="text-align: center; display: none" runat="server">
                                     <b style="text-align: center">¿Estás seguro de eliminar la aptitud?</b>
                                 </div>
 
                                 <div id="dialogconfirmacionaptitud" style="text-align: center; display: none" runat="server">
                                     <b style="text-align: center">La aptitud ha sido eliminada satisfactoriamente</b>
+                                </div>
+
+                                <div id="dialoginsertarinteres" style="text-align: center; display: none" runat="server">
+                                    <b style="text-align: center">Interes agregado exitosamente</b>
+                                </div>
+
+                                <div id="dialogactualizarinteres" style="text-align: center; display: none" runat="server">
+                                    <b style="text-align: center">Interes actualizado exitosamente</b>
                                 </div>
 
                                 <div id="dialogpreguntainteres" style="text-align: center; display: none" runat="server">

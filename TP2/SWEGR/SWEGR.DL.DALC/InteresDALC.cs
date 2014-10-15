@@ -118,6 +118,7 @@ namespace SWEGR.DL.DALC
                 prmidinteres = new SqlParameter();
                 prmidinteres.ParameterName = "@idinteres";
                 prmidinteres.SqlDbType = SqlDbType.Int;
+                prmidinteres.Value = objetointeres.Idinteres;
 
                 prmnombre = new SqlParameter();
                 prmnombre.ParameterName = "@nombre";
@@ -162,6 +163,7 @@ namespace SWEGR.DL.DALC
 
                 cmdeliminarinteres.Parameters.Add(prmidinteres);
                 cmdeliminarinteres.Connection.Open();
+                cmdeliminarinteres.ExecuteNonQuery();
                 cmdeliminarinteres.Connection.Close();
 
             }
