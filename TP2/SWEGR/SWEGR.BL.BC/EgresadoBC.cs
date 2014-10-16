@@ -50,6 +50,7 @@ namespace SWEGR.BL.BC
                 throw;
             }
         }
+        
         public List<EgresadoBE> listarEgresadoxNombreoCodigo(string busqueda)
         {
             try
@@ -304,7 +305,18 @@ namespace SWEGR.BL.BC
             return objetoEgresadoDALC.listarAniosEgresados();
         }
 
-
+        public bool ActualizarEgresadoDesvinclado(EgresadoDesvinculadoBE objEgresadoDesvinculadoBE)
+        {
+            try
+            {
+                EgresadoDesvinculadoDALC objetoEgresadoDesvinculadoDALC = new EgresadoDesvinculadoDALC();
+                return objetoEgresadoDesvinculadoDALC.ActualizarEgresadoDesvinclado(objEgresadoDesvinculadoBE);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
 
     }
 }

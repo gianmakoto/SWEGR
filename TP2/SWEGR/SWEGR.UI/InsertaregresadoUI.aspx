@@ -77,6 +77,34 @@
             }).css("font-size", "12px");
         }
 
+        function egresadorepetido() {
+            $("#dialogrepetido").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    Aceptar: function () {
+                        $(this).dialog("close");
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
+
+        function egresadonoencontrado() {
+            $("#dialogegresadonoencontrado").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    Aceptar: function () {
+                        $(this).dialog("close");
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
+
     </script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
@@ -227,6 +255,15 @@
                                 <div id="dialogocurrencia" style="text-align: justify; display: none" runat="server">
                                     <b style="text-align: center">Las constraseñas no coinciden.</b>
                                 </div>
+
+                                <div id="dialogrepetido" style="text-align: justify; display: none" runat="server">
+                                    <b style="text-align: center">El egresado con este código universitario ya ha sido registrado.</b>
+                                </div>
+
+                                <div id="dialogegresadonoencontrado" style="text-align: justify; display: none" runat="server">
+                                    <b style="text-align: center">No existe este egresado</b>
+                                </div>
+                                
                             </div>
                         </form>
                     </div>

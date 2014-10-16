@@ -22,12 +22,13 @@ namespace SWEGR.BL.BE
             get { return nombrecompleto; }
             set { nombrecompleto = value; }
         }
-        string contrasena;
 
-        public string Contrasena
+        string contrasenadinamica;
+
+        public string Contrasenadinamica
         {
-            get { return contrasena; }
-            set { contrasena = value; }
+            get { return contrasenadinamica; }
+            set { contrasenadinamica = value; }
         }
 
         private bool cambiocontrasena;
@@ -36,6 +37,30 @@ namespace SWEGR.BL.BE
         {
             get { return cambiocontrasena; }
             set { cambiocontrasena = value; }
+        }
+
+        string carrera;
+
+        public string Carrera
+        {
+            get { return carrera; }
+            set { carrera = value; }
+        }
+
+        string cicloegreso;
+
+        public string Cicloegreso
+        {
+            get { return cicloegreso; }
+            set { cicloegreso = value; }
+        }
+
+        bool estaregistrado;
+
+        public bool Estaregistrado
+        {
+            get { return estaregistrado; }
+            set { estaregistrado = value; }
         }
     }
 }

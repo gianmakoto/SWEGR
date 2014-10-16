@@ -14,6 +14,11 @@ namespace SWEGR.UI
 {
     public partial class InsertaregresadoUI : System.Web.UI.Page
     {
+        string CarreraED;
+        string CicloEgresoED;
+        string ContrasenaDinamicaED;
+        bool CambioContrasenaED;
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -36,13 +41,24 @@ namespace SWEGR.UI
                 }
                 else
                 {
+                    string carrera = (string)ViewState["CarreraED"];
+                    string cicloegreso = (string)ViewState["CicloEgresoED"];
+                    string contrasenadinamica = (string)ViewState["ContrasenaDinamicaED"];
+                    bool cambiocontrasena = (bool)ViewState["CambioContrasenaED"];
+
                     objEgresadoBE.Codigouniversitarioegresado = txtCodigo.Text;
                     objEgresadoBE.Nombrecompletoegresado = txtnombre.Text;
                     objEgresadoBE.Correoegresado = txtcorreo.Text;
                     objEgresadoBE.Contrasenaegresado = txtcontrasena.Text;
+                    objEgresadoBE.Carreraegresado = carrera;
+                    objEgresadoBE.Cicloegresado = cicloegreso;
+                    objEgresadoBE.Contrasenadinamicaegresado = contrasenadinamica;
+                    objEgresadoBE.Cambiocontrasenaegresado = cambiocontrasena;
+                    objEgresadoBE.Tipoegresado = 'D';
 
                     objEgresadoBC.insertarEgresadodesdeEgresadoDesvinculado(objEgresadoBE);
 
+                    ActualizarEgresadoDesvinculado(txtCodigo.Text);
                     ScriptManager.RegisterStartupScript(Page, GetType(), "exito", "exito();", true);
                     Limpiar();
                 }
@@ -72,16 +88,48 @@ namespace SWEGR.UI
         {
             EgresadoDesvinculadoBE objEgresadoDesvinculadoBE = new EgresadoDesvinculadoBE();
             EgresadoBC objEgresadoBC = new EgresadoBC();
-            
+
             objEgresadoDesvinculadoBE = objEgresadoBC.obtenerEgresadoDesvinculado(txtCodigo.Text);
 
-            txtnombre.Text = objEgresadoDesvinculadoBE.Nombrecompleto;
-
-            if (txtnombre.Text != "")
+            if (objEgresadoDesvinculadoBE.Estaregistrado == false)
             {
-                txtCodigo.Enabled = false;
-                btnRegistrar.Enabled = true;
+                txtnombre.Text = objEgresadoDesvinculadoBE.Nombrecompleto;
+
+                CarreraED = objEgresadoDesvinculadoBE.Carrera;
+                CicloEgresoED = objEgresadoDesvinculadoBE.Cicloegreso;
+                ContrasenaDinamicaED = objEgresadoDesvinculadoBE.Contrasenadinamica;
+                CambioContrasenaED = objEgresadoDesvinculadoBE.Cambiocontrasena;
+
+                ViewState["CarreraED"] = CarreraED;
+                ViewState["CicloEgresoED"] = CicloEgresoED;
+                ViewState["ContrasenaDinamicaED"] = ContrasenaDinamicaED;
+                ViewState["CambioContrasenaED"] = CambioContrasenaED;
+
+                if(txtnombre.Text != "")
+                {
+                    txtCodigo.Enabled = false;
+                    btnRegistrar.Enabled = true;
+                }
+                else
+                    ScriptManager.RegisterStartupScript(Page, GetType(), "egresadonoencontrado", "egresadonoencontrado();", true);
             }
+            else
+            {
+                ScriptManager.RegisterStartupScript(Page, GetType(), "egresadorepetido", "egresadorepetido();", true);
+                Limpiar();
+            }
+        }
+
+        public void ActualizarEgresadoDesvinculado(string codigo)
+        {
+            EgresadoDesvinculadoBE objEgresadoDesvinculadoBE = new EgresadoDesvinculadoBE();
+            EgresadoBC objEgresadoBC = new EgresadoBC();
+
+            objEgresadoDesvinculadoBE = objEgresadoBC.obtenerEgresadoDesvinculado(codigo);
+            objEgresadoDesvinculadoBE.Estaregistrado = true;
+            objEgresadoDesvinculadoBE.Codigo = codigo;
+
+            objEgresadoBC.ActualizarEgresadoDesvinclado(objEgresadoDesvinculadoBE);
         }
     }
 }
