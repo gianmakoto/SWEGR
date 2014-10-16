@@ -149,6 +149,11 @@ namespace SWEGR.DL.DALC
             SqlConnection conn;
             SqlCommand cmdlistaregresado;
             SqlDataReader dregresado;
+            SqlParameter prmNombre;
+            SqlParameter prmAnioInicio;
+            SqlParameter prmAnioFin;
+            SqlParameter prmCodigo;
+            SqlParameter prmCarrera;
 
             try
             {
@@ -160,46 +165,52 @@ namespace SWEGR.DL.DALC
                 cmdlistaregresado = new SqlCommand(sqllistaregresado, conn);
                 cmdlistaregresado.CommandType = CommandType.StoredProcedure;
 
-                SqlParameter prmNombre = new SqlParameter();
+                prmNombre = new SqlParameter();
                 prmNombre.ParameterName = "@nombre";
                 prmNombre.SqlDbType = SqlDbType.VarChar;
                 prmNombre.Size = 50;
                 prmNombre.Value = nombre;
-                cmdlistaregresado.Parameters.Add(prmNombre);
-
-                SqlParameter prmAnioInicio = new SqlParameter();
-                prmAnioInicio.ParameterName = "@anioinicio";
-                prmAnioInicio.SqlDbType = SqlDbType.Int;
-                prmAnioInicio.Value = anioInicio;
-                cmdlistaregresado.Parameters.Add(prmAnioInicio);
-
-                SqlParameter prmAnioFin= new SqlParameter();
-                prmAnioFin.ParameterName = "@aniofin";
-                prmAnioFin.SqlDbType = SqlDbType.Int;
-                prmAnioFin.Value = anioFin;
-                cmdlistaregresado.Parameters.Add(prmAnioFin);
-
-                SqlParameter prmCarrera = new SqlParameter();
-                prmCarrera.ParameterName = "@Carrera";
-                prmCarrera.SqlDbType = SqlDbType.VarChar;
-                prmCarrera.Size = 50;
-                prmCarrera.Value = anioFin;
-                cmdlistaregresado.Parameters.Add(prmCarrera);
+                prmNombre.Direction = ParameterDirection.Input;
 
 
-                SqlParameter prmCodigo = new SqlParameter();
+                prmCodigo = new SqlParameter();
                 prmCodigo.ParameterName = "@codigoUniversitario";
                 prmCodigo.SqlDbType = SqlDbType.VarChar;
                 prmCodigo.Size = 10;
                 prmCodigo.Value = codigoUniversitario;
+                prmCodigo.Direction = ParameterDirection.Input;
+
+                prmCarrera = new SqlParameter();
+                prmCarrera.ParameterName = "@Carrera";
+                prmCarrera.SqlDbType = SqlDbType.VarChar;
+                prmCarrera.Size = 50;
+                prmCarrera.Value = carrera;
+                prmCarrera.Direction = ParameterDirection.Input;
+
+                prmAnioInicio = new SqlParameter();
+                prmAnioInicio.ParameterName = "@anioinicio";
+                prmAnioInicio.SqlDbType = SqlDbType.Int;
+                prmAnioInicio.Value = anioInicio;
+                prmAnioInicio.Direction = ParameterDirection.Input;
+
+                prmAnioFin= new SqlParameter();
+                prmAnioFin.ParameterName = "@aniofin";
+                prmAnioFin.SqlDbType = SqlDbType.Int;
+                prmAnioFin.Value = anioFin;
+                prmAnioFin.Direction = ParameterDirection.Input;
+
+               
+                cmdlistaregresado.Parameters.Add(prmNombre);
                 cmdlistaregresado.Parameters.Add(prmCodigo);
-
-
+                cmdlistaregresado.Parameters.Add(prmCarrera);
+                cmdlistaregresado.Parameters.Add(prmAnioInicio);
+                cmdlistaregresado.Parameters.Add(prmAnioFin);
+                
                 cmdlistaregresado.Connection.Open();
                 dregresado = cmdlistaregresado.ExecuteReader();
                 lstEgresadoBE = new List<EgresadoBE>();
 
-                while (dregresado.Read())
+               while (dregresado.Read())
                 {
                     objetoEgresadoBE = new EgresadoBE();
                     objetoEgresadoBE.Idegresado = dregresado.GetInt32(0);
@@ -209,7 +220,7 @@ namespace SWEGR.DL.DALC
                     objetoEgresadoBE.Cicloegresado = dregresado.GetString(4);               
 
                     lstEgresadoBE.Add(objetoEgresadoBE);
-                }
+               }
                 cmdlistaregresado.Connection.Close();
                 return lstEgresadoBE;
             }
@@ -1393,33 +1404,32 @@ namespace SWEGR.DL.DALC
 
         public List<String> listarAniosEgresados()
         {
-            String sqllistarpais;
+            String sqllistaranios;
             SqlConnection conn;
-            SqlCommand cmdlistarpais;
-            SqlDataReader drpais;
+            SqlCommand cmdlistaranios;
+            SqlDataReader dranios;
 
             try
             {
                 conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CSSeguimientoEgresados"].ToString());
-                sqllistarpais = "SWEGR_listarEgresadoAnios";
-                cmdlistarpais = new SqlCommand(sqllistarpais, conn);
-                cmdlistarpais.CommandType = CommandType.StoredProcedure;
+                sqllistaranios = "SWEGR_listarEgresadoAnios";
+                cmdlistaranios = new SqlCommand(sqllistaranios, conn);
+                cmdlistaranios.CommandType = CommandType.StoredProcedure;
 
-                cmdlistarpais.Connection.Open();
+                cmdlistaranios.Connection.Open();
 
-                PaisBE objetoPaisBE = new PaisBE();
-                List<String> listapais = new List<String>();
+                List<String> listaanios = new List<String>();
 
-                drpais = cmdlistarpais.ExecuteReader();
+                dranios = cmdlistaranios.ExecuteReader();
 
-                while (drpais.Read())
-                {                    
-                    listapais.Add(Convert.ToString(drpais.GetInt32(0)));
+                while (dranios.Read())
+                {
+                    listaanios.Add(Convert.ToString(dranios.GetInt32(0)));
                 }
 
-                cmdlistarpais.Connection.Close();
+                cmdlistaranios.Connection.Close();
 
-                return listapais;
+                return listaanios;
             }
             catch (Exception ex)
             {

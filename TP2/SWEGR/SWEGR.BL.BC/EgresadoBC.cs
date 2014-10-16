@@ -298,6 +298,12 @@ namespace SWEGR.BL.BC
             }
         }
 
+        public List<String> listaranios()
+        {
+            EgresadoDALC objetoEgresadoDALC = new EgresadoDALC();
+            return objetoEgresadoDALC.listarAniosEgresados();
+        }
+
 
 
     }

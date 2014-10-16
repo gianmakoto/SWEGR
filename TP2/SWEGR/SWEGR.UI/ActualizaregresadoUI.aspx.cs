@@ -40,13 +40,13 @@ namespace SWEGR.UI
                 TUsuario = Convert.ToChar(Session["TipoUsuario"]);
                 if (TUsuario == 'G')
                 {
-                    Response.Redirect("Loginprueba.aspx");
+                    Response.Redirect("Login.aspx");
                     return;
                 }
 
                 if (IDEgresado == 0)
                 {
-                    Response.Redirect("Loginprueba.aspx");
+                    Response.Redirect("Login.aspx");
                     return;
                 }
 
@@ -54,7 +54,7 @@ namespace SWEGR.UI
                 {
                     ddlGenero.DataSource = listagenero();
                     ddlGenero.DataBind();
-                    ddlGenero.Items.Insert(0, new ListItem("Seleccione el genero", ""));
+                    ddlGenero.Items.Insert(0, new ListItem("Seleccione el género", ""));
 
                     ddlDepartamento.DataSource = listadepartamento();
                     ddlDepartamento.DataBind();
