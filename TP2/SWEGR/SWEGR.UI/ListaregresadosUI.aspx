@@ -9,13 +9,14 @@
     <link rel="shortcut icon" href="img/favicon.png">
 
     <title>Lista de Egresados</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
     <script type="text/javascript" src="MaxLength.min.js"></script>
 
-    <link rel="stylesheet" href="http://localhost:49184/code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
 
+ <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
     <link href="http://localhost:49184/maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Bootstrap core CSS -->
@@ -79,12 +80,15 @@
                 width: dWidth,
                 title: "Datos de Egresado",
                 buttons: {
-                    Guardar: function () {
+                    Aceptar: function () {
+                        /*document.getElementById("ButtonGuardar_Invisible").click();*/
                         $(this).dialog("close");
                     }
                 },
                 modal: true
             }).css("font-size", "12px");
+
+            
         }
 
         function error() {
@@ -101,6 +105,19 @@
             }).css("font-size", "12px");
         }
 
+        function error_mensaje(mensaje) {
+            $("#dialogerror_mensaje").text(mensaje).dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    Aceptar: function () {
+                        $(this).dialog("close");
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
     </script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
@@ -157,6 +174,7 @@
     <!--header end-->
     <%--  --%>
     <!--breadcrumbs start-->
+
     <div class="breadcrumbs">
         <div class="container">
             <div class="row">
@@ -229,6 +247,8 @@
                             </div>
                             <div class="form-group">
                                         <div class="col-sm-10">
+    <asp:Button ID="ButtonGuardar_Invisible" runat="server" style="display:none;"   OnClick="GuardarDatosExtraidosButton_Click1"/>
+
                                             <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnBuscar_Click" />
                                         </div>
                             </div>
@@ -279,100 +299,99 @@
                             </asp:UpdatePanel>
                             
                             <div class="form-group">
+                                <div id="dialogerror_mensaje" style="text-align: justify; display: none" runat="server"></div>
+
                                 <div id="dialogerror" style="text-align: justify; display: none" runat="server">
-                                    <b style="text-align: center">No existen egresados por mostrar.v>
+                                    <b style="text-align: center">No existen egresados por mostrar.                   </div>
                             </div>
 
                             <!-- Parte Dialog Form -->
                             <div class="dialog-form" title="Datos Obtenidos">                            
+                             
+                                
                                 <div id="dialogInfo" style="text-align: justify; display: none" runat="server">
-                                    <table>
+                                
+                                        <asp:UpdatePanel ID="up_dialog" runat="server"     UpdateMode="Conditional">
+                                        <ContentTemplate>
+                                            
+                                        <table>
                                         <tr>
-
                                             <td>
-                                        <div id="divformulario" style="width:auto">                             
-                                            <label id="dlgname">Nombre Completo: </label> <label id="salpe" ></label><br />                                           
-                                            <label id="dlgtelefono">Telefonos:</label> <label id="salioooo" > </label>  <label  >  /  </label> <label id="saliow" > </label><br />                                           
-                                            <label id="dlgdireccion">Dirección:</label> <label id="saliope" > </label><br />
-                                            <label id="dlgcorreo">Correo:</label> <label id="yasalio" ></label><br />
-                                            <label id="dlgcorreoalt">Correo Alternativo: <label id="porfinsalio" ></label></label><br />
-                                        </div>
-                                                </td>
+                                                <div id="divformulario" style="width:auto">                             
+                                                    <label id="dlgname">Nombre Completo: </label> <label id="salpe" ></label><br />                                           
+                                                    <label id="dlgtelefono">Telefonos:</label> <label id="salioooo" > </label>  <label  >  /  </label> <label id="saliow" > </label><br />                                           
+                                                    <label id="dlgdireccion">Dirección:</label> <label id="saliope" > </label><br />
+                                                    <label id="dlgcorreo">Correo:</label> <label id="yasalio" ></label><br />
+                                                    <label id="dlgcorreoalt">Correo Alternativo: <label id="porfinsalio" ></label></label><br />
+                                                </div>
+                                            </td>
                                             <td>
-                                        <div id="divfoto" style="width:auto">
-                                            <img style="height: 135px; width: 135px; " src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png" />
-                                        </div>
-                                                </td>
+                                                <div id="divfoto" style="width:auto">
+                                                    <img id="fotoEgresadoURL" style="height: 135px; width: 135px; "  runat="server"/>
+                                                </div>
+                                            </td>
                                         </tr>
                                     </table>  
                                     <br />
-                                    <label style="">Trabajos    <table id="tbegresadoTrabajos" class="ui-widget ui-widget-content">
-                                        <thead>
-                                            <tr class="ui-widget-header" style="width:auto">
-                                                <th id="th1" style="width:25%">Cargo</th>
-                                                <th id="th2" style="width:50%">Trabajo</th>
-                                                <th id="th3" style="width:25%">Duración</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>John Doe</td>
-                                                <td>john.doe@example.com</td>
-                                                <td>johndoe1</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <br />
-                                    <label style="">Estudios</label>
-                                    <table id="tbegresadoEstudios" class="ui-widget ui-widget-content">
-                                        <thead>
-                                            <tr class="ui-widget-header" style="width:auto">
-                                                <th id="th4" style="width:25%">Tipo</th>
-                                                <th id="th5" style="width:25%">Nombre</th>
-                                                <th id="th6" style="width:50%">Institución</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>John Doe</td>
-                                                <td>john.doe@example.com</td>
-                                                <td>johndoe1</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <br />
-                                    <div class="separadorTabla">
-                                        <table id="tbegresadoIntereses" class="ui-widget ui-widget-content">
-                                            <thead>
-                                                <tr class="ui-widget-header" style="width:auto">
-                                                    <th>Intereses</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>John Doe</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                    
+                                            <label style="">Trabajos</label>
+                                            <asp:GridView id="tbegresadoTrabajos" class="ui-widget ui-widget-content" runat="server" AutoGenerateColumns="false"
+                                                    Width="98.1%" ShowHeader="true"  UseAccessibleHeader="true" >
+                                                <HeaderStyle CssClass="ui-widget-header"/>
+                                                    <Columns>
+                                                    <asp:BoundField DataField="Cargotrabajo" HeaderText="Cargo"  ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                                    <asp:BoundField DataField="Nombretrabajo" HeaderText="Empresa" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                                    <asp:BoundField DataField="Duraciontrabajo" HeaderText="Duración" ItemStyle-HorizontalAlign="Left"></asp:BoundField>                                                    
+                                                </Columns>
+                                            </asp:GridView>
+                                    
+                                            <br />
+                                            <div class="separadorTabla"></div>
 
-                                        <table id="tbegresadoAptitudes" class="ui-widget ui-widget-content">
-                                            <thead>
-                                                <tr class="ui-widget-header" style="width:auto">
-                                                    <th>Aptitudes</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>John Doe</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                            <input type="submit" tabindex="-1" style="position: absolute; top: -1000px"/>
-                                </div>                            
+                                            <label style="">Estudios</label>
+                                            <asp:GridView id="tbegresadoEstudios" class="ui-widget ui-widget-content" runat="server" AutoGenerateColumns="false"
+                                                    Width="98.1%" ShowHeader="true"  UseAccessibleHeader="true" >
+                                                <HeaderStyle CssClass="ui-widget-header"/>
+                                                    <Columns>
+                                                    <asp:BoundField DataField="Nombreestudio" HeaderText="Estudio"  ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                                    <asp:BoundField DataField="Nombreinstitucion" HeaderText="Institución" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                                    <asp:BoundField DataField="Duracionestudio" HeaderText="Duración" ItemStyle-HorizontalAlign="Left"></asp:BoundField>                                                    
+                                                </Columns>
+                                            </asp:GridView>
+
+
+                                            <br />
+                                            <div class="separadorTabla"></div>
+
+                                            <label style="">Intereses</label>
+                                            <asp:GridView id="tbegresadoIntereses" class="ui-widget ui-widget-content" runat="server" AutoGenerateColumns="true"
+                                                    Width="98.1%" ShowHeader="true"  UseAccessibleHeader="true" >
+                                                <HeaderStyle CssClass="ui-widget-header"/>                                                   
+                                            </asp:GridView>
+
+
+                                              <br />
+                                            <div class="separadorTabla"></div>
+
+                                            <label style="">Aptitudes</label>
+                                            <asp:GridView id="tbegresadoAptitudes" class="ui-widget ui-widget-content" runat="server" AutoGenerateColumns="true"
+                                                    Width="98.1%" ShowHeader="true"  UseAccessibleHeader="true" >
+                                                <HeaderStyle CssClass="ui-widget-header"/>                                                   
+                                            </asp:GridView>
+
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel> 
+                                 
+                                        
+                              <!--<asp:Button ID="GuardarDatosExtraidosButton" runat="server" Text="Guardar" CssClass="btn btn-danger pull-right" type="submit"   OnClick="GuardarDatosExtraidosButton_Click"/>-->
+
+                                     
+                                </div>
+                                <!--<input type="submit" tabindex="-1"/> -->
+                                                           
                             </div>
 
-                            <!-- Parte Dialog Form -->
+                            <!-- Parte Dialog Form-->
 
 
                         </form>
@@ -412,6 +431,7 @@
             </div>
        
     </footer>
+
     <!--footer end-->
     <!-- js placed at the end of the document so the pages load faster -->
   

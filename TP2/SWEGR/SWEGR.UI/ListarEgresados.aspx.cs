@@ -41,14 +41,14 @@ namespace SWEGR.UI
 
         protected void extraerDatosTextBox_Click(object sender, EventArgs e)
         {
-            extraerDato(Convert.ToInt32(codigoEgresado.Text));
+            extraerDatos(Convert.ToInt32(codigoEgresado.Text));
         }
 
 
 
 
 
-        public void extraerDato(int codigoEgresado)
+        public void extraerDatos(int codigoEgresado)
         {
             try
             {

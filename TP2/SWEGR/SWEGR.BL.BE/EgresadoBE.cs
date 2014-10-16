@@ -33,6 +33,13 @@ namespace SWEGR.BL.BE
         String cicloegresado;
         String codigouniversitarioegresado;
         String carreraegresado;
+        String _fotoegresado_url;
+
+        public String Fotoegresado_url
+        {
+            get { return _fotoegresado_url; }
+            set { _fotoegresado_url = value; }
+        }
 
 
         public int Idegresado

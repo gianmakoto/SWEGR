@@ -44,5 +44,14 @@ namespace SWEGR.BL.BE
             set { listaAptitudes = value; }
         }
 
+        String _mensaje;
+
+
+        public String Mensaje
+        {
+            get { return _mensaje; }
+            set { _mensaje = value; }
+        }
+
     }
 }

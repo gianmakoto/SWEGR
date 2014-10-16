@@ -139,6 +139,15 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.DropDownList ddlCarrera;
         
         /// <summary>
+        /// Control ButtonGuardar_Invisible.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonGuardar_Invisible;
+        
+        /// <summary>
         /// Control btnBuscar.
         /// </summary>
         /// <remarks>
@@ -166,6 +175,15 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.Button btnImprimir;
         
         /// <summary>
+        /// Control dialogerror_mensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dialogerror_mensaje;
+        
+        /// <summary>
         /// Control dialogerror.
         /// </summary>
         /// <remarks>
@@ -182,5 +200,68 @@ namespace SWEGR.UI {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl dialogInfo;
+        
+        /// <summary>
+        /// Control up_dialog.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel up_dialog;
+        
+        /// <summary>
+        /// Control fotoEgresadoURL.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage fotoEgresadoURL;
+        
+        /// <summary>
+        /// Control tbegresadoTrabajos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView tbegresadoTrabajos;
+        
+        /// <summary>
+        /// Control tbegresadoEstudios.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView tbegresadoEstudios;
+        
+        /// <summary>
+        /// Control tbegresadoIntereses.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView tbegresadoIntereses;
+        
+        /// <summary>
+        /// Control tbegresadoAptitudes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView tbegresadoAptitudes;
+        
+        /// <summary>
+        /// Control GuardarDatosExtraidosButton.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button GuardarDatosExtraidosButton;
     }
 }

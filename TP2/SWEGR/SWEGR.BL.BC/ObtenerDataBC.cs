@@ -23,7 +23,10 @@ namespace SWEGR.BL.BC
         {
             try
             {
-
+                while (IE.Busy)
+                {
+                    Thread.Sleep(2000);
+                }
                 IE.Navigate(url_LinkedIn);
                 while (IE.Busy)
                 {
@@ -138,11 +141,16 @@ namespace SWEGR.BL.BC
 
                 if (!linkLogOut.Trim().Equals(""))
                 {
+                    while (IE.Busy)
+                    {
+                        Thread.Sleep(2000);
+                    }
                     IE.Navigate(linkLogOut);
                     while (IE.Busy)
                     {
                         Thread.Sleep(2000);
                     }
+                    Thread.Sleep(2000);
                     IE.Navigate(url_LinkedIn);
 
                     return true;
@@ -151,7 +159,7 @@ namespace SWEGR.BL.BC
             }
             catch (Exception ex)
             {
-                throw;
+                return false;
             }
         }
 
@@ -327,6 +335,8 @@ namespace SWEGR.BL.BC
                 {
                     Thread.Sleep(2000);
                 }
+
+
                 Thread.Sleep(10000);
                 doc2 = null;
                 Thread.Sleep(2000);
@@ -353,6 +363,7 @@ namespace SWEGR.BL.BC
                 List<RegistroLaboralBE> listaRegistroLaboral = obtenerRegistrosLaborales(doc);
                 List<RegistroAcademicoBE> listaRegistroAcademico = obtenerRegistrosAcademicos(doc);
                 EgresadoBE datosUsuario = obtenerDatosGenerales(doc);
+                datosUsuario.Fotoegresado_url = obtenerImagen_URL(doc);
                 List<String> listaIntereses = obtenerIntereses(doc);
                 List<String> listaAptitudes = obtenerAptitudes(doc);
 
@@ -369,6 +380,7 @@ namespace SWEGR.BL.BC
                     datosReturn.ListaIntereses = listaIntereses;
                     datosReturn.ListaRegistroAcademico = listaRegistroAcademico;
                     datosReturn.ListaRegistroLaboral = listaRegistroLaboral;
+
                     return datosReturn;
                 }
 
@@ -464,12 +476,33 @@ namespace SWEGR.BL.BC
                         {
                             HtmlNode nombreTrabajo = h5.SelectSingleNode(".//a");
                             if (nombreTrabajo != null)
-                                registro.Nombretrabajo = nombreTrabajo.InnerText;
+                            {
+                                if (h5.Attributes.Count > 0)
+                                {
+                                    string class_temp = h5.Attributes["class"].Value;
+                                    if (class_temp.Equals("experience-logo"))
+                                    {
+                                        HtmlNode imgTemp = item.SelectSingleNode(".//img");
+                                        registro.Nombretrabajo = imgTemp.Attributes["alt"].Value;
+                                    }
+                                }
+                                else
+                                    registro.Nombretrabajo = nombreTrabajo.InnerText;
+
+                            }
                         }
 
                         HtmlNode span = item.SelectSingleNode(".//time");
                         if (span != null)
+                        {
                             registro.Duraciontrabajo = span.ParentNode.InnerText;
+                            if (registro.Duraciontrabajo.Contains(")"))
+                            {
+
+                                registro.Duraciontrabajo = registro.Duraciontrabajo.Substring(0, registro.Duraciontrabajo.IndexOf(")")+1);
+
+                            }
+                        }
 
                         HtmlNode descripcion = item.SelectSingleNode(".//p[@class='description']");
                         if (descripcion != null)
@@ -659,8 +692,9 @@ namespace SWEGR.BL.BC
                     {
                         foreach (HtmlNode item in items)
                         {
-
-                            listaAptitudes.Add(formatearString_Aptitudes(item.InnerText));
+                            HtmlNode item_final = item.SelectSingleNode(".//span[@class='endorse-item-name ']");
+                            if(item_final!=null)
+                             listaAptitudes.Add(formatearString_Aptitudes(item_final.InnerText));
 
                         }
                     }
@@ -673,7 +707,9 @@ namespace SWEGR.BL.BC
                         {
                             foreach (HtmlNode item in items_extras)
                             {
-                                listaAptitudes.Add(formatearString_Aptitudes(item.InnerText));
+                                HtmlNode item_final = item.SelectSingleNode(".//span[@class='endorse-item-name ']");
+                                if (item_final != null)
+                                    listaAptitudes.Add(formatearString_Aptitudes(item_final.InnerText));
                             }
                         }
                     }
@@ -752,7 +788,29 @@ namespace SWEGR.BL.BC
         }
 
 
+        public String obtenerImagen_URL(HtmlAgilityPack.HtmlDocument doc)
+        {
+            try
+            {
+                String urlImage = "";
+                HtmlNode container = doc.DocumentNode.SelectSingleNode(".//div[@class='profile-picture']");
+                if (container != null)
+                {
+                    HtmlNode img = container.SelectSingleNode(".//img");
+                    if (img != null)
+                    {
+                        urlImage = img.Attributes["src"].Value;
+                    }
+                }
+                return urlImage;
 
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         //Open file in to a filestream and read data in a byte array.
         public byte[] ReadFile_Image(string URL)
