@@ -11,9 +11,6 @@ namespace SWEGR.UI
     using SWEGR.BL.BC;
     using SWEGR.BL.BE;
 
-    
-    
-
     public partial class ActualizaregresadoUI : System.Web.UI.Page
     {
         int IDEgresado;
@@ -2186,6 +2183,7 @@ namespace SWEGR.UI
             if (cantidad == 0)
                 return false;
 
+            objRegistroAcademicoBE.Idregistroacademico = listaRegistroAcademicoBE[0].Idregistroacademico;
             objRegistroAcademicoBE.Idegresado = idegresado;
             objRegistroAcademicoBE.Nombreinstitucion = txtcentroEstudios.Text;
             objRegistroAcademicoBE.Duracionestudio = txtduracionEstudio.Text;
@@ -2202,6 +2200,7 @@ namespace SWEGR.UI
             if (cantidad > 1)
             {
                 RegistroAcademicoBE objRegistroAcademicoBE2 = new RegistroAcademicoBE();
+                objRegistroAcademicoBE2.Idregistroacademico = listaRegistroAcademicoBE[1].Idregistroacademico;
                 objRegistroAcademicoBE2.Idegresado = idegresado;
                 objRegistroAcademicoBE2.Nombreinstitucion = txtcentroEstudios2.Text;
                 objRegistroAcademicoBE2.Duracionestudio = txtduracionEstudio2.Text;
@@ -2219,6 +2218,7 @@ namespace SWEGR.UI
             if (cantidad > 2)
             {
                 RegistroAcademicoBE objRegistroAcademicoBE3 = new RegistroAcademicoBE();
+                objRegistroAcademicoBE3.Idregistroacademico = listaRegistroAcademicoBE[2].Idregistroacademico;
                 objRegistroAcademicoBE3.Idegresado = idegresado;
                 objRegistroAcademicoBE3.Nombreinstitucion = txtcentroEstudios3.Text;
                 objRegistroAcademicoBE3.Duracionestudio = txtduracionEstudio3.Text;
@@ -2236,6 +2236,7 @@ namespace SWEGR.UI
             if (cantidad > 3)
             {
                 RegistroAcademicoBE objRegistroAcademicoBE4 = new RegistroAcademicoBE();
+                objRegistroAcademicoBE4.Idregistroacademico = listaRegistroAcademicoBE[3].Idregistroacademico;
                 objRegistroAcademicoBE4.Idegresado = idegresado;
                 objRegistroAcademicoBE4.Nombreinstitucion = txtcentroEstudios4.Text;
                 objRegistroAcademicoBE4.Duracionestudio = txtduracionEstudio4.Text;
@@ -2253,6 +2254,7 @@ namespace SWEGR.UI
             if (cantidad > 4)
             {
                 RegistroAcademicoBE objRegistroAcademicoBE5 = new RegistroAcademicoBE();
+                objRegistroAcademicoBE5.Idregistroacademico = listaRegistroAcademicoBE[4].Idregistroacademico;
                 objRegistroAcademicoBE5.Idegresado = idegresado;
                 objRegistroAcademicoBE5.Nombreinstitucion = txtcentroEstudios5.Text;
                 objRegistroAcademicoBE5.Duracionestudio = txtduracionEstudio5.Text;
@@ -2270,6 +2272,7 @@ namespace SWEGR.UI
             if (cantidad > 5)
             {
                 RegistroAcademicoBE objRegistroAcademicoBE6 = new RegistroAcademicoBE();
+                objRegistroAcademicoBE6.Idregistroacademico = listaRegistroAcademicoBE[5].Idregistroacademico;
                 objRegistroAcademicoBE6.Idegresado = idegresado;
                 objRegistroAcademicoBE6.Nombreinstitucion = txtcentroEstudios6.Text;
                 objRegistroAcademicoBE6.Duracionestudio = txtduracionEstudio6.Text;
@@ -2287,6 +2290,7 @@ namespace SWEGR.UI
             if (cantidad > 6)
             {
                 RegistroAcademicoBE objRegistroAcademicoBE7 = new RegistroAcademicoBE();
+                objRegistroAcademicoBE7.Idregistroacademico = listaRegistroAcademicoBE[6].Idregistroacademico;
                 objRegistroAcademicoBE7.Idegresado = idegresado;
                 objRegistroAcademicoBE7.Nombreinstitucion = txtcentroEstudios7.Text;
                 objRegistroAcademicoBE7.Duracionestudio = txtduracionEstudio7.Text;
@@ -2304,6 +2308,7 @@ namespace SWEGR.UI
             if (cantidad > 7)
             {
                 RegistroAcademicoBE objRegistroAcademicoBE8 = new RegistroAcademicoBE();
+                objRegistroAcademicoBE8.Idregistroacademico = listaRegistroAcademicoBE[7].Idregistroacademico;
                 objRegistroAcademicoBE8.Idegresado = idegresado;
                 objRegistroAcademicoBE8.Nombreinstitucion = txtcentroEstudios8.Text;
                 objRegistroAcademicoBE8.Duracionestudio = txtduracionEstudio8.Text;
@@ -2321,6 +2326,7 @@ namespace SWEGR.UI
             if (cantidad > 8)
             {
                 RegistroAcademicoBE objRegistroAcademicoBE9 = new RegistroAcademicoBE();
+                objRegistroAcademicoBE9.Idregistroacademico = listaRegistroAcademicoBE[8].Idregistroacademico;
                 objRegistroAcademicoBE9.Idegresado = idegresado;
                 objRegistroAcademicoBE9.Nombreinstitucion = txtcentroEstudios9.Text;
                 objRegistroAcademicoBE9.Duracionestudio = txtduracionEstudio9.Text;
@@ -2338,6 +2344,7 @@ namespace SWEGR.UI
             if (cantidad > 9)
             {
                 RegistroAcademicoBE objRegistroAcademicoBE10 = new RegistroAcademicoBE();
+                objRegistroAcademicoBE10.Idregistroacademico = listaRegistroAcademicoBE[9].Idregistroacademico;
                 objRegistroAcademicoBE10.Idegresado = idegresado;
                 objRegistroAcademicoBE10.Nombreinstitucion = txtcentroEstudios10.Text;
                 objRegistroAcademicoBE10.Duracionestudio = txtduracionEstudio10.Text;
@@ -2355,6 +2362,7 @@ namespace SWEGR.UI
             if (cantidad > 10)
             {
                 RegistroAcademicoBE objRegistroAcademicoBE11 = new RegistroAcademicoBE();
+                objRegistroAcademicoBE11.Idregistroacademico = listaRegistroAcademicoBE[10].Idregistroacademico;
                 objRegistroAcademicoBE11.Idegresado = idegresado;
                 objRegistroAcademicoBE11.Nombreinstitucion = txtcentroEstudios11.Text;
                 objRegistroAcademicoBE11.Duracionestudio = txtduracionEstudio11.Text;
@@ -2372,6 +2380,7 @@ namespace SWEGR.UI
             if (cantidad > 11)
             {
                 RegistroAcademicoBE objRegistroAcademicoBE12 = new RegistroAcademicoBE();
+                objRegistroAcademicoBE12.Idregistroacademico = listaRegistroAcademicoBE[11].Idregistroacademico;
                 objRegistroAcademicoBE12.Idegresado = idegresado;
                 objRegistroAcademicoBE12.Nombreinstitucion = txtcentroEstudios12.Text;
                 objRegistroAcademicoBE12.Duracionestudio = txtduracionEstudio12.Text;
@@ -2389,6 +2398,7 @@ namespace SWEGR.UI
             if (cantidad > 12)
             {
                 RegistroAcademicoBE objRegistroAcademicoBE13 = new RegistroAcademicoBE();
+                objRegistroAcademicoBE13.Idregistroacademico = listaRegistroAcademicoBE[12].Idregistroacademico;
                 objRegistroAcademicoBE13.Idegresado = idegresado;
                 objRegistroAcademicoBE13.Nombreinstitucion = txtcentroEstudios13.Text;
                 objRegistroAcademicoBE13.Duracionestudio = txtduracionEstudio13.Text;
@@ -2406,6 +2416,7 @@ namespace SWEGR.UI
             if (cantidad > 13)
             {
                 RegistroAcademicoBE objRegistroAcademicoBE14 = new RegistroAcademicoBE();
+                objRegistroAcademicoBE14.Idregistroacademico = listaRegistroAcademicoBE[13].Idregistroacademico;
                 objRegistroAcademicoBE14.Idegresado = idegresado;
                 objRegistroAcademicoBE14.Nombreinstitucion = txtcentroEstudios14.Text;
                 objRegistroAcademicoBE14.Duracionestudio = txtduracionEstudio14.Text;
@@ -2423,6 +2434,7 @@ namespace SWEGR.UI
             if (cantidad > 14)
             {
                 RegistroAcademicoBE objRegistroAcademicoBE15 = new RegistroAcademicoBE();
+                objRegistroAcademicoBE15.Idregistroacademico = listaRegistroAcademicoBE[14].Idregistroacademico;
                 objRegistroAcademicoBE15.Idegresado = idegresado;
                 objRegistroAcademicoBE15.Nombreinstitucion = txtcentroEstudios15.Text;
                 objRegistroAcademicoBE15.Duracionestudio = txtduracionEstudio15.Text;
@@ -2440,6 +2452,7 @@ namespace SWEGR.UI
             if (cantidad > 15)
             {
                 RegistroAcademicoBE objRegistroAcademicoBE16 = new RegistroAcademicoBE();
+                objRegistroAcademicoBE16.Idregistroacademico = listaRegistroAcademicoBE[15].Idregistroacademico;
                 objRegistroAcademicoBE16.Idegresado = idegresado;
                 objRegistroAcademicoBE16.Nombreinstitucion = txtcentroEstudios16.Text;
                 objRegistroAcademicoBE16.Duracionestudio = txtduracionEstudio16.Text;
@@ -2457,6 +2470,7 @@ namespace SWEGR.UI
             if (cantidad > 16)
             {
                 RegistroAcademicoBE objRegistroAcademicoBE17 = new RegistroAcademicoBE();
+                objRegistroAcademicoBE17.Idregistroacademico = listaRegistroAcademicoBE[16].Idregistroacademico;
                 objRegistroAcademicoBE17.Idegresado = idegresado;
                 objRegistroAcademicoBE17.Nombreinstitucion = txtcentroEstudios17.Text;
                 objRegistroAcademicoBE17.Duracionestudio = txtduracionEstudio17.Text;
@@ -2474,6 +2488,7 @@ namespace SWEGR.UI
             if (cantidad > 17)
             {
                 RegistroAcademicoBE objRegistroAcademicoBE18 = new RegistroAcademicoBE();
+                objRegistroAcademicoBE18.Idregistroacademico = listaRegistroAcademicoBE[17].Idregistroacademico;
                 objRegistroAcademicoBE18.Idegresado = idegresado;
                 objRegistroAcademicoBE18.Nombreinstitucion = txtcentroEstudios18.Text;
                 objRegistroAcademicoBE18.Duracionestudio = txtduracionEstudio18.Text;
@@ -2491,6 +2506,7 @@ namespace SWEGR.UI
             if (cantidad > 18)
             {
                 RegistroAcademicoBE objRegistroAcademicoBE19 = new RegistroAcademicoBE();
+                objRegistroAcademicoBE19.Idregistroacademico = listaRegistroAcademicoBE[18].Idregistroacademico;
                 objRegistroAcademicoBE19.Idegresado = idegresado;
                 objRegistroAcademicoBE19.Nombreinstitucion = txtcentroEstudios19.Text;
                 objRegistroAcademicoBE19.Duracionestudio = txtduracionEstudio19.Text;
@@ -2508,6 +2524,7 @@ namespace SWEGR.UI
             if (cantidad > 19)
             {
                 RegistroAcademicoBE objRegistroAcademicoBE20 = new RegistroAcademicoBE();
+                objRegistroAcademicoBE20.Idregistroacademico = listaRegistroAcademicoBE[19].Idregistroacademico;
                 objRegistroAcademicoBE20.Idegresado = idegresado;
                 objRegistroAcademicoBE20.Nombreinstitucion = txtcentroEstudios20.Text;
                 objRegistroAcademicoBE20.Duracionestudio = txtduracionEstudio20.Text;
@@ -3710,84 +3727,7 @@ namespace SWEGR.UI
             int cantidad = listaRegistroAcademicoBE.Count;
 
             ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarBotonesTA", "ocultarBotonesTA();", true);
-            ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaAcademica1", "deshabilitarTrayectoriaAcademica1();", true);
-
-            if (cantidad > 1)
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaAcademica2", "deshabilitarTrayectoriaAcademica2();", true);
-            }
-            if (cantidad > 2)
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaAcademica3", "deshabilitarTrayectoriaAcademica3();", true);
-            }
-            if (cantidad > 3)
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaAcademica4", "deshabilitarTrayectoriaAcademica4();", true);
-            }
-            if (cantidad > 4)
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaAcademica5", "deshabilitarTrayectoriaAcademica5();", true);
-            }
-            if (cantidad > 5)
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaAcademica6", "deshabilitarTrayectoriaAcademica6();", true);
-            }
-            if (cantidad > 6)
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaAcademica7", "deshabilitarTrayectoriaAcademica7();", true);
-            }
-            if (cantidad > 7)
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaAcademica8", "deshabilitarTrayectoriaAcademica8();", true);
-            }
-            if (cantidad > 8)
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaAcademica9", "deshabilitarTrayectoriaAcademica9();", true);
-            }
-            if (cantidad > 9)
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaAcademica10", "deshabilitarTrayectoriaAcademica10();", true);
-            }
-            if (cantidad > 10)
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaAcademica11", "deshabilitarTrayectoriaAcademica11();", true);
-            }
-            if (cantidad > 11)
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaAcademica12", "deshabilitarTrayectoriaAcademica12();", true);
-            }
-            if (cantidad > 12)
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaAcademica13", "deshabilitarTrayectoriaAcademica13();", true);
-            }
-            if (cantidad > 13)
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaAcademica14", "deshabilitarTrayectoriaAcademica14();", true);
-            }
-            if (cantidad > 14)
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaAcademica15", "deshabilitarTrayectoriaAcademica15();", true);
-            }
-            if (cantidad > 15)
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaAcademica16", "deshabilitarTrayectoriaAcademica16();", true);
-            }
-            if (cantidad > 16)
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaAcademica17", "deshabilitarTrayectoriaAcademica17();", true);
-            }
-            if (cantidad > 17)
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaAcademica18", "deshabilitarTrayectoriaAcademica18();", true);
-            }
-            if (cantidad > 18)
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaAcademica19", "deshabilitarTrayectoriaAcademica19();", true);
-            }
-            if (cantidad > 19)
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaAcademica20", "deshabilitarTrayectoriaAcademica20();", true);
-            }
+            ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTODOTryacetoriaAcademica", "deshabilitarTODOTryacetoriaAcademica();", true);
 
             if (cantidad == 1)
                 ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarCurso2", "ocultarCurso2();", true);
@@ -3858,6 +3798,8 @@ namespace SWEGR.UI
                         if (actualizarRegistroAcademico())
                         {
                             ScriptManager.RegisterStartupScript(Page, GetType(), "exitoRA", "exitoRA();", true);
+                            ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarBotonesTA", "ocultarBotonesTA();", true);
+                            ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTODOTryacetoriaAcademica", "deshabilitarTODOTryacetoriaAcademica();", true);
                         }
                         else
                             ClientScript.RegisterClientScriptBlock(GetType(), "erroractualizarRA", "<script language=\"JavaScript\"> alert(\"Ocurrió un error\")</script>", false);
@@ -4428,6 +4370,7 @@ namespace SWEGR.UI
                 }
             }
 
+
             return exito;
         }
 
@@ -4446,6 +4389,7 @@ namespace SWEGR.UI
             if (cantidad == 0)
                 return false;
 
+            objRegistroLaboralBE.Idregistrolaboral = listaRegistroLaboralBE[0].Idregistrolaboral;
             objRegistroLaboralBE.Idegresado = idegresado;
             objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa.Text;
             objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo.Text;
@@ -4469,30 +4413,32 @@ namespace SWEGR.UI
 
             if (cantidad > 1)
             {
-                    objRegistroLaboralBE.Idegresado = idegresado;
-                    objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa2.Text;
-                    objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo2.Text;
-                    objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo2.Text;
-                    objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo2.Text;
-                    objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo2.Text;
-                    objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo2.Text;
-                    objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo2.Text;
-                    objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo2.Text;
-                    objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL2.Text);
+                objRegistroLaboralBE.Idregistrolaboral = listaRegistroLaboralBE[1].Idregistrolaboral;
+                objRegistroLaboralBE.Idegresado = idegresado;
+                objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa2.Text;
+                objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo2.Text;
+                objRegistroLaboralBE.Duraciontrabajo = txtduracionTrabajo2.Text;
+                objRegistroLaboralBE.Descripciontrabajo = txtdescripcionTrabajo2.Text;
+                objRegistroLaboralBE.Nombrejefetrabajo = txtnombrejefeTrabajo2.Text;
+                objRegistroLaboralBE.Cargojefetrabajo = txtcargojefeTrabajo2.Text;
+                objRegistroLaboralBE.Telefonojefetrabajo = txttelefonojefeTrabajo2.Text;
+                objRegistroLaboralBE.Correojefetrabajo = txtcorreojefeTrabajo2.Text;
+                objRegistroLaboralBE.Idpais = objetoPaisBC.obtenerPaisID(ddlPaisTL2.Text);
 
-                    if (cbotrabajoActual2.Checked)
-                        objRegistroLaboralBE.Trabajoactual = true;
-                    else
-                        objRegistroLaboralBE.Trabajoactual = false;
+                if (cbotrabajoActual2.Checked)
+                    objRegistroLaboralBE.Trabajoactual = true;
+                else
+                    objRegistroLaboralBE.Trabajoactual = false;
 
-                    if (objRegistroLaboralBC.actualizarregistrolaboral(objRegistroLaboralBE))
-                        exito = true;
-                    else
-                        return false;
+                if (objRegistroLaboralBC.actualizarregistrolaboral(objRegistroLaboralBE))
+                    exito = true;
+                else
+                    return false;
             }
 
             if (cantidad > 2)
             {
+                objRegistroLaboralBE.Idregistrolaboral = listaRegistroLaboralBE[2].Idregistrolaboral;
                 objRegistroLaboralBE.Idegresado = idegresado;
                 objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa3.Text;
                 objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo3.Text;
@@ -4517,6 +4463,7 @@ namespace SWEGR.UI
 
             if (cantidad > 3)
             {
+                objRegistroLaboralBE.Idregistrolaboral = listaRegistroLaboralBE[3].Idregistrolaboral;
                 objRegistroLaboralBE.Idegresado = idegresado;
                 objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa4.Text;
                 objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo4.Text;
@@ -4541,6 +4488,7 @@ namespace SWEGR.UI
 
             if (cantidad > 4)
             {
+                objRegistroLaboralBE.Idregistrolaboral = listaRegistroLaboralBE[4].Idregistrolaboral;
                 objRegistroLaboralBE.Idegresado = idegresado;
                 objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa5.Text;
                 objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo5.Text;
@@ -4565,6 +4513,7 @@ namespace SWEGR.UI
 
             if (cantidad > 5)
             {
+                objRegistroLaboralBE.Idregistrolaboral = listaRegistroLaboralBE[5].Idregistrolaboral;
                 objRegistroLaboralBE.Idegresado = idegresado;
                 objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa6.Text;
                 objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo6.Text;
@@ -4589,6 +4538,7 @@ namespace SWEGR.UI
 
             if (cantidad > 6)
             {
+                objRegistroLaboralBE.Idregistrolaboral = listaRegistroLaboralBE[6].Idregistrolaboral;
                 objRegistroLaboralBE.Idegresado = idegresado;
                 objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa7.Text;
                 objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo7.Text;
@@ -4613,6 +4563,7 @@ namespace SWEGR.UI
 
             if (cantidad > 7)
             {
+                objRegistroLaboralBE.Idregistrolaboral = listaRegistroLaboralBE[7].Idregistrolaboral;
                 objRegistroLaboralBE.Idegresado = idegresado;
                 objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa8.Text;
                 objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo8.Text;
@@ -4637,6 +4588,7 @@ namespace SWEGR.UI
 
             if (cantidad > 8)
             {
+                objRegistroLaboralBE.Idregistrolaboral = listaRegistroLaboralBE[8].Idregistrolaboral;
                 objRegistroLaboralBE.Idegresado = idegresado;
                 objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa9.Text;
                 objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo9.Text;
@@ -4661,6 +4613,7 @@ namespace SWEGR.UI
 
             if (cantidad > 9)
             {
+                objRegistroLaboralBE.Idregistrolaboral = listaRegistroLaboralBE[9].Idregistrolaboral;
                 objRegistroLaboralBE.Idegresado = idegresado;
                 objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa10.Text;
                 objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo10.Text;
@@ -4685,6 +4638,7 @@ namespace SWEGR.UI
 
             if (cantidad > 10)
             {
+                objRegistroLaboralBE.Idregistrolaboral = listaRegistroLaboralBE[10].Idregistrolaboral;
                 objRegistroLaboralBE.Idegresado = idegresado;
                 objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa11.Text;
                 objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo11.Text;
@@ -4709,6 +4663,7 @@ namespace SWEGR.UI
 
             if (cantidad > 11)
             {
+                objRegistroLaboralBE.Idregistrolaboral = listaRegistroLaboralBE[11].Idregistrolaboral;
                 objRegistroLaboralBE.Idegresado = idegresado;
                 objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa12.Text;
                 objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo12.Text;
@@ -4733,6 +4688,7 @@ namespace SWEGR.UI
 
             if (cantidad > 12)
             {
+                objRegistroLaboralBE.Idregistrolaboral = listaRegistroLaboralBE[12].Idregistrolaboral;
                 objRegistroLaboralBE.Idegresado = idegresado;
                 objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa13.Text;
                 objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo13.Text;
@@ -4757,6 +4713,7 @@ namespace SWEGR.UI
 
             if (cantidad > 13)
             {
+                objRegistroLaboralBE.Idregistrolaboral = listaRegistroLaboralBE[13].Idregistrolaboral;
                 objRegistroLaboralBE.Idegresado = idegresado;
                 objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa14.Text;
                 objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo14.Text;
@@ -4781,6 +4738,7 @@ namespace SWEGR.UI
 
             if (cantidad > 14)
             {
+                objRegistroLaboralBE.Idregistrolaboral = listaRegistroLaboralBE[14].Idregistrolaboral;
                 objRegistroLaboralBE.Idegresado = idegresado;
                 objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa15.Text;
                 objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo15.Text;
@@ -4805,6 +4763,7 @@ namespace SWEGR.UI
 
             if (cantidad > 15)
             {
+                objRegistroLaboralBE.Idregistrolaboral = listaRegistroLaboralBE[15].Idregistrolaboral;
                 objRegistroLaboralBE.Idegresado = idegresado;
                 objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa16.Text;
                 objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo16.Text;
@@ -4829,6 +4788,7 @@ namespace SWEGR.UI
 
             if (cantidad > 16)
             {
+                objRegistroLaboralBE.Idregistrolaboral = listaRegistroLaboralBE[16].Idregistrolaboral;
                 objRegistroLaboralBE.Idegresado = idegresado;
                 objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa17.Text;
                 objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo17.Text;
@@ -4853,6 +4813,7 @@ namespace SWEGR.UI
 
             if (cantidad > 17)
             {
+                objRegistroLaboralBE.Idregistrolaboral = listaRegistroLaboralBE[17].Idregistrolaboral;
                 objRegistroLaboralBE.Idegresado = idegresado;
                 objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa18.Text;
                 objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo18.Text;
@@ -4877,6 +4838,7 @@ namespace SWEGR.UI
 
             if (cantidad > 18)
             {
+                objRegistroLaboralBE.Idregistrolaboral = listaRegistroLaboralBE[18].Idregistrolaboral;
                 objRegistroLaboralBE.Idegresado = idegresado;
                 objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa19.Text;
                 objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo19.Text;
@@ -4901,6 +4863,7 @@ namespace SWEGR.UI
 
             if (cantidad > 19)
             {
+                objRegistroLaboralBE.Idregistrolaboral = listaRegistroLaboralBE[19].Idregistrolaboral;
                 objRegistroLaboralBE.Idegresado = idegresado;
                 objRegistroLaboralBE.Nombretrabajo = txtnombreEmpresa20.Text;
                 objRegistroLaboralBE.Cargotrabajo = txtcargoTrabajo20.Text;
@@ -5214,7 +5177,7 @@ namespace SWEGR.UI
             List<RegistroLaboralBE> listaRegistroLaboralBE = new List<RegistroLaboralBE>();
             RegistroLaboralBC objRegistroLaboralBC = new RegistroLaboralBC();
 
-            int activado = agregarActivado;
+            int activado = 0;
 
             listaRegistroLaboralBE = objRegistroLaboralBC.listarregistrolaobral(idegresado);
             int cantidad = listaRegistroLaboralBE.Count;
@@ -6805,65 +6768,8 @@ namespace SWEGR.UI
             int cantidad = listaRegistroLaboralBE.Count;
 
             ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarBotonesTL", "ocultarBotonesTL();", true);
-            ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral1", "deshabilitarTrayectoriaLaboral1();", true);
-
-            if (cantidad > 1)
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral2", "deshabilitarTrayectoriaLaboral2();", true);
-
-            if (cantidad > 2)
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral3", "deshabilitarTrayectoriaLaboral3();", true);
-
-            if (cantidad > 3)
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral4", "deshabilitarTrayectoriaLaboral4();", true);
-
-            if (cantidad > 4)
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral5", "deshabilitarTrayectoriaLaboral5();", true);
-
-            if (cantidad > 5)
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral6", "deshabilitarTrayectoriaLaboral6();", true);
-
-            if (cantidad > 6)
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral7", "deshabilitarTrayectoriaLaboral7();", true);
-
-            if (cantidad > 7)
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral8", "deshabilitarTrayectoriaLaboral8();", true);
-
-            if (cantidad > 8)
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral9", "deshabilitarTrayectoriaLaboral9();", true);
-
-            if (cantidad > 9)
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral10", "deshabilitarTrayectoriaLaboral10();", true);
-
-            if (cantidad > 10)
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral11", "deshabilitarTrayectoriaLaboral11();", true);
-
-            if (cantidad > 11)
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral12", "deshabilitarTrayectoriaLaboral12();", true);
-
-            if (cantidad > 12)
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral13", "deshabilitarTrayectoriaLaboral13();", true);
-
-            if (cantidad > 13)
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral14", "deshabilitarTrayectoriaLaboral14();", true);
-
-            if (cantidad > 14)
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral15", "deshabilitarTrayectoriaLaboral15();", true);
-
-            if (cantidad > 15)
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral16", "deshabilitarTrayectoriaLaboral16();", true);
-
-            if (cantidad > 16)
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral17", "deshabilitarTrayectoriaLaboral17();", true);
-
-            if (cantidad > 17)
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral18", "deshabilitarTrayectoriaLaboral18();", true);
-
-            if (cantidad > 18)
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral19", "deshabilitarTrayectoriaLaboral19();", true);
-
-            if (cantidad > 19)
-                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTrayectoriaLaboral20", "deshabilitarTrayectoriaLaboral20();", true);
-
+            ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTODOTrayectoriaLaboral", "deshabilitarTODOTrayectoriaLaboral();", true);
+            
             if (cantidad == 1)
                 ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarTrabajo2", "ocultarTrabajo2();", true);
 
@@ -6935,6 +6841,8 @@ namespace SWEGR.UI
                             if (actualizarRegistroLaboral())
                             {
                                 ScriptManager.RegisterStartupScript(Page, GetType(), "exitoRL", "exitoRL();", true);
+                                ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarBotonesTL", "ocultarBotonesTL();", true);
+                                ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTODOTrayectoriaLaboral", "deshabilitarTODOTrayectoriaLaboral();", true);
                             }
                             else
                                 ClientScript.RegisterClientScriptBlock(GetType(), "erroractualizarRL", "<script language=\"JavaScript\"> alert(\"Ocurrió un error\")</script>", false);

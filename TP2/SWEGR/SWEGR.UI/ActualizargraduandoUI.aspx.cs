@@ -25,67 +25,68 @@ namespace SWEGR.UI
         string correoalternativo;
         string perfillinkedin;
         string perfilfacebook;
+        
 
         protected void Page_Load(object sender, EventArgs e)
         {
-                try
+            try
+            {
+                IDEgresado = Convert.ToInt32(Session["IDusuario"]);
+                TUsuario = Convert.ToChar(Session["TipoUsuario"]);
+                if (TUsuario == 'E')
                 {
-                    IDEgresado = Convert.ToInt32(Session["IDusuario"]);
-                    TUsuario = Convert.ToChar(Session["TipoUsuario"]);
-                    if (TUsuario == 'E')
-                    {
-                        Response.Redirect("Loginprueba.aspx");
-                        return;
-                    }
-
-                    if (IDEgresado == 0)
-                    {
-                        Response.Redirect("Loginprueba.aspx");
-                        return;
-                    }
-
-                    if (!IsPostBack)
-                    {
-
-                        ddlGenero.DataSource = listagenero();
-                        ddlGenero.DataBind();
-                        ddlGenero.Items.Insert(0, new ListItem("Seleccione el genero", ""));
-
-                        ddlDepartamento.DataSource = listadepartamento();
-                        ddlDepartamento.DataBind();
-                        ddlDepartamento.Items.Insert(0, new ListItem("Seleccione el departamento", ""));
-
-                        EgresadoBC objEgresadoBC = new EgresadoBC();
-                        EgresadoBE graduando = objEgresadoBC.obtenerEgresado(IDEgresado);
-
-                        txtnombrecompleto.Text = graduando.Nombrecompletoegresado;
-                        txtdni.Text = graduando.Dniegresado;
-                        txtfechanacimiento.Text = graduando.Fechanacimientoegresado.Day.ToString() + "/" + graduando.Fechanacimientoegresado.Month.ToString() + "/" + graduando.Fechanacimientoegresado.Year.ToString();
-                        txtCarrera.Text = graduando.Carreraegresado;
-                        txttelefonoprincipal.Text = graduando.Telefonoprinegresado;
-                        txttelefonoalternativo.Text = graduando.Telefonoaltegresado;
-                        txtdireccion.Text = graduando.Direccionegresado;
-                        txtdistrito.Text = graduando.Distritoegresado;
-                        txtcorreo.Text = graduando.Correoegresado;
-                        txtcorreoalternativo.Text = graduando.Correoaltegresado;
-                        txtperfillinkedin.Text = graduando.Perfillinkedinegresado;
-                        txtperfilfacebook.Text = graduando.Perfilfacebookegresado;
-
-                        if (graduando.Sexoegresado == 'M')
-                            ddlGenero.SelectedIndex = 1;
-                        else
-                            ddlGenero.SelectedIndex = 2;
-
-                        if (graduando.Departamentoegresado == "")
-                            ddlDepartamento.SelectedIndex = -1;
-                        else
-                            ddlDepartamento.Text = graduando.Departamentoegresado;
-                    }
+                    Response.Redirect("Loginprueba.aspx");
+                    return;
                 }
-                catch (Exception)
+
+                if (IDEgresado == 0)
                 {
-                    ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Ocurrió un error\")</script>", false);
+                    Response.Redirect("Loginprueba.aspx");
+                    return;
                 }
+
+                if (!IsPostBack)
+                {
+
+                    ddlGenero.DataSource = listagenero();
+                    ddlGenero.DataBind();
+                    ddlGenero.Items.Insert(0, new ListItem("Seleccione el genero", ""));
+
+                    ddlDepartamento.DataSource = listadepartamento();
+                    ddlDepartamento.DataBind();
+                    ddlDepartamento.Items.Insert(0, new ListItem("Seleccione el departamento", ""));
+
+                    EgresadoBC objEgresadoBC = new EgresadoBC();
+                    EgresadoBE graduando = objEgresadoBC.obtenerEgresado(IDEgresado);
+
+                    txtnombrecompleto.Text = graduando.Nombrecompletoegresado;
+                    txtdni.Text = graduando.Dniegresado;
+                    txtfechanacimiento.Text = graduando.Fechanacimientoegresado.Day.ToString() + "/" + graduando.Fechanacimientoegresado.Month.ToString() + "/" + graduando.Fechanacimientoegresado.Year.ToString();
+                    txtCarrera.Text = graduando.Carreraegresado;
+                    txttelefonoprincipal.Text = graduando.Telefonoprinegresado;
+                    txttelefonoalternativo.Text = graduando.Telefonoaltegresado;
+                    txtdireccion.Text = graduando.Direccionegresado;
+                    txtdistrito.Text = graduando.Distritoegresado;
+                    txtcorreo.Text = graduando.Correoegresado;
+                    txtcorreoalternativo.Text = graduando.Correoaltegresado;
+                    txtperfillinkedin.Text = graduando.Perfillinkedinegresado;
+                    txtperfilfacebook.Text = graduando.Perfilfacebookegresado;
+
+                    if (graduando.Sexoegresado == 'M')
+                        ddlGenero.SelectedIndex = 1;
+                    else
+                        ddlGenero.SelectedIndex = 2;
+
+                    if (graduando.Departamentoegresado == "")
+                        ddlDepartamento.SelectedIndex = -1;
+                    else
+                        ddlDepartamento.Text = graduando.Departamentoegresado;
+                }
+            }
+            catch (Exception)
+            {
+                ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Ocurrió un error\")</script>", false);
+            }
         }
 
         public List<String> listagenero()
@@ -157,6 +158,11 @@ namespace SWEGR.UI
             graduando.Correoaltegresado = txtcorreoalternativo.Text;
             graduando.Perfillinkedinegresado = txtperfillinkedin.Text;
             graduando.Perfilfacebookegresado = txtperfilfacebook.Text;
+
+            byte[] imagenVacia = new byte[10];
+
+            if (graduando.Fotoegresado == null)
+                graduando.Fotoegresado = imagenVacia;
 
             if (objEgresadoBC.actualizarEgresado(graduando))
                 return true;
@@ -297,7 +303,8 @@ namespace SWEGR.UI
                 ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "dnivacio();", true);
                 txtdni.BorderColor = System.Drawing.Color.OrangeRed;
                 errorcito = true;
-            } else
+            }
+            else
                 txtdni.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
             if (txttelefonoprincipal.Text == "")
@@ -305,7 +312,8 @@ namespace SWEGR.UI
                 ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "telefonovacio();", true);
                 txttelefonoprincipal.BorderColor = System.Drawing.Color.OrangeRed;
                 errorcito = true;
-            } else
+            }
+            else
                 txttelefonoprincipal.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
             if (txtcorreo.Text == "")
@@ -313,7 +321,8 @@ namespace SWEGR.UI
                 ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "correovacio();", true);
                 txtcorreo.BorderColor = System.Drawing.Color.OrangeRed;
                 errorcito = true;
-            } else
+            }
+            else
                 txtcorreo.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
             if (txtperfillinkedin.Text == "")
@@ -321,7 +330,8 @@ namespace SWEGR.UI
                 ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "perfillinkedinvacio();", true);
                 txtperfillinkedin.BorderColor = System.Drawing.Color.OrangeRed;
                 errorcito = true;
-            } else
+            }
+            else
                 txtperfillinkedin.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
             if (errorcito)
@@ -337,7 +347,7 @@ namespace SWEGR.UI
             bool validaurllinkedin = false;
             bool validaurlfacebook = false;
             bool error = false;
-            
+
 
             ValidarCorreo objetovalidarcorreo = new ValidarCorreo();
             validacorreo = objetovalidarcorreo.IsValidEmail(txtcorreo.Text.Trim());
@@ -348,10 +358,10 @@ namespace SWEGR.UI
             ValidarURL objetovalidarfb = new ValidarURL();
             validaurlfacebook = objetovalidarfb.ValidateUrl(txtperfilfacebook.Text.Trim());
 
-           if (ddlDepartamento.SelectedIndex == 0)
+            if (ddlDepartamento.SelectedIndex == 0)
             {
                 ddlDepartamento.BorderColor = System.Drawing.Color.OrangeRed;
-                error = true;  
+                error = true;
             }
             else
                 ddlDepartamento.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
@@ -360,8 +370,8 @@ namespace SWEGR.UI
             {
 
                 txtdni.BorderColor = System.Drawing.Color.OrangeRed;
-                
-                error = true;  
+
+                error = true;
             }
             else
                 txtdni.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
@@ -370,7 +380,7 @@ namespace SWEGR.UI
             {
 
                 txttelefonoprincipal.BorderColor = System.Drawing.Color.OrangeRed;
-                
+
                 error = true;
             }
             else
@@ -380,66 +390,67 @@ namespace SWEGR.UI
             {
 
                 txttelefonoalternativo.BorderColor = System.Drawing.Color.OrangeRed;
-                
+
                 error = true;
             }
             else
-                txttelefonoalternativo.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4"); 
+                txttelefonoalternativo.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
             if (!validacorreo)
             {
-                
+
                 txtcorreo.BorderColor = System.Drawing.Color.OrangeRed;
-                
+
                 error = true;
             }
             else
-                txtcorreo.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4"); 
+                txtcorreo.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-         
-                if (!validaurllinkedin)
-                {
-                   
-                    txtperfillinkedin.BorderColor = System.Drawing.Color.OrangeRed;
-                   
-                    error = true;
-                }
-                else
-                    txtperfillinkedin.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4"); 
-           
+
+            if (!validaurllinkedin)
+            {
+
+                txtperfillinkedin.BorderColor = System.Drawing.Color.OrangeRed;
+
+                error = true;
+            }
+            else
+                txtperfillinkedin.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
+
             string correoalternativo = txtcorreoalternativo.Text;
 
             if (correoalternativo != null && correoalternativo != "")
             {
-                
+
 
                 validacorreoalterno = objetovalidarcorreo.IsValidEmail(txtcorreoalternativo.Text);
                 if (!validacorreoalterno)
                 {
-                   
+
                     txtcorreoalternativo.BorderColor = System.Drawing.Color.OrangeRed;
-                    
+
                     error = true;
                 }
                 else
-                    txtcorreoalternativo.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4"); 
-            }else
-                txtcorreoalternativo.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
-
-            if(txtperfilfacebook.Text.Length != 0)
-            {
-                
-
-            if (!validaurlfacebook)
-            {
-                
-                txtperfilfacebook.BorderColor = System.Drawing.Color.OrangeRed;
-               
-                error = true;
+                    txtcorreoalternativo.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
             }
             else
-                txtperfilfacebook.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
-         }
+                txtcorreoalternativo.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
+
+            if (txtperfilfacebook.Text.Length != 0)
+            {
+
+
+                if (!validaurlfacebook)
+                {
+
+                    txtperfilfacebook.BorderColor = System.Drawing.Color.OrangeRed;
+
+                    error = true;
+                }
+                else
+                    txtperfilfacebook.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
+            }
             else
                 txtperfilfacebook.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
@@ -456,22 +467,22 @@ namespace SWEGR.UI
             try
             {
                 if (validarFormulario())
-               {
-                   if (validarCampos())
-                   {
-                       if (actualizarEgresado())
-                       {
-                           ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "exito();", true);
-                           guardarHistorial();
+                {
+                    if (validarCampos())
+                    {
+                        if (actualizarEgresado())
+                        {
+                            ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "exito();", true);
+                            guardarHistorial();
 
-                       }
-                       else
-                           ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Ocurrió un error\")</script>", false);
-                   }
-                   else 
-                   {
-                       btnguardar.Focus();
-                   }
+                        }
+                        else
+                            ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Ocurrió un error\")</script>", false);
+                    }
+                    else
+                    {
+                        btnguardar.Focus();
+                    }
 
                 }
             }
@@ -480,5 +491,6 @@ namespace SWEGR.UI
                 ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Ocurrió un error\")</script>", false);
             }
         }
+
     }
 }

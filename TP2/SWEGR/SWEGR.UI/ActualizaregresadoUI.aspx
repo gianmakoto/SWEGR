@@ -532,184 +532,147 @@
             $("#ddlPaisTA20").attr("disabled", false);
         }
 
-        function deshabilitarTrayectoriaAcademica1() {
+        function deshabilitarTODOTryacetoriaAcademica() {
             $("#txtcentroEstudios").attr("disabled", true);
             $("#txtduracionEstudio").attr("disabled", true);
             $("#txttipoEstudio").attr("disabled", true);
             $("#txtnombreEstudio").attr("disabled", true);
             $("#txtdescripcionEstudio").attr("disabled", true);
             $("#ddlPaisTA").attr("disabled", true);
-        }
 
-        function deshabilitarTrayectoriaAcademica2() {
             $("#txtcentroEstudios2").attr("disabled", true);
             $("#txtduracionEstudio2").attr("disabled", true);
             $("#txttipoEstudio2").attr("disabled", true);
             $("#txtnombreEstudio2").attr("disabled", true);
             $("#txtdescripcionEstudio2").attr("disabled", true);
             $("#ddlPaisTA2").attr("disabled", true);
-        }
 
-        function deshabilitarTrayectoriaAcademica3() {
             $("#txtcentroEstudios3").attr("disabled", true);
             $("#txtduracionEstudio3").attr("disabled", true);
             $("#txttipoEstudio3").attr("disabled", true);
             $("#txtnombreEstudio3").attr("disabled", true);
             $("#txtdescripcionEstudio3").attr("disabled", true);
             $("#ddlPaisTA3").attr("disabled", true);
-        }
 
-        function deshabilitarTrayectoriaAcademica4() {
             $("#txtcentroEstudios4").attr("disabled", true);
             $("#txtduracionEstudio4").attr("disabled", true);
             $("#txttipoEstudio4").attr("disabled", true);
             $("#txtnombreEstudio4").attr("disabled", true);
             $("#txtdescripcionEstudio4").attr("disabled", true);
             $("#ddlPaisTA4").attr("disabled", true);
-        }
 
-        function deshabilitarTrayectoriaAcademica5() {
             $("#txtcentroEstudios5").attr("disabled", true);
             $("#txtduracionEstudio5").attr("disabled", true);
             $("#txttipoEstudio5").attr("disabled", true);
             $("#txtnombreEstudio5").attr("disabled", true);
             $("#txtdescripcionEstudio5").attr("disabled", true);
             $("#ddlPaisTA5").attr("disabled", true);
-        }
 
-        function deshabilitarTrayectoriaAcademica6() {
             $("#txtcentroEstudios6").attr("disabled", true);
             $("#txtduracionEstudio6").attr("disabled", true);
             $("#txttipoEstudio6").attr("disabled", true);
             $("#txtnombreEstudio6").attr("disabled", true);
             $("#txtdescripcionEstudio6").attr("disabled", true);
             $("#ddlPaisTA6").attr("disabled", true);
-        }
 
-        function deshabilitarTrayectoriaAcademica7() {
             $("#txtcentroEstudios7").attr("disabled", true);
             $("#txtduracionEstudio7").attr("disabled", true);
             $("#txttipoEstudio7").attr("disabled", true);
             $("#txtnombreEstudio7").attr("disabled", true);
             $("#txtdescripcionEstudio7").attr("disabled", true);
             $("#ddlPaisTA7").attr("disabled", true);
-        }
 
-        function deshabilitarTrayectoriaAcademica8() {
             $("#txtcentroEstudios8").attr("disabled", true);
             $("#txtduracionEstudio8").attr("disabled", true);
             $("#txttipoEstudio8").attr("disabled", true);
             $("#txtnombreEstudio8").attr("disabled", true);
             $("#txtdescripcionEstudio8").attr("disabled", true);
             $("#ddlPaisTA8").attr("disabled", true);
-        }
 
-        function deshabilitarTrayectoriaAcademica9() {
             $("#txtcentroEstudios9").attr("disabled", true);
             $("#txtduracionEstudio9").attr("disabled", true);
             $("#txttipoEstudio9").attr("disabled", true);
             $("#txtnombreEstudio9").attr("disabled", true);
             $("#txtdescripcionEstudio9").attr("disabled", true);
             $("#ddlPaisTA9").attr("disabled", true);
-        }
 
-        function deshabilitarTrayectoriaAcademica10() {
             $("#txtcentroEstudios10").attr("disabled", true);
             $("#txtduracionEstudio10").attr("disabled", true);
             $("#txttipoEstudio10").attr("disabled", true);
             $("#txtnombreEstudio10").attr("disabled", true);
             $("#txtdescripcionEstudio10").attr("disabled", true);
             $("#ddlPaisTA10").attr("disabled", true);
-        }
 
-        function deshabilitarTrayectoriaAcademica11() {
             $("#txtcentroEstudios11").attr("disabled", true);
             $("#txtduracionEstudio11").attr("disabled", true);
             $("#txttipoEstudio11").attr("disabled", true);
             $("#txtnombreEstudio11").attr("disabled", true);
             $("#txtdescripcionEstudio11").attr("disabled", true);
             $("#ddlPaisTA11").attr("disabled", true);
-        }
 
-        function deshabilitarTrayectoriaAcademica12() {
             $("#txtcentroEstudios12").attr("disabled", true);
             $("#txtduracionEstudio12").attr("disabled", true);
             $("#txttipoEstudio12").attr("disabled", true);
             $("#txtnombreEstudio12").attr("disabled", true);
             $("#txtdescripcionEstudio12").attr("disabled", true);
             $("#ddlPaisTA12").attr("disabled", true);
-        }
 
-        function deshabilitarTrayectoriaAcademica13() {
             $("#txtcentroEstudios13").attr("disabled", true);
             $("#txtduracionEstudio13").attr("disabled", true);
             $("#txttipoEstudio13").attr("disabled", true);
             $("#txtnombreEstudio13").attr("disabled", true);
             $("#txtdescripcionEstudio13").attr("disabled", true);
             $("#ddlPaisTA13").attr("disabled", true);
-        }
 
-        function deshabilitarTrayectoriaAcademica14() {
             $("#txtcentroEstudios14").attr("disabled", true);
             $("#txtduracionEstudio14").attr("disabled", true);
             $("#txttipoEstudio14").attr("disabled", true);
             $("#txtnombreEstudio14").attr("disabled", true);
             $("#txtdescripcionEstudio14").attr("disabled", true);
             $("#ddlPaisTA14").attr("disabled", true);
-        }
 
-        function deshabilitarTrayectoriaAcademica15() {
             $("#txtcentroEstudios15").attr("disabled", true);
             $("#txtduracionEstudio15").attr("disabled", true);
             $("#txttipoEstudio15").attr("disabled", true);
             $("#txtnombreEstudio15").attr("disabled", true);
             $("#txtdescripcionEstudio15").attr("disabled", true);
             $("#ddlPaisTA15").attr("disabled", true);
-        }
 
-        function deshabilitarTrayectoriaAcademica16() {
             $("#txtcentroEstudios16").attr("disabled", true);
             $("#txtduracionEstudio16").attr("disabled", true);
             $("#txttipoEstudio16").attr("disabled", true);
             $("#txtnombreEstudio16").attr("disabled", true);
             $("#txtdescripcionEstudio16").attr("disabled", true);
             $("#ddlPaisTA16").attr("disabled", true);
-        }
 
-        function deshabilitarTrayectoriaAcademica17() {
             $("#txtcentroEstudios17").attr("disabled", true);
             $("#txtduracionEstudio17").attr("disabled", true);
             $("#txttipoEstudio17").attr("disabled", true);
             $("#txtnombreEstudio17").attr("disabled", true);
             $("#txtdescripcionEstudio17").attr("disabled", true);
             $("#ddlPaisTA17").attr("disabled", true);
-        }
 
-        function deshabilitarTrayectoriaAcademica18() {
             $("#txtcentroEstudios18").attr("disabled", true);
             $("#txtduracionEstudio18").attr("disabled", true);
             $("#txttipoEstudio18").attr("disabled", true);
             $("#txtnombreEstudio18").attr("disabled", true);
             $("#txtdescripcionEstudio18").attr("disabled", true);
             $("#ddlPaisTA18").attr("disabled", true);
-        }
 
-        function deshabilitarTrayectoriaAcademica19() {
             $("#txtcentroEstudios19").attr("disabled", true);
             $("#txtduracionEstudio19").attr("disabled", true);
             $("#txttipoEstudio19").attr("disabled", true);
             $("#txtnombreEstudio19").attr("disabled", true);
             $("#txtdescripcionEstudio19").attr("disabled", true);
             $("#ddlPaisTA19").attr("disabled", true);
-        }
 
-        function deshabilitarTrayectoriaAcademica20() {
             $("#txtcentroEstudios20").attr("disabled", true);
             $("#txtduracionEstudio20").attr("disabled", true);
             $("#txttipoEstudio20").attr("disabled", true);
             $("#txtnombreEstudio20").attr("disabled", true);
             $("#txtdescripcionEstudio20").attr("disabled", true);
             $("#ddlPaisTA20").attr("disabled", true);
+
         }
 
         function mostrarBotonesTA() {
@@ -934,6 +897,8 @@
             $("#txttelefonojefeTrabajo").attr("disabled", false);
             $("#txtcorreojefeTrabajo").attr("disabled", false);
             $("#ddlPaisTL").attr("disabled", false);
+            $("#cbotrabajoActual").attr("disabled", false);
+
         }
 
         function habilitarTrayectoriaLaboral2() {
@@ -946,6 +911,7 @@
             $("#txttelefonojefeTrabajo2").attr("disabled", false);
             $("#txtcorreojefeTrabajo2").attr("disabled", false);
             $("#ddlPaisTL2").attr("disabled", false);
+            $("#cbotrabajoActual2").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral3() {
@@ -958,6 +924,7 @@
             $("#txttelefonojefeTrabajo3").attr("disabled", false);
             $("#txtcorreojefeTrabajo3").attr("disabled", false);
             $("#ddlPaisTL3").attr("disabled", false);
+            $("#cbotrabajoActual3").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral4() {
@@ -970,6 +937,7 @@
             $("#txttelefonojefeTrabajo4").attr("disabled", false);
             $("#txtcorreojefeTrabajo4").attr("disabled", false);
             $("#ddlPaisTL4").attr("disabled", false);
+            $("#cbotrabajoActual4").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral5() {
@@ -982,6 +950,7 @@
             $("#txttelefonojefeTrabajo5").attr("disabled", false);
             $("#txtcorreojefeTrabajo5").attr("disabled", false);
             $("#ddlPaisTL5").attr("disabled", false);
+            $("#cbotrabajoActual5").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral6() {
@@ -994,6 +963,7 @@
             $("#txttelefonojefeTrabajo6").attr("disabled", false);
             $("#txtcorreojefeTrabajo6").attr("disabled", false);
             $("#ddlPaisTL6").attr("disabled", false);
+            $("#cbotrabajoActual6").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral7() {
@@ -1006,6 +976,7 @@
             $("#txttelefonojefeTrabajo7").attr("disabled", false);
             $("#txtcorreojefeTrabajo7").attr("disabled", false);
             $("#ddlPaisTL7").attr("disabled", false);
+            $("#cbotrabajoActual7").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral8() {
@@ -1018,6 +989,7 @@
             $("#txttelefonojefeTrabajo8").attr("disabled", false);
             $("#txtcorreojefeTrabajo8").attr("disabled", false);
             $("#ddlPaisTL8").attr("disabled", false);
+            $("#cbotrabajoActual8").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral9() {
@@ -1030,6 +1002,7 @@
             $("#txttelefonojefeTrabajo9").attr("disabled", false);
             $("#txtcorreojefeTrabajo9").attr("disabled", false);
             $("#ddlPaisTL9").attr("disabled", false);
+            $("#cbotrabajoActual9").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral10() {
@@ -1042,6 +1015,7 @@
             $("#txttelefonojefeTrabajo10").attr("disabled", false);
             $("#txtcorreojefeTrabajo10").attr("disabled", false);
             $("#ddlPaisTL10").attr("disabled", false);
+            $("#cbotrabajoActual10").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral11() {
@@ -1054,6 +1028,7 @@
             $("#txttelefonojefeTrabajo11").attr("disabled", false);
             $("#txtcorreojefeTrabajo11").attr("disabled", false);
             $("#ddlPaisTL11").attr("disabled", false);
+            $("#cbotrabajoActual11").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral12() {
@@ -1066,6 +1041,7 @@
             $("#txttelefonojefeTrabajo12").attr("disabled", false);
             $("#txtcorreojefeTrabajo12").attr("disabled", false);
             $("#ddlPaisTL12").attr("disabled", false);
+            $("#cbotrabajoActual12").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral13() {
@@ -1078,6 +1054,7 @@
             $("#txttelefonojefeTrabajo13").attr("disabled", false);
             $("#txtcorreojefeTrabajo13").attr("disabled", false);
             $("#ddlPaisTL13").attr("disabled", false);
+            $("#cbotrabajoActual13").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral14() {
@@ -1090,6 +1067,7 @@
             $("#txttelefonojefeTrabajo14").attr("disabled", false);
             $("#txtcorreojefeTrabajo14").attr("disabled", false);
             $("#ddlPaisTL14").attr("disabled", false);
+            $("#cbotrabajoActual14").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral15() {
@@ -1102,6 +1080,7 @@
             $("#txttelefonojefeTrabajo15").attr("disabled", false);
             $("#txtcorreojefeTrabajo15").attr("disabled", false);
             $("#ddlPaisTL15").attr("disabled", false);
+            $("#cbotrabajoActual15").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral16() {
@@ -1114,6 +1093,7 @@
             $("#txttelefonojefeTrabajo16").attr("disabled", false);
             $("#txtcorreojefeTrabajo16").attr("disabled", false);
             $("#ddlPaisTL16").attr("disabled", false);
+            $("#cbotrabajoActual16").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral17() {
@@ -1126,6 +1106,7 @@
             $("#txttelefonojefeTrabajo17").attr("disabled", false);
             $("#txtcorreojefeTrabajo17").attr("disabled", false);
             $("#ddlPaisTL17").attr("disabled", false);
+            $("#cbotrabajoActual17").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral18() {
@@ -1138,6 +1119,7 @@
             $("#txttelefonojefeTrabajo18").attr("disabled", false);
             $("#txtcorreojefeTrabajo18").attr("disabled", false);
             $("#ddlPaisTL18").attr("disabled", false);
+            $("#cbotrabajoActual18").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral19() {
@@ -1150,6 +1132,7 @@
             $("#txttelefonojefeTrabajo19").attr("disabled", false);
             $("#txtcorreojefeTrabajo19").attr("disabled", false);
             $("#ddlPaisTL19").attr("disabled", false);
+            $("#cbotrabajoActual19").attr("disabled", false);
         }
 
         function habilitarTrayectoriaLaboral20() {
@@ -1162,9 +1145,10 @@
             $("#txttelefonojefeTrabajo20").attr("disabled", false);
             $("#txtcorreojefeTrabajo20").attr("disabled", false);
             $("#ddlPaisTL120").attr("disabled", false);
+            $("#cbotrabajoActual20").attr("disabled", false);
         }
 
-        function deshabilitarTrayectoriaLaboral1() {
+        function deshabilitarTODOTrayectoriaLaboral() {
             $("#txtnombreEmpresa").attr("disabled", true);
             $("#txtcargoTrabajo").attr("disabled", true);
             $("#txtduracionTrabajo").attr("disabled", true);
@@ -1174,9 +1158,8 @@
             $("#txttelefonojefeTrabajo").attr("disabled", true);
             $("#txtcorreojefeTrabajo").attr("disabled", true);
             $("#ddlPaisTL").attr("disabled", true);
-        }
+            $("#cbotrabajoActual").attr("disabled", true);
 
-        function deshabilitarTrayectoriaLaboral2() {
             $("#txtnombreEmpresa2").attr("disabled", true);
             $("#txtcargoTrabajo2").attr("disabled", true);
             $("#txtduracionTrabajo2").attr("disabled", true);
@@ -1186,9 +1169,8 @@
             $("#txttelefonojefeTrabajo2").attr("disabled", true);
             $("#txtcorreojefeTrabajo2").attr("disabled", true);
             $("#ddlPaisTL2").attr("disabled", true);
-        }
+            $("#cbotrabajoActual2").attr("disabled", true);
 
-        function deshabilitarTrayectoriaLaboral3() {
             $("#txtnombreEmpresa3").attr("disabled", true);
             $("#txtcargoTrabajo3").attr("disabled", true);
             $("#txtduracionTrabajo3").attr("disabled", true);
@@ -1198,9 +1180,8 @@
             $("#txttelefonojefeTrabajo3").attr("disabled", true);
             $("#txtcorreojefeTrabajo3").attr("disabled", true);
             $("#ddlPaisTL3").attr("disabled", true);
-        }
+            $("#cbotrabajoActual3").attr("disabled", true);
 
-        function deshabilitarTrayectoriaLaboral4() {
             $("#txtnombreEmpresa4").attr("disabled", true);
             $("#txtcargoTrabajo4").attr("disabled", true);
             $("#txtduracionTrabajo4").attr("disabled", true);
@@ -1210,9 +1191,8 @@
             $("#txttelefonojefeTrabajo4").attr("disabled", true);
             $("#txtcorreojefeTrabajo4").attr("disabled", true);
             $("#ddlPaisTL4").attr("disabled", true);
-        }
+            $("#cbotrabajoActual4").attr("disabled", true);
 
-        function deshabilitarTrayectoriaLaboral5() {
             $("#txtnombreEmpresa5").attr("disabled", true);
             $("#txtcargoTrabajo5").attr("disabled", true);
             $("#txtduracionTrabajo5").attr("disabled", true);
@@ -1222,9 +1202,8 @@
             $("#txttelefonojefeTrabajo5").attr("disabled", true);
             $("#txtcorreojefeTrabajo5").attr("disabled", true);
             $("#ddlPaisTL5").attr("disabled", true);
-        }
+            $("#cbotrabajoActual5").attr("disabled", true);
 
-        function deshabilitarTrayectoriaLaboral6() {
             $("#txtnombreEmpresa6").attr("disabled", true);
             $("#txtcargoTrabajo6").attr("disabled", true);
             $("#txtduracionTrabajo6").attr("disabled", true);
@@ -1234,9 +1213,8 @@
             $("#txttelefonojefeTrabajo6").attr("disabled", true);
             $("#txtcorreojefeTrabajo6").attr("disabled", true);
             $("#ddlPaisTL6").attr("disabled", true);
-        }
+            $("#cbotrabajoActual6").attr("disabled", true);
 
-        function deshabilitarTrayectoriaLaboral7() {
             $("#txtnombreEmpresa7").attr("disabled", true);
             $("#txtcargoTrabajo7").attr("disabled", true);
             $("#txtduracionTrabajo7").attr("disabled", true);
@@ -1246,9 +1224,8 @@
             $("#txttelefonojefeTrabajo7").attr("disabled", true);
             $("#txtcorreojefeTrabajo7").attr("disabled", true);
             $("#ddlPaisTL7").attr("disabled", true);
-        }
+            $("#cbotrabajoActual7").attr("disabled", true);
 
-        function deshabilitarTrayectoriaLaboral8() {
             $("#txtnombreEmpresa8").attr("disabled", true);
             $("#txtcargoTrabajo8").attr("disabled", true);
             $("#txtduracionTrabajo8").attr("disabled", true);
@@ -1258,9 +1235,8 @@
             $("#txttelefonojefeTrabajo8").attr("disabled", true);
             $("#txtcorreojefeTrabajo8").attr("disabled", true);
             $("#ddlPaisTL8").attr("disabled", true);
-        }
+            $("#cbotrabajoActual8").attr("disabled", true);
 
-        function deshabilitarTrayectoriaLaboral9() {
             $("#txtnombreEmpresa9").attr("disabled", true);
             $("#txtcargoTrabajo9").attr("disabled", true);
             $("#txtduracionTrabajo9").attr("disabled", true);
@@ -1270,9 +1246,8 @@
             $("#txttelefonojefeTrabajo9").attr("disabled", true);
             $("#txtcorreojefeTrabajo9").attr("disabled", true);
             $("#ddlPaisTL9").attr("disabled", true);
-        }
+            $("#cbotrabajoActual9").attr("disabled", true);
 
-        function deshabilitarTrayectoriaLaboral10() {
             $("#txtnombreEmpresa10").attr("disabled", true);
             $("#txtcargoTrabajo10").attr("disabled", true);
             $("#txtduracionTrabajo10").attr("disabled", true);
@@ -1282,9 +1257,8 @@
             $("#txttelefonojefeTrabajo10").attr("disabled", true);
             $("#txtcorreojefeTrabajo10").attr("disabled", true);
             $("#ddlPaisTL10").attr("disabled", true);
-        }
+            $("#cbotrabajoActual10").attr("disabled", true);
 
-        function deshabilitarTrayectoriaLaboral11() {
             $("#txtnombreEmpresa11").attr("disabled", true);
             $("#txtcargoTrabajo11").attr("disabled", true);
             $("#txtduracionTrabajo11").attr("disabled", true);
@@ -1294,9 +1268,8 @@
             $("#txttelefonojefeTrabajo11").attr("disabled", true);
             $("#txtcorreojefeTrabajo11").attr("disabled", true);
             $("#ddlPaisTL11").attr("disabled", true);
-        }
+            $("#cbotrabajoActual11").attr("disabled", true);
 
-        function deshabilitarTrayectoriaLaboral12() {
             $("#txtnombreEmpresa12").attr("disabled", true);
             $("#txtcargoTrabajo12").attr("disabled", true);
             $("#txtduracionTrabajo12").attr("disabled", true);
@@ -1306,9 +1279,8 @@
             $("#txttelefonojefeTrabajo12").attr("disabled", true);
             $("#txtcorreojefeTrabajo12").attr("disabled", true);
             $("#ddlPaisTL12").attr("disabled", true);
-        }
+            $("#cbotrabajoActual12").attr("disabled", true);
 
-        function deshabilitarTrayectoriaLaboral13() {
             $("#txtnombreEmpresa13").attr("disabled", true);
             $("#txtcargoTrabajo13").attr("disabled", true);
             $("#txtduracionTrabajo13").attr("disabled", true);
@@ -1318,9 +1290,8 @@
             $("#txttelefonojefeTrabajo13").attr("disabled", true);
             $("#txtcorreojefeTrabajo13").attr("disabled", true);
             $("#ddlPaisTL13").attr("disabled", true);
-        }
+            $("#cbotrabajoActual13").attr("disabled", true);
 
-        function deshabilitarTrayectoriaLaboral14() {
             $("#txtnombreEmpresa14").attr("disabled", true);
             $("#txtcargoTrabajo14").attr("disabled", true);
             $("#txtduracionTrabajo14").attr("disabled", true);
@@ -1330,9 +1301,8 @@
             $("#txttelefonojefeTrabajo14").attr("disabled", true);
             $("#txtcorreojefeTrabajo14").attr("disabled", true);
             $("#ddlPaisTL14").attr("disabled", true);
-        }
+            $("#cbotrabajoActual14").attr("disabled", true);
 
-        function deshabilitarTrayectoriaLaboral15() {
             $("#txtnombreEmpresa15").attr("disabled", true);
             $("#txtcargoTrabajo15").attr("disabled", true);
             $("#txtduracionTrabajo15").attr("disabled", true);
@@ -1342,9 +1312,8 @@
             $("#txttelefonojefeTrabajo15").attr("disabled", true);
             $("#txtcorreojefeTrabajo15").attr("disabled", true);
             $("#ddlPaisTL15").attr("disabled", true);
-        }
+            $("#cbotrabajoActual15").attr("disabled", true);
 
-        function deshabilitarTrayectoriaLaboral16() {
             $("#txtnombreEmpresa16").attr("disabled", true);
             $("#txtcargoTrabajo16").attr("disabled", true);
             $("#txtduracionTrabajo16").attr("disabled", true);
@@ -1354,9 +1323,8 @@
             $("#txttelefonojefeTrabajo16").attr("disabled", true);
             $("#txtcorreojefeTrabajo16").attr("disabled", true);
             $("#ddlPaisTL16").attr("disabled", true);
-        }
+            $("#cbotrabajoActual16").attr("disabled", true);
 
-        function deshabilitarTrayectoriaLaboral17() {
             $("#txtnombreEmpresa17").attr("disabled", true);
             $("#txtcargoTrabajo17").attr("disabled", true);
             $("#txtduracionTrabajo17").attr("disabled", true);
@@ -1366,9 +1334,8 @@
             $("#txttelefonojefeTrabajo17").attr("disabled", true);
             $("#txtcorreojefeTrabajo17").attr("disabled", true);
             $("#ddlPaisTL17").attr("disabled", true);
-        }
+            $("#cbotrabajoActual17").attr("disabled", true);
 
-        function deshabilitarTrayectoriaLaboral18() {
             $("#txtnombreEmpresa18").attr("disabled", true);
             $("#txtcargoTrabajo18").attr("disabled", true);
             $("#txtduracionTrabajo18").attr("disabled", true);
@@ -1378,9 +1345,8 @@
             $("#txttelefonojefeTrabajo18").attr("disabled", true);
             $("#txtcorreojefeTrabajo18").attr("disabled", true);
             $("#ddlPaisTL18").attr("disabled", true);
-        }
+            $("#cbotrabajoActual18").attr("disabled", true);
 
-        function deshabilitarTrayectoriaLaboral19() {
             $("#txtnombreEmpresa19").attr("disabled", true);
             $("#txtcargoTrabajo19").attr("disabled", true);
             $("#txtduracionTrabajo19").attr("disabled", true);
@@ -1390,9 +1356,8 @@
             $("#txttelefonojefeTrabajo19").attr("disabled", true);
             $("#txtcorreojefeTrabajo19").attr("disabled", true);
             $("#ddlPaisTL19").attr("disabled", true);
-        }
+            $("#cbotrabajoActual19").attr("disabled", true);
 
-        function deshabilitarTrayectoriaLaboral20() {
             $("#txtnombreEmpresa20").attr("disabled", true);
             $("#txtcargoTrabajo20").attr("disabled", true);
             $("#txtduracionTrabajo20").attr("disabled", true);
@@ -1402,6 +1367,7 @@
             $("#txttelefonojefeTrabajo20").attr("disabled", true);
             $("#txtcorreojefeTrabajo20").attr("disabled", true);
             $("#ddlPaisTL20").attr("disabled", true);
+            $("#cbotrabajoActual20").attr("disabled", true);
         }
 
         function mostrarBotonesTL() {
