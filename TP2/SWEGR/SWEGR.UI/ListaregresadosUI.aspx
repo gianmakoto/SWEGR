@@ -256,8 +256,8 @@
                                 <div class="col-sm-9">
                                     <asp:GridView ID="grdEgresados" Width="930px"  align = "center" runat="server"  CellPadding="8" CellSpacing="3" AutoGenerateColumns="false" DataKeyNames="EgresadoID" OnRowCommand="grdEgresados_RowCommand">
                                         <Columns>
-                                            <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" DataField="EgresadoID" HeaderText="EgresadoID" Visible="False" />
-                                            <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Código" DataField="Codigo" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                            <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller"  DataField="EgresadoID" HeaderText="EgresadoID" Visible="False" />
+                                            <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller"  HeaderText="Código" DataField="Codigo" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
                                             <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Nombre" DataField="Nombre" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
                                             <asp:BoundField ItemStyle-Width="300" ItemStyle-Font-Size="Smaller" HeaderText="Carrera" DataField="Carrera" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
                                             <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Ciclo egreso" DataField="Cicloegreso" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
@@ -287,6 +287,10 @@
                                             </asp:TemplateField>
 
                                         </Columns>
+
+                                        
+                                <HeaderStyle BackColor="#626262"  ForeColor="White" />  
+
                                     </asp:GridView>
                                 </div>
                             </div>
