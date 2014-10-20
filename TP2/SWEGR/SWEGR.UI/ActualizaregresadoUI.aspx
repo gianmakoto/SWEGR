@@ -2066,8 +2066,10 @@
                                     <asp:UpdatePanel ID="upbtncancelar" runat="server" UpdateMode="Conditional">
                                         <ContentTemplate> 
                                             <div class="col-sm-10">
+                                                
                                                 <asp:Button ID="btncancelar" runat="server" Text="Cancelar" CssClass="btn btn-danger pull-right"  type="submit" OnClick="btncancelar_Click" />
-                                                <asp:Button ID="btnguardar" runat="server" Text="Guardar" CssClass="btn btn-danger pull-left"  type="submit" OnClick="btnguardar_Click" />
+                                                <label class="pull-right">&nbsp&nbsp&nbsp</label>
+                                                <asp:Button ID="btnguardar" runat="server" Text="Guardar" CssClass="btn btn-danger pull-right"  type="submit" OnClick="btnguardar_Click" />
                                             </div>
                                         </ContentTemplate>
                                     </asp:UpdatePanel>
@@ -3271,6 +3273,8 @@
                                         <ContentTemplate>
                                             <div class="col-sm-10">
                                                 <asp:Button ID="btncancelarRA" runat="server" Text="Cancelar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btncancelarRA_Click" />
+                                                <label class="pull-right">&nbsp&nbsp&nbsp</label>
+
                                                 <asp:Button ID="btnguardarRA" runat="server" Text="Guardar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnguardarRA_Click" />
                                             </div>
                                         </ContentTemplate>
@@ -5153,6 +5157,8 @@
                                         <ContentTemplate>
                                             <div class="col-sm-10">
                                                 <asp:Button ID="btncancelarRL" runat="server" Text="Cancelar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btncancelarRL_Click" />
+                                                <label class="pull-right">&nbsp&nbsp&nbsp</label>
+
                                                 <asp:Button ID="btnguardarRL" runat="server" Text="Guardar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnguardarRL_Click" />
                                             </div>
                                         </ContentTemplate>

@@ -224,10 +224,12 @@
                 </div>
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav" style="align: center">
-                        <li><a href="Index.aspx">Inicio</a></li>
-
-                        <li class="active"><a href="VisualizaregresadoUI.aspx">Egresado</a></li>
-                        <%--<li><a href="ActualizargraduandoUI.aspx">Graduando</a></li>--%>
+                        <li><a href="InicioComite.aspx">Inicio</a></li>
+                        
+                          <li class><a href="ListaregresadosUI.aspx">Egresado</a></li>
+                        
+                        <li><a href="#">Graduando</a></li>
+                        <li><a href="#">Carga De Datos</a></li>
                         <!-- user login dropdown start-->
                         <li class="dropdown">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
@@ -240,7 +242,7 @@
                                 <%--<li><a href="#"><i class=" icon-suitcase"></i>Profile</a></li>--%>
                                 <%--<li><a href="#"><i class="icon-cog"></i>Settings</a></li>--%>
                                 <%--<li><a href="#"><i class="icon-bell-alt"></i>Notification</a></li>--%>
-                                <li><a href="login.aspx"><i class="icon-key"></i>Cerrar sesión</a></li>
+                                <li><a href="Login.aspx"><i class="icon-key"></i>Cerrar sesión</a></li>
                             </ul>
                         </li>
                         <!-- user login dropdown end -->

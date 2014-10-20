@@ -146,7 +146,7 @@
                     <ul class="nav navbar-nav" style=" align: center">
                         <li><a href="InicioComite.aspx">Inicio</a></li>
                         
-                          <li class="active"><a href="ListaregresadosUI.aspx">Egresado</a></li>
+                          <li class><a href="ListaregresadosUI.aspx">Egresado</a></li>
                         
                         <li><a href="#">Graduando</a></li>
                         <li><a href="#">Carga De Datos</a></li>
