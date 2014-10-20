@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="AptitudBC.cs" />
     <Compile Include="EgresadoBC.cs" />
+    <Compile Include="FotoBC.cs" />
     <Compile Include="InteresBC.cs" />
     <Compile Include="ObtenerDataBC.cs" />
     <Compile Include="PaisBC.cs" />

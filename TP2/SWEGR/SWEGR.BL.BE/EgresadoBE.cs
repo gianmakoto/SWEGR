@@ -25,7 +25,7 @@ namespace SWEGR.BL.BE
         String perfilfacebookegresado;
         DateTime fechanacimientoegresado;
         Char tipoegresado;
-        Byte[] fotoegresado;
+        int idfotoegresado;
         int idpaisegresado;
         String contrasenaegresado;
         String contrasenadinamicaegresado;
@@ -138,10 +138,10 @@ namespace SWEGR.BL.BE
             set { tipoegresado = value; }
         }
 
-        public Byte[] Fotoegresado
+        public int Idfotoegresado
         {
-            get { return fotoegresado; }
-            set { fotoegresado = value; }
+            get { return idfotoegresado; }
+            set { idfotoegresado = value; }
         }
 
         public int Idpaisegresado

@@ -26,7 +26,7 @@ namespace SWEGR.UI
         string correoalternativo;
         string perfillinkedin;
         string perfilfacebook;
-        int agregarActivado = 1;
+        int agregarActivado;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -39,6 +39,13 @@ namespace SWEGR.UI
                 {
                     Response.Redirect("Login.aspx");
                     return;
+                }
+
+                if (TUsuario == 'D')
+                {
+                    txtdni.Enabled = true;
+                    ddlGenero.Enabled = true;
+                    txtfechanacimiento.Enabled = true;
                 }
 
                 if (IDEgresado == 0)
@@ -1555,15 +1562,6 @@ namespace SWEGR.UI
         {
             bool errorcito = false;
 
-            if (txtdni.Text == "")
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "dnivacio", "dnivacio();", true);
-                txtdni.BorderColor = System.Drawing.Color.OrangeRed;
-                errorcito = true;
-            }
-            else
-                txtdni.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
-
             if (txttelefonoprincipal.Text == "")
             {
                 ScriptManager.RegisterStartupScript(Page, GetType(), "telefonovacio", "telefonovacio();", true);
@@ -1623,14 +1621,6 @@ namespace SWEGR.UI
             else
                 ddlDepartamento.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-            if (txtdni.Text.Length != 8)
-            {
-                txtdni.BorderColor = System.Drawing.Color.OrangeRed;
-
-                error = true;
-            }
-            else
-                txtdni.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
             if (txttelefonoprincipal.Text.Length > 16 || txttelefonoprincipal.Text.Length < 8)
             {

@@ -283,7 +283,6 @@ namespace SWEGR.BL.BC
             {
                 throw;
             }
-
         }
 
         public String[] obtenerLinksEgresado(int idegresado)
@@ -318,5 +317,30 @@ namespace SWEGR.BL.BC
             }
         }
 
+        public bool insertarFotoxEgresado(int idegresado, int idfoto)
+        {
+            try
+            {
+                EgresadoDALC objetoegresadoDALC = new EgresadoDALC();
+                return objetoegresadoDALC.insertarFotoxEgresado(idegresado, idfoto);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public void eliminarFotoxEgresado(int idegresado, int idfoto)
+        {
+            try
+            {
+                EgresadoDALC objetoegresadoDALC = new EgresadoDALC();
+                objetoegresadoDALC.eliminarFotoxEgresado(idegresado, idfoto);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

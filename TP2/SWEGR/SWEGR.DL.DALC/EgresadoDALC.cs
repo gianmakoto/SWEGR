@@ -62,7 +62,7 @@ namespace SWEGR.DL.DALC
                     objetoEgresadoBE.Perfilfacebookegresado = dregresado.GetString(14);
                     objetoEgresadoBE.Fechanacimientoegresado = dregresado.GetDateTime(15);
                     objetoEgresadoBE.Tipoegresado = Convert.ToChar(dregresado.GetString(16));
-                    objetoEgresadoBE.Fotoegresado = null;
+                    objetoEgresadoBE.Idfotoegresado = dregresado.GetInt32(17);
                     objetoEgresadoBE.Contrasenaegresado = dregresado.GetString(18);
                     objetoEgresadoBE.Contrasenadinamicaegresado = dregresado.GetString(19);
                     objetoEgresadoBE.Cambiocontrasenaegresado = dregresado.GetBoolean(20);
@@ -122,7 +122,7 @@ namespace SWEGR.DL.DALC
                     objetoEgresadoBE.Perfilfacebookegresado = dregresado.GetString(14);
                     objetoEgresadoBE.Fechanacimientoegresado = dregresado.GetDateTime(15);
                     objetoEgresadoBE.Tipoegresado = Convert.ToChar(dregresado.GetString(16));
-                    objetoEgresadoBE.Fotoegresado = null;
+                    objetoEgresadoBE.Idfotoegresado = dregresado.GetInt32(17);
                     objetoEgresadoBE.Contrasenaegresado = dregresado.GetString(18);
                     objetoEgresadoBE.Contrasenadinamicaegresado = dregresado.GetString(19);
                     objetoEgresadoBE.Cambiocontrasenaegresado = dregresado.GetBoolean(20);
@@ -279,7 +279,7 @@ namespace SWEGR.DL.DALC
                     objetoEgresadoBE.Perfilfacebookegresado = dregresado.GetString(14);
                     objetoEgresadoBE.Fechanacimientoegresado = dregresado.GetDateTime(15);
                     objetoEgresadoBE.Tipoegresado = Convert.ToChar(dregresado.GetString(16));
-                    objetoEgresadoBE.Fotoegresado = null;
+                    objetoEgresadoBE.Idfotoegresado = dregresado.GetInt32(17);
                     objetoEgresadoBE.Contrasenaegresado = dregresado.GetString(18);
                     objetoEgresadoBE.Contrasenadinamicaegresado = dregresado.GetString(19);
                     objetoEgresadoBE.Cambiocontrasenaegresado = dregresado.GetBoolean(20);
@@ -348,7 +348,7 @@ namespace SWEGR.DL.DALC
                     objetoEgresadoBE.Perfilfacebookegresado = dregresado.GetString(14);
                     objetoEgresadoBE.Fechanacimientoegresado = dregresado.GetDateTime(15);
                     objetoEgresadoBE.Tipoegresado = Convert.ToChar(dregresado.GetString(16));
-                    objetoEgresadoBE.Fotoegresado = null;
+                    objetoEgresadoBE.Idfotoegresado = dregresado.GetInt32(17);
                     objetoEgresadoBE.Contrasenaegresado = dregresado.GetString(18);
                     objetoEgresadoBE.Contrasenadinamicaegresado = dregresado.GetString(19);
                     objetoEgresadoBE.Cambiocontrasenaegresado = dregresado.GetBoolean(20);
@@ -417,7 +417,7 @@ namespace SWEGR.DL.DALC
                     objetoEgresadoBE.Perfilfacebookegresado = dregresado.GetString(14);
                     objetoEgresadoBE.Fechanacimientoegresado = dregresado.GetDateTime(15);
                     objetoEgresadoBE.Tipoegresado = Convert.ToChar(dregresado.GetString(16));
-                    objetoEgresadoBE.Fotoegresado = null;
+                    objetoEgresadoBE.Idfotoegresado = dregresado.GetInt32(17);
                     objetoEgresadoBE.Contrasenaegresado = dregresado.GetString(18);
                     objetoEgresadoBE.Contrasenadinamicaegresado = dregresado.GetString(19);
                     objetoEgresadoBE.Cambiocontrasenaegresado = dregresado.GetBoolean(20);
@@ -494,7 +494,7 @@ namespace SWEGR.DL.DALC
                     objetoEgresadoBE.Perfilfacebookegresado = dregresado.GetString(14);
                     objetoEgresadoBE.Fechanacimientoegresado = dregresado.GetDateTime(15);
                     objetoEgresadoBE.Tipoegresado = Convert.ToChar(dregresado.GetString(16));
-                    objetoEgresadoBE.Fotoegresado = null;
+                    objetoEgresadoBE.Idfotoegresado = dregresado.GetInt32(17);
                     objetoEgresadoBE.Contrasenaegresado = dregresado.GetString(18);
                     objetoEgresadoBE.Contrasenadinamicaegresado = dregresado.GetString(19);
                     objetoEgresadoBE.Cambiocontrasenaegresado = dregresado.GetBoolean(20);
@@ -571,7 +571,7 @@ namespace SWEGR.DL.DALC
                     objetoEgresadoBE.Perfilfacebookegresado = dregresado.GetString(14);
                     objetoEgresadoBE.Fechanacimientoegresado = dregresado.GetDateTime(15);
                     objetoEgresadoBE.Tipoegresado = Convert.ToChar(dregresado.GetString(16));
-                    objetoEgresadoBE.Fotoegresado = null;
+                    objetoEgresadoBE.Idfotoegresado = dregresado.GetInt32(17);
                     objetoEgresadoBE.Contrasenaegresado = dregresado.GetString(18);
                     objetoEgresadoBE.Contrasenadinamicaegresado = dregresado.GetString(19);
                     objetoEgresadoBE.Cambiocontrasenaegresado = dregresado.GetBoolean(20);
@@ -656,7 +656,7 @@ namespace SWEGR.DL.DALC
                     objetoEgresadoBE.Perfilfacebookegresado = dregresado.GetString(14);
                     objetoEgresadoBE.Fechanacimientoegresado = dregresado.GetDateTime(15);
                     objetoEgresadoBE.Tipoegresado = Convert.ToChar(dregresado.GetString(16));
-                    objetoEgresadoBE.Fotoegresado = null;
+                    objetoEgresadoBE.Idfotoegresado = dregresado.GetInt32(17);
                     objetoEgresadoBE.Contrasenaegresado = dregresado.GetString(18);
                     objetoEgresadoBE.Contrasenadinamicaegresado = dregresado.GetString(19);
                     objetoEgresadoBE.Cambiocontrasenaegresado = dregresado.GetBoolean(20);
@@ -733,7 +733,7 @@ namespace SWEGR.DL.DALC
                     objetoEgresadoBE.Perfilfacebookegresado = dregresado.GetString(14);
                     objetoEgresadoBE.Fechanacimientoegresado = dregresado.GetDateTime(15);
                     objetoEgresadoBE.Tipoegresado = Convert.ToChar(dregresado.GetString(16));
-                    objetoEgresadoBE.Fotoegresado = null;
+                    objetoEgresadoBE.Idfotoegresado = dregresado.GetInt32(17);
                     objetoEgresadoBE.Contrasenaegresado = dregresado.GetString(18);
                     objetoEgresadoBE.Contrasenadinamicaegresado = dregresado.GetString(19);
                     objetoEgresadoBE.Cambiocontrasenaegresado = dregresado.GetBoolean(20);
@@ -800,7 +800,7 @@ namespace SWEGR.DL.DALC
                     objetoEgresadoBE.Perfilfacebookegresado = dregresado.GetString(14);
                     objetoEgresadoBE.Fechanacimientoegresado = dregresado.GetDateTime(15);
                     objetoEgresadoBE.Tipoegresado = Convert.ToChar(dregresado.GetString(16));
-                    objetoEgresadoBE.Fotoegresado = null;
+                    objetoEgresadoBE.Idfotoegresado = dregresado.GetInt32(17);
                     objetoEgresadoBE.Contrasenaegresado = dregresado.GetString(18);
                     objetoEgresadoBE.Contrasenadinamicaegresado = dregresado.GetString(19);
                     objetoEgresadoBE.Cambiocontrasenaegresado = dregresado.GetBoolean(20);
@@ -841,7 +841,7 @@ namespace SWEGR.DL.DALC
             SqlParameter prmperfilfacebookegresado;
             SqlParameter prmfechanacimientoegresado;
             SqlParameter prmtipoegresado;
-            SqlParameter prmfotoegresado;
+            SqlParameter prmidfotoegresado;
             SqlParameter prmcontrasenaegresado;
             SqlParameter prmcontrasenadinamicaegresado;
             SqlParameter prmcambiocontrasenaegresado;
@@ -954,10 +954,10 @@ namespace SWEGR.DL.DALC
                 prmtipoegresado.Size = 1;
                 prmtipoegresado.Value = objetoEgresadoBE.Tipoegresado;
 
-                prmfotoegresado = new SqlParameter();
-                prmfotoegresado.ParameterName = "@fotoegresado";
-                prmfotoegresado.SqlDbType = SqlDbType.Image;
-                prmfotoegresado.Value = objetoEgresadoBE.Fotoegresado;
+                prmidfotoegresado = new SqlParameter();
+                prmidfotoegresado.ParameterName = "@idfotoegresado";
+                prmidfotoegresado.SqlDbType = SqlDbType.Int;
+                prmidfotoegresado.Value = objetoEgresadoBE.Idfotoegresado;
 
                 prmcontrasenaegresado = new SqlParameter();
                 prmcontrasenaegresado.ParameterName = "@contrasenaegresado";
@@ -1011,7 +1011,7 @@ namespace SWEGR.DL.DALC
                 cmdactualizaregresado.Parameters.Add(prmperfilfacebookegresado);
                 cmdactualizaregresado.Parameters.Add(prmfechanacimientoegresado);
                 cmdactualizaregresado.Parameters.Add(prmtipoegresado);
-                cmdactualizaregresado.Parameters.Add(prmfotoegresado);
+                cmdactualizaregresado.Parameters.Add(prmidfotoegresado);
                 cmdactualizaregresado.Parameters.Add(prmcontrasenaegresado);
                 cmdactualizaregresado.Parameters.Add(prmcontrasenadinamicaegresado);
                 cmdactualizaregresado.Parameters.Add(prmcambiocontrasenaegresado);
@@ -1475,7 +1475,89 @@ namespace SWEGR.DL.DALC
 
         }
 
-        
+        public bool insertarFotoxEgresado(int idegresado, int idfoto)
+        {
+            String sqlinsertarfotoxegresado;
+
+            SqlConnection conn;
+            SqlCommand cmdinsertarfotoxegresado;
+            SqlParameter prmidegresado;
+            SqlParameter prmidfoto;
+
+            try
+            {
+                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CSSeguimientoEgresados"].ToString());
+                sqlinsertarfotoxegresado = "SWEGR_insertarFotoxEgresado";
+                cmdinsertarfotoxegresado = new SqlCommand(sqlinsertarfotoxegresado, conn);
+                cmdinsertarfotoxegresado.CommandType = CommandType.StoredProcedure;
+
+                prmidegresado = new SqlParameter();
+                prmidegresado.ParameterName = "@idegresado";
+                prmidegresado.SqlDbType = SqlDbType.Int;
+                prmidegresado.Value = idegresado;
+
+                prmidfoto = new SqlParameter();
+                prmidfoto.ParameterName = "@idfoto";
+                prmidfoto.SqlDbType = SqlDbType.Int;
+                prmidfoto.Value = idfoto;
+
+                cmdinsertarfotoxegresado.Parameters.Add(prmidegresado);
+                cmdinsertarfotoxegresado.Parameters.Add(prmidfoto);
+
+                cmdinsertarfotoxegresado.Connection.Open();
+                cmdinsertarfotoxegresado.ExecuteNonQuery();
+
+                cmdinsertarfotoxegresado.Connection.Close();
+
+                return true;
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public void eliminarFotoxEgresado(int idegresado, int idfoto)
+        {
+            String sqleliminarfotoxegresado;
+
+            SqlConnection conn;
+            SqlCommand cmdeliminarfotoxegresado;
+            SqlParameter prmidegresado;
+            SqlParameter prmidfoto;
+
+            try
+            {
+                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CSSeguimientoEgresados"].ToString());
+                sqleliminarfotoxegresado = "SWEGR_insertarFotoxEgresado";
+                cmdeliminarfotoxegresado = new SqlCommand(sqleliminarfotoxegresado, conn);
+                cmdeliminarfotoxegresado.CommandType = CommandType.StoredProcedure;
+
+                prmidegresado = new SqlParameter();
+                prmidegresado.ParameterName = "@idegresado";
+                prmidegresado.SqlDbType = SqlDbType.Int;
+                prmidegresado.Value = idegresado;
+
+                prmidfoto = new SqlParameter();
+                prmidfoto.ParameterName = "@idfoto";
+                prmidfoto.SqlDbType = SqlDbType.Int;
+                prmidfoto.Value = idfoto;
+
+                cmdeliminarfotoxegresado.Parameters.Add(prmidegresado);
+                cmdeliminarfotoxegresado.Parameters.Add(prmidfoto);
+
+                cmdeliminarfotoxegresado.Connection.Open();
+                cmdeliminarfotoxegresado.ExecuteNonQuery();
+
+                cmdeliminarfotoxegresado.Connection.Close();
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
 
     }
 }

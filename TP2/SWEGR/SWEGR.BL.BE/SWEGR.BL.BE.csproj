@@ -44,6 +44,7 @@
     <Compile Include="EgresadoBE.cs" />
     <Compile Include="EgresadoDesvinculadoBE.cs" />
     <Compile Include="Egresados.cs" />
+    <Compile Include="FotoBE.cs" />
     <Compile Include="HistorialDatosEgresadoBE.cs" />
     <Compile Include="InteresBE.cs" />
     <Compile Include="PaisBE.cs" />

@@ -147,7 +147,7 @@ namespace SWEGR.DL.DALC
             String sqleliminaraptitud;
             SqlConnection conn;
             SqlCommand cmdeliminaraptitud;
-            SqlParameter prmidinteres;
+            SqlParameter prmidaptitud;
 
             try
             {
@@ -156,12 +156,12 @@ namespace SWEGR.DL.DALC
                 cmdeliminaraptitud = new SqlCommand(sqleliminaraptitud, conn);
                 cmdeliminaraptitud.CommandType = CommandType.StoredProcedure;
 
-                prmidinteres = new SqlParameter();
-                prmidinteres.ParameterName = "@idaptitud";
-                prmidinteres.SqlDbType = SqlDbType.Int;
-                prmidinteres.Value = idaptitud;
+                prmidaptitud = new SqlParameter();
+                prmidaptitud.ParameterName = "@idaptitud";
+                prmidaptitud.SqlDbType = SqlDbType.Int;
+                prmidaptitud.Value = idaptitud;
 
-                cmdeliminaraptitud.Parameters.Add(prmidinteres);
+                cmdeliminaraptitud.Parameters.Add(prmidaptitud);
                 cmdeliminaraptitud.Connection.Open();
                 cmdeliminaraptitud.ExecuteNonQuery();
                 cmdeliminaraptitud.Connection.Close();

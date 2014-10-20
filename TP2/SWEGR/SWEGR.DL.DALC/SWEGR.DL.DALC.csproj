@@ -44,6 +44,7 @@
     <Compile Include="Conexion.cs" />
     <Compile Include="EgresadoDALC.cs" />
     <Compile Include="EgresadoDesvinculadoDALC.cs" />
+    <Compile Include="FotoDALC.cs" />
     <Compile Include="HistorialDatosEgresadoDALC.cs" />
     <Compile Include="InteresDALC.cs" />
     <Compile Include="PaisDALC.cs" />

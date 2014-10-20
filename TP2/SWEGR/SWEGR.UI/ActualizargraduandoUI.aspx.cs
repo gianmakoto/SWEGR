@@ -158,11 +158,7 @@ namespace SWEGR.UI
             graduando.Correoaltegresado = txtcorreoalternativo.Text;
             graduando.Perfillinkedinegresado = txtperfillinkedin.Text;
             graduando.Perfilfacebookegresado = txtperfilfacebook.Text;
-
-            byte[] imagenVacia = new byte[10];
-
-            if (graduando.Fotoegresado == null)
-                graduando.Fotoegresado = imagenVacia;
+            //graduando.Idfotoegresado = 1;
 
             if (objEgresadoBC.actualizarEgresado(graduando))
                 return true;
@@ -298,15 +294,6 @@ namespace SWEGR.UI
         {
             bool errorcito = false;
 
-            if (txtdni.Text == "")
-            {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "dnivacio();", true);
-                txtdni.BorderColor = System.Drawing.Color.OrangeRed;
-                errorcito = true;
-            }
-            else
-                txtdni.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
-
             if (txttelefonoprincipal.Text == "")
             {
                 ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "telefonovacio();", true);
@@ -366,16 +353,6 @@ namespace SWEGR.UI
             else
                 ddlDepartamento.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
 
-            if (txtdni.Text.Length != 8)
-            {
-
-                txtdni.BorderColor = System.Drawing.Color.OrangeRed;
-
-                error = true;
-            }
-            else
-                txtdni.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
-
             if (txttelefonoprincipal.Text.Length != 9)
             {
 
@@ -421,12 +398,9 @@ namespace SWEGR.UI
 
             if (correoalternativo != null && correoalternativo != "")
             {
-
-
                 validacorreoalterno = objetovalidarcorreo.IsValidEmail(txtcorreoalternativo.Text);
                 if (!validacorreoalterno)
                 {
-
                     txtcorreoalternativo.BorderColor = System.Drawing.Color.OrangeRed;
 
                     error = true;
@@ -443,7 +417,6 @@ namespace SWEGR.UI
 
                 if (!validaurlfacebook)
                 {
-
                     txtperfilfacebook.BorderColor = System.Drawing.Color.OrangeRed;
 
                     error = true;
