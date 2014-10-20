@@ -1920,6 +1920,7 @@
                                     <div class="cold-sm-2">
                                         <div class="row">
                                             <img style="height: 135px; width: 135px; margin-left: 30px;" class="img-thumbnail" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+                                            <input id="Fotelo1" style="height: 30px; width: 165px; padding-left: 35px; " runat="server"   type="file"/>
                                         </div>
                                     </div>
 
@@ -2063,10 +2064,10 @@
 
                                 <div class="form-group" hidden="hidden" id="btncancelarDP">
                                     <asp:UpdatePanel ID="upbtncancelar" runat="server" UpdateMode="Conditional">
-                                        <ContentTemplate>
+                                        <ContentTemplate> 
                                             <div class="col-sm-10">
-                                                <asp:Button ID="btncancelar" runat="server" Text="Cancelar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btncancelar_Click" />
-                                                <asp:Button ID="btnguardar" runat="server" Text="Guardar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnguardar_Click" />
+                                                <asp:Button ID="btncancelar" runat="server" Text="Cancelar" CssClass="btn btn-danger pull-right"  type="submit" OnClick="btncancelar_Click" />
+                                                <asp:Button ID="btnguardar" runat="server" Text="Guardar" CssClass="btn btn-danger pull-left"  type="submit" OnClick="btnguardar_Click" />
                                             </div>
                                         </ContentTemplate>
                                     </asp:UpdatePanel>
