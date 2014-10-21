@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ListaregresadosUI.aspx.cs" Inherits="SWEGR.UI.ListaregresadosUI" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ListargraduandosUI.aspx.cs" Inherits="SWEGR.UI.ListargraduandosUI" %>
 
 <!DOCTYPE html>
 
@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.png">
 
-    <title>Lista de Egresados</title>
+    <title>Lista de Graduandos</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
     <script type="text/javascript" src="MaxLength.min.js"></script>
@@ -78,7 +78,7 @@
 
             $("#dialogInfo").dialog({
                 width: dWidth,
-                title: "Datos de Egresado",
+                title: "Datos de Graduando",
                 buttons: {
                     Aceptar: function () {
                         /*document.getElementById("ButtonGuardar_Invisible").click();*/
@@ -88,7 +88,7 @@
                 modal: true
             }).css("font-size", "12px");
 
-            
+
         }
 
         function error() {
@@ -159,9 +159,6 @@
                             </a>
                             <ul class="dropdown-menu extended logout">
                                 <div class="log-arrow-up"></div>
-                                <%--<li><a href="#"><i class=" icon-suitcase"></i>Profile</a></li>--%>
-                                <%--<li><a href="#"><i class="icon-cog"></i>Settings</a></li>--%>
-                                <%--<li><a href="#"><i class="icon-bell-alt"></i>Notification</a></li>--%>
                                 <li><a href="Login.aspx"><i class="icon-key"></i>Cerrar sesión</a></li>
                             </ul>
                         </li>
@@ -431,9 +428,7 @@
                     </ul>
                 </div>
             </div>
-
-            </div>
-       
+        </div>
     </footer>
 
     <!--footer end-->
@@ -478,8 +473,5 @@
 
 
     </script>
-
-
-
 </body>
 </html>

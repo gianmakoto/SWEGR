@@ -15,10 +15,9 @@ using mshtml;
 using System.Threading;
 using System.Configuration;
 
-
 namespace SWEGR.UI
 {
-    public partial class ListaregresadosUI : System.Web.UI.Page
+    public partial class ListargraduandosUI : System.Web.UI.Page
     {
         string url_LinkedIn = "https://www.linkedin.com";
         string url_Fb = "https://www.facebook.com";
@@ -28,7 +27,6 @@ namespace SWEGR.UI
         string password_Fb;
         ObtenerDataBC obtenerDataBR = new ObtenerDataBC();
         SHDocVw.InternetExplorer IE;
-
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -56,7 +54,6 @@ namespace SWEGR.UI
             {
                 ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Ocurrió un error\")</script>", false);
             }
-
         }
 
         public List<String> listaanios()
@@ -79,7 +76,7 @@ namespace SWEGR.UI
             lsciclos.Add("199602");
             lsciclos.Add("199701");
             lsciclos.Add("199702");
-            
+
 
 
             lsciclos.Add("199801");
@@ -158,7 +155,7 @@ namespace SWEGR.UI
                 objEgresado.Nombre = objEgresadoBE.Nombrecompletoegresado;
                 objEgresado.Carrera = objEgresadoBE.Carreraegresado;
                 objEgresado.Cicloegreso = objEgresadoBE.Cicloegresado;
-                objEgresado.EgresadoID = objEgresadoBE.Idegresado ;
+                objEgresado.EgresadoID = objEgresadoBE.Idegresado;
 
                 lstRegistroLaboralBE = metodosRegistroLaboral.listarregistrolaobral(objEgresadoBE.Idegresado);
                 if (lstRegistroLaboralBE.Count() != 0)
@@ -180,7 +177,7 @@ namespace SWEGR.UI
                             objEgresado.Cargojefe = objRegistroLaboralBE.Cargojefetrabajo;
                             objEgresado.Telefonojefe = objRegistroLaboralBE.Telefonojefetrabajo;
                             objEgresado.Correojefe = objRegistroLaboralBE.Correojefetrabajo;
-                           
+
                         }
                         else
                             continue;
@@ -216,7 +213,7 @@ namespace SWEGR.UI
             EgresadoBC metodosEgresado = new EgresadoBC();
             RegistroLaboralBC metodosRegistroLaboral = new RegistroLaboralBC();
 
-            lstEgresadoBE = metodosEgresado.listarEgresado_Lista(nombre,carrera,anioInicio,anioFin,codigoUniversitario);
+            lstEgresadoBE = metodosEgresado.listarEgresado_Lista(nombre, carrera, anioInicio, anioFin, codigoUniversitario);
 
             for (int i = 0; i < lstEgresadoBE.Count(); i++)
             {
@@ -809,27 +806,27 @@ namespace SWEGR.UI
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
-           // string busqueda;
-            string nombreBuscar="";
-            string codigoUniversitarioBuscar="";
-            int anioInicioBuscar=0;
-            int anioFinBuscar=0;
-            string carreraBuscar="";
-          
-            nombreBuscar=txtNombreCodigo.Text;
-            codigoUniversitarioBuscar=txtNombreCodigo.Text;
+            // string busqueda;
+            string nombreBuscar = "";
+            string codigoUniversitarioBuscar = "";
+            int anioInicioBuscar = 0;
+            int anioFinBuscar = 0;
+            string carreraBuscar = "";
 
-            if (ddlInicio.SelectedIndex != 0 )
-                anioInicioBuscar=Convert.ToInt32( ddlInicio.Text);
+            nombreBuscar = txtNombreCodigo.Text;
+            codigoUniversitarioBuscar = txtNombreCodigo.Text;
+
+            if (ddlInicio.SelectedIndex != 0)
+                anioInicioBuscar = Convert.ToInt32(ddlInicio.Text);
 
 
             if (ddlFin.SelectedIndex != 0)
                 anioFinBuscar = Convert.ToInt32(ddlFin.Text);
 
             if (ddlCarrera.SelectedIndex != 0)
-                carreraBuscar=ddlCarrera.Text;
+                carreraBuscar = ddlCarrera.Text;
 
-            
+
             grdEgresadosDataBind_Lista(nombreBuscar, carreraBuscar, anioInicioBuscar, anioFinBuscar, codigoUniversitarioBuscar);
 
 
@@ -917,7 +914,7 @@ namespace SWEGR.UI
                         ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "err_msg", "alert('" + mensaje + "');", true);
                     }*/
                 }
-                
+
             }
         }
 
@@ -928,7 +925,7 @@ namespace SWEGR.UI
 
         protected void btnVer_Click(object sender, ImageClickEventArgs e)
         {
-            
+
         }
 
         protected void Imprimir_Click(object sender, EventArgs e)
@@ -945,7 +942,7 @@ namespace SWEGR.UI
                 String profile_Facebook = "";
                 String mensaje = "";
 
-               
+
                 EgresadoBC objetoEgresadoBC = new EgresadoBC();
                 String[] linksEgresado = objetoEgresadoBC.obtenerLinksEgresado(codigoEgresado);
                 if (linksEgresado[0] != null && linksEgresado[1] != null)
@@ -1047,29 +1044,29 @@ namespace SWEGR.UI
                         datosObtenidos = new DatosObtenidosBE();
                         if (profile_Facebook.Equals("") && profile_LinkedIn.Equals(""))
                             datosObtenidos.Mensaje = "El usuario no ha registrado sus cuentas de las redes sociales";
-                            //mensaje = "El usuario no ha registrado sus cuentas de Facebook ni de LinkedIn";
+                        //mensaje = "El usuario no ha registrado sus cuentas de Facebook ni de LinkedIn";
                         else
                             datosObtenidos.Mensaje = "El usuario no es contacto en LinkedIn";
                         //ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "err_msg", "alert('" + mensaje + "');", true);
                     }
                     return datosObtenidos;
-                   
+
                 }
                 else
                 {
-                   // datosObtenidos.Mensaje = "El egresado no existe";
-                   // ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "err_msg", "alert('" + mensaje + "');", true);
+                    // datosObtenidos.Mensaje = "El egresado no existe";
+                    // ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "err_msg", "alert('" + mensaje + "');", true);
 
                 }
                 return null;
 
-             
+
 
             }
             catch (Exception ex)
             {
                 IE.Quit();
-                throw ;
+                throw;
                 //return "Vuelva a intentar";
                 //ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "err_msg", "alert('Error. Vuelva a intentar');", true);
             }
@@ -1077,7 +1074,7 @@ namespace SWEGR.UI
 
         protected void GuardarDatosExtraidosButton_Click(object sender, EventArgs e)
         {
-            
+
 
         }
 

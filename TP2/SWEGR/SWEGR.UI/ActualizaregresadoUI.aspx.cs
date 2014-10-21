@@ -7208,8 +7208,15 @@ namespace SWEGR.UI
         {
             //int codigo;
             FotoBC metodosFoto = new FotoBC();
+            EgresadoBC metodosEgresado = new EgresadoBC();
+            EgresadoBE objEgresadoBE = new EgresadoBE();
             var objFoto = new FotoBE { ImagenBytes = CargaImagen.FileBytes };
             objFoto.Idfoto = metodosFoto.insertarFoto(objFoto);
+
+            objEgresadoBE.Idfotoegresado = objFoto.Idfoto;
+
+            metodosEgresado.actualizarEgresado(objEgresadoBE);
+
             //codigo = objFoto.Idfoto;
 
             //obtenerFoto(codigo);

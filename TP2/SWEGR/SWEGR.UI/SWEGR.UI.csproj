@@ -365,6 +365,7 @@
     <Content Include="InsertaregresadoUI.aspx" />
     <Content Include="ListarEgresados.aspx" />
     <Content Include="ListaregresadosUI.aspx" />
+    <Content Include="ListargraduandosUI.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Loginprueba.aspx" />
     <Content Include="Login\css\bootstrap-reset.css" />
@@ -555,6 +556,13 @@
     <Compile Include="ListaregresadosUI.aspx.designer.cs">
       <DependentUpon>ListaregresadosUI.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ListargraduandosUI.aspx.cs">
+      <DependentUpon>ListargraduandosUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListargraduandosUI.aspx.designer.cs">
+      <DependentUpon>ListargraduandosUI.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -618,6 +626,10 @@
     <ProjectReference Include="..\SWEGR.BL.BE\SWEGR.BL.BE.csproj">
       <Project>{4fd6b6ec-fe8f-469f-800f-484f53a10da0}</Project>
       <Name>SWEGR.BL.BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SWEGR.DL.DALC\SWEGR.DL.DALC.csproj">
+      <Project>{3ae24f5b-3861-44a2-a4a0-d1298b83e5a6}</Project>
+      <Name>SWEGR.DL.DALC</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
