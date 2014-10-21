@@ -57,7 +57,7 @@
                         <li class="active"><a href="Index.aspx">Inicio</a></li>
                     
                         
-                        <li><a href="VisualizaregresadoUI.aspx">Egresado</a></li>
+                        <li><a href="ActualizargraduandoUI.aspx">Egresado</a></li>
                         
                         <%--<li><a href="ActualizargraduandoUI.aspx">Graduando</a></li>--%>
                         <!-- user login dropdown start-->

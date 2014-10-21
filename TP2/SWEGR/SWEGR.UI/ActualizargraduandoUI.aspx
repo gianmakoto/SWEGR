@@ -228,7 +228,7 @@
                         <li class="dropdown">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <img alt="" style="height: 19px; width:17px" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
-                                <span class="username">Nombre</span>
+                                <span class="username" id="spanNombre">Nombre</span>
                                 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu extended logout">
@@ -275,7 +275,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <form id="swegrform" class="cmxform form-horizontal tasi-form" runat="server">
-
+                            <asp:HiddenField ID="NombreHidden" runat="server"/>
                             <div class="form-group">
                                 <label class="col-sm-2 col-sm-2 control-label">
                                     Nombre completo
@@ -507,6 +507,11 @@
                 popupEasing: 'easeOutBack',
                 popup2Easing: 'easeOutBack'
             });
+
+
+
+            var algo = document.getElementById("<%= NombreHidden.ClientID %>").value; //hiddenField asp
+            $("#spanNombre").text(algo); //span html
         });
 
         $(window).load(function () {

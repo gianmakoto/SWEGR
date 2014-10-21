@@ -90,6 +90,7 @@ namespace SWEGR.UI
                     txtcorreoalternativo.Text = egresado.Correoaltegresado;
                     txtperfillinkedin.Text = egresado.Perfillinkedinegresado;
                     txtperfilfacebook.Text = egresado.Perfilfacebookegresado;
+                    NombreHidden.Value = egresado.Nombrecompletoegresado;
 
                     if (egresado.Sexoegresado == 'M')
                         ddlGenero.SelectedIndex = 1;
