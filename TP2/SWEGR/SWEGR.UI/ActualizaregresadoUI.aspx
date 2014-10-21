@@ -1884,6 +1884,8 @@
                                 </ContentTemplate>
                             </asp:UpdatePanel>
 
+                            <%--<asp:UpdatePanel ID="upDatosEgresado" runat="server" UpdateMode="Conditional">
+                                <ContentTemplate>--%>
                             <div id="datosPersonales" style="border: 1px solid black; padding-left: 4%; padding-top: 4%" hidden="hidden">
                                 <div class="row">
                                     <div class="col-sm-8">
@@ -1919,8 +1921,10 @@
 
                                     <div class="cold-sm-2">
                                         <div class="row">
-                                            <img style="height: 135px; width: 135px; margin-left: 30px;" class="img-thumbnail" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png" />
-                                            <input id="Fotelo1" style="height: 30px; width: 165px; padding-left: 35px; " runat="server"   type="file"/>
+                                            <img id="contenedorfoto" runat="server" style="height: 135px; width: 135px; margin-left: 30px;" class="img-thumbnail" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+                                            <%--<input id="Fotelo1" style="height: 30px; width: 165px; padding-left: 35px; " runat="server"   type="file"/>--%>
+                                            <asp:FileUpload ID="CargaImagen" runat="server" />
+                                            <asp:Button ID="CargarFoto" runat="server" Text="Cargar archivo" OnClick="CargarFoto_Click" />
                                         </div>
                                     </div>
 
@@ -2085,6 +2089,8 @@
                             </asp:UpdatePanel>
                                 </div>--%>
                             </div>
+                            <%--</ContentTemplate>
+                            </asp:UpdatePanel>--%>
 
                             <div class="form-group">
                                 <div id="dialogvalidacion" style="text-align: center; display: none" runat="server">

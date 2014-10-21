@@ -114,6 +114,8 @@ namespace SWEGR.UI
 
                     grdAptitudesDataBind();
                     grdInteresesDataBind();
+
+                    obtenerFoto(egresado.Idfotoegresado);
                 }
             }
             catch (Exception)
@@ -1427,7 +1429,10 @@ namespace SWEGR.UI
             egresado.Perfillinkedinegresado = txtperfillinkedin.Text;
             egresado.Perfilfacebookegresado = txtperfilfacebook.Text;
             egresado.Idpaisegresado = objetoPaisBC.obtenerPaisID(ddlPais.Text);
-            
+
+            FotoBC metodosFoto = new FotoBC();
+            var objFoto = new FotoBE { ImagenBytes = CargaImagen.FileBytes };
+            egresado.Idfotoegresado = metodosFoto.insertarFoto(objFoto);
 
             if (objEgresadoBC.actualizarEgresado(egresado))
                 return true;
@@ -7197,6 +7202,28 @@ namespace SWEGR.UI
             grdInteresesDataBind();
             txtInteres.Text = "";
             ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarint", "ocultarint();", true);
+        }
+
+        protected void CargarFoto_Click(object sender, EventArgs e)
+        {
+            //int codigo;
+            FotoBC metodosFoto = new FotoBC();
+            var objFoto = new FotoBE { ImagenBytes = CargaImagen.FileBytes };
+            objFoto.Idfoto = metodosFoto.insertarFoto(objFoto);
+            //codigo = objFoto.Idfoto;
+
+            //obtenerFoto(codigo);
+            ////upDatosEgresado.Update();
+        }
+
+        protected void obtenerFoto(int codigoFoto)
+        {
+            if(codigoFoto == 1)
+                return;
+
+            FotoBC metodosFoto = new FotoBC();
+            var objetoFoto = metodosFoto.obtenerFoto(codigoFoto);
+            contenedorfoto.Src = "data:image/jpg;base64," + Convert.ToBase64String(objetoFoto.ImagenBytes);
         }
         
     }
