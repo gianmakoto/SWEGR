@@ -184,7 +184,6 @@
                     <ol class="breadcrumb pull-right">
                         <li><a href="Index.aspx">Home</a></li>
                         <li class="active">Lista de egresados </li>
-                       </li>
                     </ol>
                 </div>
             </div>

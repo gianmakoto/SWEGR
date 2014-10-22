@@ -139,15 +139,6 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.DropDownList ddlCarrera;
         
         /// <summary>
-        /// ButtonGuardar_Invisible control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonGuardar_Invisible;
-        
-        /// <summary>
         /// btnBuscar control.
         /// </summary>
         /// <remarks>
@@ -191,77 +182,5 @@ namespace SWEGR.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl dialogerror;
-        
-        /// <summary>
-        /// dialogInfo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dialogInfo;
-        
-        /// <summary>
-        /// up_dialog control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel up_dialog;
-        
-        /// <summary>
-        /// fotoEgresadoURL control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage fotoEgresadoURL;
-        
-        /// <summary>
-        /// tbegresadoTrabajos control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView tbegresadoTrabajos;
-        
-        /// <summary>
-        /// tbegresadoEstudios control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView tbegresadoEstudios;
-        
-        /// <summary>
-        /// tbegresadoIntereses control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView tbegresadoIntereses;
-        
-        /// <summary>
-        /// tbegresadoAptitudes control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView tbegresadoAptitudes;
-        
-        /// <summary>
-        /// GuardarDatosExtraidosButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button GuardarDatosExtraidosButton;
     }
 }
