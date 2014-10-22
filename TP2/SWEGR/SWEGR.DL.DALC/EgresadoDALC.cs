@@ -1384,6 +1384,7 @@ namespace SWEGR.DL.DALC
             SqlParameter prmcontrasenadinamica;
             SqlParameter prmcambiocontrasena;
             SqlParameter prmtipoegresado;
+            SqlParameter prmidefotoegresado;
 
             int idegresado;
 
@@ -1451,6 +1452,11 @@ namespace SWEGR.DL.DALC
                 prmtipoegresado.Size = 1;
                 prmtipoegresado.Value = objEgresadoBE.Tipoegresado;
 
+                prmidefotoegresado = new SqlParameter();
+                prmidefotoegresado.ParameterName = "@idfotoegresado";
+                prmidefotoegresado.SqlDbType = SqlDbType.Int;
+                prmidefotoegresado.Value = objEgresadoBE.Idfotoegresado;
+
                 cmdinsertaregresadodesdeedes.Parameters.Add(prmnombrecompletoegresado);
                 cmdinsertaregresadodesdeedes.Parameters.Add(prmcorreoegresado);
                 cmdinsertaregresadodesdeedes.Parameters.Add(prmcodigouniversitario);
@@ -1460,6 +1466,7 @@ namespace SWEGR.DL.DALC
                 cmdinsertaregresadodesdeedes.Parameters.Add(prmcontrasenadinamica);
                 cmdinsertaregresadodesdeedes.Parameters.Add(prmcambiocontrasena);
                 cmdinsertaregresadodesdeedes.Parameters.Add(prmtipoegresado);
+                cmdinsertaregresadodesdeedes.Parameters.Add(prmidefotoegresado);
 
                 cmdinsertaregresadodesdeedes.Connection.Open();
                 cmdinsertaregresadodesdeedes.ExecuteNonQuery();

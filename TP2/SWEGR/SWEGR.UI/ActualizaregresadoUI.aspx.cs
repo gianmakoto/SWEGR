@@ -1406,6 +1406,7 @@ namespace SWEGR.UI
             EgresadoBC objEgresadoBC = new EgresadoBC();
             EgresadoBE egresado = objEgresadoBC.obtenerEgresado(IDEgresado);
             PaisBC objetoPaisBC = new PaisBC();
+            FotoBC metodosFoto = new FotoBC();
 
             dni = egresado.Dniegresado;
             telefono = egresado.Telefonoprinegresado;
@@ -1430,9 +1431,12 @@ namespace SWEGR.UI
             egresado.Perfilfacebookegresado = txtperfilfacebook.Text;
             egresado.Idpaisegresado = objetoPaisBC.obtenerPaisID(ddlPais.Text);
 
-            FotoBC metodosFoto = new FotoBC();
             var objFoto = new FotoBE { ImagenBytes = CargaImagen.FileBytes };
-            egresado.Idfotoegresado = metodosFoto.insertarFoto(objFoto);
+
+            if (egresado.Idfotoegresado == 1 || egresado.Idfotoegresado == null)
+                egresado.Idfotoegresado = metodosFoto.insertarFoto(objFoto);
+            else
+                metodosFoto.actualizarFoto(objFoto);
 
             if (objEgresadoBC.actualizarEgresado(egresado))
                 return true;
@@ -7211,11 +7215,19 @@ namespace SWEGR.UI
             EgresadoBC metodosEgresado = new EgresadoBC();
             EgresadoBE objEgresadoBE = new EgresadoBE();
             var objFoto = new FotoBE { ImagenBytes = CargaImagen.FileBytes };
-            objFoto.Idfoto = metodosFoto.insertarFoto(objFoto);
 
-            objEgresadoBE.Idfotoegresado = objFoto.Idfoto;
+            objEgresadoBE = metodosEgresado.obtenerEgresado(IDEgresado);
 
-            metodosEgresado.actualizarEgresado(objEgresadoBE);
+            if (objEgresadoBE.Idfotoegresado == 1 || objEgresadoBE.Idfotoegresado == null)
+            {
+                objFoto.Idfoto = metodosFoto.insertarFoto(objFoto);
+
+                objEgresadoBE.Idfotoegresado = objFoto.Idfoto;
+
+                metodosEgresado.actualizarEgresado(objEgresadoBE);
+            }
+            else
+                metodosFoto.actualizarFoto(objFoto);
 
             //codigo = objFoto.Idfoto;
 
@@ -7225,7 +7237,7 @@ namespace SWEGR.UI
 
         protected void obtenerFoto(int codigoFoto)
         {
-            if(codigoFoto == 1)
+            if(codigoFoto == 1 || codigoFoto == null)
                 return;
 
             FotoBC metodosFoto = new FotoBC();

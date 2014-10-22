@@ -55,6 +55,7 @@ namespace SWEGR.UI
                     objEgresadoBE.Contrasenadinamicaegresado = contrasenadinamica;
                     objEgresadoBE.Cambiocontrasenaegresado = cambiocontrasena;
                     objEgresadoBE.Tipoegresado = 'D';
+                    objEgresadoBE.Idfotoegresado = 1;
 
                     objEgresadoBC.insertarEgresadodesdeEgresadoDesvinculado(objEgresadoBE);
 
