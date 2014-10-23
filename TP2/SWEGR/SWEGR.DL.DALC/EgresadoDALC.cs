@@ -1636,5 +1636,66 @@ namespace SWEGR.DL.DALC
                 throw;
             }
         }
+
+        public List<EgresadoBE> listarGraduando()
+        {
+            String sqllistaregresado;
+
+            SqlConnection conn;
+            SqlCommand cmdlistaregresado;
+            SqlDataReader dregresado;
+
+            try
+            {
+                List<EgresadoBE> lstEgresadoBE;
+                EgresadoBE objetoEgresadoBE;
+
+                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CSSeguimientoEgresados"].ToString());
+                sqllistaregresado = "SWEGR_listarGraduando";
+                cmdlistaregresado = new SqlCommand(sqllistaregresado, conn);
+                cmdlistaregresado.CommandType = CommandType.StoredProcedure;
+
+                cmdlistaregresado.Connection.Open();
+                dregresado = cmdlistaregresado.ExecuteReader();
+                lstEgresadoBE = new List<EgresadoBE>();
+
+                while (dregresado.Read())
+                {
+                    objetoEgresadoBE = new EgresadoBE();
+                    objetoEgresadoBE.Idegresado = dregresado.GetInt32(0);
+                    objetoEgresadoBE.Nombrecompletoegresado = dregresado.GetString(1);
+                    objetoEgresadoBE.Edadegresado = dregresado.GetByte(2);
+                    objetoEgresadoBE.Sexoegresado = Convert.ToChar(dregresado.GetString(3));
+                    objetoEgresadoBE.Telefonoprinegresado = dregresado.GetString(4);
+                    objetoEgresadoBE.Telefonoaltegresado = dregresado.GetString(5);
+                    objetoEgresadoBE.Dniegresado = dregresado.GetString(6);
+                    objetoEgresadoBE.Correoegresado = dregresado.GetString(7);
+                    objetoEgresadoBE.Correoaltegresado = dregresado.GetString(8);
+                    objetoEgresadoBE.Direccionegresado = dregresado.GetString(9);
+                    objetoEgresadoBE.Distritoegresado = dregresado.GetString(10);
+                    objetoEgresadoBE.Departamentoegresado = dregresado.GetString(11);
+                    objetoEgresadoBE.Idpaisegresado = dregresado.GetInt32(12);
+                    objetoEgresadoBE.Perfillinkedinegresado = dregresado.GetString(13);
+                    objetoEgresadoBE.Perfilfacebookegresado = dregresado.GetString(14);
+                    objetoEgresadoBE.Fechanacimientoegresado = dregresado.GetDateTime(15);
+                    objetoEgresadoBE.Tipoegresado = Convert.ToChar(dregresado.GetString(16));
+                    objetoEgresadoBE.Idfotoegresado = dregresado.GetInt32(17);
+                    objetoEgresadoBE.Contrasenaegresado = dregresado.GetString(18);
+                    objetoEgresadoBE.Contrasenadinamicaegresado = dregresado.GetString(19);
+                    objetoEgresadoBE.Cambiocontrasenaegresado = dregresado.GetBoolean(20);
+                    objetoEgresadoBE.Cicloegresado = dregresado.GetString(21);
+                    objetoEgresadoBE.Codigouniversitarioegresado = dregresado.GetString(22);
+                    objetoEgresadoBE.Carreraegresado = dregresado.GetString(23);
+
+                    lstEgresadoBE.Add(objetoEgresadoBE);
+                }
+                cmdlistaregresado.Connection.Close();
+                return lstEgresadoBE;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
     }
 }

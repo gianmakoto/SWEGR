@@ -5375,7 +5375,7 @@
                                                     <asp:UpdatePanel ID="upinsertarinteres" runat="server" UpdateMode="Conditional">
                                                         <ContentTemplate>
                                                             <div class="col-sm-10">
-                                                                <asp:Button ID="btnInsertarinteres" runat="server" Text="Guardar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnInsertarinteres_Click" />
+                                                                <asp:Button ID="btnInsertarinteres" runat="server" Text="Agregar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnInsertarinteres_Click" />
                                                             </div>
                                                         </ContentTemplate>
                                                     </asp:UpdatePanel>

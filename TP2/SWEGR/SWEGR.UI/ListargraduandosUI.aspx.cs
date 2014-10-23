@@ -54,14 +54,13 @@ namespace SWEGR.UI
         public void grdGraduandosDataBind()
         {
             List<Egresados> lstEgresados = new List<Egresados>();
-            List<EgresadoBE> lstEgresadoBE = new List<EgresadoBE>();
-
+            List<EgresadoBE> lstGraduandos = new List<EgresadoBE>();
             EgresadoBC metodosEgresado = new EgresadoBC();
             RegistroLaboralBC metodosRegistroLaboral = new RegistroLaboralBC();
 
-            lstEgresadoBE = metodosEgresado.listarEgresado();
+            lstGraduandos = metodosEgresado.listarGraduando();
 
-            grdGraduandos.DataSource = lstEgresadoBE;
+            grdGraduandos.DataSource = lstGraduandos;
             grdGraduandos.DataBind();
         }
 
@@ -103,10 +102,7 @@ namespace SWEGR.UI
             if (ddlCarrera.SelectedIndex != 0)
                 carreraBuscar = ddlCarrera.Text;
 
-
             grdGraduandosDataBind_Lista(nombreBuscar, carreraBuscar, codigoUniversitarioBuscar);
-
-
         }
 
         protected void btnVer_Click(object sender, ImageClickEventArgs e)

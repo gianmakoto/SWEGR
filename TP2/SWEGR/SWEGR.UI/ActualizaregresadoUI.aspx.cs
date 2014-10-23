@@ -7077,7 +7077,7 @@ namespace SWEGR.UI
             objInteresBE.Nombreinteres = txtInteres.Text;
             idinteres = objInteresBC.insertarInteres(objInteresBE);
 
-            objEgresadoBC.insertarAptitudxEgresado(idegresado, idinteres);
+            objEgresadoBC.insertarInteresxEgresado(idegresado, idinteres);
         }
 
         public bool ActualizarInteres(int idinteres)
@@ -7122,6 +7122,7 @@ namespace SWEGR.UI
 
         protected void btnCancelaraptitud_Click(object sender, EventArgs e)
         {
+            txtAptitud.Text = "";
             ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarapt", "ocultarapt();", true);
         }
 
@@ -7133,6 +7134,8 @@ namespace SWEGR.UI
                 ActualizarAptitud(aptitudid);
                 grdAptitudesDataBind();
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mensajeeditarapt", "mensajeeditarapt();", true);
+                txtAptitud.Text = "";
+                ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarapt", "ocultarapt();", true);
             }
             else
                 ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarapt", "ocultarapt();", true);
@@ -7145,6 +7148,8 @@ namespace SWEGR.UI
                 InsertarAptitud();
                 grdAptitudesDataBind();
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mensajeagregarapt", "mensajeagregarapt();", true);
+                txtAptitud.Text = "";
+                ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarapt", "ocultarapt();", true);
             }
             // Insertar aptitud()
             else
@@ -7170,6 +7175,7 @@ namespace SWEGR.UI
 
         protected void btnCancelarinteres_Click(object sender, EventArgs e)
         {
+            txtInteres.Text = "";
             ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarint", "ocultarint();", true);
         }
 
@@ -7179,8 +7185,11 @@ namespace SWEGR.UI
             {
                 int interesid = (int)ViewState["IDInteres"];
                 ActualizarInteres(interesid);
-                grdAptitudesDataBind();
+                grdInteresesDataBind();
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mensajeeditarinteres", "mensajeeditarinteres();", true);
+
+                txtInteres.Text = "";
+                ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarint", "ocultarint();", true);
             }
             else
                 ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarint", "ocultarint();", true);
@@ -7193,6 +7202,9 @@ namespace SWEGR.UI
                 InsertarInteres();
                 grdInteresesDataBind();
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mensajeagregarinteres", "mensajeagregarinteres();", true);
+
+                txtInteres.Text = "";
+                ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarint", "ocultarint();", true);
             }
             else
                 ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarint", "ocultarint();", true);

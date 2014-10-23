@@ -63,6 +63,20 @@
             }).css("font-size", "12px");
         }
 
+        function incompleto() {
+            $("#dialogincompleto").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    Aceptar: function () {
+                        $(this).dialog("close");
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
+
         function exito() {
             $("#dialogexito").dialog({
                 height: 200,
@@ -189,7 +203,7 @@
                                     <div class="form-group">
                                         <div class="col-sm-10">
                                             <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnLimpiar_Click" />
-                                            <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" Enabled="false" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnAceptar_Click" />
+                                            <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnAceptar_Click" />
                                         </div>
                                     </div>
                                 </ContentTemplate>
@@ -197,16 +211,20 @@
 
                             <div class="form-group">
                                 <div id="dialogerror" style="text-align: justify; display: none" runat="server">
-                                    <b style="text-align: center">Todos los campos son necesarios para registrarse.</b>
+                                    <b style="text-align: center">Los datos ingresados son incorrectos.</b>
                                 </div>
 
                                 <div id="dialogexito" style="text-align: justify; display: none" runat="server">
-                                    <b style="text-align: center">Sus datos han sido guardados sastifactoriamente.</b>
+                                    <b style="text-align: center">La contraseña ha sido actualizada satisfactoriamente.</b>
                                 </div>
 
+                                <div id="dialogincompleto" style="text-align: justify; display: none" runat="server">
+                                    <b style="text-align: center">Todos los datos son necesarios para cambiar su contraseña.</b>
+                                </div>
+                                
                                 <div id="dialogocurrencia" style="text-align: justify; display: none" runat="server">
-                                    <b style="text-align: center">Las constraseñas no coinciden.</b>
-                                </div>                               
+                                    <b style="text-align: center">Repetir Contraseña debe ser igual a Nueva Contraseña.</b>
+                                </div>                                
                             </div>
                         </form>
                     </div>

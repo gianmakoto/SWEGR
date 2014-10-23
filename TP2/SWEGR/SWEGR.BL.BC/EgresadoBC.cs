@@ -355,5 +355,18 @@ namespace SWEGR.BL.BC
                 throw;
             }
         }
+
+        public List<EgresadoBE> listarGraduando()
+        {
+            try
+            {
+                EgresadoDALC objetoEgresadoDALC = new EgresadoDALC();
+                return objetoEgresadoDALC.listarGraduando();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
     }
 }
