@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ActualizargraduandoUI.aspx.cs" Inherits="SWEGR.UI.ActualizargraduandoUI" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="VisualizargraduandoUI.aspx.cs" Inherits="SWEGR.UI.VisualizargraduandoUI" %>
 
 <!DOCTYPE html>
 
@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.png">
 
-    <title>Actualizar Graduando</title>
+    <title>Visualizar Graduando</title>
 
     <script type="text/javascript" src="MaxLength.min.js"></script>
 
@@ -31,176 +31,6 @@
     <!-- Custom styles for this template -->
     <link href="Content/css/style.css" rel="stylesheet">
     <link href="Content/css/style-responsive.css" rel="stylesheet" />
-
-
-
-    <script type="text/javascript">
-        $(function () {
-
-            $('#txtdni').keypress(function (e) {
-                var txt = $(this).val();
-                if (txt.length > 7) {
-                    e.preventDefault();
-                }
-            });
-            $('#txttelefonoprincipal').keypress(function (e) {
-                var txt = $(this).val();
-                if (txt.length > 8) {
-                    e.preventDefault();
-                }
-            });
-            $('#txttelefonoalternativo').keypress(function (e) {
-                var txt = $(this).val();
-                if (txt.length > 8) {
-                    e.preventDefault();
-                }
-            });
-            $('#txtnombrecompleto').keypress(function (e) {
-                var txt = $(this).val();
-                if (txt.length > 99) {
-                    e.preventDefault();
-                }
-            });
-            $('#txtdireccion').keypress(function (e) {
-                var txt = $(this).val();
-                if (txt.length > 99) {
-                    e.preventDefault();
-                }
-            });
-            $('#txtdistrito').keypress(function (e) {
-                var txt = $(this).val();
-                if (txt.length > 49) {
-                    e.preventDefault();
-                }
-            });
-            $('#txtcorreo').keypress(function (e) {
-                var txt = $(this).val();
-                if (txt.length > 49) {
-                    e.preventDefault();
-                }
-            });
-            $('#txtcorreoalternativo').keypress(function (e) {
-                var txt = $(this).val();
-                if (txt.length > 49) {
-                    e.preventDefault();
-                }
-            });
-            $('#txtperfillinkedin').keypress(function (e) {
-                var txt = $(this).val();
-                if (txt.length > 99) {
-                    e.preventDefault();
-                }
-            });
-            $('#txtperfilfacebook').keypress(function (e) {
-                var txt = $(this).val();
-                if (txt.length > 99) {
-                    e.preventDefault();
-                }
-            });
-        });
-
-        function isNumber(evt) {
-            evt = (evt) ? evt : window.event;
-            var charCode = (evt.which) ? evt.which : evt.keyCode;
-            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-                return false;
-            }
-            return true;
-        }
-
-        function dnivacio() {
-            $("#dialogvalidacion").dialog({
-                height: 200,
-                widht: 1800,
-                title: "Seguimiento de egresados",
-                buttons: {
-                    "Aceptar": function () {
-                        $(this).dialog("close")
-                    }
-                },
-                modal: true
-            }).css("font-size", "12px");
-        }
-
-        function telefonovacio() {
-            $("#dialogvalidacion").dialog({
-                height: 200,
-                widht: 1800,
-                title: "Seguimiento de egresados",
-                buttons: {
-                    "Aceptar": function () {
-                        $(this).dialog("close")
-                    }
-                },
-                modal: true
-            }).css("font-size", "12px");
-        }
-
-        function correovacio() {
-            $("#dialogvalidacion").dialog({
-                height: 200,
-                widht: 1800,
-                title: "Seguimiento de egresados",
-                buttons: {
-                    "Aceptar": function () {
-                        $(this).dialog("close")
-                    }
-                },
-                modal: true
-            }).css("font-size", "12px");
-
-        }
-
-        function perfillinkedinvacio() {
-            $("#dialogvalidacion").dialog({
-                height: 200,
-                widht: 1800,
-                title: "Seguimiento de egresados",
-                buttons: {
-                    "Aceptar": function () {
-                        $(this).dialog("close")
-                    }
-                },
-                modal: true
-            }).css("font-size", "12px");
-        }
-
-        function exito() {
-            $("#dialogexito").dialog({
-                height: 200,
-                widht: 1800,
-                title: "Seguimiento de egresados",
-                buttons: {
-                    Aceptar: function() {
-                        $(this).dialog("close");
-                    }
-                },
-                modal: true
-            }).css("font-size", "12px");
-        }
-
-        function incompleto() {
-            $("#dialogincompleto").dialog({
-                height: 200,
-                widht: 1800,
-                title: "Seguimiento de egresados",
-                buttons: {
-                    Aceptar: function () {
-                        $(this).dialog("close");
-                    }
-                },
-                modal: true
-            }).css("font-size", "12px");
-        }
-
-       
-    </script>
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
-    <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-      <script src="js/respond.min.js"></script>
-    <![endif]-->
 </head>
 
 <body>
@@ -268,9 +98,6 @@
     <!--container start-->
     <div class="container">
         <section class="panel">
-            <header class="panel-heading">
-                <h3>Ingrese sus datos</h3>
-            </header>
             <div class="panel-body">
                 <div class="row">
                     <div class="col-md-12">
@@ -332,12 +159,12 @@
                                    * Teléfonos
                                 </label>
                                 <div class="col-sm-4">
-                                    <asp:TextBox ID="txttelefonoprincipal" runat="server"
+                                    <asp:TextBox ID="txttelefonoprincipal" runat="server" Enabled="false"
                                         CssClass="form-control" placeholder="00-999-999-9999 (principal)" data-mask="99-999-9999" onkeypress="return isNumber(event)" onpaste="return false" ></asp:TextBox>
                                   
                                 </div>
                                 <div class="col-sm-4">
-                                    <asp:TextBox ID="txttelefonoalternativo" runat="server"
+                                    <asp:TextBox ID="txttelefonoalternativo" runat="server" Enabled="false"
                                         CssClass="form-control" placeholder="00-999-999-9999 (alternativo)" data-mask="999-999-999"  onkeypress="return isNumber(event)"  onpaste="return false"></asp:TextBox>
                                 </div>
                             </div>
@@ -347,7 +174,7 @@
                                     Departamento
                                 </label>
                                 <div class="col-sm-8">
-                                    <asp:DropDownList ID="ddlDepartamento" runat="server" AutoPostBack="false" CssClass="form-control"></asp:DropDownList>
+                                    <asp:DropDownList ID="ddlDepartamento" runat="server" AutoPostBack="false" CssClass="form-control" Enabled="false"></asp:DropDownList>
                                 </div>
                             </div>
 
@@ -356,7 +183,7 @@
                                     Distrito
                                 </label>
                                 <div class="col-sm-8">
-                                    <asp:TextBox ID="txtdistrito" runat="server"
+                                    <asp:TextBox ID="txtdistrito" runat="server" Enabled="false"
                                         CssClass="form-control" placeholder="Ejemplo: San Isidro"></asp:TextBox>
                                 </div>
                             </div>
@@ -366,7 +193,7 @@
                                     Dirección
                                 </label>
                                 <div class="col-sm-8">
-                                    <asp:TextBox ID="txtdireccion" runat="server"
+                                    <asp:TextBox ID="txtdireccion" runat="server" Enabled="false"
                                         CssClass="form-control" placeholder="Ejemplo: Av. Callejones rojos 450"></asp:TextBox>
                                 </div>
                             </div>
@@ -376,7 +203,7 @@
                                    * Correo
                                 </label>
                                 <div class="col-sm-8">
-                                    <asp:TextBox ID="txtcorreo" runat="server"
+                                    <asp:TextBox ID="txtcorreo" runat="server" Enabled="false"
                                         CssClass="form-control" placeholder="Ejemplo: usuario@gmail.com"></asp:TextBox>
                                 </div>
                             </div>
@@ -386,7 +213,7 @@
                                     Correo Alternativo
                                 </label>
                                 <div class="col-sm-8">
-                                    <asp:TextBox ID="txtcorreoalternativo" runat="server"
+                                    <asp:TextBox ID="txtcorreoalternativo" runat="server" Enabled="false"
                                         CssClass="form-control" placeholder="Ejemplo: usuario_alternativo@hotmail.com"></asp:TextBox>
                                 </div>
                             </div>
@@ -400,7 +227,7 @@
                                     <div class="input-group m-bot15">
                                         <span class="input-group-addon"><i class="fa fa-linkedin"></i>
                                         </span>
-                                        <asp:TextBox ID="txtperfillinkedin" runat="server"
+                                        <asp:TextBox ID="txtperfillinkedin" runat="server" Enabled="false"
                                             CssClass="form-control" placeholder="Ejemplo: https://pe.linkedin.com/iduduario" ></asp:TextBox>
                                     </div>
                                 </div>
@@ -416,31 +243,11 @@
                                     <div class="input-group m-bot15">
                                         <span class="input-group-addon"><i class="fa fa-facebook"></i>
                                         </span>
-                                        <asp:TextBox ID="txtperfilfacebook" runat="server"
+                                        <asp:TextBox ID="txtperfilfacebook" runat="server" Enabled="false"
                                             CssClass="form-control" placeholder="Ejemplo: https://www.facebook.com/usuario "></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="col-sm-10">
-                                    <asp:Button ID="btnguardar" runat="server" Text="Guardar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnguardar_Click" />
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div id="dialogvalidacion" style="text-align: center; display: none" runat="server">
-                                    <b style="text-align: center">Debe ingresar todos los campos necesarios para actualizar sus datos.</b>
-                                </div>
-
-                                <div id="dialogincompleto" style="text-align: center; display: none" runat="server">
-                                    <b style="text-align: center">El formato de algunos campos es incorrecto.</b>
-                                </div>
-
-                                <div id="dialogexito" style="text-align: justify; display: none" runat="server">
-                                    <b style="text-align: center">Sus datos han sido actualizados satisfactoriamente.</b>
-                                </div>
-                            </div>
-
                         </form>
                     </div>
                 </div>

@@ -10,7 +10,7 @@
 namespace SWEGR.UI {
     
     
-    public partial class ListargraduandosUI {
+    public partial class VisualizargraduandoUI {
         
         /// <summary>
         /// Head1 control.
@@ -31,138 +31,138 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.HtmlControls.HtmlForm swegrform;
         
         /// <summary>
-        /// ScriptManager1 control.
+        /// NombreHidden control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        protected global::System.Web.UI.WebControls.HiddenField NombreHidden;
         
         /// <summary>
-        /// uppanel control.
+        /// txtnombrecompleto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel uppanel;
+        protected global::System.Web.UI.WebControls.TextBox txtnombrecompleto;
         
         /// <summary>
-        /// PNombre control.
+        /// txtdni control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField PNombre;
+        protected global::System.Web.UI.WebControls.TextBox txtdni;
         
         /// <summary>
-        /// PDireccion control.
+        /// ddlGenero control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField PDireccion;
+        protected global::System.Web.UI.WebControls.DropDownList ddlGenero;
         
         /// <summary>
-        /// PTelf1 control.
+        /// txtfechanacimiento control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField PTelf1;
+        protected global::System.Web.UI.WebControls.TextBox txtfechanacimiento;
         
         /// <summary>
-        /// Ptelf2 control.
+        /// txtCarrera control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField Ptelf2;
+        protected global::System.Web.UI.WebControls.TextBox txtCarrera;
         
         /// <summary>
-        /// PCorreo1 control.
+        /// txttelefonoprincipal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField PCorreo1;
+        protected global::System.Web.UI.WebControls.TextBox txttelefonoprincipal;
         
         /// <summary>
-        /// Pcorreo2 control.
+        /// txttelefonoalternativo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField Pcorreo2;
+        protected global::System.Web.UI.WebControls.TextBox txttelefonoalternativo;
         
         /// <summary>
-        /// txtNombreCodigo control.
+        /// ddlDepartamento control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombreCodigo;
+        protected global::System.Web.UI.WebControls.DropDownList ddlDepartamento;
         
         /// <summary>
-        /// ddlCarrera control.
+        /// txtdistrito control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCarrera;
+        protected global::System.Web.UI.WebControls.TextBox txtdistrito;
         
         /// <summary>
-        /// btnBuscar control.
+        /// txtdireccion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBuscar;
+        protected global::System.Web.UI.WebControls.TextBox txtdireccion;
         
         /// <summary>
-        /// grdGraduandos control.
+        /// txtcorreo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdGraduandos;
+        protected global::System.Web.UI.WebControls.TextBox txtcorreo;
         
         /// <summary>
-        /// btnImprimir control.
+        /// txtcorreoalternativo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnImprimir;
+        protected global::System.Web.UI.WebControls.TextBox txtcorreoalternativo;
         
         /// <summary>
-        /// dialogerror_mensaje control.
+        /// txtperfillinkedin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dialogerror_mensaje;
+        protected global::System.Web.UI.WebControls.TextBox txtperfillinkedin;
         
         /// <summary>
-        /// dialogerror control.
+        /// txtperfilfacebook control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dialogerror;
+        protected global::System.Web.UI.WebControls.TextBox txtperfilfacebook;
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ListargraduandosUI.aspx.cs" Inherits="SWEGR.UI.ListargraduandosUI" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Cambiarcontrasena.aspx.cs" Inherits="SWEGR.UI.Cambiarcontrasena" %>
 
 <!DOCTYPE html>
 
@@ -8,16 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.png">
 
-    <title>Lista de Graduandos</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <title>Cambiar Contraseña</title>
 
     <script type="text/javascript" src="MaxLength.min.js"></script>
 
-         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
-
- <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
-    <link href="http://localhost:49184/maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Bootstrap core CSS -->
     <link href="Content/css/bootstrap.min.css" rel="stylesheet">
@@ -34,15 +33,7 @@
     <link href="Content/css/style-responsive.css" rel="stylesheet" />
 
 
-<style>
-        .separadorTabla
-        {  
-            -webkit-column-count: 2;
-            -moz-column-count: 2; 
-            column-count: 2;
 
-        }
-    </style>
     <script type="text/javascript">
         function error() {
             $("#dialogerror").dialog({
@@ -58,8 +49,8 @@
             }).css("font-size", "12px");
         }
 
-        function error_mensaje(mensaje) {
-            $("#dialogerror_mensaje").text(mensaje).dialog({
+        function ocurrencia() {
+            $("#dialogocurrencia").dialog({
                 height: 200,
                 widht: 1800,
                 title: "Seguimiento de egresados",
@@ -71,7 +62,28 @@
                 modal: true
             }).css("font-size", "12px");
         }
+
+        function exito() {
+            $("#dialogexito").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    Aceptar: function () {
+                        $(this).dialog("close");
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
+
     </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
 </head>
 
 <body>
@@ -90,22 +102,23 @@
                 </div>
 
                 <div class="navbar-collapse collapse ">
-                    <ul class="nav navbar-nav" style=" align: center">
-                        <li><a href="InicioComite.aspx">Inicio</a></li>
-                        
-                          <li class><a href="ListaregresadosUI.aspx">Egresado</a></li>
-                        
-                        <li><a href="#">Graduando</a></li>
-                        <li><a href="#">Carga De Datos</a></li>
+                    <ul class="nav navbar-nav" style="align: center">
+                        <li><a href="Index.aspx">Inicio</a></li>
+
+                        <li><a href="VisualizaregresadoUI.aspx">Egresado</a></li>
+                        <li class="active"><a href="ActualizargraduandoUI.aspx">Graduando</a></li>
                         <!-- user login dropdown start-->
                         <li class="dropdown">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                <img alt="" style="height: 19px; width:17px" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+                                <img alt="" style="height: 19px; width: 17px" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
                                 <span class="username">Nombre</span>
                                 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu extended logout">
                                 <div class="log-arrow-up"></div>
+                                <li><a href="#"><i class=" icon-suitcase"></i>Profile</a></li>
+                                <li><a href="#"><i class="icon-cog"></i>Settings</a></li>
+                                <li><a href="#"><i class="icon-bell-alt"></i>Notification</a></li>
                                 <li><a href="Login.aspx"><i class="icon-key"></i>Cerrar sesión</a></li>
                             </ul>
                         </li>
@@ -118,17 +131,16 @@
     <!--header end-->
     <%--  --%>
     <!--breadcrumbs start-->
-
     <div class="breadcrumbs">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-sm-4">
-                    <h1>Lista de Egresados</h1>
+                    <h1>Graduandos</h1>
                 </div>
                 <div class="col-lg-8 col-sm-8">
                     <ol class="breadcrumb pull-right">
                         <li><a href="Index.aspx">Home</a></li>
-                        <li class="active">Lista de graduandos </li>
+                        <li class="active">Cambiar Contraseña </li>
                     </ol>
                 </div>
             </div>
@@ -140,90 +152,61 @@
     <div class="container">
         <section class="panel">
             <header class="panel-heading">
+                <h3>Ingrese sus datos</h3>
             </header>
             <div class="panel-body">
                 <div class="row">
                     <div class="col-md-12">
                         <form id="swegrform" class="cmxform form-horizontal tasi-form" runat="server">
                             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-                            <asp:UpdatePanel ID="uppanel" runat="server" UpdateMode="Conditional">
+                            <asp:UpdatePanel ID="uppanel" runat="server">
                                 <ContentTemplate>
-
-                                
-                            <div class="form-group">
-                                <label class="col-sm-2 col-sm-2 control-label">
-                                    Nombre y/o código:
-                                    <asp:HiddenField ID="PNombre" runat="server" ></asp:HiddenField>
-                                            <asp:HiddenField ID="PDireccion" runat="server" ></asp:HiddenField>
-                                            <asp:HiddenField ID="PTelf1" runat="server" ></asp:HiddenField>
-                                            <asp:HiddenField ID="Ptelf2" runat="server" ></asp:HiddenField>
-                                            <asp:HiddenField ID="PCorreo1" runat="server" ></asp:HiddenField>
-                                            <asp:HiddenField ID="Pcorreo2" runat="server" ></asp:HiddenField>
-                                </label>
-                                <div class="col-sm-8">
-                                    <asp:TextBox ID="txtNombreCodigo" runat="server" CssClass="form-control"></asp:TextBox>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="col-sm-2 col-sm-2 control-label">
-                                    Carrera
-                                </label>
-                                <div class="col-sm-8">
-                                    <asp:DropDownList ID="ddlCarrera" runat="server" AutoPostBack="false" CssClass="form-control"></asp:DropDownList>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                        <div class="col-sm-10">
-                                            <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnBuscar_Click" />
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            Contraseña actual:
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:TextBox ID="txtcontrasenaactual" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
                                         </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-sm-9">
-                                    <asp:GridView ID="grdGraduandos" Width="930px"  align = "center" runat="server"  CellPadding="8" CellSpacing="3" AutoGenerateColumns="false" DataKeyNames="Idegresado" OnRowCommand="grdGraduandos_RowCommand">
-                                        <Columns>
-                                            <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller"  DataField="EgresadoID" HeaderText="Idegresado" Visible="False" />
-                                            <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller"  HeaderText="Código" DataField="Codigouniversitarioegresado" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                            <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Nombre" DataField="Nombrecompletoegresado" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                            <asp:BoundField ItemStyle-Width="300" ItemStyle-Font-Size="Smaller" HeaderText="Carrera" DataField="Carreraegresado" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                            <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Ciclo actual" DataField="Cicloegresado" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-
-                                            <asp:TemplateField HeaderText="Actualizado" ItemStyle-HorizontalAlign="Center" HeaderStyle-Width="80px">
-                                                <ItemTemplate>
-                                                    <asp:CheckBox ID="chkbActualizacion" runat="server" Enabled="false"/>
-                                                </ItemTemplate>
-                                            </asp:TemplateField>
-
-                                            <asp:TemplateField HeaderText="Ver" ItemStyle-HorizontalAlign="Center"  HeaderStyle-Width="80px">
-                                                <ItemTemplate>
-                                                            
-                                                    <asp:LinkButton ID="lkbVer" runat="server"   CommandName="cmdVer" CommandArgument='<%# Eval("Idegresado") %>' >
-                                                                <asp:Image ID="btnVer" runat="server" ImageUrl="Images/visua.png" Width="16" Height="16"/>
-                                                            </asp:LinkButton>
-                                                </ItemTemplate>
-                                            </asp:TemplateField>
-                                        </Columns>
-
-                                        
-                                <HeaderStyle BackColor="#626262"  ForeColor="White" />  
-
-                                    </asp:GridView>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                        <div class="col-sm-10">
-                                            <asp:Button ID="btnImprimir" runat="server" Text="Imprimir" CssClass="btn btn-danger pull-right" type="submit" OnClick="Imprimir_Click" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            Nueva contraseña:
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:TextBox ID="txtnuevacontransena" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
                                         </div>
-                            </div>
-                                    </ContentTemplate>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            Repetir contraseña:
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:TextBox ID="txtrepetircontrasena" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-sm-10">
+                                            <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnLimpiar_Click" />
+                                            <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" Enabled="false" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnAceptar_Click" />
+                                        </div>
+                                    </div>
+                                </ContentTemplate>
                             </asp:UpdatePanel>
-                            
-                            <div class="form-group">
-                                <div id="dialogerror_mensaje" style="text-align: justify; display: none" runat="server"></div>
 
+                            <div class="form-group">
                                 <div id="dialogerror" style="text-align: justify; display: none" runat="server">
-                                    <b style="text-align: center">No existen egresados por mostrar.                   </div>
+                                    <b style="text-align: center">Todos los campos son necesarios para registrarse.</b>
+                                </div>
+
+                                <div id="dialogexito" style="text-align: justify; display: none" runat="server">
+                                    <b style="text-align: center">Sus datos han sido guardados sastifactoriamente.</b>
+                                </div>
+
+                                <div id="dialogocurrencia" style="text-align: justify; display: none" runat="server">
+                                    <b style="text-align: center">Las constraseñas no coinciden.</b>
+                                </div>                               
                             </div>
                         </form>
                     </div>
@@ -258,12 +241,13 @@
                     </ul>
                 </div>
             </div>
-        </div>
-    </footer>
 
+        </div>
+
+    </footer>
     <!--footer end-->
     <!-- js placed at the end of the document so the pages load faster -->
-  
+
     <script src="Content/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="Content/js/hover-dropdown.js"></script>
     <script type="text/javascript" src="Content/assets/bxslider/jquery.bxslider.js"></script>
@@ -303,5 +287,8 @@
 
 
     </script>
+
+
+
 </body>
 </html>

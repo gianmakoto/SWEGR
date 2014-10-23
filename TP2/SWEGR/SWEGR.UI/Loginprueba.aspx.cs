@@ -41,7 +41,7 @@ namespace SWEGR.UI
                     {
                         
                       
-                        Response.Redirect("ActualizargraduandoUI.aspx");
+                        Response.Redirect("VisualizargraduandoUI.aspx");
                         
                     }
                     else

@@ -10,7 +10,7 @@
 namespace SWEGR.UI {
     
     
-    public partial class ListargraduandosUI {
+    public partial class Cambiarcontrasena {
         
         /// <summary>
         /// Head1 control.
@@ -49,112 +49,49 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.UpdatePanel uppanel;
         
         /// <summary>
-        /// PNombre control.
+        /// txtcontrasenaactual control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField PNombre;
+        protected global::System.Web.UI.WebControls.TextBox txtcontrasenaactual;
         
         /// <summary>
-        /// PDireccion control.
+        /// txtnuevacontransena control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField PDireccion;
+        protected global::System.Web.UI.WebControls.TextBox txtnuevacontransena;
         
         /// <summary>
-        /// PTelf1 control.
+        /// txtrepetircontrasena control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField PTelf1;
+        protected global::System.Web.UI.WebControls.TextBox txtrepetircontrasena;
         
         /// <summary>
-        /// Ptelf2 control.
+        /// btnLimpiar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField Ptelf2;
+        protected global::System.Web.UI.WebControls.Button btnLimpiar;
         
         /// <summary>
-        /// PCorreo1 control.
+        /// btnAceptar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField PCorreo1;
-        
-        /// <summary>
-        /// Pcorreo2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField Pcorreo2;
-        
-        /// <summary>
-        /// txtNombreCodigo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombreCodigo;
-        
-        /// <summary>
-        /// ddlCarrera control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCarrera;
-        
-        /// <summary>
-        /// btnBuscar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBuscar;
-        
-        /// <summary>
-        /// grdGraduandos control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdGraduandos;
-        
-        /// <summary>
-        /// btnImprimir control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnImprimir;
-        
-        /// <summary>
-        /// dialogerror_mensaje control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dialogerror_mensaje;
+        protected global::System.Web.UI.WebControls.Button btnAceptar;
         
         /// <summary>
         /// dialogerror control.
@@ -164,5 +101,23 @@ namespace SWEGR.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl dialogerror;
+        
+        /// <summary>
+        /// dialogexito control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dialogexito;
+        
+        /// <summary>
+        /// dialogocurrencia control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dialogocurrencia;
     }
 }

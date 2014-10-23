@@ -133,6 +133,7 @@
     <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="ActualizaregresadoUI.aspx" />
     <Content Include="ActualizargraduandoUI.aspx" />
+    <Content Include="Cambiarcontrasena.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\assets\bxslider\images\bx_loader.gif" />
     <Content Include="Content\assets\bxslider\images\left-hover.png" />
@@ -453,6 +454,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="VisualizaregresadoUI.aspx" />
+    <Content Include="VisualizargraduandoUI.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -510,6 +512,13 @@
     </Compile>
     <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cambiarcontrasena.aspx.cs">
+      <DependentUpon>Cambiarcontrasena.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cambiarcontrasena.aspx.designer.cs">
+      <DependentUpon>Cambiarcontrasena.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -600,6 +609,13 @@
     </Compile>
     <Compile Include="VisualizaregresadoUI.aspx.designer.cs">
       <DependentUpon>VisualizaregresadoUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizargraduandoUI.aspx.cs">
+      <DependentUpon>VisualizargraduandoUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VisualizargraduandoUI.aspx.designer.cs">
+      <DependentUpon>VisualizargraduandoUI.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
