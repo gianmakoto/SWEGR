@@ -57,20 +57,6 @@
                 modal: true
             }).css("font-size", "12px");
         }
-
-        function error_mensaje(mensaje) {
-            $("#dialogerror_mensaje").text(mensaje).dialog({
-                height: 200,
-                widht: 1800,
-                title: "Seguimiento de egresados",
-                buttons: {
-                    Aceptar: function () {
-                        $(this).dialog("close");
-                    }
-                },
-                modal: true
-            }).css("font-size", "12px");
-        }
     </script>
 </head>
 
@@ -181,7 +167,7 @@
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-9">
-                                    <asp:GridView ID="grdGraduandos" Width="930px"  align = "center" runat="server"  CellPadding="8" CellSpacing="3" AutoGenerateColumns="false" DataKeyNames="Idegresado" OnRowCommand="grdGraduandos_RowCommand">
+                                    <asp:GridView ID="grdGraduandos" Width="930px"  align = "center" runat="server"  CellPadding="8" CellSpacing="3" AutoGenerateColumns="false" DataKeyNames="Idegresado" OnRowCommand="grdGraduandos_RowCommand" AllowPaging="true" PageSize="2" OnPageIndexChanging="grdGraduandos_PageIndexChanging">
                                         <Columns>
                                             <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller"  DataField="EgresadoID" HeaderText="Idegresado" Visible="False" />
                                             <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller"  HeaderText="Código" DataField="Codigouniversitarioegresado" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
@@ -191,7 +177,7 @@
 
                                             <asp:TemplateField HeaderText="Actualizado" ItemStyle-HorizontalAlign="Center" HeaderStyle-Width="80px">
                                                 <ItemTemplate>
-                                                    <asp:CheckBox ID="chkbActualizacion" runat="server" Enabled="false"/>
+                                                    <asp:CheckBox ID="chkbActualizacion" runat="server" Enabled="false" Checked='<%# VerficarCheck(Eval("Idegresado").ToString()) %>'/>
                                                 </ItemTemplate>
                                             </asp:TemplateField>
 
@@ -204,10 +190,7 @@
                                                 </ItemTemplate>
                                             </asp:TemplateField>
                                         </Columns>
-
-                                        
-                                <HeaderStyle BackColor="#626262"  ForeColor="White" />  
-
+                                        <HeaderStyle BackColor="#626262"  ForeColor="White" />  
                                     </asp:GridView>
                                 </div>
                             </div>
@@ -220,10 +203,8 @@
                             </asp:UpdatePanel>
                             
                             <div class="form-group">
-                                <div id="dialogerror_mensaje" style="text-align: justify; display: none" runat="server"></div>
-
                                 <div id="dialogerror" style="text-align: justify; display: none" runat="server">
-                                    <b style="text-align: center">No existen egresados por mostrar.                   </div>
+                                    <b style="text-align: center">No existen graduandos para mostrar.                   </div>
                             </div>
                         </form>
                     </div>

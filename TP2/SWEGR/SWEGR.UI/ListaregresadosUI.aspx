@@ -104,6 +104,20 @@
             }).css("font-size", "12px");
         }
 
+        function menor() {
+            $("#dialogmenor").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    Aceptar: function () {
+                        $(this).dialog("close");
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
+
         function error_mensaje(mensaje) {
             $("#dialogerror_mensaje").text(mensaje).dialog({
                 height: 200,
@@ -112,6 +126,20 @@
                 buttons: {
                     Aceptar: function () {
                         $(this).dialog("close");
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
+
+        function perfillinkedinvacio() {
+            $("#dialogvalidacion").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    "Aceptar": function () {
+                        $(this).dialog("close")
                     }
                 },
                 modal: true
@@ -252,7 +280,7 @@
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-9">
-                                    <asp:GridView ID="grdEgresados" Width="930px"  align = "center" runat="server"  CellPadding="8" CellSpacing="3" AutoGenerateColumns="false" DataKeyNames="EgresadoID" OnRowCommand="grdEgresados_RowCommand" AllowPaging="true" PageSize="3" OnPageIndexChanging="grdEgresados_PageIndexChanging">
+                                    <asp:GridView ID="grdEgresados" Width="930px"  align = "center" runat="server"  CellPadding="8" CellSpacing="3" AutoGenerateColumns="false" DataKeyNames="EgresadoID" OnRowCommand="grdEgresados_RowCommand" AllowPaging="true" PageSize="10" OnPageIndexChanging="grdEgresados_PageIndexChanging">
                                         <Columns>
                                             <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller"  DataField="EgresadoID" HeaderText="EgresadoID" Visible="False" />
                                             <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller"  HeaderText="Código" DataField="Codigo" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
@@ -304,7 +332,10 @@
                                 <div id="dialogerror_mensaje" style="text-align: justify; display: none" runat="server"></div>
 
                                 <div id="dialogerror" style="text-align: justify; display: none" runat="server">
-                                    <b style="text-align: center">No existen egresados por mostrar.                   </div>
+                                    <b style="text-align: center">No existen egresados para mostrar.</div>
+
+                                <div id="dialogmenor" style="text-align: justify; display: none" runat="server">
+                                    <b style="text-align: center">El Año inicio debe ser menor o igual al Año fin.</div>
                             </div>
 
                             <!-- Parte Dialog Form -->

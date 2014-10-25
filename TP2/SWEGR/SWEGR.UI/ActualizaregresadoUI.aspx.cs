@@ -26,7 +26,6 @@ namespace SWEGR.UI
         string correoalternativo;
         string perfillinkedin;
         string perfilfacebook;
-        int agregarActivado;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -2550,9 +2549,13 @@ namespace SWEGR.UI
             RegistroAcademicoBE objRegistroAcademicoBE = new RegistroAcademicoBE();
             List<RegistroAcademicoBE> listaRegistroAcademicoBE = new List<RegistroAcademicoBE>();
             RegistroAcademicoBC objRegistroAcademicoBC = new RegistroAcademicoBC();
+            
+            int activadoagregar = (int)ViewState["RAActivado"];
+            int activado = activadoagregar;
 
             listaRegistroAcademicoBE = objRegistroAcademicoBC.listarregistroacademico(idegresado);
             int cantidad = listaRegistroAcademicoBE.Count;
+            
 
             if (txtcentroEstudios.Text == "" || txtcentroEstudios.Text == null)
             {
@@ -2599,7 +2602,7 @@ namespace SWEGR.UI
             else
                 txtdescripcionEstudio.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
             //**//
-            if (cantidad > 1)
+            if ((cantidad + activado) > 1)
             {
                 if (txtcentroEstudios2.Text == "" || txtcentroEstudios2.Text == null)
                 {
@@ -2647,7 +2650,7 @@ namespace SWEGR.UI
                     txtdescripcionEstudio2.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
             }
             //**//
-            if (cantidad > 2)
+            if ((cantidad + activado) > 2)
             {
                 if (txtcentroEstudios3.Text == "" || txtcentroEstudios3.Text == null)
                 {
@@ -2695,7 +2698,7 @@ namespace SWEGR.UI
                     txtdescripcionEstudio3.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
             }
             //**//
-            if (cantidad > 3)
+            if ((cantidad + activado) > 3)
             {
                 if (txtcentroEstudios4.Text == "" || txtcentroEstudios4.Text == null)
                 {
@@ -2743,7 +2746,7 @@ namespace SWEGR.UI
                     txtdescripcionEstudio4.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
             }
             //**//
-            if (cantidad > 4)
+            if ((cantidad + activado) > 4)
             {
                 if (txtcentroEstudios5.Text == "" || txtcentroEstudios5.Text == null)
                 {
@@ -2791,7 +2794,7 @@ namespace SWEGR.UI
                     txtdescripcionEstudio5.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
             }
             //**//
-            if (cantidad > 5)
+            if ((cantidad + activado) > 5)
             {
                 if (txtcentroEstudios6.Text == "" || txtcentroEstudios6.Text == null)
                 {
@@ -2839,7 +2842,7 @@ namespace SWEGR.UI
                     txtdescripcionEstudio6.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
             }
             //**//
-            if (cantidad > 6)
+            if ((cantidad + activado) > 6)
             {
                 if (txtcentroEstudios7.Text == "" || txtcentroEstudios7.Text == null)
                 {
@@ -2887,7 +2890,7 @@ namespace SWEGR.UI
                     txtdescripcionEstudio7.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
             }
             //**//
-            if (cantidad > 7)
+            if ((cantidad + activado) > 7)
             {
                 if (txtcentroEstudios8.Text == "" || txtcentroEstudios8.Text == null)
                 {
@@ -2935,7 +2938,7 @@ namespace SWEGR.UI
                     txtdescripcionEstudio8.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
             }
             //**//
-            if (cantidad > 8)
+            if ((cantidad + activado) > 8)
             {
                 if (txtcentroEstudios9.Text == "" || txtcentroEstudios9.Text == null)
                 {
@@ -2983,7 +2986,7 @@ namespace SWEGR.UI
                     txtdescripcionEstudio9.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
             }
             //**//
-            if (cantidad > 9)
+            if ((cantidad + activado) > 9)
             {
                 if (txtcentroEstudios10.Text == "" || txtcentroEstudios10.Text == null)
                 {
@@ -3031,7 +3034,7 @@ namespace SWEGR.UI
                     txtdescripcionEstudio10.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
             }
             //**//
-            if (cantidad > 10)
+            if ((cantidad + activado) > 10)
             {
                 if (txtcentroEstudios11.Text == "" || txtcentroEstudios11.Text == null)
                 {
@@ -3079,7 +3082,7 @@ namespace SWEGR.UI
                     txtdescripcionEstudio11.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
             }
             //**//
-            if (cantidad > 11)
+            if ((cantidad + activado) > 11)
             {
                 if (txtcentroEstudios12.Text == "" || txtcentroEstudios12.Text == null)
                 {
@@ -3127,7 +3130,7 @@ namespace SWEGR.UI
                     txtdescripcionEstudio12.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
             }
             //**//
-            if (cantidad > 12)
+            if ((cantidad + activado) > 12)
             {
                 if (txtcentroEstudios13.Text == "" || txtcentroEstudios13.Text == null)
                 {
@@ -3175,7 +3178,7 @@ namespace SWEGR.UI
                     txtdescripcionEstudio13.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
             }
             //**//
-            if (cantidad > 13)
+            if ((cantidad + activado) > 13)
             {
                 if (txtcentroEstudios14.Text == "" || txtcentroEstudios14.Text == null)
                 {
@@ -3223,7 +3226,7 @@ namespace SWEGR.UI
                     txtdescripcionEstudio14.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
             }
             //**//
-            if (cantidad > 14)
+            if ((cantidad + activado) > 14)
             {
                 if (txtcentroEstudios15.Text == "" || txtcentroEstudios15.Text == null)
                 {
@@ -3271,7 +3274,7 @@ namespace SWEGR.UI
                     txtdescripcionEstudio15.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
             }
             //**//
-            if (cantidad > 15)
+            if ((cantidad + activado) > 15)
             {
                 if (txtcentroEstudios16.Text == "" || txtcentroEstudios16.Text == null)
                 {
@@ -3319,7 +3322,7 @@ namespace SWEGR.UI
                     txtdescripcionEstudio16.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
             }
             //**//
-            if (cantidad > 16)
+            if ((cantidad + activado) > 16)
             {
                 if (txtcentroEstudios17.Text == "" || txtcentroEstudios17.Text == null)
                 {
@@ -3367,7 +3370,7 @@ namespace SWEGR.UI
                     txtdescripcionEstudio17.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
             }
             //**//
-            if (cantidad > 17)
+            if ((cantidad + activado) > 17)
             {
                 if (txtcentroEstudios18.Text == "" || txtcentroEstudios18.Text == null)
                 {
@@ -3415,7 +3418,7 @@ namespace SWEGR.UI
                     txtdescripcionEstudio18.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
             }
             //**//
-            if (cantidad > 18)
+            if ((cantidad + activado) > 18)
             {
                 if (txtcentroEstudios19.Text == "" || txtcentroEstudios19.Text == null)
                 {
@@ -3463,7 +3466,7 @@ namespace SWEGR.UI
                     txtdescripcionEstudio19.BorderColor = System.Drawing.ColorTranslator.FromHtml("#E2E2E4");
             }
             //**//
-            if (cantidad > 19)
+            if ((cantidad + activado) > 19)
             {
                 if (txtcentroEstudios20.Text == "" || txtcentroEstudios20.Text == null)
                 {
@@ -3522,6 +3525,7 @@ namespace SWEGR.UI
             ScriptManager.RegisterStartupScript(Page, GetType(), "ocultaragregarTA", "ocultaragregarTA();", true);
             
             int idegresado = IDEgresado;
+            ViewState["RAActivado"] = 1;
             RegistroAcademicoBE objRegistroAcademicoBE = new RegistroAcademicoBE();
             List<RegistroAcademicoBE> listaRegistroAcademicoBE = new List<RegistroAcademicoBE>();
             RegistroAcademicoBC objRegistroAcademicoBC = new RegistroAcademicoBC();
@@ -3719,6 +3723,7 @@ namespace SWEGR.UI
         protected void btncancelarRA_Click(object sender, EventArgs e)
         {
             int idegresado = IDEgresado;
+            ViewState["RAActivado"] = 0;
             RegistroAcademicoBE objRegistroAcademicoBE = new RegistroAcademicoBE();
             List<RegistroAcademicoBE> listaRegistroAcademicoBE = new List<RegistroAcademicoBE>();
             RegistroAcademicoBC objRegistroAcademicoBC = new RegistroAcademicoBC();
@@ -3799,7 +3804,8 @@ namespace SWEGR.UI
                         {
                             ScriptManager.RegisterStartupScript(Page, GetType(), "exitoRA", "exitoRA();", true);
                             ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarBotonesTA", "ocultarBotonesTA();", true);
-                            ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTODOTryacetoriaAcademica", "deshabilitarTODOTryacetoriaAcademica();", true);
+                            ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTODOTryacetoriaAcademica", "deshabilitarTODOTryacetoriaAcademica();", true)
+                                ViewState["RAActivado"] = 0;
                         }
                         else
                             ClientScript.RegisterClientScriptBlock(GetType(), "erroractualizarRA", "<script language=\"JavaScript\"> alert(\"Ocurrió un error\")</script>", false);
@@ -4912,6 +4918,7 @@ namespace SWEGR.UI
             bool correojefe18;
             bool correojefe19;
             bool correojefe20;
+            int agregarActivado = (int)ViewState["RLActivado"];
             int activado = agregarActivado;
 
             int idegresado = IDEgresado;
@@ -5177,7 +5184,8 @@ namespace SWEGR.UI
             List<RegistroLaboralBE> listaRegistroLaboralBE = new List<RegistroLaboralBE>();
             RegistroLaboralBC objRegistroLaboralBC = new RegistroLaboralBC();
 
-            int activado = 0;
+            int agregarActivado = (int)ViewState["RLActivado"];
+            int activado = agregarActivado;
 
             listaRegistroLaboralBE = objRegistroLaboralBC.listarregistrolaobral(idegresado);
             int cantidad = listaRegistroLaboralBE.Count;
@@ -6759,7 +6767,7 @@ namespace SWEGR.UI
         protected void btncancelarRL_Click(object sender, EventArgs e)
         {
             int idegresado = IDEgresado;
-            agregarActivado = 0;
+            ViewState["RLActivado"] = 0;
             RegistroLaboralBE objRegistroLaboralBE = new RegistroLaboralBE();
             List<RegistroLaboralBE> listaRegistroLaboralBE = new List<RegistroLaboralBE>();
             RegistroLaboralBC objRegistroLaboralBC = new RegistroLaboralBC();
@@ -6843,6 +6851,7 @@ namespace SWEGR.UI
                                 ScriptManager.RegisterStartupScript(Page, GetType(), "exitoRL", "exitoRL();", true);
                                 ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarBotonesTL", "ocultarBotonesTL();", true);
                                 ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTODOTrayectoriaLaboral", "deshabilitarTODOTrayectoriaLaboral();", true);
+                                ViewState["RLActivado"] = 0;
                             }
                             else
                                 ClientScript.RegisterClientScriptBlock(GetType(), "erroractualizarRL", "<script language=\"JavaScript\"> alert(\"Ocurrió un error\")</script>", false);
@@ -6867,7 +6876,7 @@ namespace SWEGR.UI
             ScriptManager.RegisterStartupScript(Page, GetType(), "ocultaragregarTL", "ocultaragregarTL();", true);
 
             int idegresado = IDEgresado;
-            agregarActivado = 1;
+            ViewState["RLActivado"] = 1;
             RegistroLaboralBE objRegistroLaboralBE = new RegistroLaboralBE();
             List<RegistroLaboralBE> listaRegistroLaboralBE = new List<RegistroLaboralBE>();
             RegistroLaboralBC objRegistroLaboralBC = new RegistroLaboralBC();

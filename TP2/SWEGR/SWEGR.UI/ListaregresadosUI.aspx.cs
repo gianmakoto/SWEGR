@@ -50,12 +50,19 @@ namespace SWEGR.UI
                     ddlCarrera.DataSource = listacarrera();
                     ddlCarrera.DataBind();
                     ddlCarrera.Items.Insert(0, new ListItem("Seleccione la Carrera", ""));
+
+                    ViewState["nombre"] = "";
+                    ViewState["carrera"] = "";
+                    ViewState["anioInicio"] = 0;
+                    ViewState["anioFin"] = 0;
+                    ViewState["codigouniversitario"] = "";
                 }
             }
             catch (Exception)
             {
                 ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Ocurrió un error\")</script>", false);
             }
+
 
         }
 
@@ -196,13 +203,14 @@ namespace SWEGR.UI
                 }
 
                 lstEgresados.Add(objEgresado);
-                //ViewState["lstEgresados"] = lstEgresados;
             }
 
             grdEgresados.DataSource = lstEgresados;
             grdEgresados.DataBind();
-        }
 
+            if (lstEgresados.Count == 0)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "error", "error();", true);
+        }
 
         public void grdEgresadosDataBind_Lista(String nombre, String carrera, int anioInicio, int anioFin, String codigoUniversitario)
         {
@@ -276,11 +284,13 @@ namespace SWEGR.UI
                 }
 
                 lstEgresados.Add(objEgresado);
-                //ViewState["lstEgresados"] = lstEgresados;
             }
 
             grdEgresados.DataSource = lstEgresados;
             grdEgresados.DataBind();
+
+            if(lstEgresados.Count == 0)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "error", "error();", true);
         }
 
         //public bool gredEgresadosxNombreoCodigo(string busqueda)
@@ -811,7 +821,6 @@ namespace SWEGR.UI
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
-           // string busqueda;
             string nombreBuscar="";
             string codigoUniversitarioBuscar="";
             int anioInicioBuscar=0;
@@ -831,6 +840,17 @@ namespace SWEGR.UI
             if (ddlCarrera.SelectedIndex != 0)
                 carreraBuscar=ddlCarrera.Text;
 
+            ViewState["nombre"] = nombreBuscar;
+            ViewState["carrera"] = carreraBuscar;
+            ViewState["anioInicio"] = anioInicioBuscar;
+            ViewState["anioFin"] = anioFinBuscar;
+            ViewState["codigouniversitario"] = codigoUniversitarioBuscar;
+
+            if (anioInicioBuscar > anioFinBuscar)
+            {
+                ScriptManager.RegisterStartupScript(Page, GetType(), "menor", "menor();", true);
+                return;
+            }
             
             grdEgresadosDataBind_Lista(nombreBuscar, carreraBuscar, anioInicioBuscar, anioFinBuscar, codigoUniversitarioBuscar);
 
@@ -1153,7 +1173,15 @@ namespace SWEGR.UI
         protected void grdEgresados_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             grdEgresados.PageIndex = e.NewPageIndex;
-            grdEgresadosDataBind();
+
+            string nombreBuscar = (string)ViewState["nombre"];
+            string codigoUniversitarioBuscar = (string)ViewState["codigouniversitario"];
+            int anioInicioBuscar = (int)ViewState["anioInicio"];
+            int anioFinBuscar = (int)ViewState["anioFin"];
+            string carreraBuscar = (string)ViewState["carrera"];
+
+            grdEgresadosDataBind_Lista(nombreBuscar, carreraBuscar, anioInicioBuscar, anioFinBuscar, codigoUniversitarioBuscar);
+            
         }
     }
 }

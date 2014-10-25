@@ -14,6 +14,7 @@ using SWEGR.BL.BE;
 using mshtml;
 using System.Threading;
 using System.Configuration;
+using System.Data;
 
 namespace SWEGR.UI
 {
@@ -32,6 +33,10 @@ namespace SWEGR.UI
                     ddlCarrera.DataSource = listacarrera();
                     ddlCarrera.DataBind();
                     ddlCarrera.Items.Insert(0, new ListItem("Seleccione la Carrera", ""));
+
+                    ViewState["nombre"] = "";
+                    ViewState["carrera"] = "";
+                    ViewState["codigoUniversitario"] = "";
                 }
             }
             catch (Exception)
@@ -60,10 +65,19 @@ namespace SWEGR.UI
 
             lstGraduandos = metodosEgresado.listarGraduando();
 
+            List<int> lstIDs = new List<int>();
+            for (int k = 0; k < lstGraduandos.Count; k++)
+            {
+                int id = lstGraduandos[k].Idegresado;
+                lstIDs.Add(id);
+            }
+
             grdGraduandos.DataSource = lstGraduandos;
             grdGraduandos.DataBind();
-        }
 
+            if (lstGraduandos.Count == 0)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "error", "error();", true);
+        }
 
         public void grdGraduandosDataBind_Lista(String nombre, String carrera, String codigoUniversitario)
         {
@@ -75,8 +89,18 @@ namespace SWEGR.UI
 
             lstEgresadoBE = metodosEgresado.listarGraduando_Lista(nombre, carrera, codigoUniversitario);
 
+            List<int> lstIDs = new List<int>();
+            for (int k = 0; k < lstEgresadoBE.Count; k++)
+            {
+                int id = lstEgresadoBE[k].Idegresado;
+                lstIDs.Add(id);
+            }
+
             grdGraduandos.DataSource = lstEgresadoBE;
             grdGraduandos.DataBind();
+
+            if (lstEgresadoBE.Count == 0)
+                ScriptManager.RegisterStartupScript(Page, GetType(), "error", "error();", true);
         }
 
         protected void grdGraduandos_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -102,6 +126,10 @@ namespace SWEGR.UI
             if (ddlCarrera.SelectedIndex != 0)
                 carreraBuscar = ddlCarrera.Text;
 
+            ViewState["nombre"] = nombreBuscar;
+            ViewState["carrera"] = carreraBuscar;
+            ViewState["codigoUniversitario"] = codigoUniversitarioBuscar;
+
             grdGraduandosDataBind_Lista(nombreBuscar, carreraBuscar, codigoUniversitarioBuscar);
         }
 
@@ -114,5 +142,34 @@ namespace SWEGR.UI
         {
 
         }
+
+        protected bool VerficarCheck(string id)
+        {
+            int IdEgresado = Convert.ToInt32(id);
+            EgresadoBE Graduando = new EgresadoBE();
+            EgresadoBC Metodos = new EgresadoBC();
+
+            Graduando = Metodos.obtenerEgresado(IdEgresado);
+
+            if (Graduando.Telefonoprinegresado == "" || Graduando.Telefonoprinegresado == null ||
+                Graduando.Correoegresado == "" || Graduando.Correoegresado == null ||
+                Graduando.Perfillinkedinegresado == "" || Graduando.Perfillinkedinegresado == null)
+                return false;
+            else
+                return true;
+        }
+
+        protected void grdGraduandos_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            grdGraduandos.PageIndex = e.NewPageIndex;
+
+            string nombreBuscar = (string)ViewState["nombre"];
+            string codigoUniversitarioBuscar = (string)ViewState["codigoUniversitario"];
+            string carreraBuscar = (string)ViewState["carrera"];
+
+            grdGraduandosDataBind_Lista(nombreBuscar, carreraBuscar, codigoUniversitarioBuscar);
+        }
+
+
     }
 }
