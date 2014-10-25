@@ -252,7 +252,7 @@
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-9">
-                                    <asp:GridView ID="grdEgresados" Width="930px"  align = "center" runat="server"  CellPadding="8" CellSpacing="3" AutoGenerateColumns="false" DataKeyNames="EgresadoID" OnRowCommand="grdEgresados_RowCommand">
+                                    <asp:GridView ID="grdEgresados" Width="930px"  align = "center" runat="server"  CellPadding="8" CellSpacing="3" AutoGenerateColumns="false" DataKeyNames="EgresadoID" OnRowCommand="grdEgresados_RowCommand" AllowPaging="true" PageSize="3" OnPageIndexChanging="grdEgresados_PageIndexChanging">
                                         <Columns>
                                             <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller"  DataField="EgresadoID" HeaderText="EgresadoID" Visible="False" />
                                             <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller"  HeaderText="Código" DataField="Codigo" ItemStyle-HorizontalAlign="Left"></asp:BoundField>

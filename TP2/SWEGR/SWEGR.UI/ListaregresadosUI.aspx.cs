@@ -196,6 +196,7 @@ namespace SWEGR.UI
                 }
 
                 lstEgresados.Add(objEgresado);
+                //ViewState["lstEgresados"] = lstEgresados;
             }
 
             grdEgresados.DataSource = lstEgresados;
@@ -275,6 +276,7 @@ namespace SWEGR.UI
                 }
 
                 lstEgresados.Add(objEgresado);
+                //ViewState["lstEgresados"] = lstEgresados;
             }
 
             grdEgresados.DataSource = lstEgresados;
@@ -1146,6 +1148,12 @@ namespace SWEGR.UI
             catch (Exception ex)
 
             { }
+        }
+
+        protected void grdEgresados_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            grdEgresados.PageIndex = e.NewPageIndex;
+            grdEgresadosDataBind();
         }
     }
 }
