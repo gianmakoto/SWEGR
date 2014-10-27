@@ -87,7 +87,7 @@
                         <li class="dropdown">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <img alt="" style="height: 19px; width:17px" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
-                                <span class="username">Nombre</span>
+                                <span class="username" id="spanNombre">Nombre</span>
                                 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu extended logout">
@@ -134,7 +134,7 @@
                             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
                             <asp:UpdatePanel ID="uppanel" runat="server" UpdateMode="Conditional">
                                 <ContentTemplate>
-
+<asp:HiddenField  ID="NombreHidden" runat="server"/>
                                 
                             <div class="form-group">
                                 <label class="col-sm-2 col-sm-2 control-label">
@@ -271,6 +271,10 @@
                 popupEasing: 'easeOutBack',
                 popup2Easing: 'easeOutBack'
             });
+
+
+            var algo = document.getElementById("<%= NombreHidden.ClientID %>").value; //hiddenField asp
+            $("#spanNombre").text(algo); //span html
         });
 
         $(window).load(function () {

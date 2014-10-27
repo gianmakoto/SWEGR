@@ -8,11 +8,39 @@ using SWEGR.BL.BE;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+using SSIAAutenticador;
 
 namespace SWEGR.DL.DALC
 {
     public class EgresadoDALC
     {
+        public String logincito(String usuario, String contra)
+        {
+            try
+            {String nombrecito;
+
+             SSIAAutenticadorBE autentificador_Datos = new SSIAAutenticadorBE();
+                    autentificador_Datos.Usuario =  usuario;
+                    autentificador_Datos.Contraseña = contra;
+                    SSIAAutenticador.SSIAAutenticador autentificador_Clase =  new SSIAAutenticador.SSIAAutenticador();
+                    autentificador_Datos =  autentificador_Clase.autenticar(autentificador_Datos);
+
+                    nombrecito = autentificador_Datos.Nombre;
+
+                    return nombrecito;
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+            
+
+       
+
+        }
+
+
         public EgresadoBE obtenerEgresadoxCodigo(string codigo)
         {
             String sqlobteneregresado;

@@ -29,11 +29,43 @@ namespace SWEGR.UI
         ObtenerDataBC obtenerDataBR = new ObtenerDataBC();
         SHDocVw.InternetExplorer IE;
 
+    
+        
+           
+
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
+                int IDEgresado;
+                char TUsuario;
+                String Nombrecitow;
+                IDEgresado = Convert.ToInt32(Session["IDusuario"]);
+                TUsuario = Convert.ToChar(Session["TipoUsusario"]);
+                Nombrecitow = Convert.ToString(Session["NOmbrezazo"]);
+
+                if (TUsuario != 'C')
+                {
+                    Response.Redirect("Login.aspx");
+                    return;
+                }
+
+
+
+
+
+
+                NombreHidden.Value = Nombrecitow;
+
+
+
+
+
+
+
+
                 if (!IsPostBack)
                 {
                     grdEgresadosDataBind();

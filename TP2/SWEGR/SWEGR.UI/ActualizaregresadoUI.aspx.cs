@@ -32,8 +32,10 @@ namespace SWEGR.UI
             try
             {
                 char TUsuario;
-                IDEgresado = Convert.ToInt32(Session["IDusuario"].ToString());
-                TUsuario = Convert.ToChar(Session["TipoUsuario"]);
+                IDEgresado = Convert.ToInt32(Session["IDusuario"]);
+                TUsuario = Convert.ToChar(Session["TipoUsusario"]);
+               
+
                 if (TUsuario == 'G')
                 {
                     Response.Redirect("Login.aspx");
@@ -3804,7 +3806,7 @@ namespace SWEGR.UI
                         {
                             ScriptManager.RegisterStartupScript(Page, GetType(), "exitoRA", "exitoRA();", true);
                             ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarBotonesTA", "ocultarBotonesTA();", true);
-                            ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTODOTryacetoriaAcademica", "deshabilitarTODOTryacetoriaAcademica();", true)
+                            ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarTODOTryacetoriaAcademica", "deshabilitarTODOTryacetoriaAcademica();", true);
                                 ViewState["RAActivado"] = 0;
                         }
                         else

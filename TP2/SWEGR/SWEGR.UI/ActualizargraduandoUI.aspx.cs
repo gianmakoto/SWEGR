@@ -32,16 +32,17 @@ namespace SWEGR.UI
             try
             {
                 IDEgresado = Convert.ToInt32(Session["IDusuario"]);
-                TUsuario = Convert.ToChar(Session["TipoUsuario"]);
+                TUsuario = Convert.ToChar(Session["TipoUsusario"]);
+               
                 if (TUsuario == 'E')
                 {
-                    Response.Redirect("Loginprueba.aspx");
+                    Response.Redirect("Login.aspx");
                     return;
                 }
 
                 if (IDEgresado == 0)
                 {
-                    Response.Redirect("Loginprueba.aspx");
+                    Response.Redirect("Login.aspx");
                     return;
                 }
 

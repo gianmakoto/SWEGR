@@ -3532,33 +3532,6 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.Button btnInsertaraptitud;
         
         /// <summary>
-        /// upguardaraptitud control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel upguardaraptitud;
-        
-        /// <summary>
-        /// btnGuardaraptitud control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGuardaraptitud;
-        
-        /// <summary>
-        /// upcancelaraptitud control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel upcancelaraptitud;
-        
-        /// <summary>
         /// btnCancelaraptitud control.
         /// </summary>
         /// <remarks>
@@ -3631,13 +3604,13 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.TextBox txtInteres;
         
         /// <summary>
-        /// upinsertarinteres control.
+        /// UpdatePanel3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel upinsertarinteres;
+        protected global::System.Web.UI.UpdatePanel UpdatePanel3;
         
         /// <summary>
         /// btnInsertarinteres control.
@@ -3647,33 +3620,6 @@ namespace SWEGR.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnInsertarinteres;
-        
-        /// <summary>
-        /// upguardarinteres control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel upguardarinteres;
-        
-        /// <summary>
-        /// btnGuardarinteres control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGuardarinteres;
-        
-        /// <summary>
-        /// upcancelarinteres control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel upcancelarinteres;
         
         /// <summary>
         /// btnCancelarinteres control.

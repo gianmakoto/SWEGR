@@ -70,12 +70,7 @@
                 </a>
             </div>
 
-              <div class="">
               
-                <a class="" href="#">
-                    Registrarse
-                </a>
-            </div>
 
         </div>
 

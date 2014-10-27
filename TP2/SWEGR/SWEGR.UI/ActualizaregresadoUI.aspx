@@ -1828,7 +1828,7 @@
                             <ul class="dropdown-menu extended logout">
                                 <div class="log-arrow-up"></div>
                                 <%--<li><a href="#"><i class=" icon-suitcase"></i>Profile</a></li>--%>
-                                <%--<li><a href="#"><i class="icon-cog"></i>Settings</a></li>--%>
+                                <li><a href="#"><i class="icon-cog"></i>Cambiar Contraseña</a></li>
                                 <%--<li><a href="#"><i class="icon-bell-alt"></i>Notification</a></li>--%>
                                 <li><a href="login.aspx"><i class="icon-key"></i>Cerrar sesión</a></li>
                             </ul>
@@ -5215,193 +5215,152 @@
 
                             <div id="aptitudesIntereses" style="border: 1px solid black; padding-left: 4%; padding-top: 4%" hidden="hidden">
                                 <div class="form-group">
-                                    <table border="0" style="margin: auto" class="auto-style13">
-                                        <tr>
-                                            <td style="width: 200px">
+                                    
+                                    <div class="col-md-6">
+                                        <div class="col-sm12">
+                                            <asp:UpdatePanel ID="upgrdAptitudes" runat="server" UpdateMode="Conditional">
+                                                <ContentTemplate>
+                                                    <asp:GridView ID="grdAptitudes" runat="server" AutoGenerateColumns="false" OnRowCommand="grdAptitudes_RowCommand" CssClass="table  pull-left">
+                                                        <Columns>
+                                                            <asp:BoundField HeaderText="Aptitud" DataField="Nombreaptitud" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                                            <asp:TemplateField HeaderText="Editar" ItemStyle-HorizontalAlign="Center">
+                                                                <ItemTemplate>
+                                                                    <asp:UpdatePanel ID="upbtnEditarAptitud" runat="server" UpdateMode="Conditional">
+                                                                        <ContentTemplate>
+                                                                            <div id="diveditarapt">
+                                                                                <asp:ImageButton ID="btnEditarAptitud" runat="server" CommandName="cmdEditar" ImageUrl="Images/edit.png" Width="16" Height="16" CommandArgument='<%# Eval("Idaptitud") %>' />
+                                                                            </div>
+                                                                        </ContentTemplate>
+                                                                    </asp:UpdatePanel>
+                                                                </ItemTemplate>
+                                                            </asp:TemplateField>
+                                                            <asp:TemplateField HeaderText="Eliminar" ItemStyle-HorizontalAlign="Center">
+                                                                <ItemTemplate>
+                                                                    <asp:UpdatePanel ID="upbtnEliminarAptitud" runat="server" UpdateMode="Conditional">
+                                                                        <ContentTemplate>
+                                                                            <asp:ImageButton ID="btnEliminarAptitud" runat="server" CommandName="cmdEliminar" ImageUrl="Images/delete.png" Width="16" Height="16" CommandArgument='<%# Eval("Idaptitud") %>' />
+                                                                        </ContentTemplate>
+                                                                    </asp:UpdatePanel>
+                                                                </ItemTemplate>
+                                                            </asp:TemplateField>
+                                                        </Columns>
+                                                        <HeaderStyle BackColor="#626262" ForeColor="White" />
+                                                    </asp:GridView>
+                                                </ContentTemplate>
+                                            </asp:UpdatePanel>
+                                        </div>
+                                        <br />
+                                        <div class="form-group" hidden="hidden">
+                                            <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+                                                <ContentTemplate>
+                                                    <asp:Button ID="botoneliminarAptitudes" runat="server" OnClick="botoneliminarAptitudes_Click" />
+                                                </ContentTemplate>
+                                            </asp:UpdatePanel>
+                                        </div>
 
-                                                <div class="form-group">
-                                                    <div class="col-sm-9">
-                                                        <div class="form-group" id="Div5">
-                                                    <asp:UpdatePanel ID="upgrdAptitudes" runat="server" UpdateMode="Conditional">
-                                                        <ContentTemplate>
-                                                        <asp:GridView ID="grdAptitudes" runat="server" AutoGenerateColumns="false" OnRowCommand="grdAptitudes_RowCommand">
-                                                            <Columns>
-                                                                <asp:BoundField HeaderText="Aptitud" DataField="Nombreaptitud" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                                                <asp:TemplateField HeaderText="Editar" ItemStyle-HorizontalAlign="Center">
-                                                                    <ItemTemplate>
-                                                                        <asp:UpdatePanel ID="upbtnEditarAptitud" runat="server" UpdateMode="Conditional">
-                                                                            <ContentTemplate>
-                                                                                <div id="diveditarapt">
-                                                                                    <asp:ImageButton ID="btnEditarAptitud" runat="server" CommandName="cmdEditar" ImageUrl="Images/edit.png" Width="16" Height="16" CommandArgument='<%# Eval("Idaptitud") %>'/>
-                                                                                </div>
-                                                                            </ContentTemplate>
-                                                                        </asp:UpdatePanel>
-                                                                    </ItemTemplate>
-                                                                </asp:TemplateField>
-                                                                <asp:TemplateField HeaderText="Eliminar" ItemStyle-HorizontalAlign="Center">
-                                                                    <ItemTemplate>
-                                                                        <asp:UpdatePanel ID="upbtnEliminarAptitud" runat="server" UpdateMode="Conditional">
-                                                                            <ContentTemplate>
-                                                                                <asp:ImageButton ID="btnEliminarAptitud" runat="server" CommandName="cmdEliminar" ImageUrl="Images/delete.png" Width="16" Height="16" CommandArgument='<%# Eval("Idaptitud") %>'/>
-                                                                            </ContentTemplate>
-                                                                        </asp:UpdatePanel>
-                                                                    </ItemTemplate>
-                                                                </asp:TemplateField>
-                                                            </Columns>
-
-                                                            <HeaderStyle BackColor="#626262"  ForeColor="White" />  
-                                                        </asp:GridView>
-                                                            </ContentTemplate>
-                                                    </asp:UpdatePanel>
-                                                    </div>
-                                                    <div hidden="hidden">
-                                                        <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
-                                                            <ContentTemplate>
-                                                                <asp:Button ID="botoneliminarAptitudes" runat="server" OnClick="botoneliminarAptitudes_Click"/>
-                                                            </ContentTemplate>
-                                                        </asp:UpdatePanel>
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-group" id="btnagregarapt">
-                                                    <asp:UpdatePanel ID="upAgregaraptitud" runat="server" UpdateMode="Conditional">
-                                                        <ContentTemplate>
-                                                            <div class="col-sm-10">
-                                                                <asp:Button ID="btnAgregaraptitud" runat="server" Text="+ Agregar Aptitud" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnAgregaraptitud_Click" />
-                                                            </div>
-                                                        </ContentTemplate>
-                                                    </asp:UpdatePanel>
-                                                </div>
-                                                <div class="form-group" id="txtapt" hidden="hidden">
-                                                    <label class="col-sm-2 col-sm-2 control-label">
-                                                        Aptitud:
-                                                    </label>
+                                        <div class="form-group" id="btnagregarapt">
+                                            <asp:UpdatePanel ID="upAgregaraptitud" runat="server" UpdateMode="Conditional">
+                                                <ContentTemplate>
                                                     <div class="col-sm-8">
-                                                        <asp:TextBox ID="txtAptitud" runat="server" CssClass="form-control" type="text" placeholder="Escriba la aptitud"></asp:TextBox>
+                                                        <asp:Button ID="btnAgregaraptitud" runat="server" Text="+ Agregar Aptitud" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnAgregaraptitud_Click" />
                                                     </div>
-                                                </div>
-                                                <div class="form-group" id="btninsertarapt" hidden="hidden">
-                                                    <asp:UpdatePanel ID="upinsertaraptitud" runat="server" UpdateMode="Conditional">
-                                                        <ContentTemplate>
-                                                            <div class="col-sm-10">
-                                                                <asp:Button ID="btnInsertaraptitud" runat="server" Text="Agregar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnInsertaraptitud_Click" />
-                                                            </div>
-                                                        </ContentTemplate>
-                                                    </asp:UpdatePanel>
-                                                </div>
-                                                <div class="form-group" id="btnguardarapt" hidden="hidden">
-                                                    <asp:UpdatePanel ID="upguardaraptitud" runat="server" UpdateMode="Conditional">
-                                                        <ContentTemplate>
-                                                            <div class="col-sm-10">
-                                                                <asp:Button ID="btnGuardaraptitud" runat="server" Text="Guardar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnGuardaraptitud_Click" />
-                                                            </div>
-                                                        </ContentTemplate>
-                                                    </asp:UpdatePanel>
-                                                </div>
-                                                <div class="form-group" id="btncancelarapt" hidden="hidden">
-                                                    <asp:UpdatePanel ID="upcancelaraptitud" runat="server" UpdateMode="Conditional">
-                                                        <ContentTemplate>
-                                                            <div class="col-sm-10">
-                                                                <asp:Button ID="btnCancelaraptitud" runat="server" Text="Cancelar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnCancelaraptitud_Click" />
-                                                            </div>
-                                                        </ContentTemplate>
-                                                    </asp:UpdatePanel>
-                                                </div>
-                                            </td>
+                                                </ContentTemplate>
+                                            </asp:UpdatePanel>
+                                        </div>
+                                        <div class="form-group" id="txtapt" hidden="hidden">
+                                            <label class="col-sm-2 col-sm-2 control-label">
+                                                Aptitud:
+                                            </label>
+                                            <div class="col-sm-8">
+                                                <asp:TextBox ID="txtAptitud" runat="server" CssClass="form-control" type="text" placeholder="Escriba la aptitud"></asp:TextBox>
+                                            </div>
+                                        </div>
+                                        <div class="form-group" id="btninsertarapt" hidden="hidden">
+                                            <asp:UpdatePanel ID="upinsertaraptitud" runat="server" UpdateMode="Conditional">
+                                                <ContentTemplate>
 
-                                            <td style="width: 200px"></td>
+                                                    <asp:Button ID="btnInsertaraptitud" runat="server" Text="Agregar" CssClass="btn btn-danger" type="submit" OnClick="btnInsertaraptitud_Click" />
+                                                    &nbsp;
+                                                        <asp:Button ID="btnCancelaraptitud" runat="server" Text="Cancelar" CssClass="btn btn-danger" type="submit" OnClick="btnCancelaraptitud_Click" />
 
-                                            <td style="width: 200px">
+                                                </ContentTemplate>
+                                            </asp:UpdatePanel>
+                                        </div>
 
-                                                <div class="form-group">
-                                                    <div class="col-sm-9">
-                                                        <asp:UpdatePanel ID="upgrdIntereses" runat="server" UpdateMode="Conditional">
-                                                        <ContentTemplate>
-                                                        <asp:GridView ID="grdIntereses" runat="server" AutoGenerateColumns="false" OnRowCommand="grdIntereses_RowCommand">
-                                                            <Columns>
-                                                                <asp:BoundField HeaderText="Interes" DataField="Nombreinteres" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                                                <asp:TemplateField HeaderText="Editar" ItemStyle-HorizontalAlign="Center">
-                                                                    <ItemTemplate>
-                                                                        <asp:UpdatePanel ID="upbtnEditarInteres" runat="server" UpdateMode="Conditional">
-                                                                            <ContentTemplate>
-                                                                                <asp:ImageButton ID="btnEditarInteres" runat="server" CommandName="cmdEditar" ImageUrl="Images/edit.png" Width="16" Height="16" CommandArgument='<%# Eval("Idinteres") %>'/>
-                                                                            </ContentTemplate>
-                                                                        </asp:UpdatePanel>
-                                                                    </ItemTemplate>
-                                                                </asp:TemplateField>
-                                                                <asp:TemplateField HeaderText="Eliminar" ItemStyle-HorizontalAlign="Center">
-                                                                    <ItemTemplate>
-                                                                        <asp:UpdatePanel ID="upbtnEliminarInteres" runat="server" UpdateMode="Conditional">
-                                                                            <ContentTemplate>
-                                                                                <asp:ImageButton ID="btnEliminarInteres" runat="server" CommandName="cmdEliminar" ImageUrl="Images/delete.png" Width="16" Height="16" CommandArgument='<%# Eval("Idinteres") %>'/>
-                                                                            </ContentTemplate>
-                                                                        </asp:UpdatePanel>
-                                                                    </ItemTemplate>
-                                                                </asp:TemplateField>
-                                                            </Columns>
-                                                            <HeaderStyle BackColor="#626262"  ForeColor="White" />  
-                                                        </asp:GridView>
-                                                            </ContentTemplate>
-                                                    </asp:UpdatePanel>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="col-sm12">
+                                            <asp:UpdatePanel ID="upgrdIntereses" runat="server" UpdateMode="Conditional">
+                                                <ContentTemplate>
+                                                    <asp:GridView ID="grdIntereses" runat="server" AutoGenerateColumns="false" OnRowCommand="grdIntereses_RowCommand" CssClass="table">
+                                                        <Columns>
+                                                            <asp:BoundField HeaderText="Interes" DataField="Nombreinteres" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                                            <asp:TemplateField HeaderText="Editar" ItemStyle-HorizontalAlign="Center">
+                                                                <ItemTemplate>
+                                                                    <asp:UpdatePanel ID="upbtnEditarInteres" runat="server" UpdateMode="Conditional">
+                                                                        <ContentTemplate>
+                                                                            <asp:ImageButton ID="btnEditarInteres" runat="server" CommandName="cmdEditar" ImageUrl="Images/edit.png" Width="16" Height="16" CommandArgument='<%# Eval("Idinteres") %>' />
+                                                                        </ContentTemplate>
+                                                                    </asp:UpdatePanel>
+                                                                </ItemTemplate>
+                                                            </asp:TemplateField>
+                                                            <asp:TemplateField HeaderText="Eliminar" ItemStyle-HorizontalAlign="Center">
+                                                                <ItemTemplate>
+                                                                    <asp:UpdatePanel ID="upbtnEliminarInteres" runat="server" UpdateMode="Conditional">
+                                                                        <ContentTemplate>
+                                                                            <asp:ImageButton ID="btnEliminarInteres" runat="server" CommandName="cmdEliminar" ImageUrl="Images/delete.png" Width="16" Height="16" CommandArgument='<%# Eval("Idinteres") %>' />
+                                                                        </ContentTemplate>
+                                                                    </asp:UpdatePanel>
+                                                                </ItemTemplate>
+                                                            </asp:TemplateField>
+                                                        </Columns>
+                                                        <HeaderStyle BackColor="#626262" ForeColor="White" />
+                                                    </asp:GridView>
+                                                </ContentTemplate>
+                                            </asp:UpdatePanel>
+                                        </div>
+                                        <br />
+                                        <div class="form-group" hidden="hidden">
+                                            <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
+                                                <ContentTemplate>
+                                                    <asp:Button ID="botoneliminarIntereses" runat="server" OnClick="botoneliminarIntereses_Click" />
+                                                </ContentTemplate>
+                                            </asp:UpdatePanel>
+                                        </div>
+
+                                        <div class="form-group" id="btnagregarint">
+                                            <asp:UpdatePanel ID="upAgregarinteres" runat="server" UpdateMode="Conditional">
+                                                <ContentTemplate>
+                                                    <div class="col-sm-8">
+                                                        <asp:Button ID="btnAgregarinteres" runat="server" Text="+ Agregar Interés" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnAgregarinteres_Click" />
                                                     </div>
+                                                </ContentTemplate>
+                                            </asp:UpdatePanel>
+                                        </div>
+                                        <div class="form-group" id="txtint" hidden="hidden">
+                                            <label class="col-sm-2 col-sm-2 control-label">
+                                                Interes:
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <asp:TextBox ID="txtInteres" runat="server" CssClass="form-control" type="text" placeholder="Escriba el interes"></asp:TextBox>
+                                            </div>
+                                        </div>
+                                        <div class="form-group" id="btninsertarint" hidden="hidden">
+                                            <asp:UpdatePanel ID="UpdatePanel3" runat="server" UpdateMode="Conditional">
+                                                <ContentTemplate>
 
-                                                    <div hidden="hidden">
-                                                        <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
-                                                            <ContentTemplate>
-                                                                <asp:Button ID="botoneliminarIntereses" runat="server" OnClick="botoneliminarIntereses_Click"/>
-                                                            </ContentTemplate>
-                                                        </asp:UpdatePanel>
-                                                    </div>
-                                                </div>
+                                                    <asp:Button ID="btnInsertarinteres" runat="server" Text="Guardar" CssClass="btn btn-danger" type="submit" OnClick="btnInsertarinteres_Click" />
+                                                    &nbsp;                                                        
+                                                        <asp:Button ID="btnCancelarinteres" runat="server" Text="Cancelar" CssClass="btn btn-danger" type="submit" OnClick="btnCancelarinteres_Click" />
 
-                                                <div class="form-group" id="btnagregarint">
-                                                    <asp:UpdatePanel ID="upAgregarinteres" runat="server" UpdateMode="Conditional">
-                                                        <ContentTemplate>
-                                                            <div class="col-sm-10">
-                                                                <asp:Button ID="btnAgregarinteres" runat="server" Text="+ Agregar Interés" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnAgregarinteres_Click" />
-                                                            </div>
-                                                        </ContentTemplate>
-                                                    </asp:UpdatePanel>
-                                                </div>
-                                                <div class="form-group" id="txtint" hidden="hidden">
-                                                    <label class="col-sm-2 col-sm-2 control-label">
-                                                        Interes:
-                                                    </label>
-                                                    <div class="col-sm-9">
-                                                        <asp:TextBox ID="txtInteres" runat="server" CssClass="form-control" type="text" placeholder="Escriba el interes"></asp:TextBox>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group" id="btninsertarint" hidden="hidden">
-                                                    <asp:UpdatePanel ID="upinsertarinteres" runat="server" UpdateMode="Conditional">
-                                                        <ContentTemplate>
-                                                            <div class="col-sm-10">
-                                                                <asp:Button ID="btnInsertarinteres" runat="server" Text="Agregar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnInsertarinteres_Click" />
-                                                            </div>
-                                                        </ContentTemplate>
-                                                    </asp:UpdatePanel>
-                                                </div>
-                                                <div class="form-group" id="btnguardarint" hidden="hidden">
-                                                    <asp:UpdatePanel ID="upguardarinteres" runat="server" UpdateMode="Conditional">
-                                                        <ContentTemplate>
-                                                            <div class="col-sm-10">
-                                                                <asp:Button ID="btnGuardarinteres" runat="server" Text="Guardar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnGuardarinteres_Click" />
-                                                            </div>
-                                                        </ContentTemplate>
-                                                    </asp:UpdatePanel>
-                                                </div>
-                                                <div class="form-group" id="btncancelarint" hidden="hidden">
-                                                    <asp:UpdatePanel ID="upcancelarinteres" runat="server" UpdateMode="Conditional">
-                                                        <ContentTemplate>
-                                                            <div class="col-sm-10">
-                                                                <asp:Button ID="btnCancelarinteres" runat="server" Text="Cancelar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnCancelarinteres_Click" />
-                                                            </div>
-                                                        </ContentTemplate>
-                                                    </asp:UpdatePanel>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </table>
+                                                </ContentTemplate>
+                                            </asp:UpdatePanel>
+                                        </div>
+                                    </div>
+
                                 </div>
+
                             </div>
 
                             <div class="form-group">

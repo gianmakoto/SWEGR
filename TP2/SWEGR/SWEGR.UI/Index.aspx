@@ -40,11 +40,13 @@
   </head>
 
   <body>
+      
     <!--header start-->
     <header class="header-frontend">
         <div class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
+                    
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -57,20 +59,20 @@
                         <li class="active"><a href="Index.aspx">Inicio</a></li>
                     
                         
-                        <li><a href="ActualizargraduandoUI.aspx">Egresado</a></li>
+                        <li><a href="ActualizaregresadoUI.aspx">Egresado</a></li>
                         
                         <%--<li><a href="ActualizargraduandoUI.aspx">Graduando</a></li>--%>
                         <!-- user login dropdown start-->
                         <li class="dropdown">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <img alt="" style="height: 19px; width:17px" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
-                                <span class="username">Nombre</span>
+                                <span class="username" id="spanNombre">Nombre</span>
                                 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu extended logout">
                                 <div class="log-arrow-up"></div>
                                 <%--<li><a href="#"><i class=" icon-suitcase"></i>Profile</a></li>--%>
-                                <%--<li><a href="#"><i class="icon-cog"></i>Settings</a></li>--%>
+                               <li><a href="#"><i class="icon-cog"></i>Cambiar Contraseña</a></li>
                                 <%--<li><a href="#"><i class="icon-bell-alt"></i>Notification</a></li>--%>
                                 <li><a href="login.aspx"><i class="icon-key"></i>Cerrar sesión</a></li>
                             </ul>
@@ -286,6 +288,10 @@
             </div>
        
     </footer>
+      
+        <form runat="server">
+          <asp:HiddenField  ID="NombreHidden" runat="server"/>
+      </form>
     <!--footer end-->
 
     <!-- js placed at the end of the document so the pages load faster -->
@@ -327,6 +333,11 @@
               popupEasing: 'easeOutBack',
               popup2Easing: 'easeOutBack'
           });
+
+          var algo = document.getElementById("<%= NombreHidden.ClientID %>").value; //hiddenField asp
+          $("#spanNombre").text(algo); //span html
+
+
       });
 
       $(window).load(function () {
@@ -344,6 +355,9 @@
 
 
   </script>
+
+    
+     
 
   </body>
 </html>
