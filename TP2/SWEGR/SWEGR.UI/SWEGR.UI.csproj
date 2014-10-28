@@ -44,6 +44,10 @@
     <Reference Include="AspNet.ScriptManager.jQuery">
       <HintPath>..\packages\AspNet.ScriptManager.jQuery.2.1.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
     </Reference>
+    <Reference Include="itextsharp, Version=4.1.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -133,6 +137,7 @@
     <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="ActualizaregresadoUI.aspx" />
     <Content Include="ActualizargraduandoUI.aspx" />
+    <Content Include="bin\itextsharp.dll" />
     <Content Include="Cambiarcontrasena.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\assets\bxslider\images\bx_loader.gif" />

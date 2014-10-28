@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ListaregresadosUI.aspx.cs" Inherits="SWEGR.UI.ListaregresadosUI" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ListaregresadosUI.aspx.cs" Inherits="SWEGR.UI.ListaregresadosUI" EnableEventValidation="false" %>
 
 <!DOCTYPE html>
 

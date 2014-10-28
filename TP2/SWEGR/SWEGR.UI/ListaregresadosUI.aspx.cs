@@ -10,6 +10,14 @@ using SWEGR.BL.BC;
 using SWEGR.BL.BE;
 
 
+using System.IO;
+using System.Data;
+using System.Data.SqlClient;
+
+using iTextSharp.text.html.simpleparser;
+using iTextSharp.text.pdf;
+
+
 //extraccion de datos de redes sociales
 using mshtml;
 using System.Threading;
@@ -29,12 +37,6 @@ namespace SWEGR.UI
         ObtenerDataBC obtenerDataBR = new ObtenerDataBC();
         SHDocVw.InternetExplorer IE;
 
-    
-        
-           
-
-
-
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -52,19 +54,7 @@ namespace SWEGR.UI
                     return;
                 }
 
-
-
-
-
-
                 NombreHidden.Value = Nombrecitow;
-
-
-
-
-
-
-
 
                 if (!IsPostBack)
                 {
@@ -94,8 +84,6 @@ namespace SWEGR.UI
             {
                 ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Ocurrió un error\")</script>", false);
             }
-
-
         }
 
         public List<String> listaanios()
@@ -987,9 +975,8 @@ namespace SWEGR.UI
 
         protected void Imprimir_Click(object sender, EventArgs e)
         {
-
+            ExportGridToPDF();
         }
-
 
         public DatosObtenidosBE extraerDatos(int codigoEgresado)
         {
@@ -1215,5 +1202,64 @@ namespace SWEGR.UI
             grdEgresadosDataBind_Lista(nombreBuscar, carreraBuscar, anioInicioBuscar, anioFinBuscar, codigoUniversitarioBuscar);
             
         }
+
+        private void ExportGridToPDF()
+        {
+            //Response.ContentType = "application/pdf";
+            //Response.AddHeader("content-disposition", "attachment;filename=Vithal_Wadje.pdf");
+            //Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            //StringWriter sw = new StringWriter();
+            //HtmlTextWriter hw = new HtmlTextWriter(sw);
+            //grdEgresados.RenderControl(hw);
+            //StringReader sr = new StringReader(sw.ToString());
+            //iTextSharp.text.Document pdfDoc = new iTextSharp.text.Document(iTextSharp.text.PageSize.A4, 10f, 10f, 10f, 0f);
+            //HTMLWorker htmlparser = new HTMLWorker(pdfDoc);
+            //PdfWriter.GetInstance(pdfDoc, Response.OutputStream);
+            //pdfDoc.Open();
+            //htmlparser.Parse(sr);
+            //pdfDoc.Close();
+            //Response.Write(pdfDoc);
+            //Response.End();
+            //grdEgresados.AllowPaging = true;
+            //grdEgresados.DataBind();
+
+            using (StringWriter sw = new StringWriter())
+            {
+                using (HtmlTextWriter hw = new HtmlTextWriter(sw))
+                {
+                    //To Export all pages
+                    grdEgresados.AllowPaging = false;
+
+                    string nombreBuscar = (string)ViewState["nombre"];
+                    string codigoUniversitarioBuscar = (string)ViewState["codigouniversitario"];
+                    int anioInicioBuscar = (int)ViewState["anioInicio"];
+                    int anioFinBuscar = (int)ViewState["anioFin"];
+                    string carreraBuscar = (string)ViewState["carrera"];
+
+                    grdEgresadosDataBind_Lista(nombreBuscar, carreraBuscar, anioInicioBuscar, anioFinBuscar, codigoUniversitarioBuscar);
+
+                    grdEgresados.RenderControl(hw);
+                    StringReader sr = new StringReader(sw.ToString());
+                    iTextSharp.text.Document pdfDoc = new iTextSharp.text.Document(iTextSharp.text.PageSize.A2, 10f, 10f, 10f, 0f);
+                    HTMLWorker htmlparser = new HTMLWorker(pdfDoc);
+                    PdfWriter.GetInstance(pdfDoc, Response.OutputStream);
+                    pdfDoc.Open();
+                    htmlparser.Parse(sr);
+                    pdfDoc.Close();
+
+                    Response.ContentType = "application/pdf";
+                    Response.AddHeader("content-disposition", "attachment;filename=GridViewExport.pdf");
+                    Response.Cache.SetCacheability(HttpCacheability.NoCache);
+                    Response.Write(pdfDoc);
+                    Response.End();
+                }
+            }
+        }
+
+        public override void VerifyRenderingInServerForm(Control control)
+        {
+            //required to avoid the runtime error "  
+            //Control 'GridView1' of type 'GridView' must be placed inside a form tag with runat=server."  
+        }  
     }
 }

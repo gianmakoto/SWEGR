@@ -34,7 +34,6 @@ namespace SWEGR.UI
                 char TUsuario;
                 IDEgresado = Convert.ToInt32(Session["IDusuario"]);
                 TUsuario = Convert.ToChar(Session["TipoUsusario"]);
-               
 
                 if (TUsuario == 'G')
                 {
