@@ -165,7 +165,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="Index.aspx">
+                    <a class="navbar-brand" href="InicioComite.aspx">
                         <img style="margin-top: -15px" src="http://cdn4.upc.edu.pe/sites/all/themes/upc_2013/img/logo.png"></img></a>
                 </div>
 
@@ -325,7 +325,7 @@
                             </div>
                             <div class="form-group">
                                         <div class="col-sm-10">
-                                            <asp:Button ID="btnImprimir" runat="server" Text="Imprimir" CssClass="btn btn-danger pull-right" type="submit" OnClick="Imprimir_Click" />
+                                            <asp:Button ID="btnImprimir" runat="server" Text="Exportar" CssClass="btn btn-danger pull-right" type="submit" OnClick="Imprimir_Click" />
                                         </div>
                             </div>
                                     </ContentTemplate>
