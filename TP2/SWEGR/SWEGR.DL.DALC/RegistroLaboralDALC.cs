@@ -190,6 +190,150 @@ namespace SWEGR.DL.DALC
             }
         }
 
+        public int insertarregistrolaboral_DatosExtraidos(RegistroLaboralBE objetoregistrolaboral)
+        {
+            String sqlinsertarregistrolaboral;
+
+            SqlConnection conn;
+            SqlCommand cmdinsertarregistrolaboral;
+            SqlParameter prmidregistrolaboral;
+            SqlParameter prmidegresado;
+            SqlParameter prmnombretrabajo;
+            SqlParameter prmcargo;
+            SqlParameter prmduracion;
+            SqlParameter prmdescripcion;
+            SqlParameter prmnombrejefe;
+            SqlParameter prmcargojefe;
+            SqlParameter prmtelefonojefe;
+            SqlParameter prmcorreojefe;
+            SqlParameter prmidpais;
+            SqlParameter prmtrabajoactual;
+
+            int idregistrolaboral;
+
+            try
+            {
+                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CSSeguimientoEgresados"].ToString());
+                sqlinsertarregistrolaboral = "SWEGR_insertarRegistroLaboral_DatosExtraidos";
+                cmdinsertarregistrolaboral = new SqlCommand(sqlinsertarregistrolaboral, conn);
+                cmdinsertarregistrolaboral.CommandType = CommandType.StoredProcedure;
+
+                prmidregistrolaboral = new SqlParameter();
+                prmidregistrolaboral.Direction = ParameterDirection.ReturnValue;
+                prmidregistrolaboral.SqlDbType = SqlDbType.Int;
+
+                prmidegresado = new SqlParameter();
+                prmidegresado.ParameterName = "@idegresado";
+                prmidegresado.SqlDbType = SqlDbType.Int;
+                prmidegresado.Value = objetoregistrolaboral.Idegresado;
+
+                prmnombretrabajo = new SqlParameter();
+                prmnombretrabajo.ParameterName = "@nombretrabajo";
+                prmnombretrabajo.SqlDbType = SqlDbType.VarChar;
+                prmnombretrabajo.Size = 100;
+                prmnombretrabajo.Value = objetoregistrolaboral.Nombretrabajo;
+
+                prmcargo = new SqlParameter();
+                prmcargo.ParameterName = "@cargo";
+                prmcargo.SqlDbType = SqlDbType.VarChar;
+                prmcargo.Size = 50;
+                if (objetoregistrolaboral.Cargotrabajo == null)
+                    prmcargo.Value = "";
+                else
+                    prmcargo.Value = objetoregistrolaboral.Cargotrabajo;
+
+                prmduracion = new SqlParameter();
+                prmduracion.ParameterName = "@duracion";
+                prmduracion.SqlDbType = SqlDbType.VarChar;
+                prmduracion.Size = 50;
+                if (objetoregistrolaboral.Duraciontrabajo == null)
+                    prmduracion.Value = "";
+                else
+                    prmduracion.Value = objetoregistrolaboral.Duraciontrabajo;
+
+                prmdescripcion = new SqlParameter();
+                prmdescripcion.ParameterName = "@descripcion";
+                prmdescripcion.SqlDbType = SqlDbType.VarChar;
+                prmdescripcion.Size = 500;
+                if (objetoregistrolaboral.Descripciontrabajo == null)
+                    prmdescripcion.Value = "";
+                else
+                    prmdescripcion.Value = objetoregistrolaboral.Descripciontrabajo;
+
+                prmnombrejefe = new SqlParameter();
+                prmnombrejefe.ParameterName = "@nombrejefe";
+                prmnombrejefe.SqlDbType = SqlDbType.VarChar;
+                prmnombrejefe.Size = 50;
+                if (objetoregistrolaboral.Nombrejefetrabajo == null)
+                    prmnombrejefe.Value = "";
+                else
+                    prmnombrejefe.Value = objetoregistrolaboral.Nombrejefetrabajo;
+
+                prmcargojefe = new SqlParameter();
+                prmcargojefe.ParameterName = "@cargojefe";
+                prmcargojefe.SqlDbType = SqlDbType.VarChar;
+                prmcargojefe.Size = 50;
+                if (objetoregistrolaboral.Cargojefetrabajo == null)
+                    prmcargojefe.Value = "";
+                else
+                    prmcargojefe.Value = objetoregistrolaboral.Cargojefetrabajo;
+
+                prmtelefonojefe = new SqlParameter();
+                prmtelefonojefe.ParameterName = "@telefonojefe";
+                prmtelefonojefe.SqlDbType = SqlDbType.VarChar;
+                prmtelefonojefe.Size = 15;
+                if (objetoregistrolaboral.Telefonojefetrabajo == null)
+                    prmtelefonojefe.Value = "";
+                else
+                    prmtelefonojefe.Value = objetoregistrolaboral.Telefonojefetrabajo;
+
+                prmcorreojefe = new SqlParameter();
+                prmcorreojefe.ParameterName = "@correojefe";
+                prmcorreojefe.SqlDbType = SqlDbType.VarChar;
+                prmcorreojefe.Size = 50;
+                if (objetoregistrolaboral.Correojefetrabajo == null)
+                    prmcorreojefe.Value = "";
+                else
+                    prmcorreojefe.Value = objetoregistrolaboral.Correojefetrabajo;
+
+                prmidpais = new SqlParameter();
+                prmidpais.ParameterName = "@idpais";
+                prmidpais.SqlDbType = SqlDbType.Int;
+                prmidpais.Value = objetoregistrolaboral.Idpais;
+
+                prmtrabajoactual = new SqlParameter();
+                prmtrabajoactual.ParameterName = "@trabajoactual";
+                prmtrabajoactual.SqlDbType = SqlDbType.Bit;
+                prmtrabajoactual.Value = objetoregistrolaboral.Trabajoactual;
+
+                cmdinsertarregistrolaboral.Parameters.Add(prmidregistrolaboral);
+                cmdinsertarregistrolaboral.Parameters.Add(prmidegresado);
+                cmdinsertarregistrolaboral.Parameters.Add(prmnombretrabajo);
+                cmdinsertarregistrolaboral.Parameters.Add(prmcargo);
+                cmdinsertarregistrolaboral.Parameters.Add(prmduracion);
+                cmdinsertarregistrolaboral.Parameters.Add(prmdescripcion);
+                cmdinsertarregistrolaboral.Parameters.Add(prmnombrejefe);
+                cmdinsertarregistrolaboral.Parameters.Add(prmcargojefe);
+                cmdinsertarregistrolaboral.Parameters.Add(prmtelefonojefe);
+                cmdinsertarregistrolaboral.Parameters.Add(prmcorreojefe);
+                cmdinsertarregistrolaboral.Parameters.Add(prmidpais);
+                cmdinsertarregistrolaboral.Parameters.Add(prmtrabajoactual);
+
+                cmdinsertarregistrolaboral.Connection.Open();
+                cmdinsertarregistrolaboral.ExecuteNonQuery();
+                idregistrolaboral = Convert.ToInt32(prmidregistrolaboral.Value);
+                cmdinsertarregistrolaboral.Connection.Close();
+
+                return idregistrolaboral;
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        
+        
         public bool actualizarregistrolaboral(RegistroLaboralBE objetoregistrolaboral)
         {
             String sqlactualizarregistrolaboral;

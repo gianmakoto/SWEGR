@@ -22,26 +22,26 @@ namespace SWEGR.UI
             try
             {
                 //IDEgresado = Convert.ToInt32(Request.QueryString["IDEgresado"]);
-                if (Session["TipoUsuarioLogueado"].ToString() == null)
+             /*   if (Session["TipoUsuarioLogueado"].ToString() == null)
                     TipoUsuarioLogueado = "";
                 TipoUsuarioLogueado = Session["TipoUsuarioLogueado"].ToString();
-
+                */
                 if(Convert.ToChar(Session["TipoUsuario"]) == null)
                     TUsuario = 'F';
 
                 TUsuario = Convert.ToChar(Session["TipoUsuario"]);
                 if (TUsuario == 'G')
                 {
-                    Response.Redirect("Loginprueba.aspx");
+                    Response.Redirect("Login.aspx");
                     return;
                 }
 
 
-                if (!TipoUsuarioLogueado.Equals("comite"))
+               /* if (!TipoUsuarioLogueado.Equals("comite"))
                 {
                     Response.Redirect("Loginprueba.aspx");
                     return;
-                }
+                }*/
 
                 if (!IsPostBack)
                 {

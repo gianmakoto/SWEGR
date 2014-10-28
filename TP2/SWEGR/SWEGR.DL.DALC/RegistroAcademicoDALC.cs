@@ -155,6 +155,118 @@ namespace SWEGR.DL.DALC
             }
         }
 
+
+
+        public int insertarregistroacademico_DatosExtraidos(RegistroAcademicoBE objetoregistroacademico)
+        {
+            String sqlinsertarregistroacademico;
+
+            SqlConnection conn;
+            SqlCommand cmdinsertarregistroacademico;
+            SqlParameter prmidregistroacademico;
+            SqlParameter prmidegresado;
+            SqlParameter prmnombreinstitucion;
+            SqlParameter prmnombre;
+            SqlParameter prmduracion;
+            SqlParameter prmdescripcion;
+            SqlParameter prmtipoestudio;
+            SqlParameter prmidpais;
+
+            int idregistroacademico;
+
+            try
+            {
+                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CSSeguimientoEgresados"].ToString());
+                sqlinsertarregistroacademico = "SWEGR_insertarRegistroAcademico_DatosExtraidos";
+                cmdinsertarregistroacademico = new SqlCommand(sqlinsertarregistroacademico, conn);
+                cmdinsertarregistroacademico.CommandType = CommandType.StoredProcedure;
+
+                prmidregistroacademico = new SqlParameter();
+                prmidregistroacademico.Direction = ParameterDirection.ReturnValue;
+                prmidregistroacademico.SqlDbType = SqlDbType.Int;
+
+                prmidegresado = new SqlParameter();
+                prmidegresado.ParameterName = "@idegresado";
+                prmidegresado.SqlDbType = SqlDbType.Int;
+                prmidegresado.Value = objetoregistroacademico.Idegresado;
+
+                prmnombreinstitucion = new SqlParameter();
+                prmnombreinstitucion.ParameterName = "@nombreinstitucion";
+                prmnombreinstitucion.SqlDbType = SqlDbType.VarChar;
+                prmnombreinstitucion.Size = 100;
+                if (objetoregistroacademico.Nombreinstitucion == null)
+                    prmnombreinstitucion.Value = "";
+                else
+                    prmnombreinstitucion.Value = objetoregistroacademico.Nombreinstitucion;
+
+                prmnombre = new SqlParameter();
+                prmnombre.ParameterName = "@nombre";
+                prmnombre.SqlDbType = SqlDbType.VarChar;
+                prmnombre.Size = 50;
+                if (objetoregistroacademico.Nombreestudio == null)
+                    prmnombre.Value = "";
+                else
+                    prmnombre.Value = objetoregistroacademico.Nombreestudio;
+
+                prmduracion = new SqlParameter();
+                prmduracion.ParameterName = "@duracion";
+                prmduracion.SqlDbType = SqlDbType.VarChar;
+                prmduracion.Size = 30;
+                if (objetoregistroacademico.Duracionestudio == null)
+                    prmduracion.Value = "";
+                else
+                    prmduracion.Value = objetoregistroacademico.Duracionestudio;
+
+                prmdescripcion = new SqlParameter();
+                prmdescripcion.ParameterName = "@descripcion";
+                prmdescripcion.SqlDbType = SqlDbType.VarChar;
+                prmdescripcion.Size = 500;
+                prmdescripcion.Value = objetoregistroacademico.Descripcionestudio;
+                if (objetoregistroacademico.Descripcionestudio == null)
+                    prmdescripcion.Value = "";
+                else
+                    prmdescripcion.Value = objetoregistroacademico.Descripcionestudio;
+
+
+
+                prmtipoestudio = new SqlParameter();
+                prmtipoestudio.ParameterName = "@tipoestudio";
+                prmtipoestudio.SqlDbType = SqlDbType.VarChar;
+                prmtipoestudio.Size = 100;
+                if (objetoregistroacademico.Tipoestudio == null)
+                    prmtipoestudio.Value = "";
+                else
+                    prmtipoestudio.Value = objetoregistroacademico.Tipoestudio;
+
+                prmidpais = new SqlParameter();
+                prmidpais.ParameterName = "@idpais";
+                prmidpais.SqlDbType = SqlDbType.Int;
+                prmidpais.Value = objetoregistroacademico.Idpais;
+
+                cmdinsertarregistroacademico.Parameters.Add(prmidregistroacademico);
+                cmdinsertarregistroacademico.Parameters.Add(prmidegresado);
+                cmdinsertarregistroacademico.Parameters.Add(prmnombreinstitucion);
+                cmdinsertarregistroacademico.Parameters.Add(prmnombre);
+                cmdinsertarregistroacademico.Parameters.Add(prmduracion);
+                cmdinsertarregistroacademico.Parameters.Add(prmdescripcion);
+                cmdinsertarregistroacademico.Parameters.Add(prmtipoestudio);
+                cmdinsertarregistroacademico.Parameters.Add(prmidpais);
+
+                cmdinsertarregistroacademico.Connection.Open();
+                cmdinsertarregistroacademico.ExecuteNonQuery();
+                idregistroacademico = Convert.ToInt32(prmidregistroacademico.Value);
+                cmdinsertarregistroacademico.Connection.Close();
+
+                return idregistroacademico;
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        
+        
         public bool actualizarregistroacademico(RegistroAcademicoBE objetoregistroacademico)
         {
             String sqlactualizarregistroacademico;

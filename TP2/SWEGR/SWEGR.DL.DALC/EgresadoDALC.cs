@@ -1510,6 +1510,111 @@ namespace SWEGR.DL.DALC
 
         }
 
+        public bool actualizarEgresado_DatosExtraidos(EgresadoBE objetoEgresadoBE)
+        {
+            String sqlactualizaregresado;
+
+            SqlConnection conn;
+            SqlCommand cmdactualizaregresado;
+            SqlParameter prmidegresado;
+            SqlParameter prmtelefonoprinegresado;
+            SqlParameter prmtelefonoaltegresado;
+            SqlParameter prmcorreoegresado;
+            SqlParameter prmcorreoaltegresado;
+            SqlParameter prmdireccionegresado;
+            SqlParameter prmfotoegresado;
+
+
+            try
+            {
+                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CSSeguimientoEgresados"].ToString());
+                sqlactualizaregresado = "SWEGR_actualizarEgresado_DatosExtraidos";
+                cmdactualizaregresado = new SqlCommand(sqlactualizaregresado, conn);
+                cmdactualizaregresado.CommandType = CommandType.StoredProcedure;
+
+                prmidegresado = new SqlParameter();
+                prmidegresado.ParameterName = "@idegresado";
+                prmidegresado.SqlDbType = SqlDbType.Int;
+                prmidegresado.Value = objetoEgresadoBE.Idegresado;
+
+                prmtelefonoaltegresado = new SqlParameter();
+                prmtelefonoaltegresado.ParameterName = "@telefonoaltegresado";
+                prmtelefonoaltegresado.SqlDbType = SqlDbType.VarChar;
+                prmtelefonoaltegresado.Size = 15;
+                if (objetoEgresadoBE.Telefonoaltegresado == null)
+                    prmtelefonoaltegresado.Value = "";
+                else
+                    prmtelefonoaltegresado.Value = objetoEgresadoBE.Telefonoaltegresado;
+
+
+
+                prmtelefonoprinegresado = new SqlParameter();
+                prmtelefonoprinegresado.ParameterName = "@telefonoprinegresado";
+                prmtelefonoprinegresado.SqlDbType = SqlDbType.VarChar;
+                prmtelefonoprinegresado.Size = 15;
+                if (objetoEgresadoBE.Telefonoprinegresado == null)
+                    prmtelefonoprinegresado.Value = "";
+                else
+                    prmtelefonoprinegresado.Value = objetoEgresadoBE.Telefonoprinegresado;
+
+
+
+                prmcorreoegresado = new SqlParameter();
+                prmcorreoegresado.ParameterName = "@correoegresado";
+                prmcorreoegresado.SqlDbType = SqlDbType.VarChar;
+                prmcorreoegresado.Size = 50;
+                if (objetoEgresadoBE.Correoegresado == null)
+                    prmcorreoegresado.Value = "";
+                else
+                    prmcorreoegresado.Value = objetoEgresadoBE.Correoegresado;
+
+
+                prmcorreoaltegresado = new SqlParameter();
+                prmcorreoaltegresado.ParameterName = "@correoaltegresado";
+                prmcorreoaltegresado.SqlDbType = SqlDbType.VarChar;
+                prmcorreoaltegresado.Size = 50;
+                if (objetoEgresadoBE.Correoaltegresado == null)
+                    prmcorreoaltegresado.Value = "";
+                else
+                    prmcorreoaltegresado.Value = objetoEgresadoBE.Correoaltegresado;
+
+                prmdireccionegresado = new SqlParameter();
+                prmdireccionegresado.ParameterName = "@direccionegresado";
+                prmdireccionegresado.SqlDbType = SqlDbType.VarChar;
+                prmdireccionegresado.Size = 100;
+                if (objetoEgresadoBE.Direccionegresado == null)
+                    prmdireccionegresado.Value = "";
+                else
+                    prmdireccionegresado.Value = objetoEgresadoBE.Direccionegresado;
+
+            /*    prmfotoegresado = new SqlParameter();
+                prmfotoegresado.ParameterName = "@fotoegresado";
+                prmfotoegresado.SqlDbType = SqlDbType.Image;
+                prmfotoegresado.Value = objetoEgresadoBE.Fotoegresado;
+*/
+
+                cmdactualizaregresado.Parameters.Add(prmidegresado);
+                cmdactualizaregresado.Parameters.Add(prmtelefonoprinegresado);
+                cmdactualizaregresado.Parameters.Add(prmtelefonoaltegresado);
+                cmdactualizaregresado.Parameters.Add(prmcorreoegresado);
+                cmdactualizaregresado.Parameters.Add(prmcorreoaltegresado);
+                cmdactualizaregresado.Parameters.Add(prmdireccionegresado);
+                // cmdactualizaregresado.Parameters.Add(prmfotoegresado);
+
+
+                cmdactualizaregresado.Connection.Open();
+                cmdactualizaregresado.ExecuteNonQuery();
+                cmdactualizaregresado.Connection.Close();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+        
+        
         public bool insertarFotoxEgresado(int idegresado, int idfoto)
         {
             String sqlinsertarfotoxegresado;

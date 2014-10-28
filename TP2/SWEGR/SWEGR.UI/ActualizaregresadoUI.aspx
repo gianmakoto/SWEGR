@@ -1914,28 +1914,32 @@
                                         <div class="form-group">
                                             <label class="col-sm-3 col-sm-2 control-label">
                                                 Género
+                                  Género
                                             </label>
                                             <div class="col-sm-9">
                                                 <asp:DropDownList ID="ddlGenero" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div class="cold-sm-2">
-                                        <div class="row">
-                                            <img id="contenedorfoto" runat="server" style="height: 135px; width: 135px; margin-left: 30px;" class="img-thumbnail" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+ <%--
+                          <asp:UpdatePanel ID="UpdatePanel_Imagen" runat="server" UpdateMode="Conditional">
+                                <ContentTemplate>--%>
+                                     <div class="cold-sm-2">
+                                            <div class="row">
+                                                <asp:Image ID="contenedorfoto" runat="server"  style="height: 135px; width: 135px; margin-left: 30px;" class="img-thumbnail"  />   
+                                             <%--<img id="contenedorfoto" runat="server" style="height: 135px; width: 135px; margin-left: 30px;" class="img-thumbnail" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png" />--%>
                                             <%--<input id="Fotelo1" style="height: 30px; width: 165px; padding-left: 35px; " runat="server"   type="file"/>--%>
                                             <asp:FileUpload ID="CargaImagen" runat="server"/>
                                             <asp:Button ID="CargarFoto" runat="server" Text="Cargar archivo" OnClick="CargarFoto_Click" />
                                         </div>
                                     </div>
-
+                                  <%-- </ContentTemplate>
+                               </asp:UpdatePanel>--%>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-2 col-sm-2 control-label">
                                         Fecha de Nacimiento
-                                    </label>
-                                    <div class="col-sm-8">
+                                        <div class="col-sm-8">
                                         <asp:TextBox ID="txtfechanacimiento" runat="server"
                                             CssClass="form-control" Enabled="false"></asp:TextBox>
                                     </div>

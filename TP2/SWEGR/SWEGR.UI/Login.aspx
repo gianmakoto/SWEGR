@@ -66,7 +66,7 @@
              <div class="">
 
                 <a class="" href="#">
-                    ¿Olvidaste tu clave?
+                   Regístrate
                 </a>
             </div>
 

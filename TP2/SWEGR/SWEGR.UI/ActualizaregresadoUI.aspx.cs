@@ -48,6 +48,7 @@ namespace SWEGR.UI
                     txtfechanacimiento.Enabled = true;
                 }
 
+              
                 if (IDEgresado == 0)
                 {
                     Response.Redirect("Login.aspx");
@@ -7240,19 +7241,28 @@ namespace SWEGR.UI
 
             objEgresadoBE = metodosEgresado.obtenerEgresado(IDEgresado);
 
-            if (objEgresadoBE.Idfotoegresado == 1 || objEgresadoBE.Idfotoegresado == null)
+          //  if (objEgresadoBE.Idfotoegresado == 1 || objEgresadoBE.Idfotoegresado == null)
+            if (objEgresadoBE.Idfotoegresado == -1 )
             {
                 objFoto.Idfoto = metodosFoto.insertarFoto(objFoto);
-
                 objEgresadoBE.Idfotoegresado = objFoto.Idfoto;
-
                 metodosEgresado.actualizarEgresado(objEgresadoBE);
             }
             else
+            {
+                objFoto.Idfoto = objEgresadoBE.Idfotoegresado;
                 metodosFoto.actualizarFoto(objFoto);
-
+            }
+            //Mostrar
+            var objetoFoto = metodosFoto.obtenerFoto(objFoto.Idfoto);
+            //contenedorfoto.Src = "data:image/jpg;base64," + Convert.ToBase64String(objetoFoto.ImagenBytes);
+         
+            contenedorfoto.ImageUrl = "data:image/jpg;base64," + Convert.ToBase64String(objetoFoto.ImagenBytes);
+         
+            
+             //UpdatePanel_Imagen.Update();
             //codigo = objFoto.Idfoto;
-
+           
             //obtenerFoto(codigo);
             ////upDatosEgresado.Update();
         }
@@ -7264,7 +7274,7 @@ namespace SWEGR.UI
 
             FotoBC metodosFoto = new FotoBC();
             var objetoFoto = metodosFoto.obtenerFoto(codigoFoto);
-            contenedorfoto.Src = "data:image/jpg;base64," + Convert.ToBase64String(objetoFoto.ImagenBytes);
+            contenedorfoto.ImageUrl = "data:image/jpg;base64," + Convert.ToBase64String(objetoFoto.ImagenBytes);
         }
         
     }

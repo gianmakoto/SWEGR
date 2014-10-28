@@ -37,6 +37,20 @@ namespace SWEGR.BL.BC
             }
         }
 
+        public int insertarregistroacademico_DatosExtraidos(RegistroAcademicoBE objetoregistroacademico)
+        {
+            try
+            {
+                RegistroAcademicoDALC objetoRegistroAcademicoDALC = new RegistroAcademicoDALC();
+                return objetoRegistroAcademicoDALC.insertarregistroacademico_DatosExtraidos(objetoregistroacademico);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+        
+        
         public bool actualizarregistroacademico(RegistroAcademicoBE objetoregistroacademico)
         {
             try

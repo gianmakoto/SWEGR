@@ -80,7 +80,7 @@
                 title: "Datos de Egresado",
                 buttons: {
                     Aceptar: function () {
-                        /*document.getElementById("ButtonGuardar_Invisible").click();*/
+                        document.getElementById("ButtonGuardar_Invisible").click();
                         $(this).dialog("close");
                     }
                 },
@@ -103,6 +103,30 @@
                 modal: true
             }).css("font-size", "12px");
         }
+
+        function error_mensaje(mensaje) {
+            $("#dialogerror_mensaje").text(mensaje).dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                buttons: {
+                    Aceptar: function () {
+                        $(this).dialog("close");
+                    }
+                },
+                modal: true
+            }).css("font-size", "12px");
+        }
+
+        function mensaje_extraccion_datos() {
+            $("#dialogerror_mensaje").text("Se ha iniciado la extracción de datos").dialog({
+                height: 200,
+                widht: 1800,
+                title: "Seguimiento de egresados",
+                modal: true
+            }).css("font-size", "12px");
+        }
+
 
         function menor() {
             $("#dialogmenor").dialog({

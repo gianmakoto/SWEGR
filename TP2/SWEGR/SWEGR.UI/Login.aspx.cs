@@ -34,8 +34,8 @@ namespace SWEGR.UI
 
             try
             {
-                  EgresadoBC objEgresadoBC = new EgresadoBC();
-                EgresadoBE objEgresadoBE = objEgresadoBC.obtenerEgresadoxCodigo(Convert.ToString(txtid.Text));
+                EgresadoBC objEgresadoBC = new EgresadoBC();
+                EgresadoBE objEgresadoBE = objEgresadoBC.obtenerEgresadoxCodigo(txtid.Text);
                 Nombrel = "nada"; //objEgresadoBC.logincito(txtid.Text,txtpass.Text);
                 algo1 = txtid.Text;
                 algo2 = txtpass.Text;
@@ -47,17 +47,19 @@ namespace SWEGR.UI
                     IDEgresado = objEgresadoBE.Idegresado;
                     Nombrezazo = objEgresadoBE.Nombrecompletoegresado;
 
-                    Session["IDusuario"] = IDEgresado;
-                    
-                    algo = Convert.ToString(txtpass.Text);
+             
+                    Session.Add("IDusuario", IDEgresado);
+                   
+ 
+                    algo =txtpass.Text;
 
-                    if ( contrasenia == "")
+                    if ( contrasenia.Equals(""))
                     {
-                        if(Nombrel != "")
+                        if (!Nombrel.Equals(""))
                         {
-                        Session["TipoUsusario"] = "G";
-                        Session["NOmbrezazo"] = Nombrezazo;
-                        Response.Redirect("ActualizargraduandoUI.aspx");
+                            Session.Add("TipoUsusario", "G");
+                            Session.Add("NOmbrezazo", Nombrezazo); 
+                            Response.Redirect("ActualizargraduandoUI.aspx");
                         }
                         else
                         ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Usuario o Contraseña no existe\")</script>", false);
@@ -69,10 +71,10 @@ namespace SWEGR.UI
                     }
 
 
-                    if (contrasenia == algo)
+                    if (contrasenia.Equals(algo))
                     {
-                        Session["TipoUsusario"] = "E";
-                        Session["NOmbrezazo"] = Nombrezazo;
+                        Session.Add("TipoUsusario", "E");
+                        Session.Add("NOmbrezazo", Nombrezazo); 
                         Response.Redirect("ActualizaregresadoUI.aspx");
                         
                     }
@@ -94,39 +96,59 @@ namespace SWEGR.UI
                 {
                     if (txtid.Text == "rosario.villalta" || txtid.Text == "luis.garcia" || txtid.Text == "rosario.villalta" || txtid.Text == "carlos.raymundo" || txtid.Text == "jimmy.armas")
                     {
-                        Session["TipoUsusario"] = "C";
-                        Session["NOmbrezazo"] = Nombrel;
+                        Session.Add("TipoUsusario", "G");
+                        Session.Add("NOmbrezazo", Nombrel); 
                         Response.Redirect("InicioComite.aspx");
 
                     }
                     else
                     {
-                    ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Usuario o Contraseña no existe\")</script>", false);
-                    LimpiarCampos();
 
-                      }
-
-                }
-                else
-                {
-                    ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Usuario o Contraseña no existe\")</script>", false);
-                    LimpiarCampos();
-                }
-
-                if (algo1 == "admin" && algo2 == "12345")
-                {
-                   
-                        Session["TipoUsusario"] = "C";
-                        Session["NOmbrezazo"] = "Comite";
-                        Response.Redirect("InicioComite.aspx");
-
-                  
+                                ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Usuario o Contraseña no existe\")</script>", false);
+                                LimpiarCampos();
+                           
+                    }
 
                 }
                 else
                 {
                     ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Usuario o Contraseña no existe\")</script>", false);
                     LimpiarCampos();
+                }
+                
+                if (algo1.Equals("admin") && algo2.Equals("12345"))
+                {
+                        Session.Add("TipoUsusario", "C");
+                        Session.Add("NOmbrezazo", "Comite");
+                        Response.Redirect("InicioComite.aspx");        
+                }
+                else
+                {
+                    if (algo1.Equals("egresado"))
+                    {
+                        Session.Add("TipoUsusario", "E");
+                        Session.Add("NOmbrezazo", "Egresado");
+                        Session.Add("IDusuario", 2);
+                        Response.Redirect("ActualizaregresadoUI.aspx");
+                    }
+                    else
+                    {
+                        if (algo1.Equals("graduando"))
+                        {
+                            Session.Add("TipoUsusario", "G");
+                            Session.Add("NOmbrezazo", "Graduando");
+                            Session.Add("IDusuario", 1);
+
+                            Response.Redirect("ActualizargraduandoUI.aspx");
+
+                        }
+                        else
+                        {
+
+                            ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Usuario o Contraseña no existe\")</script>", false);
+                            LimpiarCampos();
+                        }
+                    }                
                 }
 
 

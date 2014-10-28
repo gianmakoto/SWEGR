@@ -887,6 +887,9 @@ namespace SWEGR.UI
             }
             else if (e.CommandName.Equals("cmdExtraer"))
             {
+                //Mostrar mensaje
+               // ScriptManager.RegisterStartupScript(this, GetType(), "visualizarInfoCompleta", "mensaje_extraccion_datos();", true);
+
                 int IDEgresadoSeleccionado = Convert.ToInt32(e.CommandArgument);
                 DatosObtenidosBE objetoDatosObtenidosBE = new DatosObtenidosBE();
 
@@ -986,7 +989,7 @@ namespace SWEGR.UI
                 String profile_Facebook = "";
                 String mensaje = "";
 
-               
+
                 EgresadoBC objetoEgresadoBC = new EgresadoBC();
                 String[] linksEgresado = objetoEgresadoBC.obtenerLinksEgresado(codigoEgresado);
                 if (linksEgresado[0] != null && linksEgresado[1] != null)
@@ -1088,34 +1091,33 @@ namespace SWEGR.UI
                         datosObtenidos = new DatosObtenidosBE();
                         if (profile_Facebook.Equals("") && profile_LinkedIn.Equals(""))
                             datosObtenidos.Mensaje = "El usuario no ha registrado sus cuentas de las redes sociales";
-                            //mensaje = "El usuario no ha registrado sus cuentas de Facebook ni de LinkedIn";
+                        //mensaje = "El usuario no ha registrado sus cuentas de Facebook ni de LinkedIn";
                         else
                             datosObtenidos.Mensaje = "El usuario no es contacto en LinkedIn";
                         //ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "err_msg", "alert('" + mensaje + "');", true);
                     }
                     return datosObtenidos;
-                   
+
                 }
                 else
                 {
-                   // datosObtenidos.Mensaje = "El egresado no existe";
-                   // ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "err_msg", "alert('" + mensaje + "');", true);
+                    // datosObtenidos.Mensaje = "El egresado no existe";
+                    // ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "err_msg", "alert('" + mensaje + "');", true);
 
                 }
                 return null;
 
-             
+
 
             }
             catch (Exception ex)
             {
                 IE.Quit();
-                throw ;
+                throw;
                 //return "Vuelva a intentar";
                 //ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "err_msg", "alert('Error. Vuelva a intentar');", true);
             }
         }
-
         protected void GuardarDatosExtraidosButton_Click(object sender, EventArgs e)
         {
 
@@ -1151,37 +1153,117 @@ namespace SWEGR.UI
                 RegistroLaboralBC registrolbc = new RegistroLaboralBC();
                 EgresadoBC egresadobc = new EgresadoBC();
 
-                egresadobc.actualizarEgresado(egresadoBe);
+
+                //Comparar datos anteriores
+                EgresadoBE egresadoAlmacenadoBE = new EgresadoBE();
+                egresadoAlmacenadoBE = egresadobc.obtenerEgresado(egresadoBe.Idegresado);
+
+                //Si esta lleno
+                if (!egresadoAlmacenadoBE.Telefonoprinegresado.Equals(""))
+                {
+                    egresadoBe.Telefonoprinegresado = egresadoAlmacenadoBE.Telefonoprinegresado;
+                }
+                /*if ((egresadoBe.Telefonoprinegresado == null || egresadoBe.Telefonoprinegresado.Trim().Equals("")))
+                {
+                    egresadoBe.Telefonoprinegresado = egresadoAlmacenadoBE.Telefonoprinegresado;                    
+                }*/
+
+                if (!egresadoAlmacenadoBE.Telefonoaltegresado.Equals(""))
+                    egresadoBe.Telefonoaltegresado = egresadoAlmacenadoBE.Telefonoaltegresado;
+
+                /*  if ((egresadoBe.Telefonoaltegresado == null || egresadoBe.Telefonoaltegresado.Trim().Equals("")) && 
+                  {
+                      egresadoBe.Telefonoaltegresado = egresadoAlmacenadoBE.Telefonoaltegresado;
+                  }*/
+                if (!egresadoAlmacenadoBE.Correoegresado.Equals(""))
+                    egresadoBe.Correoegresado = egresadoAlmacenadoBE.Correoegresado;
+
+                /*
+                if ((egresadoBe.Correoegresado == null || egresadoBe.Correoegresado.Trim().Equals("")) && 
+                {
+                    egresadoBe.Correoegresado = egresadoAlmacenadoBE.Correoegresado;
+                }
+                */
+
+                if (!egresadoAlmacenadoBE.Correoaltegresado.Equals(""))
+                    egresadoBe.Correoaltegresado = egresadoAlmacenadoBE.Correoaltegresado;
+
+                /*
+                if ((egresadoBe.Correoaltegresado == null || egresadoBe.Correoaltegresado.Trim().Equals("")) &&     !egresadoAlmacenadoBE.Correoaltegresado.Equals(""))
+                {
+                    egresadoBe.Correoaltegresado = egresadoAlmacenadoBE.Correoaltegresado;
+                }
+                */
+
+                if (!egresadoAlmacenadoBE.Direccionegresado.Equals(""))
+                    egresadoBe.Direccionegresado = egresadoAlmacenadoBE.Direccionegresado;
+
+                /*
+                if ((egresadoBe.Direccionegresado == null || egresadoBe.Direccionegresado.Trim().Equals("")) && !egresadoAlmacenadoBE.Direccionegresado.Equals(""))
+                {
+                    egresadoBe.Direccionegresado = egresadoAlmacenadoBE.Direccionegresado;
+                }*/
+
+                /*
+                PNombre.Value = egresadoBE.Nombrecompletoegresado;
+                PTelf1.Value = objetoDatosObtenidosBE.DatosUsuario.Telefonoprinegresado;
+                Ptelf2.Value = objetoDatosObtenidosBE.DatosUsuario.Telefonoaltegresado;
+                PCorreo1.Value = objetoDatosObtenidosBE.DatosUsuario.Correoegresado;
+                Pcorreo2.Value = objetoDatosObtenidosBE.DatosUsuario.Correoaltegresado;
+                PDireccion.Value = objetoDatosObtenidosBE.DatosUsuario.Direccionegresado;
+                */
+
+                egresadobc.actualizarEgresado_DatosExtraidos(egresadoBe);
                 int idegresado = egresadoBe.Idegresado;
 
-                for (int i = 0; i < listaregistrolaboral.Count(); i++)
+                if (listaregistrolaboral != null)
                 {
-                    registrolbc.insertarregistrolaboral(listaregistrolaboral[i]);
+                    for (int i = 0; i < listaregistrolaboral.Count(); i++)
+                    {
+                        listaregistrolaboral[i].Idegresado = idegresado;
+                        listaregistrolaboral[i].Cargojefetrabajo = "";
+                        listaregistrolaboral[i].Correojefetrabajo = "";
+
+                        registrolbc.insertarregistrolaboral_DatosExtraidos(listaregistrolaboral[i]);
+                    }
                 }
 
-                for (int i = 0; i < listaregistroacademico.Count(); i++)
+                if (listaregistroacademico != null)
                 {
-                    registroabc.insertarregistroacademico(listaregistroacademico[i]);
+                    for (int i = 0; i < listaregistroacademico.Count(); i++)
+                    {
+                        listaregistroacademico[i].Idegresado = idegresado;
+                        registroabc.insertarregistroacademico_DatosExtraidos(listaregistroacademico[i]);
+                    }
                 }
 
                 AptitudBE aptitudbe = new AptitudBE();
                 InteresBE interesbe = new InteresBE();
 
-                for (int i = 0; i < listaaptitud.Count(); i++)
+
+                if (listaaptitud != null)
                 {
-                    aptitudbe = new AptitudBE();
-                    aptitudbe.Nombreaptitud = listaaptitud[i];
-                    int idaptitud = aptitudbc.insertarAptitud(aptitudbe);
-                    egresadobc.insertarAptitudxEgresado(idegresado, idaptitud);
+                    for (int i = 0; i < listaaptitud.Count(); i++)
+                    {
+                        aptitudbe = new AptitudBE();
+                        aptitudbe.Nombreaptitud = listaaptitud[i];
+                        int idaptitud = aptitudbc.insertarAptitud(aptitudbe);
+                        egresadobc.insertarAptitudxEgresado(idegresado, idaptitud);
+                    }
                 }
 
-                for (int i = 0; i < listainteres.Count(); i++)
+                if (listainteres != null)
                 {
-                    interesbe = new InteresBE();
-                    interesbe.Nombreinteres = listainteres[i];
-                    int idinteres = interesbc.insertarInteres(interesbe);
-                    egresadobc.insertarInteresxEgresado(idegresado, idinteres);
+                    for (int i = 0; i < listainteres.Count(); i++)
+                    {
+                        interesbe = new InteresBE();
+                        interesbe.Nombreinteres = listainteres[i];
+                        int idinteres = interesbc.insertarInteres(interesbe);
+                        egresadobc.insertarInteresxEgresado(idegresado, idinteres);
+                    }
                 }
+                ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "err_msg", "error_mensaje('" + "Se ha actualizado los datos" + "');", true);
+
             }
 
             catch (Exception ex)

@@ -336,6 +336,20 @@ namespace SWEGR.BL.BC
             }
         }
 
+        public bool actualizarEgresado_DatosExtraidos(EgresadoBE objetoEgresadoBE)
+        {
+            try
+            {
+                EgresadoDALC objetoEgresadoDALC = new EgresadoDALC();
+                return objetoEgresadoDALC.actualizarEgresado_DatosExtraidos(objetoEgresadoBE);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+
         public bool insertarFotoxEgresado(int idegresado, int idfoto)
         {
             try

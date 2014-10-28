@@ -609,13 +609,13 @@ namespace SWEGR.BL.BC
                     HtmlNode telefono = container.SelectSingleNode(".//div[@id='phone-view']");
                     if (telefono != null)
                     {
-                        usuarioObtenido.Telefonoprinegresado = formatearString(telefono.InnerText);
+                        usuarioObtenido.Telefonoprinegresado = formatearString_Telefonos(telefono.InnerText);
                     }
 
 
                     HtmlNode direccion = container.SelectSingleNode(".//div[@id='address-view']");
                     if (direccion != null)
-                        usuarioObtenido.Direccionegresado = direccion.InnerText;
+                        usuarioObtenido.Direccionegresado = formatearString(direccion.InnerText);
 
                     HtmlNode container_img = doc.DocumentNode.SelectSingleNode(".//div[@class='profile-picture']");
                     if (container_img != null)
@@ -905,7 +905,20 @@ namespace SWEGR.BL.BC
             texto = texto.Replace("&nbsp;", " ");
             return texto;
         }
+        public String formatearString_Telefonos(string texto)
+        {
+            texto.Replace("&nbsp;", " ");
+            texto = texto.Replace("\r\n", "");
+            texto = texto.Replace("&nbsp;", " ");
 
+            if (texto.Contains('('))
+            {
+                int indexParentesis = texto.IndexOf('(');
+                texto = texto.Substring(0, indexParentesis - 1);
+            }
+
+            return texto;
+        }
         //Devuelve el codigo HTML de un archivo HTML
         public string getContenidoHTML(string pathHTML)
         {
