@@ -231,7 +231,7 @@
             $("#txtcorreoalternativo").attr("disabled", false);
             $("#txtperfillinkedin").attr("disabled", false);
             $("#txtperfilfacebook").attr("disabled", false);
-            $("#CargaImagen").attr("disabled", false);
+            $("#CargaImagen").attr("visible", true);
         }
 
         function deshabilitarDatosPersonales() {
@@ -245,7 +245,7 @@
             $("#txtcorreoalternativo").attr("disabled", true);
             $("#txtperfillinkedin").attr("disabled", true);
             $("#txtperfilfacebook").attr("disabled", true);
-            $("#CargaImagen").attr("disabled", true);
+            $("#CargaImagen").attr("visible", false);
         }
 
         function mostrarBotonesDP() {
@@ -1863,7 +1863,7 @@
     <div class="container">
         <section class="panel">
             <header class="panel-heading">
-                <h3>Visualización de datos del Egresado</h3>
+                <h3>Actualizar de datos del Egresado</h3>
             </header>
             <div class="panel-body">
                 <div class="row">
@@ -1927,10 +1927,8 @@
                                      <div class="cold-sm-2">
                                             <div class="row">
                                                 <asp:Image ID="contenedorfoto" runat="server"  style="height: 135px; width: 135px; margin-left: 30px;" class="img-thumbnail"  />   
-                                             <%--<img id="contenedorfoto" runat="server" style="height: 135px; width: 135px; margin-left: 30px;" class="img-thumbnail" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png" />--%>
-                                            <%--<input id="Fotelo1" style="height: 30px; width: 165px; padding-left: 35px; " runat="server"   type="file"/>--%>
-                                            <asp:FileUpload ID="CargaImagen" runat="server"/>
-                                            <asp:Button ID="CargarFoto" runat="server" Text="Cargar archivo" OnClick="CargarFoto_Click" />
+                                            <asp:FileUpload ID="CargaImagen" runat="server" Visible="false"/>
+                                            <%--<asp:Button ID="CargarFoto" runat="server" Text="Cargar archivo" OnClick="CargarFoto_Click" />--%>
                                         </div>
                                     </div>
                                   <%-- </ContentTemplate>
@@ -2076,12 +2074,15 @@
                                     <asp:UpdatePanel ID="upbtncancelar" runat="server" UpdateMode="Conditional">
                                         <ContentTemplate> 
                                             <div class="col-sm-10">
-                                                
                                                 <asp:Button ID="btncancelar" runat="server" Text="Cancelar" CssClass="btn btn-danger pull-right"  type="submit" OnClick="btncancelar_Click" autopostback="false"/>
                                                 <label class="pull-right">&nbsp&nbsp&nbsp</label>
                                                 <asp:Button ID="btnguardar" runat="server" Text="Guardar" CssClass="btn btn-danger pull-right"  type="submit" OnClick="btnguardar_Click" autopostback="false"/>
                                             </div>
                                         </ContentTemplate>
+
+                                        <Triggers>
+                                            <asp:PostBackTrigger ControlID="btnguardar" />
+                                        </Triggers>
                                     </asp:UpdatePanel>
                                 </div>
 

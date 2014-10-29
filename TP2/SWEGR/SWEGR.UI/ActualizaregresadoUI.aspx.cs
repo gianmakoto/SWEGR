@@ -1404,8 +1404,8 @@ namespace SWEGR.UI
 
         public bool actualizarEgresado()
         {
-            EgresadoBC objEgresadoBC = new EgresadoBC();
-            EgresadoBE egresado = objEgresadoBC.obtenerEgresado(IDEgresado);
+            EgresadoBC metodosEgresado = new EgresadoBC();
+            EgresadoBE egresado = metodosEgresado.obtenerEgresado(IDEgresado);
             PaisBC objetoPaisBC = new PaisBC();
             FotoBC metodosFoto = new FotoBC();
 
@@ -1432,14 +1432,28 @@ namespace SWEGR.UI
             egresado.Perfilfacebookegresado = txtperfilfacebook.Text;
             egresado.Idpaisegresado = objetoPaisBC.obtenerPaisID(ddlPais.Text);
 
-            var objFoto = new FotoBE { ImagenBytes = CargaImagen.FileBytes };
+            if (CargaImagen.HasFile)
+            {
+                var objFoto = new FotoBE { ImagenBytes = CargaImagen.FileBytes };
 
-            if (egresado.Idfotoegresado == 1 || egresado.Idfotoegresado == null)
-                egresado.Idfotoegresado = metodosFoto.insertarFoto(objFoto);
-            else
-                metodosFoto.actualizarFoto(objFoto);
+                if (egresado.Idfotoegresado == 1)
+                {
+                    objFoto.Idfoto = metodosFoto.insertarFoto(objFoto);
+                    egresado.Idfotoegresado = objFoto.Idfoto;
+                    metodosEgresado.actualizarEgresado(egresado);
+                }
+                else
+                {
+                    objFoto.Idfoto = egresado.Idfotoegresado;
+                    metodosFoto.actualizarFoto(objFoto);
+                }
 
-            if (objEgresadoBC.actualizarEgresado(egresado))
+                var objetoFoto = metodosFoto.obtenerFoto(objFoto.Idfoto);
+                contenedorfoto.ImageUrl = "data:image/jpg;base64," + Convert.ToBase64String(objetoFoto.ImagenBytes);
+            }
+            
+
+            if (metodosEgresado.actualizarEgresado(egresado))
                 return true;
             else
                 return false;
@@ -1742,6 +1756,7 @@ namespace SWEGR.UI
         {
             ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarBotonesDP", "ocultarBotonesDP();", true);
             ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarDatosPersonales", "deshabilitarDatosPersonales();", true);
+            CargaImagen.Visible = false;
             //DeshabilitarCampos();
         }
 
@@ -1749,6 +1764,7 @@ namespace SWEGR.UI
         {
             ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarBotonesDP", "mostrarBotonesDP();", true);
             ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarDatosPersonales", "habilitarDatosPersonales();", true);
+            CargaImagen.Visible = true;
             //HabilitarCampos();
         }
 
@@ -7242,7 +7258,7 @@ namespace SWEGR.UI
             objEgresadoBE = metodosEgresado.obtenerEgresado(IDEgresado);
 
           //  if (objEgresadoBE.Idfotoegresado == 1 || objEgresadoBE.Idfotoegresado == null)
-            if (objEgresadoBE.Idfotoegresado == -1 )
+            if (objEgresadoBE.Idfotoegresado == 1 )
             {
                 objFoto.Idfoto = metodosFoto.insertarFoto(objFoto);
                 objEgresadoBE.Idfotoegresado = objFoto.Idfoto;
