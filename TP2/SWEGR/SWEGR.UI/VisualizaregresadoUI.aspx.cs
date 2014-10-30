@@ -15,7 +15,7 @@ namespace SWEGR.UI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            String TipoUsuarioLogueado;
+           
             int IDEgresadoSeleccionado;
             char TUsuario;
 

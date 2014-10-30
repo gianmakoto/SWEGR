@@ -59,7 +59,7 @@
             <asp:TextBox id="txtid" type="text" class="form-control" placeholder="Usuario"  runat="server" /> 
             <asp:TextBox id="txtpass" type="password" class="form-control" placeholder="Contraseña" runat="server" />
 
-
+             <asp:Label id="txterror" runat="server"  Enabled="false" > El usuario y/o contraseñas no validas </asp:Label>
             <asp:Button  runat="server" CssClass="btn btn-lg btn-login btn-block" Text="Entrar"  OnClick="boton_Click" />
         
           

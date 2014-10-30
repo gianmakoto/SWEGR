@@ -18,113 +18,97 @@ namespace SWEGR.UI
             //Session.Clear();
             Session.RemoveAll();
             //Session.Abandon();
-
+            txterror.Visible = false;
+            txterror.Attributes["style"] = "color:red;  padding:15px";
 
         }
 
         protected void boton_Click(object sender, EventArgs e)
         {
-           
+
             int IDEgresado;
             String contrasenia;
-            String algo,algo1,algo2;
+            String algo, idlog, passlog;
             String CodigoUniversitario;
-            String Nombrel;
-            String Nombrezazo;
+            String Nombredll;
+            String Nombre;
+            char Tipo;
+
+            txterror.Visible = false;
 
             try
             {
                 EgresadoBC objEgresadoBC = new EgresadoBC();
                 EgresadoBE objEgresadoBE = objEgresadoBC.obtenerEgresadoxCodigo(txtid.Text);
-                Nombrel = "nada"; //objEgresadoBC.logincito(txtid.Text,txtpass.Text);
-                algo1 = txtid.Text;
-                algo2 = txtpass.Text;
+                Nombredll = ""; //objEgresadoBC.logincito(txtid.Text,txtpass.Text);
+                idlog = txtid.Text;
+                passlog = txtpass.Text;
+
+                if (Nombredll != "")
+                {
+                    if (txtid.Text == "rosario.villalta" || txtid.Text == "luis.garcia" || txtid.Text == "rosario.villalta" || txtid.Text == "carlos.raymundo" || txtid.Text == "jimmy.armas")
+                    {
+                        Session.Add("TipoUsusario", "C");
+                        Session.Add("NOmbrezazo", Nombredll);
+                        Response.Redirect("InicioComite.aspx");
+                    }
+                    else
+                    {
+                        txterror.Visible = true;
+                        LimpiarCampos();
+                    }
+                }
 
                 if (objEgresadoBE.Nombrecompletoegresado != null)
                 {
                     CodigoUniversitario = objEgresadoBE.Codigouniversitarioegresado;
                     contrasenia = objEgresadoBE.Contrasenaegresado;
                     IDEgresado = objEgresadoBE.Idegresado;
-                    Nombrezazo = objEgresadoBE.Nombrecompletoegresado;
-
-             
+                    Nombre = objEgresadoBE.Nombrecompletoegresado;
+                    Tipo = objEgresadoBE.Tipoegresado;
+                    Session.Add("TipoUsusario", Tipo);
                     Session.Add("IDusuario", IDEgresado);
-                   
- 
-                    algo =txtpass.Text;
 
-                    if ( contrasenia.Equals(""))
+                    if (CodigoUniversitario.Equals(idlog) && contrasenia.Equals(passlog) && Tipo == 'E')
                     {
-                        if (!Nombrel.Equals(""))
+                        Session.Add("NOmbrezazo", Nombre);
+                        Response.Redirect("ActualizaregresadoUI.aspx");
+                    }
+                    else
+                    {
+                        txterror.Visible = true;
+                        LimpiarCampos();
+                    }
+
+                    if (CodigoUniversitario.Equals(idlog) && contrasenia.Equals(passlog) && Tipo == 'G')
+                    {
+                        Session.Add("NOmbrezazo", Nombre);
+                        Response.Redirect("ActualizargraduandoUI.aspx");
+                    }
+                    else
+                        if (Nombredll != "")
                         {
-                            Session.Add("TipoUsusario", "G");
-                            Session.Add("NOmbrezazo", Nombrezazo); 
+                            Session.Add("NOmbrezazo", Nombre);
                             Response.Redirect("ActualizargraduandoUI.aspx");
                         }
                         else
-                        ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Usuario o Contraseña no existe\")</script>", false);
-                    }
-                    else
-                    {
-                        ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Usuario o Contraseña no existe\")</script>", false);
-                        LimpiarCampos();
-                    }
+                        {
+                            txterror.Visible = true;
+                            LimpiarCampos();
+                        }
 
+                }
 
-                    if (contrasenia.Equals(algo))
-                    {
-                        Session.Add("TipoUsusario", "E");
-                        Session.Add("NOmbrezazo", Nombrezazo); 
-                        Response.Redirect("ActualizaregresadoUI.aspx");
-                        
-                    }
-                    else
-                    {
-                        ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Usuario o Contraseña no existe\")</script>", false);
-                        LimpiarCampos();
-                    }
-
+                if (idlog.Equals("admin") && passlog.Equals("12345"))
+                {
+                    Session.Add("TipoUsusario", "C");
+                    Session.Add("NOmbrezazo", "Comite");
+                    Response.Redirect("InicioComite.aspx");
                 }
                 else
                 {
-                    ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Usuario o Contraseña no existe\")</script>", false);
-                    LimpiarCampos();
-                }
-
-
-                if (Nombrel != "")
-                {
-                    if (txtid.Text == "rosario.villalta" || txtid.Text == "luis.garcia" || txtid.Text == "rosario.villalta" || txtid.Text == "carlos.raymundo" || txtid.Text == "jimmy.armas")
-                    {
-                        Session.Add("TipoUsusario", "G");
-                        Session.Add("NOmbrezazo", Nombrel); 
-                        Response.Redirect("InicioComite.aspx");
-
-                    }
-                    else
-                    {
-
-                                ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Usuario o Contraseña no existe\")</script>", false);
-                                LimpiarCampos();
-                           
-                    }
-
-                }
-                else
-                {
-                    ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Usuario o Contraseña no existe\")</script>", false);
-                    LimpiarCampos();
-                }
-                
-                if (algo1.Equals("admin") && algo2.Equals("12345"))
-                {
-                        Session.Add("TipoUsusario", "C");
-                        Session.Add("NOmbrezazo", "Comite");
-                        Response.Redirect("InicioComite.aspx");        
-                }
-                else
-                {
-                    if (algo1.Equals("egresado"))
+                    txterror.Visible = true;
+                    if (idlog.Equals("egresado"))
                     {
                         Session.Add("TipoUsusario", "E");
                         Session.Add("NOmbrezazo", "Egresado");
@@ -133,50 +117,34 @@ namespace SWEGR.UI
                     }
                     else
                     {
-                        if (algo1.Equals("graduando"))
+                        txterror.Visible = true;
+                        if (idlog.Equals("graduando"))
                         {
                             Session.Add("TipoUsusario", "G");
                             Session.Add("NOmbrezazo", "Graduando");
                             Session.Add("IDusuario", 1);
-
                             Response.Redirect("ActualizargraduandoUI.aspx");
-
-                        }
+                       }
                         else
                         {
-
-                            ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Usuario o Contraseña no existe\")</script>", false);
+                            txterror.Visible = true;
                             LimpiarCampos();
                         }
-                    }                
+                    }
+
                 }
-
-
-
-
-
             }
             catch (Exception ex)
             {
-                
-                          ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Ocurrió un error\")</script>", false);
-                         
+                ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Ocurrió un error\")</script>", false);
             }
-        
-        
-
         }
 
-                public void LimpiarCampos()
-                {
-                    txtid.Text = "";
-                    txtpass.Text= "";
-                }
-
-
-        
-
-
+        public void LimpiarCampos()
+        {
+            txtid.Text = "";
+            txtpass.Text = "";
+        }
 
     }
 }

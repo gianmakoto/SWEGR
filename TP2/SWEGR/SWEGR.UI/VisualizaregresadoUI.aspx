@@ -219,7 +219,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="Index.aspx">
+                    <a class="navbar-brand" href="InicioComite.aspx">
                         <img style="margin-top: -15px" src="http://cdn4.upc.edu.pe/sites/all/themes/upc_2013/img/logo.png"></img></a>
                 </div>
                 <div class="navbar-collapse collapse ">
@@ -234,7 +234,7 @@
                         <li class="dropdown">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <img alt="" style="height: 19px; width:17px" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
-                                <span class="username">Nombre</span>
+                                <span class="username">Comite</span>
                                 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu extended logout">
