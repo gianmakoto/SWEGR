@@ -28,7 +28,7 @@ namespace SWEGR.UI
 
             int IDEgresado;
             String contrasenia;
-            String algo, idlog, passlog;
+            String idlog, passlog;
             String CodigoUniversitario;
             String Nombredll;
             String Nombre;
@@ -40,7 +40,7 @@ namespace SWEGR.UI
             {
                 EgresadoBC objEgresadoBC = new EgresadoBC();
                 EgresadoBE objEgresadoBE = objEgresadoBC.obtenerEgresadoxCodigo(txtid.Text);
-                Nombredll = ""; //objEgresadoBC.logincito(txtid.Text,txtpass.Text);
+                Nombredll = objEgresadoBC.logincito(txtid.Text,txtpass.Text);
                 idlog = txtid.Text;
                 passlog = txtpass.Text;
 
