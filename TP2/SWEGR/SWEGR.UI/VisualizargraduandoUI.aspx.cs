@@ -82,6 +82,8 @@ namespace SWEGR.UI
                         ddlDepartamento.SelectedIndex = -1;
                     else
                         ddlDepartamento.Text = graduando.Departamentoegresado;
+
+                    obtenerFoto(graduando.Idfotoegresado);
                 }
             }
             catch (Exception)
@@ -131,6 +133,16 @@ namespace SWEGR.UI
             lsdepartamento.Add("Ucayali");
 
             return lsdepartamento;
+        }
+
+        protected void obtenerFoto(int codigoFoto)
+        {
+            if (codigoFoto == 1 || codigoFoto == null)
+                return;
+
+            FotoBC metodosFoto = new FotoBC();
+            var objetoFoto = metodosFoto.obtenerFoto(codigoFoto);
+            contenedorfoto.ImageUrl = "data:image/jpg;base64," + Convert.ToBase64String(objetoFoto.ImagenBytes);
         }
     }
 }

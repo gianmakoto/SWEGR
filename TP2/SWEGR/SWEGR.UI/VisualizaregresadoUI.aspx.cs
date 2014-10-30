@@ -66,37 +66,37 @@ namespace SWEGR.UI
                     ddlPais.Items.Insert(0, new ListItem("Seleccione el país", ""));
 
                     EgresadoBC objEgresadoBC = new EgresadoBC();
-                    EgresadoBE graduando = objEgresadoBC.obtenerEgresado(IDEgresadoSeleccionado);
+                    EgresadoBE egresado = objEgresadoBC.obtenerEgresado(IDEgresadoSeleccionado);
 
-                    txtnombrecompleto.Text = graduando.Nombrecompletoegresado;
-                    txtdni.Text = graduando.Dniegresado;
-                    txtfechanacimiento.Text = graduando.Fechanacimientoegresado.Day.ToString() + "/" + graduando.Fechanacimientoegresado.Month.ToString() + "/" + graduando.Fechanacimientoegresado.Year.ToString();
-                    txtCarrera.Text = graduando.Carreraegresado;
-                    txttelefonoprincipal.Text = graduando.Telefonoprinegresado;
-                    txttelefonoalternativo.Text = graduando.Telefonoaltegresado;
-                    txtdireccion.Text = graduando.Direccionegresado;
-                    txtdistrito.Text = graduando.Distritoegresado;
-                    txtcorreo.Text = graduando.Correoegresado;
-                    txtcorreoalternativo.Text = graduando.Correoaltegresado;
-                    txtperfillinkedin.Text = graduando.Perfillinkedinegresado;
-                    txtperfilfacebook.Text = graduando.Perfilfacebookegresado;
+                    txtnombrecompleto.Text = egresado.Nombrecompletoegresado;
+                    txtdni.Text = egresado.Dniegresado;
+                    txtfechanacimiento.Text = egresado.Fechanacimientoegresado.Day.ToString() + "/" + egresado.Fechanacimientoegresado.Month.ToString() + "/" + egresado.Fechanacimientoegresado.Year.ToString();
+                    txtCarrera.Text = egresado.Carreraegresado;
+                    txttelefonoprincipal.Text = egresado.Telefonoprinegresado;
+                    txttelefonoalternativo.Text = egresado.Telefonoaltegresado;
+                    txtdireccion.Text = egresado.Direccionegresado;
+                    txtdistrito.Text = egresado.Distritoegresado;
+                    txtcorreo.Text = egresado.Correoegresado;
+                    txtcorreoalternativo.Text = egresado.Correoaltegresado;
+                    txtperfillinkedin.Text = egresado.Perfillinkedinegresado;
+                    txtperfilfacebook.Text = egresado.Perfilfacebookegresado;
 
-                    if (graduando.Sexoegresado == 'M')
+                    if (egresado.Sexoegresado == 'M')
                         ddlGenero.SelectedIndex = 1;
                     else
                         ddlGenero.SelectedIndex = 2;
 
-                    String pais = objetoPaisBC.obtenerPais(graduando.Idpaisegresado);
+                    String pais = objetoPaisBC.obtenerPais(egresado.Idpaisegresado);
 
-                    if (graduando.Idpaisegresado == 0)
+                    if (egresado.Idpaisegresado == 0)
                         ddlPais.SelectedIndex = -1;
                     else
                         ddlPais.Text = pais;
 
-                    if (graduando.Departamentoegresado == "")
+                    if (egresado.Departamentoegresado == "")
                         ddlDepartamento.SelectedIndex = -1;
                     else
-                        ddlDepartamento.Text = graduando.Departamentoegresado;
+                        ddlDepartamento.Text = egresado.Departamentoegresado;
 
                     llenarregistroacademico(IDEgresadoSeleccionado);
                     llenarregistrolaboral(IDEgresadoSeleccionado);
@@ -106,6 +106,8 @@ namespace SWEGR.UI
 
                     lstintereses.DataSource = listaintereses(IDEgresadoSeleccionado);
                     lstintereses.DataBind();
+
+                    obtenerFoto(egresado.Idfotoegresado);
                 }
             }
             catch (Exception ex)
@@ -952,6 +954,16 @@ namespace SWEGR.UI
         {
             ScriptManager.RegisterStartupScript(Page, GetType(), "SWEGR", "aptitudesInteresesToggle();", true);
 
+        }
+
+        protected void obtenerFoto(int codigoFoto)
+        {
+            if (codigoFoto == 1 || codigoFoto == null)
+                return;
+
+            FotoBC metodosFoto = new FotoBC();
+            var objetoFoto = metodosFoto.obtenerFoto(codigoFoto);
+            contenedorfoto.ImageUrl = "data:image/jpg;base64," + Convert.ToBase64String(objetoFoto.ImagenBytes);
         }
     }
 }

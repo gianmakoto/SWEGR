@@ -82,6 +82,8 @@ namespace SWEGR.UI
                         ddlDepartamento.SelectedIndex = -1;
                     else
                         ddlDepartamento.Text = graduando.Departamentoegresado;
+
+                    obtenerFoto(graduando.Idfotoegresado);
                 }
             }
             catch (Exception)
@@ -137,6 +139,7 @@ namespace SWEGR.UI
         {
             EgresadoBC objEgresadoBC = new EgresadoBC();
             EgresadoBE graduando = objEgresadoBC.obtenerEgresado(IDEgresado);
+            FotoBC metodosFoto = new FotoBC();
 
             dni = graduando.Dniegresado;
             telefono = graduando.Telefonoprinegresado;
@@ -159,7 +162,26 @@ namespace SWEGR.UI
             graduando.Correoaltegresado = txtcorreoalternativo.Text;
             graduando.Perfillinkedinegresado = txtperfillinkedin.Text;
             graduando.Perfilfacebookegresado = txtperfilfacebook.Text;
-            //graduando.Idfotoegresado = 1;
+            
+            if (CargaImagen.HasFile)
+            {
+                var objFoto = new FotoBE { ImagenBytes = CargaImagen.FileBytes };
+
+                if (graduando.Idfotoegresado == 1)
+                {
+                    objFoto.Idfoto = metodosFoto.insertarFoto(objFoto);
+                    graduando.Idfotoegresado = objFoto.Idfoto;
+                    objEgresadoBC.actualizarEgresado(graduando);
+                }
+                else
+                {
+                    objFoto.Idfoto = graduando.Idfotoegresado;
+                    metodosFoto.actualizarFoto(objFoto);
+                }
+
+                var objetoFoto = metodosFoto.obtenerFoto(objFoto.Idfoto);
+                contenedorfoto.ImageUrl = "data:image/jpg;base64," + Convert.ToBase64String(objetoFoto.ImagenBytes);
+            }
 
             if (objEgresadoBC.actualizarEgresado(graduando))
                 return true;
@@ -464,6 +486,16 @@ namespace SWEGR.UI
             {
                 ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Ocurrió un error\")</script>", false);
             }
+        }
+
+        protected void obtenerFoto(int codigoFoto)
+        {
+            if (codigoFoto == 1 || codigoFoto == null)
+                return;
+
+            FotoBC metodosFoto = new FotoBC();
+            var objetoFoto = metodosFoto.obtenerFoto(codigoFoto);
+            contenedorfoto.ImageUrl = "data:image/jpg;base64," + Convert.ToBase64String(objetoFoto.ImagenBytes);
         }
 
     }

@@ -65,7 +65,7 @@
           
              <div class="">
 
-                <a class="" href="#">
+                <a class="" href="InsertaregresadoUI.aspx">
                    Regístrate
                 </a>
             </div>

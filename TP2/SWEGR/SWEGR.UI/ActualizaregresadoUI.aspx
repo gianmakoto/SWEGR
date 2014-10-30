@@ -231,7 +231,7 @@
             $("#txtcorreoalternativo").attr("disabled", false);
             $("#txtperfillinkedin").attr("disabled", false);
             $("#txtperfilfacebook").attr("disabled", false);
-            $("#CargaImagen").attr("visible", true);
+            $("#CargaImagen").attr("visibility", true);
         }
 
         function deshabilitarDatosPersonales() {
@@ -245,7 +245,7 @@
             $("#txtcorreoalternativo").attr("disabled", true);
             $("#txtperfillinkedin").attr("disabled", true);
             $("#txtperfilfacebook").attr("disabled", true);
-            $("#CargaImagen").attr("visible", false);
+            $("#CargaImagen").attr("visibility", false);
         }
 
         function mostrarBotonesDP() {
@@ -1828,7 +1828,7 @@
                             <ul class="dropdown-menu extended logout">
                                 <div class="log-arrow-up"></div>
                                 <%--<li><a href="#"><i class=" icon-suitcase"></i>Profile</a></li>--%>
-                                <li><a href="#"><i class="icon-cog"></i>Cambiar Contraseña</a></li>
+                                <li><a href="Cambiarcontrasena.aspx"><i class="icon-cog"></i>Cambiar Contraseña</a></li>
                                 <%--<li><a href="#"><i class="icon-bell-alt"></i>Notification</a></li>--%>
                                 <li><a href="login.aspx"><i class="icon-key"></i>Cerrar sesión</a></li>
                             </ul>
@@ -1914,15 +1914,13 @@
                                         <div class="form-group">
                                             <label class="col-sm-3 col-sm-2 control-label">
                                                 Género
-                                  Género
                                             </label>
                                             <div class="col-sm-9">
                                                 <asp:DropDownList ID="ddlGenero" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                         </div>
                                     </div>
- <%--
-                          <asp:UpdatePanel ID="UpdatePanel_Imagen" runat="server" UpdateMode="Conditional">
+                        <%--<asp:UpdatePanel ID="UpdatePanel_Imagen" runat="server" UpdateMode="Conditional">
                                 <ContentTemplate>--%>
                                      <div class="cold-sm-2">
                                             <div class="row">

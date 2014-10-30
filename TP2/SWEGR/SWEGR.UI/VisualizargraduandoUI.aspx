@@ -141,8 +141,6 @@
                              <div class="cold-sm-2">
                                             <div class="row">
                                                 <asp:Image ID="contenedorfoto" runat="server"  style="height: 135px; width: 135px; margin-left: 30px;" class="img-thumbnail"  />   
-                                            <asp:FileUpload ID="CargaImagen" runat="server" Visible="false"/>
-                                            <%--<asp:Button ID="CargarFoto" runat="server" Text="Cargar archivo" OnClick="CargarFoto_Click" />--%>
                                             </div>
                                     </div>
                                 </div>

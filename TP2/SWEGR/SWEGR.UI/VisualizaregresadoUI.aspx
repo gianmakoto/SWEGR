@@ -327,15 +327,15 @@
                                                 Género
                                             </label>
                                             <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlGenero" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                <asp:DropDownList ID="ddlGenero" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                             </div>
                                         </div>
                                     </div>
                                     
                                     <div class="cold-sm-2">
-                                        <div class="row"  >
-                                         <img style="height: 135px; width: 135px; margin-left: 30px; " class="img-thumbnail" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png" />
-                                        </div>
+                                            <div class="row">
+                                                <asp:Image ID="contenedorfoto" runat="server"  style="height: 135px; width: 135px; margin-left: 30px;" class="img-thumbnail"  />   
+                                            </div>
                                     </div>
                                     
                                 </div>
