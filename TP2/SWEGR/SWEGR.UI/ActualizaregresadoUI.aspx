@@ -1778,10 +1778,10 @@
     <%-- 
     <link rel="stylesheet" href="/resources/demos/style.css"> --%>
 
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="http://localhost:49184/code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://localhost:49184/maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Bootstrap core CSS -->
     <link href="Content/css/bootstrap.min.css" rel="stylesheet">
@@ -1929,7 +1929,7 @@
                                                 <asp:Image ID="contenedorfoto" runat="server"  style="height: 135px; width: 135px; margin-left: 30px;" class="img-thumbnail"  />   
                                             <asp:FileUpload ID="CargaImagen" runat="server" Visible="false"/>
                                             <%--<asp:Button ID="CargarFoto" runat="server" Text="Cargar archivo" OnClick="CargarFoto_Click" />--%>
-                                        </div>
+                                            </div>
                                     </div>
                                   <%-- </ContentTemplate>
                                </asp:UpdatePanel>--%>
@@ -1937,6 +1937,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-2 col-sm-2 control-label">
                                         Fecha de Nacimiento
+                                        </label>
                                         <div class="col-sm-8">
                                         <asp:TextBox ID="txtfechanacimiento" runat="server"
                                             CssClass="form-control" Enabled="false"></asp:TextBox>
@@ -5346,8 +5347,7 @@
                                         <div class="form-group" id="txtint" hidden="hidden">
                                             <label class="col-sm-2 col-sm-2 control-label">
                                                 Interes:
-                                            </label>
-                                            <div class="col-sm-9">
+                                                        <div class="col-sm-9">
                                                 <asp:TextBox ID="txtInteres" runat="server" CssClass="form-control" type="text" placeholder="Escriba el interes"></asp:TextBox>
                                             </div>
                                         </div>

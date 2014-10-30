@@ -297,6 +297,7 @@
                                     </div>
                                 </ContentTemplate>
                             </asp:UpdatePanel>
+
                             <div id="datosPersonales" style="border: 1px solid black; padding-left: 4%; padding-top: 4%" hidden="hidden">
                                 <div class="row">
                                     <div class="col-sm-8">

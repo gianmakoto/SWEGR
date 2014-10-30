@@ -67,6 +67,24 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.DropDownList ddlGenero;
         
         /// <summary>
+        /// contenedorfoto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image contenedorfoto;
+        
+        /// <summary>
+        /// CargaImagen control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload CargaImagen;
+        
+        /// <summary>
         /// txtfechanacimiento control.
         /// </summary>
         /// <remarks>

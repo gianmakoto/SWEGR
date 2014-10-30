@@ -103,20 +103,23 @@
                     <div class="col-md-12">
                         <form id="swegrform" class="cmxform form-horizontal tasi-form" runat="server">
                             <asp:HiddenField ID="NombreHidden" runat="server"/>
-                            <div class="form-group">
-                                <label class="col-sm-2 col-sm-2 control-label">
+                             <%--<div class="form-group">--%>
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <div class="form-group">
+                                <label class="col-sm-3 col-sm-2 control-label">
                                     Nombre completo
                                 </label>
-                                <div class="col-sm-8">
+                                <div class="col-sm-9">
                                     <asp:TextBox ID="txtnombrecompleto" runat="server" CssClass="form-control" Enabled="false" type="text" ></asp:TextBox>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-sm-2 col-sm-2 control-label">
+                                <label class="col-sm-3 col-sm-2 control-label">
                                    * DNI
                                 </label>
-                                <div class="col-sm-8">
+                                <div class="col-sm-9">
                                     <asp:TextBox ID="txtdni" runat="server"
                                         CssClass="form-control" onkeypress="return isNumber(event)" Enabled="false" onpaste="return false" ></asp:TextBox>
                                     
@@ -124,15 +127,25 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="col-sm-2 col-sm-2 control-label">
+                                <label class="col-sm-3 col-sm-2 control-label">
                                     Género
                                 </label>
                                 
 
-                                <div class="col-sm-8">
+                                <div class="col-sm-9">
                                     <asp:DropDownList ID="ddlGenero" runat="server" AutoPostBack="True" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                 </div>
                             </div>
+
+                            </div>
+                             <div class="cold-sm-2">
+                                            <div class="row">
+                                                <asp:Image ID="contenedorfoto" runat="server"  style="height: 135px; width: 135px; margin-left: 30px;" class="img-thumbnail"  />   
+                                            <asp:FileUpload ID="CargaImagen" runat="server" Visible="false"/>
+                                            <%--<asp:Button ID="CargarFoto" runat="server" Text="Cargar archivo" OnClick="CargarFoto_Click" />--%>
+                                            </div>
+                                    </div>
+                                </div>
 
                             <div class="form-group">
                                 <label class="col-sm-2 col-sm-2 control-label">
