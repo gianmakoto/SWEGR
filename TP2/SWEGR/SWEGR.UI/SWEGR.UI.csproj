@@ -136,7 +136,6 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="ActualizaregresadoUI.aspx" />
-    <Content Include="ActualizargraduandoUI.aspx" />
     <Content Include="bin\itextsharp.dll" />
     <Content Include="Cambiarcontrasena.aspx" />
     <Content Include="Contact.aspx" />
@@ -371,7 +370,6 @@
     <Content Include="InsertaregresadoUI.aspx" />
     <Content Include="ListarEgresados.aspx" />
     <Content Include="ListaregresadosUI.aspx" />
-    <Content Include="ListargraduandosUI.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Loginprueba.aspx" />
     <Content Include="Login\css\bootstrap-reset.css" />
@@ -459,7 +457,6 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="VisualizaregresadoUI.aspx" />
-    <Content Include="VisualizargraduandoUI.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -473,13 +470,6 @@
     </Compile>
     <Compile Include="ActualizaregresadoUI.aspx.designer.cs">
       <DependentUpon>ActualizaregresadoUI.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ActualizargraduandoUI.aspx.cs">
-      <DependentUpon>ActualizargraduandoUI.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ActualizargraduandoUI.aspx.designer.cs">
-      <DependentUpon>ActualizargraduandoUI.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
@@ -570,13 +560,6 @@
     <Compile Include="ListaregresadosUI.aspx.designer.cs">
       <DependentUpon>ListaregresadosUI.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ListargraduandosUI.aspx.cs">
-      <DependentUpon>ListargraduandosUI.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ListargraduandosUI.aspx.designer.cs">
-      <DependentUpon>ListargraduandosUI.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -615,15 +598,9 @@
     <Compile Include="VisualizaregresadoUI.aspx.designer.cs">
       <DependentUpon>VisualizaregresadoUI.aspx</DependentUpon>
     </Compile>
-    <Compile Include="VisualizargraduandoUI.aspx.cs">
-      <DependentUpon>VisualizargraduandoUI.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="VisualizargraduandoUI.aspx.designer.cs">
-      <DependentUpon>VisualizargraduandoUI.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="application\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>

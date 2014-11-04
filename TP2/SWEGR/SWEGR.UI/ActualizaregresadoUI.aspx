@@ -231,7 +231,7 @@
             $("#txtcorreoalternativo").attr("disabled", false);
             $("#txtperfillinkedin").attr("disabled", false);
             $("#txtperfilfacebook").attr("disabled", false);
-            $("#CargaImagen").attr("visibility", true);
+            $("#CargaImagen").attr("disabled", false);
         }
 
         function deshabilitarDatosPersonales() {
@@ -245,7 +245,7 @@
             $("#txtcorreoalternativo").attr("disabled", true);
             $("#txtperfillinkedin").attr("disabled", true);
             $("#txtperfilfacebook").attr("disabled", true);
-            $("#CargaImagen").attr("visibility", false);
+            $("#CargaImagen").attr("disabled", true);
         }
 
         function mostrarBotonesDP() {
@@ -1869,7 +1869,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <form id="swegrform" class="cmxform form-horizontal tasi-form" runat="server">
-                            <asp:HiddenField  ID="NombreHidden" runat="server"/>
+                            <asp:HiddenField ID="NombreHidden" runat="server" />
                             <%-- Datos Personales --%>
                             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
                             <asp:UpdatePanel ID="updatosPersonales" runat="server" UpdateMode="Conditional">
@@ -1920,23 +1920,24 @@
                                             </div>
                                         </div>
                                     </div>
-                        <%--<asp:UpdatePanel ID="UpdatePanel_Imagen" runat="server" UpdateMode="Conditional">
-                                <ContentTemplate>--%>
-                                     <div class="cold-sm-2">
-                                            <div class="row">
-                                                <asp:Image ID="contenedorfoto" runat="server"  style="height: 135px; width: 135px; margin-left: 30px;" class="img-thumbnail"  />   
-                                            <asp:FileUpload ID="CargaImagen" runat="server"/>
-                                            <%--<asp:Button ID="CargarFoto" runat="server" Text="Cargar archivo" OnClick="CargarFoto_Click" />--%>
-                                            </div>
+
+                                    <div class="cold-sm-2">
+                                        <div class="row">
+                                            <asp:Image ID="contenedorfoto" runat="server" Style="height: 135px; width: 135px; margin-left: 30px;" class="img-thumbnail" />
+                                            <%--<asp:UpdatePanel ID="UpdatePanel_Imagen" runat="server" UpdateMode="Conditional">
+                                                <ContentTemplate>--%>
+                                                    <asp:FileUpload ID="CargaImagen" runat="server" Enabled="false" />
+                                                <%--</ContentTemplate>
+                                            </asp:UpdatePanel>--%>
+                                        </div>
                                     </div>
-                                  <%-- </ContentTemplate>
-                               </asp:UpdatePanel>--%>
+
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-2 col-sm-2 control-label">
                                         Fecha de Nacimiento
-                                        </label>
-                                        <div class="col-sm-8">
+                                    </label>
+                                    <div class="col-sm-8">
                                         <asp:TextBox ID="txtfechanacimiento" runat="server"
                                             CssClass="form-control" Enabled="false"></asp:TextBox>
                                     </div>
@@ -2071,11 +2072,11 @@
 
                                 <div class="form-group" hidden="hidden" id="btncancelarDP">
                                     <asp:UpdatePanel ID="upbtncancelar" runat="server" UpdateMode="Conditional">
-                                        <ContentTemplate> 
+                                        <ContentTemplate>
                                             <div class="col-sm-10">
-                                                <asp:Button ID="btncancelar" runat="server" Text="Cancelar" CssClass="btn btn-danger pull-right"  type="submit" OnClick="btncancelar_Click" autopostback="false"/>
+                                                <asp:Button ID="btncancelar" runat="server" Text="Cancelar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btncancelar_Click" autopostback="false" />
                                                 <label class="pull-right">&nbsp&nbsp&nbsp</label>
-                                                <asp:Button ID="btnguardar" runat="server" Text="Guardar" CssClass="btn btn-danger pull-right"  type="submit" OnClick="btnguardar_Click" autopostback="false"/>
+                                                <asp:Button ID="btnguardar" runat="server" Text="Guardar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnguardar_Click" autopostback="false" />
                                             </div>
                                         </ContentTemplate>
 
@@ -2084,16 +2085,6 @@
                                         </Triggers>
                                     </asp:UpdatePanel>
                                 </div>
-
-                                <%--<div class="form-group" hidden="hidden" id="btnguardarDP">
-                                    <asp:UpdatePanel ID="upbtnguardar" runat="server" UpdateMode="Conditional">
-                            <ContentTemplate>
-                                    <div class="col-sm-10">
-                                        <asp:Button ID="btnguardar" runat="server" Text="Guardar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnguardar_Click" />
-                                    </div>
-                                    </ContentTemplate>
-                            </asp:UpdatePanel>
-                                </div>--%>
                             </div>
                             <%--</ContentTemplate>
                             </asp:UpdatePanel>--%>
@@ -5219,7 +5210,7 @@
 
                             <div id="aptitudesIntereses" style="border: 1px solid black; padding-left: 4%; padding-top: 4%" hidden="hidden">
                                 <div class="form-group">
-                                    
+
                                     <div class="col-md-6">
                                         <div class="col-sm12">
                                             <asp:UpdatePanel ID="upgrdAptitudes" runat="server" UpdateMode="Conditional">
@@ -5346,8 +5337,8 @@
                                             <label class="col-sm-2 col-sm-2 control-label">
                                                 Interes:
                                                         <div class="col-sm-9">
-                                                <asp:TextBox ID="txtInteres" runat="server" CssClass="form-control" type="text" placeholder="Escriba el interes"></asp:TextBox>
-                                            </div>
+                                                            <asp:TextBox ID="txtInteres" runat="server" CssClass="form-control" type="text" placeholder="Escriba el interes"></asp:TextBox>
+                                                        </div>
                                         </div>
                                         <div class="form-group" id="btninsertarint" hidden="hidden">
                                             <asp:UpdatePanel ID="UpdatePanel3" runat="server" UpdateMode="Conditional">
@@ -5458,7 +5449,7 @@
 
     <script>
 
-       
+
 
 
         $(window).load(function () {

@@ -40,7 +40,8 @@ namespace SWEGR.UI
             {
                 EgresadoBC objEgresadoBC = new EgresadoBC();
                 EgresadoBE objEgresadoBE = objEgresadoBC.obtenerEgresadoxCodigo(txtid.Text);
-                Nombredll = objEgresadoBC.logincito(txtid.Text,txtpass.Text);
+                //Nombredll = objEgresadoBC.logincito(txtid.Text,txtpass.Text);
+                Nombredll = "";
                 idlog = txtid.Text;
                 passlog = txtpass.Text;
 
@@ -116,22 +117,7 @@ namespace SWEGR.UI
                         Response.Redirect("ActualizaregresadoUI.aspx");
                     }
                     else
-                    {
-                        txterror.Visible = true;
-                        if (idlog.Equals("graduando"))
-                        {
-                            Session.Add("TipoUsusario", "G");
-                            Session.Add("NOmbrezazo", "Graduando");
-                            Session.Add("IDusuario", 1);
-                            Response.Redirect("ActualizargraduandoUI.aspx");
-                       }
-                        else
-                        {
-                            txterror.Visible = true;
-                            LimpiarCampos();
-                        }
-                    }
-
+                        ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Ocurrió un error\")</script>", false);
                 }
             }
             catch (Exception ex)

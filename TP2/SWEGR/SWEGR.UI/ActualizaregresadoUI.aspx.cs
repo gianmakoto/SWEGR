@@ -1756,16 +1756,12 @@ namespace SWEGR.UI
         {
             ScriptManager.RegisterStartupScript(Page, GetType(), "ocultarBotonesDP", "ocultarBotonesDP();", true);
             ScriptManager.RegisterStartupScript(Page, GetType(), "deshabilitarDatosPersonales", "deshabilitarDatosPersonales();", true);
-            CargaImagen.Visible = false;
-            //DeshabilitarCampos();
         }
 
         protected void btneditar_Click(object sender, EventArgs e)
         {
             ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarBotonesDP", "mostrarBotonesDP();", true);
             ScriptManager.RegisterStartupScript(Page, GetType(), "habilitarDatosPersonales", "habilitarDatosPersonales();", true);
-            CargaImagen.Visible = true;
-            //HabilitarCampos();
         }
 
         //*** Registro Academico ***//

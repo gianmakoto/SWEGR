@@ -347,6 +347,11 @@
                                     </asp:GridView>
                                 </div>
                             </div>
+                            </ContentTemplate>
+                            </asp:UpdatePanel>
+
+                            <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+                                <ContentTemplate>
                             <div class="form-group">
                                         <div class="col-sm-10">
                                             <asp:Button ID="btnImprimir" runat="server" Text="Exportar" CssClass="btn btn-danger pull-right" type="submit" OnClick="Imprimir_Click" />

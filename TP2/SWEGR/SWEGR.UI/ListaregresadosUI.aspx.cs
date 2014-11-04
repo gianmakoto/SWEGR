@@ -1118,6 +1118,7 @@ namespace SWEGR.UI
                 //ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "err_msg", "alert('Error. Vuelva a intentar');", true);
             }
         }
+
         protected void GuardarDatosExtraidosButton_Click(object sender, EventArgs e)
         {
 
@@ -1287,61 +1288,101 @@ namespace SWEGR.UI
 
         private void ExportGridToPDF()
         {
-            //Response.ContentType = "application/pdf";
-            //Response.AddHeader("content-disposition", "attachment;filename=Vithal_Wadje.pdf");
-            //Response.Cache.SetCacheability(HttpCacheability.NoCache);
-            //StringWriter sw = new StringWriter();
-            //HtmlTextWriter hw = new HtmlTextWriter(sw);
-            //grdEgresados.RenderControl(hw);
-            //StringReader sr = new StringReader(sw.ToString());
-            //iTextSharp.text.Document pdfDoc = new iTextSharp.text.Document(iTextSharp.text.PageSize.A4, 10f, 10f, 10f, 0f);
-            //HTMLWorker htmlparser = new HTMLWorker(pdfDoc);
-            //PdfWriter.GetInstance(pdfDoc, Response.OutputStream);
-            //pdfDoc.Open();
-            //htmlparser.Parse(sr);
-            //pdfDoc.Close();
-            //Response.Write(pdfDoc);
-            //Response.End();
-            //grdEgresados.AllowPaging = true;
-            //grdEgresados.DataBind();
+            iTextSharp.text.Document document = new iTextSharp.text.Document(iTextSharp.text.PageSize.A4, 88f, 88f, 10f, 10f);
+            iTextSharp.text.Font NormalFont = iTextSharp.text.FontFactory.GetFont("Segoe UI Light", 12, iTextSharp.text.Font.NORMAL, iTextSharp.text.Color.BLACK);
 
-            using (StringWriter sw = new StringWriter())
+            using (System.IO.MemoryStream memoryStream = new System.IO.MemoryStream())
             {
-                using (HtmlTextWriter hw = new HtmlTextWriter(sw))
-                {
-                    //To Export all pages
-                    grdEgresados.AllowPaging = false;
+                PdfWriter writer = PdfWriter.GetInstance(document, memoryStream);
+                iTextSharp.text.Phrase phrase = null;
+                PdfPCell cell = null;
+                PdfPTable table = null;
+                iTextSharp.text.Color color = null;
 
-                    string nombreBuscar = (string)ViewState["nombre"];
-                    string codigoUniversitarioBuscar = (string)ViewState["codigouniversitario"];
-                    int anioInicioBuscar = (int)ViewState["anioInicio"];
-                    int anioFinBuscar = (int)ViewState["anioFin"];
-                    string carreraBuscar = (string)ViewState["carrera"];
+                document.Open();
 
-                    grdEgresadosDataBind_Lista(nombreBuscar, carreraBuscar, anioInicioBuscar, anioFinBuscar, codigoUniversitarioBuscar);
+                //Header Table
+                table = new PdfPTable(2);
+                table.TotalWidth = 500f;
+                table.LockedWidth = true;
+                table.SetWidths(new float[] { 0.3f, 0.7f });
 
-                    grdEgresados.RenderControl(hw);
-                    StringReader sr = new StringReader(sw.ToString());
-                    iTextSharp.text.Document pdfDoc = new iTextSharp.text.Document(iTextSharp.text.PageSize.A2, 10f, 10f, 10f, 0f);
-                    HTMLWorker htmlparser = new HTMLWorker(pdfDoc);
-                    PdfWriter.GetInstance(pdfDoc, Response.OutputStream);
-                    pdfDoc.Open();
-                    htmlparser.Parse(sr);
-                    pdfDoc.Close();
+                //Company Logo
+                cell = ImageCell("~/Images/foto2.png", 30f, PdfPCell.ALIGN_CENTER);
+                table.AddCell(cell);
 
-                    Response.ContentType = "application/pdf";
-                    Response.AddHeader("content-disposition", "attachment;filename=GridViewExport.pdf");
-                    Response.Cache.SetCacheability(HttpCacheability.NoCache);
-                    Response.Write(pdfDoc);
-                    Response.End();
-                }
+                //Company Name and Address
+                phrase = new iTextSharp.text.Phrase();
+                phrase.Add(new iTextSharp.text.Chunk("Universidad Peruana de Ciencias Aplicadas\n\n", iTextSharp.text.FontFactory.GetFont("Segoe UI Light", 16, iTextSharp.text.Font.BOLD, iTextSharp.text.Color.RED)));
+                phrase.Add(new iTextSharp.text.Chunk("Reporte de Egresados,\n", iTextSharp.text.FontFactory.GetFont("Segoe UI Light", 8, iTextSharp.text.Font.NORMAL, iTextSharp.text.Color.BLACK)));
+                phrase.Add(new iTextSharp.text.Chunk("Salt Lake Road,\n", iTextSharp.text.FontFactory.GetFont("Segoe UI Light", 8, iTextSharp.text.Font.NORMAL, iTextSharp.text.Color.BLACK)));
+                phrase.Add(new iTextSharp.text.Chunk("Seattle, USA", iTextSharp.text.FontFactory.GetFont("Segoe UI Light", 8, iTextSharp.text.Font.NORMAL, iTextSharp.text.Color.BLACK)));
+                cell = PhraseCell(phrase, PdfPCell.ALIGN_LEFT);
+                cell.VerticalAlignment = PdfCell.ALIGN_TOP;
+                table.AddCell(cell);
+
+                //Separater Line
+                color = new iTextSharp.text.Color(System.Drawing.ColorTranslator.FromHtml("#A9A9A9"));
+                DrawLine(writer, 25f, document.Top - 79f, document.PageSize.Width - 25f, document.Top - 79f, color);
+                DrawLine(writer, 25f, document.Top - 80f, document.PageSize.Width - 25f, document.Top - 80f, color);
+                document.Add(table);
+
+                //Employee Details
+                cell = PhraseCell(new iTextSharp.text.Phrase("Lista de Egresados", iTextSharp.text.FontFactory.GetFont("Segoe UI Light", 12, iTextSharp.text.Font.UNDERLINE, iTextSharp.text.Color.BLACK)), PdfPCell.ALIGN_CENTER);
+                cell.Colspan = 2;
+                table.AddCell(cell);
+                cell = PhraseCell(new iTextSharp.text.Phrase(), PdfPCell.ALIGN_CENTER);
+                cell.Colspan = 2;
+                cell.PaddingBottom = 30f;
+                table.AddCell(cell);
+
+                document.Add(table);
+                document.Close();
+                byte[] bytes = memoryStream.ToArray();
+                memoryStream.Close();
+                Response.Clear();
+                Response.ContentType = "application/pdf";
+                Response.AddHeader("Content-Disposition", "attachment; filename=Employee.pdf");
+                Response.ContentType = "application/pdf";
+                Response.Buffer = true;
+                Response.Cache.SetCacheability(HttpCacheability.NoCache);
+                Response.BinaryWrite(bytes);
+                Response.End();
+                Response.Close();
             }
+
         }
 
-        public override void VerifyRenderingInServerForm(Control control)
+        private static void DrawLine(PdfWriter writer, float x1, float y1, float x2, float y2, iTextSharp.text.Color color)
         {
-            //required to avoid the runtime error "  
-            //Control 'GridView1' of type 'GridView' must be placed inside a form tag with runat=server."  
-        }  
+            PdfContentByte contentByte = writer.DirectContent;
+            contentByte.SetColorStroke(color);
+            contentByte.MoveTo(x1, y1);
+            contentByte.LineTo(x2, y2);
+            contentByte.Stroke();
+        }
+        private static PdfPCell PhraseCell(iTextSharp.text.Phrase phrase, int align)
+        {
+            PdfPCell cell = new PdfPCell(phrase);
+            cell.BorderColor = iTextSharp.text.Color.WHITE;
+            cell.VerticalAlignment = PdfCell.ALIGN_TOP;
+            cell.HorizontalAlignment = align;
+            cell.PaddingBottom = 2f;
+            cell.PaddingTop = 0f;
+            return cell;
+        }
+        private static PdfPCell ImageCell(string path, float scale, int align)
+        {
+            iTextSharp.text.Image image = iTextSharp.text.Image.GetInstance(HttpContext.Current.Server.MapPath(path));
+            image.ScalePercent(scale);
+            PdfPCell cell = new PdfPCell(image);
+            cell.BorderColor = iTextSharp.text.Color.WHITE;
+            cell.VerticalAlignment = PdfCell.ALIGN_TOP;
+            cell.HorizontalAlignment = align;
+            cell.PaddingBottom = 0f;
+            cell.PaddingTop = 0f;
+            return cell;
+        }
+ 
     }
 }

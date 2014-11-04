@@ -27,9 +27,6 @@ namespace SWEGR.BL.BC
         
         }
 
-
-
-
         public EgresadoBE obtenerEgresadoxCodigo(string codigo)
         {
             try
@@ -42,7 +39,6 @@ namespace SWEGR.BL.BC
                 throw;
             }
         }
-
 
         public List<EgresadoBE> listarEgresado()
         {
@@ -69,97 +65,6 @@ namespace SWEGR.BL.BC
                 throw;
             }
         }
-        
-        ////public List<EgresadoBE> listarEgresadoxNombreoCodigo(string busqueda)
-        ////{
-        ////    try
-        ////    {
-        ////        EgresadoDALC objetoEgresadoDALC = new EgresadoDALC();
-        ////        return objetoEgresadoDALC.listarEgresadoxNombreoCodigo(busqueda);
-        ////    }
-        ////    catch (Exception ex)
-        ////    {
-        ////        throw;
-        ////    }
-        ////}
-
-        ////public List<EgresadoBE> listarEgresadoxCiclo(string busqueda)
-        ////{
-        ////    try
-        ////    {
-        ////        EgresadoDALC objetoEgresadoDALC = new EgresadoDALC();
-        ////        return objetoEgresadoDALC.listarEgresadoxCiclo(busqueda);
-        ////    }
-        ////    catch (Exception ex)
-        ////    {
-        ////        throw;
-        ////    }
-        ////}
-
-        ////public List<EgresadoBE> listarEgresadoxCarrera(string busqueda)
-        ////{
-        ////    try
-        ////    {
-        ////        EgresadoDALC objetoEgresadoDALC = new EgresadoDALC();
-        ////        return objetoEgresadoDALC.listarEgresadoxCarrera(busqueda);
-        ////    }
-        ////    catch (Exception ex)
-        ////    {
-        ////        throw;
-        ////    }
-        ////}
-
-        ////public List<EgresadoBE> listarEgresadoxNombreoCodigoyCiclo(string busqueda, string ciclo)
-        ////{
-        ////    try
-        ////    {
-        ////        EgresadoDALC objetoEgresadoDALC = new EgresadoDALC();
-        ////        return objetoEgresadoDALC.listarEgresadoxNombreoCodigoyCiclo(busqueda, ciclo);
-        ////    }
-        ////    catch (Exception ex)
-        ////    {
-        ////        throw;
-        ////    }
-        ////}
-
-        ////public List<EgresadoBE> listarEgresadoxNombreoCodigoyCarrera(string busqueda, string carrera)
-        ////{
-        ////    try
-        ////    {
-        ////        EgresadoDALC objetoEgresadoDALC = new EgresadoDALC();
-        ////        return objetoEgresadoDALC.listarEgresadoxNombreoCodigoyCarrera(busqueda, carrera);
-        ////    }
-        ////    catch (Exception ex)
-        ////    {
-        ////        throw;
-        ////    }
-        ////}
-
-        ////public List<EgresadoBE> listarEgresadoxCicloyCarera(string ciclo, string carrera)
-        ////{
-        ////    try
-        ////    {
-        ////        EgresadoDALC objetoEgresadoDALC = new EgresadoDALC();
-        ////        return objetoEgresadoDALC.listarEgresadoxCicloyCarera(ciclo, carrera);
-        ////    }
-        ////    catch (Exception ex)
-        ////    {
-        ////        throw;
-        ////    }
-        ////}
-
-        ////public List<EgresadoBE> listarEgresadoxNombreoCodigoyCicloyCarera(string busqueda, string ciclo, string carrera)
-        ////{
-        ////    try
-        ////    {
-        ////        EgresadoDALC objetoEgresadoDALC = new EgresadoDALC();
-        ////        return objetoEgresadoDALC.listarEgresadoxNombreoCodigoyCicloyCarera(busqueda, ciclo, carrera);
-        ////    }
-        ////    catch (Exception ex)
-        ////    {
-        ////        throw;
-        ////    }
-        ////}
 
         public EgresadoBE obtenerEgresado(int idegresado)
         {
@@ -349,7 +254,6 @@ namespace SWEGR.BL.BC
             }
         }
 
-
         public bool insertarFotoxEgresado(int idegresado, int idfoto)
         {
             try
@@ -371,32 +275,6 @@ namespace SWEGR.BL.BC
                 objetoegresadoDALC.eliminarFotoxEgresado(idegresado, idfoto);
             }
             catch (Exception)
-            {
-                throw;
-            }
-        }
-
-        public List<EgresadoBE> listarGraduando_Lista(String nombre, String carrera, String codigoUniversitario)
-        {
-            try
-            {
-                EgresadoDALC objetoEgresadoDALC = new EgresadoDALC();
-                return objetoEgresadoDALC.listarGraduando_Lista(nombre, carrera, codigoUniversitario);
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
-        }
-
-        public List<EgresadoBE> listarGraduando()
-        {
-            try
-            {
-                EgresadoDALC objetoEgresadoDALC = new EgresadoDALC();
-                return objetoEgresadoDALC.listarGraduando();
-            }
-            catch (Exception ex)
             {
                 throw;
             }

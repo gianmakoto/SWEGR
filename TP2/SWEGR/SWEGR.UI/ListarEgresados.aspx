@@ -16,14 +16,12 @@
 </head>
 <body>
     
-    
     <form id="Form1" runat="server">
     <div>
         <asp:TextBox ID="codigoEgresado" runat="server"></asp:TextBox>
 
         <asp:Button ID="extraerDatosTextBox" runat="server" Text="Extraer Datos" OnClick="extraerDatosTextBox_Click" />
     </div>
-    
 
              <asp:Image ID="Image1" runat="server" /><br />
         Datos generales:     <br />
