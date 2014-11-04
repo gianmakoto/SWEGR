@@ -17,7 +17,7 @@ namespace SWEGR.UI
             IDEgresado = Convert.ToInt32(Session["IDusuario"]);
             TUsuario = Convert.ToChar(Session["TipoUsusario"]);
             Nombrecitow = Convert.ToString(Session["NOmbrezazo"]);
-
+           
             if (TUsuario == 'G')
             {
                 Response.Redirect("Login.aspx");

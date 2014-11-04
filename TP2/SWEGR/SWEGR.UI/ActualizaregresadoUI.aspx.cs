@@ -31,10 +31,11 @@ namespace SWEGR.UI
         {
             try
             {
+                String Nombrecitow;
                 char TUsuario;
                 IDEgresado = Convert.ToInt32(Session["IDusuario"]);
                 TUsuario = Convert.ToChar(Session["TipoUsusario"]);
-
+                Nombrecitow = Convert.ToString(Session["NOmbrezazo"]);
                 if (TUsuario == 'G')
                 {
                     Response.Redirect("Login.aspx");
@@ -47,7 +48,7 @@ namespace SWEGR.UI
                     ddlGenero.Enabled = true;
                     txtfechanacimiento.Enabled = true;
                 }
-
+                NombreHidden.Value = Nombrecitow;
               
                 if (IDEgresado == 0)
                 {
@@ -91,7 +92,7 @@ namespace SWEGR.UI
                     txtcorreoalternativo.Text = egresado.Correoaltegresado;
                     txtperfillinkedin.Text = egresado.Perfillinkedinegresado;
                     txtperfilfacebook.Text = egresado.Perfilfacebookegresado;
-                    NombreHidden.Value = egresado.Nombrecompletoegresado;
+                  
 
                     if (egresado.Sexoegresado == 'M')
                         ddlGenero.SelectedIndex = 1;

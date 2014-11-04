@@ -41,7 +41,9 @@ namespace SWEGR.UI
                 EgresadoBC objEgresadoBC = new EgresadoBC();
                 EgresadoBE objEgresadoBE = objEgresadoBC.obtenerEgresadoxCodigo(txtid.Text);
                 //Nombredll = objEgresadoBC.logincito(txtid.Text,txtpass.Text);
-                Nombredll = "";
+               // if (Nombredll == null)
+                   Nombredll = "";
+               //  Nombredll = "";
                 idlog = txtid.Text;
                 passlog = txtpass.Text;
 
@@ -117,7 +119,10 @@ namespace SWEGR.UI
                         Response.Redirect("ActualizaregresadoUI.aspx");
                     }
                     else
-                        ClientScript.RegisterClientScriptBlock(GetType(), "SWEGR", "<script language=\"JavaScript\"> alert(\"Ocurrió un error\")</script>", false);
+                    {
+                        txterror.Visible = true;
+                        LimpiarCampos();
+                    }
                 }
             }
             catch (Exception ex)

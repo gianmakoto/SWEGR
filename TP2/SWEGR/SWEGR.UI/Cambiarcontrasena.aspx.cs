@@ -22,13 +22,20 @@ namespace SWEGR.UI
     {
         int IDEgresado;
         char TUsuario;
+     
+            String Nombrecitow;
+            
+            
+            
+
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
                 IDEgresado = Convert.ToInt32(Session["IDusuario"]);
                 TUsuario = Convert.ToChar(Session["TipoUsuario"]);
-
+                Nombrecitow = Convert.ToString(Session["NOmbrezazo"]);
+                NombreHidden.Value = Nombrecitow;
                 if (TUsuario == 'G')
                 {
                     Response.Redirect("Login.aspx");

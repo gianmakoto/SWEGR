@@ -59,7 +59,7 @@
                         
                         <li><a href="ListaregresadosUI.aspx">Egresado</a></li>
                         
-                        <li><a href="ListargraduandosUI.aspx">Graduando</a></li>
+                        <%--<li><a href="ListargraduandosUI.aspx">Graduando</a></li>--%>
                         <li><a href="#">Carga De Datos</a></li>
                         <!-- user login dropdown start-->
                         <li class="dropdown">

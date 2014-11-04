@@ -18,7 +18,12 @@ namespace SWEGR.UI
            
             int IDEgresadoSeleccionado;
             char TUsuario;
-
+            String Nombrecitow;
+            int IDEgresado;
+            IDEgresado = Convert.ToInt32(Session["IDusuario"]);
+            TUsuario = Convert.ToChar(Session["TipoUsusario"]);
+            Nombrecitow = Convert.ToString(Session["NOmbrezazo"]);
+            NombreHidden.Value = Nombrecitow;
             try
             {
                 //IDEgresado = Convert.ToInt32(Request.QueryString["IDEgresado"]);

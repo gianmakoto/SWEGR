@@ -222,19 +222,20 @@
                     <a class="navbar-brand" href="InicioComite.aspx">
                         <img style="margin-top: -15px" src="http://cdn4.upc.edu.pe/sites/all/themes/upc_2013/img/logo.png"></img></a>
                 </div>
+
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav" style="align: center">
                         <li><a href="InicioComite.aspx">Inicio</a></li>
                         
                           <li class><a href="ListaregresadosUI.aspx">Egresado</a></li>
                         
-                        <li><a href="#">Graduando</a></li>
+                        <%--<li><a href="#">Graduando</a></li>--%>
                         <li><a href="#">Carga De Datos</a></li>
                         <!-- user login dropdown start-->
                         <li class="dropdown">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <img alt="" style="height: 19px; width:17px" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
-                                <span class="username">Comite</span>
+                                <span class="username" id="spanNombre">Comite</span>
                                 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu extended logout">
@@ -281,7 +282,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <form id="swegrform" class="cmxform form-horizontal tasi-form" runat="server">
-
+                            <asp:HiddenField ID="NombreHidden" runat="server" />
                             <%-- Datos Personales --%>
                             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
                             <asp:UpdatePanel ID="updatosPersonales" runat="server" UpdateMode="Conditional">
@@ -527,8 +528,9 @@
                                     </div>
                                 </div>
 
-                                <hr />
+                               
                                 <div id="Curso2" hidden="hidden">
+                                     <hr />
                                     <div class="form-group">
 
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -575,8 +577,9 @@
                                         </div>
                                     </div>
                                 </div>
-
+                                
                                 <div id="Curso3" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -622,8 +625,9 @@
                                         </div>
                                     </div>
                                 </div>
-
+                                
                                 <div id="Curso4" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -669,8 +673,9 @@
                                         </div>
                                     </div>
                                 </div>
-
+                                
                                 <div id="Curso5" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -716,8 +721,9 @@
                                         </div>
                                     </div>
                                 </div>
-
+                                
                                 <div id="Curso6" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -763,8 +769,9 @@
                                         </div>
                                     </div>
                                 </div>
-
+                                
                                 <div id="Curso7" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -810,8 +817,9 @@
                                         </div>
                                     </div>
                                 </div>
-
+                               
                                 <div id="Curso8" hidden="hidden">
+                                     <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -857,8 +865,9 @@
                                         </div>
                                     </div>
                                 </div>
-
+                                
                                 <div id="Curso9" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -904,8 +913,9 @@
                                         </div>
                                     </div>
                                 </div>
-
+                                
                                 <div id="Curso10" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -951,8 +961,9 @@
                                         </div>
                                     </div>
                                 </div>
-
+                              
                                 <div id="Curso11" hidden="hidden">
+                                      <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -998,8 +1009,9 @@
                                         </div>
                                     </div>
                                 </div>
-
+                               
                                 <div id="Curso12" hidden="hidden">
+                                     <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -1045,8 +1057,9 @@
                                         </div>
                                     </div>
                                 </div>
-
+                               
                                 <div id="Curso13" hidden="hidden">
+                                     <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -1092,8 +1105,9 @@
                                         </div>
                                     </div>
                                 </div>
-
+                               
                                 <div id="Curso14" hidden="hidden">
+                                     <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -1139,8 +1153,9 @@
                                         </div>
                                     </div>
                                 </div>
-
+                                
                                 <div id="Curso15" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -1186,8 +1201,9 @@
                                         </div>
                                     </div>
                                 </div>
-
+                               
                                 <div id="Curso16" hidden="hidden">
+                                     <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -1233,8 +1249,9 @@
                                         </div>
                                     </div>
                                 </div>
-
+                                
                                 <div id="Curso17" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -1280,8 +1297,9 @@
                                         </div>
                                     </div>
                                 </div>
-
+                             
                                 <div id="Curso18" hidden="hidden">
+                                       <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -1327,8 +1345,9 @@
                                         </div>
                                     </div>
                                 </div>
-
+                              
                                 <div id="Curso19" hidden="hidden">
+                                      <hr />
                                     <div class="form-group">
 
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -1375,8 +1394,9 @@
                                         </div>
                                     </div>
                                 </div>
-
+                                
                                 <div id="Curso20" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -1521,7 +1541,7 @@
                                         </label>
                                     </div>
                                 </div>
-
+                               
                                 <div id="Trabajo2" hidden="hidden">
                                     <hr />
                                     <div class="form-group">
@@ -1603,8 +1623,9 @@
                                         </label>
                                     </div>
                                 </div>
-
+                                
                                 <div id="Trabajo3" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -1684,8 +1705,9 @@
                                         </label>
                                     </div>
                                 </div>
-
+                                
                                 <div id="Trabajo4" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -1765,8 +1787,9 @@
                                         </label>
                                     </div>
                                 </div>
-
+                                
                                 <div id="Trabajo5" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -1846,8 +1869,9 @@
                                         </label>
                                     </div>
                                 </div>
-
+                               
                                 <div id="Trabajo6" hidden="hidden">
+                                     <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -1927,8 +1951,9 @@
                                         </label>
                                     </div>
                                 </div>
-
+                             
                                 <div id="Trabajo7" hidden="hidden">
+                                       <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -2008,8 +2033,9 @@
                                         </label>
                                     </div>
                                 </div>
-
+                              
                                 <div id="Trabajo8" hidden="hidden">
+                                      <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -2089,8 +2115,9 @@
                                         </label>
                                     </div>
                                 </div>
-
+                               
                                 <div id="Trabajo9" hidden="hidden">
+                                     <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -2170,8 +2197,9 @@
                                         </label>
                                     </div>
                                 </div>
-
+                               
                                 <div id="Trabajo10" hidden="hidden">
+                                     <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -2251,8 +2279,9 @@
                                         </label>
                                     </div>
                                 </div>
-
+                              
                                 <div id="Trabajo11" hidden="hidden">
+                                      <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -2332,8 +2361,9 @@
                                         </label>
                                     </div>
                                 </div>
-
+                                
                                 <div id="Trabajo12" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -2413,8 +2443,9 @@
                                         </label>
                                     </div>
                                 </div>
-
+                              
                                 <div id="Trabajo13" hidden="hidden">
+                                      <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -2494,8 +2525,9 @@
                                         </label>
                                     </div>
                                 </div>
-
+                               
                                 <div id="Trabajo14" hidden="hidden">
+                                     <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -2575,8 +2607,9 @@
                                         </label>
                                     </div>
                                 </div>
-
+                               
                                 <div id="Trabajo15" hidden="hidden">
+                                     <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -2656,8 +2689,9 @@
                                         </label>
                                     </div>
                                 </div>
-
+                                
                                 <div id="Trabajo16" hidden="hidden">
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -2737,8 +2771,9 @@
                                         </label>
                                     </div>
                                 </div>
-
+                               
                                 <div id="Trabajo17" hidden="hidden">
+                                     <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -2818,8 +2853,9 @@
                                         </label>
                                     </div>
                                 </div>
-
+                               
                                 <div id="Trabajo18" hidden="hidden">
+                                     <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -2899,8 +2935,9 @@
                                         </label>
                                     </div>
                                 </div>
-
+                               
                                 <div id="Trabajo19" hidden="hidden">
+                                     <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -2980,8 +3017,9 @@
                                         </label>
                                     </div>
                                 </div>
-
+                               
                                 <div id="Trabajo20" hidden="hidden">
+                                     <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -3166,6 +3204,9 @@
                 popupEasing: 'easeOutBack',
                 popup2Easing: 'easeOutBack'
             });
+
+            var algo = document.getElementById("<%= NombreHidden.ClientID %>").value; //hiddenField asp
+            $("#spanNombre").text(algo); //span html
         });
 
         $(window).load(function () {

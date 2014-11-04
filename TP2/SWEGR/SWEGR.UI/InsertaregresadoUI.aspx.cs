@@ -70,8 +70,9 @@ namespace SWEGR.UI
                     objEgresadoBC.insertarEgresadodesdeEgresadoDesvinculado(objEgresadoBE);
 
                     ActualizarEgresadoDesvinculado(txtCodigo.Text);
-                    ScriptManager.RegisterStartupScript(Page, GetType(), "exito", "exito();", true);
                     Limpiar();
+                    ScriptManager.RegisterStartupScript(Page, GetType(), "exito", "exito();", true);
+                    //Response.Redirect("login.aspx");
                 }
             }
         }
@@ -163,6 +164,11 @@ namespace SWEGR.UI
                 }
             }
             return clearText;
+        }
+
+        protected void btnRedireccionar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("login.aspx");
         }
     }
 }

@@ -71,6 +71,7 @@
                 buttons: {
                     Aceptar: function () {
                         $(this).dialog("close");
+                        $("#btnRedireccionar").click();
                     }
                 },
                 modal: true
@@ -131,12 +132,12 @@
 
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav" style="align: center">
-                        <li><a href="Index.aspx">Inicio</a></li>
+                        <%--<li class="active"><a href="login.aspx">Regresar</a></li>--%>
 
-                        <li><a href="VisualizaregresadoUI.aspx">Egresado</a></li>
-                        <li class="active"><a href="ActualizargraduandoUI.aspx">Graduando</a></li>
+                        <%--<li><a href="VisualizaregresadoUI.aspx">Egresado</a></li>--%>
+                        <%--<li class="active"><a href="ActualizargraduandoUI.aspx">Graduando</a></li>--%>
                         <!-- user login dropdown start-->
-                        <li class="dropdown">
+                    <%--    <li class="dropdown">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <img alt="" style="height: 19px; width: 17px" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
                                 <span class="username">Nombre</span>
@@ -149,7 +150,7 @@
                                 <li><a href="#"><i class="icon-bell-alt"></i>Notification</a></li>
                                 <li><a href="Login.aspx"><i class="icon-key"></i>Cerrar sesión</a></li>
                             </ul>
-                        </li>
+                        </li>--%>
                         <!-- user login dropdown end -->
                     </ul>
                 </div>
@@ -163,12 +164,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-sm-4">
-                    <h1>Graduandos</h1>
+                    <h1>Egresados</h1>
                 </div>
                 <div class="col-lg-8 col-sm-8">
                     <ol class="breadcrumb pull-right">
-                        <li><a href="Index.aspx">Home</a></li>
-                        <li class="active">Insertar egresado </li>
+                        <%--<li><a href="Index.aspx">Home</a></li>--%>
+                        <li class="active">Registrate </li>
                     </ol>
                 </div>
             </div>
@@ -237,8 +238,11 @@
                                     <div class="form-group">
                                         <div class="col-sm-10">
                                             <asp:Button ID="btnLimpiar" runat="server" Text="Limpiar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnLimpiar_Click" />
+                                            <label class="pull-right">&nbsp&nbsp&nbsp</label>
                                             <asp:Button ID="btnRegistrar" runat="server" Text="Regístrate" Enabled="false" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnRegistrar_Click" />
                                         </div>
+
+                                        <asp:Button ID="btnRedireccionar" runat="server" CssClass="hidden" type="submit" OnClick="btnRedireccionar_Click"/>
                                     </div>
                                 </ContentTemplate>
                             </asp:UpdatePanel>

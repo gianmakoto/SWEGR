@@ -13,9 +13,9 @@
 
     <script type="text/javascript" src="MaxLength.min.js"></script>
 
-         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
 
- <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
     <link href="http://localhost:49184/maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -34,11 +34,11 @@
     <link href="Content/css/style-responsive.css" rel="stylesheet" />
 
 
-<style>
+    <style>
         .separadorTabla
-        {  
+        {
             -webkit-column-count: 2;
-            -moz-column-count: 2; 
+            -moz-column-count: 2;
             column-count: 2;
         }
     </style>
@@ -87,7 +87,7 @@
                 modal: true
             }).css("font-size", "12px");
 
-            
+
         }
 
         function error() {
@@ -194,18 +194,18 @@
                 </div>
 
                 <div class="navbar-collapse collapse ">
-                    <ul class="nav navbar-nav" style=" align: center">
+                    <ul class="nav navbar-nav" style="align: center">
                         <li><a href="InicioComite.aspx">Inicio</a></li>
-                        
-                          <li class><a href="ListaregresadosUI.aspx">Egresado</a></li>
-                        
-                                                <li><a href="ListargraduandosUI.aspx">Graduando</a></li>
+
+                        <li class><a href="ListaregresadosUI.aspx">Egresado</a></li>
+
+                        <%--<li><a href="ListargraduandosUI.aspx">Graduando</a></li>--%>
 
                         <li><a href="#">Carga De Datos</a></li>
                         <!-- user login dropdown start-->
                         <li class="dropdown">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                <img alt="" style="height: 19px; width:17px" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+                                <img alt="" style="height: 19px; width: 17px" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
                                 <span class="username" id="spanNombre">Nombre</span>
                                 <b class="caret"></b>
                             </a>
@@ -257,170 +257,185 @@
                             <asp:UpdatePanel ID="uppanel" runat="server" UpdateMode="Conditional">
                                 <ContentTemplate>
 
-          <asp:HiddenField  ID="NombreHidden" runat="server"/>
-  
-                                
-                            <div class="form-group">
-                                <label class="col-sm-2 col-sm-2 control-label">
-                                    Nombre y/o código:
-                                    <asp:HiddenField ID="PNombre" runat="server" ></asp:HiddenField>
-                                            <asp:HiddenField ID="PDireccion" runat="server" ></asp:HiddenField>
-                                            <asp:HiddenField ID="PTelf1" runat="server" ></asp:HiddenField>
-                                            <asp:HiddenField ID="Ptelf2" runat="server" ></asp:HiddenField>
-                                            <asp:HiddenField ID="PCorreo1" runat="server" ></asp:HiddenField>
-                                            <asp:HiddenField ID="Pcorreo2" runat="server" ></asp:HiddenField>
-                                </label>
-                                <div class="col-sm-8">
-                                    <asp:TextBox ID="txtNombreCodigo" runat="server" CssClass="form-control"></asp:TextBox>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-2 col-sm-2 control-label">
-                                    Año inicio
-                                </label>
-                                <div class="col-sm-8">
-                                    <asp:DropDownList ID="ddlInicio" runat="server" AutoPostBack="false" CssClass="form-control"></asp:DropDownList>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-2 col-sm-2 control-label">
-                                    Año Fin
-                                </label>
-                                <div class="col-sm-8">
-                                    <asp:DropDownList ID="ddlFin" runat="server" AutoPostBack="false" CssClass="form-control"></asp:DropDownList>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-2 col-sm-2 control-label">
-                                    Carrera
-                                </label>
-                                <div class="col-sm-8">
-                                    <asp:DropDownList ID="ddlCarrera" runat="server" AutoPostBack="false" CssClass="form-control"></asp:DropDownList>
-                                </div>
-                            </div>
-                            <div class="form-group">
+                                    <asp:HiddenField ID="NombreHidden" runat="server" />
+
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            Nombre y/o código:
+                                    <asp:HiddenField ID="PNombre" runat="server"></asp:HiddenField>
+                                            <asp:HiddenField ID="PDireccion" runat="server"></asp:HiddenField>
+                                            <asp:HiddenField ID="PTelf1" runat="server"></asp:HiddenField>
+                                            <asp:HiddenField ID="Ptelf2" runat="server"></asp:HiddenField>
+                                            <asp:HiddenField ID="PCorreo1" runat="server"></asp:HiddenField>
+                                            <asp:HiddenField ID="Pcorreo2" runat="server"></asp:HiddenField>
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:TextBox ID="txtNombreCodigo" runat="server" CssClass="form-control"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            Año inicio
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlInicio" runat="server" AutoPostBack="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            Año Fin
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlFin" runat="server" AutoPostBack="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            Carrera
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlCarrera" runat="server" AutoPostBack="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
                                         <div class="col-sm-10">
-    <asp:Button ID="ButtonGuardar_Invisible" runat="server" style="display:none;"   OnClick="GuardarDatosExtraidosButton_Click1"/>
+                                            <asp:Button ID="ButtonGuardar_Invisible" runat="server" Style="display: none;" OnClick="GuardarDatosExtraidosButton_Click1" />
 
                                             <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-danger pull-right" type="submit" OnClick="btnBuscar_Click" />
                                         </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-sm-9">
-                                    <asp:GridView ID="grdEgresados" Width="930px"  align = "center" runat="server"  CellPadding="8" CellSpacing="3" AutoGenerateColumns="false" DataKeyNames="EgresadoID" OnRowCommand="grdEgresados_RowCommand" AllowPaging="true" PageSize="10" OnPageIndexChanging="grdEgresados_PageIndexChanging">
-                                        <Columns>
-                                            <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller"  DataField="EgresadoID" HeaderText="EgresadoID" Visible="False" />
-                                            <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller"  HeaderText="Código" DataField="Codigo" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                            <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Nombre" DataField="Nombre" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                            <asp:BoundField ItemStyle-Width="300" ItemStyle-Font-Size="Smaller" HeaderText="Carrera" DataField="Carrera" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                            <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Ciclo egreso" DataField="Cicloegreso" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                            <asp:BoundField ItemStyle-Width="300" ItemStyle-Font-Size="Smaller" HeaderText="Trabajo Actual" DataField="Trabajoactual" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                            <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Nombre jefe" DataField="Nombrejefe" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                            <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Cargo jefe" DataField="Cargojefe" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                            <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Teléfono jefe" DataField="Telefonojefe" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                            <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Correo jefe" DataField="Correojefe" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-9">
+                                            <asp:GridView ID="grdEgresados" Width="930px" align="center" runat="server" CellPadding="8" CellSpacing="3" AutoGenerateColumns="false" DataKeyNames="EgresadoID" OnRowCommand="grdEgresados_RowCommand" AllowPaging="true" PageSize="10" OnPageIndexChanging="grdEgresados_PageIndexChanging">
+                                                <Columns>
+                                                    <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" DataField="EgresadoID" HeaderText="EgresadoID" Visible="False" />
+                                                    <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Código" DataField="Codigo" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                                    <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Nombre" DataField="Nombre" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                                    <asp:BoundField ItemStyle-Width="300" ItemStyle-Font-Size="Smaller" HeaderText="Carrera" DataField="Carrera" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                                    <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Ciclo egreso" DataField="Cicloegreso" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                                    <asp:BoundField ItemStyle-Width="300" ItemStyle-Font-Size="Smaller" HeaderText="Trabajo Actual" DataField="Trabajoactual" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                                    <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Nombre jefe" DataField="Nombrejefe" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                                    <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Cargo jefe" DataField="Cargojefe" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                                    <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Teléfono jefe" DataField="Telefonojefe" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                                    <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Correo jefe" DataField="Correojefe" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
 
-                                            <asp:TemplateField HeaderText="Ver" ItemStyle-HorizontalAlign="Center"  HeaderStyle-Width="80px">
-                                                <ItemTemplate>
-                                                            
-                                                    <asp:LinkButton ID="lkbVer" runat="server"   CommandName="cmdVer" CommandArgument='<%# Eval("EgresadoID") %>' >
-                                                                <asp:Image ID="btnVer" runat="server" ImageUrl="Images/visua.png" Width="16" Height="16"/>
+                                                    <asp:TemplateField HeaderText="Ver" ItemStyle-HorizontalAlign="Center" HeaderStyle-Width="80px">
+                                                        <ItemTemplate>
+
+                                                            <asp:LinkButton ID="lkbVer" runat="server" CommandName="cmdVer" CommandArgument='<%# Eval("EgresadoID") %>'>
+                                                                <asp:Image ID="btnVer" runat="server" ImageUrl="Images/visua.png" Width="16" Height="16" />
                                                             </asp:LinkButton>
-                                                </ItemTemplate>
-                                            </asp:TemplateField>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
 
-                                            <asp:TemplateField HeaderText="Extraer datos" ItemStyle-HorizontalAlign="Center"  HeaderStyle-Width="80px">
-                                                <ItemTemplate>
+                                                    <asp:TemplateField HeaderText="Extraer datos" ItemStyle-HorizontalAlign="Center" HeaderStyle-Width="80px">
+                                                        <ItemTemplate>
 
-                                                            <asp:LinkButton ID="lkbExtraerDatos"  runat="server"   CommandName="cmdExtraer" CommandArgument='<%# Eval("EgresadoID") %>' >
-                                                                <asp:Image ID="Image1" runat="server" ImageUrl="Images/extra.png" Width="16" Height="16"/>
-                                                                </asp:LinkButton>
-                                                            
-                                                </ItemTemplate>
-                                            </asp:TemplateField>
+                                                            <asp:LinkButton ID="lkbExtraerDatos" runat="server" CommandName="cmdExtraer" CommandArgument='<%# Eval("EgresadoID") %>'>
+                                                                <asp:Image ID="Image1" runat="server" ImageUrl="Images/extra.png" Width="16" Height="16" />
+                                                            </asp:LinkButton>
 
-                                        </Columns>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
 
-                                        
-                                <HeaderStyle BackColor="#626262"  ForeColor="White" />  
+                                                </Columns>
 
-                                    </asp:GridView>
-                                </div>
-                            </div>
-                            </ContentTemplate>
+
+                                                <HeaderStyle BackColor="#626262" ForeColor="White" />
+
+                                            </asp:GridView>
+                                        </div>
+                                    </div>
+                                </ContentTemplate>
                             </asp:UpdatePanel>
 
                             <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
                                 <ContentTemplate>
-                            <div class="form-group">
+                                    <div class="form-group">
                                         <div class="col-sm-10">
                                             <asp:Button ID="btnImprimir" runat="server" Text="Exportar" CssClass="btn btn-danger pull-right" type="submit" OnClick="Imprimir_Click" />
                                         </div>
-                            </div>
-                                    </ContentTemplate>
+                                    </div>
+                                </ContentTemplate>
                             </asp:UpdatePanel>
-                            
+
                             <div class="form-group">
                                 <div id="dialogerror_mensaje" style="text-align: justify; display: none" runat="server"></div>
 
                                 <div id="dialogerror" style="text-align: justify; display: none" runat="server">
-                                    <b style="text-align: center">No existen egresados para mostrar.</div>
+                                    <b style="text-align: center">No existen egresados para mostrar.
+                                </div>
 
                                 <div id="dialogmenor" style="text-align: justify; display: none" runat="server">
-                                    <b style="text-align: center">El Año inicio debe ser menor o igual al Año fin.</div>
+                                    <b style="text-align: center">El Año inicio debe ser menor o igual al Año fin.
+                                </div>
                             </div>
 
                             <!-- Parte Dialog Form -->
-                            <div class="dialog-form" title="Datos Obtenidos">                            
-                             
-                                
+                            <div class="dialog-form" title="Datos Obtenidos">
+
+
                                 <div id="dialogInfo" style="text-align: justify; display: none" runat="server">
-                                
-                                        <asp:UpdatePanel ID="up_dialog" runat="server"     UpdateMode="Conditional">
+
+                                    <asp:UpdatePanel ID="up_dialog" runat="server" UpdateMode="Conditional">
                                         <ContentTemplate>
-                                            
-                                        <table>
-                                        <tr>
-                                            <td>
-                                                <div id="divformulario" style="width:auto">                             
-                                                    <label id="dlgname">Nombre Completo: </label> <label id="salpe" ></label><br />                                           
-                                                    <label id="dlgtelefono">Telefonos:</label> <label id="salioooo" > </label>  <label  >  /  </label> <label id="saliow" > </label><br />                                           
-                                                    <label id="dlgdireccion">Dirección:</label> <label id="saliope" > </label><br />
-                                                    <label id="dlgcorreo">Correo:</label> <label id="yasalio" ></label><br />
-                                                    <label id="dlgcorreoalt">Correo Alternativo: <label id="porfinsalio" ></label></label><br />
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div id="divfoto" style="width:auto">
-                                                    <img id="fotoEgresadoURL" style="height: 135px; width: 135px; "  runat="server"/>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </table>  
-                                    <br />
-                                    
+
+                                            <table>
+                                                <tr>
+                                                    <td>
+                                                        <div id="divformulario" style="width: auto">
+                                                            <label id="dlgname">Nombre Completo: </label>
+                                                            <label id="salpe"></label>
+                                                            <br />
+                                                            <label id="dlgtelefono">Telefonos:</label>
+                                                            <label id="salioooo"></label>
+                                                            <label>/  </label>
+                                                            <label id="saliow"></label>
+                                                            <br />
+                                                            <label id="dlgdireccion">Dirección:</label>
+                                                            <label id="saliope"></label>
+                                                            <br />
+                                                            <label id="dlgcorreo">Correo:</label>
+                                                            <label id="yasalio"></label>
+                                                            <br />
+                                                            <label id="dlgcorreoalt">Correo Alternativo:
+                                                                <label id="porfinsalio"></label>
+                                                            </label>
+                                                            <br />
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div id="divfoto" style="width: auto">
+                                                            <img id="fotoEgresadoURL" style="height: 135px; width: 135px;" runat="server" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <br />
+
                                             <label style="">Trabajos</label>
-                                            <asp:GridView id="tbegresadoTrabajos" class="ui-widget ui-widget-content" runat="server" AutoGenerateColumns="false"
-                                                    Width="98.1%" ShowHeader="true"  UseAccessibleHeader="true" >
-                                                <HeaderStyle CssClass="ui-widget-header"/>
-                                                    <Columns>
-                                                    <asp:BoundField DataField="Cargotrabajo" HeaderText="Cargo"  ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                            <asp:GridView ID="tbegresadoTrabajos" class="ui-widget ui-widget-content" runat="server" AutoGenerateColumns="false"
+                                                Width="98.1%" ShowHeader="true" UseAccessibleHeader="true">
+                                                <HeaderStyle CssClass="ui-widget-header" />
+                                                <Columns>
+                                                    <asp:BoundField DataField="Cargotrabajo" HeaderText="Cargo" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
                                                     <asp:BoundField DataField="Nombretrabajo" HeaderText="Empresa" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                                    <asp:BoundField DataField="Duraciontrabajo" HeaderText="Duración" ItemStyle-HorizontalAlign="Left"></asp:BoundField>                                                    
+                                                    <asp:BoundField DataField="Duraciontrabajo" HeaderText="Duración" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
                                                 </Columns>
                                             </asp:GridView>
-                                    
+
                                             <br />
                                             <div class="separadorTabla"></div>
 
                                             <label style="">Estudios</label>
-                                            <asp:GridView id="tbegresadoEstudios" class="ui-widget ui-widget-content" runat="server" AutoGenerateColumns="false"
-                                                    Width="98.1%" ShowHeader="true"  UseAccessibleHeader="true" >
-                                                <HeaderStyle CssClass="ui-widget-header"/>
-                                                    <Columns>
-                                                    <asp:BoundField DataField="Nombreestudio" HeaderText="Estudio"  ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                            <asp:GridView ID="tbegresadoEstudios" class="ui-widget ui-widget-content" runat="server" AutoGenerateColumns="false"
+                                                Width="98.1%" ShowHeader="true" UseAccessibleHeader="true">
+                                                <HeaderStyle CssClass="ui-widget-header" />
+                                                <Columns>
+                                                    <asp:BoundField DataField="Nombreestudio" HeaderText="Estudio" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
                                                     <asp:BoundField DataField="Nombreinstitucion" HeaderText="Institución" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                                    <asp:BoundField DataField="Duracionestudio" HeaderText="Duración" ItemStyle-HorizontalAlign="Left"></asp:BoundField>                                                    
+                                                    <asp:BoundField DataField="Duracionestudio" HeaderText="Duración" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
                                                 </Columns>
                                             </asp:GridView>
 
@@ -429,31 +444,31 @@
                                             <div class="separadorTabla"></div>
 
                                             <label style="">Intereses</label>
-                                            <asp:GridView id="tbegresadoIntereses" class="ui-widget ui-widget-content" runat="server" AutoGenerateColumns="true"
-                                                    Width="98.1%" ShowHeader="true"  UseAccessibleHeader="true" >
-                                                <HeaderStyle CssClass="ui-widget-header"/>                                                   
+                                            <asp:GridView ID="tbegresadoIntereses" class="ui-widget ui-widget-content" runat="server" AutoGenerateColumns="true"
+                                                Width="98.1%" ShowHeader="true" UseAccessibleHeader="true">
+                                                <HeaderStyle CssClass="ui-widget-header" />
                                             </asp:GridView>
 
 
-                                              <br />
+                                            <br />
                                             <div class="separadorTabla"></div>
 
                                             <label style="">Aptitudes</label>
-                                            <asp:GridView id="tbegresadoAptitudes" class="ui-widget ui-widget-content" runat="server" AutoGenerateColumns="true"
-                                                    Width="98.1%" ShowHeader="true"  UseAccessibleHeader="true" >
-                                                <HeaderStyle CssClass="ui-widget-header"/>                                                   
+                                            <asp:GridView ID="tbegresadoAptitudes" class="ui-widget ui-widget-content" runat="server" AutoGenerateColumns="true"
+                                                Width="98.1%" ShowHeader="true" UseAccessibleHeader="true">
+                                                <HeaderStyle CssClass="ui-widget-header" />
                                             </asp:GridView>
 
                                         </ContentTemplate>
-                                    </asp:UpdatePanel> 
-                                 
-                                        
-                              <!--<asp:Button ID="GuardarDatosExtraidosButton" runat="server" Text="Guardar" CssClass="btn btn-danger pull-right" type="submit"   OnClick="GuardarDatosExtraidosButton_Click"/>-->
+                                    </asp:UpdatePanel>
 
-                                     
+
+                                    <!--<asp:Button ID="GuardarDatosExtraidosButton" runat="server" Text="Guardar" CssClass="btn btn-danger pull-right" type="submit"   OnClick="GuardarDatosExtraidosButton_Click"/>-->
+
+
                                 </div>
                                 <!--<input type="submit" tabindex="-1"/> -->
-                                                           
+
                             </div>
 
                             <!-- Parte Dialog Form-->
@@ -467,8 +482,10 @@
     </div>
 
 
+
+    
     <!--footer start-->
-    <footer class="footer">
+    <footer class="footer" style="text-align: left">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-sm-12">
@@ -493,13 +510,12 @@
                 </div>
             </div>
 
-            </div>
-       
-    </footer>
+        </div>
 
+    </footer>
     <!--footer end-->
     <!-- js placed at the end of the document so the pages load faster -->
-  
+
     <script src="Content/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="Content/js/hover-dropdown.js"></script>
     <script type="text/javascript" src="Content/assets/bxslider/jquery.bxslider.js"></script>
