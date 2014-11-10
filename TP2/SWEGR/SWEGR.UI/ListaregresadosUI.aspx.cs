@@ -45,7 +45,8 @@ namespace SWEGR.UI
                 char TUsuario;
                 String Nombrecitow;
                 IDEgresado = Convert.ToInt32(Session["IDusuario"]);
-                TUsuario = Convert.ToChar(Session["TipoUsusario"]);
+                //TUsuario = Convert.ToChar(Session["TipoUsusario"]);
+                TUsuario = 'C';
                 Nombrecitow = Convert.ToString(Session["NOmbrezazo"]);
 
                 if (TUsuario != 'C')
@@ -979,6 +980,7 @@ namespace SWEGR.UI
         protected void Imprimir_Click(object sender, EventArgs e)
         {
             ExportGridToPDF();
+            ////ReporteEgresados();
         }
 
         public DatosObtenidosBE extraerDatos(int codigoEgresado)
@@ -1288,89 +1290,161 @@ namespace SWEGR.UI
 
         private void ExportGridToPDF()
         {
-            iTextSharp.text.Document document = new iTextSharp.text.Document(iTextSharp.text.PageSize.A4, 88f, 88f, 10f, 10f);
-            iTextSharp.text.Font NormalFont = iTextSharp.text.FontFactory.GetFont("Segoe UI Light", 12, iTextSharp.text.Font.NORMAL, iTextSharp.text.Color.BLACK);
-
-            using (System.IO.MemoryStream memoryStream = new System.IO.MemoryStream())
+            try
             {
-                PdfWriter writer = PdfWriter.GetInstance(document, memoryStream);
-                iTextSharp.text.Phrase phrase = null;
-                PdfPCell cell = null;
-                PdfPTable table = null;
-                iTextSharp.text.Color color = null;
+                iTextSharp.text.Document document = new iTextSharp.text.Document(iTextSharp.text.PageSize.A4.Rotate(), 10f, 10f, 10f, 10f);
+                iTextSharp.text.Font NormalFont = iTextSharp.text.FontFactory.GetFont("Segoe UI Light", 12, iTextSharp.text.Font.HELVETICA, iTextSharp.text.Color.BLACK);
 
-                document.Open();
+                using (System.IO.MemoryStream memoryStream = new System.IO.MemoryStream())
+                {
+                    PdfWriter writer = PdfWriter.GetInstance(document, memoryStream);
+                    PdfPCell cell = null;
+                    PdfPCell cell2 = null;
+                    PdfPTable table = null;
+                    document.AddTitle("Reporte de Egresados");
 
-                //Header Table
-                table = new PdfPTable(2);
-                table.TotalWidth = 500f;
-                table.LockedWidth = true;
-                table.SetWidths(new float[] { 0.3f, 0.7f });
+                    document.Open();
 
-                //Company Logo
-                cell = ImageCell("~/Images/foto2.png", 30f, PdfPCell.ALIGN_CENTER);
-                table.AddCell(cell);
+                    table = new PdfPTable(9);
+                    table.WidthPercentage = 100;
 
-                //Company Name and Address
-                phrase = new iTextSharp.text.Phrase();
-                phrase.Add(new iTextSharp.text.Chunk("Universidad Peruana de Ciencias Aplicadas\n\n", iTextSharp.text.FontFactory.GetFont("Segoe UI Light", 16, iTextSharp.text.Font.BOLD, iTextSharp.text.Color.RED)));
-                phrase.Add(new iTextSharp.text.Chunk("Reporte de Egresados,\n", iTextSharp.text.FontFactory.GetFont("Segoe UI Light", 8, iTextSharp.text.Font.NORMAL, iTextSharp.text.Color.BLACK)));
-                phrase.Add(new iTextSharp.text.Chunk("Salt Lake Road,\n", iTextSharp.text.FontFactory.GetFont("Segoe UI Light", 8, iTextSharp.text.Font.NORMAL, iTextSharp.text.Color.BLACK)));
-                phrase.Add(new iTextSharp.text.Chunk("Seattle, USA", iTextSharp.text.FontFactory.GetFont("Segoe UI Light", 8, iTextSharp.text.Font.NORMAL, iTextSharp.text.Color.BLACK)));
-                cell = PhraseCell(phrase, PdfPCell.ALIGN_LEFT);
-                cell.VerticalAlignment = PdfCell.ALIGN_TOP;
-                table.AddCell(cell);
+                    //Company Logo
+                    cell = ImageCell("~/Images/SEGUIMIENTO_EGRESADOS.png", 33f, PdfPCell.ALIGN_CENTER);
+                    cell2 = ImageCell("~/Images/SEGUIMIENTO_EGRESADOS.png", 0f, PdfPCell.ALIGN_CENTER);
+                    table.AddCell(cell);
+                    table.AddCell(cell2);
+                    table.AddCell(cell2);
+                    table.AddCell(cell2);
+                    table.AddCell(cell2);
+                    table.AddCell(cell2);
+                    table.AddCell(cell2);
+                    table.AddCell(cell2);
+                    table.AddCell(cell2);
+                    //table.AddCell(cellSeparator);
 
-                //Separater Line
-                color = new iTextSharp.text.Color(System.Drawing.ColorTranslator.FromHtml("#A9A9A9"));
-                DrawLine(writer, 25f, document.Top - 79f, document.PageSize.Width - 25f, document.Top - 79f, color);
-                DrawLine(writer, 25f, document.Top - 80f, document.PageSize.Width - 25f, document.Top - 80f, color);
-                document.Add(table);
+                    //agregar datagridvew
+                    //===============================================================================
+                    PdfPCell clCodigo = new PdfPCell(new iTextSharp.text.Phrase("Código", NormalFont));
+                    clCodigo.BorderWidth = 0;
+                    clCodigo.BorderWidthBottom = 0.75f;
 
-                //Employee Details
-                cell = PhraseCell(new iTextSharp.text.Phrase("Lista de Egresados", iTextSharp.text.FontFactory.GetFont("Segoe UI Light", 12, iTextSharp.text.Font.UNDERLINE, iTextSharp.text.Color.BLACK)), PdfPCell.ALIGN_CENTER);
-                cell.Colspan = 2;
-                table.AddCell(cell);
-                cell = PhraseCell(new iTextSharp.text.Phrase(), PdfPCell.ALIGN_CENTER);
-                cell.Colspan = 2;
-                cell.PaddingBottom = 30f;
-                table.AddCell(cell);
+                    PdfPCell clNombres = new PdfPCell(new iTextSharp.text.Phrase("Nombres", NormalFont));
+                    clNombres.BorderWidth = 0;
+                    clNombres.BorderWidthBottom = 0.75f;
 
-                document.Add(table);
-                document.Close();
-                byte[] bytes = memoryStream.ToArray();
-                memoryStream.Close();
-                Response.Clear();
-                Response.ContentType = "application/pdf";
-                Response.AddHeader("Content-Disposition", "attachment; filename=Employee.pdf");
-                Response.ContentType = "application/pdf";
-                Response.Buffer = true;
-                Response.Cache.SetCacheability(HttpCacheability.NoCache);
-                Response.BinaryWrite(bytes);
-                Response.End();
-                Response.Close();
+                    PdfPCell clCarrera = new PdfPCell(new iTextSharp.text.Phrase("Carrera", NormalFont));
+                    clCarrera.BorderWidth = 0;
+                    clCarrera.BorderWidthBottom = 0.75f;
+
+                    PdfPCell clCiclo = new PdfPCell(new iTextSharp.text.Phrase("Ciclo de Egreso", NormalFont));
+                    clCiclo.BorderWidth = 0;
+                    clCiclo.BorderWidthBottom = 0.75f;
+
+                    PdfPCell clTrabajo = new PdfPCell(new iTextSharp.text.Phrase("Trabajo Actual", NormalFont));
+                    clTrabajo.BorderWidth = 0;
+                    clTrabajo.BorderWidthBottom = 0.75f;
+
+                    PdfPCell clNombreJefe = new PdfPCell(new iTextSharp.text.Phrase("Nombre del Jefe", NormalFont));
+                    clNombreJefe.BorderWidth = 0;
+                    clNombreJefe.BorderWidthBottom = 0.75f;
+
+                    PdfPCell clCargoJEfe = new PdfPCell(new iTextSharp.text.Phrase("Cargo del Jefe", NormalFont));
+                    clCargoJEfe.BorderWidth = 0;
+                    clCargoJEfe.BorderWidthBottom = 0.75f;
+
+                    PdfPCell clTelJefe = new PdfPCell(new iTextSharp.text.Phrase("Teléfono del Jefe", NormalFont));
+                    clTelJefe.BorderWidth = 0;
+                    clTelJefe.BorderWidthBottom = 0.75f;
+
+                    PdfPCell clCorreoJefe = new PdfPCell(new iTextSharp.text.Phrase("Correo del Jefe", NormalFont));
+                    clCorreoJefe.BorderWidth = 0;
+                    clCorreoJefe.BorderWidthBottom = 0.75f;
+
+                    // Añadimos las celdas a la tabla
+                    table.AddCell(clCodigo);
+                    table.AddCell(clNombres);
+                    table.AddCell(clCarrera);
+                    table.AddCell(clCiclo);
+                    table.AddCell(clTrabajo);
+                    table.AddCell(clNombreJefe);
+                    table.AddCell(clCargoJEfe);
+                    table.AddCell(clTelJefe);
+                    table.AddCell(clCorreoJefe);
+
+                    foreach (GridViewRow row in grdEgresados.Rows)
+                    {
+                        for (int index = 0; index < row.Cells.Count; index++)
+                        {
+                            string codigo = row.Cells[1].Text;
+                            clCodigo = new PdfPCell(new iTextSharp.text.Phrase(codigo, NormalFont));
+                            clCodigo.BorderWidth = 0;
+
+                            string nombres = row.Cells[2].Text;
+                            clNombres = new PdfPCell(new iTextSharp.text.Phrase(nombres, NormalFont));
+                            clNombres.BorderWidth = 0;
+
+                            string carrera = row.Cells[3].Text;
+                            clCarrera = new PdfPCell(new iTextSharp.text.Phrase(carrera, NormalFont));
+                            clCarrera.BorderWidth = 0;
+
+                            string ciclo = row.Cells[3].Text;
+                            clCiclo = new PdfPCell(new iTextSharp.text.Phrase(ciclo, NormalFont));
+                            clCiclo.BorderWidth = 0;
+
+                            string trabajo = row.Cells[3].Text;
+                            clTrabajo = new PdfPCell(new iTextSharp.text.Phrase(trabajo, NormalFont));
+                            clTrabajo.BorderWidth = 0;
+
+                            string nombreJefe = row.Cells[3].Text;
+                            clNombreJefe = new PdfPCell(new iTextSharp.text.Phrase(nombreJefe, NormalFont));
+                            clNombreJefe.BorderWidth = 0;
+
+                            string cargoJefe = row.Cells[3].Text;
+                            clCargoJEfe = new PdfPCell(new iTextSharp.text.Phrase(cargoJefe, NormalFont));
+                            clCargoJEfe.BorderWidth = 0;
+
+                            string telJefe = row.Cells[3].Text;
+                            clTelJefe = new PdfPCell(new iTextSharp.text.Phrase(telJefe, NormalFont));
+                            clTelJefe.BorderWidth = 0;
+
+                            string correoJefe = row.Cells[3].Text;
+                            clCorreoJefe = new PdfPCell(new iTextSharp.text.Phrase(correoJefe, NormalFont));
+                            clCorreoJefe.BorderWidth = 0;
+                        }
+                        // Añadimos las celdas a la tabla
+                        table.AddCell(clCodigo);
+                        table.AddCell(clNombres);
+                        table.AddCell(clCarrera);
+                        table.AddCell(clCiclo);
+                        table.AddCell(clTrabajo);
+                        table.AddCell(clNombreJefe);
+                        table.AddCell(clCargoJEfe);
+                        table.AddCell(clTelJefe);
+                        table.AddCell(clCorreoJefe);
+                    }
+                    //===============================================================================
+                    document.Add(table);
+                    document.Close();
+                    byte[] bytes = memoryStream.ToArray();
+                    memoryStream.Close();
+                    Response.Clear();
+                    Response.ContentType = "application/pdf";
+                    Response.AddHeader("Content-Disposition", "attachment; filename=Reporte_Egresados.pdf");
+                    Response.ContentType = "application/pdf";
+                    Response.Buffer = true;
+                    Response.Cache.SetCacheability(HttpCacheability.NoCache);
+                    Response.BinaryWrite(bytes);
+                    Response.End();
+                    Response.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
             }
 
         }
 
-        private static void DrawLine(PdfWriter writer, float x1, float y1, float x2, float y2, iTextSharp.text.Color color)
-        {
-            PdfContentByte contentByte = writer.DirectContent;
-            contentByte.SetColorStroke(color);
-            contentByte.MoveTo(x1, y1);
-            contentByte.LineTo(x2, y2);
-            contentByte.Stroke();
-        }
-        private static PdfPCell PhraseCell(iTextSharp.text.Phrase phrase, int align)
-        {
-            PdfPCell cell = new PdfPCell(phrase);
-            cell.BorderColor = iTextSharp.text.Color.WHITE;
-            cell.VerticalAlignment = PdfCell.ALIGN_TOP;
-            cell.HorizontalAlignment = align;
-            cell.PaddingBottom = 2f;
-            cell.PaddingTop = 0f;
-            return cell;
-        }
         private static PdfPCell ImageCell(string path, float scale, int align)
         {
             iTextSharp.text.Image image = iTextSharp.text.Image.GetInstance(HttpContext.Current.Server.MapPath(path));
@@ -1383,6 +1457,6 @@ namespace SWEGR.UI
             cell.PaddingTop = 0f;
             return cell;
         }
- 
+
     }
 }
