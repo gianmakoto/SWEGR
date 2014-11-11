@@ -963,9 +963,6 @@ namespace SWEGR.UI
 
         protected void obtenerFoto(int codigoFoto)
         {
-            if (codigoFoto == 1 || codigoFoto == null)
-                return;
-
             FotoBC metodosFoto = new FotoBC();
             var objetoFoto = metodosFoto.obtenerFoto(codigoFoto);
             contenedorfoto.ImageUrl = "data:image/jpg;base64," + Convert.ToBase64String(objetoFoto.ImagenBytes);

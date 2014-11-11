@@ -1376,39 +1376,48 @@ namespace SWEGR.UI
                         for (int index = 0; index < row.Cells.Count; index++)
                         {
                             string codigo = row.Cells[1].Text;
-                            clCodigo = new PdfPCell(new iTextSharp.text.Phrase(codigo, NormalFont));
+                            string codigovalidado = validarString(codigo);
+                            clCodigo = new PdfPCell(new iTextSharp.text.Phrase(codigovalidado, NormalFont));
                             clCodigo.BorderWidth = 0;
 
                             string nombres = row.Cells[2].Text;
-                            clNombres = new PdfPCell(new iTextSharp.text.Phrase(nombres, NormalFont));
+                            string nombresvalidado = validarString(nombres);
+                            clNombres = new PdfPCell(new iTextSharp.text.Phrase(nombresvalidado, NormalFont));
                             clNombres.BorderWidth = 0;
 
                             string carrera = row.Cells[3].Text;
-                            clCarrera = new PdfPCell(new iTextSharp.text.Phrase(carrera, NormalFont));
+                            string carreravalidado = validarString(carrera);
+                            clCarrera = new PdfPCell(new iTextSharp.text.Phrase(carreravalidado, NormalFont));
                             clCarrera.BorderWidth = 0;
 
                             string ciclo = row.Cells[3].Text;
-                            clCiclo = new PdfPCell(new iTextSharp.text.Phrase(ciclo, NormalFont));
+                            string ciclovalidado = validarString(ciclo);
+                            clCiclo = new PdfPCell(new iTextSharp.text.Phrase(ciclovalidado, NormalFont));
                             clCiclo.BorderWidth = 0;
 
                             string trabajo = row.Cells[3].Text;
-                            clTrabajo = new PdfPCell(new iTextSharp.text.Phrase(trabajo, NormalFont));
+                            string trabajovalidado = validarString(trabajo);
+                            clTrabajo = new PdfPCell(new iTextSharp.text.Phrase(trabajovalidado, NormalFont));
                             clTrabajo.BorderWidth = 0;
 
                             string nombreJefe = row.Cells[3].Text;
-                            clNombreJefe = new PdfPCell(new iTextSharp.text.Phrase(nombreJefe, NormalFont));
+                            string nombreJefevalidado = validarString(nombreJefe);
+                            clNombreJefe = new PdfPCell(new iTextSharp.text.Phrase(nombreJefevalidado, NormalFont));
                             clNombreJefe.BorderWidth = 0;
 
                             string cargoJefe = row.Cells[3].Text;
-                            clCargoJEfe = new PdfPCell(new iTextSharp.text.Phrase(cargoJefe, NormalFont));
+                            string cargoJefevalidado = validarString(cargoJefe);
+                            clCargoJEfe = new PdfPCell(new iTextSharp.text.Phrase(cargoJefevalidado, NormalFont));
                             clCargoJEfe.BorderWidth = 0;
 
                             string telJefe = row.Cells[3].Text;
-                            clTelJefe = new PdfPCell(new iTextSharp.text.Phrase(telJefe, NormalFont));
+                            string telJefevalidado = validarString(telJefe);
+                            clTelJefe = new PdfPCell(new iTextSharp.text.Phrase(telJefevalidado, NormalFont));
                             clTelJefe.BorderWidth = 0;
 
                             string correoJefe = row.Cells[3].Text;
-                            clCorreoJefe = new PdfPCell(new iTextSharp.text.Phrase(correoJefe, NormalFont));
+                            string correoJefevalidado = validarString(correoJefe);
+                            clCorreoJefe = new PdfPCell(new iTextSharp.text.Phrase(correoJefevalidado, NormalFont));
                             clCorreoJefe.BorderWidth = 0;
                         }
                         // Añadimos las celdas a la tabla
@@ -1458,5 +1467,55 @@ namespace SWEGR.UI
             return cell;
         }
 
+
+        private string validarString(string columna)
+        {
+            string NoValidado1 = columna;
+
+            NoValidado1 = columna.Replace("&#241;", "ñ");
+
+            string Novalidado2 = NoValidado1;
+            Novalidado2 = NoValidado1.Replace("&#209;", "Ñ");
+
+            string Novalidado3 = Novalidado2;
+            Novalidado3 = Novalidado2.Replace("&#225;", "á");
+
+            string Novalidado4 = Novalidado3;
+            Novalidado4 = Novalidado3.Replace("&#233;", "é");
+
+            string Novalidado5 = Novalidado4;
+            Novalidado5 = Novalidado4.Replace("&#237;", "í");
+
+            string Novalidado6 = Novalidado5;
+            Novalidado6 = Novalidado5.Replace("&#243;", "ó");
+
+            string Novalidado7 = Novalidado6;
+            Novalidado7 = Novalidado6.Replace("&#250;", "ú");
+
+            string Novalidado8 = Novalidado7;
+            Novalidado8 = Novalidado7.Replace("&#252;", "ü");
+
+            string Novalidado9 = Novalidado8;
+            Novalidado9 = Novalidado8.Replace("&#193;", "Á");
+
+            string Novalidado10 = Novalidado9;
+            Novalidado10 = Novalidado9.Replace("&#201;", "É");
+
+            string Novalidado11 = Novalidado10;
+            Novalidado11 = Novalidado10.Replace("&#205;", "Í");
+
+            string Novalidado12 = Novalidado11;
+            Novalidado12 = Novalidado11.Replace("&#211;", "Ó");
+
+            string Novalidado13 = Novalidado12;
+            Novalidado13 = Novalidado12.Replace("&#218;", "Ú");
+
+            string Novalidado14 = Novalidado13;
+            Novalidado14 = Novalidado13.Replace("&#220;", "Ü");
+
+            string validado = Novalidado14;
+
+            return validado;
+        }
     }
 }
