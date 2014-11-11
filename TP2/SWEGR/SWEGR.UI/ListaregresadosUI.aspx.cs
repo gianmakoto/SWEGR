@@ -1390,32 +1390,32 @@ namespace SWEGR.UI
                             clCarrera = new PdfPCell(new iTextSharp.text.Phrase(carreravalidado, NormalFont));
                             clCarrera.BorderWidth = 0;
 
-                            string ciclo = row.Cells[3].Text;
+                            string ciclo = row.Cells[4].Text;
                             string ciclovalidado = validarString(ciclo);
                             clCiclo = new PdfPCell(new iTextSharp.text.Phrase(ciclovalidado, NormalFont));
                             clCiclo.BorderWidth = 0;
 
-                            string trabajo = row.Cells[3].Text;
+                            string trabajo = row.Cells[5].Text;
                             string trabajovalidado = validarString(trabajo);
                             clTrabajo = new PdfPCell(new iTextSharp.text.Phrase(trabajovalidado, NormalFont));
                             clTrabajo.BorderWidth = 0;
 
-                            string nombreJefe = row.Cells[3].Text;
+                            string nombreJefe = row.Cells[6].Text;
                             string nombreJefevalidado = validarString(nombreJefe);
                             clNombreJefe = new PdfPCell(new iTextSharp.text.Phrase(nombreJefevalidado, NormalFont));
                             clNombreJefe.BorderWidth = 0;
 
-                            string cargoJefe = row.Cells[3].Text;
+                            string cargoJefe = row.Cells[7].Text;
                             string cargoJefevalidado = validarString(cargoJefe);
                             clCargoJEfe = new PdfPCell(new iTextSharp.text.Phrase(cargoJefevalidado, NormalFont));
                             clCargoJEfe.BorderWidth = 0;
 
-                            string telJefe = row.Cells[3].Text;
+                            string telJefe = row.Cells[8].Text;
                             string telJefevalidado = validarString(telJefe);
                             clTelJefe = new PdfPCell(new iTextSharp.text.Phrase(telJefevalidado, NormalFont));
                             clTelJefe.BorderWidth = 0;
 
-                            string correoJefe = row.Cells[3].Text;
+                            string correoJefe = row.Cells[9].Text;
                             string correoJefevalidado = validarString(correoJefe);
                             clCorreoJefe = new PdfPCell(new iTextSharp.text.Phrase(correoJefevalidado, NormalFont));
                             clCorreoJefe.BorderWidth = 0;
@@ -1513,7 +1513,10 @@ namespace SWEGR.UI
             string Novalidado14 = Novalidado13;
             Novalidado14 = Novalidado13.Replace("&#220;", "Ü");
 
-            string validado = Novalidado14;
+            string Novalidado15 = Novalidado14;
+            Novalidado15 = Novalidado14.Replace("&nbsp;", " ");
+
+            string validado = Novalidado15;
 
             return validado;
         }
