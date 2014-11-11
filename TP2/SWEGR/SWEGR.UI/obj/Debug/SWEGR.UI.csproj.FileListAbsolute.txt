@@ -531,9 +531,6 @@ D:\UPC\2014-2\TDP1\TDP1Trabajo\TP2\SWEGR\SWEGR.UI\obj\Debug\Interop.SHDocVw.dll
 D:\UPC\2014-2\TDP1\TDP1Trabajo\TP2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.csproj.ResolveComReference.cache
 D:\UPC\2014-2\TDP1\TDP1Trabajo\TP2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.dll
 D:\UPC\2014-2\TDP1\TDP1Trabajo\TP2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.pdb
-E:\Furio\semana12\TP2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.csprojResolveAssemblyReference.cache
-E:\Furio\semana12\TP2\SWEGR\SWEGR.UI\obj\Debug\Interop.SHDocVw.dll
-E:\Furio\semana12\TP2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.csproj.ResolveComReference.cache
 E:\Furio\semana12\TP2\SWEGR\SWEGR.UI\bin\SWEGR.UI.dll
 E:\Furio\semana12\TP2\SWEGR\SWEGR.UI\bin\SWEGR.UI.pdb
 E:\Furio\semana12\TP2\SWEGR\SWEGR.UI\bin\AspNet.ScriptManager.jQuery.dll
@@ -546,5 +543,8 @@ E:\Furio\semana12\TP2\SWEGR\SWEGR.UI\bin\SSIAAutenticador.dll
 E:\Furio\semana12\TP2\SWEGR\SWEGR.UI\bin\SWEGR.BL.BC.pdb
 E:\Furio\semana12\TP2\SWEGR\SWEGR.UI\bin\SWEGR.BL.BE.pdb
 E:\Furio\semana12\TP2\SWEGR\SWEGR.UI\bin\SWEGR.DL.DALC.pdb
+E:\Furio\semana12\TP2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.csprojResolveAssemblyReference.cache
+E:\Furio\semana12\TP2\SWEGR\SWEGR.UI\obj\Debug\Interop.SHDocVw.dll
+E:\Furio\semana12\TP2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.csproj.ResolveComReference.cache
 E:\Furio\semana12\TP2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.dll
 E:\Furio\semana12\TP2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.pdb

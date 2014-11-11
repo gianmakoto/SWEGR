@@ -95,6 +95,7 @@ p {line-height: 22px}
 .header-frontend .nav li.active ul.dropdown-menu li.active a{
     color: #fff ;
     background-color: #FF1900;
+    background-color: #CCCCCC;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
     -ms-transition: all .3s ease;
