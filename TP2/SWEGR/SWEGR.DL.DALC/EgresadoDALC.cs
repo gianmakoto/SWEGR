@@ -1174,5 +1174,85 @@ namespace SWEGR.DL.DALC
             }
         }
 
+        public bool insertarEgresado(EgresadoBE objetoEgresadoBE)
+        {
+            String sqlactualizaregresado;
+
+            SqlConnection conn;
+            SqlCommand cmdactualizaregresado;
+            SqlParameter prmidegresado;
+            SqlParameter prmnombrecompletoegresado;
+            SqlParameter prmcorreoegresado;
+            SqlParameter prmtipoegresado;
+            SqlParameter prmidfotoegresado;
+            SqlParameter prmcontrasenaegresado;
+            SqlParameter prmcodigouniversitarioegresado;
+
+            try
+            {
+                conn = new SqlConnection(ConfigurationManager.ConnectionStrings["CSSeguimientoEgresados"].ToString());
+                sqlactualizaregresado = "SWEGR_insertarEgresado";
+                cmdactualizaregresado = new SqlCommand(sqlactualizaregresado, conn);
+                cmdactualizaregresado.CommandType = CommandType.StoredProcedure;
+
+                prmidegresado = new SqlParameter();
+                prmidegresado.ParameterName = "@idegresado";
+                prmidegresado.SqlDbType = SqlDbType.Int;
+                prmidegresado.Value = objetoEgresadoBE.Idegresado;
+
+                prmnombrecompletoegresado = new SqlParameter();
+                prmnombrecompletoegresado.ParameterName = "@nombrecompletoegresado";
+                prmnombrecompletoegresado.SqlDbType = SqlDbType.VarChar;
+                prmnombrecompletoegresado.Size = 100;
+                prmnombrecompletoegresado.Value = objetoEgresadoBE.Nombrecompletoegresado;
+
+                prmcorreoegresado = new SqlParameter();
+                prmcorreoegresado.ParameterName = "@correoegresado";
+                prmcorreoegresado.SqlDbType = SqlDbType.VarChar;
+                prmcorreoegresado.Size = 50;
+                prmcorreoegresado.Value = objetoEgresadoBE.Correoegresado;
+                
+                prmtipoegresado = new SqlParameter();
+                prmtipoegresado.ParameterName = "@tipoegresado";
+                prmtipoegresado.SqlDbType = SqlDbType.Char;
+                prmtipoegresado.Size = 1;
+                prmtipoegresado.Value = objetoEgresadoBE.Tipoegresado;
+
+                prmidfotoegresado = new SqlParameter();
+                prmidfotoegresado.ParameterName = "@idfotoegresado";
+                prmidfotoegresado.SqlDbType = SqlDbType.Int;
+                prmidfotoegresado.Value = objetoEgresadoBE.Idfotoegresado;
+
+                prmcontrasenaegresado = new SqlParameter();
+                prmcontrasenaegresado.ParameterName = "@contrasenaegresado";
+                prmcontrasenaegresado.SqlDbType = SqlDbType.VarChar;
+                prmcontrasenaegresado.Size = 50;
+                prmcontrasenaegresado.Value = objetoEgresadoBE.Contrasenaegresado;
+
+                prmcodigouniversitarioegresado = new SqlParameter();
+                prmcodigouniversitarioegresado.ParameterName = "@codigouniversitarioegresado";
+                prmcodigouniversitarioegresado.SqlDbType = SqlDbType.VarChar;
+                prmcodigouniversitarioegresado.Size = 10;
+                prmcodigouniversitarioegresado.Value = objetoEgresadoBE.Codigouniversitarioegresado;
+
+                cmdactualizaregresado.Parameters.Add(prmidegresado);
+                cmdactualizaregresado.Parameters.Add(prmnombrecompletoegresado);
+                cmdactualizaregresado.Parameters.Add(prmcorreoegresado);
+                cmdactualizaregresado.Parameters.Add(prmtipoegresado);
+                cmdactualizaregresado.Parameters.Add(prmidfotoegresado);
+                cmdactualizaregresado.Parameters.Add(prmcontrasenaegresado);
+                cmdactualizaregresado.Parameters.Add(prmcodigouniversitarioegresado);
+
+                cmdactualizaregresado.Connection.Open();
+                cmdactualizaregresado.ExecuteNonQuery();
+                cmdactualizaregresado.Connection.Close();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
     }
 }

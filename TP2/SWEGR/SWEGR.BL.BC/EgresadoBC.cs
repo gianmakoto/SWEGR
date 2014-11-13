@@ -279,5 +279,18 @@ namespace SWEGR.BL.BC
                 throw;
             }
         }
+
+        public bool insertarEgresado(EgresadoBE objetoEgresadoBE)
+        {
+            try
+            {
+                EgresadoDALC objetoEgresadoDALC = new EgresadoDALC();
+                return objetoEgresadoDALC.insertarEgresado(objetoEgresadoBE);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
     }
 }
