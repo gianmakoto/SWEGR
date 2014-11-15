@@ -260,3 +260,15 @@ D:\UPC\2014-2\TDP1\TDP1Trabajo\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\Interop.SHDocVw.d
 D:\UPC\2014-2\TDP1\TDP1Trabajo\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.csproj.ResolveComReference.cache
 D:\UPC\2014-2\TDP1\TDP1Trabajo\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.dll
 D:\UPC\2014-2\TDP1\TDP1Trabajo\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.pdb
+D:\Furiowzhitow\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BC.dll
+D:\Furiowzhitow\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BC.pdb
+D:\Furiowzhitow\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BE.dll
+D:\Furiowzhitow\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.DL.DALC.dll
+D:\Furiowzhitow\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SSIAAutenticador.dll
+D:\Furiowzhitow\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BE.pdb
+D:\Furiowzhitow\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.DL.DALC.pdb
+D:\Furiowzhitow\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.csprojResolveAssemblyReference.cache
+D:\Furiowzhitow\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\Interop.SHDocVw.dll
+D:\Furiowzhitow\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.csproj.ResolveComReference.cache
+D:\Furiowzhitow\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.dll
+D:\Furiowzhitow\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.pdb
