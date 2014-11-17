@@ -347,6 +347,7 @@
     <Content Include="Images\exigete.jpg" />
     <Content Include="Images\extra.png" />
     <Content Include="Images\extraer.png" />
+    <Content Include="Images\fb.png" />
     <Content Include="Images\flecha2.gif" />
     <Content Include="Images\foto1.png" />
     <Content Include="Images\accent.png" />
@@ -354,6 +355,8 @@
     <Content Include="Images\foto2.png" />
     <Content Include="Images\heroAccent.png" />
     <Content Include="Images\foto3.png" />
+    <Content Include="Images\in.png" />
+    <Content Include="Images\in2.png" />
     <Content Include="Images\orderedList0.png" />
     <Content Include="Images\orderedList1.png" />
     <Content Include="Images\orderedList2.png" />

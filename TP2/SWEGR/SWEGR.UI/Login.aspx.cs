@@ -53,7 +53,7 @@ namespace SWEGR.UI
                     {
                         Session.Add("TipoUsusario", "C");
                         Session.Add("NOmbrezazo", Nombredll);
-                        Response.Redirect("InicioComite.aspx");
+                        Response.Redirect("ListaregresadosUI.aspx");
                     }
                     else
                     {
@@ -106,7 +106,7 @@ namespace SWEGR.UI
                 {
                     Session.Add("TipoUsusario", "C");
                     Session.Add("NOmbrezazo", "Comite");
-                    Response.Redirect("InicioComite.aspx");
+                    Response.Redirect("ListaregresadosUI.aspx");
                 }
                 else
                 {

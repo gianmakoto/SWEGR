@@ -1843,7 +1843,7 @@ textarea.input-lg {
 
 .has-warning .help-block,
 .has-warning .control-label {
-  color: #c09853;
+  color: #000;
 }
 
 .has-warning .form-control {
@@ -4822,12 +4822,12 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .label-default {
-  background-color: #999999;
+  background-color: #000000;
 }
 
 .label-default[href]:hover,
 .label-default[href]:focus {
-  background-color: #808080;
+  background-color: #000000;
 }
 
 .label-primary {

@@ -10,7 +10,7 @@ Website: http://thevectorlab.net/
 @import url(http://fonts.googleapis.com/css?family=Fjalla+One);
 
 body {
-    color: #797979;
+    color: black;
     font-family: 'Open Sans', sans-serif;
     padding: 0px !important;
     margin: 0px !important;
@@ -79,7 +79,7 @@ p {line-height: 22px}
 }
 
 .header-frontend .nav li a, .header-frontend .nav li.active ul.dropdown-menu li a {
-    color: #999;
+    color: black;
     font-size: 14px;
     font-weight: 300;
     background: none;
@@ -93,9 +93,9 @@ p {line-height: 22px}
 .header-frontend .nav li a.dropdown-toggle:focus,
 .header-frontend .nav li.active ul.dropdown-menu li a:hover,
 .header-frontend .nav li.active ul.dropdown-menu li.active a{
-    color: #fff ;
+    color: black;
     background-color: #FF1900;
-    background-color: #CCCCCC;
+    background-color: #F3F3F3;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
     -ms-transition: all .3s ease;
@@ -143,7 +143,7 @@ p {line-height: 22px}
 
 
 .dropdown-menu li a:hover {
-    color: #fff !important;
+    color: black !important;
 }
 
 .header-frontend .nav .caret {

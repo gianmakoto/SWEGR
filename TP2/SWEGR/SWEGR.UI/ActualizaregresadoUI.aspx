@@ -1800,14 +1800,16 @@
 </head>
 <body>
     <!--header start-->
-    <header class="header-frontend">
+    <header class="header-frontend" style=" color:black; " >
         <div class="navbar">
             <div class="container">
                 <div class="row">
-                    <br />
+
                     <div class="col-lg-6 col-sm-12">
+                        <br />
+                        <br />
                         <ol class="breadcrumb pull-left">
-                            <li><a href="Index.aspx">Home</a></li>
+                            <li><a href="http://www.upc.edu.pe/">UPC</a></li>
                         </ol>
 
                     </div>
@@ -1816,29 +1818,49 @@
                     </div>
                     <div class="col-lg-2 col-sm-6">
                         <div class="pull-right">
-                            <span><a href="https://www.facebook.com/profile.php?id=100007924308551" style="color: #3B5998"><i class="icon-facebook fa-2x"></i></a></span>
-                            &nbsp;&nbsp;<span><a href="https://www.linkedin.com/pub/escuela-de-ingenier%C3%ADa-de-sistemas-y-computaci%C3%B3n/a3/864/45b" style="color: skyblue"><i class="icon-linkedin fa-2x"></i></a></span>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                    
+                            <%--<span><a href="https://www.facebook.com/profile.php?id=100007924308551" style="color: #3B5998"><i class="icon-facebook fa-2x"></i></a></span>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="https://www.linkedin.com/pub/escuela-de-ingenier%C3%ADa-de-sistemas-y-computaci%C3%B3n/a3/864/45b" style="color: skyblue"><i class="icon-linkedin fa-2x"></i></a></span>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --%> 
+                             <a class="navbar-brand pull-right" href="https://www.linkedin.com/pub/escuela-de-ingenier%C3%ADa-de-sistemas-y-computaci%C3%B3n/a3/864/45b">
+                           <img  style="margin-right: 15px" src="Images/in2.png"></img></a>
+                            <a class="navbar-brand pull-right" href="https://www.facebook.com/profile.php?id=100007924308551">
+                           <img style="margin-right: 15px" src="Images/fb.png"></img></a>
+                           
+                                              
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <hr />
+                    <div class="col-lg-8 col-sm-12">
+                        <br />
+                        <h1>Seguimiento Egresados</h1>
+                    </div>
+                    <div class="col-lg-4 col-sm-12">
+                        <a class="navbar-brand pull-right" href="#">
+                           <img style="margin-top: -15px; margin-right: 60px" src="http://cdn4.upc.edu.pe/sites/all/themes/upc_2013/img/logo.png"></img></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <%--<hr />--%>
                     <div class="col-lg-9 col-sm-12">
-                        <ul class="nav navbar-nav">
-                            <li><a href="Index.aspx">Inicio</a></li>
+                       
+                    </div>
+                    <div class="col-lg-3 col-sm-12">
+                         <ul class="nav navbar-nav">
+                            <%--<li><a href="Index.aspx">Inicio</a></li>--%>
 
-                            <li class="active"><a href="VisualizaregresadoUI.aspx">Egresado</a></li>
+                            <li class="active"><a href="ActualizaregresadoUI.aspx">Egresado</a></li>
                             <%--<li><a href="ActualizargraduandoUI.aspx">Graduando</a></li>--%>
                             <!-- user login dropdown start-->
                             <li class="dropdown">
                                 <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                     <img alt="" style="height: 19px; width: 17px" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
-                                    <span class="username" id="spanNombre">Nombre</span>
+                                    <span class="username" id="span1">Nombre</span>
                                     <b class="caret"></b>
                                 </a>
                                 <ul class="dropdown-menu extended logout">
-                                    <div class="log-arrow-up"></div>
+                                    <div class="log-arrow-up" ></div>
                                     <%--<li><a href="#"><i class=" icon-suitcase"></i>Profile</a></li>--%>
                                     <li><a href="Cambiarcontrasena.aspx"><i class="icon-cog"></i>Cambiar Contraseña</a></li>
                                     <%--<li><a href="#"><i class="icon-bell-alt"></i>Notification</a></li>--%>
@@ -1848,17 +1870,14 @@
                             <!-- user login dropdown end -->
                         </ul>
                     </div>
-                    <div class="col-lg-3 col-sm-12">
-                        <a class="navbar-brand pull-right" href="Index.aspx">
-                            <img style="margin-top: -15px" src="http://cdn4.upc.edu.pe/sites/all/themes/upc_2013/img/logo.png"></img></a>
-                    </div>
                 </div>
             </div>
         </div>
     </header>
     <!--header end-->
     <div class="container">
-        <hr style="border-style: dashed" />
+        <%--<hr style="border-style: dashed" />--%>
+        <hr style="border-color:red" />
     </div>
     <!--container start-->
     <div class="container">

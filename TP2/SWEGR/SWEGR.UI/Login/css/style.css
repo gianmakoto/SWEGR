@@ -291,7 +291,7 @@ ul.sidebar-menu li a{
 
 ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
     background: #35404d;
-    color: #fff;
+    color: black;
     display: block;
     border-radius: 4px;
     -webkit-border-radius: 4px;
@@ -466,7 +466,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 
 .dropdown-menu.extended li a:hover {
-    background-color: #F7F8F9 !important;
+    background-color: black !important;
     color: #2E2E2E;
 }
 
@@ -2767,7 +2767,7 @@ ul.amounts li {
 .fc-state-active, .fc-state-active .fc-button-inner,
 .fc-state-hover, .fc-state-hover .fc-button-inner{
     background:  #FF6C60 !important;
-    color: #fff !important;
+    color: #000000 !important;
 }
 
 .fc-event-skin {
