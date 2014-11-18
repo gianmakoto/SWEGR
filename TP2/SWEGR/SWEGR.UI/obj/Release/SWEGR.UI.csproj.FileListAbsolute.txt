@@ -1,0 +1,17 @@
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\obj\Release\SWEGR.UI.csprojResolveAssemblyReference.cache
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\obj\Release\Interop.SHDocVw.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\obj\Release\SWEGR.UI.csproj.ResolveComReference.cache
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\SWEGR.UI.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\SWEGR.UI.pdb
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\SWEGR.BL.BC.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\SWEGR.BL.BE.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\SWEGR.DL.DALC.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\HtmlAgilityPack.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\SSIAAutenticador.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\SWEGR.BL.BC.pdb
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\SWEGR.BL.BE.pdb
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\bin\SWEGR.DL.DALC.pdb
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\obj\Release\SWEGR.UI.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.UI\obj\Release\SWEGR.UI.pdb

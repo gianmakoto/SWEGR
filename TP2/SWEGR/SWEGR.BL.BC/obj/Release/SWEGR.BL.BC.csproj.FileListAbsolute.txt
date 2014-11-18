@@ -1,0 +1,12 @@
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BC\obj\Release\SWEGR.BL.BC.csprojResolveAssemblyReference.cache
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BC\obj\Release\Interop.SHDocVw.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BC\obj\Release\SWEGR.BL.BC.csproj.ResolveComReference.cache
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BC\bin\Release\SWEGR.BL.BC.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BC\bin\Release\SWEGR.BL.BC.pdb
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BC\bin\Release\SWEGR.BL.BE.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BC\bin\Release\SWEGR.DL.DALC.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BC\bin\Release\SSIAAutenticador.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BC\bin\Release\SWEGR.BL.BE.pdb
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BC\bin\Release\SWEGR.DL.DALC.pdb
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BC\obj\Release\SWEGR.BL.BC.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BC\obj\Release\SWEGR.BL.BC.pdb

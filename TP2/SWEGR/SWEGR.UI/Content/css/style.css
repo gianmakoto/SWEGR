@@ -9,6 +9,46 @@ Website: http://thevectorlab.net/
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
 @import url(http://fonts.googleapis.com/css?family=Fjalla+One);
 
+
+.ul-inner {
+    list-style: none;
+    position: relative;
+    float: left;
+    display: block;
+    font-weight: bold;
+    padding: 10px 15px 9px;
+    color: #0c0c0c;
+    border-left: 1px solid #dadada;
+    line-height: normal;
+    height: 15px;
+
+}
+
+.li-inner {
+    float: left;
+display: block;
+list-style: none;
+position: relative;
+}
+#navigation-inner {
+    background: url(../img/primary-menu-bg.gif) left top repeat-x;
+    height: 40px;
+    border-top: 1px solid #dadada;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-right: 1px solid #dadada;
+    margin: 0px 10px;
+    clear: both;
+    margin-top: 30px;
+    border-bottom-color: red;
+    border-left: 1px solid #dadada;
+    margin-left: 00px;
+}
+
+
+
+
+
 body {
     color: black;
     font-family: 'Open Sans', sans-serif;
@@ -122,8 +162,8 @@ p {line-height: 22px}
 }
 
 .header-frontend .navbar-nav > li  {
-    padding-bottom: 30px;
-    padding-top: 30px;
+  /*  padding-bottom: 30px;*/
+    padding-top: 10px;
 }
 
 .header-frontend  .navbar-nav > li > a {

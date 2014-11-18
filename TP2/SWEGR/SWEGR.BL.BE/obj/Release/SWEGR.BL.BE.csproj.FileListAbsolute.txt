@@ -1,0 +1,5 @@
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BE\bin\Release\SWEGR.BL.BE.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BE\bin\Release\SWEGR.BL.BE.pdb
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BE\obj\Release\SWEGR.BL.BE.csprojResolveAssemblyReference.cache
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BE\obj\Release\SWEGR.BL.BE.dll
+C:\Users\renzo\Desktop\SWEGR\TP2\SWEGR\SWEGR.BL.BE\obj\Release\SWEGR.BL.BE.pdb

@@ -179,18 +179,18 @@
 </head>
 
 <body>
-    <!--header start-->
+     <div id="page-outer" style="background-color: #ccc;padding: 20px 0;">
+        <div id="page" style="width: 62%;margin: 0 auto;background-color: white;border: 1px solid #b0b0b0;  padding: 0 5px;padding-left: 10px;">
+      
+      <!--header start-->
     <header class="header-frontend" style=" color:black; " >
         <div class="navbar">
             <div class="container">
-                <div class="row">
-
+                <div class="row" style="margin-left: 0px;">
+                    <hr style="margin-bottom: 5px;" />
                     <div class="col-lg-6 col-sm-12">
-                        <br />
-                        <br />
                         <ol class="breadcrumb pull-left">
-                            <li><a href="http://blogs.upc.edu.pe/ingenieria/node">Home</a></li>
-                            <li><a href="http://www.upc.edu.pe/">UPC</a></li>
+                            <li><a href="http://www.upc.edu.pe/" style="font-weight: bold;font-size: 14px; color:#494848">UPC</a></li>
                         </ol>
 
                     </div>
@@ -202,64 +202,58 @@
                             <%--<span><a href="https://www.facebook.com/profile.php?id=100007924308551" style="color: #3B5998"><i class="icon-facebook fa-2x"></i></a></span>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="https://www.linkedin.com/pub/escuela-de-ingenier%C3%ADa-de-sistemas-y-computaci%C3%B3n/a3/864/45b" style="color: skyblue"><i class="icon-linkedin fa-2x"></i></a></span>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --%> 
-                             <a class="navbar-brand pull-right" href="https://www.linkedin.com/pub/escuela-de-ingenier%C3%ADa-de-sistemas-y-computaci%C3%B3n/a3/864/45b">
+                             <a class="navbar-brand pull-right" href="https://www.linkedin.com/pub/escuela-de-ingenier%C3%ADa-de-sistemas-y-computaci%C3%B3n/a3/864/45b" style="margin-top: 0px;">
                            <img  style="margin-right: 15px" src="Images/in2.png"></img></a>
-                            <a class="navbar-brand pull-right" href="https://www.facebook.com/profile.php?id=100007924308551">
+                            <a class="navbar-brand pull-right" href="https://www.facebook.com/profile.php?id=100007924308551"  style="margin-top: 0px;">
                            <img style="margin-right: 15px" src="Images/fb.png"></img></a>
                            
                                               
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <hr />
-                    <div class="col-lg-8 col-sm-12">
-                        <br />
-                        <h1>Seguimiento Egresados</h1>
+
+
+                <div class="row" style="margin-left: 0px;">
+                    <hr style="margin-top: 5px;"/>
+                    <div class="col-lg-8 col-sm-12" style="padding-left: 0px;">
+                        <h1 style="font-family: 'Agency FB';font-weight: bold;color: #494848;margin-top: 0px;margin-bottom: 0px;">SEGUIMIENTO DE EGRESADOS DE LA ESCUELA DE INGENIERÍA DE SISTEMAS Y COMPUTACIÓN</h1>
                     </div>
                     <div class="col-lg-4 col-sm-12">
                         <a class="navbar-brand pull-right" href="#">
                            <img style="margin-top: -15px; margin-right: 60px" src="http://cdn4.upc.edu.pe/sites/all/themes/upc_2013/img/logo.png"></img></a>
                     </div>
                 </div>
-                <div class="row">
-                    <%--<hr />--%>
-                    <div class="col-lg-8 col-sm-12">
-                       
-                    </div>
-                    <div class="col-lg-4 col-sm-12">
-                         <ul class="nav navbar-nav">
-                            <%--<li><a href="Index.aspx">Inicio</a></li>--%>
 
-                            <li class="active"><a href="ListaregresadosUI.aspx">Egresado</a></li>
-                             <li ><a href="#">Carga de Datos</a></li>
-                            <%--<li><a href="ActualizargraduandoUI.aspx">Graduando</a></li>--%>
-                            <!-- user login dropdown start-->
-                            <li class="dropdown">
-                                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+
+                <div class="row" id="navigation-inner">
+                   <ul class="ul-inner" style="width: 100%;">
+                        <li class="li-inner" style="width: 10%;"><a href="ListaregresadosUI.aspx">Egresados</a></li>
+                        <li class="li-inner" style="width: 77%;"><a href="#">Cargar Datos</a></li>
+
+                       <li class="li-inner" style="width: 10%;">
+                           <a data-toggle="dropdown" class="dropdown-toggle" href="#" >
                                     <img alt="" style="height: 19px; width: 17px" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
-                                    <span class="username" id="span1">Nombre</span>
+                                    <span class="username" id="span2">Nombre</span>
                                     <b class="caret"></b>
                                 </a>
                                 <ul class="dropdown-menu extended logout">
                                     <div class="log-arrow-up" ></div>
-                                    <%--<li><a href="#"><i class=" icon-suitcase"></i>Profile</a></li>--%>
-                                    <%--<li><a href="Cambiarcontrasena.aspx"><i class="icon-cog"></i>Cambiar Contraseña</a></li>--%>
+                                    <%--<li><a href="#"><i class=" icon-suitcase"></i>Profile</a></li>
+                                     <%--<li><a href="Cambiarcontrasena.aspx"><i class="icon-cog"></i>Cambiar Contraseña</a></li>--%>
                                     <%--<li><a href="#"><i class="icon-bell-alt"></i>Notification</a></li>--%>
                                     <li><a href="login.aspx"><i class="icon-key"></i>Cerrar sesión</a></li>
                                 </ul>
-                            </li>
-                            <!-- user login dropdown end -->
-                        </ul>
-                    </div>
+                       </li>     
                 </div>
+
+
+
             </div>
         </div>
     </header>
     <!--header end-->
     <div class="container">
         <%--<hr style="border-style: dashed" />--%>
-        <hr style="border-color:red" />
     </div>
     <!--breadcrumbs end-->
 
@@ -327,7 +321,7 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="col-sm-9">
-                                            <asp:GridView ID="grdEgresados" Width="930px" align="center" runat="server" CellPadding="8" CellSpacing="3" AutoGenerateColumns="false" DataKeyNames="EgresadoID" OnRowCommand="grdEgresados_RowCommand" AllowPaging="true" PageSize="10" OnPageIndexChanging="grdEgresados_PageIndexChanging">
+                                            <asp:GridView ID="grdEgresados" Width="900px" align="center" runat="server" CellPadding="8" CellSpacing="3" AutoGenerateColumns="false" DataKeyNames="EgresadoID" OnRowCommand="grdEgresados_RowCommand" AllowPaging="true" PageSize="10" OnPageIndexChanging="grdEgresados_PageIndexChanging">
                                                 <Columns>
                                                     <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" DataField="EgresadoID" HeaderText="EgresadoID" Visible="False" />
                                                     <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Código" DataField="Codigo" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
@@ -349,7 +343,7 @@
                                                         </ItemTemplate>
                                                     </asp:TemplateField>
 
-                                                    <asp:TemplateField HeaderText="Extraer datos" ItemStyle-HorizontalAlign="Center" HeaderStyle-Width="80px">
+                                                    <%--<asp:TemplateField HeaderText="Extraer datos" ItemStyle-HorizontalAlign="Center" HeaderStyle-Width="80px">
                                                         <ItemTemplate>
 
                                                             <asp:LinkButton ID="lkbExtraerDatos" runat="server" CommandName="cmdExtraer" CommandArgument='<%# Eval("EgresadoID") %>'>
@@ -357,7 +351,7 @@
                                                             </asp:LinkButton>
 
                                                         </ItemTemplate>
-                                                    </asp:TemplateField>
+                                                    </asp:TemplateField>--%>
 
                                                 </Columns>
 
@@ -375,22 +369,6 @@
                                     <div class="form-group">
                                         <div class="col-sm-10">
                                             <asp:Button ID="btnImprimir" runat="server" Text="Exportar" CssClass="btn btn-danger pull-right" type="submit" OnClick="Imprimir_Click" />
-                                        </div>
-                                        <div class="hidden">
-                                            <asp:GridView ID="grdImprimir" Width="930px" align="center" runat="server" CellPadding="8" CellSpacing="3" AutoGenerateColumns="false" DataKeyNames="EgresadoID">
-                                                <Columns>
-                                                    <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" DataField="EgresadoID" HeaderText="EgresadoID" Visible="False" />
-                                                    <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Código" DataField="Codigo" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                                    <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Nombre" DataField="Nombre" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                                    <asp:BoundField ItemStyle-Width="300" ItemStyle-Font-Size="Smaller" HeaderText="Carrera" DataField="Carrera" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                                    <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Ciclo egreso" DataField="Cicloegreso" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                                    <asp:BoundField ItemStyle-Width="300" ItemStyle-Font-Size="Smaller" HeaderText="Trabajo Actual" DataField="Trabajoactual" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                                    <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Nombre jefe" DataField="Nombrejefe" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                                    <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Cargo jefe" DataField="Cargojefe" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                                    <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Teléfono jefe" DataField="Telefonojefe" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                                    <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Correo jefe" DataField="Correojefe" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                                </Columns>
-                                            </asp:GridView>
                                         </div>
                                     </div>
                                 <%--</ContentTemplate>
@@ -520,8 +498,9 @@
 
 
     
+    
     <!--footer start-->
-     <footer class="footer" style="background:white; color:black; box-shadow: grey 0 5px 5px 0 inset; text-align: left"  >
+      <footer class="footer" style="background:white; color:black; box-shadow: grey 0 5px 0px 0 inset;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-sm-12">
@@ -585,7 +564,9 @@
 
     </script>
 
-
+            
+            </div>
+        </div>
 
 </body>
 </html>

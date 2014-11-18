@@ -8,9 +8,21 @@ Website: http://thevectorlab.net/
 /* Import fonts */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
 
+.style-login {
+    width: 390px;
+    margin: 0 auto;
+    background-color: white;
+    border: 1px solid #b0b0b0;
+    padding: 0 5px;
+    padding-left: 10px;
+    margin-top: 10%;
+    padding-top: 20px;
+}
+
+
 body {
     color: #797979;
-    background: #f1f2f7;
+    background: white;
     font-family: 'Open Sans', sans-serif;
     padding: 0px !important;
     margin: 0px !important;
@@ -47,25 +59,25 @@ a, a:hover, a:focus {
 }
 
 .form-signin {
-    max-width: 330px;
+    max-width: 450px;
     margin: 100px auto 0;
     background: #fff;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
+    /*border-radius: 5px;
+    -webkit-border-radius: 5px;*/
 }
 
 .form-signin h2.form-signin-heading {
     margin: 0;
     padding:20px 15px;
     text-align: center;
-    background: #ddd;
+    /*background: #ddd;
     border-radius: 5px 5px 0 0;
-    -webkit-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;*/
     color: #000;
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: 300;
-    font-family: 'Open Sans', sans-serif;
+   font-size: 27px;
+text-transform: uppercase;
+font-weight: 300;
+font-family: 'Agency FB', sans-serif;
 }
 
 .form-signin .checkbox {

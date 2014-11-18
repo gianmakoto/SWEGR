@@ -566,3 +566,37 @@ D:\UPC\2014-2\TDP2\semana13\TP2\SWEGR\SWEGR.UI\obj\Debug\Interop.SHDocVw.dll
 D:\UPC\2014-2\TDP2\semana13\TP2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.csproj.ResolveComReference.cache
 D:\UPC\2014-2\TDP2\semana13\TP2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.dll
 D:\UPC\2014-2\TDP2\semana13\TP2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.pdb
+C:\Users\desarrollo2\Downloads\SWEGR (1)\SWEGR\SWEGR.UI\bin\SWEGR.UI.dll
+C:\Users\desarrollo2\Downloads\SWEGR (1)\SWEGR\SWEGR.UI\bin\SWEGR.UI.pdb
+C:\Users\desarrollo2\Downloads\SWEGR (1)\SWEGR\SWEGR.UI\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\desarrollo2\Downloads\SWEGR (1)\SWEGR\SWEGR.UI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\desarrollo2\Downloads\SWEGR (1)\SWEGR\SWEGR.UI\bin\SWEGR.BL.BC.dll
+C:\Users\desarrollo2\Downloads\SWEGR (1)\SWEGR\SWEGR.UI\bin\SWEGR.BL.BE.dll
+C:\Users\desarrollo2\Downloads\SWEGR (1)\SWEGR\SWEGR.UI\bin\SWEGR.DL.DALC.dll
+C:\Users\desarrollo2\Downloads\SWEGR (1)\SWEGR\SWEGR.UI\bin\HtmlAgilityPack.dll
+C:\Users\desarrollo2\Downloads\SWEGR (1)\SWEGR\SWEGR.UI\bin\SSIAAutenticador.dll
+C:\Users\desarrollo2\Downloads\SWEGR (1)\SWEGR\SWEGR.UI\bin\SWEGR.BL.BC.pdb
+C:\Users\desarrollo2\Downloads\SWEGR (1)\SWEGR\SWEGR.UI\bin\SWEGR.BL.BE.pdb
+C:\Users\desarrollo2\Downloads\SWEGR (1)\SWEGR\SWEGR.UI\bin\SWEGR.DL.DALC.pdb
+C:\Users\desarrollo2\Downloads\SWEGR (1)\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.csprojResolveAssemblyReference.cache
+C:\Users\desarrollo2\Downloads\SWEGR (1)\SWEGR\SWEGR.UI\obj\Debug\Interop.SHDocVw.dll
+C:\Users\desarrollo2\Downloads\SWEGR (1)\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.csproj.ResolveComReference.cache
+C:\Users\desarrollo2\Downloads\SWEGR (1)\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.dll
+C:\Users\desarrollo2\Downloads\SWEGR (1)\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.pdb
+F:\TP2\SWEGR (1) - Diseño BLOG\SWEGR\SWEGR.UI\bin\SWEGR.UI.dll
+F:\TP2\SWEGR (1) - Diseño BLOG\SWEGR\SWEGR.UI\bin\SWEGR.UI.pdb
+F:\TP2\SWEGR (1) - Diseño BLOG\SWEGR\SWEGR.UI\bin\AspNet.ScriptManager.jQuery.dll
+F:\TP2\SWEGR (1) - Diseño BLOG\SWEGR\SWEGR.UI\bin\Microsoft.Web.Infrastructure.dll
+F:\TP2\SWEGR (1) - Diseño BLOG\SWEGR\SWEGR.UI\bin\SWEGR.BL.BC.dll
+F:\TP2\SWEGR (1) - Diseño BLOG\SWEGR\SWEGR.UI\bin\SWEGR.BL.BE.dll
+F:\TP2\SWEGR (1) - Diseño BLOG\SWEGR\SWEGR.UI\bin\SWEGR.DL.DALC.dll
+F:\TP2\SWEGR (1) - Diseño BLOG\SWEGR\SWEGR.UI\bin\HtmlAgilityPack.dll
+F:\TP2\SWEGR (1) - Diseño BLOG\SWEGR\SWEGR.UI\bin\SSIAAutenticador.dll
+F:\TP2\SWEGR (1) - Diseño BLOG\SWEGR\SWEGR.UI\bin\SWEGR.BL.BC.pdb
+F:\TP2\SWEGR (1) - Diseño BLOG\SWEGR\SWEGR.UI\bin\SWEGR.BL.BE.pdb
+F:\TP2\SWEGR (1) - Diseño BLOG\SWEGR\SWEGR.UI\bin\SWEGR.DL.DALC.pdb
+F:\TP2\SWEGR (1) - Diseño BLOG\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.csprojResolveAssemblyReference.cache
+F:\TP2\SWEGR (1) - Diseño BLOG\SWEGR\SWEGR.UI\obj\Debug\Interop.SHDocVw.dll
+F:\TP2\SWEGR (1) - Diseño BLOG\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.csproj.ResolveComReference.cache
+F:\TP2\SWEGR (1) - Diseño BLOG\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.dll
+F:\TP2\SWEGR (1) - Diseño BLOG\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.pdb

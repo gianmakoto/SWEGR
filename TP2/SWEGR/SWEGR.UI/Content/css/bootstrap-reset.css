@@ -184,9 +184,12 @@ ul {
 }
 
 .btn-danger {
-    background-color: #ff6c60;
+  
+    color: #0c0c0c;
+    border: 1px solid #dadada;
+    /*background-color: #ff6c60;
     border-color: #D0D0D0;
-    color: #0D0D0D;
+    color: #0D0D0D;*/
 }
 
 .btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .open .dropdown-toggle.btn-danger {
