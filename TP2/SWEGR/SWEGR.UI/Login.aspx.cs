@@ -15,13 +15,15 @@ namespace SWEGR.UI
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            //Session.Clear();
+           //Session.Clear();
             Session.RemoveAll();
-            //Session.Abandon();
+          //  Session.Abandon();
             txterror.Visible = false;
             txterror.Attributes["style"] = "color:red;  padding:15px";
 
         }
+
+        
 
         protected void boton_Click(object sender, EventArgs e)
         {

@@ -189,6 +189,7 @@
                         <br />
                         <br />
                         <ol class="breadcrumb pull-left">
+                            <li><a href="http://blogs.upc.edu.pe/ingenieria/node">Home</a></li>
                             <li><a href="http://www.upc.edu.pe/">UPC</a></li>
                         </ol>
 
@@ -504,7 +505,7 @@
 
     
     <!--footer start-->
-     <footer class="footer" style="background:white; color:black; box-shadow: grey 0 5px 5px 0 inset;">
+     <footer class="footer" style="background:white; color:black; box-shadow: grey 0 5px 5px 0 inset; text-align: left"  >
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-sm-12">

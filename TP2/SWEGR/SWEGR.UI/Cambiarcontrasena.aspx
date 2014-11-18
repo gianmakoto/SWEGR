@@ -111,6 +111,7 @@
                         <br />
                         <br />
                         <ol class="breadcrumb pull-left">
+                            <li><a href="http://blogs.upc.edu.pe/ingenieria/node">Home</a></li>
                             <li><a href="http://www.upc.edu.pe/">UPC</a></li>
                         </ol>
 
