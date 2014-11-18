@@ -296,3 +296,15 @@ C:\Users\desarrollo2\Downloads\SWEGR (1)\SWEGR\SWEGR.BL.BC\obj\Debug\Interop.SHD
 C:\Users\desarrollo2\Downloads\SWEGR (1)\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.csproj.ResolveComReference.cache
 C:\Users\desarrollo2\Downloads\SWEGR (1)\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.dll
 C:\Users\desarrollo2\Downloads\SWEGR (1)\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.pdb
+E:\Furio\semana14fail\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BC.dll
+E:\Furio\semana14fail\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BC.pdb
+E:\Furio\semana14fail\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BE.dll
+E:\Furio\semana14fail\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.DL.DALC.dll
+E:\Furio\semana14fail\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SSIAAutenticador.dll
+E:\Furio\semana14fail\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BE.pdb
+E:\Furio\semana14fail\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.DL.DALC.pdb
+E:\Furio\semana14fail\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.csprojResolveAssemblyReference.cache
+E:\Furio\semana14fail\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\Interop.SHDocVw.dll
+E:\Furio\semana14fail\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.csproj.ResolveComReference.cache
+E:\Furio\semana14fail\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.dll
+E:\Furio\semana14fail\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.pdb

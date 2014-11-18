@@ -867,10 +867,13 @@ namespace SWEGR.UI
             ViewState["anioFin"] = anioFinBuscar;
             ViewState["codigouniversitario"] = codigoUniversitarioBuscar;
 
-            if (anioInicioBuscar > anioFinBuscar)
+            if (anioInicioBuscar > 0 && anioFinBuscar > 0)
             {
-                ScriptManager.RegisterStartupScript(Page, GetType(), "menor", "menor();", true);
-                return;
+                if (anioInicioBuscar > anioFinBuscar)
+                {
+                    ScriptManager.RegisterStartupScript(Page, GetType(), "menor", "menor();", true);
+                    return;
+                }
             }
             
             grdEgresadosDataBind_Lista(nombreBuscar, carreraBuscar, anioInicioBuscar, anioFinBuscar, codigoUniversitarioBuscar);
@@ -1288,10 +1291,51 @@ namespace SWEGR.UI
             
         }
 
+        private void llenarGrillaAImprimir()
+        {
+            string nombreBuscar = "";
+            string codigoUniversitarioBuscar = "";
+            int anioInicioBuscar = 0;
+            int anioFinBuscar = 0;
+            string carreraBuscar = "";
+
+            nombreBuscar = txtNombreCodigo.Text;
+            codigoUniversitarioBuscar = txtNombreCodigo.Text;
+
+            if (ddlInicio.SelectedIndex != 0)
+                anioInicioBuscar = Convert.ToInt32(ddlInicio.Text);
+
+
+            if (ddlFin.SelectedIndex != 0)
+                anioFinBuscar = Convert.ToInt32(ddlFin.Text);
+
+            if (ddlCarrera.SelectedIndex != 0)
+                carreraBuscar = ddlCarrera.Text;
+
+            ViewState["nombre"] = nombreBuscar;
+            ViewState["carrera"] = carreraBuscar;
+            ViewState["anioInicio"] = anioInicioBuscar;
+            ViewState["anioFin"] = anioFinBuscar;
+            ViewState["codigouniversitario"] = codigoUniversitarioBuscar;
+
+            if (anioInicioBuscar > 0 && anioFinBuscar > 0)
+            {
+                if (anioInicioBuscar > anioFinBuscar)
+                {
+                    ScriptManager.RegisterStartupScript(Page, GetType(), "menor", "menor();", true);
+                    return;
+                }
+            }
+
+            grdEgresadosDataBind_Lista(nombreBuscar, carreraBuscar, anioInicioBuscar, anioFinBuscar, codigoUniversitarioBuscar);
+        }
+
         private void ExportGridToPDF()
         {
             try
             {
+                llenarGrillaAImprimir();
+
                 iTextSharp.text.Document document = new iTextSharp.text.Document(iTextSharp.text.PageSize.A4.Rotate(), 10f, 10f, 10f, 10f);
                 iTextSharp.text.Font NormalFont = iTextSharp.text.FontFactory.GetFont("Segoe UI Light", 12, iTextSharp.text.Font.HELVETICA, iTextSharp.text.Color.BLACK);
 
@@ -1325,39 +1369,39 @@ namespace SWEGR.UI
                     //agregar datagridvew
                     //===============================================================================
                     PdfPCell clCodigo = new PdfPCell(new iTextSharp.text.Phrase("Código", NormalFont));
-                    clCodigo.BorderWidth = 0;
+                    clCodigo.BorderWidth = 1;
                     clCodigo.BorderWidthBottom = 0.75f;
 
                     PdfPCell clNombres = new PdfPCell(new iTextSharp.text.Phrase("Nombres", NormalFont));
-                    clNombres.BorderWidth = 0;
+                    clNombres.BorderWidth = 1;
                     clNombres.BorderWidthBottom = 0.75f;
 
                     PdfPCell clCarrera = new PdfPCell(new iTextSharp.text.Phrase("Carrera", NormalFont));
-                    clCarrera.BorderWidth = 0;
+                    clCarrera.BorderWidth = 1;
                     clCarrera.BorderWidthBottom = 0.75f;
 
                     PdfPCell clCiclo = new PdfPCell(new iTextSharp.text.Phrase("Ciclo de Egreso", NormalFont));
-                    clCiclo.BorderWidth = 0;
+                    clCiclo.BorderWidth = 1;
                     clCiclo.BorderWidthBottom = 0.75f;
 
                     PdfPCell clTrabajo = new PdfPCell(new iTextSharp.text.Phrase("Trabajo Actual", NormalFont));
-                    clTrabajo.BorderWidth = 0;
+                    clTrabajo.BorderWidth = 1;
                     clTrabajo.BorderWidthBottom = 0.75f;
 
                     PdfPCell clNombreJefe = new PdfPCell(new iTextSharp.text.Phrase("Nombre del Jefe", NormalFont));
-                    clNombreJefe.BorderWidth = 0;
+                    clNombreJefe.BorderWidth = 1;
                     clNombreJefe.BorderWidthBottom = 0.75f;
 
                     PdfPCell clCargoJEfe = new PdfPCell(new iTextSharp.text.Phrase("Cargo del Jefe", NormalFont));
-                    clCargoJEfe.BorderWidth = 0;
+                    clCargoJEfe.BorderWidth = 1;
                     clCargoJEfe.BorderWidthBottom = 0.75f;
 
                     PdfPCell clTelJefe = new PdfPCell(new iTextSharp.text.Phrase("Teléfono del Jefe", NormalFont));
-                    clTelJefe.BorderWidth = 0;
+                    clTelJefe.BorderWidth = 1;
                     clTelJefe.BorderWidthBottom = 0.75f;
 
                     PdfPCell clCorreoJefe = new PdfPCell(new iTextSharp.text.Phrase("Correo del Jefe", NormalFont));
-                    clCorreoJefe.BorderWidth = 0;
+                    clCorreoJefe.BorderWidth = 1;
                     clCorreoJefe.BorderWidthBottom = 0.75f;
 
                     // Añadimos las celdas a la tabla
@@ -1371,54 +1415,54 @@ namespace SWEGR.UI
                     table.AddCell(clTelJefe);
                     table.AddCell(clCorreoJefe);
 
-                    foreach (GridViewRow row in grdEgresados.Rows)
+                    foreach (GridViewRow row in grdImprimir.Rows)
                     {
                         for (int index = 0; index < row.Cells.Count; index++)
                         {
                             string codigo = row.Cells[1].Text;
                             string codigovalidado = validarString(codigo);
                             clCodigo = new PdfPCell(new iTextSharp.text.Phrase(codigovalidado, NormalFont));
-                            clCodigo.BorderWidth = 0;
+                            clCodigo.BorderWidth = 1;
 
                             string nombres = row.Cells[2].Text;
                             string nombresvalidado = validarString(nombres);
                             clNombres = new PdfPCell(new iTextSharp.text.Phrase(nombresvalidado, NormalFont));
-                            clNombres.BorderWidth = 0;
+                            clNombres.BorderWidth = 1;
 
                             string carrera = row.Cells[3].Text;
                             string carreravalidado = validarString(carrera);
                             clCarrera = new PdfPCell(new iTextSharp.text.Phrase(carreravalidado, NormalFont));
-                            clCarrera.BorderWidth = 0;
+                            clCarrera.BorderWidth = 1;
 
                             string ciclo = row.Cells[4].Text;
                             string ciclovalidado = validarString(ciclo);
                             clCiclo = new PdfPCell(new iTextSharp.text.Phrase(ciclovalidado, NormalFont));
-                            clCiclo.BorderWidth = 0;
+                            clCiclo.BorderWidth = 1;
 
                             string trabajo = row.Cells[5].Text;
                             string trabajovalidado = validarString(trabajo);
                             clTrabajo = new PdfPCell(new iTextSharp.text.Phrase(trabajovalidado, NormalFont));
-                            clTrabajo.BorderWidth = 0;
+                            clTrabajo.BorderWidth = 1;
 
                             string nombreJefe = row.Cells[6].Text;
                             string nombreJefevalidado = validarString(nombreJefe);
                             clNombreJefe = new PdfPCell(new iTextSharp.text.Phrase(nombreJefevalidado, NormalFont));
-                            clNombreJefe.BorderWidth = 0;
+                            clNombreJefe.BorderWidth = 1;
 
                             string cargoJefe = row.Cells[7].Text;
                             string cargoJefevalidado = validarString(cargoJefe);
                             clCargoJEfe = new PdfPCell(new iTextSharp.text.Phrase(cargoJefevalidado, NormalFont));
-                            clCargoJEfe.BorderWidth = 0;
+                            clCargoJEfe.BorderWidth = 1;
 
                             string telJefe = row.Cells[8].Text;
                             string telJefevalidado = validarString(telJefe);
                             clTelJefe = new PdfPCell(new iTextSharp.text.Phrase(telJefevalidado, NormalFont));
-                            clTelJefe.BorderWidth = 0;
+                            clTelJefe.BorderWidth = 1;
 
                             string correoJefe = row.Cells[9].Text;
                             string correoJefevalidado = validarString(correoJefe);
                             clCorreoJefe = new PdfPCell(new iTextSharp.text.Phrase(correoJefevalidado, NormalFont));
-                            clCorreoJefe.BorderWidth = 0;
+                            clCorreoJefe.BorderWidth = 1;
                         }
                         // Añadimos las celdas a la tabla
                         table.AddCell(clCodigo);

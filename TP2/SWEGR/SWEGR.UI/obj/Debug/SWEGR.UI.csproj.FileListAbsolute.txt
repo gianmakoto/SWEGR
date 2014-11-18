@@ -600,3 +600,20 @@ F:\TP2\SWEGR (1) - Diseño BLOG\SWEGR\SWEGR.UI\obj\Debug\Interop.SHDocVw.dll
 F:\TP2\SWEGR (1) - Diseño BLOG\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.csproj.ResolveComReference.cache
 F:\TP2\SWEGR (1) - Diseño BLOG\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.dll
 F:\TP2\SWEGR (1) - Diseño BLOG\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.pdb
+E:\Furio\semana14fail\TP2\SWEGR\SWEGR.UI\bin\SWEGR.UI.dll
+E:\Furio\semana14fail\TP2\SWEGR\SWEGR.UI\bin\SWEGR.UI.pdb
+E:\Furio\semana14fail\TP2\SWEGR\SWEGR.UI\bin\AspNet.ScriptManager.jQuery.dll
+E:\Furio\semana14fail\TP2\SWEGR\SWEGR.UI\bin\Microsoft.Web.Infrastructure.dll
+E:\Furio\semana14fail\TP2\SWEGR\SWEGR.UI\bin\SWEGR.BL.BC.dll
+E:\Furio\semana14fail\TP2\SWEGR\SWEGR.UI\bin\SWEGR.BL.BE.dll
+E:\Furio\semana14fail\TP2\SWEGR\SWEGR.UI\bin\SWEGR.DL.DALC.dll
+E:\Furio\semana14fail\TP2\SWEGR\SWEGR.UI\bin\HtmlAgilityPack.dll
+E:\Furio\semana14fail\TP2\SWEGR\SWEGR.UI\bin\SSIAAutenticador.dll
+E:\Furio\semana14fail\TP2\SWEGR\SWEGR.UI\bin\SWEGR.BL.BC.pdb
+E:\Furio\semana14fail\TP2\SWEGR\SWEGR.UI\bin\SWEGR.BL.BE.pdb
+E:\Furio\semana14fail\TP2\SWEGR\SWEGR.UI\bin\SWEGR.DL.DALC.pdb
+E:\Furio\semana14fail\TP2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.csprojResolveAssemblyReference.cache
+E:\Furio\semana14fail\TP2\SWEGR\SWEGR.UI\obj\Debug\Interop.SHDocVw.dll
+E:\Furio\semana14fail\TP2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.csproj.ResolveComReference.cache
+E:\Furio\semana14fail\TP2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.dll
+E:\Furio\semana14fail\TP2\SWEGR\SWEGR.UI\obj\Debug\SWEGR.UI.pdb
