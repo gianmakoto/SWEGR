@@ -320,3 +320,15 @@ D:\UPC\2014-2\TDP2\ultimon\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\Interop.SHDocVw.dll
 D:\UPC\2014-2\TDP2\ultimon\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.csproj.ResolveComReference.cache
 D:\UPC\2014-2\TDP2\ultimon\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.dll
 D:\UPC\2014-2\TDP2\ultimon\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.pdb
+E:\Furio\ultimazo\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BC.dll
+E:\Furio\ultimazo\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BC.pdb
+E:\Furio\ultimazo\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BE.dll
+E:\Furio\ultimazo\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.DL.DALC.dll
+E:\Furio\ultimazo\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SSIAAutenticador.dll
+E:\Furio\ultimazo\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BE.pdb
+E:\Furio\ultimazo\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.DL.DALC.pdb
+E:\Furio\ultimazo\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.csprojResolveAssemblyReference.cache
+E:\Furio\ultimazo\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\Interop.SHDocVw.dll
+E:\Furio\ultimazo\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.csproj.ResolveComReference.cache
+E:\Furio\ultimazo\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.dll
+E:\Furio\ultimazo\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.pdb

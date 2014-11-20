@@ -231,7 +231,7 @@
                         <li class="li-inner" style="width: 10%;"><a href="ListaregresadosUI.aspx">Egresados</a></li>
                         <li class="li-inner" style="width: 77%;"><a href="CargaDatosUI.aspx">Cargar Datos</a></li>
 
-                       <li class="li-inner" style="width: 10%;">
+                       <li class="li-inner" style="width: 13%;">
                            <a data-toggle="dropdown" class="dropdown-toggle" href="#" >
                                     <img alt="" style="height: 19px; width: 17px" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
                                     <span class="username" id="span2">Nombre</span>
@@ -321,8 +321,8 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <div class="col-sm-9">
-                                            <asp:GridView ID="grdEgresados" Width="900px" align="center" runat="server" CellPadding="8" CellSpacing="3" AutoGenerateColumns="false" DataKeyNames="EgresadoID" OnRowCommand="grdEgresados_RowCommand" AllowPaging="true" PageSize="10" OnPageIndexChanging="grdEgresados_PageIndexChanging">
+                                        <div class="col-sm-10">
+                                            <asp:GridView ID="grdEgresados" Width="750px" align="left" runat="server" CellPadding="8" CellSpacing="3" AutoGenerateColumns="false" DataKeyNames="EgresadoID" OnRowCommand="grdEgresados_RowCommand" AllowPaging="true" PageSize="10" OnPageIndexChanging="grdEgresados_PageIndexChanging">
                                                 <Columns>
                                                     <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" DataField="EgresadoID" HeaderText="EgresadoID" Visible="False" />
                                                     <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Código" DataField="Codigo" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
@@ -335,7 +335,7 @@
                                                     <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Teléfono jefe" DataField="Telefonojefe" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
                                                     <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Correo jefe" DataField="Correojefe" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
 
-                                                    <asp:TemplateField HeaderText="Ver" ItemStyle-HorizontalAlign="Center" HeaderStyle-Width="80px">
+                                                    <asp:TemplateField HeaderText="Ver" ItemStyle-HorizontalAlign="Center" HeaderStyle-Width="40px">
                                                         <ItemTemplate>
 
                                                             <asp:LinkButton ID="lkbVer" runat="server" CommandName="cmdVer" CommandArgument='<%# Eval("EgresadoID") %>'>
@@ -372,7 +372,7 @@
                                             <asp:Button ID="btnImprimir" runat="server" Text="Exportar" CssClass="btn btn-danger pull-right" type="submit" OnClick="Imprimir_Click" />
                                         </div>
                                         <div class="hidden">
-                                            <asp:GridView ID="grdImprimir" Width="930px" align="center" runat="server" CellPadding="8" CellSpacing="3" AutoGenerateColumns="false" DataKeyNames="EgresadoID">
+                                            <asp:GridView ID="grdImprimir" Width="650px" align="center" runat="server" CellPadding="8" CellSpacing="3" AutoGenerateColumns="false" DataKeyNames="EgresadoID">
                                                 <Columns>
                                                     <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" DataField="EgresadoID" HeaderText="EgresadoID" Visible="False" />
                                                     <asp:BoundField ItemStyle-Width="200" ItemStyle-Font-Size="Smaller" HeaderText="Código" DataField="Codigo" ItemStyle-HorizontalAlign="Left"></asp:BoundField>

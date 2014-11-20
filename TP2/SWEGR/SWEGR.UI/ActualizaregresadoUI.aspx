@@ -1847,7 +1847,7 @@
                   <div class="row" id="navigation-inner">
                    <ul class="ul-inner" style="width: 100%;">
                         <li class="li-inner"  style="width: 87%;"><a href="ActualizaregresadoUI.aspx">Egresado</a></li>
-                       <li class="li-inner"  style="width: 10%;">
+                       <li class="li-inner"  style="width: 13%;">
                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                     <img alt="" style="height: 19px; width: 17px" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
                                     <span class="username" id="span2">Nombre</span>
