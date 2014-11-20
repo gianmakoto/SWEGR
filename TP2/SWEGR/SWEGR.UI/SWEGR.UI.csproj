@@ -138,6 +138,7 @@
     <Content Include="ActualizaregresadoUI.aspx" />
     <Content Include="bin\itextsharp.dll" />
     <Content Include="Cambiarcontrasena.aspx" />
+    <Content Include="CargaDatosUI.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\assets\bxslider\images\bx_loader.gif" />
     <Content Include="Content\assets\bxslider\images\left-hover.png" />
@@ -518,6 +519,13 @@
     </Compile>
     <Compile Include="Cambiarcontrasena.aspx.designer.cs">
       <DependentUpon>Cambiarcontrasena.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CargaDatosUI.aspx.cs">
+      <DependentUpon>CargaDatosUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CargaDatosUI.aspx.designer.cs">
+      <DependentUpon>CargaDatosUI.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>

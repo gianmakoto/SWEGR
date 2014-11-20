@@ -127,6 +127,7 @@
                     <hr style="margin-bottom: 5px;" />
                     <div class="col-lg-6 col-sm-12">
                         <ol class="breadcrumb pull-left">
+                            <li><a href="http://blogs.upc.edu.pe/ingenieria/node" style="font-weight: bold;font-size: 14px; color:#494848">INICIO</a></li>
                             <li><a href="http://www.upc.edu.pe/" style="font-weight: bold;font-size: 14px; color:#494848">UPC</a></li>
                         </ol>
 

@@ -1810,6 +1810,7 @@
                     <hr style="margin-bottom: 5px;" />
                     <div class="col-lg-6 col-sm-12">
                         <ol class="breadcrumb pull-left">
+                            <li><a href="http://blogs.upc.edu.pe/ingenieria/node" style="font-weight: bold;font-size: 14px; color:#494848">INICIO</a></li>
                             <li><a href="http://www.upc.edu.pe/" style="font-weight: bold;font-size: 14px; color:#494848">UPC</a></li>
                         </ol>
 
@@ -1936,7 +1937,7 @@
                                             <asp:Image ID="contenedorfoto" runat="server" Style="height: 135px; width: 135px; margin-left: 30px;" class="img-thumbnail" />
                                             <%--<asp:UpdatePanel ID="UpdatePanel_Imagen" runat="server" UpdateMode="Conditional">
                                                 <ContentTemplate>--%>
-                                            <asp:FileUpload ID="CargaImagen" runat="server" Enabled="false" />
+                                            <asp:FileUpload ID="CargaImagen" runat="server" Enabled="false" Style="margin-left: 67%;"  />
                                             <%--</ContentTemplate>
                                             </asp:UpdatePanel>--%>
                                         </div>

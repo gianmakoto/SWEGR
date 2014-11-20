@@ -190,6 +190,7 @@
                     <hr style="margin-bottom: 5px;" />
                     <div class="col-lg-6 col-sm-12">
                         <ol class="breadcrumb pull-left">
+                            <li><a href="http://blogs.upc.edu.pe/ingenieria/node" style="font-weight: bold;font-size: 14px; color:#494848">INICIO</a></li>
                             <li><a href="http://www.upc.edu.pe/" style="font-weight: bold;font-size: 14px; color:#494848">UPC</a></li>
                         </ol>
 
@@ -228,7 +229,7 @@
                 <div class="row" id="navigation-inner">
                    <ul class="ul-inner" style="width: 100%;">
                         <li class="li-inner" style="width: 10%;"><a href="ListaregresadosUI.aspx">Egresados</a></li>
-                        <li class="li-inner" style="width: 77%;"><a href="#">Cargar Datos</a></li>
+                        <li class="li-inner" style="width: 77%;"><a href="CargaDatosUI.aspx">Cargar Datos</a></li>
 
                        <li class="li-inner" style="width: 10%;">
                            <a data-toggle="dropdown" class="dropdown-toggle" href="#" >
@@ -516,7 +517,7 @@
     
     
     <!--footer start-->
-      <footer class="footer" style="background:white; color:black; box-shadow: grey 0 5px 0px 0 inset;">
+      <footer class="footer" style="background:white; color:black; box-shadow: grey 0 5px 0px 0 inset; text-align: left">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-sm-12">
