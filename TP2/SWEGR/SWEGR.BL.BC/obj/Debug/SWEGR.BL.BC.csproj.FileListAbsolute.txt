@@ -332,3 +332,15 @@ D:\Furiowzhitow\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\Interop.SHDocVw.dll
 D:\Furiowzhitow\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.csproj.ResolveComReference.cache
 D:\Furiowzhitow\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.dll
 D:\Furiowzhitow\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.pdb
+E:\UPC\2014-2\TDP1\Semana 14\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BC.dll
+E:\UPC\2014-2\TDP1\Semana 14\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BC.pdb
+E:\UPC\2014-2\TDP1\Semana 14\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BE.dll
+E:\UPC\2014-2\TDP1\Semana 14\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.DL.DALC.dll
+E:\UPC\2014-2\TDP1\Semana 14\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SSIAAutenticador.dll
+E:\UPC\2014-2\TDP1\Semana 14\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.BL.BE.pdb
+E:\UPC\2014-2\TDP1\Semana 14\TP2\SWEGR\SWEGR.BL.BC\bin\Debug\SWEGR.DL.DALC.pdb
+E:\UPC\2014-2\TDP1\Semana 14\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.csprojResolveAssemblyReference.cache
+E:\UPC\2014-2\TDP1\Semana 14\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\Interop.SHDocVw.dll
+E:\UPC\2014-2\TDP1\Semana 14\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.csproj.ResolveComReference.cache
+E:\UPC\2014-2\TDP1\Semana 14\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.dll
+E:\UPC\2014-2\TDP1\Semana 14\TP2\SWEGR\SWEGR.BL.BC\obj\Debug\SWEGR.BL.BC.pdb

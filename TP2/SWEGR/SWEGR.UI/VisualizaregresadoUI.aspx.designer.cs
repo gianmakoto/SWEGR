@@ -292,6 +292,15 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionEstudio;
         
         /// <summary>
+        /// ddlPaisTA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTA;
+        
+        /// <summary>
         /// txtcentroEstudios2 control.
         /// </summary>
         /// <remarks>
@@ -335,6 +344,15 @@ namespace SWEGR.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionEstudio2;
+        
+        /// <summary>
+        /// ddlPaisTA2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTA2;
         
         /// <summary>
         /// txtcentroEstudios3 control.
@@ -382,6 +400,15 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionEstudio3;
         
         /// <summary>
+        /// ddlPaisTA3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTA3;
+        
+        /// <summary>
         /// txtcentroEstudios4 control.
         /// </summary>
         /// <remarks>
@@ -425,6 +452,15 @@ namespace SWEGR.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionEstudio4;
+        
+        /// <summary>
+        /// ddlPaisTA4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTA4;
         
         /// <summary>
         /// txtcentroEstudios5 control.
@@ -472,6 +508,15 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionEstudio5;
         
         /// <summary>
+        /// ddlPaisTA5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTA5;
+        
+        /// <summary>
         /// txtcentroEstudios6 control.
         /// </summary>
         /// <remarks>
@@ -515,6 +560,15 @@ namespace SWEGR.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionEstudio6;
+        
+        /// <summary>
+        /// ddlPaisTA6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTA6;
         
         /// <summary>
         /// txtcentroEstudios7 control.
@@ -562,6 +616,15 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionEstudio7;
         
         /// <summary>
+        /// ddlPaisTA7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTA7;
+        
+        /// <summary>
         /// txtcentroEstudios8 control.
         /// </summary>
         /// <remarks>
@@ -605,6 +668,15 @@ namespace SWEGR.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionEstudio8;
+        
+        /// <summary>
+        /// ddlPaisTA8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTA8;
         
         /// <summary>
         /// txtcentroEstudios9 control.
@@ -652,6 +724,15 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionEstudio9;
         
         /// <summary>
+        /// ddlPaisTA9 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTA9;
+        
+        /// <summary>
         /// txtcentroEstudios10 control.
         /// </summary>
         /// <remarks>
@@ -695,6 +776,15 @@ namespace SWEGR.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionEstudio10;
+        
+        /// <summary>
+        /// ddlPaisTA10 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTA10;
         
         /// <summary>
         /// txtcentroEstudios11 control.
@@ -742,6 +832,15 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionEstudio11;
         
         /// <summary>
+        /// ddlPaisTA11 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTA11;
+        
+        /// <summary>
         /// txtcentroEstudios12 control.
         /// </summary>
         /// <remarks>
@@ -785,6 +884,15 @@ namespace SWEGR.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionEstudio12;
+        
+        /// <summary>
+        /// ddlPaisTA12 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTA12;
         
         /// <summary>
         /// txtcentroEstudios13 control.
@@ -832,6 +940,15 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionEstudio13;
         
         /// <summary>
+        /// ddlPaisTA13 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTA13;
+        
+        /// <summary>
         /// txtcentroEstudios14 control.
         /// </summary>
         /// <remarks>
@@ -875,6 +992,15 @@ namespace SWEGR.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionEstudio14;
+        
+        /// <summary>
+        /// ddlPaisTA14 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTA14;
         
         /// <summary>
         /// txtcentroEstudios15 control.
@@ -922,6 +1048,15 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionEstudio15;
         
         /// <summary>
+        /// ddlPaisTA15 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTA15;
+        
+        /// <summary>
         /// txtcentroEstudios16 control.
         /// </summary>
         /// <remarks>
@@ -965,6 +1100,15 @@ namespace SWEGR.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionEstudio16;
+        
+        /// <summary>
+        /// ddlPaisTA16 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTA16;
         
         /// <summary>
         /// txtcentroEstudios17 control.
@@ -1012,6 +1156,15 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionEstudio17;
         
         /// <summary>
+        /// ddlPaisTA17 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTA17;
+        
+        /// <summary>
         /// txtcentroEstudios18 control.
         /// </summary>
         /// <remarks>
@@ -1055,6 +1208,15 @@ namespace SWEGR.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionEstudio18;
+        
+        /// <summary>
+        /// ddlPaisTA18 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTA18;
         
         /// <summary>
         /// txtcentroEstudios19 control.
@@ -1102,6 +1264,15 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionEstudio19;
         
         /// <summary>
+        /// ddlPaisTA19 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTA19;
+        
+        /// <summary>
         /// txtcentroEstudios20 control.
         /// </summary>
         /// <remarks>
@@ -1145,6 +1316,15 @@ namespace SWEGR.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionEstudio20;
+        
+        /// <summary>
+        /// ddlPaisTA20 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTA20;
         
         /// <summary>
         /// uptrayecProf control.
@@ -1208,6 +1388,15 @@ namespace SWEGR.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionTrabajo;
+        
+        /// <summary>
+        /// ddlPaisTL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTL;
         
         /// <summary>
         /// txtnombrejefeTrabajo control.
@@ -1291,6 +1480,15 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionTrabajo2;
         
         /// <summary>
+        /// ddlPaisTL2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTL2;
+        
+        /// <summary>
         /// txtnombrejefeTrabajo2 control.
         /// </summary>
         /// <remarks>
@@ -1370,6 +1568,15 @@ namespace SWEGR.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionTrabajo3;
+        
+        /// <summary>
+        /// ddlPaisTL3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTL3;
         
         /// <summary>
         /// txtnombrejefeTrabajo3 control.
@@ -1453,6 +1660,15 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionTrabajo4;
         
         /// <summary>
+        /// ddlPaisTL4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTL4;
+        
+        /// <summary>
         /// txtnombrejefeTrabajo4 control.
         /// </summary>
         /// <remarks>
@@ -1532,6 +1748,15 @@ namespace SWEGR.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionTrabajo5;
+        
+        /// <summary>
+        /// ddlPaisTL5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTL5;
         
         /// <summary>
         /// txtnombrejefeTrabajo5 control.
@@ -1615,6 +1840,15 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionTrabajo6;
         
         /// <summary>
+        /// ddlPaisTL6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTL6;
+        
+        /// <summary>
         /// txtnombrejefeTrabajo6 control.
         /// </summary>
         /// <remarks>
@@ -1694,6 +1928,15 @@ namespace SWEGR.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionTrabajo7;
+        
+        /// <summary>
+        /// ddlPaisTL7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTL7;
         
         /// <summary>
         /// txtnombrejefeTrabajo7 control.
@@ -1777,6 +2020,15 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionTrabajo8;
         
         /// <summary>
+        /// ddlPaisTL8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTL8;
+        
+        /// <summary>
         /// txtnombrejefeTrabajo8 control.
         /// </summary>
         /// <remarks>
@@ -1856,6 +2108,15 @@ namespace SWEGR.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionTrabajo9;
+        
+        /// <summary>
+        /// ddlPaisTL9 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTL9;
         
         /// <summary>
         /// txtnombrejefeTrabajo9 control.
@@ -1939,6 +2200,15 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionTrabajo10;
         
         /// <summary>
+        /// ddlPaisTL10 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTL10;
+        
+        /// <summary>
         /// txtnombrejefeTrabajo10 control.
         /// </summary>
         /// <remarks>
@@ -2018,6 +2288,15 @@ namespace SWEGR.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionTrabajo11;
+        
+        /// <summary>
+        /// ddlPaisTL11 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTL11;
         
         /// <summary>
         /// txtnombrejefeTrabajo11 control.
@@ -2101,6 +2380,15 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionTrabajo12;
         
         /// <summary>
+        /// ddlPaisTL12 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTL12;
+        
+        /// <summary>
         /// txtnombrejefeTrabajo12 control.
         /// </summary>
         /// <remarks>
@@ -2180,6 +2468,15 @@ namespace SWEGR.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionTrabajo13;
+        
+        /// <summary>
+        /// ddlPaisTL13 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTL13;
         
         /// <summary>
         /// txtnombrejefeTrabajo13 control.
@@ -2263,6 +2560,15 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionTrabajo14;
         
         /// <summary>
+        /// ddlPaisTL14 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTL14;
+        
+        /// <summary>
         /// txtnombrejefeTrabajo14 control.
         /// </summary>
         /// <remarks>
@@ -2342,6 +2648,15 @@ namespace SWEGR.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionTrabajo15;
+        
+        /// <summary>
+        /// ddlPaisTL15 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTL15;
         
         /// <summary>
         /// txtnombrejefeTrabajo15 control.
@@ -2425,6 +2740,15 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionTrabajo16;
         
         /// <summary>
+        /// ddlPaisTL16 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTL16;
+        
+        /// <summary>
         /// txtnombrejefeTrabajo16 control.
         /// </summary>
         /// <remarks>
@@ -2504,6 +2828,15 @@ namespace SWEGR.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionTrabajo17;
+        
+        /// <summary>
+        /// ddlPaisTL17 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTL17;
         
         /// <summary>
         /// txtnombrejefeTrabajo17 control.
@@ -2587,6 +2920,15 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionTrabajo18;
         
         /// <summary>
+        /// ddlPaisTL18 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTL18;
+        
+        /// <summary>
         /// txtnombrejefeTrabajo18 control.
         /// </summary>
         /// <remarks>
@@ -2666,6 +3008,15 @@ namespace SWEGR.UI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionTrabajo19;
+        
+        /// <summary>
+        /// ddlPaisTL19 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTL19;
         
         /// <summary>
         /// txtnombrejefeTrabajo19 control.
@@ -2749,6 +3100,15 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.TextBox txtdescripcionTrabajo20;
         
         /// <summary>
+        /// ddlPaisTL20 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPaisTL20;
+        
+        /// <summary>
         /// txtnombrejefeTrabajo20 control.
         /// </summary>
         /// <remarks>
@@ -2821,21 +3181,39 @@ namespace SWEGR.UI {
         protected global::System.Web.UI.WebControls.Button btnaptitudesIntereses;
         
         /// <summary>
-        /// lstaptitudes control.
+        /// upgrdAptitudes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox lstaptitudes;
+        protected global::System.Web.UI.UpdatePanel upgrdAptitudes;
         
         /// <summary>
-        /// lstintereses control.
+        /// grdAptitudes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox lstintereses;
+        protected global::System.Web.UI.WebControls.GridView grdAptitudes;
+        
+        /// <summary>
+        /// upgrdIntereses control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upgrdIntereses;
+        
+        /// <summary>
+        /// grdIntereses control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grdIntereses;
     }
 }

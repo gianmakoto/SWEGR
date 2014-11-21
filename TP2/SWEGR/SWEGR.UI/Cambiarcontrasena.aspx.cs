@@ -61,7 +61,7 @@ namespace SWEGR.UI
                 EgresadoBC metodosGraduando = new EgresadoBC();
                 EgresadoBE objEgresadoBE = new EgresadoBE();
 
-                objEgresadoBE = metodosGraduando.obtenerEgresado(25);
+                objEgresadoBE = metodosGraduando.obtenerEgresado(IDEgresado);
                 string contrasenaDesencriptada = Desencriptar(objEgresadoBE.Contrasenaegresado);
                 string contrasenaEncriptada;
 

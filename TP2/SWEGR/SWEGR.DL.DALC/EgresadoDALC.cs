@@ -1183,6 +1183,7 @@ namespace SWEGR.DL.DALC
             SqlParameter prmidegresado;
             SqlParameter prmnombrecompletoegresado;
             SqlParameter prmcorreoegresado;
+            SqlParameter prmcorreoalternativo;
             SqlParameter prmtipoegresado;
             SqlParameter prmidfotoegresado;
             SqlParameter prmcontrasenaegresado;
@@ -1211,6 +1212,12 @@ namespace SWEGR.DL.DALC
                 prmcorreoegresado.SqlDbType = SqlDbType.VarChar;
                 prmcorreoegresado.Size = 50;
                 prmcorreoegresado.Value = objetoEgresadoBE.Correoegresado;
+
+                prmcorreoalternativo = new SqlParameter();
+                prmcorreoalternativo.ParameterName = "@correoalternativo";
+                prmcorreoalternativo.SqlDbType = SqlDbType.VarChar;
+                prmcorreoalternativo.Size = 50;
+                prmcorreoalternativo.Value = objetoEgresadoBE.Correoaltegresado;
                 
                 prmtipoegresado = new SqlParameter();
                 prmtipoegresado.ParameterName = "@tipoegresado";
@@ -1238,6 +1245,7 @@ namespace SWEGR.DL.DALC
                 cmdactualizaregresado.Parameters.Add(prmidegresado);
                 cmdactualizaregresado.Parameters.Add(prmnombrecompletoegresado);
                 cmdactualizaregresado.Parameters.Add(prmcorreoegresado);
+                cmdactualizaregresado.Parameters.Add(prmcorreoalternativo);
                 cmdactualizaregresado.Parameters.Add(prmtipoegresado);
                 cmdactualizaregresado.Parameters.Add(prmidfotoegresado);
                 cmdactualizaregresado.Parameters.Add(prmcontrasenaegresado);

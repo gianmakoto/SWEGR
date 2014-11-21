@@ -209,291 +209,294 @@
 
 </head>
 <body>
-   <div id="page-outer" style="background-color: #ccc;padding: 20px 0;">
-        <div id="page" style="width: 62%;margin: 0 auto;background-color: white;border: 1px solid #b0b0b0;  padding: 0 5px;padding-left: 10px;">
-      
-      <!--header start-->
-    <header class="header-frontend" style=" color:black; " >
-        <div class="navbar">
-            <div class="container">
-                <div class="row" style="margin-left: 0px;">
-                    <hr style="margin-bottom: 5px;" />
-                    <div class="col-lg-6 col-sm-12">
-                        <ol class="breadcrumb pull-left">
-                            <li><a href="http://blogs.upc.edu.pe/ingenieria/node" style="font-weight: bold;font-size: 14px; color:#494848">INICIO</a></li>
-                            <li><a href="http://www.upc.edu.pe/" style="font-weight: bold;font-size: 14px; color:#494848">UPC</a></li>
-                        </ol>
+    <div id="page-outer" style="background-color: #ccc; padding: 20px 0;">
+        <div id="page" style="width: 62%; margin: 0 auto; background-color: white; border: 1px solid #b0b0b0; padding: 0 5px; padding-left: 10px;">
 
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <label id="fecha"></label>
-                    </div>
-                    <div class="col-lg-2 col-sm-6">
-                        <div class="pull-right">
-                            <%--<span><a href="https://www.facebook.com/profile.php?id=100007924308551" style="color: #3B5998"><i class="icon-facebook fa-2x"></i></a></span>
+            <!--header start-->
+            <header class="header-frontend" style="color: black;">
+                <div class="navbar">
+                    <div class="container">
+                        <div class="row" style="margin-left: 0px;">
+                            <hr style="margin-bottom: 5px;" />
+                            <div class="col-lg-6 col-sm-12">
+                                <ol class="breadcrumb pull-left">
+                                    <li><a href="http://blogs.upc.edu.pe/ingenieria/node" style="font-weight: bold; font-size: 14px; color: #494848">INICIO</a></li>
+                                    <li><a href="http://www.upc.edu.pe/" style="font-weight: bold; font-size: 14px; color: #494848">UPC</a></li>
+                                </ol>
+
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <label id="fecha"></label>
+                            </div>
+                            <div class="col-lg-2 col-sm-6">
+                                <div class="pull-right">
+                                    <%--<span><a href="https://www.facebook.com/profile.php?id=100007924308551" style="color: #3B5998"><i class="icon-facebook fa-2x"></i></a></span>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="https://www.linkedin.com/pub/escuela-de-ingenier%C3%ADa-de-sistemas-y-computaci%C3%B3n/a3/864/45b" style="color: skyblue"><i class="icon-linkedin fa-2x"></i></a></span>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --%> 
-                             <a class="navbar-brand pull-right" href="https://www.linkedin.com/pub/escuela-de-ingenier%C3%ADa-de-sistemas-y-computaci%C3%B3n/a3/864/45b" style="margin-top: 0px;">
-                           <img  style="margin-right: 15px" src="Images/in2.png"></img></a>
-                            <a class="navbar-brand pull-right" href="https://www.facebook.com/profile.php?id=100007924308551"  style="margin-top: 0px;">
-                           <img style="margin-right: 15px" src="Images/fb.png"></img></a>
-                           
-                                              
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --%>
+                                    <a class="navbar-brand pull-right" href="https://www.linkedin.com/pub/escuela-de-ingenier%C3%ADa-de-sistemas-y-computaci%C3%B3n/a3/864/45b" style="margin-top: 0px;">
+                                        <img style="margin-right: 15px" src="Images/in2.png"></img></a>
+                                    <a class="navbar-brand pull-right" href="https://www.facebook.com/profile.php?id=100007924308551" style="margin-top: 0px;">
+                                        <img style="margin-right: 15px" src="Images/fb.png"></img></a>
+
+
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
 
-                <div class="row" style="margin-left: 0px;">
-                    <hr style="margin-top: 5px;"/>
-                    <div class="col-lg-8 col-sm-12" style="padding-left: 0px;">
-                        <h1 style="font-family: 'Agency FB';font-weight: bold;color: #494848;margin-top: 0px;margin-bottom: 0px;">SEGUIMIENTO DE EGRESADOS DE LA ESCUELA DE INGENIERÍA DE SISTEMAS Y COMPUTACIÓN</h1>
-                    </div>
-                    <div class="col-lg-4 col-sm-12">
-                        <a class="navbar-brand pull-right" href="#">
-                           <img style="margin-top: -15px; margin-right: 60px" src="http://cdn4.upc.edu.pe/sites/all/themes/upc_2013/img/logo.png"></img></a>
-                    </div>
-                </div>
+                        <div class="row" style="margin-left: 0px;">
+                            <hr style="margin-top: 5px;" />
+                            <div class="col-lg-8 col-sm-12" style="padding-left: 0px;">
+                                <h1 style="font-family: 'Agency FB'; font-weight: bold; color: #494848; margin-top: 0px; margin-bottom: 0px;">SEGUIMIENTO DE EGRESADOS DE LA ESCUELA DE INGENIERÍA DE SISTEMAS Y COMPUTACIÓN</h1>
+                            </div>
+                            <div class="col-lg-4 col-sm-12">
+                                <a class="navbar-brand pull-right" href="#">
+                                    <img style="margin-top: -15px; margin-right: 60px" src="http://cdn4.upc.edu.pe/sites/all/themes/upc_2013/img/logo.png"></img></a>
+                            </div>
+                        </div>
 
 
-                 <div class="row" id="navigation-inner">
-                   <ul class="ul-inner" style="width: 100%;">
-                        <li class="li-inner" style="width: 10%;"><a href="ListaregresadosUI.aspx">Egresados</a></li>
-                        <li class="li-inner" style="width: 77%;"><a href="CargaDatosUI.aspx">Cargar Datos</a></li>
+                        <div class="row" id="navigation-inner">
+                            <ul class="ul-inner" style="width: 100%;">
+                                <li class="li-inner" style="width: 10%;"><a href="ListaregresadosUI.aspx">Egresados</a></li>
+                                <li class="li-inner" style="width: 77%;"><a href="CargaDatosUI.aspx">Cargar Datos</a></li>
 
-                       <li class="li-inner" style="width: 10%;">
-                           <a data-toggle="dropdown" class="dropdown-toggle" href="#" >
-                                    <img alt="" style="height: 19px; width: 17px" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
-                                    <span class="username" id="span2">Nombre</span>
-                                    <b class="caret"></b>
-                                </a>
-                                <ul class="dropdown-menu extended logout">
-                                    <div class="log-arrow-up" ></div>
-                                    <%--<li><a href="#"><i class=" icon-suitcase"></i>Profile</a></li>
+                                <li class="li-inner" style="width: 10%;">
+                                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                        <img alt="" style="height: 19px; width: 17px" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+                                        <span class="username" id="span2">Nombre</span>
+                                        <b class="caret"></b>
+                                    </a>
+                                    <ul class="dropdown-menu extended logout">
+                                        <div class="log-arrow-up"></div>
+                                        <%--<li><a href="#"><i class=" icon-suitcase"></i>Profile</a></li>
                                      <%--<li><a href="Cambiarcontrasena.aspx"><i class="icon-cog"></i>Cambiar Contraseña</a></li>--%>
-                                    <%--<li><a href="#"><i class="icon-bell-alt"></i>Notification</a></li>--%>
-                                    <li><a href="login.aspx"><i class="icon-key"></i>Cerrar sesión</a></li>
-                                </ul>
-                       </li>     
+                                        <%--<li><a href="#"><i class="icon-bell-alt"></i>Notification</a></li>--%>
+                                        <li><a href="login.aspx"><i class="icon-key"></i>Cerrar sesión</a></li>
+                                    </ul>
+                                </li>
+                        </div>
+
+
+                    </div>
                 </div>
-
-
-            </div>
-        </div>
-    </header>
-    <!--header end-->
-    <div class="container">
-        <%--<hr style="border-style: dashed" />--%>
-    </div>
-    <!--container start-->
-    <div class="container">
-        <section class="panel">
-            <header class="panel-heading">
-                <h3>Visualización de datos del Egresado</h3>
             </header>
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col-md-12">
-                        <form id="swegrform" class="cmxform form-horizontal tasi-form" runat="server">
-                            <asp:HiddenField ID="NombreHidden" runat="server" />
-                            <%-- Datos Personales --%>
-                            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-                            <asp:UpdatePanel ID="updatosPersonales" runat="server" UpdateMode="Conditional">
-                                <ContentTemplate>
-                                    <div id="Div1" runat="server" style="margin: auto">
-                                        <div style="float: left; position: relative; top: -10px">
-                                            <h3 style="margin-bottom: 4px; text-align: left; float: left">Datos Personales</h3>
-                                        </div>
-                                        <div style="float: right; position: relative; top: 10px">
-                                            <asp:Button ID="btndatosPersonales" runat="server" Text="▼" CssClass="btn" OnClick="btndatosPersonales_Click" />
-                                        </div>
-                                        <div style="clear: both"></div>
-                                    </div>
-                                </ContentTemplate>
-                            </asp:UpdatePanel>
+            <!--header end-->
+            <div class="container">
+                <%--<hr style="border-style: dashed" />--%>
+            </div>
 
-                            <div id="datosPersonales" style="border: 1px solid black; padding-left: 4%; padding-top: 4%" hidden="hidden">
-                                <div class="row">
-                                    <div class="col-sm-8">
+
+
+            <!--container start-->
+            <div class="container">
+                <section class="panel">
+                    <header class="panel-heading">
+                        <h3>Visualización de datos del Egresado</h3>
+                    </header>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form id="swegrform" class="cmxform form-horizontal tasi-form" runat="server">
+                                    <asp:HiddenField ID="NombreHidden" runat="server" />
+                                    <%-- Datos Personales --%>
+                                    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                                    <asp:UpdatePanel ID="updatosPersonales" runat="server" UpdateMode="Conditional">
+                                        <ContentTemplate>
+                                            <div id="Div1" runat="server" style="margin: auto">
+                                                <div style="float: left; position: relative; top: -10px">
+                                                    <h3 style="margin-bottom: 4px; text-align: left; float: left">Datos Personales</h3>
+                                                </div>
+                                                <div style="float: right; position: relative; top: 10px">
+                                                    <asp:Button ID="btndatosPersonales" runat="server" Text="▼" CssClass="btn" OnClick="btndatosPersonales_Click" />
+                                                </div>
+                                                <div style="clear: both"></div>
+                                            </div>
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
+
+                                    <div id="datosPersonales" style="border: 1px solid black; padding-left: 4%; padding-top: 4%" hidden="hidden">
+                                        <div class="row">
+                                            <div class="col-sm-8">
+
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 col-sm-2 control-label">
+                                                        Nombre completo
+                                                    </label>
+                                                    <div class="col-sm-9">
+                                                        <asp:TextBox ID="txtnombrecompleto" runat="server" CssClass="form-control" Enabled="false" type="text"></asp:TextBox>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 col-sm-2 control-label">
+                                                        * DNI
+                                                    </label>
+                                                    <div class="col-sm-9">
+                                                        <asp:TextBox ID="txtdni" runat="server"
+                                                            CssClass="form-control" onkeypress="return isNumber(event)" onpaste="return false" Enabled="false"></asp:TextBox>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="col-sm-3 col-sm-2 control-label">
+                                                        Género
+                                                    </label>
+                                                    <div class="col-sm-9">
+                                                        <asp:DropDownList ID="ddlGenero" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="cold-sm-2">
+                                                <div class="row">
+                                                    <asp:Image ID="contenedorfoto" runat="server" Style="height: 135px; width: 135px; margin-left: 30px;" class="img-thumbnail" />
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 col-sm-2 control-label">
+                                                Fecha de Nacimiento
+                                            </label>
+                                            <div class="col-sm-8">
+                                                <asp:TextBox ID="txtfechanacimiento" runat="server"
+                                                    CssClass="form-control" Enabled="false"></asp:TextBox>
+                                            </div>
+                                        </div>
 
                                         <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                Nombre completo
+                                            <label class="col-sm-2 col-sm-2 control-label">
+                                                Carrera
                                             </label>
-                                            <div class="col-sm-9">
-                                                <asp:TextBox ID="txtnombrecompleto" runat="server" CssClass="form-control" Enabled="false" type="text"></asp:TextBox>
+                                            <div class="col-sm-8">
+                                                <asp:TextBox ID="txtCarrera" runat="server"
+                                                    CssClass="form-control" placeholder="Ejemplo: Carrera" Enabled="false"></asp:TextBox>
                                             </div>
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                * DNI
+                                            <label class="col-sm-2 col-sm-2 control-label">
+                                                * Teléfonos
                                             </label>
-                                            <div class="col-sm-9">
-                                                <asp:TextBox ID="txtdni" runat="server"
-                                                    CssClass="form-control" onkeypress="return isNumber(event)" onpaste="return false" Enabled="false"></asp:TextBox>
+                                            <div class="col-sm-4">
+                                                <asp:TextBox ID="txttelefonoprincipal" runat="server"
+                                                    CssClass="form-control" placeholder="00-999-999-9999 (principal)" data-mask="99-999-9999" onkeypress="return isNumber(event)" onpaste="return false" Enabled="false"></asp:TextBox>
 
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <asp:TextBox ID="txttelefonoalternativo" runat="server"
+                                                    CssClass="form-control" placeholder="00-999-999-9999 (alternativo)" data-mask="999-999-999" onkeypress="return isNumber(event)" onpaste="return false" Enabled="false"></asp:TextBox>
                                             </div>
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="col-sm-3 col-sm-2 control-label">
-                                                Género
+                                            <label class="col-sm-2 col-sm-2 control-label">
+                                                País
                                             </label>
-                                            <div class="col-sm-9">
-                                                <asp:DropDownList ID="ddlGenero" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                            <div class="col-sm-8">
+                                                <asp:DropDownList ID="ddlPais" runat="server" AutoPostBack="false" CssClass="form-control" Enabled="false"></asp:DropDownList>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-2 col-sm-2 control-label">
+                                                Departamento
+                                            </label>
+                                            <div class="col-sm-8">
+                                                <asp:DropDownList ID="ddlDepartamento" runat="server" AutoPostBack="false" CssClass="form-control" Enabled="false"></asp:DropDownList>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-2 col-sm-2 control-label">
+                                                Distrito
+                                            </label>
+                                            <div class="col-sm-8">
+                                                <asp:TextBox ID="txtdistrito" runat="server"
+                                                    CssClass="form-control" placeholder="Ejemplo: San Isidro" Enabled="false"></asp:TextBox>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-2 col-sm-2 control-label">
+                                                Dirección
+                                            </label>
+                                            <div class="col-sm-8">
+                                                <asp:TextBox ID="txtdireccion" runat="server"
+                                                    CssClass="form-control" placeholder="Ejemplo: Av. Callejones rojos 450" Enabled="false"></asp:TextBox>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-2 col-sm-2 control-label">
+                                                * Correo
+                                            </label>
+                                            <div class="col-sm-8">
+                                                <asp:TextBox ID="txtcorreo" runat="server"
+                                                    CssClass="form-control" placeholder="Ejemplo: usuario@gmail.com" Enabled="false"></asp:TextBox>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-2 col-sm-2 control-label">
+                                                Correo Alternativo
+                                            </label>
+                                            <div class="col-sm-8">
+                                                <asp:TextBox ID="txtcorreoalternativo" runat="server"
+                                                    CssClass="form-control" placeholder="Ejemplo: usuario_alternativo@hotmail.com" Enabled="false"></asp:TextBox>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-2 col-sm-2 control-label">
+                                                * Perfil LinkedIn
+                                            </label>
+                                            <div class="col-sm-8">
+
+                                                <div class="input-group m-bot15">
+                                                    <span class="input-group-addon"><i class="fa fa-linkedin"></i>
+                                                    </span>
+                                                    <asp:TextBox ID="txtperfillinkedin" runat="server"
+                                                        CssClass="form-control" placeholder="Ejemplo: https://pe.linkedin.com/iduduario" Enabled="false"></asp:TextBox>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label class="col-sm-2 col-sm-2 control-label">
+                                                Perfil Facebook
+                                            </label>
+                                            <div class="col-sm-8">
+
+                                                <div class="input-group m-bot15">
+                                                    <span class="input-group-addon"><i class="fa fa-facebook"></i>
+                                                    </span>
+                                                    <asp:TextBox ID="txtperfilfacebook" runat="server"
+                                                        CssClass="form-control" placeholder="Ejemplo: https://www.facebook.com/usuario" Enabled="false"></asp:TextBox>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    
-                                    <div class="cold-sm-2">
-                                            <div class="row">
-                                                <asp:Image ID="contenedorfoto" runat="server"  style="height: 135px; width: 135px; margin-left: 30px;" class="img-thumbnail"  />   
+
+                                    <%-- Trayectoria Académica --%>
+                                    <asp:UpdatePanel ID="uptrayecAcad" runat="server" UpdateMode="Conditional">
+                                        <ContentTemplate>
+                                            <div id="Div2" runat="server" style="margin: auto">
+                                                <div style="float: left; position: relative; top: -10px">
+                                                    <h3 style="margin-bottom: 4px; text-align: left; float: left">Trayectoria Académica</h3>
+                                                </div>
+                                                <div style="float: right; position: relative; top: 10px">
+                                                    <asp:Button ID="btntrayectoriaAcad" runat="server" Text="▼" OnClick="btntrayectoriaAcad_Click" CssClass="btn" />
+                                                </div>
+                                                <div style="clear: both"></div>
                                             </div>
-                                    </div>
-                                    
-                                </div>
-                            <div class="form-group">
-                                <label class="col-sm-2 col-sm-2 control-label">
-                                    Fecha de Nacimiento
-                                </label>
-                                <div class="col-sm-8">
-                                    <asp:TextBox ID="txtfechanacimiento" runat="server"
-                                        CssClass="form-control" Enabled="false"></asp:TextBox>
-                                </div>
-                            </div>
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
 
-                                <div class="form-group">
-                                    <label class="col-sm-2 col-sm-2 control-label">
-                                        Carrera
-                                    </label>
-                                    <div class="col-sm-8">
-                                        <asp:TextBox ID="txtCarrera" runat="server"
-                                            CssClass="form-control" placeholder="Ejemplo: Carrera" Enabled="false"></asp:TextBox>
-                                    </div>
-                                </div>
-
-                            <div class="form-group">
-                                <label class="col-sm-2 col-sm-2 control-label">
-                                    * Teléfonos
-                                </label>
-                                <div class="col-sm-4">
-                                    <asp:TextBox ID="txttelefonoprincipal" runat="server"
-                                        CssClass="form-control" placeholder="00-999-999-9999 (principal)" data-mask="99-999-9999" onkeypress="return isNumber(event)" onpaste="return false" Enabled="false"></asp:TextBox>
-
-                                </div>
-                                <div class="col-sm-4">
-                                    <asp:TextBox ID="txttelefonoalternativo" runat="server"
-                                        CssClass="form-control" placeholder="00-999-999-9999 (alternativo)" data-mask="999-999-999" onkeypress="return isNumber(event)" onpaste="return false" Enabled="false"></asp:TextBox>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="col-sm-2 col-sm-2 control-label">
-                                    País
-                                </label>
-                                <div class="col-sm-8">
-                                    <asp:DropDownList ID="ddlPais" runat="server" AutoPostBack="false" CssClass="form-control" Enabled="false"></asp:DropDownList>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="col-sm-2 col-sm-2 control-label">
-                                    Departamento
-                                </label>
-                                <div class="col-sm-8">
-                                    <asp:DropDownList ID="ddlDepartamento" runat="server" AutoPostBack="false" CssClass="form-control" Enabled="false"></asp:DropDownList>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="col-sm-2 col-sm-2 control-label">
-                                    Distrito
-                                </label>
-                                <div class="col-sm-8">
-                                    <asp:TextBox ID="txtdistrito" runat="server"
-                                        CssClass="form-control" placeholder="Ejemplo: San Isidro" Enabled="false"></asp:TextBox>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="col-sm-2 col-sm-2 control-label">
-                                    Dirección
-                                </label>
-                                <div class="col-sm-8">
-                                    <asp:TextBox ID="txtdireccion" runat="server"
-                                        CssClass="form-control" placeholder="Ejemplo: Av. Callejones rojos 450" Enabled="false"></asp:TextBox>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="col-sm-2 col-sm-2 control-label">
-                                    * Correo
-                                </label>
-                                <div class="col-sm-8">
-                                    <asp:TextBox ID="txtcorreo" runat="server"
-                                        CssClass="form-control" placeholder="Ejemplo: usuario@gmail.com" Enabled="false"></asp:TextBox>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="col-sm-2 col-sm-2 control-label">
-                                    Correo Alternativo
-                                </label>
-                                <div class="col-sm-8">
-                                    <asp:TextBox ID="txtcorreoalternativo" runat="server"
-                                        CssClass="form-control" placeholder="Ejemplo: usuario_alternativo@hotmail.com" Enabled="false"></asp:TextBox>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="col-sm-2 col-sm-2 control-label">
-                                    * Perfil LinkedIn
-                                </label>
-                                <div class="col-sm-8">
-
-                                    <div class="input-group m-bot15">
-                                        <span class="input-group-addon"><i class="fa fa-linkedin"></i>
-                                        </span>
-                                        <asp:TextBox ID="txtperfillinkedin" runat="server"
-                                            CssClass="form-control" placeholder="Ejemplo: https://pe.linkedin.com/iduduario" Enabled="false"></asp:TextBox>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="form-group">
-                                <label class="col-sm-2 col-sm-2 control-label">
-                                    Perfil Facebook
-                                </label>
-                                <div class="col-sm-8">
-
-                                    <div class="input-group m-bot15">
-                                        <span class="input-group-addon"><i class="fa fa-facebook"></i>
-                                        </span>
-                                        <asp:TextBox ID="txtperfilfacebook" runat="server"
-                                            CssClass="form-control" placeholder="Ejemplo: https://www.facebook.com/usuario" Enabled="false"></asp:TextBox>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-
-                            <%-- Trayectoria Académica --%>
-                            <asp:UpdatePanel ID="uptrayecAcad" runat="server" UpdateMode="Conditional">
-                                <ContentTemplate>
-                                    <div id="Div2" runat="server" style="margin: auto">
-                                        <div style="float: left; position: relative; top: -10px">
-                                            <h3 style="margin-bottom: 4px; text-align: left; float: left">Trayectoria Académica</h3>
-                                        </div>
-                                        <div style="float: right; position: relative; top: 10px">
-                                            <asp:Button ID="btntrayectoriaAcad" runat="server" Text="▼" OnClick="btntrayectoriaAcad_Click" CssClass="btn" />
-                                        </div>
-                                        <div style="clear: both"></div>
-                                    </div>
-                                </ContentTemplate>
-                            </asp:UpdatePanel>
-
-                            <div class="col-md-12" id="trayectoriaAcad" style="border: 1px solid black; padding-left: 4%; padding-top: 4%" hidden="hidden">
+                                    <div class="col-md-12" id="trayectoriaAcad" style="border: 1px solid black; padding-left: 4%; padding-top: 4%" hidden="hidden">
                                 <div id="Curso1">
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -539,11 +542,19 @@
                                             <asp:TextBox ID="txtdescripcionEstudio" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTA" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
 
-                               
                                 <div id="Curso2" hidden="hidden">
-                                     <hr />
+                                    <hr />
                                     <div class="form-group">
 
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -589,8 +600,17 @@
                                             <asp:TextBox ID="txtdescripcionEstudio2" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTA2" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
-                                
+
                                 <div id="Curso3" hidden="hidden">
                                     <hr />
                                     <div class="form-group">
@@ -637,8 +657,17 @@
                                             <asp:TextBox ID="txtdescripcionEstudio3" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTA3" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
-                                
+
                                 <div id="Curso4" hidden="hidden">
                                     <hr />
                                     <div class="form-group">
@@ -685,8 +714,17 @@
                                             <asp:TextBox ID="txtdescripcionEstudio4" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTA4" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
-                                
+
                                 <div id="Curso5" hidden="hidden">
                                     <hr />
                                     <div class="form-group">
@@ -733,8 +771,17 @@
                                             <asp:TextBox ID="txtdescripcionEstudio5" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTA5" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
-                                
+
                                 <div id="Curso6" hidden="hidden">
                                     <hr />
                                     <div class="form-group">
@@ -781,8 +828,17 @@
                                             <asp:TextBox ID="txtdescripcionEstudio6" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTA6" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
-                                
+
                                 <div id="Curso7" hidden="hidden">
                                     <hr />
                                     <div class="form-group">
@@ -829,10 +885,19 @@
                                             <asp:TextBox ID="txtdescripcionEstudio7" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTA7" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
-                               
+
                                 <div id="Curso8" hidden="hidden">
-                                     <hr />
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -877,8 +942,17 @@
                                             <asp:TextBox ID="txtdescripcionEstudio8" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTA8" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
-                                
+
                                 <div id="Curso9" hidden="hidden">
                                     <hr />
                                     <div class="form-group">
@@ -925,8 +999,17 @@
                                             <asp:TextBox ID="txtdescripcionEstudio9" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTA9" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
-                                
+
                                 <div id="Curso10" hidden="hidden">
                                     <hr />
                                     <div class="form-group">
@@ -973,10 +1056,19 @@
                                             <asp:TextBox ID="txtdescripcionEstudio10" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTA10" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
-                              
+
                                 <div id="Curso11" hidden="hidden">
-                                      <hr />
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -1021,10 +1113,19 @@
                                             <asp:TextBox ID="txtdescripcionEstudio11" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTA11" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
-                               
+
                                 <div id="Curso12" hidden="hidden">
-                                     <hr />
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -1069,10 +1170,19 @@
                                             <asp:TextBox ID="txtdescripcionEstudio12" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTA12" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
-                               
+
                                 <div id="Curso13" hidden="hidden">
-                                     <hr />
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -1117,10 +1227,19 @@
                                             <asp:TextBox ID="txtdescripcionEstudio13" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTA13" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
-                               
+
                                 <div id="Curso14" hidden="hidden">
-                                     <hr />
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -1165,8 +1284,17 @@
                                             <asp:TextBox ID="txtdescripcionEstudio14" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTA14" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
-                                
+
                                 <div id="Curso15" hidden="hidden">
                                     <hr />
                                     <div class="form-group">
@@ -1213,10 +1341,19 @@
                                             <asp:TextBox ID="txtdescripcionEstudio15" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTA15" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
-                               
+
                                 <div id="Curso16" hidden="hidden">
-                                     <hr />
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -1261,8 +1398,17 @@
                                             <asp:TextBox ID="txtdescripcionEstudio16" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTA16" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
-                                
+
                                 <div id="Curso17" hidden="hidden">
                                     <hr />
                                     <div class="form-group">
@@ -1309,10 +1455,19 @@
                                             <asp:TextBox ID="txtdescripcionEstudio17" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTA17" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
-                             
+
                                 <div id="Curso18" hidden="hidden">
-                                       <hr />
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Centro de estudios:
@@ -1357,10 +1512,19 @@
                                             <asp:TextBox ID="txtdescripcionEstudio18" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTA18" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
-                              
+
                                 <div id="Curso19" hidden="hidden">
-                                      <hr />
+                                    <hr />
                                     <div class="form-group">
 
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -1406,8 +1570,17 @@
                                             <asp:TextBox ID="txtdescripcionEstudio19" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTA19" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
                                 </div>
-                                
+
                                 <div id="Curso20" hidden="hidden">
                                     <hr />
                                     <div class="form-group">
@@ -1454,26 +1627,34 @@
                                             <asp:TextBox ID="txtdescripcionEstudio20" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Maestría especializada en guiar a cómo dirigir un proyecto exitosamente" TextMode="MultiLine"></asp:TextBox>
                                         </div>
                                     </div>
-                                </div>
 
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTA20" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
-                            <%-- Trayectoria Profesional --%>
-                            <asp:UpdatePanel ID="uptrayecProf" runat="server" UpdateMode="Conditional">
-                                <ContentTemplate>
-                                    <div id="Div3" runat="server" style="margin: auto">
-                                        <div style="float: left; position: relative; top: -10px">
-                                            <h3 style="margin-bottom: 4px; text-align: left; float: left">Trayectoria Profesional</h3>
-                                        </div>
-                                        <div style="float: right; position: relative; top: 10px">
-                                            <asp:Button ID="btntrayectoriaProf" runat="server" Text="▼" CssClass="btn" OnClick="btntrayectoriaProf_Click" />
-                                        </div>
-                                        <div style="clear: both"></div>
-                                    </div>
-                                </ContentTemplate>
-                            </asp:UpdatePanel>
+                                    <%-- Trayectoria Profesional --%>
+                                    <asp:UpdatePanel ID="uptrayecProf" runat="server" UpdateMode="Conditional">
+                                        <ContentTemplate>
+                                            <div id="Div3" runat="server" style="margin: auto">
+                                                <div style="float: left; position: relative; top: -10px">
+                                                    <h3 style="margin-bottom: 4px; text-align: left; float: left">Trayectoria Profesional</h3>
+                                                </div>
+                                                <div style="float: right; position: relative; top: 10px">
+                                                    <asp:Button ID="btntrayectoriaProf" runat="server" Text="▼" CssClass="btn" OnClick="btntrayectoriaProf_Click" />
+                                                </div>
+                                                <div style="clear: both"></div>
+                                            </div>
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
 
-                            <div id="trayectoriaProf" style="border: 1px solid black; padding-left: 4%; padding-top: 4%" hidden="hidden">
+                                    <div id="trayectoriaProf" style="border: 1px solid black; padding-left: 4%; padding-top: 4%" hidden="hidden">
                                 <div id="Trabajo1">
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
@@ -1508,6 +1689,15 @@
                                         </label>
                                         <div class="col-sm-8">
                                             <asp:TextBox ID="txtdescripcionTrabajo" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTL" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                         </div>
                                     </div>
 
@@ -1554,7 +1744,7 @@
                                         </label>
                                     </div>
                                 </div>
-                               
+
                                 <div id="Trabajo2" hidden="hidden">
                                     <hr />
                                     <div class="form-group">
@@ -1590,6 +1780,15 @@
                                         </label>
                                         <div class="col-sm-8">
                                             <asp:TextBox ID="txtdescripcionTrabajo2" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTL2" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                         </div>
                                     </div>
 
@@ -1636,7 +1835,7 @@
                                         </label>
                                     </div>
                                 </div>
-                                
+
                                 <div id="Trabajo3" hidden="hidden">
                                     <hr />
                                     <div class="form-group">
@@ -1672,6 +1871,15 @@
                                         </label>
                                         <div class="col-sm-8">
                                             <asp:TextBox ID="txtdescripcionTrabajo3" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTL3" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                         </div>
                                     </div>
 
@@ -1718,7 +1926,7 @@
                                         </label>
                                     </div>
                                 </div>
-                                
+
                                 <div id="Trabajo4" hidden="hidden">
                                     <hr />
                                     <div class="form-group">
@@ -1754,6 +1962,15 @@
                                         </label>
                                         <div class="col-sm-8">
                                             <asp:TextBox ID="txtdescripcionTrabajo4" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTL4" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                         </div>
                                     </div>
 
@@ -1800,7 +2017,7 @@
                                         </label>
                                     </div>
                                 </div>
-                                
+
                                 <div id="Trabajo5" hidden="hidden">
                                     <hr />
                                     <div class="form-group">
@@ -1836,6 +2053,15 @@
                                         </label>
                                         <div class="col-sm-8">
                                             <asp:TextBox ID="txtdescripcionTrabajo5" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTL5" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                         </div>
                                     </div>
 
@@ -1882,9 +2108,9 @@
                                         </label>
                                     </div>
                                 </div>
-                               
+
                                 <div id="Trabajo6" hidden="hidden">
-                                     <hr />
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -1918,6 +2144,15 @@
                                         </label>
                                         <div class="col-sm-8">
                                             <asp:TextBox ID="txtdescripcionTrabajo6" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTL6" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                         </div>
                                     </div>
 
@@ -1964,9 +2199,9 @@
                                         </label>
                                     </div>
                                 </div>
-                             
+
                                 <div id="Trabajo7" hidden="hidden">
-                                       <hr />
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -2000,6 +2235,15 @@
                                         </label>
                                         <div class="col-sm-8">
                                             <asp:TextBox ID="txtdescripcionTrabajo7" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTL7" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                         </div>
                                     </div>
 
@@ -2046,9 +2290,9 @@
                                         </label>
                                     </div>
                                 </div>
-                              
+
                                 <div id="Trabajo8" hidden="hidden">
-                                      <hr />
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -2082,6 +2326,15 @@
                                         </label>
                                         <div class="col-sm-8">
                                             <asp:TextBox ID="txtdescripcionTrabajo8" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTL8" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                         </div>
                                     </div>
 
@@ -2128,9 +2381,9 @@
                                         </label>
                                     </div>
                                 </div>
-                               
+
                                 <div id="Trabajo9" hidden="hidden">
-                                     <hr />
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -2164,6 +2417,15 @@
                                         </label>
                                         <div class="col-sm-8">
                                             <asp:TextBox ID="txtdescripcionTrabajo9" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTL9" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                         </div>
                                     </div>
 
@@ -2210,9 +2472,9 @@
                                         </label>
                                     </div>
                                 </div>
-                               
+
                                 <div id="Trabajo10" hidden="hidden">
-                                     <hr />
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -2246,6 +2508,15 @@
                                         </label>
                                         <div class="col-sm-8">
                                             <asp:TextBox ID="txtdescripcionTrabajo10" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTL10" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                         </div>
                                     </div>
 
@@ -2292,9 +2563,9 @@
                                         </label>
                                     </div>
                                 </div>
-                              
+
                                 <div id="Trabajo11" hidden="hidden">
-                                      <hr />
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -2328,6 +2599,15 @@
                                         </label>
                                         <div class="col-sm-8">
                                             <asp:TextBox ID="txtdescripcionTrabajo11" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTL11" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                         </div>
                                     </div>
 
@@ -2374,7 +2654,7 @@
                                         </label>
                                     </div>
                                 </div>
-                                
+
                                 <div id="Trabajo12" hidden="hidden">
                                     <hr />
                                     <div class="form-group">
@@ -2410,6 +2690,15 @@
                                         </label>
                                         <div class="col-sm-8">
                                             <asp:TextBox ID="txtdescripcionTrabajo12" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTL12" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                         </div>
                                     </div>
 
@@ -2456,9 +2745,9 @@
                                         </label>
                                     </div>
                                 </div>
-                              
+
                                 <div id="Trabajo13" hidden="hidden">
-                                      <hr />
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -2492,6 +2781,15 @@
                                         </label>
                                         <div class="col-sm-8">
                                             <asp:TextBox ID="txtdescripcionTrabajo13" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTL13" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                         </div>
                                     </div>
 
@@ -2538,9 +2836,9 @@
                                         </label>
                                     </div>
                                 </div>
-                               
+
                                 <div id="Trabajo14" hidden="hidden">
-                                     <hr />
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -2574,6 +2872,15 @@
                                         </label>
                                         <div class="col-sm-8">
                                             <asp:TextBox ID="txtdescripcionTrabajo14" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTL14" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                         </div>
                                     </div>
 
@@ -2620,9 +2927,9 @@
                                         </label>
                                     </div>
                                 </div>
-                               
+
                                 <div id="Trabajo15" hidden="hidden">
-                                     <hr />
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -2656,6 +2963,15 @@
                                         </label>
                                         <div class="col-sm-8">
                                             <asp:TextBox ID="txtdescripcionTrabajo15" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTL15" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                         </div>
                                     </div>
 
@@ -2702,7 +3018,7 @@
                                         </label>
                                     </div>
                                 </div>
-                                
+
                                 <div id="Trabajo16" hidden="hidden">
                                     <hr />
                                     <div class="form-group">
@@ -2738,6 +3054,15 @@
                                         </label>
                                         <div class="col-sm-8">
                                             <asp:TextBox ID="txtdescripcionTrabajo16" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTL16" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                         </div>
                                     </div>
 
@@ -2784,9 +3109,9 @@
                                         </label>
                                     </div>
                                 </div>
-                               
+
                                 <div id="Trabajo17" hidden="hidden">
-                                     <hr />
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -2820,6 +3145,15 @@
                                         </label>
                                         <div class="col-sm-8">
                                             <asp:TextBox ID="txtdescripcionTrabajo17" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTL17" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                         </div>
                                     </div>
 
@@ -2866,9 +3200,9 @@
                                         </label>
                                     </div>
                                 </div>
-                               
+
                                 <div id="Trabajo18" hidden="hidden">
-                                     <hr />
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -2902,6 +3236,15 @@
                                         </label>
                                         <div class="col-sm-8">
                                             <asp:TextBox ID="txtdescripcionTrabajo18" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTL18" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                         </div>
                                     </div>
 
@@ -2948,9 +3291,9 @@
                                         </label>
                                     </div>
                                 </div>
-                               
+
                                 <div id="Trabajo19" hidden="hidden">
-                                     <hr />
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -2984,6 +3327,15 @@
                                         </label>
                                         <div class="col-sm-8">
                                             <asp:TextBox ID="txtdescripcionTrabajo19" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTL19" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                         </div>
                                     </div>
 
@@ -3030,9 +3382,9 @@
                                         </label>
                                     </div>
                                 </div>
-                               
+
                                 <div id="Trabajo20" hidden="hidden">
-                                     <hr />
+                                    <hr />
                                     <div class="form-group">
                                         <label class="col-sm-2 col-sm-2 control-label">
                                             Nombre de la empresa:
@@ -3066,6 +3418,15 @@
                                         </label>
                                         <div class="col-sm-8">
                                             <asp:TextBox ID="txtdescripcionTrabajo20" runat="server" CssClass="form-control" Enabled="false" type="text" placeholder="Ejemplo: Arquitecto en los proyectos de software de IBM"></asp:TextBox>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">
+                                            País
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <asp:DropDownList ID="ddlPaisTL20" runat="server" AutoPostBack="false" Enabled="false" CssClass="form-control"></asp:DropDownList>
                                         </div>
                                     </div>
 
@@ -3114,102 +3475,117 @@
                                 </div>
                             </div>
 
-                            <%-- Aptitudes e Intereses--%>
-                            <asp:UpdatePanel ID="upaptitudesIntereses" runat="server" UpdateMode="Conditional">
-                                <ContentTemplate>
-                                    <div id="Div4" runat="server" style="margin: auto">
-                                        <div style="float: left; position: relative; top: -10px">
-                                            <h3 style="margin-bottom: 4px; text-align: left; float: left">Aptitudes e Intereses</h3>
+                                    <%-- Aptitudes e Intereses--%>
+                                    <asp:UpdatePanel ID="upaptitudesIntereses" runat="server" UpdateMode="Conditional">
+                                        <ContentTemplate>
+                                            <div id="Div4" runat="server" style="margin: auto">
+                                                <div style="float: left; position: relative; top: -10px">
+                                                    <h3 style="margin-bottom: 4px; text-align: left; float: left">Aptitudes e Intereses</h3>
+                                                </div>
+                                                <div style="float: right; position: relative; top: 10px">
+                                                    <asp:Button ID="btnaptitudesIntereses" runat="server" Text="▼" CssClass="btn" OnClick="btnaptitudesIntereses_Click" />
+                                                </div>
+                                                <div style="clear: both"></div>
+                                            </div>
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
+
+                                    <div id="aptitudesIntereses" style="border: 1px solid black; padding-left: 4%; padding-top: 4%" hidden="hidden">
+                                        <div class="form-group">
+
+                                            <div class="col-md-6">
+                                                <div class="col-sm12">
+                                                    <asp:UpdatePanel ID="upgrdAptitudes" runat="server" UpdateMode="Conditional">
+                                                        <ContentTemplate>
+                                                            <asp:GridView ID="grdAptitudes" runat="server" AutoGenerateColumns="false" CssClass="table  pull-left">
+                                                                <Columns>
+                                                                    <asp:BoundField HeaderText="Aptitud" DataField="Nombreaptitud" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                                                </Columns>
+                                                                <HeaderStyle BackColor="#626262" ForeColor="White" />
+                                                            </asp:GridView>
+                                                        </ContentTemplate>
+                                                    </asp:UpdatePanel>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="col-sm12">
+                                                    <asp:UpdatePanel ID="upgrdIntereses" runat="server" UpdateMode="Conditional">
+                                                        <ContentTemplate>
+                                                            <asp:GridView ID="grdIntereses" runat="server" AutoGenerateColumns="false" CssClass="table">
+                                                                <Columns>
+                                                                    <asp:BoundField HeaderText="Interes" DataField="Nombreinteres" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                                                </Columns>
+                                                                <HeaderStyle BackColor="#626262" ForeColor="White" />
+                                                            </asp:GridView>
+                                                        </ContentTemplate>
+                                                    </asp:UpdatePanel>
+                                                </div>
+                                            </div>
+
                                         </div>
-                                        <div style="float: right; position: relative; top: 10px">
-                                            <asp:Button ID="btnaptitudesIntereses" runat="server" Text="▼" CssClass="btn" OnClick="btnaptitudesIntereses_Click" />
-                                        </div>
-                                        <div style="clear: both"></div>
                                     </div>
-                                </ContentTemplate>
-                            </asp:UpdatePanel>
-
-                            <div id="aptitudesIntereses" style="border: 1px solid black; padding-left: 4%; padding-top: 4%" hidden="hidden">
-                                <div class="form-group">
-                                    <table cellspacion="0" cellpadding="3" border="0" style="margin: auto" class="auto-style13">
-                                        <tr>
-                                            <td style="text-align: left; vertical-align: top">Aptitudes:</td>
-                                            <td>
-                                                <asp:ListBox ID="lstaptitudes" runat="server" Width="220px" Height="150px" AutoPostBack="false"></asp:ListBox>
-                                            </td>
-                                            <td></td>
-                                            <td style="text-align: right; vertical-align: top">Intereses:</td>
-                                            <td>
-                                                <asp:ListBox ID="lstintereses" runat="server" Width="220px" Height="150px" AutoPostBack="false"></asp:ListBox>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </div>
+                                </form>
                             </div>
-                        </form>
+                        </div>
                     </div>
-                </div>
+                </section>
             </div>
-        </section>
-    </div>
+            
+            <%--Acá termina el código--%>
 
-
-
-
-
-    <%--Acá termina el código--%>
-
-             <!--footer start-->
-      <footer class="footer" style="background:white; color:black; box-shadow: grey 0 5px 0px 0 inset;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-sm-12">
-                    <h1>Informacion de contacto</h1>
-                    <address>
-                        <p>
-                            Dirección:  Prolongación Primavera 2390, Monterrico
+            <!--footer start-->
+            <footer class="footer" style="background: white; color: black; box-shadow: grey 0 5px 0px 0 inset;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12">
+                            <h1>Informacion de contacto</h1>
+                            <address>
+                                <p>
+                                    Dirección:  Prolongación Primavera 2390, Monterrico
                             Telf: 313-3333 | Fax: 313-3344
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contacto : <a href="http://contactoweb.upc.edu.pe/">Consultas</a></p>
-                    </address>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contacto : <a href="http://contactoweb.upc.edu.pe/">Consultas</a>
+                                </p>
+                            </address>
+                        </div>
+
+                    </div>
+
                 </div>
-                
-            </div>
 
-            </div>
-       
-    </footer>
-    <!--footer end-->
+            </footer>
+            <!--footer end-->
 
-    <!-- js placed at the end of the document so the pages load faster -->
+            <!-- js placed at the end of the document so the pages load faster -->
 
-    <script src="Content/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="Content/js/hover-dropdown.js"></script>
-    <script type="text/javascript" src="Content/assets/bxslider/jquery.bxslider.js"></script>
-    <script defer src="Content/js/jquery.flexslider.js"></script>
+            <script src="Content/js/bootstrap.min.js"></script>
+            <script type="text/javascript" src="Content/js/hover-dropdown.js"></script>
+            <script type="text/javascript" src="Content/assets/bxslider/jquery.bxslider.js"></script>
+            <script defer src="Content/js/jquery.flexslider.js"></script>
 
-    <script src="Content/js/jquery.easing.min.js"></script>
-    <script src="Content/js/link-hover.js"></script>
+            <script src="Content/js/jquery.easing.min.js"></script>
+            <script src="Content/js/link-hover.js"></script>
 
-    <!--common script for all pages-->
-    <script src="Content/js/common-scripts.js"></script>
+            <!--common script for all pages-->
+            <script src="Content/js/common-scripts.js"></script>
 
-    <!--script for this page-->
-    <script src="Content/js/form-validation-script.js"></script>
+            <!--script for this page-->
+            <script src="Content/js/form-validation-script.js"></script>
 
-    <script>
-        $(window).load(function () {
-            $('[data-zlname = reverse-effect]').mateHover({
-                position: 'y-reverse',
-                overlayStyle: 'rolling',
-                overlayBg: '#fff',
-                overlayOpacity: 0.7,
-                overlayEasing: 'easeOutCirc',
-                rollingPosition: 'top',
-                popupEasing: 'easeOutBack',
-                popup2Easing: 'easeOutBack'
-            });
+            <script>
+                $(window).load(function () {
+                    $('[data-zlname = reverse-effect]').mateHover({
+                        position: 'y-reverse',
+                        overlayStyle: 'rolling',
+                        overlayBg: '#fff',
+                        overlayOpacity: 0.7,
+                        overlayEasing: 'easeOutCirc',
+                        rollingPosition: 'top',
+                        popupEasing: 'easeOutBack',
+                        popup2Easing: 'easeOutBack'
+                    });
 
-            var algo = document.getElementById("<%= NombreHidden.ClientID %>").value; //hiddenField asp
+                    var algo = document.getElementById("<%= NombreHidden.ClientID %>").value; //hiddenField asp
             $("#spanNombre").text(algo); //span html
         });
 
@@ -3223,11 +3599,11 @@
         });
 
 
-    </script>
+            </script>
 
-            
-            
-            </div>
+
+
         </div>
+    </div>
 </body>
 </html>

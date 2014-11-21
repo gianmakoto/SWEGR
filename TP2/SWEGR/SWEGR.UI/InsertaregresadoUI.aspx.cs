@@ -34,7 +34,6 @@ namespace SWEGR.UI
             EgresadoBE objEgresadoBE = new EgresadoBE();
             EgresadoBC objEgresadoBC = new EgresadoBC();
 
-
             string contrasena = txtcontrasena.Text;
             if (txtCodigo.Text == "" || txtcorreo.Text == "" || txtcontrasena.Text == "")
                 ScriptManager.RegisterStartupScript(Page, GetType(), "error", "error();", true);
@@ -48,12 +47,22 @@ namespace SWEGR.UI
                 {
                     int idEgresado = (int)ViewState["IDEgresadoED"];
 
+                    objEgresadoBE = objEgresadoBC.obtenerEgresado(idEgresado);
+
                     string contrasenaEncriptada = Encriptar(txtcontrasena.Text);
 
                     objEgresadoBE.Idegresado = idEgresado;
                     objEgresadoBE.Codigouniversitarioegresado = txtCodigo.Text;
                     objEgresadoBE.Nombrecompletoegresado = txtnombre.Text;
-                    objEgresadoBE.Correoegresado = txtcorreo.Text;
+
+                    if (objEgresadoBE.Correoegresado == "" || objEgresadoBE.Correoegresado == null)
+                        objEgresadoBE.Correoegresado = txtcorreo.Text;
+                    else
+                        objEgresadoBE.Correoaltegresado = txtcorreo.Text;
+
+                    if (objEgresadoBE.Correoaltegresado == null)
+                        objEgresadoBE.Correoaltegresado = "";    
+
                     objEgresadoBE.Contrasenaegresado = contrasenaEncriptada;
                     objEgresadoBE.Tipoegresado = 'E';
                     objEgresadoBE.Idfotoegresado = 1;

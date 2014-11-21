@@ -13,10 +13,11 @@ namespace SWEGR.UI
 {
     public partial class VisualizaregresadoUI : System.Web.UI.Page
     {
+        int IDEgresadoSeleccionado;
         protected void Page_Load(object sender, EventArgs e)
         {
            
-            int IDEgresadoSeleccionado;
+            
             char TUsuario;
             String Nombrecitow;
             int IDEgresado;
@@ -26,11 +27,7 @@ namespace SWEGR.UI
             NombreHidden.Value = Nombrecitow;
             try
             {
-                //IDEgresado = Convert.ToInt32(Request.QueryString["IDEgresado"]);
-             /*   if (Session["TipoUsuarioLogueado"].ToString() == null)
-                    TipoUsuarioLogueado = "";
-                TipoUsuarioLogueado = Session["TipoUsuarioLogueado"].ToString();
-                */
+
                 if(Convert.ToChar(Session["TipoUsuario"]) == null)
                     TUsuario = 'F';
 
@@ -40,13 +37,6 @@ namespace SWEGR.UI
                     Response.Redirect("Login.aspx");
                     return;
                 }
-
-
-               /* if (!TipoUsuarioLogueado.Equals("comite"))
-                {
-                    Response.Redirect("Loginprueba.aspx");
-                    return;
-                }*/
 
                 if (!IsPostBack)
                 {
@@ -106,11 +96,8 @@ namespace SWEGR.UI
                     llenarregistroacademico(IDEgresadoSeleccionado);
                     llenarregistrolaboral(IDEgresadoSeleccionado);
 
-                    lstaptitudes.DataSource = listaaptitudes(IDEgresadoSeleccionado);
-                    lstaptitudes.DataBind();
-
-                    lstintereses.DataSource = listaintereses(IDEgresadoSeleccionado);
-                    lstintereses.DataBind();
+                    grdAptitudesDataBind();
+                    grdInteresesDataBind();
 
                     obtenerFoto(egresado.Idfotoegresado);
                 }
@@ -122,8 +109,23 @@ namespace SWEGR.UI
             }
         }
 
+        public void grdAptitudesDataBind()
+        {
+            grdAptitudes.DataSource = listaaptitudbe(IDEgresadoSeleccionado);
+            grdAptitudes.DataBind();
+            upgrdAptitudes.Update();
+        }
+
+        public void grdInteresesDataBind()
+        {
+            grdIntereses.DataSource = listainteresbe(IDEgresadoSeleccionado);
+            grdIntereses.DataBind();
+            upgrdIntereses.Update();
+        }
+
         public void llenarregistroacademico(int idegresado)
         {
+            PaisBC objetoPaisBC = new PaisBC();
             RegistroAcademicoBE objRegistroAcademicoBE = new RegistroAcademicoBE();
             List<RegistroAcademicoBE> listaRegistroAcademicoBE = new List<RegistroAcademicoBE>();
             RegistroAcademicoBC objRegistroAcademicoBC = new RegistroAcademicoBC();
@@ -133,6 +135,7 @@ namespace SWEGR.UI
 
             if (cantidad == 0)
                 return;
+
             objRegistroAcademicoBE = listaRegistroAcademicoBE[0];
 
             txtcentroEstudios.Text = objRegistroAcademicoBE.Nombreinstitucion;
@@ -140,6 +143,12 @@ namespace SWEGR.UI
             txttipoEstudio.Text = objRegistroAcademicoBE.Tipoestudio;
             txtnombreEstudio.Text = objRegistroAcademicoBE.Nombreestudio;
             txtdescripcionEstudio.Text = objRegistroAcademicoBE.Descripcionestudio;
+            String pais = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+            if (objRegistroAcademicoBE.Idpais == 0)
+                ddlPaisTA.SelectedIndex = -1;
+            else
+                ddlPaisTA.Text = pais;
 
             if (cantidad > 1)
             {
@@ -150,6 +159,12 @@ namespace SWEGR.UI
                 txttipoEstudio2.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio2.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio2.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA2 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA2.SelectedIndex = -1;
+                else
+                    ddlPaisTA2.Text = paisTA2;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso2", "mostrarCurso2();", true);
             }
@@ -165,6 +180,12 @@ namespace SWEGR.UI
                 txttipoEstudio3.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio3.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio3.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA3 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA3.SelectedIndex = -1;
+                else
+                    ddlPaisTA3.Text = paisTA3;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso3", "mostrarCurso3();", true);
             }
@@ -180,6 +201,12 @@ namespace SWEGR.UI
                 txttipoEstudio4.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio4.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio4.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA4 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA4.SelectedIndex = -1;
+                else
+                    ddlPaisTA4.Text = paisTA4;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso4", "mostrarCurso4();", true);
             }
@@ -195,6 +222,12 @@ namespace SWEGR.UI
                 txttipoEstudio5.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio5.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio5.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA5 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA5.SelectedIndex = -1;
+                else
+                    ddlPaisTA5.Text = paisTA5;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso5", "mostrarCurso5();", true);
             }
@@ -210,6 +243,12 @@ namespace SWEGR.UI
                 txttipoEstudio6.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio6.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio6.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA6 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA6.SelectedIndex = -1;
+                else
+                    ddlPaisTA6.Text = paisTA6;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso6", "mostrarCurso6();", true);
             }
@@ -225,6 +264,12 @@ namespace SWEGR.UI
                 txttipoEstudio7.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio7.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio7.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA7 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA7.SelectedIndex = -1;
+                else
+                    ddlPaisTA7.Text = paisTA7;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso7", "mostrarCurso7();", true);
             }
@@ -240,6 +285,12 @@ namespace SWEGR.UI
                 txttipoEstudio8.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio8.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio8.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA8 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA8.SelectedIndex = -1;
+                else
+                    ddlPaisTA8.Text = paisTA8;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso8", "mostrarCurso8();", true);
             }
@@ -255,6 +306,12 @@ namespace SWEGR.UI
                 txttipoEstudio9.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio9.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio9.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA9 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA9.SelectedIndex = -1;
+                else
+                    ddlPaisTA9.Text = paisTA9;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso9", "mostrarCurso9();", true);
             }
@@ -270,6 +327,12 @@ namespace SWEGR.UI
                 txttipoEstudio10.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio10.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio10.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA10 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA10.SelectedIndex = -1;
+                else
+                    ddlPaisTA10.Text = paisTA10;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso10", "mostrarCurso10();", true);
             }
@@ -285,6 +348,12 @@ namespace SWEGR.UI
                 txttipoEstudio11.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio11.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio11.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA11 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA11.SelectedIndex = -1;
+                else
+                    ddlPaisTA11.Text = paisTA11;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso11", "mostrarCurso11();", true);
             }
@@ -300,6 +369,12 @@ namespace SWEGR.UI
                 txttipoEstudio12.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio12.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio12.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA12 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA12.SelectedIndex = -1;
+                else
+                    ddlPaisTA12.Text = paisTA12;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso12", "mostrarCurso12();", true);
             }
@@ -315,6 +390,12 @@ namespace SWEGR.UI
                 txttipoEstudio13.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio13.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio13.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA13 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA13.SelectedIndex = -1;
+                else
+                    ddlPaisTA13.Text = paisTA13;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso13", "mostrarCurso13();", true);
             }
@@ -330,6 +411,12 @@ namespace SWEGR.UI
                 txttipoEstudio14.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio14.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio14.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA14 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA14.SelectedIndex = -1;
+                else
+                    ddlPaisTA14.Text = paisTA14;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso14", "mostrarCurso14();", true);
             }
@@ -345,6 +432,12 @@ namespace SWEGR.UI
                 txttipoEstudio15.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio15.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio15.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA15 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA15.SelectedIndex = -1;
+                else
+                    ddlPaisTA15.Text = paisTA15;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso15", "mostrarCurso15();", true);
             }
@@ -360,6 +453,12 @@ namespace SWEGR.UI
                 txttipoEstudio16.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio16.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio16.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA16 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA16.SelectedIndex = -1;
+                else
+                    ddlPaisTA16.Text = paisTA16;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso16", "mostrarCurso16();", true);
             }
@@ -375,25 +474,38 @@ namespace SWEGR.UI
                 txttipoEstudio17.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio17.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio17.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA17 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA17.SelectedIndex = -1;
+                else
+                    ddlPaisTA17.Text = paisTA17;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso17", "mostrarCurso17();", true);
             }
             else
+                return;
 
-                if (cantidad > 17)
-                {
-                    objRegistroAcademicoBE = listaRegistroAcademicoBE[17];
+            if (cantidad > 17)
+            {
+                objRegistroAcademicoBE = listaRegistroAcademicoBE[17];
 
-                    txtcentroEstudios18.Text = objRegistroAcademicoBE.Nombreinstitucion;
-                    txtduracionEstudio18.Text = objRegistroAcademicoBE.Duracionestudio;
-                    txttipoEstudio18.Text = objRegistroAcademicoBE.Tipoestudio;
-                    txtnombreEstudio18.Text = objRegistroAcademicoBE.Nombreestudio;
-                    txtdescripcionEstudio18.Text = objRegistroAcademicoBE.Descripcionestudio;
+                txtcentroEstudios18.Text = objRegistroAcademicoBE.Nombreinstitucion;
+                txtduracionEstudio18.Text = objRegistroAcademicoBE.Duracionestudio;
+                txttipoEstudio18.Text = objRegistroAcademicoBE.Tipoestudio;
+                txtnombreEstudio18.Text = objRegistroAcademicoBE.Nombreestudio;
+                txtdescripcionEstudio18.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA18 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
 
-                    ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso18", "mostrarCurso18();", true);
-                }
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA18.SelectedIndex = -1;
                 else
-                    return;
+                    ddlPaisTA18.Text = paisTA18;
+
+                ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso18", "mostrarCurso18();", true);
+            }
+            else
+                return;
 
             if (cantidad > 18)
             {
@@ -404,6 +516,12 @@ namespace SWEGR.UI
                 txttipoEstudio19.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio19.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio19.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA19 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA19.SelectedIndex = -1;
+                else
+                    ddlPaisTA19.Text = paisTA19;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso19", "mostrarCurso19();", true);
             }
@@ -419,27 +537,35 @@ namespace SWEGR.UI
                 txttipoEstudio20.Text = objRegistroAcademicoBE.Tipoestudio;
                 txtnombreEstudio20.Text = objRegistroAcademicoBE.Nombreestudio;
                 txtdescripcionEstudio20.Text = objRegistroAcademicoBE.Descripcionestudio;
+                String paisTA20 = objetoPaisBC.obtenerPais(objRegistroAcademicoBE.Idpais);
+
+                if (objRegistroAcademicoBE.Idpais == 0)
+                    ddlPaisTA20.SelectedIndex = -1;
+                else
+                    ddlPaisTA20.Text = paisTA20;
 
                 ScriptManager.RegisterStartupScript(Page, GetType(), "mostrarCurso20", "mostrarCurso20();", true);
             }
             else
                 return;
-            
+
         }
 
         public void llenarregistrolaboral(int idegresado)
         {
+            PaisBC objetoPaisBC = new PaisBC();
             RegistroLaboralBE objRegistroLaboralBE = new RegistroLaboralBE();
             List<RegistroLaboralBE> listaRegistroLaboralBE = new List<RegistroLaboralBE>();
             RegistroLaboralBC objRegistroLaboralBC = new RegistroLaboralBC();
 
             listaRegistroLaboralBE = objRegistroLaboralBC.listarregistrolaobral(idegresado);
             int cantidad = listaRegistroLaboralBE.Count;
+
             if (cantidad == 0)
                 return;
+
             objRegistroLaboralBE = listaRegistroLaboralBE[0];
 
-         
             txtnombreEmpresa.Text = objRegistroLaboralBE.Nombretrabajo;
             txtcargoTrabajo.Text = objRegistroLaboralBE.Cargotrabajo;
             txtduracionTrabajo.Text = objRegistroLaboralBE.Duraciontrabajo;
@@ -448,6 +574,13 @@ namespace SWEGR.UI
             txtcargojefeTrabajo.Text = objRegistroLaboralBE.Cargojefetrabajo;
             txttelefonojefeTrabajo.Text = objRegistroLaboralBE.Telefonojefetrabajo;
             txtcorreojefeTrabajo.Text = objRegistroLaboralBE.Correojefetrabajo;
+            String pais = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+            if (objRegistroLaboralBE.Idpais == 0)
+                ddlPaisTL.SelectedIndex = -1;
+            else
+                ddlPaisTL.Text = pais;
+
 
             if (objRegistroLaboralBE.Trabajoactual == true)
                 cbotrabajoActual.Checked = true;
@@ -464,6 +597,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo2.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo2.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo2.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL2 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL2.SelectedIndex = -1;
+                else
+                    ddlPaisTL2.Text = paisTL2;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual2.Checked = true;
@@ -485,6 +624,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo3.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo3.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo3.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL3 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL3.SelectedIndex = -1;
+                else
+                    ddlPaisTL3.Text = paisTL3;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual3.Checked = true;
@@ -506,6 +651,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo4.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo4.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo4.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL4 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL4.SelectedIndex = -1;
+                else
+                    ddlPaisTL4.Text = paisTL4;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual4.Checked = true;
@@ -527,6 +678,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo5.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo5.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo5.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL5 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL5.SelectedIndex = -1;
+                else
+                    ddlPaisTL5.Text = paisTL5;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual5.Checked = true;
@@ -548,6 +705,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo6.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo6.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo6.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL6 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL6.SelectedIndex = -1;
+                else
+                    ddlPaisTL6.Text = paisTL6;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual6.Checked = true;
@@ -569,6 +732,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo7.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo7.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo7.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL7 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL7.SelectedIndex = -1;
+                else
+                    ddlPaisTL7.Text = paisTL7;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual7.Checked = true;
@@ -590,6 +759,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo8.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo8.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo8.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL8 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL8.SelectedIndex = -1;
+                else
+                    ddlPaisTL8.Text = paisTL8;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual8.Checked = true;
@@ -611,6 +786,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo9.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo9.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo9.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL9 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL9.SelectedIndex = -1;
+                else
+                    ddlPaisTL9.Text = paisTL9;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual9.Checked = true;
@@ -632,6 +813,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo10.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo10.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo10.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL10 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL10.SelectedIndex = -1;
+                else
+                    ddlPaisTL10.Text = paisTL10;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual10.Checked = true;
@@ -653,6 +840,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo11.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo11.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo11.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL11 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL11.SelectedIndex = -1;
+                else
+                    ddlPaisTL11.Text = paisTL11;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual11.Checked = true;
@@ -674,6 +867,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo12.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo12.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo12.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL12 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL12.SelectedIndex = -1;
+                else
+                    ddlPaisTL12.Text = paisTL12;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual12.Checked = true;
@@ -695,6 +894,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo13.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo13.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo13.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL13 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL13.SelectedIndex = -1;
+                else
+                    ddlPaisTL13.Text = paisTL13;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual13.Checked = true;
@@ -716,6 +921,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo14.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo14.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo14.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL14 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL14.SelectedIndex = -1;
+                else
+                    ddlPaisTL14.Text = paisTL14;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual14.Checked = true;
@@ -737,6 +948,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo15.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo15.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo15.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL15 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL15.SelectedIndex = -1;
+                else
+                    ddlPaisTL15.Text = paisTL15;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual15.Checked = true;
@@ -758,6 +975,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo16.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo16.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo16.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL16 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL16.SelectedIndex = -1;
+                else
+                    ddlPaisTL16.Text = paisTL16;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual16.Checked = true;
@@ -779,6 +1002,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo17.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo17.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo17.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL17 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL17.SelectedIndex = -1;
+                else
+                    ddlPaisTL17.Text = paisTL17;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual17.Checked = true;
@@ -800,6 +1029,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo18.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo18.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo18.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL18 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL18.SelectedIndex = -1;
+                else
+                    ddlPaisTL18.Text = paisTL18;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual18.Checked = true;
@@ -821,6 +1056,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo19.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo19.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo19.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL19 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL19.SelectedIndex = -1;
+                else
+                    ddlPaisTL19.Text = paisTL19;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual19.Checked = true;
@@ -842,6 +1083,12 @@ namespace SWEGR.UI
                 txtcargojefeTrabajo20.Text = objRegistroLaboralBE.Cargojefetrabajo;
                 txttelefonojefeTrabajo20.Text = objRegistroLaboralBE.Telefonojefetrabajo;
                 txtcorreojefeTrabajo20.Text = objRegistroLaboralBE.Correojefetrabajo;
+                String paisTL20 = objetoPaisBC.obtenerPais(objRegistroLaboralBE.Idpais);
+
+                if (objRegistroLaboralBE.Idpais == 0)
+                    ddlPaisTL20.SelectedIndex = -1;
+                else
+                    ddlPaisTL20.Text = paisTL20;
 
                 if (objRegistroLaboralBE.Trabajoactual == true)
                     cbotrabajoActual20.Checked = true;
@@ -852,13 +1099,12 @@ namespace SWEGR.UI
                 return;
         }
 
-        public List<String> listaaptitudes(int idegresado)
+        public List<AptitudBE> listaaptitudbe(int idegresado)
         {
-            List<String> lsaptitudes = new List<string>();
+            List<AptitudBE> lstaptitudes = new List<AptitudBE>();
             List<int> idaptitudes = new List<int>();
-            AptitudBE objetoAptitudBE = new AptitudBE();
-            AptitudBC objetoAptitudBC = new AptitudBC();
-            
+            AptitudBE objAptitudBE = new AptitudBE();
+            AptitudBC objAptitudBC = new AptitudBC();
 
             EgresadoBC objetoEgresadoBC = new EgresadoBC();
             idaptitudes = objetoEgresadoBC.listaraptitudxegresado(idegresado);
@@ -867,33 +1113,34 @@ namespace SWEGR.UI
             {
                 int aptitudid = idaptitudes[i];
 
-                objetoAptitudBE = objetoAptitudBC.obtenerAptitud(aptitudid);
+                objAptitudBE = objAptitudBC.obtenerAptitud(aptitudid);
 
-                lsaptitudes.Add(objetoAptitudBE.Nombreaptitud);
+                lstaptitudes.Add(objAptitudBE);
             }
-            return lsaptitudes;
+            return lstaptitudes;
+
         }
 
-        public List<String> listaintereses(int idegresado)
+        public List<InteresBE> listainteresbe(int idegresado)
         {
-            List<String> lsintereses = new List<string>();
+            List<InteresBE> lstintereses = new List<InteresBE>();
             List<int> idintereses = new List<int>();
-            InteresBE objetoInteresBE = new InteresBE();
-            InteresBC objetoInteresBC = new InteresBC();
+            InteresBE objInteresBE = new InteresBE();
+            InteresBC objInteresBC = new InteresBC();
 
 
             EgresadoBC objetoEgresadoBC = new EgresadoBC();
-            idintereses = objetoEgresadoBC.listaraptitudxegresado(idegresado);
+            idintereses = objetoEgresadoBC.listarinteresxegresado(idegresado);
 
             for (int i = 0; i < idintereses.Count(); i++)
             {
                 int interesid = idintereses[i];
 
-                objetoInteresBE = objetoInteresBC.obtenerInteres(interesid);
+                objInteresBE = objInteresBC.obtenerInteres(interesid);
 
-                lsintereses.Add(objetoInteresBE.Nombreinteres);
+                lstintereses.Add(objInteresBE);
             }
-            return lsintereses;
+            return lstintereses;
         }
 
         public List<String> listagenero()
