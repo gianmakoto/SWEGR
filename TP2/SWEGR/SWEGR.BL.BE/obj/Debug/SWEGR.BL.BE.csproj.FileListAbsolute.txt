@@ -102,11 +102,6 @@ D:\UPC\2014-2\TDP1\TDP1Trabajo\TP2\SWEGR\SWEGR.BL.BE\bin\Debug\SWEGR.BL.BE.pdb
 D:\UPC\2014-2\TDP1\TDP1Trabajo\TP2\SWEGR\SWEGR.BL.BE\obj\Debug\SWEGR.BL.BE.dll
 D:\UPC\2014-2\TDP1\TDP1Trabajo\TP2\SWEGR\SWEGR.BL.BE\obj\Debug\SWEGR.BL.BE.pdb
 D:\UPC\2014-2\TDP1\TDP1Trabajo\TP2\SWEGR\SWEGR.BL.BE\obj\Debug\SWEGR.BL.BE.csprojResolveAssemblyReference.cache
-D:\Furiowzhitow\TP2\SWEGR\SWEGR.BL.BE\bin\Debug\SWEGR.BL.BE.dll
-D:\Furiowzhitow\TP2\SWEGR\SWEGR.BL.BE\bin\Debug\SWEGR.BL.BE.pdb
-D:\Furiowzhitow\TP2\SWEGR\SWEGR.BL.BE\obj\Debug\SWEGR.BL.BE.csprojResolveAssemblyReference.cache
-D:\Furiowzhitow\TP2\SWEGR\SWEGR.BL.BE\obj\Debug\SWEGR.BL.BE.dll
-D:\Furiowzhitow\TP2\SWEGR\SWEGR.BL.BE\obj\Debug\SWEGR.BL.BE.pdb
 D:\UPC\2014-2\TDP2\semana13\TP2\SWEGR\SWEGR.BL.BE\bin\Debug\SWEGR.BL.BE.dll
 D:\UPC\2014-2\TDP2\semana13\TP2\SWEGR\SWEGR.BL.BE\bin\Debug\SWEGR.BL.BE.pdb
 D:\UPC\2014-2\TDP2\semana13\TP2\SWEGR\SWEGR.BL.BE\obj\Debug\SWEGR.BL.BE.dll
@@ -125,3 +120,7 @@ E:\Furio\ultimazo\TP2\SWEGR\SWEGR.BL.BE\bin\Debug\SWEGR.BL.BE.pdb
 E:\Furio\ultimazo\TP2\SWEGR\SWEGR.BL.BE\obj\Debug\SWEGR.BL.BE.csprojResolveAssemblyReference.cache
 E:\Furio\ultimazo\TP2\SWEGR\SWEGR.BL.BE\obj\Debug\SWEGR.BL.BE.dll
 E:\Furio\ultimazo\TP2\SWEGR\SWEGR.BL.BE\obj\Debug\SWEGR.BL.BE.pdb
+D:\Furiowzhitow\TP2\SWEGR\SWEGR.BL.BE\bin\Debug\SWEGR.BL.BE.dll
+D:\Furiowzhitow\TP2\SWEGR\SWEGR.BL.BE\bin\Debug\SWEGR.BL.BE.pdb
+D:\Furiowzhitow\TP2\SWEGR\SWEGR.BL.BE\obj\Debug\SWEGR.BL.BE.dll
+D:\Furiowzhitow\TP2\SWEGR\SWEGR.BL.BE\obj\Debug\SWEGR.BL.BE.pdb
